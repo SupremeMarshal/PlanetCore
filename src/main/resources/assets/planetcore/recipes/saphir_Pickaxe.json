@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        " B ",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:saphir"
+        },
+        "B":
+        {
+            "item": "planetcore:saphir_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:saphir_pickaxe",
+        "count": 1
+    }
+}

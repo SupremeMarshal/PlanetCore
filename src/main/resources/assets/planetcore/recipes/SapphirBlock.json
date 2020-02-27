@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:saphir"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:saphir_block",
+        "count": 1
+    }
+}

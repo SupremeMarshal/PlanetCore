@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:ruby"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:ruby_helmet",
+        "count": 1
+    }
+}

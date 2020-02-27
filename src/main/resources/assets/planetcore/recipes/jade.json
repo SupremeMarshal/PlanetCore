@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:jade_block"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:jade",
+        "count": 9
+    }
+}

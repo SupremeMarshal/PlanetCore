@@ -1,0 +1,47 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+        "item": "planetcore:redrock_iron"
+    },
+    {
+        "type": "forge:ore_dict",
+        "ore": "itemCoal",
+        "data": 32767
+    },
+    {
+        "type": "forge:ore_dict",
+        "ore": "itemCoal",
+        "data": 32767
+    },
+    {
+        "type": "forge:ore_dict",
+        "ore": "itemCoal",
+        "data": 32767
+    },
+    {
+        "type": "forge:ore_dict",
+        "ore": "itemCoal",
+        "data": 32767
+    },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal",
+            "data": 32767
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal",
+            "data": 32767
+        }
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:iron_coal",
+        "count": 3
+    }
+}

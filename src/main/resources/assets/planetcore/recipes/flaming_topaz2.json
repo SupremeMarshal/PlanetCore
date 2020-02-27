@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "ABA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:blaze_powder"
+        },
+        "B":
+        {
+            "item": "planetcore:topaz"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:flaming_topaz",
+        "data": 0,
+        "count": 1
+    }
+}

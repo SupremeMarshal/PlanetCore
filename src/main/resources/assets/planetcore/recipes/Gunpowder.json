@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:sulfur"
+    },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal",
+            "data": 32767
+        }
+    ],
+
+    "result": 
+    {
+        "item": "minecraft:gunpowder",
+        "count": 1
+    }
+}

@@ -1,0 +1,1160 @@
+[
+ {
+  "from": -299,
+  "to": 40,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+    {
+    "class": "minecraft:zombie",
+    "chance" : 0.02,
+    "group_size" : 5,
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.02,
+    "group_size" : 5,
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:slime",
+    "chance" : 0.02,
+    "group_size" : 6,
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:witch",
+    "chance" : 0.01,
+    "group_size" : 3,
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.02,
+    "group_size" : 3,
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.02,
+    "group_size" : 6,
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   }
+  ]
+ },
+ {
+  "from": -600,
+  "to": -300,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.03,
+    "group_size" : 15,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:25.0},{Name:generic.attackDamage, Base:4}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.03,
+    "group_size" : 15,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:25.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:slime",
+    "chance" : 0.03,
+    "group_size" : 6,
+    "nbt":"{ActiveEffects:[{Id:10,Duration:60},{Id:8,Duration:60},{Id:11,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:witch",
+    "chance" : 0.01,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.05,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:25.0},{Name:generic.attackDamage, Base:4}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 10
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.03,
+    "group_size" : 6,
+    "nbt":"{ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_pigman",
+    "chance" : 0.03,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:25.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_villager",
+    "chance" : 0.03,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:25.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton_horse",
+    "chance" : 0.03,
+    "group_size" : 4,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_horse",
+    "chance" : 0.03,
+    "group_size" : 4,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:60.0},{Name:generic.attackDamage, Base:9}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:wither_skeleton",
+    "chance" : 0.03,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:stray",
+    "chance" : 0.03,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:ghoul",
+    "chance" : 0.03,
+    "group_size" : 6,
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.01,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5},{Name:generic.movementSpeed, Base:0.7}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.002,
+    "group_size" : 3,
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   }
+  ]
+ },
+ {
+  "from": -1000,
+  "to": -601,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.04,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:30.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.04,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:30.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:slime",
+    "chance" : 0.08,
+    "group_size" : 6,
+    "nbt":"{Attributes:[{Name:generic.maxHealth, Base:30},{Name:generic.attackDamage, Base:4}], ActiveEffects:[{Id:10,Duration:60},{Id:8,Duration:60},{Id:11,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:witch",
+    "chance" : 0.02,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.04,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:30.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.04,
+    "group_size" : 6,
+    "nbt":"{ActiveEffects:[{Id:8,Duration:60},{Id:11,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:zombie_pigman",
+    "chance" : 0.04,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:30.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_villager",
+    "chance" : 0.04,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:30.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton_horse",
+    "chance" : 0.04,
+    "group_size" : 4,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_horse",
+    "chance" : 0.04,
+    "group_size" : 4,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:60.0},{Name:generic.attackDamage, Base:9}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:wither_skeleton",
+    "chance" : 0.04,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:stray",
+    "chance" : 0.04,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:ghoul",
+    "chance" : 0.04,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.04,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6},{Name:generic.movementSpeed, Base:0.7}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.003,
+    "group_size" : 6,
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.0005,
+    "group_size" : 2,
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   }
+  ]
+ },
+ {
+  "from": -1500,
+  "to": -1001,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.06,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:70},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:10}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.06,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:70},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:12}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.1,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.1,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:slime",
+    "chance" : 0.1,
+    "group_size" : 6,
+    "nbt":"{Attributes:[{Name:generic.maxHealth, Base:30},{Name:generic.attackDamage, Base:4}], ActiveEffects:[{Id:10,Duration:60},{Id:8,Duration:60},{Id:11,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:witch",
+    "chance" : 0.1,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:45.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.1,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.1,
+    "group_size" : 6,
+    "nbt":"{ActiveEffects:[{Id:8,Duration:60},{Id:11,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:zombie_pigman",
+    "chance" : 0.1,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton_horse",
+    "chance" : 0.1,
+    "group_size" : 5,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:60.0},{Name:generic.attackDamage, Base:9}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_horse",
+    "chance" : 0.1,
+    "group_size" : 5,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:70.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:wither_skeleton",
+    "chance" : 0.1,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:stray",
+    "chance" : 0.1,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.02,
+    "group_size" : 2,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:100},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:14}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.1,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:7},{Name:generic.movementSpeed, Base:0.7}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.01,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:16}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.004,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:130.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:26}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.1,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:25},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:0.1}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], Health:0.5, ExplosionRadius:1, powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   }
+  ]
+ },
+ {
+  
+  "from": -2000,
+  "to": -1501,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.15,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:12}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.15,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:14}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.15,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.15,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:slime",
+    "chance" : 0.15,
+    "group_size" : 6,
+    "nbt":"{Attributes:[{Name:generic.maxHealth, Base:40},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:10,Duration:60},{Id:8,Duration:60},{Id:11,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:witch",
+    "chance" : 0.05,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.15,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.15,
+    "group_size" : 6,
+    "nbt":"{ActiveEffects:[{Id:8,Duration:60},{Id:11,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:zombie_pigman",
+    "chance" : 0.15,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton_horse",
+    "chance" : 0.15,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80.0},{Name:generic.attackDamage, Base:9}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_horse",
+    "chance" : 0.1,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:wither_skeleton",
+    "chance" : 0.1,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:70.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:stray",
+    "chance" : 0.02,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.02,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:100},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:14}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.1,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:7},{Name:generic.movementSpeed, Base:0.7}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.02,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:16}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.01,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:130.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:26}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.1,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:30},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:0.1}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], Health:0.5, ExplosionRadius:2, powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   }
+  ]
+ },
+ {
+  
+  
+  "from": -2500,
+  "to": -2001,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.2,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:12}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.2,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:14}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.2,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.2,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:slime",
+    "chance" : 0.2,
+    "group_size" : 6,
+    "nbt":"{Attributes:[{Name:generic.maxHealth, Base:40},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:10,Duration:60},{Id:8,Duration:60},{Id:11,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:witch",
+    "chance" : 0.2,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.2,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.2,
+    "group_size" : 6,
+    "nbt":"{ActiveEffects:[{Id:8,Duration:60},{Id:11,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:zombie_pigman",
+    "chance" : 0.2,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton_horse",
+    "chance" : 0.2,
+    "group_size" : 7,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80.0},{Name:generic.attackDamage, Base:9}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_horse",
+    "chance" : 0.2,
+    "group_size" : 7,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:wither_skeleton",
+    "chance" : 0.2,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:70.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:stray",
+    "chance" : 0.2,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.1,
+    "group_size" : 4,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:100},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:14}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.1,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:7},{Name:generic.movementSpeed, Base:0.7}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.03,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:16}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.02,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:130.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:26}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.2,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:30},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:0.1}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], Health:0.5, ExplosionRadius:3, powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   }
+  ]
+ },
+ {
+  
+  
+  "from": -3000,
+  "to": -2501,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.3,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:12}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.3,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:14}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.3,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.3,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:7}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 8
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.3,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:zombie_pigman",
+    "chance" : 0.3,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton_horse",
+    "chance" : 0.3,
+    "group_size" : 8,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80.0},{Name:generic.attackDamage, Base:9}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_horse",
+    "chance" : 0.3,
+    "group_size" : 8,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:wither_skeleton",
+    "chance" : 0.3,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:70.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:stray",
+    "chance" : 0.3,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.3,
+    "group_size" : 4,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:120},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:16}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.3,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:7},{Name:generic.movementSpeed, Base:0.7}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.1,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:16}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.05,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:130.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:26}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.2,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35},{Name:generic.movementSpeed, Base:2.2},{Name:generic.attackDamage, Base:0.1}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], Health:0.5, ExplosionRadius:4, powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   }
+  ]
+ },
+ {
+  
+  
+  "from": -3500,
+  "to": -3001,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.4,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:12}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.4,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:14}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.3,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.1,
+    "group_size" : 6,
+    "nbt":"{ActiveEffects:[{Id:8,Duration:60},{Id:11,Duration:60},{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 6
+   },
+   {
+    "class": "minecraft:zombie_pigman",
+    "chance" : 0.4,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton_horse",
+    "chance" : 0.2,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80.0},{Name:generic.attackDamage, Base:9}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_horse",
+    "chance" : 0.2,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:wither_skeleton",
+    "chance" : 0.4,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:70.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:stray",
+    "chance" : 0.4,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.3,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:120},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:16}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.3,
+    "group_size" : 5,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:7},{Name:generic.movementSpeed, Base:0.7}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.2,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:16}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.06,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:130.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:26}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.002,
+    "group_size" : 1,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:180},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:24}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.001,
+    "group_size" : 1,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:260},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:34}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}",  
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.4,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40},{Name:generic.movementSpeed, Base:2.2},{Name:generic.attackDamage, Base:0.1}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], Health:0.5, ExplosionRadius:4, powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   }
+  ]
+ },
+ {
+  
+  
+  "from": -10000,
+  "to": -3501,
+  "block_natural_spawn" : true,
+  "spawn_list": [
+   {
+    "class": "minecraft:zombie",
+    "chance" : 0.5,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:14}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:skeleton",
+    "chance" : 0.5,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:16}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60},{Id:12,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:witch",
+    "chance" : 0.2,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:cave_spider",
+    "chance" : 0.08,
+    "group_size" : 3,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:35.0},{Name:generic.attackDamage, Base:5}], ActiveEffects:[{Id:12,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:zombie_pigman",
+    "chance" : 0.5,
+    "group_size" : 14,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40.0},{Name:generic.attackDamage, Base:6}], ActiveEffects:[{Id:12,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:skeleton_horse",
+    "chance" : 0.1,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:80.0},{Name:generic.attackDamage, Base:9}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:zombie_horse",
+    "chance" : 0.1,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}]}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "minecraft:wither_skeleton",
+    "chance" : 0.1,
+    "group_size" : 10,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:70.0},{Name:generic.attackDamage, Base:8}], ActiveEffects:[{Id:12,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 7
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.2,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:120},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:16}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:hellhound",
+    "chance" : 0.2,
+    "group_size" : 20,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:50.0},{Name:generic.attackDamage, Base:7},{Name:generic.movementSpeed, Base:0.7}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.25,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:90.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:16}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.1,
+    "group_size" : 6,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:130.0},{Name:generic.movementSpeed, Base:1.0},{Name:generic.attackDamage, Base:26}]}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:demon",
+    "chance" : 0.001,
+    "group_size" : 1,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:180},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:24}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "planetcore:blackdemon",
+    "chance" : 0.0005,
+    "group_size" : 1,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:260},{Name:generic.movementSpeed, Base:2.0},{Name:generic.attackDamage, Base:34}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], powered:1}",
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   },
+   {
+    "class": "minecraft:creeper",
+    "chance" : 0.4,
+    "group_size" : 12,
+    "nbt" : "{Attributes:[{Name:generic.maxHealth, Base:40},{Name:generic.movementSpeed, Base:2.2},{Name:generic.attackDamage, Base:0.1}], ActiveEffects:[{Id:8,Duration:60},{Id:9,Duration:60}], Health:0.5, ExplosionRadius:5, powered:1}", 
+    "min_light_level" : 0,
+    "max_light_level" : 9
+   }
+  ]
+ }
+]

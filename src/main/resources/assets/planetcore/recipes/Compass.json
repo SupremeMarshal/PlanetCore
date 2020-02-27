@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " A ",
+        "ABA",
+        " A "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:iron_ingot"
+        },
+        "B":
+        {
+            "item": "minecraft:redstone"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:compass",
+        "count": 1
+    }
+}

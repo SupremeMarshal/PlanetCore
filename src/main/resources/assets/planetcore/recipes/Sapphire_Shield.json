@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:saphir_rod"
+        },
+        "B":
+        {
+            "type": "forge:ore_dict",
+            "ore": "blockSapphire"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:sapphire_shield",
+        "count": 1
+    }
+}

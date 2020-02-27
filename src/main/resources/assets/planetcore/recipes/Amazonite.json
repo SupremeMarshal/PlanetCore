@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:amazonite_block"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:amazonite",
+        "count": 9
+    }
+}

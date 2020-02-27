@@ -1,0 +1,5075 @@
+{
+  "waterLevel": 63,
+  "caves": true,
+  "strongholds": true,
+  "alternateStrongholdsPositions": false,
+  "villages": true,
+  "mineshafts": true,
+  "temples": true,
+  "oceanMonuments": true,
+  "woodlandMansions": true,
+  "ravines": true,
+  "dungeons": true,
+  "dungeonCount": 7,
+  "waterLakes": true,
+  "waterLakeRarity": 9,
+  "lavaLakes": true,
+  "lavaLakeRarity": 5,
+  "aboveSeaLavaLakeRarity": 13,
+  "lavaOceans": false,
+  "biome": -1,
+  "biomeSize": 4,
+  "riverSize": 4,
+  "standardOres": [
+    {
+      "blockstate": {
+        "Properties": {
+          "variant": "dirt",
+          "snowy": "false"
+        },
+        "Name": "minecraft:dirt"
+      },
+      "spawnSize": 40,
+      "spawnTries": 20,
+      "spawnProbability": 0.5,
+      "minHeight": -Infinity,
+      "maxHeight": 1.0
+    },
+    {
+      "blockstate": {
+        "Name": "minecraft:flowing_water"
+      },
+      "spawnSize": 20,
+      "spawnTries": 3,
+      "spawnProbability": 0.1,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Name": "minecraft:gravel"
+      },
+      "spawnSize": 44,
+      "spawnTries": 10,
+      "spawnProbability": 0.0625,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Properties": {
+          "variant": "granite"
+        },
+        "Name": "minecraft:stone"
+      },
+      "spawnSize": 44,
+      "spawnTries": 10,
+      "spawnProbability": 0.0625,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Properties": {
+          "variant": "diorite"
+        },
+        "Name": "minecraft:stone"
+      },
+      "spawnSize": 44,
+      "spawnTries": 10,
+      "spawnProbability": 0.0625,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Properties": {
+          "variant": "andesite"
+        },
+        "Name": "minecraft:stone"
+      },
+      "spawnSize": 44,
+      "spawnTries": 10,
+      "spawnProbability": 0.0625,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Name": "minecraft:coal_ore"
+      },
+      "spawnSize": 17,
+      "spawnTries": 6,
+      "spawnProbability": 0.0625,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Name": "minecraft:air"
+      },
+      "spawnSize": 9,
+      "spawnTries": 5,
+      "spawnProbability": 0.125,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Name": "planetcore:silver_ore"
+      },
+      "spawnSize": 9,
+      "spawnTries": 1,
+      "spawnProbability": 0.125,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Name": "planetcore:gold_ore"
+      },
+      "spawnSize": 9,
+      "spawnTries": 1,
+      "spawnProbability": 0.05,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Name": "minecraft:air"
+      },
+      "spawnSize": 1,
+      "spawnTries": 4,
+      "spawnProbability": 0.025,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Name": "minecraft:lapis_ore"
+      },
+      "spawnSize": 7,
+      "spawnTries": 1,
+      "spawnProbability": 0.075,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    },
+    {
+      "blockstate": {
+        "Name": "minecraft:redstone_ore"
+      },
+      "spawnSize": 6,
+      "spawnTries": 3,
+      "spawnProbability": 0.01,
+      "minHeight": -Infinity,
+      "maxHeight": Infinity
+    }
+  ],
+  "periodicGaussianOres": [],
+  "expectedBaseHeight": 64.0,
+  "expectedHeightVariation": 64.0,
+  "actualHeight": 256.0,
+  "heightVariationFactor": 64.0,
+  "specialHeightVariationFactorBelowAverageY": 0.25,
+  "heightVariationOffset": 0.0,
+  "heightFactor": 64.0,
+  "heightOffset": 64.0,
+  "depthNoiseFactor": 1.024,
+  "depthNoiseOffset": 0.0,
+  "depthNoiseFrequencyX": 0.0015258789,
+  "depthNoiseFrequencyZ": 0.0015258789,
+  "depthNoiseOctaves": 16,
+  "selectorNoiseFactor": 12.75,
+  "selectorNoiseOffset": 0.5,
+  "selectorNoiseFrequencyX": 0.016709277,
+  "selectorNoiseFrequencyY": 0.008354639,
+  "selectorNoiseFrequencyZ": 0.016709277,
+  "selectorNoiseOctaves": 8,
+  "lowNoiseFactor": 1.0,
+  "lowNoiseOffset": 0.0,
+  "lowNoiseFrequencyX": 0.005221649,
+  "lowNoiseFrequencyY": 0.0026108245,
+  "lowNoiseFrequencyZ": 0.005221649,
+  "lowNoiseOctaves": 16,
+  "highNoiseFactor": 1.0,
+  "highNoiseOffset": 0.0,
+  "highNoiseFrequencyX": 0.005221649,
+  "highNoiseFrequencyY": 0.0026108245,
+  "highNoiseFrequencyZ": 0.005221649,
+  "highNoiseOctaves": 16,
+  "cubeAreas": [
+    [
+      {
+        "minX": -1000000000,
+        "minY": -207,
+        "minZ": -1000000000,
+        "maxX": 1000000000,
+        "maxY": -48,
+        "maxZ": 1000000000
+      },
+      {
+        "waterLevel": 2000,
+        "caves": true,
+        "strongholds": true,
+        "alternateStrongholdsPositions": false,
+        "villages": false,
+        "mineshafts": true,
+        "temples": true,
+        "oceanMonuments": true,
+        "woodlandMansions": true,
+        "ravines": true,
+        "dungeons": true,
+        "dungeonCount": 7,
+        "waterLakes": false,
+        "waterLakeRarity": 60,
+        "lavaLakes": true,
+        "lavaLakeRarity": 2,
+        "aboveSeaLavaLakeRarity": 13,
+        "lavaOceans": true,
+        "biome": -1,
+        "biomeSize": 4,
+        "riverSize": 4,
+        "standardOres": [
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 12,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 12,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.1875,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.075,
+            "minHeight": -500,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.1,
+            "minHeight": -1000,
+            "maxHeight": -501
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.125,
+            "minHeight": -2000,
+            "maxHeight": -1001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.15,
+            "minHeight": -Infinity,
+            "maxHeight": -2001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.025,
+            "minHeight": -1000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.05,
+            "minHeight": -Infinity,
+            "maxHeight": -1001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 8,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.00625,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.000625,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 14,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 12,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 3,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.1875,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 9,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.2,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.225,
+            "minHeight": -2000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.01,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 8,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.001,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:flowing_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              },
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 200,
+            "spawnTries": 3,
+            "spawnProbability": 1.4E-5,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:flowing_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              },
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 15,
+            "spawnTries": 2,
+            "spawnProbability": 0.12,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:air"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:flowing_lava"
+              },
+              {
+                "Name": "planetcore:redrock_coal"
+              },
+              {
+                "Name": "planetcore:redrock_iron"
+              },
+              {
+                "Name": "planetcore:redrock_silver"
+              },
+              {
+                "Name": "planetcore:redrock_gold"
+              },
+              {
+                "Name": "planetcore:redrock_platinum"
+              },
+              {
+                "Name": "planetcore:redrock_emerald"
+              },
+              {
+                "Name": "planetcore:redrock_lapis"
+              },
+              {
+                "Name": "planetcore:redrock_saphir"
+              },
+              {
+                "Name": "planetcore:redrock_ruby"
+              },
+              {
+                "Name": "planetcore:redrock_diamond"
+              },
+              {
+                "Name": "planetcore:redrock_amazonite"
+              },
+              {
+                "Name": "planetcore:redrock_sulfur"
+              },
+              {
+                "Name": "planetcore:redrock_redstone"
+              }
+            ],
+            "spawnSize": 400,
+            "spawnTries": 2,
+            "spawnProbability": 0.005,
+            "minHeight": -1130.0,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:air"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:flowing_lava"
+              },
+              {
+                "Name": "planetcore:hardrock_coal"
+              },
+              {
+                "Name": "planetcore:hardrock_iron"
+              },
+              {
+                "Name": "planetcore:hardrock_redstone"
+              },
+              {
+                "Name": "planetcore:hardrock_emerald"
+              },
+              {
+                "Name": "planetcore:hardrock_lapis"
+              },
+              {
+                "Name": "planetcore:hardrock_silver"
+              },
+              {
+                "Name": "planetcore:hardrock_gold"
+              },
+              {
+                "Name": "planetcore:hardrock_platinum"
+              },
+              {
+                "Name": "planetcore:hardrock_saphir"
+              },
+              {
+                "Name": "planetcore:hardrock_ruby"
+              },
+              {
+                "Name": "planetcore:hardrock_diamond"
+              },
+              {
+                "Name": "planetcore:hardrock_amazonite"
+              },
+              {
+                "Name": "minecraft:gravel"
+              },
+              {
+                "Name": "planetcore:hardrock_sulfur"
+              }
+            ],
+            "spawnSize": 400,
+            "spawnTries": 2,
+            "spawnProbability": 0.005,
+            "minHeight": -Infinity,
+            "maxHeight": -1263.0
+          }
+        ],
+  "periodicGaussianOres": [],
+  "expectedBaseHeight": -768.0,
+  "expectedHeightVariation": 1.0,
+  "actualHeight": 2532.0,
+  "heightVariationFactor": 64.0,
+  "specialHeightVariationFactorBelowAverageY": 1.625,
+  "heightVariationOffset": 1792.0,
+  "heightFactor": 64.0,
+  "heightOffset": -1408.0,
+  "depthNoiseFactor": 4.352,
+  "depthNoiseOffset": 3.0,
+  "depthNoiseFrequencyX": 0.0015258789,
+  "depthNoiseFrequencyZ": 0.0015258789,
+  "depthNoiseOctaves": 16,
+  "selectorNoiseFactor": 1.75,
+  "selectorNoiseOffset": 0.8,
+  "selectorNoiseFrequencyX": 0.017857144,
+  "selectorNoiseFrequencyY": 0.011627907,
+  "selectorNoiseFrequencyZ": 0.017857144,
+  "selectorNoiseOctaves": 8,
+  "lowNoiseFactor": 0.625,
+  "lowNoiseOffset": -1.25,
+  "lowNoiseFrequencyX": 0.015625,
+  "lowNoiseFrequencyY": 0.005952381,
+  "lowNoiseFrequencyZ": 0.015190251,
+  "lowNoiseOctaves": 16,
+  "highNoiseFactor": 1.0,
+  "highNoiseOffset": 0.0,
+  "highNoiseFrequencyX": 0.015625,
+  "highNoiseFrequencyY": 0.015625,
+  "highNoiseFrequencyZ": 0.015625,
+  "highNoiseOctaves": 16,
+        "cubeAreas": [],
+        "replacerConfig": {
+          "defaults": {
+            "cubicgen:biome_fill_noise_octaves": 4.0,
+            "cubicgen:ocean_block": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:water"
+            },
+            "cubicgen:height_scale": 64.0,
+            "cubicgen:biome_fill_noise_freq": 0.0078125,
+            "cubicgen:water_level": 63.0,
+            "cubicgen:biome_fill_depth_factor": 2.3333333333333335,
+            "cubicgen:terrain_fill_block": {
+              "Properties": {
+                "variant": "stone"
+              },
+              "Name": "minecraft:stone"
+            },
+            "cubicgen:mesa_depth": 16.0,
+            "cubicgen:horizontal_gradient_depth_decrease_weight": 1.0,
+            "cubicgen:biome_fill_depth_offset": 3.0,
+            "cubicgen:height_offset": 64.0
+          },
+          "overrides": {
+            "cubicgen:ocean_block": {
+              "Name": "planetcore:hardrock"
+            },
+            "cubicgen:terrain_fill_block": {
+              "Name": "planetcore:redrock"
+            },
+            "cubicgen:mesa_depth": NaN,
+            "cubicgen:biome_fill_depth_factor": NaN
+          }
+        }
+      }
+    ],
+    [
+      {
+        "minX": -1000000000,
+        "minY": -48,
+        "minZ": -1000000000,
+        "maxX": 1000000000,
+        "maxY": 0,
+        "maxZ": 1000000000
+      },
+      {
+        "waterLevel": 500,
+        "caves": true,
+        "strongholds": true,
+        "alternateStrongholdsPositions": false,
+        "villages": true,
+        "mineshafts": true,
+        "temples": true,
+        "oceanMonuments": true,
+        "woodlandMansions": true,
+        "ravines": true,
+        "dungeons": true,
+        "dungeonCount": 7,
+        "waterLakes": false,
+        "waterLakeRarity": 9,
+        "lavaLakes": true,
+        "lavaLakeRarity": 4,
+        "aboveSeaLavaLakeRarity": 13,
+        "lavaOceans": false,
+        "biome": -1,
+        "biomeSize": 4,
+        "riverSize": 4,
+        "standardOres": [
+          {
+            "blockstate": {
+              "Name": "minecraft:coal_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 9,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:redstone_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 5,
+            "spawnProbability": 0.2,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:iron_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 8,
+            "spawnProbability": 0.1875,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:silver_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:sulfur_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 5,
+            "spawnProbability": 0.1875,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:gold_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 1,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:platinum_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 1,
+            "spawnProbability": 0.083,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:emerald_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 3,
+            "spawnTries": 9,
+            "spawnProbability": 0.083,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:lapis_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.083,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:saphir_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.02,
+            "minHeight": -Infinity,
+            "maxHeight": -400
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:ruby_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 3,
+            "spawnTries": 1,
+            "spawnProbability": 0.00416,
+            "minHeight": -Infinity,
+            "maxHeight": -400
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:diamond_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 3,
+            "spawnTries": 1,
+            "spawnProbability": 0.001,
+            "minHeight": -Infinity,
+            "maxHeight": -400
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:amazonite_ore"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 3,
+            "spawnTries": 1,
+            "spawnProbability": 1.0E-4,
+            "minHeight": -Infinity,
+            "maxHeight": -400
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 12,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.2,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 12,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 3,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 8,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 2,
+            "spawnProbability": 0.1875,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.05,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.025,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.0046875,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:hardrock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.000625,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "variant": "dirt",
+                "snowy": "false"
+              },
+              "Name": "minecraft:dirt"
+            },
+            "spawnSize": 44,
+            "spawnTries": 30,
+            "spawnProbability": 0.12,
+            "minHeight": 0.4,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "variant": "dirt",
+                "snowy": "false"
+              },
+              "Name": "minecraft:dirt"
+            },
+            "spawnSize": 30,
+            "spawnTries": 20,
+            "spawnProbability": 0.0625,
+            "minHeight": -2.0,
+            "maxHeight": 0.4
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:gravel"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Name": "planetcore:hardrock"
+              }
+            ],
+            "spawnSize": 44,
+            "spawnTries": 7,
+            "spawnProbability": 0.0625,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "variant": "granite"
+              },
+              "Name": "minecraft:stone"
+            },
+            "spawnSize": 44,
+            "spawnTries": 7,
+            "spawnProbability": 0.0625,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "variant": "diorite"
+              },
+              "Name": "minecraft:stone"
+            },
+            "spawnSize": 44,
+            "spawnTries": 7,
+            "spawnProbability": 0.0625,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "variant": "andesite"
+              },
+              "Name": "minecraft:stone"
+            },
+            "spawnSize": 44,
+            "spawnTries": 7,
+            "spawnProbability": 0.0625,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:flowing_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              },
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 1,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": -200.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:flowing_water"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              },
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              }
+            ],
+            "spawnSize": 25,
+            "spawnTries": 2,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:air"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:hardrock"
+              },
+              {
+                "Properties": {
+                  "variant": "granite"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Properties": {
+                  "variant": "andesite"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Name": "minecraft:gravel"
+              },
+              {
+                "Properties": {
+                  "variant": "diorite"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:flowing_lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:flowing_water"
+              },
+              {
+                "Name": "planetcore:hardrock_coal"
+              },
+              {
+                "Name": "planetcore:hardrock_iron"
+              },
+              {
+                "Name": "planetcore:hardrock_redstone"
+              },
+              {
+                "Name": "planetcore:hardrock_emerald"
+              },
+              {
+                "Name": "planetcore:hardrock_lapis"
+              },
+              {
+                "Name": "planetcore:hardrock_silver"
+              },
+              {
+                "Name": "planetcore:hardrock_gold"
+              },
+              {
+                "Name": "planetcore:hardrock_platinum"
+              },
+              {
+                "Name": "planetcore:hardrock_saphir"
+              },
+              {
+                "Name": "planetcore:hardrock_ruby"
+              },
+              {
+                "Name": "planetcore:hardrock_diamond"
+              },
+              {
+                "Name": "planetcore:hardrock_amazonite"
+              },
+              {
+                "Name": "planetcore:hardrock_sulfur"
+              }
+            ],
+            "spawnSize": 300,
+            "spawnTries": 2,
+            "spawnProbability": 0.0025,
+            "minHeight": -480.0,
+            "maxHeight": -180.0
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:air"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Properties": {
+                  "variant": "granite"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Properties": {
+                  "variant": "andesite"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Name": "minecraft:gravel"
+              },
+              {
+                "Properties": {
+                  "variant": "diorite"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:flowing_water"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:flowing_lava"
+              },
+              {
+                "Name": "minecraft:coal_ore"
+              },
+              {
+                "Name": "planetcore:iron_ore"
+              },
+              {
+                "Name": "planetcore:silver_ore"
+              },
+              {
+                "Name": "planetcore:gold_ore"
+              },
+              {
+                "Name": "planetcore:platinum_ore"
+              },
+              {
+                "Name": "minecraft:redstone_ore"
+              },
+              {
+                "Name": "minecraft:emerald_ore"
+              },
+              {
+                "Name": "minecraft:lapis_ore"
+              },
+              {
+                "Name": "planetcore:sapphire_ore"
+              },
+              {
+                "Name": "planetcore:ruby_ore"
+              },
+              {
+                "Name": "planetcore:diamond_ore"
+              },
+              {
+                "Name": "planetcore:amazonite_ore"
+              },
+              {
+                "Name": "planetcore:sulfur_ore"
+              }
+            ],
+            "spawnSize": 300,
+            "spawnTries": 2,
+            "spawnProbability": 0.0025,
+            "minHeight": -Infinity,
+            "maxHeight": -481.0
+          }
+
+        ],
+        "periodicGaussianOres": [],
+        "expectedBaseHeight": 0.0,
+        "expectedHeightVariation": 1.0,
+        "actualHeight": 768.0,
+        "heightVariationFactor": 7.0,
+        "specialHeightVariationFactorBelowAverageY": 0.0,
+        "heightVariationOffset": 30.0,
+        "heightFactor": 64.0,
+        "heightOffset": -500.0,
+        "depthNoiseFactor": 8.25,
+        "depthNoiseOffset": 0.0,
+        "depthNoiseFrequencyX": 0.001953125,
+        "depthNoiseFrequencyZ": 0.001953125,
+        "depthNoiseOctaves": 16,
+        "selectorNoiseFactor": 0.0,
+        "selectorNoiseOffset": 0.75,
+        "selectorNoiseFrequencyX": 0.009548158,
+        "selectorNoiseFrequencyY": 0.0625,
+        "selectorNoiseFrequencyZ": 0.0098289875,
+        "selectorNoiseOctaves": 8,
+        "lowNoiseFactor": 4.5,
+        "lowNoiseOffset": 0.0,
+        "lowNoiseFrequencyX": 0.0625,
+        "lowNoiseFrequencyY": 0.0625,
+        "lowNoiseFrequencyZ": 0.0625,
+        "lowNoiseOctaves": 16,
+        "highNoiseFactor": 32.0,
+        "highNoiseOffset": 0.0,
+        "highNoiseFrequencyX": 0.01923077,
+        "highNoiseFrequencyY": 0.05882353,
+        "highNoiseFrequencyZ": 0.01923077,
+        "highNoiseOctaves": 16,      
+        "cubeAreas": [],
+        "replacerConfig": {
+          "defaults": {
+            "cubicgen:biome_fill_noise_octaves": 4.0,
+            "cubicgen:ocean_block": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:water"
+            },
+            "cubicgen:height_scale": 64.0,
+            "cubicgen:biome_fill_noise_freq": 0.0078125,
+            "cubicgen:water_level": 63.0,
+            "cubicgen:biome_fill_depth_factor": 2.3333333333333335,
+            "cubicgen:terrain_fill_block": {
+              "Properties": {
+                "variant": "stone"
+              },
+              "Name": "minecraft:stone"
+            },
+            "cubicgen:mesa_depth": 16.0,
+            "cubicgen:biome_fill_depth_offset": 3.0,
+            "cubicgen:horizontal_gradient_depth_decrease_weight": 1.0,
+            "cubicgen:height_offset": 64.0
+          },
+          "overrides": {
+            "cubicgen:ocean_block": {
+              "Properties": {
+                "variant": "stone"
+              },
+              "Name": "minecraft:stone"
+            },
+            "cubicgen:terrain_fill_block": {
+              "Name": "planetcore:hardrock"
+            },
+            "cubicgen:mesa_depth": NaN,
+            "cubicgen:biome_fill_depth_factor": NaN
+          }
+        }
+      }
+    ],
+    [
+      {
+        "minX": -1000000000,
+        "minY": -562,
+        "minZ": -1000000000,
+        "maxX": 1000000000,
+        "maxY": -207,
+        "maxZ": 1000000000
+      },
+      {
+        "waterLevel": 2000,
+        "caves": true,
+        "strongholds": true,
+        "alternateStrongholdsPositions": false,
+        "villages": false,
+        "mineshafts": true,
+        "temples": true,
+        "oceanMonuments": true,
+        "woodlandMansions": true,
+        "ravines": true,
+        "dungeons": false,
+        "dungeonCount": 1,
+        "waterLakes": false,
+        "waterLakeRarity": 60,
+        "lavaLakes": false,
+        "lavaLakeRarity": 2,
+        "aboveSeaLavaLakeRarity": 13,
+        "lavaOceans": true,
+        "biome": -1,
+        "biomeSize": 4,
+        "riverSize": 4,
+        "standardOres": [
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 14,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 14,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.1875,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.01,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 11,
+            "spawnTries": 8,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:redrock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.001,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 8,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 15,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 15,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.25,
+            "minHeight": -1000.0,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.375,
+            "minHeight": -2000,
+            "maxHeight": -1001.0
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.5,
+            "minHeight": -3000,
+            "maxHeight": -2001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.625,
+            "minHeight": -4000,
+            "maxHeight": -3001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.75,
+            "minHeight": -5000,
+            "maxHeight": -4001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 1,
+            "spawnProbability": 0.875,
+            "minHeight": -Infinity,
+            "maxHeight": -5001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.1,
+            "minHeight": -2000.0,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.125,
+            "minHeight": -3000.0,
+            "maxHeight": -2001.0
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.15,
+            "minHeight": -4000,
+            "maxHeight": -3001.0
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.175,
+            "minHeight": -5000,
+            "maxHeight": -4001.0
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.2,
+            "minHeight": -Infinity,
+            "maxHeight": -5001.0
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.02,
+            "minHeight": -4000.0,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 1,
+            "spawnProbability": 0.002,
+            "minHeight": -5000.0,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.03,
+            "minHeight": -Infinity,
+            "maxHeight": -4001.0
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.003,
+            "minHeight": -Infinity,
+            "maxHeight": -5001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:flowing_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              },
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 20,
+            "spawnTries": 2,
+            "spawnProbability": 0.125,
+            "minHeight": -2000.0,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:flowing_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              },
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 25,
+            "spawnTries": 2,
+            "spawnProbability": 0.125,
+            "minHeight": -3000.0,
+            "maxHeight": -2001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:flowing_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              },
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 35,
+            "spawnTries": 2,
+            "spawnProbability": 0.13,
+            "minHeight": -Infinity,
+            "maxHeight": -3001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 20,
+            "spawnTries": 2,
+            "spawnProbability": 0.1,
+            "minHeight": -2000.0,
+            "maxHeight": -1001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 25,
+            "spawnTries": 2,
+            "spawnProbability": 0.1125,
+            "minHeight": -3000.0,
+            "maxHeight": -2001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 30,
+            "spawnTries": 2,
+            "spawnProbability": 0.125,
+            "minHeight": -4000.0,
+            "maxHeight": -3001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 40,
+            "spawnTries": 2,
+            "spawnProbability": 0.13,
+            "minHeight": -5000.0,
+            "maxHeight": -4001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 45,
+            "spawnTries": 2,
+            "spawnProbability": 0.135,
+            "minHeight": -Infinity,
+            "maxHeight": -5001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_mantlerock"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 50,
+            "spawnTries": 2,
+            "spawnProbability": 0.15,
+            "minHeight": -2400.0,
+            "maxHeight": -2001.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_mantlerock"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 70,
+            "spawnTries": 2,
+            "spawnProbability": 0.2,
+            "minHeight": -3288.0,
+            "maxHeight": -2401.0
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_mantlerock"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 100,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": -3288.0
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:air"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:flowing_lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "planetcore:hot_lava"
+              },
+              {
+                "Name": "planetcore:mantlerock_coal"
+              },
+              {
+                "Name": "planetcore:mantlerock_iron"
+              },
+              {
+                "Name": "planetcore:mantlerock_redstone"
+              },
+              {
+                "Name": "planetcore:mantlerock_emerald"
+              },
+              {
+                "Name": "planetcore:mantlerock_lapis"
+              },
+              {
+                "Name": "planetcore:mantlerock_silver"
+              },
+              {
+                "Name": "planetcore:mantlerock_gold"
+              },
+              {
+                "Name": "planetcore:mantlerock_platinum"
+              },
+              {
+                "Name": "planetcore:mantlerock_saphir"
+              },
+              {
+                "Name": "planetcore:mantlerock_ruby"
+              },
+              {
+                "Name": "planetcore:mantlerock_diamond"
+              },
+              {
+                "Name": "planetcore:mantlerock_amazonite"
+              },
+              {
+                "Name": "planetcore:mantlegas"
+              },
+              {
+                "Name": "planetcore:mantlerock_sulfur"
+              },
+              {
+                "Name": "planetcore:hot_mantlerock"
+              }
+            ],
+            "spawnSize": 550,
+            "spawnTries": 2,
+            "spawnProbability": 0.002,
+            "minHeight": -2568.0,
+            "maxHeight": 0
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:air"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:redrock"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:flowing_lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "minecraft:lava"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "planetcore:hot_lava"
+              },
+              {
+                "Name": "planetcore:redrock_coal"
+              },
+              {
+                "Name": "planetcore:redrock_iron"
+              },
+              {
+                "Name": "planetcore:redrock_redstone"
+              },
+              {
+                "Name": "planetcore:redrock_silver"
+              },
+              {
+                "Name": "planetcore:redrock_gold"
+              },
+              {
+                "Name": "planetcore:redrock_platinum"
+              },
+              {
+                "Name": "planetcore:redrock_emerald"
+              },
+              {
+                "Name": "planetcore:redrock_lapis"
+              },
+              {
+                "Name": "planetcore:redrock_saphir"
+              },
+              {
+                "Name": "planetcore:redrock_ruby"
+              },
+              {
+                "Name": "planetcore:redrock_diamond"
+              },
+              {
+                "Name": "planetcore:redrock_amazonite"
+              },
+              {
+                "Name": "minecraft:gravel"
+              },
+              {
+                "Name": "planetcore:redrock_sulfur"
+              },
+              {
+                "Name": "planetcore:hot_mantlerock"
+              }
+            ],
+            "spawnSize": 600,
+            "spawnTries": 2,
+            "spawnProbability": 0.002,
+            "minHeight": -Infinity,
+            "maxHeight": -2569.0
+          }
+        ],
+        "periodicGaussianOres": [],
+        "expectedBaseHeight": -3312.0,
+        "expectedHeightVariation": 1.0,
+        "actualHeight": 5696.0,
+        "heightVariationFactor": 64.0,
+        "specialHeightVariationFactorBelowAverageY": 1.21875,
+        "heightVariationOffset": 2048.0,
+        "heightFactor": 64.0,
+        "heightOffset": -6144.0,
+        "depthNoiseFactor": 17.0,
+        "depthNoiseOffset": 10.5,
+        "depthNoiseFrequencyX": 0.0051398026,
+        "depthNoiseFrequencyZ": 0.005263158,
+        "depthNoiseOctaves": 16,
+        "selectorNoiseFactor": 122.5,
+        "selectorNoiseOffset": 3.5,
+        "selectorNoiseFrequencyX": 0.014285716,
+        "selectorNoiseFrequencyY": 0.012403101,
+        "selectorNoiseFrequencyZ": 0.014285716,
+        "selectorNoiseOctaves": 10,
+        "lowNoiseFactor": 4.375,
+        "lowNoiseOffset": -0.022460938,
+        "lowNoiseFrequencyX": 0.0060975607,
+        "lowNoiseFrequencyY": 0.01,
+        "lowNoiseFrequencyZ": 0.0060975607,
+        "lowNoiseOctaves": 16,
+        "highNoiseFactor": 3.75,
+        "highNoiseOffset": -0.18,
+        "highNoiseFrequencyX": 0.008064516,
+        "highNoiseFrequencyY": 0.005952381,
+        "highNoiseFrequencyZ": 0.008064516,
+        "highNoiseOctaves": 16,      
+        "cubeAreas": [],
+        "replacerConfig": {
+          "defaults": {
+            "cubicgen:biome_fill_noise_octaves": 4.0,
+            "cubicgen:ocean_block": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:water"
+            },
+            "cubicgen:height_scale": 64.0,
+            "cubicgen:biome_fill_noise_freq": 0.0078125,
+            "cubicgen:water_level": 63.0,
+            "cubicgen:biome_fill_depth_factor": 2.3333333333333335,
+            "cubicgen:terrain_fill_block": {
+              "Properties": {
+                "variant": "stone"
+              },
+              "Name": "minecraft:stone"
+            },
+            "cubicgen:mesa_depth": 16.0,
+            "cubicgen:biome_fill_depth_offset": 3.0,
+            "cubicgen:horizontal_gradient_depth_decrease_weight": 1.0,
+            "cubicgen:height_offset": 64.0
+          },
+          "overrides": {
+            "cubicgen:ocean_block": {
+              "Name": "planetcore:redrock"
+            },
+            "cubicgen:terrain_fill_block": {
+              "Name": "planetcore:mantlerock"
+            },
+            "cubicgen:mesa_depth": NaN,
+            "cubicgen:biome_fill_depth_factor": NaN
+          }
+        }
+      }
+    ],
+    [
+      {
+        "minX": -1000000000,
+        "minY": -937,
+        "minZ": -1000000000,
+        "maxX": 1000000000,
+        "maxY": -562,
+        "maxZ": 1000000000
+      },
+      {
+        "waterLevel": 2000,
+        "caves": true,
+        "strongholds": true,
+        "alternateStrongholdsPositions": false,
+        "villages": false,
+        "mineshafts": true,
+        "temples": true,
+        "oceanMonuments": true,
+        "woodlandMansions": true,
+        "ravines": false,
+        "dungeons": false,
+        "dungeonCount": 1,
+        "waterLakes": false,
+        "waterLakeRarity": 60,
+        "lavaLakes": false,
+        "lavaLakeRarity": 2,
+        "aboveSeaLavaLakeRarity": 13,
+        "lavaOceans": true,
+        "biome": -1,
+        "biomeSize": 4,
+        "riverSize": 4,
+        "standardOres": [
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 8,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 15,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 15,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.25,
+            "minHeight": -2000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.375,
+            "minHeight": -3000,
+            "maxHeight": -2000
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.5,
+            "minHeight": -4000,
+            "maxHeight": -3000
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.75,
+            "minHeight": -5000,
+            "maxHeight": -4000
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -5000
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.05,
+            "minHeight": -2000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.075,
+            "minHeight": -4000,
+            "maxHeight": -2001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": -4001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 5,
+            "spawnTries": 1,
+            "spawnProbability": 0.005,
+            "minHeight": -2000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.0075,
+            "minHeight": -4000,
+            "maxHeight": -2001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.01,
+            "minHeight": -Infinity,
+            "maxHeight": -4001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:mantlegas"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 4,
+            "spawnTries": 6,
+            "spawnProbability": 0.5,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_mantlerock"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 100,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:gravel"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 36,
+            "spawnTries": 7,
+            "spawnProbability": 0.07,
+            "minHeight": -3000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:gravel"
+            },
+            "genInBlockstates": [
+              {
+                "Properties": {
+                  "variant": "stone"
+                },
+                "Name": "minecraft:stone"
+              },
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 44,
+            "spawnTries": 7,
+            "spawnProbability": 0.15,
+            "minHeight": -4100,
+            "maxHeight": -3000
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:flowing_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 25,
+            "spawnTries": 2,
+            "spawnProbability": 0.2,
+            "minHeight": -1000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 60,
+            "spawnTries": 2,
+            "spawnProbability": 0.1,
+            "minHeight": -1000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 60,
+            "spawnTries": 2,
+            "spawnProbability": 0.13,
+            "minHeight": -3000,
+            "maxHeight": -1001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:hot_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:mantlerock"
+              }
+            ],
+            "spawnSize": 60,
+            "spawnTries": 2,
+            "spawnProbability": 0.15,
+            "minHeight": -Infinity,
+            "maxHeight": -3001
+          }
+        ],
+        "periodicGaussianOres": [],
+        "expectedBaseHeight": -9100.0,
+        "expectedHeightVariation": 1.0,
+        "actualHeight": -4496.6,
+        "heightVariationFactor": 0.875,
+        "specialHeightVariationFactorBelowAverageY": 0.8,
+        "heightVariationOffset": 2048.0,
+        "heightFactor": -0.375,
+        "heightOffset": -6546.0,
+        "depthNoiseFactor": 17.5,
+        "depthNoiseOffset": -0.328125,
+        "depthNoiseFrequencyX": 0.0051398026,
+        "depthNoiseFrequencyZ": 0.0051398026,
+        "depthNoiseOctaves": 16,
+        "selectorNoiseFactor": 4.0,
+        "selectorNoiseOffset": 0.4,
+        "selectorNoiseFrequencyX": 0.011111111,
+        "selectorNoiseFrequencyY": 9.090909E-4,
+        "selectorNoiseFrequencyZ": 0.011111111,
+        "selectorNoiseOctaves": 10,
+        "lowNoiseFactor": 0.4375,
+        "lowNoiseOffset": -4.0,
+        "lowNoiseFrequencyX": 0.0116959065,
+        "lowNoiseFrequencyY": 0.006666667,
+        "lowNoiseFrequencyZ": 0.011111111,
+        "lowNoiseOctaves": 16,
+        "highNoiseFactor": 3.515625,
+        "highNoiseOffset": -2.3,
+        "highNoiseFrequencyX": 0.013157895,
+        "highNoiseFrequencyY": 0.004,
+        "highNoiseFrequencyZ": 0.0125,
+        "highNoiseOctaves": 16,      
+        "cubeAreas": [],
+        "replacerConfig": {
+          "defaults": {
+            "cubicgen:biome_fill_noise_octaves": 4.0,
+            "cubicgen:ocean_block": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:water"
+            },
+            "cubicgen:height_scale": 64.0,
+            "cubicgen:biome_fill_noise_freq": 0.0078125,
+            "cubicgen:water_level": 63.0,
+            "cubicgen:biome_fill_depth_factor": 2.3333333333333335,
+            "cubicgen:terrain_fill_block": {
+              "Properties": {
+                "variant": "stone"
+              },
+              "Name": "minecraft:stone"
+            },
+            "cubicgen:mesa_depth": 16.0,
+            "cubicgen:biome_fill_depth_offset": 3.0,
+            "cubicgen:horizontal_gradient_depth_decrease_weight": 1.0,
+            "cubicgen:height_offset": 64.0
+          },
+          "overrides": {
+            "cubicgen:ocean_block": {
+              "Name": "planetcore:mantlerock"
+            },
+            "cubicgen:terrain_fill_block": {
+              "Name": "planetcore:hot_lava"
+            },
+            "cubicgen:mesa_depth": NaN,
+            "cubicgen:biome_fill_depth_factor": NaN
+          }
+        }
+      }
+    ],
+    [
+      {
+        "minX": -1000000000,
+        "minY": -946,
+        "minZ": -1000000000,
+        "maxX": 1000000000,
+        "maxY": -937,
+        "maxZ": 1000000000
+      },
+      {
+        "waterLevel": 2000,
+        "caves": true,
+        "strongholds": true,
+        "alternateStrongholdsPositions": false,
+        "villages": false,
+        "mineshafts": true,
+        "temples": true,
+        "oceanMonuments": true,
+        "woodlandMansions": true,
+        "ravines": false,
+        "dungeons": false,
+        "dungeonCount": 1,
+        "waterLakes": false,
+        "waterLakeRarity": 60,
+        "lavaLakes": false,
+        "lavaLakeRarity": 2,
+        "aboveSeaLavaLakeRarity": 13,
+        "lavaOceans": true,
+        "biome": -1,
+        "biomeSize": 4,
+        "riverSize": 4,
+        "standardOres": [
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 8,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 15,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 15,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 1,
+            "spawnProbability": 0.2,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 1,
+            "spawnProbability": 0.02,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_onyx"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.002,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:core_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 20,
+            "spawnTries": 2,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          }
+        ],
+        "periodicGaussianOres": [],
+        "expectedBaseHeight": -15000.0,
+        "expectedHeightVariation": 1.0,
+        "actualHeight": -6510.0,
+        "heightVariationFactor": 0.0,
+        "specialHeightVariationFactorBelowAverageY": 0.0,
+        "heightVariationOffset": 2048.0,
+        "heightFactor": -0.64,
+        "heightOffset": -20210.0,
+        "depthNoiseFactor": 60.0,
+        "depthNoiseOffset": -1792.0,
+        "depthNoiseFrequencyX": 0.032258064,
+        "depthNoiseFrequencyZ": 0.032258064,
+        "depthNoiseOctaves": 1,
+        "selectorNoiseFactor": 1.0,
+        "selectorNoiseOffset": -32.0,
+        "selectorNoiseFrequencyX": 0.0625,
+        "selectorNoiseFrequencyY": 0.0625,
+        "selectorNoiseFrequencyZ": 0.0625,
+        "selectorNoiseOctaves": 16,
+        "lowNoiseFactor": 0.14355469,
+        "lowNoiseOffset": 2.5,
+        "lowNoiseFrequencyX": 0.0625,
+        "lowNoiseFrequencyY": 0.0,
+        "lowNoiseFrequencyZ": 0.0625,
+        "lowNoiseOctaves": 16,
+        "highNoiseFactor": 0.3125,
+        "highNoiseOffset": 0.1875,
+        "highNoiseFrequencyX": 0.0625,
+        "highNoiseFrequencyY": 0.0053475937,
+        "highNoiseFrequencyZ": 0.0625,
+        "highNoiseOctaves": 16,
+        "cubeAreas": [],
+        "replacerConfig": {
+          "defaults": {
+            "cubicgen:biome_fill_noise_octaves": 4.0,
+            "cubicgen:ocean_block": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:water"
+            },
+            "cubicgen:height_scale": 64.0,
+            "cubicgen:biome_fill_noise_freq": 0.0078125,
+            "cubicgen:water_level": 63.0,
+            "cubicgen:biome_fill_depth_factor": 2.3333333333333335,
+            "cubicgen:terrain_fill_block": {
+              "Properties": {
+                "variant": "stone"
+              },
+              "Name": "minecraft:stone"
+            },
+            "cubicgen:mesa_depth": 16.0,
+            "cubicgen:biome_fill_depth_offset": 3.0,
+            "cubicgen:horizontal_gradient_depth_decrease_weight": 1.0,
+            "cubicgen:height_offset": 64.0
+          },
+          "overrides": {
+            "cubicgen:ocean_block": {
+              "Name": "planetcore:hot_lava"
+            },
+            "cubicgen:terrain_fill_block": {
+              "Name": "planetcore:corerock"
+            },
+            "cubicgen:mesa_depth": NaN,
+            "cubicgen:biome_fill_depth_factor": NaN
+          }
+        }
+      }
+    ],
+    [
+      {
+        "minX": -1000000000,
+        "minY": -1000000000,
+        "minZ": -1000000000,
+        "maxX": 1000000000,
+        "maxY": -946,
+        "maxZ": 1000000000
+      },
+      {
+        "waterLevel": 2000,
+        "caves": true,
+        "strongholds": true,
+        "alternateStrongholdsPositions": false,
+        "villages": false,
+        "mineshafts": true,
+        "temples": true,
+        "oceanMonuments": true,
+        "woodlandMansions": true,
+        "ravines": false,
+        "dungeons": false,
+        "dungeonCount": 1,
+        "waterLakes": false,
+        "waterLakeRarity": 60,
+        "lavaLakes": false,
+        "lavaLakeRarity": 2,
+        "aboveSeaLavaLakeRarity": 13,
+        "lavaOceans": true,
+        "biome": -1,
+        "biomeSize": 4,
+        "riverSize": 4,
+        "standardOres": [
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 8,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 15,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 15,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:corerock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 3,
+            "spawnProbability": 1.0,
+            "minHeight": -1000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 4,
+            "spawnProbability": 1.0,
+            "minHeight": -2000,
+            "maxHeight": -1001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 5,
+            "spawnProbability": 1.0,
+            "minHeight": -3000,
+            "maxHeight": -2001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 5,
+            "spawnProbability": 1.0,
+            "minHeight": -4000,
+            "maxHeight": -3001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 5,
+            "spawnProbability": 1.0,
+            "minHeight": -5000,
+            "maxHeight": -4001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 14,
+            "spawnTries": 5,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -5001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 2,
+            "spawnProbability": 1.0,
+            "minHeight": -2000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 13,
+            "spawnTries": 3,
+            "spawnProbability": 1.0,
+            "minHeight": -4000,
+            "maxHeight": -2000
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 14,
+            "spawnTries": 4,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -4000
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -2000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 13,
+            "spawnTries": 2,
+            "spawnProbability": 1.0,
+            "minHeight": -5000,
+            "maxHeight": -2001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 14,
+            "spawnTries": 3,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -5001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 1,
+            "spawnProbability": 0.25,
+            "minHeight": -2500,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 1,
+            "spawnProbability": 0.375,
+            "minHeight": -5000,
+            "maxHeight": -2501
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 11,
+            "spawnTries": 1,
+            "spawnProbability": 0.5,
+            "minHeight": -7500,
+            "maxHeight": -5001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 1,
+            "spawnProbability": 0.75,
+            "minHeight": -10000,
+            "maxHeight": -7501
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -10001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 1,
+            "spawnProbability": 0.025,
+            "minHeight": -2500,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 1,
+            "spawnProbability": 0.0375,
+            "minHeight": -5000,
+            "maxHeight": -2501
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 1,
+            "spawnProbability": 0.05,
+            "minHeight": -7500,
+            "maxHeight": -5001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 11,
+            "spawnTries": 1,
+            "spawnProbability": 0.075,
+            "minHeight": -10000,
+            "maxHeight": -7501
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 1,
+            "spawnProbability": 0.1,
+            "minHeight": -Infinity,
+            "maxHeight": -10001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_onyx"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 6,
+            "spawnTries": 1,
+            "spawnProbability": 0.0025,
+            "minHeight": -5000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_onyx"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 1,
+            "spawnProbability": 0.00375,
+            "minHeight": -10000,
+            "maxHeight": -5001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:corerock_onyx"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 1,
+            "spawnProbability": 0.005,
+            "minHeight": -Infinity,
+            "maxHeight": -10001
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:innercorerock_sulfur"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 8,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:innercorerock_coal"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 17,
+            "spawnTries": 15,
+            "spawnProbability": 0.125,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:innercorerock_redstone"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 8,
+            "spawnTries": 8,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:innercorerock_iron"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 15,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:innercorerock_silver"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:innercorerock_gold"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:innercorerock_platinum"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 9,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "planetcore:innercorerock_lapis"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 7,
+            "spawnTries": 2,
+            "spawnProbability": 0.25,
+            "minHeight": -Infinity,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 18,
+            "spawnTries": 3,
+            "spawnProbability": 1.0,
+            "minHeight": -2500,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_emerald"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 22,
+            "spawnTries": 3,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -2500
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 18,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -3000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 20,
+            "spawnTries": 2,
+            "spawnProbability": 1.0,
+            "minHeight": -6000,
+            "maxHeight": -3001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_saphir"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 24,
+            "spawnTries": 3,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -6001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 18,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -4000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 20,
+            "spawnTries": 2,
+            "spawnProbability": 1.0,
+            "minHeight": -8000,
+            "maxHeight": -4001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_ruby"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 22,
+            "spawnTries": 3,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -8001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -5000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 14,
+            "spawnTries": 1,
+            "spawnProbability": 1.0,
+            "minHeight": -9000,
+            "maxHeight": -5001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_diamond"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 16,
+            "spawnTries": 2,
+            "spawnProbability": 1.0,
+            "minHeight": -Infinity,
+            "maxHeight": -9001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 1,
+            "spawnProbability": 0.1,
+            "minHeight": -7500,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 14,
+            "spawnTries": 1,
+            "spawnProbability": 0.125,
+            "minHeight": -8500,
+            "maxHeight": -7501
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 16,
+            "spawnTries": 1,
+            "spawnProbability": 0.15,
+            "minHeight": -10000,
+            "maxHeight": -8501
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_amazonite"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 18,
+            "spawnTries": 1,
+            "spawnProbability": 0.2,
+            "minHeight": -Infinity,
+            "maxHeight": -10000
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_onyx"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 10,
+            "spawnTries": 1,
+            "spawnProbability": 0.01,
+            "minHeight": -10000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_onyx"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 11,
+            "spawnTries": 1,
+            "spawnProbability": 0.0125,
+            "minHeight": -12500,
+            "maxHeight": -10001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:innercorerock_onyx"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 12,
+            "spawnTries": 1,
+            "spawnProbability": 0.015,
+            "minHeight": -Infinity,
+            "maxHeight": -12501
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:core_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              },
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 40,
+            "spawnTries": 2,
+            "spawnProbability": 0.15,
+            "minHeight": -2000,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:core_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              },
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 50,
+            "spawnTries": 3,
+            "spawnProbability": 0.2,
+            "minHeight": -5000,
+            "maxHeight": -2501
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:core_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              },
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 55,
+            "spawnTries": 3,
+            "spawnProbability": 0.26,
+            "minHeight": -9000,
+            "maxHeight": -5001
+          },
+          {
+            "blockstate": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "planetcore:core_lava"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              },
+              {
+                "Name": "planetcore:innercorerock"
+              }
+            ],
+            "spawnSize": 65,
+            "spawnTries": 3,
+            "spawnProbability": 0.32,
+            "minHeight": -Infinity,
+            "maxHeight": -9001
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:air"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:innercorerock"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "planetcore:core_lava"
+              },
+              {
+                "Name": "planetcore:innercorerock_coal"
+              },
+              {
+                "Name": "planetcore:innercorerock_iron"
+              },
+              {
+                "Name": "planetcore:innercorerock_redstone"
+              },
+              {
+                "Name": "planetcore:innercorerock_silver"
+              },
+              {
+                "Name": "planetcore:innercorerock_gold"
+              },
+              {
+                "Name": "planetcore:innercorerock_platinum"
+              },
+              {
+                "Name": "planetcore:innercorerock_emerald"
+              },
+              {
+                "Name": "planetcore:innercorerock_lapis"
+              },
+              {
+                "Name": "planetcore:innercorerock_saphir"
+              },
+              {
+                "Name": "planetcore:innercorerock_ruby"
+              },
+              {
+                "Name": "planetcore:innercorerock_diamond"
+              },
+              {
+                "Name": "planetcore:innercorerock_amazonite"
+              },
+              {
+                "Name": "planetcore:innercorerock_onyx"
+              }
+            ],
+            "spawnSize": 600,
+            "spawnTries": 2,
+            "spawnProbability": 0.004,
+            "minHeight": -2960,
+            "maxHeight": Infinity
+          },
+          {
+            "blockstate": {
+              "Name": "minecraft:air"
+            },
+            "genInBlockstates": [
+              {
+                "Name": "planetcore:corerock"
+              },
+              {
+                "Properties": {
+                  "level": "0"
+                },
+                "Name": "planetcore:core_lava"
+              },
+              {
+                "Name": "planetcore:corerock_coal"
+              },
+              {
+                "Name": "planetcore:corerock_iron"
+              },
+              {
+                "Name": "planetcore:corerock_redstone"
+              },
+              {
+                "Name": "planetcore:corerock_silver"
+              },
+              {
+                "Name": "planetcore:corerock_gold"
+              },
+              {
+                "Name": "planetcore:corerock_platinum"
+              },
+              {
+                "Name": "planetcore:corerock_emerald"
+              },
+              {
+                "Name": "planetcore:corerock_lapis"
+              },
+              {
+                "Name": "planetcore:corerock_saphir"
+              },
+              {
+                "Name": "planetcore:corerock_ruby"
+              },
+              {
+                "Name": "planetcore:corerock_diamond"
+              },
+              {
+                "Name": "planetcore:corerock_amazonite"
+              },
+              {
+                "Name": "planetcore:corerock_onyx"
+              }
+            ],
+            "spawnSize": 500,
+            "spawnTries": 2,
+            "spawnProbability": 0.004,
+            "minHeight": -11000,
+            "maxHeight": -2960.0
+          }
+        ],
+        "periodicGaussianOres": [],
+        "expectedBaseHeight": -15100.0,
+        "expectedHeightVariation": 1.0,
+        "actualHeight": 20000.0,
+        "heightVariationFactor": 64.0,
+        "specialHeightVariationFactorBelowAverageY": 1.21875,
+        "heightVariationOffset": 2048.0,
+        "heightFactor": 64.0,
+        "heightOffset": -18432.0,
+        "depthNoiseFactor": 17.0,
+        "depthNoiseOffset": 3.0,
+        "depthNoiseFrequencyX": 0.0051398026,
+        "depthNoiseFrequencyZ": 0.0051398026,
+        "depthNoiseOctaves": 16,
+        "selectorNoiseFactor": 2.75,
+        "selectorNoiseOffset": 0.875,
+        "selectorNoiseFrequencyX": 0.008928572,
+        "selectorNoiseFrequencyY": 0.012403101,
+        "selectorNoiseFrequencyZ": 0.008928572,
+        "selectorNoiseOctaves": 11,
+        "lowNoiseFactor": 4.375,
+        "lowNoiseOffset": 0.064453125,
+        "lowNoiseFrequencyX": 0.009291521,
+        "lowNoiseFrequencyY": 0.013888889,
+        "lowNoiseFrequencyZ": 0.008928572,
+        "lowNoiseOctaves": 16,
+        "highNoiseFactor": 4.0,
+        "highNoiseOffset": 0.05,
+        "highNoiseFrequencyX": 0.008064516,
+        "highNoiseFrequencyY": 0.010416667,
+        "highNoiseFrequencyZ": 0.008064516,
+        "highNoiseOctaves": 16,                  
+        "cubeAreas": [],
+        "replacerConfig": {
+          "defaults": {
+            "cubicgen:biome_fill_noise_octaves": 4.0,
+            "cubicgen:ocean_block": {
+              "Properties": {
+                "level": "0"
+              },
+              "Name": "minecraft:water"
+            },
+            "cubicgen:height_scale": 64.0,
+            "cubicgen:biome_fill_noise_freq": 0.0078125,
+            "cubicgen:water_level": 63.0,
+            "cubicgen:biome_fill_depth_factor": 2.3333333333333335,
+            "cubicgen:terrain_fill_block": {
+              "Properties": {
+                "variant": "stone"
+              },
+              "Name": "minecraft:stone"
+            },
+            "cubicgen:mesa_depth": 16.0,
+            "cubicgen:biome_fill_depth_offset": 3.0,
+            "cubicgen:horizontal_gradient_depth_decrease_weight": 1.0,
+            "cubicgen:height_offset": 64.0
+          },
+          "overrides": {
+            "cubicgen:ocean_block": {
+              "Name": "planetcore:corerock"
+            },
+            "cubicgen:terrain_fill_block": {
+              "Name": "planetcore:innercorerock"
+            },
+            "cubicgen:mesa_depth": NaN,
+            "cubicgen:biome_fill_depth_factor": NaN
+          }
+        }
+      }
+    ]
+  ],
+  "replacerConfig": {
+    "defaults": {
+      "cubicgen:biome_fill_noise_octaves": 4.0,
+      "cubicgen:ocean_block": {
+        "Properties": {
+          "level": "0"
+        },
+        "Name": "minecraft:water"
+      },
+      "cubicgen:height_scale": 64.0,
+      "cubicgen:biome_fill_noise_freq": 0.0078125,
+      "cubicgen:water_level": 63.0,
+      "cubicgen:biome_fill_depth_factor": 2.3333333333333335,
+      "cubicgen:terrain_fill_block": {
+        "Properties": {
+          "variant": "stone"
+        },
+        "Name": "minecraft:stone"
+      },
+      "cubicgen:mesa_depth": 16.0,
+      "cubicgen:horizontal_gradient_depth_decrease_weight": 1.0,
+      "cubicgen:biome_fill_depth_offset": 3.0,
+      "cubicgen:height_offset": 64.0
+    },
+    "overrides": {}
+  }
+}

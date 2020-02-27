@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:amethyst"
+        },
+        "B":
+        {
+            "item": "planetcore:amethyst_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:amethyst_shovel",
+        "count": 1
+    }
+}

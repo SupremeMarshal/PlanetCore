@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "AB",
+        " B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:azurite"
+        },
+        "B":
+        {
+            "item": "planetcore:azurite_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:azurite_axe",
+        "count": 1
+    }
+}

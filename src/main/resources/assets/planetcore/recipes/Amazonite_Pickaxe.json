@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        " B ",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:amazonite"
+        },
+        "B":
+        {
+            "item": "planetcore:amazonite_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:amazonite_pickaxe",
+        "count": 1
+    }
+}

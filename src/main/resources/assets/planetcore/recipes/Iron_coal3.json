@@ -1,0 +1,50 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+        "item": "planetcore:mantlerock_iron"
+    },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "itemCoal"
+        }
+
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:iron_coal",
+        "count": 4
+    }
+}

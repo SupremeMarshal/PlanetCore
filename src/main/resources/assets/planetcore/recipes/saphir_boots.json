@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:saphir"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:saphir_boots",
+        "count": 1
+    }
+}
