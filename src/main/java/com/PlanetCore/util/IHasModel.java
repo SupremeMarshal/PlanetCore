@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.util;
+package com.PlanetCore.util;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

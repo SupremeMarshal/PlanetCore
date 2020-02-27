@@ -1,6 +1,6 @@
-package com.SupremeMarshal.ToTheEarthCore.entity.render.layers;
+package com.PlanetCore.entity.render.layers;
 
-import com.SupremeMarshal.ToTheEarthCore.entity.render.RenderDeathEnderman;
+import com.PlanetCore.entity.render.RenderDeathEnderman;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockRendererDispatcher;

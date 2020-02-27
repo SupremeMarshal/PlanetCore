@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.util.handlers;
+package com.PlanetCore.util.handlers;
 
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.fml.common.Mod;

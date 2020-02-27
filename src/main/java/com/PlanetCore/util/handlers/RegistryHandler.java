@@ -1,8 +1,8 @@
-package com.SupremeMarshal.ToTheEarthCore.util.handlers;
+package com.PlanetCore.util.handlers;
 
-import com.SupremeMarshal.ToTheEarthCore.init.*;
-import com.SupremeMarshal.ToTheEarthCore.util.IHasModel;
-import com.SupremeMarshal.ToTheEarthCore.util.ModConfiguration;
+import com.PlanetCore.init.*;
+import com.PlanetCore.util.IHasModel;
+import com.PlanetCore.util.ModConfiguration;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

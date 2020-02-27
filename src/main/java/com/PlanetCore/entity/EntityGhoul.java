@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.entity;
+package com.PlanetCore.entity;
 
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackMelee;

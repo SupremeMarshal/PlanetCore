@@ -1,6 +1,6 @@
-package com.SupremeMarshal.ToTheEarthCore.entity;
+package com.PlanetCore.entity;
 
-import com.SupremeMarshal.ToTheEarthCore.util.handlers.LootTableHandler;
+import com.PlanetCore.util.handlers.LootTableHandler;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityEnderman;

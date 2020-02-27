@@ -1,9 +1,9 @@
-package com.SupremeMarshal.ToTheEarthCore.entity.render;
+package com.PlanetCore.entity.render;
 
 
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityHellHound;
-import com.SupremeMarshal.ToTheEarthCore.entity.model.ModelHellHound;
-import com.SupremeMarshal.ToTheEarthCore.util.Reference;
+import com.PlanetCore.entity.EntityHellHound;
+import com.PlanetCore.entity.model.ModelHellHound;
+import com.PlanetCore.util.Reference;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

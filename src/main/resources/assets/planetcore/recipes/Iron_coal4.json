@@ -5,10 +5,10 @@
     [
 
     {
-        "item": "planetcore:stiffrock_iron"
+        "item": "planetcore:crustrock_iron"
     },
     {
-        "item": "planetcore:stiffrock_iron"
+        "item": "planetcore:crustrock_iron"
     },
     {
         "type": "forge:ore_dict",

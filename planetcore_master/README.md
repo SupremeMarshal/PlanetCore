@@ -6,7 +6,7 @@ https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft
 
 You also need the dependencies for Cubic Chunks.
 
-Second, copy all the text in my preset `ToTheEarthCore-Preset.json`. When you create a new world, go to more world options, change world type: Default to: Custom Cubic.
+Second, copy all the text in my preset `PlanetCore-Preset.json`. When you create a new world, go to more world options, change world type: Default to: Custom Cubic.
 Then click customize, then click preset. Delete everything and copy paste my preset in the big box. Click done, and done again. Then you can create the world.
 
 IMPORTANT: This mod needs the preset, else you will just play in a normal vanilla game. My ores only generate using the preset.

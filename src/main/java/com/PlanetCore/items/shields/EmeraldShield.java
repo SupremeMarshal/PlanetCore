@@ -1,7 +1,7 @@
-package com.SupremeMarshal.ToTheEarthCore.items.shields;
+package com.PlanetCore.items.shields;
 
-import com.SupremeMarshal.ToTheEarthCore.Main;
-import com.SupremeMarshal.ToTheEarthCore.util.IHasModel;
+import com.PlanetCore.Main;
+import com.PlanetCore.util.IHasModel;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;

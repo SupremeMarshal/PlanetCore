@@ -1,6 +1,6 @@
-package com.SupremeMarshal.ToTheEarthCore.blocks;
+package com.PlanetCore.blocks;
 
-import com.SupremeMarshal.ToTheEarthCore.init.ModBlocks;
+import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

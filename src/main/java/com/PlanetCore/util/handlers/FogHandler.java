@@ -1,6 +1,6 @@
-package com.SupremeMarshal.ToTheEarthCore.util.handlers;
+package com.PlanetCore.util.handlers;
 
-import com.SupremeMarshal.ToTheEarthCore.init.ModBlocks;
+import com.PlanetCore.init.ModBlocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;

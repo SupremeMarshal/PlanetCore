@@ -1,14 +1,14 @@
-package com.SupremeMarshal.ToTheEarthCore.util.handlers;
+package com.PlanetCore.util.handlers;
 
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityBlackDemon;
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityDemon;
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityGhoul;
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityHellHound;
-import com.SupremeMarshal.ToTheEarthCore.entity.render.RenderBlackDemon;
-import com.SupremeMarshal.ToTheEarthCore.entity.render.RenderDemon;
-import com.SupremeMarshal.ToTheEarthCore.entity.render.RenderGhoul;
-import com.SupremeMarshal.ToTheEarthCore.entity.render.RenderHellHound;
-import com.SupremeMarshal.ToTheEarthCore.init.ModBlocks;
+import com.PlanetCore.entity.EntityBlackDemon;
+import com.PlanetCore.entity.EntityDemon;
+import com.PlanetCore.entity.EntityGhoul;
+import com.PlanetCore.entity.EntityHellHound;
+import com.PlanetCore.entity.render.RenderBlackDemon;
+import com.PlanetCore.entity.render.RenderDemon;
+import com.PlanetCore.entity.render.RenderGhoul;
+import com.PlanetCore.entity.render.RenderHellHound;
+import com.PlanetCore.init.ModBlocks;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemMeshDefinition;

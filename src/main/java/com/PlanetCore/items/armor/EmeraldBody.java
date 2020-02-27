@@ -1,5 +1,6 @@
-package com.SupremeMarshal.ToTheEarthCore.items.armor;
+package com.PlanetCore.items.armor;
 
+import com.PlanetCore.items.armor.ArmorBase;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.SharedMonsterAttributes;

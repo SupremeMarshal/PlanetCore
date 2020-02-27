@@ -1,6 +1,6 @@
-package com.SupremeMarshal.ToTheEarthCore.util.handlers;
+package com.PlanetCore.util.handlers;
 
-import com.SupremeMarshal.ToTheEarthCore.util.Reference;
+import com.PlanetCore.util.Reference;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;

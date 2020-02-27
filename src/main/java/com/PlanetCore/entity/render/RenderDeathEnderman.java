@@ -1,10 +1,10 @@
-package com.SupremeMarshal.ToTheEarthCore.entity.render;
+package com.PlanetCore.entity.render;
 
 
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityDeathEnderman;
-import com.SupremeMarshal.ToTheEarthCore.entity.render.layers.LayerDeathEndermanEyes;
-import com.SupremeMarshal.ToTheEarthCore.entity.render.layers.LayerHeldBlock;
-import com.SupremeMarshal.ToTheEarthCore.util.Reference;
+import com.PlanetCore.entity.EntityDeathEnderman;
+import com.PlanetCore.entity.render.layers.LayerDeathEndermanEyes;
+import com.PlanetCore.entity.render.layers.LayerHeldBlock;
+import com.PlanetCore.util.Reference;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.model.ModelEnderman;
 import net.minecraft.client.renderer.entity.RenderLiving;

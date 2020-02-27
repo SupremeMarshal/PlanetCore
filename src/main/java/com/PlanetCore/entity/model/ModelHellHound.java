@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.entity.model;
+package com.PlanetCore.entity.model;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

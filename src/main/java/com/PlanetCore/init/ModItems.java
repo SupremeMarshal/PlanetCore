@@ -1,14 +1,14 @@
-package com.SupremeMarshal.ToTheEarthCore.init;
+package com.PlanetCore.init;
 
-import com.SupremeMarshal.ToTheEarthCore.items.Gems;
-import com.SupremeMarshal.ToTheEarthCore.items.ItemBase;
-import com.SupremeMarshal.ToTheEarthCore.items.armor.*;
-import com.SupremeMarshal.ToTheEarthCore.items.food.EnchantedFoodEffectBase;
-import com.SupremeMarshal.ToTheEarthCore.items.food.EnchantedFoodEffectBase1;
-import com.SupremeMarshal.ToTheEarthCore.items.food.FoodEffectBase;
-import com.SupremeMarshal.ToTheEarthCore.items.shields.*;
-import com.SupremeMarshal.ToTheEarthCore.items.tools.*;
-import com.SupremeMarshal.ToTheEarthCore.util.Reference;
+import com.PlanetCore.items.Gems;
+import com.PlanetCore.items.ItemBase;
+import com.PlanetCore.items.armor.*;
+import com.PlanetCore.items.food.EnchantedFoodEffectBase;
+import com.PlanetCore.items.food.EnchantedFoodEffectBase1;
+import com.PlanetCore.items.food.FoodEffectBase;
+import com.PlanetCore.items.shields.*;
+import com.PlanetCore.items.tools.*;
+import com.PlanetCore.util.Reference;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;

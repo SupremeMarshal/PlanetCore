@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.proxy;
+package com.PlanetCore.proxy;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;

@@ -1,10 +1,10 @@
-package com.SupremeMarshal.ToTheEarthCore.blocks;
+package com.PlanetCore.blocks;
 
 
-import com.SupremeMarshal.ToTheEarthCore.Main;
-import com.SupremeMarshal.ToTheEarthCore.init.ModBlocks;
-import com.SupremeMarshal.ToTheEarthCore.init.ModItems;
-import com.SupremeMarshal.ToTheEarthCore.util.IHasModel;
+import com.PlanetCore.Main;
+import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.init.ModItems;
+import com.PlanetCore.util.IHasModel;
 import com.google.common.base.Predicate;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;

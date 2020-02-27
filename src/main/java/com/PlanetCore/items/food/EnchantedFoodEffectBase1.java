@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.items.food;
+package com.PlanetCore.items.food;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

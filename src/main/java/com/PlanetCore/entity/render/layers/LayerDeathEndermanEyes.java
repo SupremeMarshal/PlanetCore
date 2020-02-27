@@ -1,8 +1,8 @@
-package com.SupremeMarshal.ToTheEarthCore.entity.render.layers;
+package com.PlanetCore.entity.render.layers;
 
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityDeathEnderman;
-import com.SupremeMarshal.ToTheEarthCore.entity.render.RenderDeathEnderman;
-import com.SupremeMarshal.ToTheEarthCore.util.Reference;
+import com.PlanetCore.entity.EntityDeathEnderman;
+import com.PlanetCore.entity.render.RenderDeathEnderman;
+import com.PlanetCore.util.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.OpenGlHelper;

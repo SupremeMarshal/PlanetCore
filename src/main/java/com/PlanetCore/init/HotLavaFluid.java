@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.init;
+package com.PlanetCore.init;
 
 
 import net.minecraft.block.Block;

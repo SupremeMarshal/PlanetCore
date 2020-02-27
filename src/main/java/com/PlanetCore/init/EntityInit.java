@@ -1,15 +1,15 @@
-package com.SupremeMarshal.ToTheEarthCore.init;
+package com.PlanetCore.init;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.SupremeMarshal.ToTheEarthCore.Main;
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityBlackDemon;
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityDemon;
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityGhoul;
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityHellHound;
-import com.SupremeMarshal.ToTheEarthCore.util.ModConfiguration;
-import com.SupremeMarshal.ToTheEarthCore.util.Reference;
+import com.PlanetCore.Main;
+import com.PlanetCore.entity.EntityBlackDemon;
+import com.PlanetCore.entity.EntityDemon;
+import com.PlanetCore.entity.EntityGhoul;
+import com.PlanetCore.entity.EntityHellHound;
+import com.PlanetCore.util.ModConfiguration;
+import com.PlanetCore.util.Reference;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureType;

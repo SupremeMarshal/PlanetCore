@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.items.food;
+package com.PlanetCore.items.food;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -7,7 +7,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class FoodEffectBase extends FoodBase
+public class FoodEffectBase extends com.PlanetCore.items.food.FoodBase
 {
 
     PotionEffect effect;

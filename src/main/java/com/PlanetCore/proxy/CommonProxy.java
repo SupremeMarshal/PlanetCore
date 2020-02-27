@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.proxy;
+package com.PlanetCore.proxy;
 
 import net.minecraft.item.Item;
 

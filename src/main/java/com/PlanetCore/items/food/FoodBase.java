@@ -1,8 +1,8 @@
-package com.SupremeMarshal.ToTheEarthCore.items.food;
+package com.PlanetCore.items.food;
 
-import com.SupremeMarshal.ToTheEarthCore.Main;
-import com.SupremeMarshal.ToTheEarthCore.init.ModItems;
-import com.SupremeMarshal.ToTheEarthCore.util.IHasModel;
+import com.PlanetCore.Main;
+import com.PlanetCore.init.ModItems;
+import com.PlanetCore.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemFood;
 

@@ -1,8 +1,8 @@
-package com.SupremeMarshal.ToTheEarthCore.entity.render;
+package com.PlanetCore.entity.render;
 
-import com.SupremeMarshal.ToTheEarthCore.entity.EntityBlackDemon;
-import com.SupremeMarshal.ToTheEarthCore.entity.model.ModelBlackDemon;
-import com.SupremeMarshal.ToTheEarthCore.util.Reference;
+import com.PlanetCore.entity.EntityBlackDemon;
+import com.PlanetCore.entity.model.ModelBlackDemon;
+import com.PlanetCore.util.Reference;
 
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

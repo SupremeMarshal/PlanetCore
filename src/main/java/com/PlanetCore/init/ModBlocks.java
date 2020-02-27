@@ -1,6 +1,6 @@
-package com.SupremeMarshal.ToTheEarthCore.init;
+package com.PlanetCore.init;
 
-import com.SupremeMarshal.ToTheEarthCore.blocks.*;
+import com.PlanetCore.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -168,25 +168,25 @@ public class ModBlocks {
 	public static final Block CORESTONE_COAL = new Corerock("corestone_coal", Material.ROCK);
 	public static final Block CORESTONE_SULFUR = new Corerock("corestone_sulfur", Material.ROCK);
 
-	public static final Block INNERCORESTONE_AZURITE = new Corerock("innercorerock_azurite", Material.ROCK);
-	public static final Block INNERCORESTONE_ONYX = new Corerock("innercorerock_onyx", Material.ROCK);
-	public static final Block INNERCORESTONE_AMETHYST = new Corerock("innercorerock_amethyst", Material.ROCK);
-	public static final Block INNERCORESTONE_AMAZONITE = new Corerock("innercorerock_amazonite", Material.ROCK);
-	public static final Block INNERCORESTONE_JADE = new Corerock("innercorerock_jade", Material.ROCK);
-	public static final Block INNERCORESTONE_DIAMOND = new Corerock("innercorerock_diamond", Material.ROCK);
-	public static final Block INNERCORESTONE_TOPAZ = new Corerock("innercorerock_topaz", Material.ROCK);
-	public static final Block INNERCORESTONE_RUBY = new Corerock("innercorerock_ruby", Material.ROCK);
-	public static final Block INNERCORESTONE_FLAMING_TOPAZ = new Corerock("innercorerock_flaming_topaz", Material.ROCK);
-	public static final Block INNERCORESTONE_SAPHIR = new Corerock("innercorerock_saphir", Material.ROCK);
-	public static final Block INNERCORESTONE_EMERALD = new Corerock("innercorerock_emerald", Material.ROCK);
-	public static final Block INNERCORESTONE_LAPIS = new Corerock("innercorerock_lapis", Material.ROCK);
-	public static final Block INNERCORESTONE_REDSTONE = new Corerock("innercorerock_redstone", Material.ROCK);
-	public static final Block INNERCORESTONE_PLATINUM = new Corerock("innercorerock_platinum", Material.ROCK);
-	public static final Block INNERCORESTONE_GOLD = new Corerock("innercorerock_gold", Material.ROCK);
-	public static final Block INNERCORESTONE_SILVER = new Corerock("innercorerock_silver", Material.ROCK);
-	public static final Block INNERCORESTONE_IRON = new Corerock("innercorerock_iron", Material.ROCK);
-	public static final Block INNERCORESTONE_COAL = new Corerock("innercorerock_coal", Material.ROCK);
-	public static final Block INNERCORESTONE_SULFUR = new Corerock("innercorerock_sulfur", Material.ROCK);
+	public static final Block INNERCORESTONE_AZURITE = new Corerock("innercorestone_azurite", Material.ROCK);
+	public static final Block INNERCORESTONE_ONYX = new Corerock("innercorestone_onyx", Material.ROCK);
+	public static final Block INNERCORESTONE_AMETHYST = new Corerock("innercorestone_amethyst", Material.ROCK);
+	public static final Block INNERCORESTONE_AMAZONITE = new Corerock("innercorestone_amazonite", Material.ROCK);
+	public static final Block INNERCORESTONE_JADE = new Corerock("innercorestone_jade", Material.ROCK);
+	public static final Block INNERCORESTONE_DIAMOND = new Corerock("innercorestone_diamond", Material.ROCK);
+	public static final Block INNERCORESTONE_TOPAZ = new Corerock("innercorestone_topaz", Material.ROCK);
+	public static final Block INNERCORESTONE_RUBY = new Corerock("innercorestone_ruby", Material.ROCK);
+	public static final Block INNERCORESTONE_FLAMING_TOPAZ = new Corerock("innercorestone_flaming_topaz", Material.ROCK);
+	public static final Block INNERCORESTONE_SAPHIR = new Corerock("innercorestone_saphir", Material.ROCK);
+	public static final Block INNERCORESTONE_EMERALD = new Corerock("innercorestone_emerald", Material.ROCK);
+	public static final Block INNERCORESTONE_LAPIS = new Corerock("innercorestone_lapis", Material.ROCK);
+	public static final Block INNERCORESTONE_REDSTONE = new Corerock("innercorestone_redstone", Material.ROCK);
+	public static final Block INNERCORESTONE_PLATINUM = new Corerock("innercorestone_platinum", Material.ROCK);
+	public static final Block INNERCORESTONE_GOLD = new Corerock("innercorestone_gold", Material.ROCK);
+	public static final Block INNERCORESTONE_SILVER = new Corerock("innercorestone_silver", Material.ROCK);
+	public static final Block INNERCORESTONE_IRON = new Corerock("innercorestone_iron", Material.ROCK);
+	public static final Block INNERCORESTONE_COAL = new Corerock("innercorestone_coal", Material.ROCK);
+	public static final Block INNERCORESTONE_SULFUR = new Corerock("innercorestone_sulfur", Material.ROCK);
 	
 	public static final Block CENTERCORESTONE_AZURITE = new Corerock("centercorestone_azurite", Material.ROCK);
 	public static final Block CENTERCORESTONE_ONYX = new Corerock("centercorestone_onyx", Material.ROCK);

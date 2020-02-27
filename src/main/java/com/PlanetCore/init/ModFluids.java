@@ -1,6 +1,6 @@
-package com.SupremeMarshal.ToTheEarthCore.init;
+package com.PlanetCore.init;
 
-import com.SupremeMarshal.ToTheEarthCore.fluids.FluidLiquid;
+import com.PlanetCore.fluids.FluidLiquid;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;

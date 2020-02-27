@@ -1,9 +1,9 @@
-package com.SupremeMarshal.ToTheEarthCore.items.armor;
+package com.PlanetCore.items.armor;
 
 
-import com.SupremeMarshal.ToTheEarthCore.Main;
-import com.SupremeMarshal.ToTheEarthCore.init.ModItems;
-import com.SupremeMarshal.ToTheEarthCore.util.IHasModel;
+import com.PlanetCore.Main;
+import com.PlanetCore.init.ModItems;
+import com.PlanetCore.util.IHasModel;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;

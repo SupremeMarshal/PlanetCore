@@ -1,4 +1,4 @@
-package com.SupremeMarshal.ToTheEarthCore.fluids;
+package com.PlanetCore.fluids;
 
 
 import net.minecraft.util.ResourceLocation;

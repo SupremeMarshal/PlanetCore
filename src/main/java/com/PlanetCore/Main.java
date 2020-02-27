@@ -1,9 +1,9 @@
-package com.SupremeMarshal.ToTheEarthCore;
+package com.PlanetCore;
 
-import com.SupremeMarshal.ToTheEarthCore.init.ModSmelting;
-import com.SupremeMarshal.ToTheEarthCore.proxy.CommonProxy;
-import com.SupremeMarshal.ToTheEarthCore.util.Reference;
-import com.SupremeMarshal.ToTheEarthCore.util.handlers.RegistryHandler;
+import com.PlanetCore.init.ModSmelting;
+import com.PlanetCore.proxy.CommonProxy;
+import com.PlanetCore.util.Reference;
+import com.PlanetCore.util.handlers.RegistryHandler;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
