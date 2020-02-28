@@ -50,10 +50,10 @@ public class RubyBody extends ArmorBase
     		
     	if (slot==EntityEquipmentSlot.CHEST) {
 
-    		String maxhealthplatinumbody = SharedMonsterAttributes.MAX_HEALTH.getName();
+    		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockbackplatinumbody = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealthplatinumbody, new AttributeModifier (MAX_HEALTH_RUBYBODY_UUID, "MAX_HEALTH_RUBYBODY_UUID", 8, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_RUBYBODY_UUID, "MAX_HEALTH_RUBYBODY_UUID", 8, 0));
     		mods.put(knockbackplatinumbody, new AttributeModifier (KNOCKBACK_RESISTANCE_RUBYBODY_UUID, "KNOCKBACK_RESISTANCE_RUBYBODY_UUID", 0.05, 0));
     	}
     	return mods;

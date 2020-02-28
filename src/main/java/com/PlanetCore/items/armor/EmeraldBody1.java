@@ -46,9 +46,9 @@ public class EmeraldBody1 extends ArmorBase
     		
     	if (slot==EntityEquipmentSlot.CHEST) {
 
-    		String maxhealthplatinumbody = SharedMonsterAttributes.MAX_HEALTH.getName();
+    		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealthplatinumbody, new AttributeModifier (MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 8.0, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 8.0, 0));
     	}
     	return mods;
     }
@@ -76,6 +76,7 @@ public class EmeraldBody1 extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
+		tooltip.add(net.minecraft.client.resources.I18n.format("To further enhance your armor, combine 2 emerald body +1 and an enhancing gem +1."));
 	}
 
 }

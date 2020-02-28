@@ -46,9 +46,9 @@ public class SilverBody extends ArmorBase
     		
     	if (slot==EntityEquipmentSlot.CHEST) {
 
-    		String maxhealthplatinumbody = SharedMonsterAttributes.MAX_HEALTH.getName();
+    		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealthplatinumbody, new AttributeModifier (MAX_HEALTH_SILVERBODY_UUID, "MAX_HEALTH_SILVERBODY_UUID", 3, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SILVERBODY_UUID, "MAX_HEALTH_SILVERBODY_UUID", 3, 0));
     	}
     	return mods;
     }

@@ -46,9 +46,9 @@ public class PlatinumBody extends ArmorBase
     		
     	if (slot==EntityEquipmentSlot.CHEST) {
 
-    		String maxhealthplatinumbody = SharedMonsterAttributes.MAX_HEALTH.getName();
+    		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealthplatinumbody, new AttributeModifier (MAX_HEALTH_PLATINUMBODY_UUID, "MAX_HEALTH_PLATINUMBODY_UUID", 4, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_PLATINUMBODY_UUID, "MAX_HEALTH_PLATINUMBODY_UUID", 4, 0));
     	}
     	return mods;
     }
