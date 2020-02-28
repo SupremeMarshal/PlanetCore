@@ -61,7 +61,7 @@ public class SapphirLegs extends ArmorBase
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == ModItems.SAPHIR_LEGGINGS)
+		if (player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == ModItems.SAPPHIRE_LEGGINGS)
 		{
 			if (world.getTotalWorldTime() % 300 != 1)
 			{

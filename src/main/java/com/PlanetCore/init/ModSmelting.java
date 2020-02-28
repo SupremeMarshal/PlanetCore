@@ -93,15 +93,15 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_EMERALD, new ItemStack(Items.EMERALD, 1), 10.5F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_EMERALD, new ItemStack(Items.EMERALD, 1), 14.0F);
 
-		GameRegistry.addSmelting(ModBlocks.SAPHIR_ORE, new ItemStack(ModItems.SAPHIR, 1), 2.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDSTONE_SAPHIR, new ItemStack(ModItems.SAPHIR, 1), 2.75F);
-		GameRegistry.addSmelting(ModBlocks.DEEPSTONE_SAPHIR, new ItemStack(ModItems.SAPHIR, 1), 3.0F);
-		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_SAPHIR, new ItemStack(ModItems.SAPHIR, 1), 3.5F);
-		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_SAPHIR, new ItemStack(ModItems.SAPHIR, 1), 4.0F);
-		GameRegistry.addSmelting(ModBlocks.LOWER_MANTLEROCK_SAPHIR, new ItemStack(ModItems.SAPHIR, 1), 6.0F);
-		GameRegistry.addSmelting(ModBlocks.CORESTONE_SAPHIR, new ItemStack(ModItems.SAPHIR, 1), 8.0F);
-		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_SAPHIR, new ItemStack(ModItems.SAPHIR, 1), 12.0F);
-		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_SAPHIR, new ItemStack(ModItems.SAPHIR, 1), 16.0F);
+		GameRegistry.addSmelting(ModBlocks.SAPPHIRE_ORE, new ItemStack(ModItems.SAPPHIRE, 1), 2.5F);
+		GameRegistry.addSmelting(ModBlocks.HARDSTONE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 2.75F);
+		GameRegistry.addSmelting(ModBlocks.DEEPSTONE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 3.0F);
+		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 3.5F);
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 4.0F);
+		GameRegistry.addSmelting(ModBlocks.LOWER_MANTLEROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 6.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 8.0F);
+		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 12.0F);
+		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 16.0F);
 		
 		GameRegistry.addSmelting(ModBlocks.RUBY_ORE, new ItemStack(ModItems.RUBY, 1), 3.0F);
 		GameRegistry.addSmelting(ModBlocks.HARDSTONE_RUBY, new ItemStack(ModItems.RUBY, 1), 3.25F);

@@ -5,14 +5,14 @@
     [
 
     {
-      "item": "planetcore:saphir_block"
+      "item": "planetcore:sapphire_block"
     }
 
     ],
 
     "result": 
     {
-        "item": "planetcore:saphir",
+        "item": "planetcore:sapphire",
         "count": 9
     }
 }

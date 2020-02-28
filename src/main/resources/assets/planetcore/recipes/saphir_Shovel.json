@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:saphir"
+            "item": "planetcore:sapphire"
         },
         "B":
         {
-            "item": "planetcore:saphir_rod"
+            "item": "planetcore:sapphire_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:saphir_shovel",
+        "item": "planetcore:sapphire_shovel",
         "count": 1
     }
 }

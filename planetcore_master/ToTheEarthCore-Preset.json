@@ -352,7 +352,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:hardstone_saphir"
+              "Name": "planetcore:hardstone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -367,7 +367,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:hardstone_saphir"
+              "Name": "planetcore:hardstone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -382,7 +382,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:hardstone_saphir"
+              "Name": "planetcore:hardstone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -397,7 +397,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:hardstone_saphir"
+              "Name": "planetcore:hardstone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -607,7 +607,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:redrock_saphir"
+              "Name": "planetcore:redrock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -764,7 +764,7 @@
                 "Name": "planetcore:redrock_lapis"
               },
               {
-                "Name": "planetcore:redrock_saphir"
+                "Name": "planetcore:redrock_sapphire"
               },
               {
                 "Name": "planetcore:redrock_ruby"
@@ -833,7 +833,7 @@
                 "Name": "planetcore:hardstone_platinum"
               },
               {
-                "Name": "planetcore:hardstone_saphir"
+                "Name": "planetcore:hardstone_sapphire"
               },
               {
                 "Name": "planetcore:hardstone_ruby"
@@ -1124,7 +1124,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:saphir_ore"
+              "Name": "planetcore:sapphire_ore"
             },
             "genInBlockstates": [
               {
@@ -1331,7 +1331,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:hardstone_saphir"
+              "Name": "planetcore:hardstone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -1597,7 +1597,7 @@
                 "Name": "planetcore:hardstone_platinum"
               },
               {
-                "Name": "planetcore:hardstone_saphir"
+                "Name": "planetcore:hardstone_sapphire"
               },
               {
                 "Name": "planetcore:hardstone_ruby"
@@ -1943,7 +1943,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:redrock_saphir"
+              "Name": "planetcore:redrock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -2153,7 +2153,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:mantlerock_saphir"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -2168,7 +2168,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:mantlerock_saphir"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -2183,7 +2183,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:mantlerock_saphir"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -2198,7 +2198,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:mantlerock_saphir"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -2213,7 +2213,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:mantlerock_saphir"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -2228,7 +2228,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:mantlerock_saphir"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -2634,7 +2634,7 @@
                 "Name": "planetcore:mantlerock_platinum"
               },
               {
-                "Name": "planetcore:mantlerock_saphir"
+                "Name": "planetcore:mantlerock_sapphire"
               },
               {
                 "Name": "planetcore:mantlerock_ruby"
@@ -2712,7 +2712,7 @@
                 "Name": "planetcore:redrock_lapis"
               },
               {
-                "Name": "planetcore:redrock_saphir"
+                "Name": "planetcore:redrock_sapphire"
               },
               {
                 "Name": "planetcore:redrock_ruby"
@@ -2979,7 +2979,7 @@
           },
           {
             "blockstate": {
-              "Name": "planetcore:mantlerock_saphir"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
@@ -3550,7 +3550,7 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "planetcore:corestone_saphir"
+              "Name": "planetcore:corestone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -3989,7 +3989,7 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "planetcore:corestone_saphir"
+              "Name": "planetcore:corestone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -4007,7 +4007,7 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "planetcore:corestone_saphir"
+              "Name": "planetcore:corestone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -4025,7 +4025,7 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "planetcore:corestone_saphir"
+              "Name": "planetcore:corestone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -4487,7 +4487,7 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "planetcore:innercorestone_saphir"
+              "Name": "planetcore:innercorestone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -4505,7 +4505,7 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "planetcore:innercorestone_saphir"
+              "Name": "planetcore:innercorestone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -4523,7 +4523,7 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "planetcore:innercorestone_saphir"
+              "Name": "planetcore:innercorestone_sapphire"
             },
             "genInBlockstates": [
               {
@@ -4893,7 +4893,7 @@
                 "Name": "planetcore:innercorestone_lapis"
               },
               {
-                "Name": "planetcore:innercorestone_saphir"
+                "Name": "planetcore:innercorestone_sapphire"
               },
               {
                 "Name": "planetcore:innercorestone_ruby"
@@ -4953,7 +4953,7 @@
                 "Name": "planetcore:corestone_lapis"
               },
               {
-                "Name": "planetcore:corestone_saphir"
+                "Name": "planetcore:corestone_sapphire"
               },
               {
                 "Name": "planetcore:corestone_ruby"

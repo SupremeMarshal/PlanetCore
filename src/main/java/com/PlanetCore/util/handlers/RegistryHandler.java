@@ -75,7 +75,7 @@ public class RegistryHandler {
 		OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.STEEL_INGOT, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("ingotSilver", new ItemStack(ModItems.SILVER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("ingotPlatinum", new ItemStack(ModItems.PLATINUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-		OreDictionary.registerOre("itemSapphire", new ItemStack(ModItems.SAPHIR, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("itemSapphire", new ItemStack(ModItems.SAPPHIRE, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("itemRuby", new ItemStack(ModItems.RUBY, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("itemDiamond", new ItemStack(ModItems.DIAMOND, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("itemAmazonite", new ItemStack(ModItems.AMAZONITE, 1, OreDictionary.WILDCARD_VALUE));
@@ -90,7 +90,6 @@ public class RegistryHandler {
 		net.minecraft.item.crafting.FurnaceRecipes.instance().getSmeltingList().put(
 				new net.minecraft.item.ItemStack(net.minecraft.init.Items.IRON_HORSE_ARMOR, 1, 32767),
 				new net.minecraft.item.ItemStack(ModItems.IRON_NUGGET));
-
 	}
 
 

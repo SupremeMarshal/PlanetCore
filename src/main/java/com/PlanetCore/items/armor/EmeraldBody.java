@@ -35,7 +35,7 @@ public class EmeraldBody extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 0.25, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 6.5, 0));
 	}
    
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
@@ -49,7 +49,7 @@ public class EmeraldBody extends ArmorBase
 
     		String health = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(health, new AttributeModifier (MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 0.25, 0));
+    		mods.put(health, new AttributeModifier (MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 6.5, 0));
     	}
     	return mods;
     }
@@ -75,9 +75,6 @@ public class EmeraldBody extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.1"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.2"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.4"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.5"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.6"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}

@@ -12,13 +12,13 @@
     {
         "A":
         {
-            "item": "planetcore:saphir"
+            "item": "planetcore:sapphire"
         }
     },
     
     "result":
     {
-        "item": "planetcore:saphir_leggings",
+        "item": "planetcore:sapphire_leggings",
         "count": 1
     }
 }

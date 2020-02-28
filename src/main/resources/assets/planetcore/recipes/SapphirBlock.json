@@ -12,13 +12,13 @@
     {
         "R":
         {
-            "item": "planetcore:saphir"
+            "item": "planetcore:sapphire"
         }
     },
     
     "result":
     {
-        "item": "planetcore:saphir_block",
+        "item": "planetcore:sapphire_block",
         "count": 1
     }
 }

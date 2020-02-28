@@ -51,7 +51,7 @@
                 {
                     "type": "item",
                     "weight": 1,
-                    "name": "planetcore:saphir",
+                    "name": "planetcore:sapphire",
                     "conditions": [
                         {
                             "condition": "killed_by_player"

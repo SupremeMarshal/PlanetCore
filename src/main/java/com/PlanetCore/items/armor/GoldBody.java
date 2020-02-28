@@ -34,7 +34,7 @@ public class GoldBody extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_GOLDBODY_UUID, "MAX_HEALTH_GOLDBODY_UUID", 3, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_GOLDBODY_UUID, "MAX_HEALTH_GOLDBODY_UUID", 1.5, 0));
     }
    
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
@@ -48,7 +48,7 @@ public class GoldBody extends ArmorBase
 
     		String maxhealthplatinumbody = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealthplatinumbody, new AttributeModifier (MAX_HEALTH_GOLDBODY_UUID, "MAX_HEALTH_GOLDBODY_UUID", 3, 0));
+    		mods.put(maxhealthplatinumbody, new AttributeModifier (MAX_HEALTH_GOLDBODY_UUID, "MAX_HEALTH_GOLDBODY_UUID", 1.5, 0));
     	}
     	return mods;
     }

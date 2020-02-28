@@ -40,8 +40,8 @@ public class GemBase extends BlockBase
 
 	if (block == ModBlocks.HARDSTONE_EMERALD || block == ModBlocks.DEEPSTONE_EMERALD || block == ModBlocks.CRUSTROCK_EMERALD || block == ModBlocks.MANTLEROCK_EMERALD || block == ModBlocks.LOWER_MANTLEROCK_EMERALD)
 	{return new ItemStack(Items.EMERALD, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.SAPHIR_ORE || block == ModBlocks.HARDSTONE_SAPHIR || block == ModBlocks.DEEPSTONE_SAPHIR || block == ModBlocks.CRUSTROCK_SAPHIR || block == ModBlocks.MANTLEROCK_SAPHIR || block == ModBlocks.LOWER_MANTLEROCK_SAPHIR)
-	{return new ItemStack(ModItems.SAPHIR, (int) (1), 0).getItem();}
+	else if (block == ModBlocks.SAPPHIRE_ORE || block == ModBlocks.HARDSTONE_SAPPHIRE || block == ModBlocks.DEEPSTONE_SAPPHIRE || block == ModBlocks.CRUSTROCK_SAPPHIRE || block == ModBlocks.MANTLEROCK_SAPPHIRE || block == ModBlocks.LOWER_MANTLEROCK_SAPPHIRE)
+	{return new ItemStack(ModItems.SAPPHIRE, (int) (1), 0).getItem();}
 	else if (block == ModBlocks.RUBY_ORE || block == ModBlocks.HARDSTONE_RUBY || block == ModBlocks.DEEPSTONE_RUBY || block == ModBlocks.CRUSTROCK_RUBY || block == ModBlocks.MANTLEROCK_RUBY || block == ModBlocks.LOWER_MANTLEROCK_RUBY)
 	{return new ItemStack(ModItems.RUBY, (int) (1), 0).getItem();}
 	else if (block == ModBlocks.TOPAZ_ORE || block == ModBlocks.HARDSTONE_TOPAZ || block == ModBlocks.DEEPSTONE_TOPAZ || block == ModBlocks.CRUSTROCK_TOPAZ || block == ModBlocks.MANTLEROCK_TOPAZ || block == ModBlocks.LOWER_MANTLEROCK_TOPAZ)
@@ -138,7 +138,7 @@ public class GemBase extends BlockBase
 		{
 			world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 		}
-		else if (block == ModBlocks.SAPHIR_ORE || block == ModBlocks.HARDSTONE_SAPHIR || block == ModBlocks.DEEPSTONE_SAPHIR || block == ModBlocks.CRUSTROCK_SAPHIR || block == ModBlocks.MANTLEROCK_SAPHIR)
+		else if (block == ModBlocks.SAPPHIRE_ORE || block == ModBlocks.HARDSTONE_SAPPHIRE || block == ModBlocks.DEEPSTONE_SAPPHIRE || block == ModBlocks.CRUSTROCK_SAPPHIRE || block == ModBlocks.MANTLEROCK_SAPPHIRE)
 		{
 			for (int i = 0; i < 5; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));

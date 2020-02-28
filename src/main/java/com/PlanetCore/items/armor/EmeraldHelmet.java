@@ -28,15 +28,13 @@ public class EmeraldHelmet extends ArmorBase
 	}
     
 	public static final UUID MAX_HEALTH_EMERALDHELM_UUID = UUID.fromString("286ade01-888a-49c4-ad97-b8981a035c03");
-	public static final UUID KNOCKBACK_RESISTANCE_EMERALDHELM_UUID = UUID.fromString("f180fac4-1555-4729-b3ed-0644ea08a19a");
     
 
     private static final Map<IAttribute, AttributeModifier> modMap = new HashMap<>();
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 3, 0));
-		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_EMERALDHELM_UUID, "KNOCKBACK_RESISTANCE_EMERALDHELM_UUID", 0.05, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 4.0, 0));
 
 	}
    
@@ -51,10 +49,8 @@ public class EmeraldHelmet extends ArmorBase
     	if (slot==EntityEquipmentSlot.HEAD) {
 
     		String maxhealthplatinumhelm = SharedMonsterAttributes.MAX_HEALTH.getName();
-    		String knockbackplatinumhelm = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 3, 0));
-    		mods.put(knockbackplatinumhelm, new AttributeModifier (KNOCKBACK_RESISTANCE_EMERALDHELM_UUID, "KNOCKBACK_RESISTANCE_EMERALDHELM_UUID", 0.05, 0));
+    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 4.0, 0));
     	}
     	return mods;
     }
@@ -80,9 +76,6 @@ public class EmeraldHelmet extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.1"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.2"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.4"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.5"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.6"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}

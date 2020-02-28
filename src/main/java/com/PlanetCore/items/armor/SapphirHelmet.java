@@ -63,7 +63,7 @@ public class SapphirHelmet extends ArmorBase
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == ModItems.SAPHIR_HELMET)
+		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == ModItems.SAPPHIRE_HELMET)
 		{
 			if (world.getTotalWorldTime() % 300 != 1)
 			{

@@ -11,13 +11,13 @@
     {
         "A":
         {
-            "item": "planetcore:saphir"
+            "item": "planetcore:sapphire"
         }
     },
     
     "result":
     {
-        "item": "planetcore:saphir_rod",
+        "item": "planetcore:sapphire_rod",
         "count": 1
     }
 }

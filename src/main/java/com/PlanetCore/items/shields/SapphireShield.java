@@ -78,7 +78,7 @@ public class SapphireShield extends ShieldBase implements IHasModel {
 
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
-        return repair.getItem() == Item.getItemFromBlock(ModBlocks.SAPHIR_BLOCK) ? true : super.getIsRepairable(toRepair, repair);
+        return repair.getItem() == Item.getItemFromBlock(ModBlocks.SAPPHIRE_BLOCK) ? true : super.getIsRepairable(toRepair, repair);
     }
 
     @Override

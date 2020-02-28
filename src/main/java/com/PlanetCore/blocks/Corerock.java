@@ -78,8 +78,8 @@ public class Corerock extends BlockBase {
 		{return new ItemStack(ModItems.TOPAZ, 1, 0).getItem();}
 		else if (block == ModBlocks.CORESTONE_RUBY || block == ModBlocks.INNERCORESTONE_RUBY || block == ModBlocks.CENTERCORESTONE_RUBY)
 		{return new ItemStack(ModItems.RUBY, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_SAPHIR || block == ModBlocks.INNERCORESTONE_SAPHIR || block == ModBlocks.CENTERCORESTONE_SAPHIR)
-		{return new ItemStack(ModItems.SAPHIR, 1, 0).getItem();}
+		else if (block == ModBlocks.CORESTONE_SAPPHIRE || block == ModBlocks.INNERCORESTONE_SAPPHIRE || block == ModBlocks.CENTERCORESTONE_SAPPHIRE)
+		{return new ItemStack(ModItems.SAPPHIRE, 1, 0).getItem();}
 		else if (block == ModBlocks.CORESTONE_EMERALD || block == ModBlocks.INNERCORESTONE_EMERALD || block == ModBlocks.CENTERCORESTONE_EMERALD)
 		{return new ItemStack(Items.EMERALD, 1, 0).getItem();}
 		else if (block == ModBlocks.CORESTONE_LAPIS || block == ModBlocks.INNERCORESTONE_LAPIS || block == ModBlocks.CENTERCORESTONE_LAPIS)

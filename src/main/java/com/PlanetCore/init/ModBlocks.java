@@ -24,7 +24,7 @@ public class ModBlocks {
 	public static final Block TOPAZ_BLOCK = new RockBase("topaz_block", Material.ROCK);
 	public static final Block RUBY_BLOCK = new RockBase("ruby_block", Material.ROCK);
 	public static final Block FLAMING_TOPAZ_BLOCK = new RockBase("flaming_topaz_block", Material.ROCK);
-	public static final Block SAPHIR_BLOCK = new RockBase("saphir_block", Material.ROCK);
+	public static final Block SAPPHIRE_BLOCK = new RockBase("sapphire_block", Material.ROCK);
 	public static final Block PLATINUM_BLOCK = new RockBase("platinum_block", Material.ROCK);
 	public static final Block GOLD_BLOCK = new RockBase("gold_block", Material.ROCK);
 	public static final Block SILVER_BLOCK = new RockBase("silver_block", Material.ROCK);
@@ -41,7 +41,7 @@ public class ModBlocks {
 	public static final Block TOPAZ_ORE = new GemBase("topaz_ore", Material.ROCK);
 	public static final Block RUBY_ORE = new GemBase("ruby_ore", Material.ROCK);
 	public static final Block FLAMING_TOPAZ_ORE = new GemBase("flaming_topaz_ore", Material.ROCK);
-	public static final Block SAPHIR_ORE = new GemBase("saphir_ore", Material.ROCK);
+	public static final Block SAPPHIRE_ORE = new GemBase("sapphire_ore", Material.ROCK);
 	public static final Block PLATINUM_ORE = new GemBase("platinum_ore", Material.ROCK);
 	public static final Block GOLD_ORE = new GemBase("gold_ore", Material.ROCK);
 	public static final Block SILVER_ORE = new GemBase("silver_ore", Material.ROCK);
@@ -57,7 +57,7 @@ public class ModBlocks {
 	public static final Block HARDSTONE_TOPAZ = new GemBase("hardstone_topaz", Material.ROCK);
 	public static final Block HARDSTONE_RUBY = new GemBase("hardstone_ruby", Material.ROCK);
 	public static final Block HARDSTONE_FLAMING_TOPAZ = new GemBase("hardstone_flaming_topaz", Material.ROCK);
-	public static final Block HARDSTONE_SAPHIR = new GemBase("hardstone_saphir", Material.ROCK);
+	public static final Block HARDSTONE_SAPPHIRE = new GemBase("hardstone_sapphire", Material.ROCK);
 	public static final Block HARDSTONE_EMERALD = new GemBase("hardstone_emerald", Material.ROCK);
 	public static final Block HARDSTONE_PLATINUM = new RockBase("hardstone_platinum", Material.ROCK);
 	public static final Block HARDSTONE_GOLD = new RockBase("hardstone_gold", Material.ROCK);
@@ -77,7 +77,7 @@ public class ModBlocks {
 	public static final Block DEEPSTONE_TOPAZ = new GemBase("deepstone_topaz", Material.ROCK);
 	public static final Block DEEPSTONE_RUBY = new GemBase("deepstone_ruby", Material.ROCK);
 	public static final Block DEEPSTONE_FLAMING_TOPAZ = new GemBase("deepstone_flaming_topaz", Material.ROCK);
-	public static final Block DEEPSTONE_SAPHIR = new GemBase("deepstone_saphir", Material.ROCK);
+	public static final Block DEEPSTONE_SAPPHIRE = new GemBase("deepstone_sapphire", Material.ROCK);
 	public static final Block DEEPSTONE_EMERALD = new GemBase("deepstone_emerald", Material.ROCK);
 	public static final Block DEEPSTONE_PLATINUM = new RockBase("deepstone_platinum", Material.ROCK);
 	public static final Block DEEPSTONE_GOLD = new RockBase("deepstone_gold", Material.ROCK);
@@ -97,7 +97,7 @@ public class ModBlocks {
 	public static final Block CRUSTROCK_TOPAZ = new GemBase("crustrock_topaz", Material.ROCK);
 	public static final Block CRUSTROCK_RUBY = new GemBase("crustrock_ruby", Material.ROCK);
 	public static final Block CRUSTROCK_FLAMING_TOPAZ = new GemBase("crustrock_flaming_topaz", Material.ROCK);
-	public static final Block CRUSTROCK_SAPHIR = new GemBase("crustrock_saphir", Material.ROCK);
+	public static final Block CRUSTROCK_SAPPHIRE = new GemBase("crustrock_sapphire", Material.ROCK);
 	public static final Block CRUSTROCK_EMERALD = new GemBase("crustrock_emerald", Material.ROCK);
 	public static final Block CRUSTROCK_PLATINUM = new RockBase("crustrock_platinum", Material.ROCK);
 	public static final Block CRUSTROCK_GOLD = new RockBase("crustrock_gold", Material.ROCK);
@@ -117,7 +117,7 @@ public class ModBlocks {
 	public static final Block MANTLEROCK_TOPAZ = new GemBase("mantlerock_topaz", Material.ROCK);
 	public static final Block MANTLEROCK_RUBY = new GemBase("mantlerock_ruby", Material.ROCK);
 	public static final Block MANTLEROCK_FLAMING_TOPAZ = new GemBase("mantlerock_flaming_topaz", Material.ROCK);
-	public static final Block MANTLEROCK_SAPHIR = new GemBase("mantlerock_saphir", Material.ROCK);
+	public static final Block MANTLEROCK_SAPPHIRE = new GemBase("mantlerock_sapphire", Material.ROCK);
 	public static final Block MANTLEROCK_EMERALD = new GemBase("mantlerock_emerald", Material.ROCK);
 	public static final Block MANTLEROCK_PLATINUM = new RockBase("mantlerock_platinum", Material.ROCK);
 	public static final Block MANTLEROCK_GOLD = new RockBase("mantlerock_gold", Material.ROCK);
@@ -137,7 +137,7 @@ public class ModBlocks {
 	public static final Block LOWER_MANTLEROCK_TOPAZ = new GemBase("lower_mantlerock_topaz", Material.ROCK);
 	public static final Block LOWER_MANTLEROCK_RUBY = new GemBase("lower_mantlerock_ruby", Material.ROCK);
 	public static final Block LOWER_MANTLEROCK_FLAMING_TOPAZ = new GemBase("lower_mantlerock_flaming_topaz", Material.ROCK);
-	public static final Block LOWER_MANTLEROCK_SAPHIR = new GemBase("lower_mantlerock_saphir", Material.ROCK);
+	public static final Block LOWER_MANTLEROCK_SAPPHIRE = new GemBase("lower_mantlerock_sapphire", Material.ROCK);
 	public static final Block LOWER_MANTLEROCK_EMERALD = new GemBase("lower_mantlerock_emerald", Material.ROCK);
 	public static final Block LOWER_MANTLEROCK_PLATINUM = new RockBase("lower_mantlerock_platinum", Material.ROCK);
 	public static final Block LOWER_MANTLEROCK_GOLD = new RockBase("lower_mantlerock_gold", Material.ROCK);
@@ -157,7 +157,7 @@ public class ModBlocks {
 	public static final Block CORESTONE_TOPAZ = new Corerock("corestone_topaz", Material.ROCK);
 	public static final Block CORESTONE_RUBY = new Corerock("corestone_ruby", Material.ROCK);
 	public static final Block CORESTONE_FLAMING_TOPAZ = new Corerock("corestone_flaming_topaz", Material.ROCK);
-	public static final Block CORESTONE_SAPHIR = new Corerock("corestone_saphir", Material.ROCK);
+	public static final Block CORESTONE_SAPPHIRE = new Corerock("corestone_sapphire", Material.ROCK);
 	public static final Block CORESTONE_EMERALD = new Corerock("corestone_emerald", Material.ROCK);
 	public static final Block CORESTONE_LAPIS = new Corerock("corestone_lapis", Material.ROCK);
 	public static final Block CORESTONE_REDSTONE = new Corerock("corestone_redstone", Material.ROCK);
@@ -177,7 +177,7 @@ public class ModBlocks {
 	public static final Block INNERCORESTONE_TOPAZ = new Corerock("innercorestone_topaz", Material.ROCK);
 	public static final Block INNERCORESTONE_RUBY = new Corerock("innercorestone_ruby", Material.ROCK);
 	public static final Block INNERCORESTONE_FLAMING_TOPAZ = new Corerock("innercorestone_flaming_topaz", Material.ROCK);
-	public static final Block INNERCORESTONE_SAPHIR = new Corerock("innercorestone_saphir", Material.ROCK);
+	public static final Block INNERCORESTONE_SAPPHIRE = new Corerock("innercorestone_sapphire", Material.ROCK);
 	public static final Block INNERCORESTONE_EMERALD = new Corerock("innercorestone_emerald", Material.ROCK);
 	public static final Block INNERCORESTONE_LAPIS = new Corerock("innercorestone_lapis", Material.ROCK);
 	public static final Block INNERCORESTONE_REDSTONE = new Corerock("innercorestone_redstone", Material.ROCK);
@@ -197,7 +197,7 @@ public class ModBlocks {
 	public static final Block CENTERCORESTONE_TOPAZ = new Corerock("centercorestone_topaz", Material.ROCK);
 	public static final Block CENTERCORESTONE_RUBY = new Corerock("centercorestone_ruby", Material.ROCK);
 	public static final Block CENTERCORESTONE_FLAMING_TOPAZ = new Corerock("centercorestone_flaming_topaz", Material.ROCK);
-	public static final Block CENTERCORESTONE_SAPHIR = new Corerock("centercorestone_saphir", Material.ROCK);
+	public static final Block CENTERCORESTONE_SAPPHIRE = new Corerock("centercorestone_sapphire", Material.ROCK);
 	public static final Block CENTERCORESTONE_EMERALD = new Corerock("centercorestone_emerald", Material.ROCK);
 	public static final Block CENTERCORESTONE_LAPIS = new Corerock("centercorestone_lapis", Material.ROCK);
 	public static final Block CENTERCORESTONE_REDSTONE = new Corerock("centercorestone_redstone", Material.ROCK);

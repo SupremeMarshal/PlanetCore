@@ -113,7 +113,7 @@
                 },
                 {
                     "type": "item",
-                    "name": "planetcore:saphir",
+                    "name": "planetcore:sapphire",
                     "functions": [
                         {
                             "function": "set_count",

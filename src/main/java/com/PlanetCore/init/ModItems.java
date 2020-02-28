@@ -51,22 +51,22 @@ public class ModItems {
 	public static final ToolMaterial MATERIAL_EMERALD13 = EnumHelper.addToolMaterial("material_emerald13", 10, 1400, 46.0F, 13.5F, 10);
 	public static final ToolMaterial MATERIAL_EMERALD14 = EnumHelper.addToolMaterial("material_emerald14", 10, 1500, 48.0F, 14.0F, 10);
 	public static final ToolMaterial MATERIAL_EMERALD15 = EnumHelper.addToolMaterial("material_emerald15", 10, 1600, 50.0F, 14.5F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR = EnumHelper.addToolMaterial("material_saphir", 11, 100, 30.0F, 12.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR1 = EnumHelper.addToolMaterial("material_saphir1", 11, 200, 34.0F, 13.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR2 = EnumHelper.addToolMaterial("material_saphir2", 11, 300, 38.0F, 14.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR3 = EnumHelper.addToolMaterial("material_saphir3", 11, 400, 42.0F, 15.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR4 = EnumHelper.addToolMaterial("material_saphir4", 11, 500, 46.0F, 16.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR5 = EnumHelper.addToolMaterial("material_saphir5", 11, 600, 50.0F, 17.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR6 = EnumHelper.addToolMaterial("material_saphir6", 11, 700, 54.0F, 18.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR7 = EnumHelper.addToolMaterial("material_saphir7", 11, 800, 58.0F, 19.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR8 = EnumHelper.addToolMaterial("material_saphir8", 11, 900, 62.0F, 20.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR9 = EnumHelper.addToolMaterial("material_saphir9", 11, 1000, 66.0F, 21.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR10 = EnumHelper.addToolMaterial("material_saphir10", 11, 1100, 70.0F, 22.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR11 = EnumHelper.addToolMaterial("material_saphir11", 11, 1200, 74.0F, 23.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR12 = EnumHelper.addToolMaterial("material_saphir12", 11, 1300, 78.0F, 24.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR13 = EnumHelper.addToolMaterial("material_saphir13", 11, 1400, 82.0F, 25.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR14 = EnumHelper.addToolMaterial("material_saphir14", 11, 1500, 86.0F, 26.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPHIR15 = EnumHelper.addToolMaterial("material_saphir15", 11, 1600, 90.0F, 27.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE = EnumHelper.addToolMaterial("material_sapphire", 11, 100, 30.0F, 12.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE1 = EnumHelper.addToolMaterial("material_sapphire1", 11, 200, 34.0F, 13.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE2 = EnumHelper.addToolMaterial("material_sapphire2", 11, 300, 38.0F, 14.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE3 = EnumHelper.addToolMaterial("material_sapphire3", 11, 400, 42.0F, 15.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE4 = EnumHelper.addToolMaterial("material_sapphire4", 11, 500, 46.0F, 16.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE5 = EnumHelper.addToolMaterial("material_sapphire5", 11, 600, 50.0F, 17.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE6 = EnumHelper.addToolMaterial("material_sapphire6", 11, 700, 54.0F, 18.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE7 = EnumHelper.addToolMaterial("material_sapphire7", 11, 800, 58.0F, 19.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE8 = EnumHelper.addToolMaterial("material_sapphire8", 11, 900, 62.0F, 20.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE9 = EnumHelper.addToolMaterial("material_sapphire9", 11, 1000, 66.0F, 21.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE10 = EnumHelper.addToolMaterial("material_sapphire10", 11, 1100, 70.0F, 22.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE11 = EnumHelper.addToolMaterial("material_sapphire11", 11, 1200, 74.0F, 23.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE12 = EnumHelper.addToolMaterial("material_sapphire12", 11, 1300, 78.0F, 24.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE13 = EnumHelper.addToolMaterial("material_sapphire13", 11, 1400, 82.0F, 25.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE14 = EnumHelper.addToolMaterial("material_sapphire14", 11, 1500, 86.0F, 26.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE15 = EnumHelper.addToolMaterial("material_sapphire15", 11, 1600, 90.0F, 27.0F, 10);
 	public static final ToolMaterial MATERIAL_RUBY = EnumHelper.addToolMaterial("material_ruby", 12, 100, 60.0F, 30.0F, 8);
 	public static final ToolMaterial MATERIAL_AMETHYST = EnumHelper.addToolMaterial("material_amethyst", 12, 100, 300.0F, 50.0F, 4);
 	public static final ToolMaterial MATERIAL_DIAMOND = EnumHelper.addToolMaterial("material_diamond", 13, 100, 100.0F, 50.0F, 6);
@@ -144,7 +144,7 @@ public class ModItems {
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD15 = EnumHelper.addArmorMaterial("armor_material_emerald15", Reference.MOD_ID + ":emerald15", 25,
 			new int[] {3, 8, 6, 3}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 8.5F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_SAPHIR = EnumHelper.addArmorMaterial("armor_material_saphir", Reference.MOD_ID + ":saphir", 93,
+	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE = EnumHelper.addArmorMaterial("armor_material_sapphire", Reference.MOD_ID + ":sapphire", 93,
 			new int[] {3, 8, 6, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 125,
@@ -257,19 +257,29 @@ public class ModItems {
 	public static final Item EMERALD_LEGGINGS = new EmeraldLegs("emerald_leggings", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
 	public static final Item EMERALD_BOOTS = new EmeraldBoots("emerald_boots", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
 
-	//SAPHIR//
+	//EMERALD+1//
 
 
-	public static final ItemSword SAPHIR_SWORD = new ToolSword("saphir_sword", MATERIAL_SAPHIR);
-	public static final ItemSpade SAPHIR_SHOVEL = new ToolSpade("saphir_shovel", MATERIAL_SAPHIR);
-	public static final ItemPickaxe SAPHIR_PICKAXE = new ToolPickaxe("saphir_pickaxe", MATERIAL_SAPHIR);
-	public static final ItemAxe SAPHIR_AXE = new ToolAxe("saphir_axe", MATERIAL_SAPHIR);
-	public static final ItemHoe SAPHIR_HOE = new ToolHoe("saphir_hoe", MATERIAL_SAPHIR);
 
-	public static final Item SAPHIR_HELMET = new SapphirHelmet("saphir_helmet", ARMOR_MATERIAL_SAPHIR, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SAPHIR_CHESTPLATE = new SapphirBody("saphir_chestplate", ARMOR_MATERIAL_SAPHIR, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SAPHIR_LEGGINGS = new SapphirLegs("saphir_leggings", ARMOR_MATERIAL_SAPHIR, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SAPHIR_BOOTS = new SapphirBoots("saphir_boots", ARMOR_MATERIAL_SAPHIR, 1, EntityEquipmentSlot.FEET);
+
+	public static final Item EMERALD_HELMET1 = new EmeraldHelmet1("emerald_helmet1", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
+	public static final Item EMERALD_CHESTPLATE1 = new EmeraldBody1("emerald_chestplate1", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
+	public static final Item EMERALD_LEGGINGS1 = new EmeraldLegs1("emerald_leggings1", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
+	public static final Item EMERALD_BOOTS1 = new EmeraldBoots1("emerald_boots1", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
+
+	//SAPPHIRE//
+
+
+	public static final ItemSword SAPPHIRE_SWORD = new ToolSword("sapphire_sword", MATERIAL_SAPPHIRE);
+	public static final ItemSpade SAPPHIRE_SHOVEL = new ToolSpade("sapphire_shovel", MATERIAL_SAPPHIRE);
+	public static final ItemPickaxe SAPPHIRE_PICKAXE = new ToolPickaxe("sapphire_pickaxe", MATERIAL_SAPPHIRE);
+	public static final ItemAxe SAPPHIRE_AXE = new ToolAxe("sapphire_axe", MATERIAL_SAPPHIRE);
+	public static final ItemHoe SAPPHIRE_HOE = new ToolHoe("sapphire_hoe", MATERIAL_SAPPHIRE);
+
+	public static final Item SAPPHIRE_HELMET = new SapphirHelmet("sapphire_helmet", ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item SAPPHIRE_CHESTPLATE = new SapphirBody("sapphire_chestplate", ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item SAPPHIRE_LEGGINGS = new SapphirLegs("sapphire_leggings", ARMOR_MATERIAL_SAPPHIRE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item SAPPHIRE_BOOTS = new SapphirBoots("sapphire_boots", ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.FEET);
 	
 	//RUBY//
 
@@ -373,7 +383,7 @@ public class ModItems {
 	
 
 	//GEMS//
-	public static final Item SAPHIR = new ItemBase("saphir");
+	public static final Item SAPPHIRE = new ItemBase("sapphire");
 	public static final Item RUBY = new ItemBase("ruby");
 	public static final Item TOPAZ = new ItemBase("topaz");
 	public static final Item DIAMOND = new ItemBase("diamond");
@@ -385,7 +395,7 @@ public class ModItems {
 	
 	//ROD//
 	public static final Item EMERALD_ROD = new ItemBase("emerald_rod");
-	public static final Item SAPHIR_ROD = new ItemBase("saphir_rod");
+	public static final Item SAPPHIRE_ROD = new ItemBase("sapphire_rod");
 	public static final Item RUBY_ROD = new ItemBase("ruby_rod");
 	public static final Item TOPAZ_ROD = new ItemBase("topaz_rod");
 	public static final Item DIAMOND_ROD = new ItemBase("diamond_rod");
@@ -428,7 +438,7 @@ public class ModItems {
 			new PotionEffect(MobEffects.RESISTANCE, 6000,1, false, false),
 			new PotionEffect(MobEffects.GLOWING, 3000,0, false, false));
 
-	public static final Item SAPHIR_APPLE = new EnchantedFoodEffectBase("saphir_apple", 15, 6.0F, false,
+	public static final Item SAPPHIRE_APPLE = new EnchantedFoodEffectBase("sapphire_apple", 15, 6.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 12000,8, false, false),
 			new PotionEffect(MobEffects.REGENERATION, 1200,3, false, false),
 			new PotionEffect(MobEffects.STRENGTH, 6000,1, false, false),
@@ -437,7 +447,7 @@ public class ModItems {
 			new PotionEffect(MobEffects.GLOWING, 3000,0, false, false));
 
 
-	public static final Item ENCHANTED_SAPHIR_APPLE = new EnchantedFoodEffectBase1("enchanted_saphir_apple", 15, 6.0F, false,
+	public static final Item ENCHANTED_SAPPHIRE_APPLE = new EnchantedFoodEffectBase1("enchanted_sapphire_apple", 15, 6.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 12000,8, false, false),
 			new PotionEffect(MobEffects.REGENERATION, 1200,3, false, false),
 			new PotionEffect(MobEffects.STRENGTH, 6000,2, false, false),

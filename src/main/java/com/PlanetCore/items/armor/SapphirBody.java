@@ -63,7 +63,7 @@ public class SapphirBody extends ArmorBase
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
 	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == ModItems.SAPHIR_CHESTPLATE)
+		if (player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == ModItems.SAPPHIRE_CHESTPLATE)
 		{
 			if (world.getTotalWorldTime() % 300 != 1)
 			{
