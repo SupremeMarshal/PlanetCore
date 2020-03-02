@@ -24,6 +24,7 @@ public class EmeraldHelmet1 extends ArmorBase
 
 	public EmeraldHelmet1(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+		this.setMaxStackSize(16);
 		// TODO Auto-generated constructor stub
 	}
     
@@ -78,7 +79,7 @@ public class EmeraldHelmet1 extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
-		tooltip.add(net.minecraft.client.resources.I18n.format("To further enhance your armor, combine 2 emerald helm +1 and an enhancing gem +1."));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Combine two emerald helmet+1 in the anvil to upgrade it."));
 	}
 
 }

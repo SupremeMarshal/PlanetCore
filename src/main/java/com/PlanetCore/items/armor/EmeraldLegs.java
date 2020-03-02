@@ -24,6 +24,7 @@ public class EmeraldLegs extends ArmorBase
 
 	public EmeraldLegs(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+		this.setMaxStackSize(16);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -76,7 +77,7 @@ public class EmeraldLegs extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
-		tooltip.add(net.minecraft.client.resources.I18n.format("To enhance your armor, combine 2 emerald legs and an enhancing gem."));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Combine two emerald leggings in the anvil to upgrade it."));
 	}
 
 }

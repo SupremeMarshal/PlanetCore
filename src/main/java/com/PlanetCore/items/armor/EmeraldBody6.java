@@ -76,7 +76,7 @@ public class EmeraldBody6 extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
-		tooltip.add(net.minecraft.client.resources.I18n.format("That's an ultimate emerald armor plate body!"));
+		tooltip.add(net.minecraft.client.resources.I18n.format("That's an ultimate emerald plate body!"));
 	}
 
 }

@@ -24,6 +24,7 @@ public class EmeraldBoots6 extends ArmorBase
 
 	public EmeraldBoots6(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+		this.setMaxStackSize(16);
 		// TODO Auto-generated constructor stub
 	}
 	

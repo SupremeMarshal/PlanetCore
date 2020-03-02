@@ -24,6 +24,7 @@ public class EmeraldBoots3 extends ArmorBase
 
 	public EmeraldBoots3(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+		this.setMaxStackSize(16);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -76,7 +77,7 @@ public class EmeraldBoots3 extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
-		tooltip.add(net.minecraft.client.resources.I18n.format("To further enhance your armor, combine 2 emerald boots +3 and an enhancing gem +3."));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Combine two emerald boots+3 in the anvil to upgrade it."));
 	}
 
 }

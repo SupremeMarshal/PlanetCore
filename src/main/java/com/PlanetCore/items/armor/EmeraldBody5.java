@@ -34,7 +34,7 @@ public class EmeraldBody5 extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 16.5, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 17, 0));
 	}
    
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
@@ -48,7 +48,7 @@ public class EmeraldBody5 extends ArmorBase
 
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 16.5, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 17, 0));
     	}
     	return mods;
     }
@@ -76,7 +76,7 @@ public class EmeraldBody5 extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
-		tooltip.add(net.minecraft.client.resources.I18n.format("To enhance your armor to ultimate, combine 2 emerald body +5 and an enhancing gem +5."));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Combine two emerald chestplate+5 in the anvil to upgrade it."));
 	}
 
 }

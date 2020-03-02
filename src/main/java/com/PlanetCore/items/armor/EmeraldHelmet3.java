@@ -24,6 +24,7 @@ public class EmeraldHelmet3 extends ArmorBase
 
 	public EmeraldHelmet3(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+		this.setMaxStackSize(16);
 		// TODO Auto-generated constructor stub
 	}
     
@@ -34,7 +35,7 @@ public class EmeraldHelmet3 extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 7.5, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 7, 0));
 
 	}
    
@@ -50,7 +51,7 @@ public class EmeraldHelmet3 extends ArmorBase
 
     		String maxhealthplatinumhelm = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 7.5, 0));
+    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 7, 0));
     	}
     	return mods;
     }
@@ -78,7 +79,7 @@ public class EmeraldHelmet3 extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
-		tooltip.add(net.minecraft.client.resources.I18n.format("To further enhance your armor, combine 2 emerald helm +3 and an enhancing gem +3."));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Combine two emerald helmet+3 in the anvil to upgrade it."));
 	}
 
 }

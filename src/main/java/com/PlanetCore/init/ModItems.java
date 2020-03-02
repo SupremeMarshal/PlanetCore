@@ -61,58 +61,58 @@ public class ModItems {
 	
 	//ARMOR MATERIAL (name, textureName, durability, reductionAmounts, enchantability, soundOnEquip, toughness)
 	public static final ArmorMaterial ARMOR_MATERIAL_BRONZE= EnumHelper.addArmorMaterial("armor_material_bronze", Reference.MOD_ID + ":bronze", 8,
-			new int[] {2, 3, 2, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {2, 4, 3, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_IRON = EnumHelper.addArmorMaterial("armor_material_iron", Reference.MOD_ID + ":iron", 15,
-			new int[] {2, 4, 3, 2}, 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {3, 5, 4, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_STEEL = EnumHelper.addArmorMaterial("armor_material_steel", Reference.MOD_ID + ":steel", 30,
-			new int[] {3, 5, 4, 3}, 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {4, 6, 5, 3}, 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_SILVER = EnumHelper.addArmorMaterial("armor_material_silver", Reference.MOD_ID + ":silver", 12,
-			new int[] {4, 6, 6, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.5F);
+			new int[] {4, 7, 6, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.5F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_GOLD = EnumHelper.addArmorMaterial("armor_material_gold", Reference.MOD_ID + ":gold", 45,
-			new int[] {4, 7, 6, 3}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F);
+			new int[] {4, 7, 6, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_PLATINUM = EnumHelper.addArmorMaterial("armor_material_platinum", Reference.MOD_ID + ":platinum", 56,
-			new int[] {4, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
+			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD = EnumHelper.addArmorMaterial("armor_material_emerald", Reference.MOD_ID + ":emerald", 10,
-			new int[] {5, 8, 7, 4}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
+	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD = EnumHelper.addArmorMaterial("armor_material_emerald", Reference.MOD_ID + ":emerald", 2,
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD1 = EnumHelper.addArmorMaterial("armor_material_emerald1", Reference.MOD_ID + ":emerald1", 11,
-			new int[] {3, 8, 6, 3}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
+	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD1 = EnumHelper.addArmorMaterial("armor_material_emerald1", Reference.MOD_ID + ":emerald1", 4,
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD2 = EnumHelper.addArmorMaterial("armor_material_emerald2", Reference.MOD_ID + ":emerald2", 12,
-			new int[] {3, 8, 6, 3}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.5F);
+	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD2 = EnumHelper.addArmorMaterial("armor_material_emerald2", Reference.MOD_ID + ":emerald2", 8,
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.5F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD3 = EnumHelper.addArmorMaterial("armor_material_emerald3", Reference.MOD_ID + ":emerald3", 13,
-			new int[] {3, 8, 6, 3}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD3 = EnumHelper.addArmorMaterial("armor_material_emerald3", Reference.MOD_ID + ":emerald3", 16,
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD4 = EnumHelper.addArmorMaterial("armor_material_emerald4", Reference.MOD_ID + ":emerald4", 14,
-			new int[] {3, 8, 6, 3}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.5F);
+	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD4 = EnumHelper.addArmorMaterial("armor_material_emerald4", Reference.MOD_ID + ":emerald4", 32,
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.5F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD5 = EnumHelper.addArmorMaterial("armor_material_emerald5", Reference.MOD_ID + ":emerald5", 15,
-			new int[] {3, 8, 6, 3}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F);
+	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD5 = EnumHelper.addArmorMaterial("armor_material_emerald5", Reference.MOD_ID + ":emerald5", 64,
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD6 = EnumHelper.addArmorMaterial("armor_material_emerald6", Reference.MOD_ID + ":emerald6", 16,
-			new int[] {3, 8, 6, 3}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0;;;F);
+	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD6 = EnumHelper.addArmorMaterial("armor_material_emerald6", Reference.MOD_ID + ":emerald6", 128,
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE = EnumHelper.addArmorMaterial("armor_material_sapphire", Reference.MOD_ID + ":sapphire", 93,
-			new int[] {3, 8, 6, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 125,
-			new int[] {4, 9, 7, 4}, 8, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
+			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND = EnumHelper.addArmorMaterial("armor_material_diamond", Reference.MOD_ID + ":diamond", 187,
-			new int[] {5, 10, 8, 5}, 6, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+			new int[] {5, 10, 8, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_AMAZONITE = EnumHelper.addArmorMaterial("armor_material_amazonite", Reference.MOD_ID + ":amazonite", 250,
-			new int[] {6, 12, 9, 6}, 5, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
+			new int[] {6, 12, 9, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_ONYX = EnumHelper.addArmorMaterial("armor_material_onyx", Reference.MOD_ID + ":onyx", 312,
-			new int[] {7, 14, 10, 7}, 4, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 8.0F);
+			new int[] {7, 14, 10, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 8.0F);
 	
 	
 	
@@ -217,60 +217,60 @@ public class ModItems {
 
 
 
-	public static final Item EMERALD_HELMET1 = new EmeraldHelmet1("emerald_helmet1", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE1 = new EmeraldBody1("emerald_chestplate1", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS1 = new EmeraldLegs1("emerald_leggings1", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS1 = new EmeraldBoots1("emerald_boots1", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
+	public static final Item EMERALD_HELMET1 = new EmeraldHelmet1("emerald_helmet1", ARMOR_MATERIAL_EMERALD1, 1, EntityEquipmentSlot.HEAD);
+	public static final Item EMERALD_CHESTPLATE1 = new EmeraldBody1("emerald_chestplate1", ARMOR_MATERIAL_EMERALD1, 1, EntityEquipmentSlot.CHEST);
+	public static final Item EMERALD_LEGGINGS1 = new EmeraldLegs1("emerald_leggings1", ARMOR_MATERIAL_EMERALD1, 2, EntityEquipmentSlot.LEGS);
+	public static final Item EMERALD_BOOTS1 = new EmeraldBoots1("emerald_boots1", ARMOR_MATERIAL_EMERALD1, 1, EntityEquipmentSlot.FEET);
 
 	//EMERALD+2//
 
 
 
 
-	public static final Item EMERALD_HELMET2 = new EmeraldHelmet1("emerald_helmet2", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE2 = new EmeraldBody1("emerald_chestplate2", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS2 = new EmeraldLegs1("emerald_leggings2", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS2 = new EmeraldBoots1("emerald_boots2", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
+	public static final Item EMERALD_HELMET2 = new EmeraldHelmet2("emerald_helmet2", ARMOR_MATERIAL_EMERALD2, 1, EntityEquipmentSlot.HEAD);
+	public static final Item EMERALD_CHESTPLATE2 = new EmeraldBody2("emerald_chestplate2", ARMOR_MATERIAL_EMERALD2, 1, EntityEquipmentSlot.CHEST);
+	public static final Item EMERALD_LEGGINGS2 = new EmeraldLegs2("emerald_leggings2", ARMOR_MATERIAL_EMERALD2, 2, EntityEquipmentSlot.LEGS);
+	public static final Item EMERALD_BOOTS2 = new EmeraldBoots2("emerald_boots2", ARMOR_MATERIAL_EMERALD2, 1, EntityEquipmentSlot.FEET);
 
 	//EMERALD+3//
 
 
 
 
-	public static final Item EMERALD_HELMET3 = new EmeraldHelmet1("emerald_helmet3", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE3 = new EmeraldBody1("emerald_chestplate3", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS3 = new EmeraldLegs1("emerald_leggings3", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS3 = new EmeraldBoots1("emerald_boots3", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
+	public static final Item EMERALD_HELMET3 = new EmeraldHelmet3("emerald_helmet3", ARMOR_MATERIAL_EMERALD3, 1, EntityEquipmentSlot.HEAD);
+	public static final Item EMERALD_CHESTPLATE3 = new EmeraldBody3("emerald_chestplate3", ARMOR_MATERIAL_EMERALD3, 1, EntityEquipmentSlot.CHEST);
+	public static final Item EMERALD_LEGGINGS3 = new EmeraldLegs3("emerald_leggings3", ARMOR_MATERIAL_EMERALD3, 2, EntityEquipmentSlot.LEGS);
+	public static final Item EMERALD_BOOTS3 = new EmeraldBoots3("emerald_boots3", ARMOR_MATERIAL_EMERALD3, 1, EntityEquipmentSlot.FEET);
 
 	//EMERALD+4//
 
 
 
 
-	public static final Item EMERALD_HELMET4 = new EmeraldHelmet1("emerald_helmet4", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE4 = new EmeraldBody1("emerald_chestplate4", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS4 = new EmeraldLegs1("emerald_leggings4", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS4 = new EmeraldBoots1("emerald_boots4", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
+	public static final Item EMERALD_HELMET4 = new EmeraldHelmet4("emerald_helmet4", ARMOR_MATERIAL_EMERALD4, 1, EntityEquipmentSlot.HEAD);
+	public static final Item EMERALD_CHESTPLATE4 = new EmeraldBody4("emerald_chestplate4", ARMOR_MATERIAL_EMERALD4, 1, EntityEquipmentSlot.CHEST);
+	public static final Item EMERALD_LEGGINGS4 = new EmeraldLegs4("emerald_leggings4", ARMOR_MATERIAL_EMERALD4, 2, EntityEquipmentSlot.LEGS);
+	public static final Item EMERALD_BOOTS4 = new EmeraldBoots4("emerald_boots4", ARMOR_MATERIAL_EMERALD4, 1, EntityEquipmentSlot.FEET);
 
 	//EMERALD+5//
 
 
 
 
-	public static final Item EMERALD_HELMET5 = new EmeraldHelmet1("emerald_helmet5", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE5 = new EmeraldBody1("emerald_chestplate5", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS5 = new EmeraldLegs1("emerald_leggings5", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS5 = new EmeraldBoots1("emerald_boots5", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
+	public static final Item EMERALD_HELMET5 = new EmeraldHelmet5("emerald_helmet5", ARMOR_MATERIAL_EMERALD5, 1, EntityEquipmentSlot.HEAD);
+	public static final Item EMERALD_CHESTPLATE5 = new EmeraldBody5("emerald_chestplate5", ARMOR_MATERIAL_EMERALD5, 1, EntityEquipmentSlot.CHEST);
+	public static final Item EMERALD_LEGGINGS5 = new EmeraldLegs5("emerald_leggings5", ARMOR_MATERIAL_EMERALD5, 2, EntityEquipmentSlot.LEGS);
+	public static final Item EMERALD_BOOTS5 = new EmeraldBoots5("emerald_boots5", ARMOR_MATERIAL_EMERALD5, 1, EntityEquipmentSlot.FEET);
 
 	//ULTIMATE EMERALD//
 
 
 
 
-	public static final Item EMERALD_HELMET6 = new EmeraldHelmet1("emerald_helmet6", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE6 = new EmeraldBody1("emerald_chestplate6", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS6 = new EmeraldLegs1("emerald_leggings6", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS6 = new EmeraldBoots1("emerald_boots6", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
+	public static final Item EMERALD_HELMET6 = new EmeraldHelmet6("emerald_helmet6", ARMOR_MATERIAL_EMERALD6, 1, EntityEquipmentSlot.HEAD);
+	public static final Item EMERALD_CHESTPLATE6 = new EmeraldBody6("emerald_chestplate6", ARMOR_MATERIAL_EMERALD6, 1, EntityEquipmentSlot.CHEST);
+	public static final Item EMERALD_LEGGINGS6 = new EmeraldLegs6("emerald_leggings6", ARMOR_MATERIAL_EMERALD6, 2, EntityEquipmentSlot.LEGS);
+	public static final Item EMERALD_BOOTS6 = new EmeraldBoots6("emerald_boots6", ARMOR_MATERIAL_EMERALD6, 1, EntityEquipmentSlot.FEET);
 
 	//SAPPHIRE//
 

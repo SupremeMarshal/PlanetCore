@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "planetcore:silver_anvil_chipped" },
+    "facing=west": { "model": "planetcore:silver_anvil_chipped", "y": 90 },
+    "facing=south": { "model": "planetcore:silver_anvil_chipped", "y": 180 },
+    "facing=east": { "model": "planetcore:silver_anvil_chipped", "y": 270 }
+  }
+}

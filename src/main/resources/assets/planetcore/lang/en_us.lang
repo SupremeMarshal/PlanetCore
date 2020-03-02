@@ -1,4 +1,7 @@
-
+//ANVILS
+tile.emerald_anvil.name = Emerald Anvil,
+tile.chipped_emerald_anvil.name = Chipped Emerald Anvil,
+tile.damaged_emerald_anvil.name = Damaged Emerald Anvil,
 
 //TOOLS
 item.bronze_sword.name=Bronze sword
@@ -9,7 +12,7 @@ item.bronze_hoe.name=Bronze hoe
 
 item.bronze_helmet.name=Bronze helmet
 item.bronze_helmet.tooltip.0=When equipped:
-item.bronze_helmet.tooltip.1=§9+2 Armor
+item.bronze_helmet.tooltip.1=§9+1 Armor
 
 item.bronze_chestplate.name=Bronze chestplate
 item.bronze_chestplate.tooltip.0=When equipped:
@@ -78,21 +81,25 @@ item.silver_helmet.name=Silver helmet
 item.silver_helmet.tooltip.0=When equipped:
 item.silver_helmet.tooltip.1=§9+4 Armor
 item.silver_helmet.tooltip.2=§9+0.5 Toughness
+item.silver_helmet.tooltip.3=§a+1 Max health
 
 item.silver_chestplate.name=Silver chestplate
 item.silver_chestplate.tooltip.0=When equipped:
 item.silver_chestplate.tooltip.1=§9+6 Armor
 item.silver_chestplate.tooltip.2=§9+0.5 Toughness
+item.silver_chestplate.tooltip.3=§a+1 Max health
 
 item.silver_leggings.name=Silver leggings
 item.silver_leggings.tooltip.0=When equipped:
-item.silver_leggings.tooltip.1=§9+6 Armor
+item.silver_leggings.tooltip.1=§9+5 Armor
 item.silver_leggings.tooltip.2=§9+0.5 Toughness
+item.silver_leggings.tooltip.3=§a+1 Max health
 
 item.silver_boots.name=Silver boots
 item.silver_boots.tooltip.0=When equipped:
 item.silver_boots.tooltip.1=§9+3 Armor
 item.silver_boots.tooltip.2=§9+0.5 Toughness
+item.silver_boots.tooltip.3=§a+1 Max health
 
 item.gold_sword.name=Gold sword
 item.gold_shovel.name=Gold shovel
@@ -120,7 +127,7 @@ item.gold_leggings.tooltip.3=§a+1 Max health
 
 item.gold_boots.name=Gold boots
 item.gold_boots.tooltip.0=When equipped:
-item.gold_boots.tooltip.1=§9+3 Armor
+item.gold_boots.tooltip.1=§9+4 Armor
 item.gold_boots.tooltip.2=§9+1 Armor toughness
 item.gold_boots.tooltip.3=§a+1 Max health
 
@@ -132,27 +139,57 @@ item.platinum_hoe.name=Platinum hoe
 
 item.platinum_helmet.name=Platinum helmet
 item.platinum_helmet.tooltip.0=When equipped:
-item.platinum_helmet.tooltip.1=§9+4 Armor
+item.platinum_helmet.tooltip.1=§9+5 Armor
 item.platinum_helmet.tooltip.2=§9+1.5 Toughness
-item.platinum_helmet.tooltip.3=§a+1.5 Max health
+item.platinum_helmet.tooltip.3=§a+2.5 Max health
 
 item.platinum_chestplate.name=Platinum chestplate
 item.platinum_chestplate.tooltip.0=When equipped:
 item.platinum_chestplate.tooltip.1=§9+7 Armor
 item.platinum_chestplate.tooltip.2=§9+1.5 Toughness
-item.platinum_chestplate.tooltip.3=§9+2.5 Max health
+item.platinum_chestplate.tooltip.3=§9+4 Max health
 
 item.platinum_leggings.name=Platinum leggings
 item.platinum_leggings.tooltip.0=When equipped:
 item.platinum_leggings.tooltip.1=§9+6 Armor
 item.platinum_leggings.tooltip.2=§9+1.5 Toughness
-item.platinum_leggings.tooltip.3=§9+2.5 Max health
+item.platinum_leggings.tooltip.3=§9+3.5 Max health
 
 item.platinum_boots.name=Platinum boots
 item.platinum_boots.tooltip.0=When equipped:
 item.platinum_boots.tooltip.1=§9+4 Armor
 item.platinum_boots.tooltip.2=§9+1.5 Toughness
-item.platinum_boots.tooltip.4=§a+1.5 Max health
+item.platinum_boots.tooltip.4=§a+2 Max health
+
+item.es_sword.name=Einsteinium sword
+item.es_shovel.name=Einsteinium shovel
+item.es_pickaxe.name=Einsteinium pickaxe
+item.es_axe.name=Einsteinium axe
+item.es_hoe.name=Einsteinium hoe
+
+item.es_helmet.name=Einsteinium helmet
+item.es_helmet.tooltip.0=When equipped:
+item.es_helmet.tooltip.1=§9+5 Armor
+item.es_helmet.tooltip.2=§9+2 Toughness
+item.es_helmet.tooltip.3=§a+3.5 Max health
+
+item.es_chestplate.name=Einsteinium chestplate
+item.es_chestplate.tooltip.0=When equipped:
+item.es_chestplate.tooltip.1=§9+7 Armor
+item.es_chestplate.tooltip.2=§9+2 Toughness
+item.es_chestplate.tooltip.3=§9+5.5 Max health
+
+item.es_leggings.name=Einsteinium leggings
+item.es_leggings.tooltip.0=When equipped:
+item.es_leggings.tooltip.1=§9+7 Armor
+item.es_leggings.tooltip.2=§9+2 Toughness
+item.es_leggings.tooltip.3=§9+4.5 Max health
+
+item.es_boots.name=Einsteinium boots
+item.es_boots.tooltip.0=When equipped:
+item.es_boots.tooltip.1=§9+4 Armor
+item.es_boots.tooltip.2=§9+2 Toughness
+item.es_boots.tooltip.4=§a+2.5 Max health
 
 item.emerald_sword.name=Emerald sword
 item.emerald_shovel.name=Emerald shovel
@@ -166,47 +203,167 @@ item.emerald_helmet.tooltip.1=§9+5 Armor
 item.emerald_helmet.tooltip.2=§9+2.5 Toughness
 item.emerald_helmet.tooltip.3=§a+4 Max health
 
-item.emerald_helmet1.name=Emerald helmet +1
+item.emerald_chestplate.name=Emerald chestplate
+item.emerald_chestplate.tooltip.0=When equipped:
+item.emerald_chestplate.tooltip.1=§9+8 Armor
+item.emerald_chestplate.tooltip.2=§9+2.5 Toughness
+item.emerald_chestplate.tooltip.3=§a+7 Max health
+
+item.emerald_leggings.name=Emerald leggings
+item.emerald_leggings.tooltip.0=When equipped:
+item.emerald_leggings.tooltip.1=§9+7 Armor
+item.emerald_leggings.tooltip.2=§9+2.5 Toughness
+item.emerald_leggings.tooltip.3=§a+6 Max health
+
+item.emerald_boots.name=Emerald boots
+item.emerald_boots.tooltip.0=When equipped:
+item.emerald_boots.tooltip.1=§9+4 Armor
+item.emerald_boots.tooltip.2=§9+2.5 Armor toughness
+item.emerald_boots.tooltip.3=§a+3 Max health
+
+item.emerald_helmet1.name=Emerald helmet+1
 item.emerald_helmet1.tooltip.0=When equipped:
 item.emerald_helmet1.tooltip.1=§9+5 Armor
 item.emerald_helmet1.tooltip.2=§9+3 Toughness
 item.emerald_helmet1.tooltip.3=§a+5 Max health
 
-item.emerald_chestplate.name=Emerald chestplate
-item.emerald_chestplate.tooltip.0=When equipped:
-item.emerald_chestplate.tooltip.1=§9+8 Armor
-item.emerald_chestplate.tooltip.2=§9+3 Toughness
-item.emerald_chestplate.tooltip.3=§a+6.5 Max health
-
-item.emerald_chestplate1.name=Emerald chestplate +1
+item.emerald_chestplate1.name=Emerald chestplate+1
 item.emerald_chestplate1.tooltip.0=When equipped:
-item.emerald_chestplate1.tooltip.1=§9+9 Armor
+item.emerald_chestplate1.tooltip.1=§9+8 Armor
 item.emerald_chestplate1.tooltip.2=§9+3 Toughness
 item.emerald_chestplate1.tooltip.3=§a+8 Max health
 
-item.emerald_leggings.name=Emerald leggings
-item.emerald_leggings.tooltip.0=When equipped:
-item.emerald_leggings.tooltip.1=§9+7 Armor
-item.emerald_leggings.tooltip.2=§9+3 Toughness
-item.emerald_leggings.tooltip.3=§a+6 Max health
-
-item.emerald_leggings1.name=Emerald leggings +1
+item.emerald_leggings1.name=Emerald leggings+1
 item.emerald_leggings1.tooltip.0=When equipped:
-item.emerald_leggings1.tooltip.1=§9+8 Armor
+item.emerald_leggings1.tooltip.1=§9+7 Armor
 item.emerald_leggings1.tooltip.2=§9+3 Toughness
 item.emerald_leggings1.tooltip.3=§a+7 Max health
 
-item.emerald_boots.name=Emerald boots
-item.emerald_boots.tooltip.0=When equipped:
-item.emerald_boots.tooltip.1=§9+4 Armor
-item.emerald_boots.tooltip.2=§9+2 Armor toughness
-item.emerald_boots.tooltip.3=§a+3.5 Max health
-
-item.emerald_boots1.name=Emerald boots +1
+item.emerald_boots1.name=Emerald boots+1
 item.emerald_boots1.tooltip.0=When equipped:
 item.emerald_boots1.tooltip.1=§9+4 Armor
-item.emerald_boots1.tooltip.2=§9+2 Armor toughness
+item.emerald_boots1.tooltip.2=§9+3 Armor toughness
 item.emerald_boots1.tooltip.3=§a+4 Max health
+
+item.emerald_helmet2.name=Emerald helmet+2
+item.emerald_helmet2.tooltip.0=When equipped:
+item.emerald_helmet2.tooltip.1=§9+5 Armor
+item.emerald_helmet2.tooltip.2=§9+3.5 Toughness
+item.emerald_helmet2.tooltip.3=§a+6 Max health
+
+item.emerald_chestplate2.name=Emerald chestplate+2
+item.emerald_chestplate2.tooltip.0=When equipped:
+item.emerald_chestplate2.tooltip.1=§9+9 Armor
+item.emerald_chestplate2.tooltip.2=§9+3.5 Toughness
+item.emerald_chestplate2.tooltip.3=§a+10 Max health
+
+item.emerald_leggings2.name=Emerald leggings+2
+item.emerald_leggings2.tooltip.0=When equipped:
+item.emerald_leggings2.tooltip.1=§9+8 Armor
+item.emerald_leggings2.tooltip.2=§9+3.5 Toughness
+item.emerald_leggings2.tooltip.3=§a+8 Max health
+
+item.emerald_boots2.name=Emerald boots+2
+item.emerald_boots2.tooltip.0=When equipped:
+item.emerald_boots2.tooltip.1=§9+4 Armor
+item.emerald_boots2.tooltip.2=§9+3.5 Armor toughness
+item.emerald_boots2.tooltip.3=§a+5 Max health
+
+item.emerald_helmet3.name=Emerald helmet+3
+item.emerald_helmet3.tooltip.0=When equipped:
+item.emerald_helmet3.tooltip.1=§9+6 Armor
+item.emerald_helmet3.tooltip.2=§9+4 Toughness
+item.emerald_helmet3.tooltip.3=§a+7 Max health
+
+item.emerald_chestplate3.name=Emerald chestplate+3
+item.emerald_chestplate3.tooltip.0=When equipped:
+item.emerald_chestplate3.tooltip.1=§9+9 Armor
+item.emerald_chestplate3.tooltip.2=§9+4 Toughness
+item.emerald_chestplate3.tooltip.3=§a+12 Max health
+
+item.emerald_leggings3.name=Emerald leggings+3
+item.emerald_leggings3.tooltip.0=When equipped:
+item.emerald_leggings3.tooltip.1=§9+8 Armor
+item.emerald_leggings3.tooltip.2=§9+4 Toughness
+item.emerald_leggings3.tooltip.3=§a+10 Max health
+
+item.emerald_boots3.name=Emerald boots+3
+item.emerald_boots3.tooltip.0=When equipped:
+item.emerald_boots3.tooltip.1=§9+4 Armor
+item.emerald_boots3.tooltip.2=§9+4 Armor toughness
+item.emerald_boots3.tooltip.3=§a+6 Max health
+
+item.emerald_helmet4.name=Emerald helmet+4
+item.emerald_helmet4.tooltip.0=When equipped:
+item.emerald_helmet4.tooltip.1=§9+6 Armor
+item.emerald_helmet4.tooltip.2=§9+4.5 Toughness
+item.emerald_helmet4.tooltip.3=§a+9 Max health
+
+item.emerald_chestplate4.name=Emerald chestplate+4
+item.emerald_chestplate4.tooltip.0=When equipped:
+item.emerald_chestplate4.tooltip.1=§9+9 Armor
+item.emerald_chestplate4.tooltip.2=§9+4.5 Toughness
+item.emerald_chestplate4.tooltip.3=§a+14 Max health
+
+item.emerald_leggings4.name=Emerald leggings+4
+item.emerald_leggings4.tooltip.0=When equipped:
+item.emerald_leggings4.tooltip.1=§9+8 Armor
+item.emerald_leggings4.tooltip.2=§9+4.5 Toughness
+item.emerald_leggings4.tooltip.3=§a+12 Max health
+
+item.emerald_boots4.name=Emerald boots+4
+item.emerald_boots4.tooltip.0=When equipped:
+item.emerald_boots4.tooltip.1=§9+5 Armor
+item.emerald_boots4.tooltip.2=§9+4.5 Armor toughness
+item.emerald_boots4.tooltip.3=§a+7 Max health
+
+item.emerald_helmet5.name=Emerald helmet+5
+item.emerald_helmet5.tooltip.0=When equipped:
+item.emerald_helmet5.tooltip.1=§9+6 Armor
+item.emerald_helmet5.tooltip.2=§9+5 Toughness
+item.emerald_helmet5.tooltip.3=§a+10 Max health
+
+item.emerald_chestplate5.name=Emerald chestplate+5
+item.emerald_chestplate5.tooltip.0=When equipped:
+item.emerald_chestplate5.tooltip.1=§9+10 Armor
+item.emerald_chestplate5.tooltip.2=§9+5 Toughness
+item.emerald_chestplate5.tooltip.3=§a+17 Max health
+
+item.emerald_leggings5.name=Emerald leggings+5
+item.emerald_leggings5.tooltip.0=When equipped:
+item.emerald_leggings5.tooltip.1=§9+8 Armor
+item.emerald_leggings5.tooltip.2=§9+5 Toughness
+item.emerald_leggings5.tooltip.3=§a+15 Max health
+
+item.emerald_boots5.name=Emerald boots+5
+item.emerald_boots5.tooltip.0=When equipped:
+item.emerald_boots5.tooltip.1=§9+5 Armor
+item.emerald_boots5.tooltip.2=§9+5 Armor toughness
+item.emerald_boots5.tooltip.3=§a+8 Max health
+
+item.emerald_helmet6.name=§aEmerald helmet+6
+item.emerald_helmet6.tooltip.0=When equipped:
+item.emerald_helmet6.tooltip.1=§9+6 Armor
+item.emerald_helmet6.tooltip.2=§9+6 Toughness
+item.emerald_helmet6.tooltip.3=§a+13 Max health
+
+item.emerald_chestplate6.name=§aEmerald chestplate+6
+item.emerald_chestplate6.tooltip.0=When equipped:
+item.emerald_chestplate6.tooltip.1=§9+10 Armor
+item.emerald_chestplate6.tooltip.2=§9+6 Toughness
+item.emerald_chestplate6.tooltip.3=§a+20 Max health
+
+item.emerald_leggings6.name=§aEmerald leggings+6
+item.emerald_leggings6.tooltip.0=When equipped:
+item.emerald_leggings6.tooltip.1=§9+9 Armor
+item.emerald_leggings6.tooltip.2=§9+6 Toughness
+item.emerald_leggings6.tooltip.3=§a+18 Max health
+
+item.emerald_boots6.name=§aEmerald boots+6
+item.emerald_boots6.tooltip.0=When equipped:
+item.emerald_boots6.tooltip.1=§9+5 Armor
+item.emerald_boots6.tooltip.2=§9+6 Armor toughness
+item.emerald_boots6.tooltip.3=§a+10 Max health
 
 item.sapphire_sword.name=§aSapphire sword
 item.sapphire_shovel.name=§aSapphire shovel

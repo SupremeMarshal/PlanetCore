@@ -24,6 +24,7 @@ public class EmeraldLegs6 extends ArmorBase
 
 	public EmeraldLegs6(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+		this.setMaxStackSize(16);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -34,7 +35,7 @@ public class EmeraldLegs6 extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDLEGS_UUID, "MAX_HEALTH_EMERALDLEGS_UUID", 17.5, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDLEGS_UUID, "MAX_HEALTH_EMERALDLEGS_UUID", 18, 0));
 	}
    
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
@@ -48,7 +49,7 @@ public class EmeraldLegs6 extends ArmorBase
 
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_EMERALDLEGS_UUID, "MAX_HEALTH_EMERALDLEGS_UUID", 17.5, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_EMERALDLEGS_UUID, "MAX_HEALTH_EMERALDLEGS_UUID", 18, 0));
     	}
     	return mods;
     }
