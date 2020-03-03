@@ -1,5 +1,6 @@
 package com.PlanetCore.init;
 
+import com.PlanetCore.anvils.Gold.BlockGoldAnvil;
 import com.PlanetCore.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -10,8 +11,13 @@ import java.util.List;
 
 public class ModBlocks {
 
+
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
-	
+
+	public static final Block blockGoldAnvil = new BlockGoldAnvil("gold_anvil");
+	public static final Block blockGoldAnvilChipped = new BlockGoldAnvil("gold_anvil_chipped");
+	public static final Block blockGoldAnvilDamaged = new BlockGoldAnvil("gold_anvil_damaged");
+
 	public static final Block HOT_LAVA_BLOCK = new HotLavaFluid("hot_lava", ModFluids.HOT_LAVA_FLUID, Material.LAVA);
 	public static final Block CORE_LAVA_BLOCK = new CoreLavaFluid("core_lava", ModFluids.CORE_LAVA_FLUID, Material.LAVA);
 

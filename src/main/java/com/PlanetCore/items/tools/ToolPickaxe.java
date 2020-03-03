@@ -52,10 +52,10 @@ public class ToolPickaxe extends ItemPickaxe implements IHasModel {
 			stack.getTagCompound().setInteger("HideFlags", 2);
 
 		}
-		if (pickaxe == ModItems.IRON_PICKAXE || pickaxe == ModItems.STEEL_PICKAXE || pickaxe == ModItems.IRON_PICKAXE)
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.0"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.1"));
-		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
-		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
+			tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+			tooltip.add(net.minecraft.client.resources.I18n.format("$9Efficiency: +"+this.efficiency));
+			tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
+			tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
+
 	}
 }

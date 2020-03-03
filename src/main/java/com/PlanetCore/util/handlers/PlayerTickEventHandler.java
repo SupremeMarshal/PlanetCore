@@ -1,6 +1,8 @@
 package com.PlanetCore.util.handlers;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.FoodStats;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -8,11 +10,21 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import java.util.Random;
 
 @Mod.EventBusSubscriber(modid="planetcore")
-public class PlayerTickEventHandler {
+public class PlayerTickEventHandler extends FoodStats {
+
+
 
     @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event)
-    {
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+
+
+        //Heal player based on food level. Heal from 0% to 100% in 600 seconds at max food lvl. Heal fully in 3 hours if food level is 1. At 0 food, player stop healing.
+        if (event.player.getFoodStats().getFoodLevel() >= 1) {
+        if (event.player.world.getTotalWorldTime() % 20 != 1) {
+            return;
+        }
+        event.player.heal(event.player.getMaxHealth() / (12000 / event.player.getFoodStats().getFoodLevel()));
+        }
 
         int random = new Random().nextInt(5)+1;
         if (event.player.posY < -600)

@@ -1,0 +1,13 @@
+{
+
+  "parent": "planetcore:block/anvil_base",
+
+  "textures": {
+
+    "particle": "planetcore:blocks/damaged_emerald_anvil",
+
+    "0": "planetcore:blocks/damaged_emerald_anvil"
+
+  }
+
+}
