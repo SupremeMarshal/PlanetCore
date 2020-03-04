@@ -11,6 +11,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
@@ -19,13 +20,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Random;
 
 public class Corerock extends BlockBase {
@@ -35,10 +41,10 @@ public class Corerock extends BlockBase {
 
 		setSoundType(SoundType.METAL);
 		setHardness(-1.0F);
-		setResistance(20.0F);
+		setResistance(100.0F);
 		setHarvestLevel("pickaxe", 3);
+		setLightLevel(1.0F);
 		setTickRandomly(true);
-		setLightLevel(1);
 
 	}
 
@@ -62,10 +68,10 @@ public class Corerock extends BlockBase {
 	{
 		Block block = this;
 
-        if (block == ModBlocks.CORESTONE_AZURITE || block == ModBlocks.INNERCORESTONE_AZURITE || block == ModBlocks.CENTERCORESTONE_AZURITE)
-        	{return new ItemStack(ModItems.AZURITE, 1, 0).getItem();}
+		if (block == ModBlocks.CORESTONE_AZURITE || block == ModBlocks.INNERCORESTONE_AZURITE || block == ModBlocks.CENTERCORESTONE_AZURITE)
+		{return new ItemStack(ModItems.AZURITE, 1, 0).getItem();}
 		else if (block == ModBlocks.CORESTONE_ONYX || block == ModBlocks.INNERCORESTONE_ONYX || block == ModBlocks.CENTERCORESTONE_ONYX)
-        	{return new ItemStack(ModItems.ONYX, 1, 0).getItem();}
+		{return new ItemStack(ModItems.ONYX, 1, 0).getItem();}
 		else if (block == ModBlocks.CORESTONE_AMETHYST || block == ModBlocks.INNERCORESTONE_AMETHYST || block == ModBlocks.CENTERCORESTONE_AMETHYST)
 		{return new ItemStack(ModItems.AMETHYST, 1, 0).getItem();}
 		else if (block == ModBlocks.CORESTONE_AMAZONITE || block == ModBlocks.INNERCORESTONE_AMAZONITE || block == ModBlocks.CENTERCORESTONE_AMAZONITE)
@@ -143,6 +149,65 @@ public class Corerock extends BlockBase {
 
 
 
+	public static void burnEntities(World world, int x, int y, int z, int radius) {
+		float f = radius;
+		HashSet hashset = new HashSet();
+		int i;
+		int j;
+		int k;
+		double d5;
+		double d6;
+		double d7;
+		double wat = radius/** 2 */
+				;
+		boolean isOccupied = false;
+
+		// bombStartStrength *= 2.0F;
+		i = MathHelper.floor(x - wat - 1.0D);
+		j = MathHelper.floor(x + wat + 1.0D);
+		k = MathHelper.floor(y - wat - 1.0D);
+		int i2 = MathHelper.floor(y + wat + 1.0D);
+		int l = MathHelper.floor(z - wat - 1.0D);
+		int j2 = MathHelper.floor(z + wat + 1.0D);
+		AxisAlignedBB bb = new AxisAlignedBB(i,k,l,j,i2,j2);
+		List list = world.getEntitiesWithinAABBExcludingEntity(null, bb);
+		Vec3d vec3 = new Vec3d(x, y, z);
+
+		for (int i1 = 0; i1 < list.size(); ++i1) {
+			Entity entity = (Entity) list.get(i1);
+			double d4 = entity.getDistance(x, y, z) / radius;
+
+			if (d4 <= 1.0D) {
+				d5 = entity.posX - x;
+				d6 = entity.posY + entity.getEyeHeight() - y;
+				d7 = entity.posZ - z;
+				BlockPos pos1 = new BlockPos(x,y,z);
+				BlockPos pos2 = new BlockPos(entity.posX,entity.posY + entity.getEyeHeight(),entity.posZ);
+				double d9 = MathHelper.sqrt(d5 * d5 + d6 * d6 + d7 * d7);
+
+				if (d9 < wat && !(entity instanceof EntityPlayer)) {
+					d5 /= d9;
+					d6 /= d9;
+					d7 /= d9;
+					double d11 = (1.0D - d4);// * d10;
+					if (!(entity instanceof EntityPlayerMP) || (entity instanceof EntityPlayerMP
+							&& !((EntityPlayerMP) entity).isCreative())) {
+						// entity.attackEntityFrom(DamageSource.generic,
+						// ((int)((d11 * d11 + d11) / 2.0D * 8.0D *
+						// bombStartStrength + 1.0D)));
+						//double realisticDamage = 4*(bombStartStrength*bombStartStrength)/entity.getDistance(x, y, z);
+						//double damage = entity.getDistance(x, y, z) / bombStartStrength * 250;
+//					entity.attackEntityFrom(ModDamageSource.nuclearBlast, (float)damage);
+						entity.attackEntityFrom(DamageSource.ON_FIRE, 6);
+						entity.setFire(10);
+					}
+				}
+			}
+		}
+
+		radius = (int) f;
+	}
+
 
 
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
@@ -173,10 +238,87 @@ public class Corerock extends BlockBase {
 		return 15728880;
 	}
 
+	public void thermalEffects(World worldIn, BlockPos pos, IBlockState state)
+	{
+		int X = pos.getX();
+		int Y = pos.getY();
+		int Z = pos.getZ();
+		burnEntities(worldIn,X,Y,Z, 6);
+		if (this != ModBlocks.COLD_CORESTONE)
+		{
+			for(int x = -2; x < 3; x++) {
+				for(int y = -2; y < 3; y++) {
+					for(int z = -2; z < 3; z++) {
+						IBlockState state2 = worldIn.getBlockState(pos.add(x, y, z));
+						Block block = state2.getBlock();
+						if(state2.getMaterial()==Material.ROCK && !(block instanceof Corerock) && block!=Blocks.BEDROCK && block!=ModBlocks.COLD_CORESTONE)
+						{
+							worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
+						}
+
+						if(state2.getMaterial()==Material.GROUND)
+						{
+							worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
+						}
+
+						if(state2.getMaterial()==Material.GRASS)
+						{
+							worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
+						}
+						if(state2.getMaterial()==Material.SNOW)
+						{
+							worldIn.setBlockToAir(pos.add(x, y, z));
+						}
+						if(state2.getMaterial()==Material.WATER || state2.getMaterial()==Material.ICE || state2.getMaterial()==Material.CRAFTED_SNOW)
+						{
+							worldIn.setBlockToAir(pos.add(x, y, z));
+							worldIn.setBlockState(pos.add(x, y, z), ModBlocks.COLD_CORESTONE.getDefaultState());
+							worldIn.createExplosion(null, X+x, Y+y, Z+z, 10, true);
+						}
+						if(state2.getBlock().getFlammability(worldIn, pos, null)>0 || state2.getMaterial()==Material.WOOD || state2.getMaterial()==Material.CLOTH || state2.getMaterial()==Material.PLANTS || state2.getMaterial()==Material.LEAVES)
+						{
+							worldIn.setBlockState(pos.add(x, y, z), Blocks.FIRE.getDefaultState());
+						}
+						if(pos.getY()>=-12250 && pos.getY()<=-9900)
+						{
+							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
+						}
+						if(pos.getY()>=-9900)
+						{
+							if (worldIn.getWorldTime() % 200 != 1)
+							{
+								return;
+							}
+							worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+						}
+						if(pos.getY()<=-12750)
+						{
+							worldIn.setBlockState(pos, ModBlocks.INNERCORESTONE.getDefaultState());
+						}
+					}
+				}
+			}
+		}
+
+	}
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+	{
+		thermalEffects(worldIn, pos, state);
+	}
+
+	@Override
+	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
+	{
+		super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
+		thermalEffects(worldIn, pos, state);
+	}
+
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-		BlockPos blockpos = pos.up();
+		thermalEffects(worldIn, pos, state);
+		/*BlockPos blockpos = pos.up();
 		IBlockState iblockstate = worldIn.getBlockState(blockpos);
 
 		if (iblockstate.getBlock() == Blocks.WATER || iblockstate.getBlock() == Blocks.FLOWING_WATER)
@@ -188,7 +330,7 @@ public class Corerock extends BlockBase {
 			{
 				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
 			}
-		}
+		}*/
 	}
 
 	public boolean canEntitySpawn(IBlockState state, Entity entityIn)

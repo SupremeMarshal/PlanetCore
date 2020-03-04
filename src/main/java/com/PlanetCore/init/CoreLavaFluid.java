@@ -131,7 +131,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 				for(int z = -2; z < 3; z++) {
 					IBlockState state2 = worldIn.getBlockState(pos.add(x, y, z));
 					Block block = state2.getBlock();
-					if(state2.getMaterial()==Material.ROCK && !(block instanceof Corerock) && block!=Blocks.BEDROCK)
+					if(state2.getMaterial()==Material.ROCK && !(block instanceof Corerock) && block!=Blocks.BEDROCK && block!=ModBlocks.COLD_CORESTONE)
 					{
 						worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
 					}
@@ -145,16 +145,43 @@ public class CoreLavaFluid extends BlockFluidClassic {
 					{
 						worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
 					}
-					if(state2.getMaterial()==Material.WATER)
+					if(state2.getMaterial()==Material.SNOW)
 					{
 						worldIn.setBlockToAir(pos.add(x, y, z));
-						worldIn.createExplosion(null, X+x, Y+y, Z+z, 10, true);
-
 					}
+					if(state2.getMaterial()==Material.WATER || state2.getMaterial()==Material.ICE || state2.getMaterial()==Material.CRAFTED_SNOW)
+					{
+						worldIn.setBlockToAir(pos.add(x, y, z));
+						worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+						worldIn.createExplosion(null, X+x, Y+y, Z+z, 10, true);
+					}
+					if(state2.getBlock().getFlammability(worldIn, pos, null)>0 || state2.getMaterial()==Material.WOOD || state2.getMaterial()==Material.CLOTH || state2.getMaterial()==Material.PLANTS || state2.getMaterial()==Material.LEAVES)
+					{
+						worldIn.setBlockState(pos.add(x, y, z), Blocks.FIRE.getDefaultState());
+					}
+
+					if(pos.getY()<=-12750)
+					{
+						if (worldIn.getWorldTime() % 4000 != 1)
+						{
+							return;
+						}
+						worldIn.setBlockState(pos, ModBlocks.INNERCORESTONE.getDefaultState());
+					}
+					if(pos.getY()>=-10000)
+					{
+						if (worldIn.getWorldTime() % 10 != 1)
+						{
+							return;
+						}
+						worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+					}
+
 				}
 			}
 		}
 	}
+
 
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState state) {
