@@ -14,9 +14,7 @@ public class ModBlocks {
 
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
 
-	public static final Block blockGoldAnvil = new BlockGoldAnvil("gold_anvil");
-	public static final Block blockGoldAnvilChipped = new BlockGoldAnvil("gold_anvil_chipped");
-	public static final Block blockGoldAnvilDamaged = new BlockGoldAnvil("gold_anvil_damaged");
+
 
 	public static final Block HOT_LAVA_BLOCK = new HotLavaFluid("hot_lava", ModFluids.HOT_LAVA_FLUID, Material.LAVA);
 	public static final Block CORE_LAVA_BLOCK = new CoreLavaFluid("core_lava", ModFluids.CORE_LAVA_FLUID, Material.LAVA);
@@ -222,6 +220,7 @@ public class ModBlocks {
 	public static final Block CORESTONE = new Corerock("corestone", Material.ROCK);
 	public static final Block INNERCORESTONE = new Corerock("innercorestone", Material.ROCK);
 	public static final Block CENTERCORESTONE = new Corerock("centercorestone", Material.ROCK);
+	public static final Block COLD_CORESTONE = new BlockBase("cold_corestone", Material.ROCK);
 
 	//SEDIMENTARY ROCK
 	public static final Block LIMESTONE = new RockBase("limestone", Material.ROCK);

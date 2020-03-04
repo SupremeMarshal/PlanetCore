@@ -37,8 +37,8 @@ public class Corerock extends BlockBase {
 		setHardness(-1.0F);
 		setResistance(20.0F);
 		setHarvestLevel("pickaxe", 3);
-		setLightLevel(1.0F);
 		setTickRandomly(true);
+		setLightLevel(1);
 
 	}
 

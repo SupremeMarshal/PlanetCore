@@ -1,7 +1,10 @@
 //ANVILS
-tile.emerald_anvil.name = Emerald Anvil,
-tile.chipped_emerald_anvil.name = Chipped Emerald Anvil,
-tile.damaged_emerald_anvil.name = Damaged Emerald Anvil,
+tile.gold_anvil.name = Gold Anvil
+tile.chipped_gold_anvil.name = Chipped Gold Anvil
+tile.damaged_gold_anvil.name = Damaged Gold Anvil
+
+//ENCHANTMENTS
+
 
 //TOOLS
 item.bronze_sword.name=Bronze sword
@@ -750,26 +753,26 @@ tile.silver_ore.name=Silver ore
 tile.iron_ore.name=Iron ore
 tile.sulfur_ore.name=Sulfur ore
 
-tile.crustrock.name=Stiffrock
-tile.crustrock_azurite.name=Stiffrock Azurite
-tile.crustrock_onyx.name=Stiffrock Onyx
-tile.crustrock_amethyst.name=Stiffrock Amethyst
-tile.crustrock_amazonite.name=Stiffrock Amazonite
-tile.crustrock_jade.name=Stiffrock Jade
-tile.crustrock_diamond.name=Stiffrock Diamond
-tile.crustrock_topaz.name=Stiffrock Topaz
-tile.crustrock_ruby.name=Stiffrock Ruby
-tile.crustrock_flaming_topaz.name=Stiffrock Flaming Topaz
-tile.crustrock_sapphire.name=Stiffrock Sapphire
-tile.crustrock_emerald.name=Stiffrock Emerald
-tile.crustrock_lapis.name=Stiffrock Lapis Lazuli
-tile.crustrock_platinum.name=Stiffrock Platinum
-tile.crustrock_gold.name=Stiffrock Gold
-tile.crustrock_silver.name=Stiffrock Silver
-tile.crustrock_iron.name=Stiffrock Iron
-tile.crustrock_coal.name=Stiffrock Coal
-tile.crustrock_redstone.name=Stiffrock Redstone
-tile.crustrock_sulfur.name=Stiffrock Sulfur
+tile.crustrock.name=Cruststone
+tile.crustrock_azurite.name=Cruststone Azurite
+tile.crustrock_onyx.name=Cruststone Onyx
+tile.crustrock_amethyst.name=Cruststone Amethyst
+tile.crustrock_amazonite.name=Cruststone Amazonite
+tile.crustrock_jade.name=Cruststone Jade
+tile.crustrock_diamond.name=Cruststone Diamond
+tile.crustrock_topaz.name=Cruststone Topaz
+tile.crustrock_ruby.name=Cruststone Ruby
+tile.crustrock_flaming_topaz.name=Cruststone Flaming Topaz
+tile.crustrock_sapphire.name=Cruststone Sapphire
+tile.crustrock_emerald.name=Cruststone Emerald
+tile.crustrock_lapis.name=Cruststone Lapis Lazuli
+tile.crustrock_platinum.name=Cruststone Platinum
+tile.crustrock_gold.name=Cruststone Gold
+tile.crustrock_silver.name=Cruststone Silver
+tile.crustrock_iron.name=Cruststone Iron
+tile.crustrock_coal.name=Cruststone Coal
+tile.crustrock_redstone.name=Cruststone Redstone
+tile.crustrock_sulfur.name=Cruststone Sulfur
 
 tile.hardstone.name=Hardrock
 tile.hardstone_azurite.name=Hardrock Azurite
@@ -793,26 +796,26 @@ tile.hardstone_redstone.name=Hardrock Redstone
 tile.hardstone_gas.name=Hardrock Gas
 tile.hardstone_sulfur.name=Hardrock Sulfur
 
-tile.deepstone.name=Harderrock
-tile.deepstone_azurite.name=Harderrock Azurite
-tile.deepstone_onyx.name=Harderrock Onyx
-tile.deepstone_amethyst.name=Harderrock Amethyst
-tile.deepstone_amazonite.name=Harderrock Amazonite
-tile.deepstone_jade.name=Harderrock Jade
-tile.deepstone_diamond.name=Harderrock Diamond
-tile.deepstone_topaz.name=Harderrock Topaz
-tile.deepstone_ruby.name=Harderrock Ruby
-tile.deepstone_flaming_topaz.name=Harderrock Flaming Topaz
-tile.deepstone_sapphire.name=Harderrock Sapphire
-tile.deepstone_emerald.name=Harderrock Emerald
-tile.deepstone_lapis.name=Harderrock Lapis Lazuli
-tile.deepstone_platinum.name=Harderrock Platinum
-tile.deepstone_gold.name=Harderrock Gold
-tile.deepstone_silver.name=Harderrock Silver
-tile.deepstone_iron.name=Harderrock Iron
-tile.deepstone_coal.name=Harderrock Coal
-tile.deepstone_redstone.name=Harderrock Redstone
-tile.deepstone_sulfur.name=Harderrock Sulfur
+tile.deepstone.name=Deepstone
+tile.deepstone_azurite.name=Deepstone Azurite
+tile.deepstone_onyx.name=Deepstone Onyx
+tile.deepstone_amethyst.name=Deepstone Amethyst
+tile.deepstone_amazonite.name=Deepstone Amazonite
+tile.deepstone_jade.name=Deepstone Jade
+tile.deepstone_diamond.name=Deepstone Diamond
+tile.deepstone_topaz.name=Deepstone Topaz
+tile.deepstone_ruby.name=Deepstone Ruby
+tile.deepstone_flaming_topaz.name=Deepstone Flaming Topaz
+tile.deepstone_sapphire.name=Deepstone Sapphire
+tile.deepstone_emerald.name=Deepstone Emerald
+tile.deepstone_lapis.name=Deepstone Lapis Lazuli
+tile.deepstone_platinum.name=Deepstone Platinum
+tile.deepstone_gold.name=Deepstone Gold
+tile.deepstone_silver.name=Deepstone Silver
+tile.deepstone_iron.name=Deepstone Iron
+tile.deepstone_coal.name=Deepstone Coal
+tile.deepstone_redstone.name=Deepstone Redstone
+tile.deepstone_sulfur.name=Deepstone Sulfur
 
 tile.redrock.name=Redrock
 tile.redrock_azurite.name=Redrock Azurite
@@ -879,6 +882,7 @@ tile.lower_mantlerock_coal.name=Lower Mantlerock Coal
 tile.lower_mantlerock_redstone.name=Lower Mantlerock Redstone
 tile.lower_mantlerock_sulfur.name=Lower Mantlerock Sulfur
 
+tile.cold_corestone.name=Cold Corerock
 tile.corestone.name=Corerock
 tile.corestone_azurite.name=Corerock Azurite
 tile.corestone_onyx.name=Corerock Onyx
