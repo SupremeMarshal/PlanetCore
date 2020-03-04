@@ -10,6 +10,7 @@ import com.PlanetCore.init.*;
 import com.PlanetCore.util.IHasModel;
 import com.PlanetCore.util.ModConfiguration;
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -70,6 +71,13 @@ public class RegistryHandler {
 		}
 		RenderHandler.registerEntityRenders();
 		RenderHandler.registerCustomMeshesAndStates();
+	}
+
+	@SubscribeEvent
+	public static void registerEnchantment(RegistryEvent.Register<Enchantment> event)
+
+	{
+		event.getRegistry().registerAll(EnchantmentInit.ENCHANTMENTS.toArray(new Enchantment[0]));
 	}
 
 	//Extra Anvils -- Common proxy
