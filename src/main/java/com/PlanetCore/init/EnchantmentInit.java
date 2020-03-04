@@ -107,8 +107,8 @@ public class EnchantmentInit
                             IBlockState iblockstate1 = world.getBlockState(blockpos1);
 
 
-
-                            if (iblockstate1.getMaterial() == Material.LAVA && (iblockstate1.getBlock() == ModBlocks.CORE_LAVA_BLOCK) && (iblockstate1.getBlock() == ModBlocks.CORE_LAVA_BLOCK) && ((Integer)iblockstate1.getValue(BlockLiquid.LEVEL)).intValue() == 0 && world.mayPlace(ModBlocks.CORESTONE, blockpos1, false, EnumFacing.DOWN, (Entity)null))
+//-------------------->>>>
+                            if (iblockstate1.getMaterial() == Material.LAVA && (iblockstate1.getBlock() == ModBlocks.CORE_LAVA_BLOCK) && (iblockstate1.getBlock() instanceof CoreLavaFluid == ModFluids.CORE_LAVA_FLUID) && (iblockstate1.getBlock() == ModBlocks.CORE_LAVA_BLOCK) && ((Integer)iblockstate1.getValue(BlockLiquid.LEVEL)).intValue() == 0 && world.mayPlace(ModBlocks.CORESTONE, blockpos1, false, EnumFacing.DOWN, (Entity)null))
 
                             {
 
