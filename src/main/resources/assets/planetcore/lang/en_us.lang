@@ -234,169 +234,169 @@ item.emerald_helmet.name=Emerald helmet
 item.emerald_helmet.tooltip.0=When equipped:
 item.emerald_helmet.tooltip.1=§9+5 Armor
 item.emerald_helmet.tooltip.2=§9+2.5 Toughness
-item.emerald_helmet.tooltip.3=§a+4 Max health
+item.emerald_helmet.tooltip.3=§a+2 Max health
 
 item.emerald_chestplate.name=Emerald chestplate
 item.emerald_chestplate.tooltip.0=When equipped:
 item.emerald_chestplate.tooltip.1=§9+8 Armor
 item.emerald_chestplate.tooltip.2=§9+2.5 Toughness
-item.emerald_chestplate.tooltip.3=§a+7 Max health
+item.emerald_chestplate.tooltip.3=§a+3 Max health
 
 item.emerald_leggings.name=Emerald leggings
 item.emerald_leggings.tooltip.0=When equipped:
 item.emerald_leggings.tooltip.1=§9+7 Armor
 item.emerald_leggings.tooltip.2=§9+2.5 Toughness
-item.emerald_leggings.tooltip.3=§a+6 Max health
+item.emerald_leggings.tooltip.3=§a+3 Max health
 
 item.emerald_boots.name=Emerald boots
 item.emerald_boots.tooltip.0=When equipped:
 item.emerald_boots.tooltip.1=§9+4 Armor
 item.emerald_boots.tooltip.2=§9+2.5 Armor toughness
-item.emerald_boots.tooltip.3=§a+3 Max health
+item.emerald_boots.tooltip.3=§a+2 Max health
 
 item.emerald_helmet1.name=§aEmerald helmet+1
 item.emerald_helmet1.tooltip.0=When equipped:
 item.emerald_helmet1.tooltip.1=§9+5 Armor
 item.emerald_helmet1.tooltip.2=§9+3 Toughness
-item.emerald_helmet1.tooltip.3=§a+5 Max health
+item.emerald_helmet1.tooltip.3=§a+2 Max health
 
 item.emerald_chestplate1.name=§aEmerald chestplate+1
 item.emerald_chestplate1.tooltip.0=When equipped:
 item.emerald_chestplate1.tooltip.1=§9+8 Armor
 item.emerald_chestplate1.tooltip.2=§9+3 Toughness
-item.emerald_chestplate1.tooltip.3=§a+8 Max health
+item.emerald_chestplate1.tooltip.3=§a+4 Max health
 
 item.emerald_leggings1.name=§aEmerald leggings+1
 item.emerald_leggings1.tooltip.0=When equipped:
 item.emerald_leggings1.tooltip.1=§9+7 Armor
 item.emerald_leggings1.tooltip.2=§9+3 Toughness
-item.emerald_leggings1.tooltip.3=§a+7 Max health
+item.emerald_leggings1.tooltip.3=§a+4 Max health
 
 item.emerald_boots1.name=§aEmerald boots+1
 item.emerald_boots1.tooltip.0=When equipped:
 item.emerald_boots1.tooltip.1=§9+4 Armor
 item.emerald_boots1.tooltip.2=§9+3 Armor toughness
-item.emerald_boots1.tooltip.3=§a+4 Max health
+item.emerald_boots1.tooltip.3=§a+2 Max health
 
 item.emerald_helmet2.name=§aEmerald helmet+2
 item.emerald_helmet2.tooltip.0=When equipped:
 item.emerald_helmet2.tooltip.1=§9+5 Armor
 item.emerald_helmet2.tooltip.2=§9+3.5 Toughness
-item.emerald_helmet2.tooltip.3=§a+6 Max health
+item.emerald_helmet2.tooltip.3=§a+3 Max health
 
 item.emerald_chestplate2.name=§aEmerald chestplate+2
 item.emerald_chestplate2.tooltip.0=When equipped:
 item.emerald_chestplate2.tooltip.1=§9+9 Armor
 item.emerald_chestplate2.tooltip.2=§9+3.5 Toughness
-item.emerald_chestplate2.tooltip.3=§a+10 Max health
+item.emerald_chestplate2.tooltip.3=§a+5 Max health
 
 item.emerald_leggings2.name=§aEmerald leggings+2
 item.emerald_leggings2.tooltip.0=When equipped:
 item.emerald_leggings2.tooltip.1=§9+8 Armor
 item.emerald_leggings2.tooltip.2=§9+3.5 Toughness
-item.emerald_leggings2.tooltip.3=§a+8 Max health
+item.emerald_leggings2.tooltip.3=§a+4 Max health
 
 item.emerald_boots2.name=§aEmerald boots+2
 item.emerald_boots2.tooltip.0=When equipped:
 item.emerald_boots2.tooltip.1=§9+4 Armor
 item.emerald_boots2.tooltip.2=§9+3.5 Armor toughness
-item.emerald_boots2.tooltip.3=§a+5 Max health
+item.emerald_boots2.tooltip.3=§a+2 Max health
 
 item.emerald_helmet3.name=§aEmerald helmet+3
 item.emerald_helmet3.tooltip.0=When equipped:
 item.emerald_helmet3.tooltip.1=§9+6 Armor
 item.emerald_helmet3.tooltip.2=§9+4 Toughness
-item.emerald_helmet3.tooltip.3=§a+7 Max health
+item.emerald_helmet3.tooltip.3=§a+3 Max health
 
 item.emerald_chestplate3.name=§aEmerald chestplate+3
 item.emerald_chestplate3.tooltip.0=When equipped:
 item.emerald_chestplate3.tooltip.1=§9+9 Armor
 item.emerald_chestplate3.tooltip.2=§9+4 Toughness
-item.emerald_chestplate3.tooltip.3=§a+12 Max health
+item.emerald_chestplate3.tooltip.3=§a+5 Max health
 
 item.emerald_leggings3.name=§aEmerald leggings+3
 item.emerald_leggings3.tooltip.0=When equipped:
 item.emerald_leggings3.tooltip.1=§9+8 Armor
 item.emerald_leggings3.tooltip.2=§9+4 Toughness
-item.emerald_leggings3.tooltip.3=§a+10 Max health
+item.emerald_leggings3.tooltip.3=§a+5 Max health
 
 item.emerald_boots3.name=§aEmerald boots+3
 item.emerald_boots3.tooltip.0=When equipped:
 item.emerald_boots3.tooltip.1=§9+4 Armor
 item.emerald_boots3.tooltip.2=§9+4 Armor toughness
-item.emerald_boots3.tooltip.3=§a+6 Max health
+item.emerald_boots3.tooltip.3=§a+3 Max health
 
 item.emerald_helmet4.name=§aEmerald helmet+4
 item.emerald_helmet4.tooltip.0=When equipped:
 item.emerald_helmet4.tooltip.1=§9+6 Armor
 item.emerald_helmet4.tooltip.2=§9+4.5 Toughness
-item.emerald_helmet4.tooltip.3=§a+9 Max health
+item.emerald_helmet4.tooltip.3=§a+4 Max health
 
 item.emerald_chestplate4.name=§aEmerald chestplate+4
 item.emerald_chestplate4.tooltip.0=When equipped:
 item.emerald_chestplate4.tooltip.1=§9+9 Armor
 item.emerald_chestplate4.tooltip.2=§9+4.5 Toughness
-item.emerald_chestplate4.tooltip.3=§a+14 Max health
+item.emerald_chestplate4.tooltip.3=§a+6 Max health
 
 item.emerald_leggings4.name=§aEmerald leggings+4
 item.emerald_leggings4.tooltip.0=When equipped:
 item.emerald_leggings4.tooltip.1=§9+8 Armor
 item.emerald_leggings4.tooltip.2=§9+4.5 Toughness
-item.emerald_leggings4.tooltip.3=§a+12 Max health
+item.emerald_leggings4.tooltip.3=§a+5 Max health
 
 item.emerald_boots4.name=§aEmerald boots+4
 item.emerald_boots4.tooltip.0=When equipped:
 item.emerald_boots4.tooltip.1=§9+5 Armor
 item.emerald_boots4.tooltip.2=§9+4.5 Armor toughness
-item.emerald_boots4.tooltip.3=§a+7 Max health
+item.emerald_boots4.tooltip.3=§a+3 Max health
 
 item.emerald_helmet5.name=§aEmerald helmet+5
 item.emerald_helmet5.tooltip.0=When equipped:
 item.emerald_helmet5.tooltip.1=§9+6 Armor
 item.emerald_helmet5.tooltip.2=§9+5 Toughness
-item.emerald_helmet5.tooltip.3=§a+10 Max health
+item.emerald_helmet5.tooltip.3=§a+4 Max health
 
 item.emerald_chestplate5.name=§aEmerald chestplate+5
 item.emerald_chestplate5.tooltip.0=When equipped:
 item.emerald_chestplate5.tooltip.1=§9+10 Armor
 item.emerald_chestplate5.tooltip.2=§9+5 Toughness
-item.emerald_chestplate5.tooltip.3=§a+17 Max health
+item.emerald_chestplate5.tooltip.3=§a+7 Max health
 
 item.emerald_leggings5.name=§aEmerald leggings+5
 item.emerald_leggings5.tooltip.0=When equipped:
 item.emerald_leggings5.tooltip.1=§9+8 Armor
 item.emerald_leggings5.tooltip.2=§9+5 Toughness
-item.emerald_leggings5.tooltip.3=§a+15 Max health
+item.emerald_leggings5.tooltip.3=§a+6 Max health
 
 item.emerald_boots5.name=§aEmerald boots+5
 item.emerald_boots5.tooltip.0=When equipped:
 item.emerald_boots5.tooltip.1=§9+5 Armor
 item.emerald_boots5.tooltip.2=§9+5 Armor toughness
-item.emerald_boots5.tooltip.3=§a+8 Max health
+item.emerald_boots5.tooltip.3=§a+3 Max health
 
 item.emerald_helmet6.name=§aEmerald helmet+6
 item.emerald_helmet6.tooltip.0=When equipped:
 item.emerald_helmet6.tooltip.1=§9+6 Armor
 item.emerald_helmet6.tooltip.2=§9+6 Toughness
-item.emerald_helmet6.tooltip.3=§a+13 Max health
+item.emerald_helmet6.tooltip.3=§a+5 Max health
 
 item.emerald_chestplate6.name=§aEmerald chestplate+6
 item.emerald_chestplate6.tooltip.0=When equipped:
 item.emerald_chestplate6.tooltip.1=§9+10 Armor
 item.emerald_chestplate6.tooltip.2=§9+6 Toughness
-item.emerald_chestplate6.tooltip.3=§a+20 Max health
+item.emerald_chestplate6.tooltip.3=§a+7 Max health
 
 item.emerald_leggings6.name=§aEmerald leggings+6
 item.emerald_leggings6.tooltip.0=When equipped:
 item.emerald_leggings6.tooltip.1=§9+9 Armor
 item.emerald_leggings6.tooltip.2=§9+6 Toughness
-item.emerald_leggings6.tooltip.3=§a+18 Max health
+item.emerald_leggings6.tooltip.3=§a+6 Max health
 
 item.emerald_boots6.name=§aEmerald boots+6
 item.emerald_boots6.tooltip.0=When equipped:
 item.emerald_boots6.tooltip.1=§9+5 Armor
 item.emerald_boots6.tooltip.2=§9+6 Armor toughness
-item.emerald_boots6.tooltip.3=§a+10 Max health
+item.emerald_boots6.tooltip.3=§a+4 Max health
 
 item.sapphire_sword.name=§aSapphire sword
 item.sapphire_shovel.name=§aSapphire shovel
@@ -405,39 +405,227 @@ item.sapphire_axe.name=§aSapphire axe
 item.sapphire_hoe.name=§aSapphire hoe
 item.sapphire_helmet.name=§aSapphire helmet
 item.sapphire_helmet.tooltip.0=When equipped:
-item.sapphire_helmet.tooltip.1=§9+3 Armor
-item.sapphire_helmet.tooltip.2=§9+2 Armor toughness
+item.sapphire_helmet.tooltip.1=§9+6 Armor
+item.sapphire_helmet.tooltip.2=§9+6 Armor toughness
 item.sapphire_helmet.tooltip.3=Special bonus:
-item.sapphire_helmet.tooltip.4=§9+3 Max health
-item.sapphire_helmet.tooltip.5=§9+2.5%% Knockback resistance
-item.sapphire_helmet.tooltip.6=§a+0.6 Health regen per minute
+item.sapphire_helmet.tooltip.4=§a+4 Max health
+item.sapphire_helmet.tooltip.5=§a+2.5%% Knockback resistance
 
 item.sapphire_chestplate.name=§aSapphire chestplate
 item.sapphire_chestplate.tooltip.0=When equipped:
-item.sapphire_chestplate.tooltip.1=§9+8 Armor
-item.sapphire_chestplate.tooltip.2=§9+2 Armor toughness
+item.sapphire_chestplate.tooltip.1=§9+10 Armor
+item.sapphire_chestplate.tooltip.2=§9+6 Armor toughness
 item.sapphire_chestplate.tooltip.3=Special bonus:
-item.sapphire_chestplate.tooltip.4=§9+6 Max health
-item.sapphire_chestplate.tooltip.5=§9+2.5%% Knockback resistance
-item.sapphire_chestplate.tooltip.6=§a+1.6 Health regen per minute
+item.sapphire_chestplate.tooltip.4=§a+7 Max health
+item.sapphire_chestplate.tooltip.5=§a+2.5%% Knockback resistance
 
 item.sapphire_leggings.name=§aSapphire leggings
 item.sapphire_leggings.tooltip.0=When equipped:
-item.sapphire_leggings.tooltip.1=§9+6 Armor
-item.sapphire_leggings.tooltip.2=§9+2 Armor toughness
+item.sapphire_leggings.tooltip.1=§9+9 Armor
+item.sapphire_leggings.tooltip.2=§9+6 Armor toughness
 item.sapphire_leggings.tooltip.3=Special bonus:
-item.sapphire_leggings.tooltip.4=§9+5 Max health
-item.sapphire_leggings.tooltip.5=§9+2.5%% Knockback resistance
-item.sapphire_leggings.tooltip.6=§a+1.2 Health regen per minute
+item.sapphire_leggings.tooltip.4=§a+6 Max health
+item.sapphire_leggings.tooltip.5=§a+2.5%% Knockback resistance
 
 item.sapphire_boots.name=§aSapphire boots
 item.sapphire_boots.tooltip.0=When equipped:
-item.sapphire_boots.tooltip.1=§9+3 Armor
-item.sapphire_boots.tooltip.2=§9+2 Armor toughness
+item.sapphire_boots.tooltip.1=§9+5 Armor
+item.sapphire_boots.tooltip.2=§9+6 Armor toughness
 item.sapphire_boots.tooltip.3=Special bonus:
-item.sapphire_boots.tooltip.4=§9+3 Max health
-item.sapphire_boots.tooltip.5=§9+2.5%% Knockback resistance
-item.sapphire_boots.tooltip.6=§a+0.6 Health regen per minute
+item.sapphire_boots.tooltip.4=§a+3 Max health
+item.sapphire_boots.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet1.name=§aSapphire helmet+1
+item.sapphire_helmet1.tooltip.0=When equipped:
+item.sapphire_helmet1.tooltip.1=§9+6 Armor
+item.sapphire_helmet1.tooltip.2=§9+6.5 Armor toughness
+item.sapphire_helmet1.tooltip.3=Special bonus:
+item.sapphire_helmet1.tooltip.4=§a+5 Max health
+item.sapphire_helmet1.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate1.name=§aSapphire chestplate+1
+item.sapphire_chestplate1.tooltip.0=When equipped:
+item.sapphire_chestplate1.tooltip.1=§9+10 Armor
+item.sapphire_chestplate1.tooltip.2=§9+6.5 Armor toughness
+item.sapphire_chestplate1.tooltip.3=Special bonus:
+item.sapphire_chestplate1.tooltip.4=§a+8 Max health
+item.sapphire_chestplate1.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings1.name=§aSapphire leggings+1
+item.sapphire_leggings1.tooltip.0=When equipped:
+item.sapphire_leggings1.tooltip.1=§9+9 Armor
+item.sapphire_leggings1.tooltip.2=§9+6.5 Armor toughness
+item.sapphire_leggings1.tooltip.3=Special bonus:
+item.sapphire_leggings1.tooltip.4=§a+7 Max health
+item.sapphire_leggings1.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots1.name=§aSapphire boots+1
+item.sapphire_boots1.tooltip.0=When equipped:
+item.sapphire_boots1.tooltip.1=§9+5 Armor
+item.sapphire_boots1.tooltip.2=§9+6.5 Armor toughness
+item.sapphire_boots1.tooltip.3=Special bonus:
+item.sapphire_boots1.tooltip.4=§a+4 Max health
+item.sapphire_boots1.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet2.name=§aSapphire helmet+2
+item.sapphire_helmet2.tooltip.0=When equipped:
+item.sapphire_helmet2.tooltip.1=§9+6 Armor
+item.sapphire_helmet2.tooltip.2=§9+7 Armor toughness
+item.sapphire_helmet2.tooltip.3=Special bonus:
+item.sapphire_helmet2.tooltip.4=§a+6 Max health
+item.sapphire_helmet2.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate2.name=§aSapphire chestplate+2
+item.sapphire_chestplate2.tooltip.0=When equipped:
+item.sapphire_chestplate2.tooltip.1=§9+10 Armor
+item.sapphire_chestplate2.tooltip.2=§9+7 Armor toughness
+item.sapphire_chestplate2.tooltip.3=Special bonus:
+item.sapphire_chestplate2.tooltip.4=§a+9 Max health
+item.sapphire_chestplate2.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings2.name=§aSapphire leggings+2
+item.sapphire_leggings2.tooltip.0=When equipped:
+item.sapphire_leggings2.tooltip.1=§9+9 Armor
+item.sapphire_leggings2.tooltip.2=§9+7 Armor toughness
+item.sapphire_leggings2.tooltip.3=Special bonus:
+item.sapphire_leggings2.tooltip.4=§a+8 Max health
+item.sapphire_leggings2.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots2.name=§aSapphire boots+2
+item.sapphire_boots2.tooltip.0=When equipped:
+item.sapphire_boots2.tooltip.1=§9+5 Armor
+item.sapphire_boots2.tooltip.2=§9+7 Armor toughness
+item.sapphire_boots2.tooltip.3=Special bonus:
+item.sapphire_boots2.tooltip.4=§a+5 Max health
+item.sapphire_boots2.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet3.name=§aSapphire helmet+3
+item.sapphire_helmet3.tooltip.0=When equipped:
+item.sapphire_helmet3.tooltip.1=§9+6 Armor
+item.sapphire_helmet3.tooltip.2=§9+7.5 Armor toughness
+item.sapphire_helmet3.tooltip.3=Special bonus:
+item.sapphire_helmet3.tooltip.4=§a+7 Max health
+item.sapphire_helmet3.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate3.name=§aSapphire chestplate+3
+item.sapphire_chestplate3.tooltip.0=When equipped:
+item.sapphire_chestplate3.tooltip.1=§9+10 Armor
+item.sapphire_chestplate3.tooltip.2=§9+7.5 Armor toughness
+item.sapphire_chestplate3.tooltip.3=Special bonus:
+item.sapphire_chestplate3.tooltip.4=§a+11 Max health
+item.sapphire_chestplate3.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings3.name=§aSapphire leggings+3
+item.sapphire_leggings3.tooltip.0=When equipped:
+item.sapphire_leggings3.tooltip.1=§9+9 Armor
+item.sapphire_leggings3.tooltip.2=§9+7.5 Armor toughness
+item.sapphire_leggings3.tooltip.3=Special bonus:
+item.sapphire_leggings3.tooltip.4=§a+9 Max health
+item.sapphire_leggings3.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots3.name=§aSapphire boots+3
+item.sapphire_boots3.tooltip.0=When equipped:
+item.sapphire_boots3.tooltip.1=§9+5 Armor
+item.sapphire_boots3.tooltip.2=§9+7.5 Armor toughness
+item.sapphire_boots3.tooltip.3=Special bonus:
+item.sapphire_boots3.tooltip.4=§a+5 Max health
+item.sapphire_boots3.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet4.name=§aSapphire helmet+4
+item.sapphire_helmet4.tooltip.0=When equipped:
+item.sapphire_helmet4.tooltip.1=§9+6 Armor
+item.sapphire_helmet4.tooltip.2=§9+8 Armor toughness
+item.sapphire_helmet4.tooltip.3=Special bonus:
+item.sapphire_helmet4.tooltip.4=§a+7 Max health
+item.sapphire_helmet4.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate4.name=§aSapphire chestplate+4
+item.sapphire_chestplate4.tooltip.0=When equipped:
+item.sapphire_chestplate4.tooltip.1=§9+10 Armor
+item.sapphire_chestplate4.tooltip.2=§9+8 Armor toughness
+item.sapphire_chestplate4.tooltip.3=Special bonus:
+item.sapphire_chestplate4.tooltip.4=§a+12 Max health
+item.sapphire_chestplate4.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings4.name=§aSapphire leggings+4
+item.sapphire_leggings4.tooltip.0=When equipped:
+item.sapphire_leggings4.tooltip.1=§9+9 Armor
+item.sapphire_leggings4.tooltip.2=§9+8 Armor toughness
+item.sapphire_leggings4.tooltip.3=Special bonus:
+item.sapphire_leggings4.tooltip.4=§a+11 Max health
+item.sapphire_leggings4.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots4.name=§aSapphire boots+4
+item.sapphire_boots4.tooltip.0=When equipped:
+item.sapphire_boots4.tooltip.1=§9+5 Armor
+item.sapphire_boots4.tooltip.2=§9+8 Armor toughness
+item.sapphire_boots4.tooltip.3=Special bonus:
+item.sapphire_boots4.tooltip.4=§a+6 Max health
+item.sapphire_boots4.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet5.name=§aSapphire helmet+5
+item.sapphire_helmet5.tooltip.0=When equipped:
+item.sapphire_helmet5.tooltip.1=§9+6 Armor
+item.sapphire_helmet5.tooltip.2=§9+8.5 Armor toughness
+item.sapphire_helmet5.tooltip.3=Special bonus:
+item.sapphire_helmet5.tooltip.4=§a+8 Max health
+item.sapphire_helmet5.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate5.name=§aSapphire chestplate+5
+item.sapphire_chestplate5.tooltip.0=When equipped:
+item.sapphire_chestplate5.tooltip.1=§9+10 Armor
+item.sapphire_chestplate5.tooltip.2=§9+8.5 Armor toughness
+item.sapphire_chestplate5.tooltip.3=Special bonus:
+item.sapphire_chestplate5.tooltip.4=§a+13 Max health
+item.sapphire_chestplate5.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings5.name=§aSapphire leggings+5
+item.sapphire_leggings5.tooltip.0=When equipped:
+item.sapphire_leggings5.tooltip.1=§9+9 Armor
+item.sapphire_leggings5.tooltip.2=§9+8.5 Armor toughness
+item.sapphire_leggings5.tooltip.3=Special bonus:
+item.sapphire_leggings5.tooltip.4=§a+12 Max health
+item.sapphire_leggings5.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots5.name=§aSapphire boots+5
+item.sapphire_boots5.tooltip.0=When equipped:
+item.sapphire_boots5.tooltip.1=§9+5 Armor
+item.sapphire_boots5.tooltip.2=§9+8.5 Armor toughness
+item.sapphire_boots5.tooltip.3=Special bonus:
+item.sapphire_boots5.tooltip.4=§a+7 Max health
+item.sapphire_boots5.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet6.name=§aSapphire helmet+6
+item.sapphire_helmet6.tooltip.0=When equipped:
+item.sapphire_helmet6.tooltip.1=§9+6 Armor
+item.sapphire_helmet6.tooltip.2=§9+9.5 Armor toughness
+item.sapphire_helmet6.tooltip.3=Special bonus:
+item.sapphire_helmet6.tooltip.4=§a+9 Max health
+item.sapphire_helmet6.tooltip.5=§a+5%% Knockback resistance
+
+item.sapphire_chestplate6.name=§aSapphire chestplate+6
+item.sapphire_chestplate6.tooltip.0=When equipped:
+item.sapphire_chestplate6.tooltip.1=§9+10 Armor
+item.sapphire_chestplate6.tooltip.2=§9+9.5 Armor toughness
+item.sapphire_chestplate6.tooltip.3=Special bonus:
+item.sapphire_chestplate6.tooltip.4=§a+15 Max health
+item.sapphire_chestplate6.tooltip.5=§a+5%% Knockback resistance
+
+item.sapphire_leggings6.name=§aSapphire leggings+6
+item.sapphire_leggings6.tooltip.0=When equipped:
+item.sapphire_leggings6.tooltip.1=§9+9 Armor
+item.sapphire_leggings6.tooltip.2=§9+9.5 Armor toughness
+item.sapphire_leggings6.tooltip.3=Special bonus:
+item.sapphire_leggings6.tooltip.4=§a+13 Max health
+item.sapphire_leggings6.tooltip.5=§a+5%% Knockback resistance
+
+item.sapphire_boots5.name=§aSapphire boots+6
+item.sapphire_boots5.tooltip.0=When equipped:
+item.sapphire_boots5.tooltip.1=§9+5 Armor
+item.sapphire_boots5.tooltip.2=§9+9.5 Armor toughness
+item.sapphire_boots5.tooltip.3=Special bonus:
+item.sapphire_boots5.tooltip.4=§a+7 Max health
+item.sapphire_boots5.tooltip.5=§a+5%% Knockback resistance
 
 item.flaming_topaz_sword.name=Flaming topaz sword
 item.flaming_topaz_shovel.name=Flaming topaz shovel
@@ -989,6 +1177,7 @@ item.enchanted_platinum_apple.name=§dEnchanted platinum apple
 
 fluid.hot_lava=Hot lava
 fluid.core_lava=Core lava
+fluid.sulfuric_acid=Sulfuric acid
 
 //ARTIFACT ITEMS
 item.enhancing_gem.name=§6Enhancing gem

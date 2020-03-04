@@ -104,6 +104,15 @@ public class RenderHandler
 				return new ModelResourceLocation("planetcore:core_lava", "fluid");
 			}
 		});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.SULFURIC_ACID_BLOCK, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:sulfuric_acid", "fluid");
+				}
+			});
 	}
 
 
