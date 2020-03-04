@@ -37,7 +37,7 @@ public class SapphirHelmet extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRHELM_UUID, "MAX_HEALTH_SAPPHIRHELM_UUID", 3, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRHELM_UUID, "MAX_HEALTH_SAPPHIRHELM_UUID", 8, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_SAPPHIRHELM_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRHELM_UUID", 0.025, 0));
 
 	}
@@ -55,24 +55,24 @@ public class SapphirHelmet extends ArmorBase
     		String maxhealthplatinumhelm = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockbackplatinumhelm = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_SAPPHIRHELM_UUID, "MAX_HEALTH_SAPPHIRHELM_UUID", 3, 0));
+    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_SAPPHIRHELM_UUID, "MAX_HEALTH_SAPPHIRHELM_UUID", 8, 0));
     		mods.put(knockbackplatinumhelm, new AttributeModifier (KNOCKBACK_RESISTANCE_SAPPHIRHELM_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRHELM_UUID", 0.025, 0));
     	}
     	return mods;
     }
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
-	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == ModItems.SAPPHIRE_HELMET)
-		{
-			if (world.getTotalWorldTime() % 300 != 1)
-			{
-				return;
-			}
-			player.heal(0.15F);
+	//@Override
+	//public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
+	//{
+		//if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == ModItems.SAPPHIRE_HELMET)
+		//{
+			//if (world.getTotalWorldTime() % 300 != 1)
+			//{
+				//return;
+			//}
+			//player.heal(0.15F);
 			//heal 0.6 Health per minute
-		}
-	}
+		//}
+	//}
 
 	@SideOnly(Side.CLIENT)
 	@Override

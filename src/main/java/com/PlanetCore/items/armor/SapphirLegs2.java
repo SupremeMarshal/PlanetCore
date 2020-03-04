@@ -20,24 +20,24 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class SapphirLegs extends ArmorBase 
+public class SapphirLegs2 extends ArmorBase
 
 {
 
-	public SapphirLegs(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+	public SapphirLegs2(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static final UUID MAX_HEALTH_SAPPHIRLEGS_UUID = UUID.fromString("fac0ccb6-401a-4a81-b32d-697e63c60635");
-	public static final UUID KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID = UUID.fromString("448ac581-0bf5-41ac-99ff-152a173cb66c");  
+	public static final UUID MAX_HEALTH_SAPPHIRLEGS_UUID = UUID.fromString("b7c5a44d-4d47-4c41-9460-6fb11ef16276");
+	public static final UUID KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID = UUID.fromString("b1390e3f-e6dc-4d27-b091-e530b89e204d");
     
 
     private static final Map<IAttribute, AttributeModifier> modMap = new HashMap<>();
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 12, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 14, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID", 0.025, 0));
 	}
    
@@ -53,24 +53,12 @@ public class SapphirLegs extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 12, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 14, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID", 0.025, 0));
     	}
     	return mods;
     }
-	//@Override
-	//public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
-	//{
-		//if (player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == ModItems.SAPPHIRE_LEGGINGS)
-		//{
-			//if (world.getTotalWorldTime() % 300 != 1)
-			//{
-				//return;
-			//}
-			//player.heal(0.3F);
-			//heal 1.2 Health per minute
-		//}
-	//}
+
 
 	@SideOnly(Side.CLIENT)
 	@Override

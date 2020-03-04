@@ -20,24 +20,24 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class SapphirLegs extends ArmorBase 
+public class SapphirLegs1 extends ArmorBase
 
 {
 
-	public SapphirLegs(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+	public SapphirLegs1(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
 		// TODO Auto-generated constructor stub
 	}
 	
-	public static final UUID MAX_HEALTH_SAPPHIRLEGS_UUID = UUID.fromString("fac0ccb6-401a-4a81-b32d-697e63c60635");
-	public static final UUID KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID = UUID.fromString("448ac581-0bf5-41ac-99ff-152a173cb66c");  
+	public static final UUID MAX_HEALTH_SAPPHIRLEGS_UUID = UUID.fromString("63cb72a5-c25d-452d-a30d-4659c278f1e1");
+	public static final UUID KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID = UUID.fromString("cda0f9fc-e91b-4563-b0d1-7068a80bf600");
     
 
     private static final Map<IAttribute, AttributeModifier> modMap = new HashMap<>();
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 12, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 13, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID", 0.025, 0));
 	}
    
@@ -53,7 +53,7 @@ public class SapphirLegs extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 12, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 13, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID", 0.025, 0));
     	}
     	return mods;
