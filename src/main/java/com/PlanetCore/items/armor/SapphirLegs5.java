@@ -18,25 +18,25 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class EmeraldHelmet3 extends ArmorBase
+public class SapphirLegs5 extends ArmorBase
 
 {
 
-	public EmeraldHelmet3(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+	public SapphirLegs5(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(name, materialIn, renderIndexIn, equipmentSlotIn);
-		this.setMaxStackSize(16);
 		// TODO Auto-generated constructor stub
 	}
-    
-	public static final UUID MAX_HEALTH_EMERALDHELM_UUID = UUID.fromString("45398762-962b-4765-bdc4-81da61da2931");
+	
+	public static final UUID MAX_HEALTH_SAPPHIRLEGS_UUID = UUID.fromString("aa5e2e4c-dba2-4ea9-95df-ec1bb5db52f7");
+	public static final UUID KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID = UUID.fromString("ad3802ab-cb2e-472b-bd27-8353302f3b58");
     
 
     private static final Map<IAttribute, AttributeModifier> modMap = new HashMap<>();
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 3, 0));
-
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 18, 0));
+		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID", 0.025, 0));
 	}
    
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
@@ -45,16 +45,18 @@ public class EmeraldHelmet3 extends ArmorBase
 
     	Multimap<String, AttributeModifier> mods = super.getAttributeModifiers(slot, stack);
     	
-    	
-		
-    	if (slot==EntityEquipmentSlot.HEAD) {
+    		
+    	if (slot==EntityEquipmentSlot.LEGS) {
 
-    		String maxhealthplatinumhelm = SharedMonsterAttributes.MAX_HEALTH.getName();
+    		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
+    		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 3, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 18, 0));
+    		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID", 0.025, 0));
     	}
     	return mods;
     }
+
 
 	@SideOnly(Side.CLIENT)
 	@Override
@@ -77,9 +79,10 @@ public class EmeraldHelmet3 extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.1"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.2"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.4"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.5"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.6"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
-		tooltip.add(net.minecraft.client.resources.I18n.format("Combine two emerald helmet+3 in the anvil to upgrade it."));
 	}
-
 }

@@ -60,19 +60,19 @@ public class SapphirBody extends ArmorBase
     }
     //regen 1 health every 37.5 second
 	//regen 1.6 health per minute
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
-	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == ModItems.SAPPHIRE_CHESTPLATE)
-		{
-			if (world.getTotalWorldTime() % 300 != 1)
-			{
-				return;
-			}
-			player.heal(0.4F);
+	//@Override
+	//public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
+	//{
+		//if (player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == ModItems.SAPPHIRE_CHESTPLATE)
+		//{
+			//if (world.getTotalWorldTime() % 300 != 1)
+			//{
+				//return;
+			//}
+			//player.heal(0.4F);
 			//heal 1.6 Health per minute
-		}
-	}
+		//}
+	//}
 
 	@SideOnly(Side.CLIENT)
 	@Override

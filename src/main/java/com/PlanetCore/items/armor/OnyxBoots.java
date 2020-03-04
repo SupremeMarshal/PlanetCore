@@ -1,12 +1,16 @@
 package com.PlanetCore.items.armor;
 
+import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.init.ModItems;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Enchantments;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -36,16 +40,17 @@ public class OnyxBoots extends ArmorBase
     
 
     private static final Map<IAttribute, AttributeModifier> modMap = new HashMap<>();
+
     
     static {
 
 		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_ONYXBOOTS_UUID, "MAX_HEALTH_ONYXBOOTS_UUID", 8, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ONYXBOOTS_UUID, "KNOCKBACK_RESISTANCE_ONYXBOOTS_UUID", 0.15, 0));
-	}
-   
-    public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
 
-    		ItemStack stack) {
+	}
+
+
+    public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack) {
 
     	Multimap<String, AttributeModifier> mods = super.getAttributeModifiers(slot, stack);
     	
@@ -55,8 +60,10 @@ public class OnyxBoots extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
+
     		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_ONYXBOOTS_UUID, "MAX_HEALTH_ONYXBOOTS_UUID", 8, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_ONYXBOOTS_UUID, "KNOCKBACK_RESISTANCE_ONYXBOOTS_UUID", 0.15, 0));
+
     	}
     	return mods;
     }

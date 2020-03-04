@@ -35,7 +35,7 @@ public class EmeraldHelmet5 extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 10, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 4, 0));
 
 	}
    
@@ -51,7 +51,7 @@ public class EmeraldHelmet5 extends ArmorBase
 
     		String maxhealthplatinumhelm = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 10, 0));
+    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_EMERALDHELM_UUID, "MAX_HEALTH_EMERALDHELM_UUID", 4, 0));
     	}
     	return mods;
     }
