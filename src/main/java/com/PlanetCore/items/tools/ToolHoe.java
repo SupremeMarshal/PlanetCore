@@ -50,7 +50,7 @@ public class ToolHoe extends ItemHoe implements IHasModel {
 			stack.getTagCompound().setInteger("HideFlags", 2);
 
 		}
-		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
-		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
+
+		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:" +(getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
 	}
 }

@@ -43,16 +43,8 @@ public class ToolSword extends ItemSword implements IHasModel {
 
 		}
 
-		if (!stack.getTagCompound().hasKey("HideFlags")) {
 
-			// hides normal info
 
-			stack.getTagCompound().setInteger("HideFlags", 2);
-
-		}
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.0"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.1"));
-		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
-		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " +(getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
 	}
 }

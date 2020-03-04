@@ -36,12 +36,13 @@ public class ToolAxe extends ItemAxe implements IHasModel {
 			@SideOnly(Side.CLIENT)
 			public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
 
-				return entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE1
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE2
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE3
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE4
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE5
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE6? 1.0F : 0.0F;
+
+				return entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE1
+						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE2
+						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE3
+						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE4
+						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE5
+						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE6? 1.0F : 0.0F;
 			}
 		});
 	}
@@ -74,9 +75,10 @@ public class ToolAxe extends ItemAxe implements IHasModel {
 			stack.getTagCompound().setInteger("HideFlags", 2);
 
 		}
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.0"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.1"));
-		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
-		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
+		tooltip.add(net.minecraft.client.resources.I18n.format("When in main hand:"));
+		tooltip.add(net.minecraft.client.resources.I18n.format((int)this.attackDamage+" Attack Damage"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(this.attackSpeed+" Attack Speed"));
+		tooltip.add(net.minecraft.client.resources.I18n.format((int)this.efficiency+" Efficiency"));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:" +(getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
 	}
 }
