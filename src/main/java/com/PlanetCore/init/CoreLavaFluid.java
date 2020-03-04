@@ -162,7 +162,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 					if(pos.getY()<=-12750)
 					{
-						if (worldIn.getWorldTime() % 4000 != 1)
+						if (worldIn.getWorldTime() % 400 != 1)
 						{
 							return;
 						}

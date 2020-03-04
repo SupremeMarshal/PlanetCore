@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.particle.ParticleCloud;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -238,12 +239,24 @@ public class Corerock extends BlockBase {
 		return 15728880;
 	}
 
+	public void particleEffects(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
+	{
+		int X = pos.getX();
+		int Y = pos.getY();
+		int Z = pos.getZ();
+		if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining()) {
+
+			worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, X, Y + 8, Z, 1.0D, 1.0D, 1.0D);
+		}
+	}
+
 	public void thermalEffects(World worldIn, BlockPos pos, IBlockState state)
 	{
 		int X = pos.getX();
 		int Y = pos.getY();
 		int Z = pos.getZ();
-		burnEntities(worldIn,X,Y,Z, 6);
+		burnEntities(worldIn,X,Y,Z, 8);
+
 		if (this != ModBlocks.COLD_CORESTONE)
 		{
 			for(int x = -2; x < 3; x++) {
@@ -283,9 +296,26 @@ public class Corerock extends BlockBase {
 						{
 							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
 						}
-						if(pos.getY()>=-9900)
+						if(pos.getY()>-9900 && pos.getY()<=-1000)
 						{
-							if (worldIn.getWorldTime() % 200 != 1)
+							if (worldIn.getWorldTime() % -100*pos.getY()/2000 != 1)
+							{
+								return;
+							}
+							worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+						}
+						if(pos.getY()>=-1000 && !worldIn.canBlockSeeSky(pos))
+						{
+							if (worldIn.getWorldTime() % 50 != 1)
+							{
+								return;
+							}
+							worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+						}
+						if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining())
+						{
+
+							if (worldIn.getWorldTime() % 20/worldIn.rainingStrength != 1)
 							{
 								return;
 							}
@@ -332,6 +362,13 @@ public class Corerock extends BlockBase {
 			}
 		}*/
 	}
+
+	@Override
+	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+		particleEffects(stateIn, worldIn, pos, rand);
+	}
+
+
 
 	public boolean canEntitySpawn(IBlockState state, Entity entityIn)
 	{
