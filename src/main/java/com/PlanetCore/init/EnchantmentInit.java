@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.PlanetCore.enchantments.CoolingCore;
 import com.PlanetCore.util.Reference;
-import net.minecraft.block.BlockLiquid;
 
 import net.minecraft.block.material.Material;
 
@@ -80,7 +79,7 @@ public class EnchantmentInit
 
             {
 
-                float f = (float)Math.min(16, 2 + level);
+                float f = (float)Math.min(8, 1);
 
                 BlockPos.MutableBlockPos blockpos = new BlockPos.MutableBlockPos(0, 0, 0);
 
@@ -108,8 +107,7 @@ public class EnchantmentInit
 
 
 //-------------------->>>>
-                            if (iblockstate1.getMaterial() == Material.LAVA && (iblockstate1.getBlock() == ModBlocks.CORE_LAVA_BLOCK) && (iblockstate1.getBlock() instanceof CoreLavaFluid == ModFluids.CORE_LAVA_FLUID) && (iblockstate1.getBlock() == ModBlocks.CORE_LAVA_BLOCK) && ((Integer)iblockstate1.getValue(BlockLiquid.LEVEL)).intValue() == 0 && world.mayPlace(ModBlocks.CORESTONE, blockpos1, false, EnumFacing.DOWN, (Entity)null))
-
+                                if (iblockstate1.getMaterial() == Material.LAVA && (iblockstate1.getBlock() instanceof CoreLavaFluid) && world.mayPlace(ModBlocks.CORESTONE, blockpos1, false, EnumFacing.DOWN, (Entity)null))
                             {
 
                                 world.setBlockState(blockpos1, ModBlocks.CORESTONE.getDefaultState());

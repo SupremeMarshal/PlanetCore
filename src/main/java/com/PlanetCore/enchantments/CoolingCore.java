@@ -61,7 +61,7 @@ public class CoolingCore extends Enchantment
 
     {
 
-        return 5;
+        return 1;
 
     }
 
