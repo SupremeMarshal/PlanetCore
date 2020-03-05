@@ -1,6 +1,6 @@
 package com.PlanetCore.init;
 
-import com.PlanetCore.anvils.Gold.BlockGoldAnvil;
+
 import com.PlanetCore.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

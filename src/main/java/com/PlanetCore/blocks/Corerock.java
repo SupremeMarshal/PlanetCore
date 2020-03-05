@@ -239,14 +239,14 @@ public class Corerock extends BlockBase {
 		return 15728880;
 	}
 
-	public void particleEffects(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
+	private void particleEffects(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
 	{
 		int X = pos.getX();
 		int Y = pos.getY();
 		int Z = pos.getZ();
 		if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining()) {
 
-			worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, X, Y + 8, Z, 1.0D, 1.0D, 1.0D);
+			worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, X, Y+1, Z, 0, 0, 0);
 		}
 	}
 
@@ -264,7 +264,7 @@ public class Corerock extends BlockBase {
 					for(int z = -2; z < 3; z++) {
 						IBlockState state2 = worldIn.getBlockState(pos.add(x, y, z));
 						Block block = state2.getBlock();
-						if(state2.getMaterial()==Material.ROCK && !(block instanceof Corerock) && block!=Blocks.BEDROCK && block!=ModBlocks.COLD_CORESTONE)
+						if(state2.getMaterial()==Material.ROCK && !(block instanceof Corerock) && block!=Blocks.BEDROCK && block!=ModBlocks.COLD_CORESTONE && block!=ModBlocks.MAGMA_CORESTONE)
 						{
 							worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
 						}
@@ -285,7 +285,7 @@ public class Corerock extends BlockBase {
 						if(state2.getMaterial()==Material.WATER || state2.getMaterial()==Material.ICE || state2.getMaterial()==Material.CRAFTED_SNOW)
 						{
 							worldIn.setBlockToAir(pos.add(x, y, z));
-							worldIn.setBlockState(pos.add(x, y, z), ModBlocks.COLD_CORESTONE.getDefaultState());
+							worldIn.setBlockState(pos.add(x, y, z), ModBlocks.MAGMA_CORESTONE.getDefaultState());
 							worldIn.createExplosion(null, X+x, Y+y, Z+z, 10, true);
 						}
 						if(state2.getBlock().getFlammability(worldIn, pos, null)>0 || state2.getMaterial()==Material.WOOD || state2.getMaterial()==Material.CLOTH || state2.getMaterial()==Material.PLANTS || state2.getMaterial()==Material.LEAVES)
@@ -296,7 +296,15 @@ public class Corerock extends BlockBase {
 						{
 							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
 						}
-						if(pos.getY()>-9900 && pos.getY()<=-1000)
+						if(pos.getY()>-9900 && pos.getY()<=-1000 && this == ModBlocks.CORESTONE)
+						{
+							if (worldIn.getWorldTime() % -100*pos.getY()/2000 != 1)
+							{
+								return;
+							}
+							worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+						}
+						if(pos.getY()>-9900 && pos.getY()<=-1000 && this == ModBlocks.MAGMA_CORESTONE)
 						{
 							if (worldIn.getWorldTime() % -100*pos.getY()/2000 != 1)
 							{
@@ -304,15 +312,34 @@ public class Corerock extends BlockBase {
 							}
 							worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 						}
-						if(pos.getY()>=-1000 && !worldIn.canBlockSeeSky(pos))
+						if(pos.getY()>=-1000 && !worldIn.isRaining() && this == ModBlocks.CORESTONE)
 						{
-							if (worldIn.getWorldTime() % 50 != 1)
+							if (worldIn.getWorldTime() % 100 != 1)
+							{
+								return;
+							}
+							worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+						}
+						if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining()  && this == ModBlocks.CORESTONE)
+						{
+
+							if (worldIn.getWorldTime() % 10/worldIn.rainingStrength != 1)
+							{
+								return;
+							}
+							worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+						}
+						//Check without rain above -1k y for magma corestone
+						if(pos.getY()>=-1000 && !worldIn.isRaining() && this == ModBlocks.MAGMA_CORESTONE)
+						{
+							if (worldIn.getWorldTime() % 400 != 1)
 							{
 								return;
 							}
 							worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 						}
-						if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining())
+						//Check rain above -1k y for magma corestone
+						if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining()  && this == ModBlocks.MAGMA_CORESTONE)
 						{
 
 							if (worldIn.getWorldTime() % 20/worldIn.rainingStrength != 1)
@@ -362,9 +389,10 @@ public class Corerock extends BlockBase {
 			}
 		}*/
 	}
-
+	@SideOnly(Side.CLIENT)
 	@Override
 	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+		worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
 		particleEffects(stateIn, worldIn, pos, rand);
 	}
 

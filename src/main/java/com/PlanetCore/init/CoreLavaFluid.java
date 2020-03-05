@@ -35,7 +35,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 		setLightLevel(1);
 		setDensity(400);
-		setTickRate(20);
+		setTickRate(5);
 		setTickRandomly(true);
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(name));
@@ -152,7 +152,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 					if(state2.getMaterial()==Material.WATER || state2.getMaterial()==Material.ICE || state2.getMaterial()==Material.CRAFTED_SNOW)
 					{
 						worldIn.setBlockToAir(pos.add(x, y, z));
-						worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+						worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 						worldIn.createExplosion(null, X+x, Y+y, Z+z, 10, true);
 					}
 					if(state2.getBlock().getFlammability(worldIn, pos, null)>0 || state2.getMaterial()==Material.WOOD || state2.getMaterial()==Material.CLOTH || state2.getMaterial()==Material.PLANTS || state2.getMaterial()==Material.LEAVES)
@@ -170,7 +170,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 					}
 					if(pos.getY()>=-10000)
 					{
-						if (worldIn.getWorldTime() % 10 != 1)
+						if (worldIn.getWorldTime() % 60 != 1)
 						{
 							return;
 						}

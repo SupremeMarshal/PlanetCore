@@ -1,11 +1,7 @@
 package com.PlanetCore.util.handlers;
 
-import com.PlanetCore.Main;
-import com.PlanetCore.anvils.EntityFallingAnvil;
-import com.PlanetCore.anvils.EnumVariants;
-import com.PlanetCore.anvils.GuiHandler;
-import com.PlanetCore.anvils.PacketHandler;
-import com.PlanetCore.anvils.generic.BlockGenericAnvil;
+
+
 import com.PlanetCore.init.*;
 import com.PlanetCore.util.IHasModel;
 import com.PlanetCore.util.ModConfiguration;
@@ -14,9 +10,9 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
+
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -25,14 +21,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.EntityEntry;
-import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.registries.IForgeRegistry;
 
-import java.util.Iterator;
+
+
+import net.minecraftforge.oredict.OreDictionary;
+
 
 
 @EventBusSubscriber
@@ -80,13 +73,6 @@ public class RegistryHandler {
 		event.getRegistry().registerAll(EnchantmentInit.ENCHANTMENTS.toArray(new Enchantment[0]));
 	}
 
-	//Extra Anvils -- Common proxy
-	@SubscribeEvent
-	public static void registerEntity(RegistryEvent.Register<EntityEntry> e) {
-		ResourceLocation resourceLocation = new ResourceLocation("planetcore", "falling_anvil");
-		e.getRegistry().register(EntityEntryBuilder.create().entity(EntityFallingAnvil.class).id(resourceLocation, 0).name(resourceLocation.getPath()).tracker(64, 1, true).build());
-	}
-	//---
 
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
@@ -95,9 +81,7 @@ public class RegistryHandler {
 		ModConfiguration.registerConfig(event);
 		MinecraftForge.EVENT_BUS.register(new FogHandler());
 
-		//Extra Anvils -- Common Proxy -- public void preInit(FMLPreInitializationEvent e)
 
-		//---
 	}
 
 
@@ -116,9 +100,7 @@ public class RegistryHandler {
 		OreDictionary.registerOre("itemAmazonite", new ItemStack(ModItems.AMAZONITE, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("itemSulfur", new ItemStack(ModItems.SULFUR, 1, OreDictionary.WILDCARD_VALUE));
 
-		//Extra Anvils -- Common Proxy -- public void init(FMLInitializationEvent e)
 
-		//------
 	}
 
 	public static void posInitRegistries(FMLPostInitializationEvent event)
@@ -132,18 +114,7 @@ public class RegistryHandler {
 
 	}
 
-	//Extra Anvils -- Common proxy
-	@SubscribeEvent
-	public static void registerItems(RegistryEvent.Register<Item> event) {
-		IForgeRegistry<Item> registry = event.getRegistry();
-		Iterator var2 = Main.anvils.iterator();
 
-		while(var2.hasNext()) {
-			BlockGenericAnvil anvil = (BlockGenericAnvil)var2.next();
-			registry.register((new ItemBlock(anvil)).setRegistryName(anvil.getRegistryName()));
-		}
-	}
-	//---
 
 	
 }
