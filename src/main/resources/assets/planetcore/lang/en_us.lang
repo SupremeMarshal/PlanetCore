@@ -1071,6 +1071,7 @@ tile.lower_mantlerock_redstone.name=Lower Mantlerock Redstone
 tile.lower_mantlerock_sulfur.name=Lower Mantlerock Sulfur
 
 tile.cold_corestone.name=Cold Corerock
+tile.magma_corestone.name=Magma Corerock
 tile.corestone.name=Corerock
 tile.corestone_azurite.name=Corerock Azurite
 tile.corestone_onyx.name=Corerock Onyx
@@ -1178,6 +1179,7 @@ item.enchanted_platinum_apple.name=§dEnchanted platinum apple
 fluid.hot_lava=Hot lava
 fluid.core_lava=Core lava
 fluid.sulfuric_acid=Sulfuric acid
+fluid.onyx_lava=Onyx lava
 
 //ARTIFACT ITEMS
 item.enhancing_gem.name=§6Enhancing gem

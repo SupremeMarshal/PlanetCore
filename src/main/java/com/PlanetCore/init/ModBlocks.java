@@ -18,6 +18,7 @@ public class ModBlocks {
 	public static final Block SULFURIC_ACID_BLOCK = new SulfuricAcidFluid("sulfuric_acid", ModFluids.SULFURIC_ACID_FLUID, Material.WATER);
 	public static final Block HOT_LAVA_BLOCK = new HotLavaFluid("hot_lava", ModFluids.HOT_LAVA_FLUID, Material.LAVA);
 	public static final Block CORE_LAVA_BLOCK = new CoreLavaFluid("core_lava", ModFluids.CORE_LAVA_FLUID, Material.LAVA);
+	public static final Block ONYX_LAVA_BLOCK = new OnyxLavaFluid("onyx_lava", ModFluids.ONYX_LAVA_FLUID, Material.LAVA);
 
 	public static final Block AZURITE_BLOCK = new RockBase("azurite_block", Material.ROCK);
 	public static final Block ONYX_BLOCK = new RockBase("onyx_block", Material.ROCK);
@@ -220,6 +221,7 @@ public class ModBlocks {
 	public static final Block CORESTONE = new Corerock("corestone", Material.ROCK);
 	public static final Block INNERCORESTONE = new Corerock("innercorestone", Material.ROCK);
 	public static final Block CENTERCORESTONE = new Corerock("centercorestone", Material.ROCK);
+	public static final Block MAGMA_CORESTONE = new Corerock("magma_corestone", Material.ROCK);
 	public static final Block COLD_CORESTONE = new BlockBase("cold_corestone", Material.ROCK);
 
 	//SEDIMENTARY ROCK

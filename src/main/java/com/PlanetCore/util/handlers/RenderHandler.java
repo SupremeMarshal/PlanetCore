@@ -105,12 +105,42 @@ public class RenderHandler
 			}
 		});
 
+
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SULFURIC_ACID_BLOCK), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:sulfuric_acid", "fluid");
+
+				}
+			});
+
 			ModelLoader.setCustomStateMapper(ModBlocks.SULFURIC_ACID_BLOCK, new StateMapperBase() {
 
 				@Override
 				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
 
 					return new ModelResourceLocation("planetcore:sulfuric_acid", "fluid");
+				}
+			});
+
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.ONYX_LAVA_BLOCK), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:onyx_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.ONYX_LAVA_BLOCK, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:onyx_lava", "fluid");
 				}
 			});
 	}
