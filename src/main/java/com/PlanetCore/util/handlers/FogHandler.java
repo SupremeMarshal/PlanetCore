@@ -49,9 +49,9 @@ public class FogHandler {
         {
             event.setDensity(0.1F);
         }
-        else
+        else if (event.getEntity().posY > 0)
         {
-            event.setDensity(0.0001F);
+            event.setDensity(0.00001F);
         }
 
         event.setCanceled(true); // must cancel event for event handler to take effect
@@ -86,6 +86,12 @@ public class FogHandler {
             event.setRed(0.1F);
             event.setGreen(0.15F);
             event.setBlue(0.80F);
+        }
+        else if (event.getEntity().posY > 0)
+        {
+            event.setRed(0.0F);
+            event.setGreen(0.0F);
+            event.setBlue(0.0F);
         }
         else if (event.getEntity().posY < 0 && event.getEntity().posY > -4000)
         {

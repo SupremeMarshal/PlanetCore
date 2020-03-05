@@ -1049,6 +1049,27 @@ tile.mantlerock_redstone.name=Mantlerock Redstone
 tile.mantlerock_gas.name=Mantlerock Gas
 tile.mantlerock_sulfur.name=Mantlerock Sulfur
 
+tile.mantlerock1.name=Mantlerock
+tile.mantlerock2.name=Mantlerock
+tile.mantlerock3.name=Mantlerock
+tile.mantlerock4.name=Mantlerock
+tile.mantlerock5.name=Mantlerock
+tile.mantlerock6.name=Mantlerock
+tile.mantlerock7.name=Mantlerock
+tile.mantlerock8.name=Mantlerock
+tile.mantlerock9.name=Mantlerock
+tile.mantlerock10.name=Lower Mantlerock
+tile.lower_mantlerock1.name=Lower Mantlerock
+tile.lower_mantlerock2.name=Lower Mantlerock
+tile.lower_mantlerock3.name=Lower Mantlerock
+tile.lower_mantlerock4.name=Lower Mantlerock
+tile.lower_mantlerock5.name=Lower Mantlerock
+tile.lower_mantlerock6.name=Lower Mantlerock
+tile.lower_mantlerock7.name=Lower Mantlerock
+tile.lower_mantlerock8.name=Lower Mantlerock
+tile.lower_mantlerock9.name=Lower Mantlerock
+tile.lower_mantlerock10.name=Lower Mantlerock
+
 tile.lower_mantlerock.name=Lower Mantlerock
 tile.lower_mantlerock_azurite.name=Lower Mantlerock Azurite
 tile.lower_mantlerock_onyx.name=Lower Mantlerock Onyx
