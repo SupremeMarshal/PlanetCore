@@ -56,7 +56,6 @@ public class ArmorBase extends ItemArmor implements IHasModel
         }
         tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.0"));
         tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.1"));
-        tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
-        tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Durability: "+(getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
     }
     }

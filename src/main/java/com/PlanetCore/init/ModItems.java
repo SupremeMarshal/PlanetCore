@@ -35,27 +35,39 @@ public class ModItems {
 	public static final ToolMaterial MATERIAL_JADE = EnumHelper.addToolMaterial("material_jade", 9, 200, 18.0F, 4.0F, 5);
 	public static final ToolMaterial MATERIAL_TOPAZ = EnumHelper.addToolMaterial("material_topaz", 10, 100, 4.0F, 4.0F, 6);
 	public static final ToolMaterial MATERIAL_ES = EnumHelper.addToolMaterial("material_es", 9, 2000, 30.0F, 9.0F, 6);
-	public static final ToolMaterial MATERIAL_EMERALD = EnumHelper.addToolMaterial("material_emerald", 10, 50, 30.0F, 7.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD1 = EnumHelper.addToolMaterial("material_emerald1", 10, 75, 36.0F, 9.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD2 = EnumHelper.addToolMaterial("material_emerald2", 10, 113, 43.0F, 11.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD3 = EnumHelper.addToolMaterial("material_emerald3", 10, 169, 52.0F, 14.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD4 = EnumHelper.addToolMaterial("material_emerald4", 10, 253, 62.0F, 17.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD5 = EnumHelper.addToolMaterial("material_emerald5", 10, 380, 75.0F, 21.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD6 = EnumHelper.addToolMaterial("material_emerald6", 10, 570, 90.0F, 26.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE = EnumHelper.addToolMaterial("material_sapphire", 11, 60, 45.0F, 12.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE1 = EnumHelper.addToolMaterial("material_sapphire1", 11, 90, 54.0F, 15.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE2 = EnumHelper.addToolMaterial("material_sapphire2", 11, 135, 65.0F, 18.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE3 = EnumHelper.addToolMaterial("material_sapphire3", 11, 203, 78.0F, 22.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE4 = EnumHelper.addToolMaterial("material_sapphire4", 11, 304, 93.0F, 27.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE5 = EnumHelper.addToolMaterial("material_sapphire5", 11, 456, 112.0F, 33.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE6 = EnumHelper.addToolMaterial("material_sapphire6", 11, 683, 134.0F, 41.0F, 10);
-	public static final ToolMaterial MATERIAL_RUBY = EnumHelper.addToolMaterial("material_ruby", 12, 100, 60.0F, 30.0F, 8);
+	public static final ToolMaterial MATERIAL_EMERALD = EnumHelper.addToolMaterial("material_emerald", 10, 25, 30.0F, 7.0F, 10);
+	public static final ToolMaterial MATERIAL_EMERALD1 = EnumHelper.addToolMaterial("material_emerald1", 10, 50, 36.0F, 8.0F, 10);
+	public static final ToolMaterial MATERIAL_EMERALD2 = EnumHelper.addToolMaterial("material_emerald2", 10, 100, 43.0F, 9.0F, 10);
+	public static final ToolMaterial MATERIAL_EMERALD3 = EnumHelper.addToolMaterial("material_emerald3", 10, 200, 52.0F, 10.0F, 10);
+	public static final ToolMaterial MATERIAL_EMERALD4 = EnumHelper.addToolMaterial("material_emerald4", 10, 400, 62.0F, 11.0F, 10);
+	public static final ToolMaterial MATERIAL_EMERALD5 = EnumHelper.addToolMaterial("material_emerald5", 10, 800, 75.0F, 12.0F, 10);
+	public static final ToolMaterial MATERIAL_EMERALD6 = EnumHelper.addToolMaterial("material_emerald6", 10, 1600, 90.0F, 13.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE = EnumHelper.addToolMaterial("material_sapphire", 11, 30, 45.0F, 12.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE1 = EnumHelper.addToolMaterial("material_sapphire1", 11, 60, 54.0F, 13.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE2 = EnumHelper.addToolMaterial("material_sapphire2", 11, 120, 65.0F, 14.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE3 = EnumHelper.addToolMaterial("material_sapphire3", 11, 240, 78.0F, 15.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE4 = EnumHelper.addToolMaterial("material_sapphire4", 11, 480, 93.0F, 16.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE5 = EnumHelper.addToolMaterial("material_sapphire5", 11, 960, 112.0F, 17.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE6 = EnumHelper.addToolMaterial("material_sapphire6", 11, 1920, 134.0F, 18.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY = EnumHelper.addToolMaterial("material_ruby", 12, 36, 68.0F, 17.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY1 = EnumHelper.addToolMaterial("material_ruby1", 11, 72, 81.0F, 18.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY2 = EnumHelper.addToolMaterial("material_ruby2", 11, 144, 97.0F, 19.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY3 = EnumHelper.addToolMaterial("material_ruby3", 11, 288, 117.0F, 20.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY4 = EnumHelper.addToolMaterial("material_ruby4", 11, 576, 140.0F, 21.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY5 = EnumHelper.addToolMaterial("material_ruby5", 11, 1152, 168.0F, 22.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY6 = EnumHelper.addToolMaterial("material_ruby6", 11, 2304, 202.0F, 23.0F, 10);
 	public static final ToolMaterial MATERIAL_AMETHYST = EnumHelper.addToolMaterial("material_amethyst", 12, 100, 300.0F, 50.0F, 4);
-	public static final ToolMaterial MATERIAL_DIAMOND = EnumHelper.addToolMaterial("material_diamond", 13, 100, 100.0F, 50.0F, 6);
-	public static final ToolMaterial MATERIAL_AMAZONITE = EnumHelper.addToolMaterial("material_amazonite", 14, 100, 200.0F, 100.0F, 5);
+	public static final ToolMaterial MATERIAL_DIAMOND = EnumHelper.addToolMaterial("material_diamond", 13, 72, 101.0F, 22.0F, 6);
+	static final ToolMaterial MATERIAL_DIAMOND1 = EnumHelper.addToolMaterial("material_diamond1", 13, 144, 122.0F, 23.0F, 6);
+	static final ToolMaterial MATERIAL_DIAMOND2 = EnumHelper.addToolMaterial("material_diamond2", 13, 288, 146.0F, 24.0F, 6);
+	static final ToolMaterial MATERIAL_DIAMOND3 = EnumHelper.addToolMaterial("material_diamond3", 13, 576, 175.0F, 25.0F, 6);
+	static final ToolMaterial MATERIAL_DIAMOND4 = EnumHelper.addToolMaterial("material_diamond4", 13, 1152, 210.0F, 26.0F, 6);
+	static final ToolMaterial MATERIAL_DIAMOND5 = EnumHelper.addToolMaterial("material_diamond5", 13, 2304, 252.0F, 27.0F, 6);
+	static final ToolMaterial MATERIAL_DIAMOND6 = EnumHelper.addToolMaterial("material_diamond6", 13, 4608, 302.0F, 28.0F, 6);
+	public static final ToolMaterial MATERIAL_AMAZONITE = EnumHelper.addToolMaterial("material_amazonite", 14, 100, 200.0F, 27.0F, 5);
 	public static final ToolMaterial MATERIAL_DEMON = EnumHelper.addToolMaterial("material_demon", 10, 1000, 25.0F, 15F, 5);
 	public static final ToolMaterial MATERIAL_CORE = EnumHelper.addToolMaterial("material_core", 12, 0, 1000.0F, 500F, 5);
-	public static final ToolMaterial MATERIAL_ONYX = EnumHelper.addToolMaterial("material_onyx", 15, 100, 300.0F, 150.0F, 4);
+	public static final ToolMaterial MATERIAL_ONYX = EnumHelper.addToolMaterial("material_onyx", 15, 100, 300.0F, 32.0F, 4);
 	public static final ToolMaterial MATERIAL_AZURITE = EnumHelper.addToolMaterial("material_azurite", 15, 100, 1000.0F, 100.0F, 4);
 	
 	
@@ -85,19 +97,19 @@ public class ModItems {
 			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD2 = EnumHelper.addArmorMaterial("armor_material_emerald2", Reference.MOD_ID + ":emerald2", 20,
-			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.5F);
+			new int[] {5, 9, 8, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.5F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD3 = EnumHelper.addArmorMaterial("armor_material_emerald3", Reference.MOD_ID + ":emerald3", 40,
-			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+			new int[] {6, 9, 8, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD4 = EnumHelper.addArmorMaterial("armor_material_emerald4", Reference.MOD_ID + ":emerald4", 80,
-			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.5F);
+			new int[] {6, 9, 8, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.5F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD5 = EnumHelper.addArmorMaterial("armor_material_emerald5", Reference.MOD_ID + ":emerald5", 160,
-			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F);
+			new int[] {6, 10, 8, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD6 = EnumHelper.addArmorMaterial("armor_material_emerald6", Reference.MOD_ID + ":emerald6", 320,
-			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
+			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE = EnumHelper.addArmorMaterial("armor_material_sapphire", Reference.MOD_ID + ":sapphire", 6,
 			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
@@ -120,11 +132,47 @@ public class ModItems {
 	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE6 = EnumHelper.addArmorMaterial("armor_material_sapphire6", Reference.MOD_ID + ":sapphire6", 384,
 			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 9.5F);
 	
-	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 125,
-			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
+	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 7,
+			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_RUBY1 = EnumHelper.addArmorMaterial("armor_material_ruby1", Reference.MOD_ID + ":ruby1", 14,
+			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.5F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_RUBY2 = EnumHelper.addArmorMaterial("armor_material_ruby2", Reference.MOD_ID + ":ruby2", 28,
+			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 11.0F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_RUBY3 = EnumHelper.addArmorMaterial("armor_material_ruby3", Reference.MOD_ID + ":ruby3", 56,
+			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 11.5F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_RUBY4 = EnumHelper.addArmorMaterial("armor_material_ruby4", Reference.MOD_ID + ":ruby4", 112,
+			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 12.0F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_RUBY5 = EnumHelper.addArmorMaterial("armor_material_ruby5", Reference.MOD_ID + ":ruby5", 224,
+			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 12.5F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_RUBY6 = EnumHelper.addArmorMaterial("armor_material_ruby6", Reference.MOD_ID + ":ruby6", 448,
+			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
 	
-	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND = EnumHelper.addArmorMaterial("armor_material_diamond", Reference.MOD_ID + ":diamond", 187,
-			new int[] {5, 10, 8, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
+	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND = EnumHelper.addArmorMaterial("armor_material_diamond", Reference.MOD_ID + ":diamond", 14,
+			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND1 = EnumHelper.addArmorMaterial("armor_material_diamond1", Reference.MOD_ID + ":diamond", 28,
+			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 14.0F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND2 = EnumHelper.addArmorMaterial("armor_material_diamond2", Reference.MOD_ID + ":diamond", 56,
+			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 14.5F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND3 = EnumHelper.addArmorMaterial("armor_material_diamond3", Reference.MOD_ID + ":diamond", 112,
+			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 15.0F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND4 = EnumHelper.addArmorMaterial("armor_material_diamond4", Reference.MOD_ID + ":diamond", 224,
+			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 15.5F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND5 = EnumHelper.addArmorMaterial("armor_material_diamond5", Reference.MOD_ID + ":diamond", 448,
+			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 16.0F);
+
+	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND6 = EnumHelper.addArmorMaterial("armor_material_diamond6", Reference.MOD_ID + ":diamond", 896,
+			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 17.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_AMAZONITE = EnumHelper.addArmorMaterial("armor_material_amazonite", Reference.MOD_ID + ":amazonite", 250,
 			new int[] {6, 12, 9, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);

@@ -86,7 +86,7 @@ public class HotLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() <= 4)
 				{
-					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DEEPSTONE.getDefaultState()));
+					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DEEPROCK.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}

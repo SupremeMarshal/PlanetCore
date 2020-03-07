@@ -7,6 +7,7 @@ import java.util.Random;
 
 import com.PlanetCore.blocks.Corerock;
 
+import com.google.gson.internal.bind.JsonTreeReader;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -35,7 +36,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 		setLightLevel(1);
 		setDensity(400);
-		setTickRate(5);
+		setTickRate(20);
 		setTickRandomly(true);
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(name));
@@ -101,30 +102,12 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		radius = (int) f;
 	}
 
-
-	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
+	public void thermalEffects(World worldIn, BlockPos pos, IBlockState state)
 	{
-
-		if (entityIn instanceof EntityPlayerMP)
-		{
-			//EntityPlayerMP player = (EntityPlayerMP) entityIn;
-			//no protection = 10 damage each second (without the normal lava damage)
-			//Full Amazonite protect 100%
-
-			//no protection
-
-
-			entityIn.attackEntityFrom(DamageSource.GENERIC, 8.0F);
-		}
-	}
-
-	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-	{
-		super.updateTick(worldIn, pos, state, rand);
 		int X = pos.getX();
 		int Y = pos.getY();
 		int Z = pos.getZ();
+		Random rand = new Random();
 		burnEntities(worldIn,X,Y,Z, 6);
 		for(int x = -2; x < 3; x++) {
 			for(int y = -2; y < 3; y++) {
@@ -160,26 +143,95 @@ public class CoreLavaFluid extends BlockFluidClassic {
 						worldIn.setBlockState(pos.add(x, y, z), Blocks.FIRE.getDefaultState());
 					}
 
-					if(pos.getY()<=-12750)
-					{
-						if (worldIn.getWorldTime() % 400 != 1)
-						{
-							return;
-						}
-						worldIn.setBlockState(pos, ModBlocks.INNERCORESTONE.getDefaultState());
-					}
-					if(pos.getY()>=-10000)
-					{
-						if (worldIn.getWorldTime() % 60 != 1)
-						{
-							return;
-						}
-						worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-					}
+
+
+
 
 				}
 			}
 		}
+	}
+
+	public void coreTemperature(World worldIn, BlockPos pos,IBlockState state)
+	{
+		int X = pos.getX();
+		int Y = pos.getY();
+		int Z = pos.getZ();
+		burnEntities(worldIn,X,Y,Z, 6);
+		Random rand = new Random();
+
+		if(pos.getY()<=-12750)
+		{
+			if(rand.nextInt(300) == 0)
+			{
+				worldIn.setBlockState(pos, ModBlocks.INNERCORESTONE.getDefaultState());
+			}
+
+		}
+		else if(pos.getY()>=-10000 && worldIn.canBlockSeeSky(pos) == false)
+		{
+			if(rand.nextInt(300) == 0)
+			{
+				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+			}
+		}
+		else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == false)
+		{
+			if(rand.nextInt(60) == 0)
+			{
+				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+			}
+		}
+		else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == true)
+		{
+			if(rand.nextInt(20) == 0)
+			{
+				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+			}
+		}
+		else if(worldIn.canBlockSeeSky(pos) == false)
+			if(rand.nextInt(120) == 0)
+			{
+				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+			}
+	}
+
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+	{
+		super.onBlockAdded(worldIn, pos, state);
+		thermalEffects(worldIn, pos, state);
+	}
+
+	@Override
+	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
+	{
+		super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
+		thermalEffects(worldIn, pos, state);
+	}
+
+	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
+	{
+
+		if (entityIn instanceof EntityPlayerMP)
+		{
+			//EntityPlayerMP player = (EntityPlayerMP) entityIn;
+			//no protection = 10 damage each second (without the normal lava damage)
+			//Full Amazonite protect 100%
+
+			//no protection
+
+
+			entityIn.attackEntityFrom(DamageSource.GENERIC, 8.0F);
+		}
+	}
+
+	@Override
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+	{
+		super.updateTick(worldIn, pos, state, rand);
+		thermalEffects(worldIn,pos,state);
+		coreTemperature(worldIn,pos,state);
 	}
 
 

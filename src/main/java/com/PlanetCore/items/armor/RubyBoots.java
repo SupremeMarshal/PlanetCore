@@ -37,7 +37,7 @@ public class RubyBoots extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_RUBYBOOTS_UUID, "MAX_HEALTH_RUBYBOOTS_UUID", 4, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_RUBYBOOTS_UUID, "MAX_HEALTH_RUBYBOOTS_UUID", 7, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_RUBYBOOTS_UUID, "KNOCKBACK_RESISTANCE_RUBYBOOTS_UUID", 0.05, 0));
 	}
    
@@ -53,23 +53,11 @@ public class RubyBoots extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_RUBYBOOTS_UUID, "MAX_HEALTH_RUBYBOOTS_UUID", 4, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_RUBYBOOTS_UUID, "MAX_HEALTH_RUBYBOOTS_UUID", 7, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_RUBYBOOTS_UUID, "KNOCKBACK_RESISTANCE_RUBYBOOTS_UUID", 0.05, 0));
     	}
     	return mods;
     }
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
-	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == ModItems.RUBY_BOOTS)
-		{
-			if (world.getTotalWorldTime() % 200 != 1)
-			{
-				return;
-			}
-			player.heal(0.15F);
-		}
-	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
@@ -93,9 +81,6 @@ public class RubyBoots extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.2"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.4"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.5"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.6"));
-		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
-		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Durability: "+(getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}
 }

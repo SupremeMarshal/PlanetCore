@@ -244,7 +244,7 @@ public class Corerock extends BlockBase {
 		int X = pos.getX();
 		int Y = pos.getY();
 		int Z = pos.getZ();
-		if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining()) {
+		if((worldIn.isRaining() && this == ModBlocks.CORESTONE) || (worldIn.isRaining() && this == ModBlocks.MAGMA_CORESTONE)) {
 
 			worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, X, Y+1, Z, 0, 0, 0);
 		}
@@ -255,6 +255,7 @@ public class Corerock extends BlockBase {
 		int X = pos.getX();
 		int Y = pos.getY();
 		int Z = pos.getZ();
+		Random rand = new Random();
 		burnEntities(worldIn,X,Y,Z, 8);
 
 		if (this != ModBlocks.COLD_CORESTONE)
@@ -296,61 +297,72 @@ public class Corerock extends BlockBase {
 						{
 							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
 						}
-						if(pos.getY()>-9900 && pos.getY()<=-1000 && this == ModBlocks.CORESTONE)
+						else if(pos.getY()>-9900 && pos.getY()<=-1000)
 						{
-							if (worldIn.getWorldTime() % -100*pos.getY()/2000 != 1)
+							if(rand.nextInt(6000) == 0)
 							{
 								return;
 							}
-							worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+							if (this == ModBlocks.CENTERCORESTONE)
+								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+							else if (this == ModBlocks.INNERCORESTONE)
+								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+							else if (this == ModBlocks.CORESTONE)
+								worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+							else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 						}
-						if(pos.getY()>-9900 && pos.getY()<=-1000 && this == ModBlocks.MAGMA_CORESTONE)
+						else if(pos.getY()>-9900 && pos.getY()<=-1000)
 						{
-							if (worldIn.getWorldTime() % -100*pos.getY()/2000 != 1)
+							if(rand.nextInt(3000) == 0)
 							{
 								return;
 							}
-							worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+							if (this == ModBlocks.CENTERCORESTONE)
+								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+							else if (this == ModBlocks.INNERCORESTONE)
+								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+							else if (this == ModBlocks.CORESTONE)
+								worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+							else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 						}
-						if(pos.getY()>=-1000 && !worldIn.isRaining() && this == ModBlocks.CORESTONE)
+						else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == false)
 						{
-							if (worldIn.getWorldTime() % 100 != 1)
+							if(rand.nextInt(1200) == 0)
 							{
-								return;
+								if (this == ModBlocks.CENTERCORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+								else if (this == ModBlocks.INNERCORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+								else if (this == ModBlocks.CORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+								else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 							}
-							worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
 						}
-						if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining()  && this == ModBlocks.CORESTONE)
+						else if(worldIn.canBlockSeeSky(pos) == false)
 						{
-
-							if (worldIn.getWorldTime() % 10/worldIn.rainingStrength != 1)
+							if(rand.nextInt(2400) == 0)
 							{
-								return;
+								if (this == ModBlocks.CENTERCORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+								else if (this == ModBlocks.INNERCORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+								else if (this == ModBlocks.CORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+								else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 							}
-							worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
 						}
-						//Check without rain above -1k y for magma corestone
-						if(pos.getY()>=-1000 && !worldIn.isRaining() && this == ModBlocks.MAGMA_CORESTONE)
+						else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == true)
 						{
-							if (worldIn.getWorldTime() % 400 != 1)
+							if(rand.nextInt(200) == 0)
 							{
-								return;
+								if (this == ModBlocks.CENTERCORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+								else if (this == ModBlocks.INNERCORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+								else if (this == ModBlocks.CORESTONE)
+									worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
+								else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 							}
-							worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
-						}
-						//Check rain above -1k y for magma corestone
-						if(worldIn.canBlockSeeSky(pos) && worldIn.isRaining()  && this == ModBlocks.MAGMA_CORESTONE)
-						{
-
-							if (worldIn.getWorldTime() % 20/worldIn.rainingStrength != 1)
-							{
-								return;
-							}
-							worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
-						}
-						if(pos.getY()<=-12750)
-						{
-							worldIn.setBlockState(pos, ModBlocks.INNERCORESTONE.getDefaultState());
 						}
 					}
 				}

@@ -82,7 +82,7 @@ public class SulfuricAcidFluid extends BlockFluidClassic {
 
 				if (integer.intValue() <= 4)
 				{
-					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DEEPSTONE.getDefaultState()));
+					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DEEPROCK.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}

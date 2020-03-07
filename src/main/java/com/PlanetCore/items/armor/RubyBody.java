@@ -58,18 +58,7 @@ public class RubyBody extends ArmorBase
     	}
     	return mods;
     }
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
-	{
-		if (player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == ModItems.RUBY_CHESTPLATE)
-		{
-			if (world.getTotalWorldTime() % 200 != 1)
-			{
-				return;
-			}
-			player.heal(0.4F);
-		}
-	}
+
 
 	@SideOnly(Side.CLIENT)
 	@Override
@@ -93,9 +82,6 @@ public class RubyBody extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.2"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.4"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.5"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.6"));
-		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
-		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
+		tooltip.add(net.minecraft.client.resources.I18n.format("Durability: "+(getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}
 }

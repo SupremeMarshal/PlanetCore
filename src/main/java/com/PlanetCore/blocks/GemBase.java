@@ -38,31 +38,31 @@ public class GemBase extends BlockBase
 	{
 	Block block = this;
 
-	if (block == ModBlocks.HARDSTONE_EMERALD || block == ModBlocks.DEEPSTONE_EMERALD || block == ModBlocks.CRUSTROCK_EMERALD || block == ModBlocks.MANTLEROCK_EMERALD || block == ModBlocks.LOWER_MANTLEROCK_EMERALD)
+	if (block == ModBlocks.HARDROCK_EMERALD || block == ModBlocks.DEEPROCK_EMERALD || block == ModBlocks.CRUSTROCK_EMERALD || block == ModBlocks.MANTLEROCK_EMERALD || block == ModBlocks.LOWER_MANTLEROCK_EMERALD)
 	{return new ItemStack(Items.EMERALD, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.SAPPHIRE_ORE || block == ModBlocks.HARDSTONE_SAPPHIRE || block == ModBlocks.DEEPSTONE_SAPPHIRE || block == ModBlocks.CRUSTROCK_SAPPHIRE || block == ModBlocks.MANTLEROCK_SAPPHIRE || block == ModBlocks.LOWER_MANTLEROCK_SAPPHIRE)
+	else if (block == ModBlocks.SAPPHIRE_ORE || block == ModBlocks.HARDROCK_SAPPHIRE || block == ModBlocks.DEEPROCK_SAPPHIRE || block == ModBlocks.CRUSTROCK_SAPPHIRE || block == ModBlocks.MANTLEROCK_SAPPHIRE || block == ModBlocks.LOWER_MANTLEROCK_SAPPHIRE)
 	{return new ItemStack(ModItems.SAPPHIRE, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.RUBY_ORE || block == ModBlocks.HARDSTONE_RUBY || block == ModBlocks.DEEPSTONE_RUBY || block == ModBlocks.CRUSTROCK_RUBY || block == ModBlocks.MANTLEROCK_RUBY || block == ModBlocks.LOWER_MANTLEROCK_RUBY)
+	else if (block == ModBlocks.RUBY_ORE || block == ModBlocks.HARDROCK_RUBY || block == ModBlocks.DEEPROCK_RUBY || block == ModBlocks.CRUSTROCK_RUBY || block == ModBlocks.MANTLEROCK_RUBY || block == ModBlocks.LOWER_MANTLEROCK_RUBY)
 	{return new ItemStack(ModItems.RUBY, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.TOPAZ_ORE || block == ModBlocks.HARDSTONE_TOPAZ || block == ModBlocks.DEEPSTONE_TOPAZ || block == ModBlocks.CRUSTROCK_TOPAZ || block == ModBlocks.MANTLEROCK_TOPAZ || block == ModBlocks.LOWER_MANTLEROCK_TOPAZ)
+	else if (block == ModBlocks.TOPAZ_ORE || block == ModBlocks.HARDROCK_TOPAZ || block == ModBlocks.DEEPROCK_TOPAZ || block == ModBlocks.CRUSTROCK_TOPAZ || block == ModBlocks.MANTLEROCK_TOPAZ || block == ModBlocks.LOWER_MANTLEROCK_TOPAZ)
 	{return new ItemStack(ModItems.TOPAZ, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.DIAMOND_ORE || block == ModBlocks.HARDSTONE_DIAMOND || block == ModBlocks.DEEPSTONE_DIAMOND || block == ModBlocks.CRUSTROCK_DIAMOND || block == ModBlocks.MANTLEROCK_DIAMOND || block == ModBlocks.LOWER_MANTLEROCK_DIAMOND)
+	else if (block == ModBlocks.DIAMOND_ORE || block == ModBlocks.HARDROCK_DIAMOND || block == ModBlocks.DEEPROCK_DIAMOND || block == ModBlocks.CRUSTROCK_DIAMOND || block == ModBlocks.MANTLEROCK_DIAMOND || block == ModBlocks.LOWER_MANTLEROCK_DIAMOND)
 	{return new ItemStack(ModItems.DIAMOND, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.JADE_ORE || block == ModBlocks.HARDSTONE_JADE || block == ModBlocks.DEEPSTONE_JADE || block == ModBlocks.CRUSTROCK_JADE || block == ModBlocks.MANTLEROCK_JADE || block == ModBlocks.LOWER_MANTLEROCK_JADE)
+	else if (block == ModBlocks.JADE_ORE || block == ModBlocks.HARDROCK_JADE || block == ModBlocks.DEEPROCK_JADE || block == ModBlocks.CRUSTROCK_JADE || block == ModBlocks.MANTLEROCK_JADE || block == ModBlocks.LOWER_MANTLEROCK_JADE)
 	{return new ItemStack(ModItems.JADE, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.AMAZONITE_ORE || block == ModBlocks.HARDSTONE_AMAZONITE || block == ModBlocks.DEEPSTONE_AMAZONITE || block == ModBlocks.CRUSTROCK_AMAZONITE || block == ModBlocks.MANTLEROCK_AMAZONITE || block == ModBlocks.LOWER_MANTLEROCK_AMAZONITE)
+	else if (block == ModBlocks.AMAZONITE_ORE || block == ModBlocks.HARDROCK_AMAZONITE || block == ModBlocks.DEEPROCK_AMAZONITE || block == ModBlocks.CRUSTROCK_AMAZONITE || block == ModBlocks.MANTLEROCK_AMAZONITE || block == ModBlocks.LOWER_MANTLEROCK_AMAZONITE)
 	{return new ItemStack(ModItems.AMAZONITE, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.AMETHYST_ORE || block == ModBlocks.HARDSTONE_AMETHYST || block == ModBlocks.DEEPSTONE_AMETHYST || block == ModBlocks.CRUSTROCK_AMETHYST || block == ModBlocks.MANTLEROCK_AMETHYST || block == ModBlocks.LOWER_MANTLEROCK_AMETHYST)
+	else if (block == ModBlocks.AMETHYST_ORE || block == ModBlocks.HARDROCK_AMETHYST || block == ModBlocks.DEEPROCK_AMETHYST || block == ModBlocks.CRUSTROCK_AMETHYST || block == ModBlocks.MANTLEROCK_AMETHYST || block == ModBlocks.LOWER_MANTLEROCK_AMETHYST)
 	{return new ItemStack(ModItems.AMETHYST, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.ONYX_ORE || block == ModBlocks.HARDSTONE_ONYX || block == ModBlocks.DEEPSTONE_ONYX || block == ModBlocks.CRUSTROCK_ONYX || block == ModBlocks.MANTLEROCK_ONYX || block == ModBlocks.LOWER_MANTLEROCK_ONYX)
+	else if (block == ModBlocks.ONYX_ORE || block == ModBlocks.HARDROCK_ONYX || block == ModBlocks.DEEPROCK_ONYX || block == ModBlocks.CRUSTROCK_ONYX || block == ModBlocks.MANTLEROCK_ONYX || block == ModBlocks.LOWER_MANTLEROCK_ONYX)
 	{return new ItemStack(ModItems.ONYX, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.AZURITE_ORE || block == ModBlocks.HARDSTONE_AZURITE || block == ModBlocks.DEEPSTONE_AZURITE || block == ModBlocks.CRUSTROCK_AZURITE || block == ModBlocks.MANTLEROCK_AZURITE || block == ModBlocks.LOWER_MANTLEROCK_AZURITE)
+	else if (block == ModBlocks.AZURITE_ORE || block == ModBlocks.HARDROCK_AZURITE || block == ModBlocks.DEEPROCK_AZURITE || block == ModBlocks.CRUSTROCK_AZURITE || block == ModBlocks.MANTLEROCK_AZURITE || block == ModBlocks.LOWER_MANTLEROCK_AZURITE)
 	{return new ItemStack(ModItems.AZURITE, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.HARDSTONE_COAL || block == ModBlocks.DEEPSTONE_COAL || block == ModBlocks.CRUSTROCK_COAL || block == ModBlocks.MANTLEROCK_COAL || block == ModBlocks.LOWER_MANTLEROCK_COAL)
+	else if (block == ModBlocks.HARDROCK_COAL || block == ModBlocks.DEEPROCK_COAL || block == ModBlocks.CRUSTROCK_COAL || block == ModBlocks.MANTLEROCK_COAL || block == ModBlocks.LOWER_MANTLEROCK_COAL)
 	{return new ItemStack(Items.COAL, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.HARDSTONE_REDSTONE || block == ModBlocks.DEEPSTONE_REDSTONE || block == ModBlocks.CRUSTROCK_REDSTONE || block == ModBlocks.MANTLEROCK_REDSTONE || block == ModBlocks.LOWER_MANTLEROCK_REDSTONE)
+	else if (block == ModBlocks.HARDROCK_REDSTONE || block == ModBlocks.DEEPROCK_REDSTONE || block == ModBlocks.CRUSTROCK_REDSTONE || block == ModBlocks.MANTLEROCK_REDSTONE || block == ModBlocks.LOWER_MANTLEROCK_REDSTONE)
 	{return new ItemStack(Items.REDSTONE, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.SULFUR_ORE || block == ModBlocks.HARDSTONE_SULFUR || block == ModBlocks.DEEPSTONE_SULFUR || block == ModBlocks.CRUSTROCK_SULFUR || block == ModBlocks.MANTLEROCK_SULFUR || block == ModBlocks.LOWER_MANTLEROCK_SULFUR)
+	else if (block == ModBlocks.SULFUR_ORE || block == ModBlocks.HARDROCK_SULFUR || block == ModBlocks.DEEPROCK_SULFUR || block == ModBlocks.CRUSTROCK_SULFUR || block == ModBlocks.MANTLEROCK_SULFUR || block == ModBlocks.LOWER_MANTLEROCK_SULFUR)
 	{return new ItemStack(ModItems.SULFUR, 1,0).getItem();}
 	else
 	{return new ItemStack(block, (int) (1), 0).getItem();}
@@ -72,12 +72,12 @@ public class GemBase extends BlockBase
 	public int quantityDropped(Random random) {
 		Block block = this;
 
-		if ( block == ModBlocks.HARDSTONE_REDSTONE)
+		if ( block == ModBlocks.HARDROCK_REDSTONE)
 		{
 			return 5 + random.nextInt(3);
 		}
 			
-		else if (block == ModBlocks.DEEPSTONE_REDSTONE)
+		else if (block == ModBlocks.DEEPROCK_REDSTONE)
 		{
 			return 6 + random.nextInt(4);
 		}
@@ -94,7 +94,7 @@ public class GemBase extends BlockBase
 		{
 			return 11 + random.nextInt(9);
 		}
-		else if (block == ModBlocks.DEEPSTONE_COAL || block == ModBlocks.DEEPSTONE_SULFUR)
+		else if (block == ModBlocks.DEEPROCK_COAL || block == ModBlocks.DEEPROCK_SULFUR)
 		{
 			return 2;
 		}
@@ -131,56 +131,56 @@ public class GemBase extends BlockBase
 		int z = pos.getZ();
 		Block block = this;
 		if (!world.isRemote) {
-			if (block == ModBlocks.HARDSTONE_COAL || block == ModBlocks.DEEPSTONE_COAL || block == ModBlocks.CRUSTROCK_COAL || block == ModBlocks.MANTLEROCK_COAL ||
-				block == ModBlocks.HARDSTONE_REDSTONE || block == ModBlocks.DEEPSTONE_REDSTONE || block == ModBlocks.CRUSTROCK_REDSTONE || block == ModBlocks.MANTLEROCK_REDSTONE ||
-				block == ModBlocks.HARDSTONE_EMERALD || block == ModBlocks.DEEPSTONE_EMERALD || block == ModBlocks.CRUSTROCK_EMERALD || block == ModBlocks.MANTLEROCK_EMERALD ||
-				block == ModBlocks.SULFUR_ORE || block == ModBlocks.HARDSTONE_SULFUR || block == ModBlocks.DEEPSTONE_SULFUR || block == ModBlocks.CRUSTROCK_SULFUR || block == ModBlocks.MANTLEROCK_SULFUR)
+			if (block == ModBlocks.HARDROCK_COAL || block == ModBlocks.DEEPROCK_COAL || block == ModBlocks.CRUSTROCK_COAL || block == ModBlocks.MANTLEROCK_COAL ||
+				block == ModBlocks.HARDROCK_REDSTONE || block == ModBlocks.DEEPROCK_REDSTONE || block == ModBlocks.CRUSTROCK_REDSTONE || block == ModBlocks.MANTLEROCK_REDSTONE ||
+				block == ModBlocks.HARDROCK_EMERALD || block == ModBlocks.DEEPROCK_EMERALD || block == ModBlocks.CRUSTROCK_EMERALD || block == ModBlocks.MANTLEROCK_EMERALD ||
+				block == ModBlocks.SULFUR_ORE || block == ModBlocks.HARDROCK_SULFUR || block == ModBlocks.DEEPROCK_SULFUR || block == ModBlocks.CRUSTROCK_SULFUR || block == ModBlocks.MANTLEROCK_SULFUR)
 		{
 			world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 		}
-		else if (block == ModBlocks.SAPPHIRE_ORE || block == ModBlocks.HARDSTONE_SAPPHIRE || block == ModBlocks.DEEPSTONE_SAPPHIRE || block == ModBlocks.CRUSTROCK_SAPPHIRE || block == ModBlocks.MANTLEROCK_SAPPHIRE)
+		else if (block == ModBlocks.SAPPHIRE_ORE || block == ModBlocks.HARDROCK_SAPPHIRE || block == ModBlocks.DEEPROCK_SAPPHIRE || block == ModBlocks.CRUSTROCK_SAPPHIRE || block == ModBlocks.MANTLEROCK_SAPPHIRE)
 		{
 			for (int i = 0; i < 5; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.FLAMING_TOPAZ_ORE || block == ModBlocks.HARDSTONE_FLAMING_TOPAZ || block == ModBlocks.DEEPSTONE_FLAMING_TOPAZ || block == ModBlocks.CRUSTROCK_FLAMING_TOPAZ || block == ModBlocks.MANTLEROCK_FLAMING_TOPAZ)
+		else if (block == ModBlocks.FLAMING_TOPAZ_ORE || block == ModBlocks.HARDROCK_FLAMING_TOPAZ || block == ModBlocks.DEEPROCK_FLAMING_TOPAZ || block == ModBlocks.CRUSTROCK_FLAMING_TOPAZ || block == ModBlocks.MANTLEROCK_FLAMING_TOPAZ)
 		{
 			for (int i = 0; i < 6; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.RUBY_ORE || block == ModBlocks.HARDSTONE_RUBY || block == ModBlocks.DEEPSTONE_RUBY || block == ModBlocks.CRUSTROCK_RUBY || block == ModBlocks.MANTLEROCK_RUBY)
+		else if (block == ModBlocks.RUBY_ORE || block == ModBlocks.HARDROCK_RUBY || block == ModBlocks.DEEPROCK_RUBY || block == ModBlocks.CRUSTROCK_RUBY || block == ModBlocks.MANTLEROCK_RUBY)
 		{
 			for (int i = 0; i < 8; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.TOPAZ_ORE || block == ModBlocks.HARDSTONE_TOPAZ || block == ModBlocks.DEEPSTONE_TOPAZ || block == ModBlocks.CRUSTROCK_TOPAZ || block == ModBlocks.MANTLEROCK_TOPAZ)
+		else if (block == ModBlocks.TOPAZ_ORE || block == ModBlocks.HARDROCK_TOPAZ || block == ModBlocks.DEEPROCK_TOPAZ || block == ModBlocks.CRUSTROCK_TOPAZ || block == ModBlocks.MANTLEROCK_TOPAZ)
 		{
 			for (int i = 0; i < 9; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.DIAMOND_ORE || block == ModBlocks.HARDSTONE_DIAMOND || block == ModBlocks.DEEPSTONE_DIAMOND || block == ModBlocks.CRUSTROCK_DIAMOND || block == ModBlocks.MANTLEROCK_DIAMOND)
+		else if (block == ModBlocks.DIAMOND_ORE || block == ModBlocks.HARDROCK_DIAMOND || block == ModBlocks.DEEPROCK_DIAMOND || block == ModBlocks.CRUSTROCK_DIAMOND || block == ModBlocks.MANTLEROCK_DIAMOND)
 		{
 			for (int i = 0; i < 12; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.JADE_ORE || block == ModBlocks.HARDSTONE_JADE || block == ModBlocks.DEEPSTONE_JADE || block == ModBlocks.CRUSTROCK_JADE || block == ModBlocks.MANTLEROCK_JADE)
+		else if (block == ModBlocks.JADE_ORE || block == ModBlocks.HARDROCK_JADE || block == ModBlocks.DEEPROCK_JADE || block == ModBlocks.CRUSTROCK_JADE || block == ModBlocks.MANTLEROCK_JADE)
 		{
 			for (int i = 0; i < 15; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.AMAZONITE_ORE || block == ModBlocks.HARDSTONE_AMAZONITE || block == ModBlocks.DEEPSTONE_AMAZONITE || block == ModBlocks.CRUSTROCK_AMAZONITE || block == ModBlocks.MANTLEROCK_AMAZONITE)
+		else if (block == ModBlocks.AMAZONITE_ORE || block == ModBlocks.HARDROCK_AMAZONITE || block == ModBlocks.DEEPROCK_AMAZONITE || block == ModBlocks.CRUSTROCK_AMAZONITE || block == ModBlocks.MANTLEROCK_AMAZONITE)
 		{
 			for (int i = 0; i < 20; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.AMETHYST_ORE || block == ModBlocks.HARDSTONE_AMETHYST || block == ModBlocks.DEEPSTONE_AMETHYST || block == ModBlocks.CRUSTROCK_AMETHYST || block == ModBlocks.MANTLEROCK_AMETHYST)
+		else if (block == ModBlocks.AMETHYST_ORE || block == ModBlocks.HARDROCK_AMETHYST || block == ModBlocks.DEEPROCK_AMETHYST || block == ModBlocks.CRUSTROCK_AMETHYST || block == ModBlocks.MANTLEROCK_AMETHYST)
 		{
 			for (int i = 0; i < 4; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 4));
@@ -189,7 +189,7 @@ public class GemBase extends BlockBase
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.ONYX_ORE || block == ModBlocks.HARDSTONE_ONYX || block == ModBlocks.DEEPSTONE_ONYX || block == ModBlocks.CRUSTROCK_ONYX || block == ModBlocks.MANTLEROCK_ONYX)
+		else if (block == ModBlocks.ONYX_ORE || block == ModBlocks.HARDROCK_ONYX || block == ModBlocks.DEEPROCK_ONYX || block == ModBlocks.CRUSTROCK_ONYX || block == ModBlocks.MANTLEROCK_ONYX)
 		{
 			for (int i = 0; i < 6; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 4));
@@ -198,7 +198,7 @@ public class GemBase extends BlockBase
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.AZURITE_ORE || block == ModBlocks.HARDSTONE_AZURITE || block == ModBlocks.DEEPSTONE_AZURITE || block == ModBlocks.CRUSTROCK_AZURITE || block == ModBlocks.MANTLEROCK_AZURITE)
+		else if (block == ModBlocks.AZURITE_ORE || block == ModBlocks.HARDROCK_AZURITE || block == ModBlocks.DEEPROCK_AZURITE || block == ModBlocks.CRUSTROCK_AZURITE || block == ModBlocks.MANTLEROCK_AZURITE)
 		{
 			for (int i = 0; i < 9; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 4));
