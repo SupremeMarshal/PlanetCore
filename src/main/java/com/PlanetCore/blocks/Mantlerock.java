@@ -31,6 +31,8 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
+import static org.apache.commons.lang3.RandomUtils.nextDouble;
+
 
 public class Mantlerock extends BlockBase
 {
@@ -46,9 +48,55 @@ public class Mantlerock extends BlockBase
 
 	}
 
+	//Natural Gas Explosion event
+	//Upon destroying the block, it has a small chance to explode. The deeper the rock is, the more probability it has to explode with a larger explosion.
+	public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
+	{
+		double r = nextDouble();
+		int X = pos.getX();
+		int Z = pos.getZ();
+		for(int Y = -768; Y > -4544; Y--)
+		{
+			int Strength = Y / -768 + 2;
+			try
+			{
+				double Probability = 10000 / (Y + 768);
+
+				r = r * (Probability);
+				if (r <= Probability)
+				{
+					worldIn.createExplosion(null, X, Y, Z, Strength, true);
+				}
+			}
+			catch (ArithmeticException e)
+			{
+				return;
+			}
+		}
+		for(int Y = -4545; Y > -5824; Y--)
+		{
+			int Strength = Y / -768 + 2;
+			try
+			{
+				double Probability = 5000 / (Y + 4544) + 0.006;
+				r = r * (Probability);
+				if (r <= Probability)
+				{
+					worldIn.createExplosion(null, X, Y, Z, Strength, true);
+				}
+			}
+			catch (ArithmeticException e)
+			{
+				return;
+			}
+		}
+	}
+
+
 	//Earthquake event
 	//Upon destroying the block, by a player or by explosion, the surrounding area for the player have a chance to crumble.
 	//How this event should work
+
 
 
 
@@ -58,12 +106,15 @@ public class Mantlerock extends BlockBase
 	@Override
 	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
 		super.onBlockExploded(world, pos, explosion);
+		naturalGasExplosion(world, pos, (IBlockState)explosion);
 	}
 
 	@Override
-	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest) {
-		return super.removedByPlayer(state, world, pos, player, willHarvest);
+	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
+		super.onPlayerDestroy(worldIn, pos, state);
+		naturalGasExplosion(worldIn, pos, state);
 	}
+
 
 
 }
