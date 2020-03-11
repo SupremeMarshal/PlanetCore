@@ -17,6 +17,8 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
+import static org.apache.commons.lang3.RandomUtils.nextDouble;
+
 public class RockBase extends BlockBase 
 {
 	public static int hardness;
@@ -253,6 +255,12 @@ public class RockBase extends BlockBase
 		}
 		return super.removedByPlayer(state, world, pos, entity, willHarvest);
 	}
+
+
+
+
+
+
 
 
 

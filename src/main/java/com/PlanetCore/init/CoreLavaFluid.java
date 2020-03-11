@@ -44,6 +44,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 
 	public static void burnEntities(World world, int x, int y, int z, int radius) {
+
 		float f = radius;
 		HashSet hashset = new HashSet();
 		int i;
@@ -79,28 +80,23 @@ public class CoreLavaFluid extends BlockFluidClassic {
 				BlockPos pos2 = new BlockPos(entity.posX,entity.posY + entity.getEyeHeight(),entity.posZ);
 				double d9 = MathHelper.sqrt(d5 * d5 + d6 * d6 + d7 * d7);
 
-				if (d9 < wat && !(entity instanceof EntityPlayer)) {
+				if (d9 < wat) {
 					d5 /= d9;
 					d6 /= d9;
 					d7 /= d9;
 					double d11 = (1.0D - d4);// * d10;
 					if (!(entity instanceof EntityPlayerMP) || (entity instanceof EntityPlayerMP
 							&& !((EntityPlayerMP) entity).isCreative())) {
-						// entity.attackEntityFrom(DamageSource.generic,
-						// ((int)((d11 * d11 + d11) / 2.0D * 8.0D *
-						// bombStartStrength + 1.0D)));
-						//double realisticDamage = 4*(bombStartStrength*bombStartStrength)/entity.getDistance(x, y, z);
-						//double damage = entity.getDistance(x, y, z) / bombStartStrength * 250;
-//					entity.attackEntityFrom(ModDamageSource.nuclearBlast, (float)damage);
 						entity.attackEntityFrom(DamageSource.ON_FIRE, 6);
 						entity.setFire(10);
 					}
 				}
 			}
 		}
-
 		radius = (int) f;
 	}
+
+
 
 	public void thermalEffects(World worldIn, BlockPos pos, IBlockState state)
 	{
@@ -108,45 +104,32 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		int Y = pos.getY();
 		int Z = pos.getZ();
 		Random rand = new Random();
-		burnEntities(worldIn,X,Y,Z, 6);
+
 		for(int x = -2; x < 3; x++) {
 			for(int y = -2; y < 3; y++) {
 				for(int z = -2; z < 3; z++) {
 					IBlockState state2 = worldIn.getBlockState(pos.add(x, y, z));
 					Block block = state2.getBlock();
-					if(state2.getMaterial()==Material.ROCK && !(block instanceof Corerock) && block!=Blocks.BEDROCK && block!=ModBlocks.COLD_CORESTONE)
+					if(state2.getMaterial()==Material.ROCK || state2.getMaterial()==Material.GROUND || state2.getMaterial()==Material.GRASS
+							&& !(block instanceof Corerock) && block!=Blocks.BEDROCK && block!=ModBlocks.COLD_CORESTONE)
 					{
-						worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
+						worldIn.setBlockState(new BlockPos(x, y, z), Blocks.LAVA.getDefaultState());
 					}
 
-					if(state2.getMaterial()==Material.GROUND)
-					{
-						worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
-					}
-
-					if(state2.getMaterial()==Material.GRASS)
-					{
-						worldIn.setBlockState(pos.add(x, y, z), Blocks.LAVA.getDefaultState());
-					}
 					if(state2.getMaterial()==Material.SNOW)
 					{
-						worldIn.setBlockToAir(pos.add(x, y, z));
+						worldIn.setBlockToAir(new BlockPos(x, y, z));
 					}
 					if(state2.getMaterial()==Material.WATER || state2.getMaterial()==Material.ICE || state2.getMaterial()==Material.CRAFTED_SNOW)
 					{
-						worldIn.setBlockToAir(pos.add(x, y, z));
-						worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-						worldIn.createExplosion(null, X+x, Y+y, Z+z, 10, true);
+						worldIn.setBlockToAir(new BlockPos(x, y, z));
+						//worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
+						worldIn.createExplosion(null, X+x, Y+y, Z+z, 10, false);
 					}
 					if(state2.getBlock().getFlammability(worldIn, pos, null)>0 || state2.getMaterial()==Material.WOOD || state2.getMaterial()==Material.CLOTH || state2.getMaterial()==Material.PLANTS || state2.getMaterial()==Material.LEAVES)
 					{
-						worldIn.setBlockState(pos.add(x, y, z), Blocks.FIRE.getDefaultState());
+						worldIn.setBlockState(new BlockPos(x, y, z), Blocks.FIRE.getDefaultState());
 					}
-
-
-
-
-
 				}
 			}
 		}
@@ -154,10 +137,11 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 	public void coreTemperature(World worldIn, BlockPos pos,IBlockState state)
 	{
+
 		int X = pos.getX();
 		int Y = pos.getY();
 		int Z = pos.getZ();
-		burnEntities(worldIn,X,Y,Z, 6);
+		burnEntities(worldIn,X,Y,Z, 9);
 		Random rand = new Random();
 
 		if(pos.getY()<=-12750)
@@ -220,11 +204,11 @@ public class CoreLavaFluid extends BlockFluidClassic {
 			//Full Amazonite protect 100%
 
 			//no protection
-
-
 			entityIn.attackEntityFrom(DamageSource.GENERIC, 8.0F);
 		}
 	}
+
+
 
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
@@ -233,6 +217,8 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		thermalEffects(worldIn,pos,state);
 		coreTemperature(worldIn,pos,state);
 	}
+
+
 
 
 	@Override

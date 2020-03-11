@@ -21,6 +21,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 
 
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.potion.Potion;
 
 import net.minecraft.potion.PotionEffect;
@@ -63,13 +64,14 @@ public class EnchantmentInit
 
         EntityLivingBase living = event.getEntityLiving();
 
-        int level = EnchantmentHelper.getMaxEnchantmentLevel(CoolingCore, living);
+        //int level = EnchantmentHelper.getMaxEnchantmentLevel(CoolingCore, living);
 
         BlockPos pos = living.getPosition();
 
 
 
-        if(level > 0)
+        //if(level > 0)
+        if (living.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == ModItems.AMAZONITE_BOOTS)
 
         {
 
