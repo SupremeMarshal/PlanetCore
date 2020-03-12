@@ -65,7 +65,7 @@ public class BlockBase extends Block implements IHasModel
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		int PressureLevel = (pos.getY() * -23808 *100)^3;
 		float chance = (pos.getY()/-23808);
-		if (pos.getY() < 0 && pos.getY() > -12544)
+		if (pos.getY() < 0)
 		{
 			if (rand.nextFloat() <= chance)
 			{
