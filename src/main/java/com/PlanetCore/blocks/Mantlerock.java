@@ -9,12 +9,14 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -81,10 +83,10 @@ public class Mantlerock extends BlockBase
 		}
 	}
 */
-	Random rand = new Random();
-	//Pressure!
-	public void pressure(World worldIn, BlockPos pos, IBlockState state) {
 
+
+
+		/*
 		IBlockState state1 = worldIn.getBlockState(pos.up());
 		IBlockState state2 = worldIn.getBlockState(pos.down());
 		IBlockState state3 = worldIn.getBlockState(pos.east());
@@ -109,114 +111,91 @@ public class Mantlerock extends BlockBase
 
  		*/
 
-		int side1 = 0;
-		int side2 = 0;
-		int side3 = 0;
-		int side4 = 0;
-		int side5 = 0;
-		int side6 = 0;
-		int sides = side1 + side2 + side3 + side4 + side5 + side6;
-		int chance = rand.nextInt(6);
+/*
 		//if (rand.nextInt(20) == 0) {
-			if (state1.getMaterial() == Material.AIR) {
-				side1 = 1;
-			} else if (state1.getMaterial() != Material.AIR) {
-				side1 = 0;
-				sides++;
-				System.out.println("Sides1: " + sides);
-			}
-			else if (state2.getMaterial() == Material.AIR) {
-				side2 = 1;
-			} else if (state2.getMaterial() != Material.AIR) {
-				side2 = 0;
-				sides++;
-				System.out.println("Sides2: " + sides);
-			}
-			else if (state3.getMaterial() == Material.AIR) {
-				side3 = 1;
-			} else if (state3.getMaterial() != Material.AIR) {
-				side3 = 0;
-				sides++;
-				System.out.println("Sides3: " + sides);
-			}
-			else if (state4.getMaterial() == Material.AIR) {
-				side4 = 1;
-			} else if (state4.getMaterial() != Material.AIR) {
-				side4 = 0;
-				sides++;
-				System.out.println("Sides4: " + sides);
-			}
-			else if (state5.getMaterial() == Material.AIR) {
-				side5 = 1;
-			} else if (state5.getMaterial() != Material.AIR) {
-				side5 = 0;
-				sides++;
-				System.out.println("Sides4: " + sides);
-			}
-			else if (state6.getMaterial() == Material.AIR) {
-				side6 = 1;
-			} else if (state5.getMaterial() != Material.AIR) {
-				side6 = 0;
-				sides++;
-				System.out.println("Sides5: " + sides);
-			}
-if (side1 == 0 && side2 == 0 && side3 == 0 && side4 ==0 && side5 ==0 && side6 ==0)
-{
-	return;
-}
-else if (side1 == 1 && side2 == 0 && side3 == 0 && side4 ==0 && side5 ==0 && side6 ==0)
-{
-	worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
-	worldIn.setBlockState(pos.up(), state1.getBlock().getDefaultState());
-}
-else if (side1 == 1 && side2 == 1 && side3 == 0 && side4 ==0 && side5 ==0 && side6 ==0)
-{
-	int prob = rand.nextInt(2);
-	if (prob ==0)
-	{
-		worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
-		worldIn.setBlockState(pos.up(), state1.getBlock().getDefaultState());
-	}
-	else if (prob ==1)
-	{
-		worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
-		worldIn.setBlockState(pos.down(), state2.getBlock().getDefaultState());
-	}
-}
-else if (side1 == 1 && side2 == 1 && side3 == 1 && side4 ==0 && side5 ==0 && side6 ==0)
-{
-	int prob = rand.nextInt(3);
-	if (prob ==0)
-	{
-		worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
-		worldIn.setBlockState(pos.up(), state1.getBlock().getDefaultState());
-	}
-	else if (prob ==1)
-	{
-		worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
-		worldIn.setBlockState(pos.down(), state2.getBlock().getDefaultState());
-	}
-	else if (prob ==2)
-	{
-		worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
-		worldIn.setBlockState(pos.east(), state3.getBlock().getDefaultState());
-	}
-}
-else if (side1 == 1 && side2 == 1 && side3 == 1 && side4 ==1 && side5 ==0 && side6 ==0)
-{
+		int sides = 0;
+		if (state1.getMaterial() == Material.AIR) {
+			sides++;
+		} else if (state2.getMaterial() == Material.AIR) {
+			sides++;
+		} else if (state3.getMaterial() == Material.AIR) {
+			sides++;
+		} else if (state4.getMaterial() == Material.AIR) {
+			sides++;
+		} else if (state5.getMaterial() == Material.AIR) {
+			sides++;
+		} else if (state6.getMaterial() == Material.AIR) {
+			sides++;
+		}
 
-}
-else if (side1 == 1 && side2 == 1 && side3 == 1 && side4 ==1 && side5 ==1 && side6 ==0)
-{
+		int k = rand.nextInt(sides - 1);
+		if (sides == 0) {
+			worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+			return;
+		} else if (k == 0) {
+			worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+			worldIn.setBlockState(pos.up(), state.getBlock().getDefaultState());
+		} else if (k == 1) {
+			worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+			worldIn.setBlockState(pos.down(), state.getBlock().getDefaultState());
+		} else if (k == 2) {
+			worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+			worldIn.setBlockState(pos.east(), state.getBlock().getDefaultState());
+		} else if (k == 3) {
+			worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+			worldIn.setBlockState(pos.west(), state.getBlock().getDefaultState());
+		} else if (k == 4) {
+			worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+			worldIn.setBlockState(pos.south(), state.getBlock().getDefaultState());
+		} else if (k == 5) {
+			worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+			worldIn.setBlockState(pos.north(), state.getBlock().getDefaultState());
+		}
+	}
 
-}
-else if (side1 == 1 && side2 == 1 && side3 == 1 && side4 ==1 && side5 ==1 && side6 ==1)
-{
+ */
 
-}
+		// can just do this first.
+		//worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+
+
+
+		/* up, down, etc. in same order as `states`. probably a method to get dir from int, idk, if not use this */
+
+
+/*
+		BlockPos[] offsets = new BlockPos[]{pos.up(), pos.down(), pos.east(), pos.west(), pos.north(), pos.south()};
+		IBlockState[] states = {worldIn.getBlockState(offsets[0]),worldIn.getBlockState(offsets[1]),worldIn.getBlockState(offsets[2]),worldIn.getBlockState(offsets[3]),worldIn.getBlockState(offsets[4]),worldIn.getBlockState(offsets[5])};
+
+		int sides = 0;
+
+		for (IBlockState neighborState : states) {
+			if (neighborState.getMaterial() == Material.AIR) {
+				sides += 1;
+			}
+		}
+		if (sides == 0) {
+			return;
+		}
+		int k = rand.nextInt(sides-1);
+		int j = 0;
+		for (int i = 0; i < 6; i++) {
+			IBlockState neighborState = states[i];
+			if (neighborState.getMaterial() == Material.AIR) {
+				if (j == k) {
+					worldIn.setBlockState(pos.add(offsets[i]), state.getBlock().getDefaultState());
+					worldIn.setBlockState(pos, ModBlocks.MANTLEROCK.getDefaultState());
+
+					return;
+				} else {
+					j++;
+				}
+			}
+		}
+*/
 
 		//}
-	}
+
 				/*
 			{
 
@@ -316,9 +295,10 @@ else if (side1 == 1 && side2 == 1 && side3 == 1 && side4 ==1 && side5 ==1 && sid
 							IBlockState state3 = worldIn.getBlockState(pos3);
 						if (state3.getBlock() instanceof Mantlerock) {
 							if (!worldIn.isRemote) {
-								EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, (double) pos.getX() + 0.5D, (double) pos.getY(), (double) pos.getZ() + 0.5D, worldIn.getBlockState(pos));
-								//this.onStartFalling(entityfallingblock);
-								worldIn.spawnEntity(entityfallingblock);
+								  EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, (double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, worldIn.getBlockState(pos));
+        entityfallingblock.setHurtEntities(true);
+        //this.onStartFalling(entityfallingblock);
+        					worldIn.spawnEntity(entityfallingblock);
 							}
 						}
 					}
@@ -389,7 +369,6 @@ else if (side1 == 1 && side2 == 1 && side3 == 1 && side4 ==1 && side5 ==1 && sid
 		//unstableBlock(worldIn,pos,state);
 		//Only if the event has started
 		lavaDecompression(worldIn,pos,state);
-		pressure(worldIn,pos,state);
 	}
 
 

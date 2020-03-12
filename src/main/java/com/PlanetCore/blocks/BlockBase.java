@@ -22,12 +22,15 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
+import java.util.Arrays;
+import java.util.Random;
 
 
 public class BlockBase extends Block implements IHasModel
@@ -54,11 +57,48 @@ public class BlockBase extends Block implements IHasModel
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 		setSoundType(SoundType.METAL);
-
-
-
 	}
+	Random rand = new Random();
 
+
+	@Override
+	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+		int PressureLevel = (pos.getY() * -23808 *100)^3;
+		float chance = (pos.getY()/-23808);
+		if (pos.getY() < 0 && pos.getY() > -12544)
+		{
+			if (rand.nextFloat() <= chance)
+			{
+				for (EnumFacing side : EnumFacing.values()) {
+					BlockPos movedPos = pos.offset(side);
+					IBlockState movedState = worldIn.getBlockState(movedPos);
+					if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel
+							|| movedState.getMaterial() == Material.WATER || movedState.getMaterial() == Material.LAVA || movedState.getBlock() == Blocks.ANVIL)continue; // you can add more blocks to this check to exclude them
+					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
+							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
+							.toArray(EnumFacing[]::new);
+					if (sides.length == 0) continue;
+					if (pos.getY() > -12544)
+					{
+						worldIn.setBlockState(movedPos, ModBlocks.MANTLEROCK.getDefaultState());
+					}
+					else if (pos.getY() <= -12544 && pos.getY() > -17920)
+					{
+						worldIn.setBlockState(movedPos, ModBlocks.CORESTONE.getDefaultState());
+					}
+					else if (pos.getY() <= -17920 && pos.getY() > -23168)
+					{
+						worldIn.setBlockState(movedPos, ModBlocks.INNERCORESTONE.getDefaultState());
+					}
+					else if (pos.getY() <= -23168 && pos.getY() > -23808)
+					{
+						worldIn.setBlockState(movedPos, ModBlocks.INNERCORESTONE.getDefaultState());
+					}
+					worldIn.setBlockState(pos.offset(sides[rand.nextInt(sides.length)]), movedState);
+				}
+			}
+		}
+	}
 
 	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
 	{
@@ -137,7 +177,15 @@ public class BlockBase extends Block implements IHasModel
 			}
 		}
 	}
+	@Override
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+	{
+		super.updateTick(worldIn, pos, state, rand);
 
+		//unstableBlock(worldIn,pos,state);
+		//Only if the event has started
+		//pressure(rand, worldIn,pos,state);
+	}
 
 	protected BlockPattern getSnowmanPattern()
 	{
