@@ -116,7 +116,7 @@
     },
     {
       "blockstate": {
-        "Name": "totheearthcore:silver_ore"
+        "Name": "planetcore:silver_ore"
       },
       "spawnSize": 9,
       "spawnTries": 1,
@@ -126,7 +126,7 @@
     },
     {
       "blockstate": {
-        "Name": "totheearthcore:gold_ore"
+        "Name": "planetcore:gold_ore"
       },
       "spawnSize": 9,
       "spawnTries": 1,
@@ -232,11 +232,11 @@
         "standardOres": [
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_coal"
+              "Name": "planetcore:hardrock_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 17,
@@ -247,11 +247,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_redstone"
+              "Name": "planetcore:hardrock_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 8,
@@ -262,11 +262,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_iron"
+              "Name": "planetcore:hardrock_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 9,
@@ -277,11 +277,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_silver"
+              "Name": "planetcore:hardrock_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 9,
@@ -292,11 +292,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_gold"
+              "Name": "planetcore:hardrock_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 9,
@@ -307,11 +307,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_platinum"
+              "Name": "planetcore:hardrock_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 9,
@@ -322,11 +322,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_emerald"
+              "Name": "planetcore:hardrock_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -337,11 +337,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_lapis"
+              "Name": "planetcore:hardrock_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 7,
@@ -352,11 +352,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_sapphire"
+              "Name": "planetcore:hardrock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -367,11 +367,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_sapphire"
+              "Name": "planetcore:hardrock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 5,
@@ -382,11 +382,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_sapphire"
+              "Name": "planetcore:hardrock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 5,
@@ -397,11 +397,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_sapphire"
+              "Name": "planetcore:hardrock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 5,
@@ -412,11 +412,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_ruby"
+              "Name": "planetcore:hardrock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -427,11 +427,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_ruby"
+              "Name": "planetcore:hardrock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -442,11 +442,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_sulfur"
+              "Name": "planetcore:hardrock_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 10,
@@ -457,11 +457,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_diamond"
+              "Name": "planetcore:hardrock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -472,11 +472,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_amazonite"
+              "Name": "planetcore:hardrock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -487,11 +487,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_coal"
+              "Name": "planetcore:deeprock_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 17,
@@ -502,11 +502,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_redstone"
+              "Name": "planetcore:deeprock_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 8,
@@ -517,11 +517,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_iron"
+              "Name": "planetcore:deeprock_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 9,
@@ -532,11 +532,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_silver"
+              "Name": "planetcore:deeprock_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 9,
@@ -547,11 +547,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_gold"
+              "Name": "planetcore:deeprock_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 9,
@@ -562,11 +562,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_platinum"
+              "Name": "planetcore:deeprock_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 9,
@@ -577,11 +577,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_emerald"
+              "Name": "planetcore:deeprock_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 5,
@@ -592,11 +592,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_lapis"
+              "Name": "planetcore:deeprock_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 7,
@@ -607,11 +607,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_sapphire"
+              "Name": "planetcore:deeprock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 5,
@@ -622,11 +622,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_ruby"
+              "Name": "planetcore:deeprock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 5,
@@ -637,11 +637,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_diamond"
+              "Name": "planetcore:deeprock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 4,
@@ -652,11 +652,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_sulfur"
+              "Name": "planetcore:deeprock_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 10,
@@ -667,11 +667,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_amazonite"
+              "Name": "planetcore:deeprock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 4,
@@ -689,10 +689,10 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               },
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 200,
@@ -710,10 +710,10 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               },
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 15,
@@ -728,7 +728,7 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               },
               {
                 "Properties": {
@@ -743,43 +743,43 @@
                 "Name": "minecraft:flowing_lava"
               },
               {
-                "Name": "totheearthcore:redrock_coal"
+                "Name": "planetcore:deeprock_coal"
               },
               {
-                "Name": "totheearthcore:redrock_iron"
+                "Name": "planetcore:deeprock_iron"
               },
               {
-                "Name": "totheearthcore:redrock_silver"
+                "Name": "planetcore:deeprock_silver"
               },
               {
-                "Name": "totheearthcore:redrock_gold"
+                "Name": "planetcore:deeprock_gold"
               },
               {
-                "Name": "totheearthcore:redrock_platinum"
+                "Name": "planetcore:deeprock_platinum"
               },
               {
-                "Name": "totheearthcore:redrock_emerald"
+                "Name": "planetcore:deeprock_emerald"
               },
               {
-                "Name": "totheearthcore:redrock_lapis"
+                "Name": "planetcore:deeprock_lapis"
               },
               {
-                "Name": "totheearthcore:redrock_sapphire"
+                "Name": "planetcore:deeprock_sapphire"
               },
               {
-                "Name": "totheearthcore:redrock_ruby"
+                "Name": "planetcore:deeprock_ruby"
               },
               {
-                "Name": "totheearthcore:redrock_diamond"
+                "Name": "planetcore:deeprock_diamond"
               },
               {
-                "Name": "totheearthcore:redrock_amazonite"
+                "Name": "planetcore:deeprock_amazonite"
               },
               {
-                "Name": "totheearthcore:redrock_sulfur"
+                "Name": "planetcore:deeprock_sulfur"
               },
               {
-                "Name": "totheearthcore:redrock_redstone"
+                "Name": "planetcore:deeprock_redstone"
               }
             ],
             "spawnSize": 400,
@@ -794,7 +794,7 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               },
               {
                 "Properties": {
@@ -809,46 +809,46 @@
                 "Name": "minecraft:flowing_lava"
               },
               {
-                "Name": "totheearthcore:hardstone_coal"
+                "Name": "planetcore:hardrock_coal"
               },
               {
-                "Name": "totheearthcore:hardstone_iron"
+                "Name": "planetcore:hardrock_iron"
               },
               {
-                "Name": "totheearthcore:hardstone_redstone"
+                "Name": "planetcore:hardrock_redstone"
               },
               {
-                "Name": "totheearthcore:hardstone_emerald"
+                "Name": "planetcore:hardrock_emerald"
               },
               {
-                "Name": "totheearthcore:hardstone_lapis"
+                "Name": "planetcore:hardrock_lapis"
               },
               {
-                "Name": "totheearthcore:hardstone_silver"
+                "Name": "planetcore:hardrock_silver"
               },
               {
-                "Name": "totheearthcore:hardstone_gold"
+                "Name": "planetcore:hardrock_gold"
               },
               {
-                "Name": "totheearthcore:hardstone_platinum"
+                "Name": "planetcore:hardrock_platinum"
               },
               {
-                "Name": "totheearthcore:hardstone_sapphire"
+                "Name": "planetcore:hardrock_sapphire"
               },
               {
-                "Name": "totheearthcore:hardstone_ruby"
+                "Name": "planetcore:hardrock_ruby"
               },
               {
-                "Name": "totheearthcore:hardstone_diamond"
+                "Name": "planetcore:hardrock_diamond"
               },
               {
-                "Name": "totheearthcore:hardstone_amazonite"
+                "Name": "planetcore:hardrock_amazonite"
               },
               {
                 "Name": "minecraft:gravel"
               },
               {
-                "Name": "totheearthcore:hardstone_sulfur"
+                "Name": "planetcore:hardrock_sulfur"
               }
             ],
             "spawnSize": 400,
@@ -917,10 +917,10 @@
           },
           "overrides": {
             "cubicgen:ocean_block": {
-              "Name": "totheearthcore:hardstone"
+              "Name": "planetcore:hardrock"
             },
             "cubicgen:terrain_fill_block": {
-              "Name": "totheearthcore:redrock"
+              "Name": "planetcore:deeprock"
             },
             "cubicgen:mesa_depth": NaN,
             "cubicgen:biome_fill_depth_factor": NaN
@@ -998,7 +998,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:iron_ore"
+              "Name": "planetcore:iron_ore"
             },
             "genInBlockstates": [
               {
@@ -1016,7 +1016,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:silver_ore"
+              "Name": "planetcore:silver_ore"
             },
             "genInBlockstates": [
               {
@@ -1034,7 +1034,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:sulfur_ore"
+              "Name": "planetcore:sulfur_ore"
             },
             "genInBlockstates": [
               {
@@ -1052,7 +1052,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:gold_ore"
+              "Name": "planetcore:gold_ore"
             },
             "genInBlockstates": [
               {
@@ -1070,7 +1070,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:platinum_ore"
+              "Name": "planetcore:platinum_ore"
             },
             "genInBlockstates": [
               {
@@ -1124,7 +1124,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:sapphire_ore"
+              "Name": "planetcore:sapphire_ore"
             },
             "genInBlockstates": [
               {
@@ -1142,7 +1142,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:ruby_ore"
+              "Name": "planetcore:ruby_ore"
             },
             "genInBlockstates": [
               {
@@ -1160,7 +1160,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:diamond_ore"
+              "Name": "planetcore:diamond_ore"
             },
             "genInBlockstates": [
               {
@@ -1178,7 +1178,7 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:amazonite_ore"
+              "Name": "planetcore:amazonite_ore"
             },
             "genInBlockstates": [
               {
@@ -1196,11 +1196,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_coal"
+              "Name": "planetcore:hardrock_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 17,
@@ -1211,11 +1211,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_redstone"
+              "Name": "planetcore:hardrock_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 8,
@@ -1226,11 +1226,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_iron"
+              "Name": "planetcore:hardrock_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 9,
@@ -1241,11 +1241,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_silver"
+              "Name": "planetcore:hardrock_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 9,
@@ -1256,11 +1256,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_gold"
+              "Name": "planetcore:hardrock_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 9,
@@ -1271,11 +1271,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_sulfur"
+              "Name": "planetcore:hardrock_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 10,
@@ -1286,11 +1286,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_platinum"
+              "Name": "planetcore:hardrock_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 9,
@@ -1301,11 +1301,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_emerald"
+              "Name": "planetcore:hardrock_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -1316,11 +1316,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_lapis"
+              "Name": "planetcore:hardrock_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 7,
@@ -1331,11 +1331,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_sapphire"
+              "Name": "planetcore:hardrock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -1346,11 +1346,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_ruby"
+              "Name": "planetcore:hardrock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -1361,11 +1361,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_diamond"
+              "Name": "planetcore:hardrock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -1376,11 +1376,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:hardstone_amazonite"
+              "Name": "planetcore:hardrock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 4,
@@ -1429,7 +1429,7 @@
                 "Name": "minecraft:stone"
               },
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               }
             ],
             "spawnSize": 44,
@@ -1486,7 +1486,7 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               },
               {
                 "Properties": {
@@ -1510,7 +1510,7 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               },
               {
                 "Properties": {
@@ -1531,7 +1531,7 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:hardstone"
+                "Name": "planetcore:hardrock"
               },
               {
                 "Properties": {
@@ -1573,43 +1573,43 @@
                 "Name": "minecraft:flowing_water"
               },
               {
-                "Name": "totheearthcore:hardstone_coal"
+                "Name": "planetcore:hardrock_coal"
               },
               {
-                "Name": "totheearthcore:hardstone_iron"
+                "Name": "planetcore:hardrock_iron"
               },
               {
-                "Name": "totheearthcore:hardstone_redstone"
+                "Name": "planetcore:hardrock_redstone"
               },
               {
-                "Name": "totheearthcore:hardstone_emerald"
+                "Name": "planetcore:hardrock_emerald"
               },
               {
-                "Name": "totheearthcore:hardstone_lapis"
+                "Name": "planetcore:hardrock_lapis"
               },
               {
-                "Name": "totheearthcore:hardstone_silver"
+                "Name": "planetcore:hardrock_silver"
               },
               {
-                "Name": "totheearthcore:hardstone_gold"
+                "Name": "planetcore:hardrock_gold"
               },
               {
-                "Name": "totheearthcore:hardstone_platinum"
+                "Name": "planetcore:hardrock_platinum"
               },
               {
-                "Name": "totheearthcore:hardstone_sapphire"
+                "Name": "planetcore:hardrock_sapphire"
               },
               {
-                "Name": "totheearthcore:hardstone_ruby"
+                "Name": "planetcore:hardrock_ruby"
               },
               {
-                "Name": "totheearthcore:hardstone_diamond"
+                "Name": "planetcore:hardrock_diamond"
               },
               {
-                "Name": "totheearthcore:hardstone_amazonite"
+                "Name": "planetcore:hardrock_amazonite"
               },
               {
-                "Name": "totheearthcore:hardstone_sulfur"
+                "Name": "planetcore:hardrock_sulfur"
               }
             ],
             "spawnSize": 300,
@@ -1672,16 +1672,16 @@
                 "Name": "minecraft:coal_ore"
               },
               {
-                "Name": "totheearthcore:iron_ore"
+                "Name": "planetcore:iron_ore"
               },
               {
-                "Name": "totheearthcore:silver_ore"
+                "Name": "planetcore:silver_ore"
               },
               {
-                "Name": "totheearthcore:gold_ore"
+                "Name": "planetcore:gold_ore"
               },
               {
-                "Name": "totheearthcore:platinum_ore"
+                "Name": "planetcore:platinum_ore"
               },
               {
                 "Name": "minecraft:redstone_ore"
@@ -1693,19 +1693,19 @@
                 "Name": "minecraft:lapis_ore"
               },
               {
-                "Name": "totheearthcore:sapphire_ore"
+                "Name": "planetcore:sapphire_ore"
               },
               {
-                "Name": "totheearthcore:ruby_ore"
+                "Name": "planetcore:ruby_ore"
               },
               {
-                "Name": "totheearthcore:diamond_ore"
+                "Name": "planetcore:diamond_ore"
               },
               {
-                "Name": "totheearthcore:amazonite_ore"
+                "Name": "planetcore:amazonite_ore"
               },
               {
-                "Name": "totheearthcore:sulfur_ore"
+                "Name": "planetcore:sulfur_ore"
               }
             ],
             "spawnSize": 300,
@@ -1781,7 +1781,7 @@
               "Name": "minecraft:stone"
             },
             "cubicgen:terrain_fill_block": {
-              "Name": "totheearthcore:hardstone"
+              "Name": "planetcore:hardrock"
             },
             "cubicgen:mesa_depth": NaN,
             "cubicgen:biome_fill_depth_factor": NaN
@@ -1823,11 +1823,11 @@
         "standardOres": [
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_coal"
+              "Name": "planetcore:deeprock_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 17,
@@ -1838,11 +1838,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_redstone"
+              "Name": "planetcore:deeprock_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 8,
@@ -1853,11 +1853,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_iron"
+              "Name": "planetcore:deeprock_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 9,
@@ -1868,11 +1868,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_silver"
+              "Name": "planetcore:deeprock_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 9,
@@ -1883,11 +1883,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_gold"
+              "Name": "planetcore:deeprock_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 9,
@@ -1898,11 +1898,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_platinum"
+              "Name": "planetcore:deeprock_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 9,
@@ -1913,11 +1913,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_emerald"
+              "Name": "planetcore:deeprock_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 5,
@@ -1928,11 +1928,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_lapis"
+              "Name": "planetcore:deeprock_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 7,
@@ -1943,11 +1943,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_sapphire"
+              "Name": "planetcore:deeprock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 6,
@@ -1958,11 +1958,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_ruby"
+              "Name": "planetcore:deeprock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 5,
@@ -1973,11 +1973,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_diamond"
+              "Name": "planetcore:deeprock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 4,
@@ -1988,11 +1988,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_sulfur"
+              "Name": "planetcore:deeprock_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 11,
@@ -2003,11 +2003,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:redrock_amazonite"
+              "Name": "planetcore:deeprock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               }
             ],
             "spawnSize": 4,
@@ -2018,11 +2018,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sulfur"
+              "Name": "planetcore:mantlerock_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 10,
@@ -2033,11 +2033,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_coal"
+              "Name": "planetcore:mantlerock_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 17,
@@ -2048,11 +2048,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_redstone"
+              "Name": "planetcore:mantlerock_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 8,
@@ -2063,11 +2063,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_iron"
+              "Name": "planetcore:mantlerock_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 9,
@@ -2078,11 +2078,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_silver"
+              "Name": "planetcore:mantlerock_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 9,
@@ -2093,11 +2093,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_gold"
+              "Name": "planetcore:mantlerock_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 9,
@@ -2108,11 +2108,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_platinum"
+              "Name": "planetcore:mantlerock_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 9,
@@ -2123,11 +2123,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_emerald"
+              "Name": "planetcore:mantlerock_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -2138,11 +2138,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_lapis"
+              "Name": "planetcore:mantlerock_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -2153,11 +2153,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sapphire"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -2168,11 +2168,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sapphire"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -2183,11 +2183,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sapphire"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -2198,11 +2198,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sapphire"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -2213,11 +2213,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sapphire"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -2228,11 +2228,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sapphire"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 8,
@@ -2243,11 +2243,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -2258,11 +2258,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -2273,11 +2273,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -2288,11 +2288,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -2303,11 +2303,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -2318,11 +2318,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_diamond"
+              "Name": "planetcore:mantlerock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 5,
@@ -2333,11 +2333,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_amazonite"
+              "Name": "planetcore:mantlerock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 4,
@@ -2348,11 +2348,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_diamond"
+              "Name": "planetcore:mantlerock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -2363,11 +2363,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_amazonite"
+              "Name": "planetcore:mantlerock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 5,
@@ -2385,10 +2385,10 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               },
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 20,
@@ -2406,10 +2406,10 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               },
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 25,
@@ -2427,10 +2427,10 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               },
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 35,
@@ -2444,11 +2444,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 20,
@@ -2462,11 +2462,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 25,
@@ -2480,11 +2480,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 30,
@@ -2498,11 +2498,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 40,
@@ -2516,11 +2516,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 45,
@@ -2534,11 +2534,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_mantlerock"
+              "Name": "planetcore:hot_mantlerock"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 50,
@@ -2552,11 +2552,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_mantlerock"
+              "Name": "planetcore:hot_mantlerock"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 70,
@@ -2570,11 +2570,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_mantlerock"
+              "Name": "planetcore:hot_mantlerock"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 100,
@@ -2589,7 +2589,7 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               },
               {
                 "Properties": {
@@ -2607,52 +2607,52 @@
                 "Properties": {
                   "level": "0"
                 },
-                "Name": "totheearthcore:hot_lava"
+                "Name": "planetcore:hot_lava"
               },
               {
-                "Name": "totheearthcore:mantlerock_coal"
+                "Name": "planetcore:mantlerock_coal"
               },
               {
-                "Name": "totheearthcore:mantlerock_iron"
+                "Name": "planetcore:mantlerock_iron"
               },
               {
-                "Name": "totheearthcore:mantlerock_redstone"
+                "Name": "planetcore:mantlerock_redstone"
               },
               {
-                "Name": "totheearthcore:mantlerock_emerald"
+                "Name": "planetcore:mantlerock_emerald"
               },
               {
-                "Name": "totheearthcore:mantlerock_lapis"
+                "Name": "planetcore:mantlerock_lapis"
               },
               {
-                "Name": "totheearthcore:mantlerock_silver"
+                "Name": "planetcore:mantlerock_silver"
               },
               {
-                "Name": "totheearthcore:mantlerock_gold"
+                "Name": "planetcore:mantlerock_gold"
               },
               {
-                "Name": "totheearthcore:mantlerock_platinum"
+                "Name": "planetcore:mantlerock_platinum"
               },
               {
-                "Name": "totheearthcore:mantlerock_sapphire"
+                "Name": "planetcore:mantlerock_sapphire"
               },
               {
-                "Name": "totheearthcore:mantlerock_ruby"
+                "Name": "planetcore:mantlerock_ruby"
               },
               {
-                "Name": "totheearthcore:mantlerock_diamond"
+                "Name": "planetcore:mantlerock_diamond"
               },
               {
-                "Name": "totheearthcore:mantlerock_amazonite"
+                "Name": "planetcore:mantlerock_amazonite"
               },
               {
-                "Name": "totheearthcore:mantlegas"
+                "Name": "planetcore:mantlegas"
               },
               {
-                "Name": "totheearthcore:mantlerock_sulfur"
+                "Name": "planetcore:mantlerock_sulfur"
               },
               {
-                "Name": "totheearthcore:hot_mantlerock"
+                "Name": "planetcore:hot_mantlerock"
               }
             ],
             "spawnSize": 550,
@@ -2667,7 +2667,7 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:redrock"
+                "Name": "planetcore:deeprock"
               },
               {
                 "Properties": {
@@ -2685,52 +2685,52 @@
                 "Properties": {
                   "level": "0"
                 },
-                "Name": "totheearthcore:hot_lava"
+                "Name": "planetcore:hot_lava"
               },
               {
-                "Name": "totheearthcore:redrock_coal"
+                "Name": "planetcore:deeprock_coal"
               },
               {
-                "Name": "totheearthcore:redrock_iron"
+                "Name": "planetcore:deeprock_iron"
               },
               {
-                "Name": "totheearthcore:redrock_redstone"
+                "Name": "planetcore:deeprock_redstone"
               },
               {
-                "Name": "totheearthcore:redrock_silver"
+                "Name": "planetcore:deeprock_silver"
               },
               {
-                "Name": "totheearthcore:redrock_gold"
+                "Name": "planetcore:deeprock_gold"
               },
               {
-                "Name": "totheearthcore:redrock_platinum"
+                "Name": "planetcore:deeprock_platinum"
               },
               {
-                "Name": "totheearthcore:redrock_emerald"
+                "Name": "planetcore:deeprock_emerald"
               },
               {
-                "Name": "totheearthcore:redrock_lapis"
+                "Name": "planetcore:deeprock_lapis"
               },
               {
-                "Name": "totheearthcore:redrock_sapphire"
+                "Name": "planetcore:deeprock_sapphire"
               },
               {
-                "Name": "totheearthcore:redrock_ruby"
+                "Name": "planetcore:deeprock_ruby"
               },
               {
-                "Name": "totheearthcore:redrock_diamond"
+                "Name": "planetcore:deeprock_diamond"
               },
               {
-                "Name": "totheearthcore:redrock_amazonite"
+                "Name": "planetcore:deeprock_amazonite"
               },
               {
                 "Name": "minecraft:gravel"
               },
               {
-                "Name": "totheearthcore:redrock_sulfur"
+                "Name": "planetcore:deeprock_sulfur"
               },
               {
-                "Name": "totheearthcore:hot_mantlerock"
+                "Name": "planetcore:hot_mantlerock"
               }
             ],
             "spawnSize": 600,
@@ -2799,10 +2799,10 @@
           },
           "overrides": {
             "cubicgen:ocean_block": {
-              "Name": "totheearthcore:redrock"
+              "Name": "planetcore:deeprock"
             },
             "cubicgen:terrain_fill_block": {
-              "Name": "totheearthcore:mantlerock"
+              "Name": "planetcore:mantlerock"
             },
             "cubicgen:mesa_depth": NaN,
             "cubicgen:biome_fill_depth_factor": NaN
@@ -2844,11 +2844,11 @@
         "standardOres": [
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sulfur"
+              "Name": "planetcore:mantlerock_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 10,
@@ -2859,11 +2859,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_coal"
+              "Name": "planetcore:mantlerock_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 17,
@@ -2874,11 +2874,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_redstone"
+              "Name": "planetcore:mantlerock_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 8,
@@ -2889,11 +2889,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_iron"
+              "Name": "planetcore:mantlerock_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 9,
@@ -2904,11 +2904,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_silver"
+              "Name": "planetcore:mantlerock_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 9,
@@ -2919,11 +2919,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_gold"
+              "Name": "planetcore:mantlerock_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 9,
@@ -2934,11 +2934,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_platinum"
+              "Name": "planetcore:mantlerock_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 9,
@@ -2949,11 +2949,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_emerald"
+              "Name": "planetcore:mantlerock_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -2964,11 +2964,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_lapis"
+              "Name": "planetcore:mantlerock_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -2979,11 +2979,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_sapphire"
+              "Name": "planetcore:mantlerock_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 8,
@@ -2994,11 +2994,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -3009,11 +3009,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -3024,11 +3024,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -3039,11 +3039,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -3054,11 +3054,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_ruby"
+              "Name": "planetcore:mantlerock_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -3069,11 +3069,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_diamond"
+              "Name": "planetcore:mantlerock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -3084,11 +3084,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_diamond"
+              "Name": "planetcore:mantlerock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -3099,11 +3099,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_diamond"
+              "Name": "planetcore:mantlerock_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -3114,11 +3114,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_amazonite"
+              "Name": "planetcore:mantlerock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 5,
@@ -3129,11 +3129,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_amazonite"
+              "Name": "planetcore:mantlerock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 6,
@@ -3144,11 +3144,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlerock_amazonite"
+              "Name": "planetcore:mantlerock_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 7,
@@ -3159,11 +3159,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:mantlegas"
+              "Name": "planetcore:mantlegas"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 4,
@@ -3177,11 +3177,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_mantlerock"
+              "Name": "planetcore:hot_mantlerock"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 100,
@@ -3202,7 +3202,7 @@
                 "Name": "minecraft:stone"
               },
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 36,
@@ -3223,7 +3223,7 @@
                 "Name": "minecraft:stone"
               },
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 44,
@@ -3241,7 +3241,7 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 25,
@@ -3255,11 +3255,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 60,
@@ -3273,11 +3273,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 60,
@@ -3291,11 +3291,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:mantlerock"
+                "Name": "planetcore:mantlerock"
               }
             ],
             "spawnSize": 60,
@@ -3364,10 +3364,10 @@
           },
           "overrides": {
             "cubicgen:ocean_block": {
-              "Name": "totheearthcore:mantlerock"
+              "Name": "planetcore:mantlerock"
             },
             "cubicgen:terrain_fill_block": {
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "cubicgen:mesa_depth": NaN,
             "cubicgen:biome_fill_depth_factor": NaN
@@ -3409,11 +3409,11 @@
         "standardOres": [
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_sulfur"
+              "Name": "planetcore:corestone_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 10,
@@ -3424,11 +3424,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_coal"
+              "Name": "planetcore:corestone_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 17,
@@ -3439,11 +3439,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_redstone"
+              "Name": "planetcore:corestone_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 8,
@@ -3454,11 +3454,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_iron"
+              "Name": "planetcore:corestone_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3469,11 +3469,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_silver"
+              "Name": "planetcore:corestone_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3484,11 +3484,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_gold"
+              "Name": "planetcore:corestone_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3499,11 +3499,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_platinum"
+              "Name": "planetcore:corestone_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3514,11 +3514,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_lapis"
+              "Name": "planetcore:corestone_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 7,
@@ -3532,11 +3532,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_emerald"
+              "Name": "planetcore:corestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3550,11 +3550,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_sapphire"
+              "Name": "planetcore:corestone_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3568,11 +3568,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_ruby"
+              "Name": "planetcore:corestone_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3586,11 +3586,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_diamond"
+              "Name": "planetcore:corestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3604,11 +3604,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_amazonite"
+              "Name": "planetcore:corestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3622,11 +3622,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_onyx"
+              "Name": "planetcore:corestone_onyx"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 6,
@@ -3640,11 +3640,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:core_lava"
+              "Name": "planetcore:core_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 20,
@@ -3713,10 +3713,10 @@
           },
           "overrides": {
             "cubicgen:ocean_block": {
-              "Name": "totheearthcore:hot_lava"
+              "Name": "planetcore:hot_lava"
             },
             "cubicgen:terrain_fill_block": {
-              "Name": "totheearthcore:corestone"
+              "Name": "planetcore:corestone"
             },
             "cubicgen:mesa_depth": NaN,
             "cubicgen:biome_fill_depth_factor": NaN
@@ -3758,11 +3758,11 @@
         "standardOres": [
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_sulfur"
+              "Name": "planetcore:corestone_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 10,
@@ -3773,11 +3773,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_coal"
+              "Name": "planetcore:corestone_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 17,
@@ -3788,11 +3788,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_redstone"
+              "Name": "planetcore:corestone_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 8,
@@ -3803,11 +3803,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_iron"
+              "Name": "planetcore:corestone_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3818,11 +3818,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_silver"
+              "Name": "planetcore:corestone_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3833,11 +3833,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_gold"
+              "Name": "planetcore:corestone_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3848,11 +3848,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_platinum"
+              "Name": "planetcore:corestone_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3863,11 +3863,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:corestone_lapis"
+              "Name": "planetcore:corestone_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 7,
@@ -3881,11 +3881,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_emerald"
+              "Name": "planetcore:corestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -3899,11 +3899,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_emerald"
+              "Name": "planetcore:corestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 10,
@@ -3917,11 +3917,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_emerald"
+              "Name": "planetcore:corestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 10,
@@ -3935,11 +3935,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_emerald"
+              "Name": "planetcore:corestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 12,
@@ -3953,11 +3953,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_emerald"
+              "Name": "planetcore:corestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 12,
@@ -3971,11 +3971,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_emerald"
+              "Name": "planetcore:corestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 14,
@@ -3989,11 +3989,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_sapphire"
+              "Name": "planetcore:corestone_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 12,
@@ -4007,11 +4007,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_sapphire"
+              "Name": "planetcore:corestone_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 13,
@@ -4025,11 +4025,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_sapphire"
+              "Name": "planetcore:corestone_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 14,
@@ -4043,11 +4043,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_ruby"
+              "Name": "planetcore:corestone_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 12,
@@ -4061,11 +4061,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_ruby"
+              "Name": "planetcore:corestone_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 13,
@@ -4079,11 +4079,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_ruby"
+              "Name": "planetcore:corestone_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 14,
@@ -4097,11 +4097,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_diamond"
+              "Name": "planetcore:corestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -4115,11 +4115,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_diamond"
+              "Name": "planetcore:corestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 10,
@@ -4133,11 +4133,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_diamond"
+              "Name": "planetcore:corestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 11,
@@ -4151,11 +4151,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_diamond"
+              "Name": "planetcore:corestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 12,
@@ -4169,11 +4169,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_diamond"
+              "Name": "planetcore:corestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 12,
@@ -4187,11 +4187,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_amazonite"
+              "Name": "planetcore:corestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -4205,11 +4205,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_amazonite"
+              "Name": "planetcore:corestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 9,
@@ -4223,11 +4223,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_amazonite"
+              "Name": "planetcore:corestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 10,
@@ -4241,11 +4241,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_amazonite"
+              "Name": "planetcore:corestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 11,
@@ -4259,11 +4259,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_amazonite"
+              "Name": "planetcore:corestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 12,
@@ -4277,11 +4277,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_onyx"
+              "Name": "planetcore:corestone_onyx"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 6,
@@ -4295,11 +4295,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_onyx"
+              "Name": "planetcore:corestone_onyx"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 7,
@@ -4313,11 +4313,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:corestone_onyx"
+              "Name": "planetcore:corestone_onyx"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               }
             ],
             "spawnSize": 8,
@@ -4328,11 +4328,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:innercorestone_sulfur"
+              "Name": "planetcore:innercorestone_sulfur"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 10,
@@ -4343,11 +4343,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:innercorestone_coal"
+              "Name": "planetcore:innercorestone_coal"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 17,
@@ -4358,11 +4358,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:innercorestone_redstone"
+              "Name": "planetcore:innercorestone_redstone"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 8,
@@ -4373,11 +4373,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:innercorestone_iron"
+              "Name": "planetcore:innercorestone_iron"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 9,
@@ -4388,11 +4388,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:innercorestone_silver"
+              "Name": "planetcore:innercorestone_silver"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 9,
@@ -4403,11 +4403,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:innercorestone_gold"
+              "Name": "planetcore:innercorestone_gold"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 9,
@@ -4418,11 +4418,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:innercorestone_platinum"
+              "Name": "planetcore:innercorestone_platinum"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 9,
@@ -4433,11 +4433,11 @@
           },
           {
             "blockstate": {
-              "Name": "totheearthcore:innercorestone_lapis"
+              "Name": "planetcore:innercorestone_lapis"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 7,
@@ -4451,11 +4451,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_emerald"
+              "Name": "planetcore:innercorestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 18,
@@ -4469,11 +4469,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_emerald"
+              "Name": "planetcore:innercorestone_emerald"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 22,
@@ -4487,11 +4487,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_sapphire"
+              "Name": "planetcore:innercorestone_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 18,
@@ -4505,11 +4505,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_sapphire"
+              "Name": "planetcore:innercorestone_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 20,
@@ -4523,11 +4523,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_sapphire"
+              "Name": "planetcore:innercorestone_sapphire"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 24,
@@ -4541,11 +4541,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_ruby"
+              "Name": "planetcore:innercorestone_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 18,
@@ -4559,11 +4559,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_ruby"
+              "Name": "planetcore:innercorestone_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 20,
@@ -4577,11 +4577,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_ruby"
+              "Name": "planetcore:innercorestone_ruby"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 22,
@@ -4595,11 +4595,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_diamond"
+              "Name": "planetcore:innercorestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 12,
@@ -4613,11 +4613,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_diamond"
+              "Name": "planetcore:innercorestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 14,
@@ -4631,11 +4631,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_diamond"
+              "Name": "planetcore:innercorestone_diamond"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 16,
@@ -4649,11 +4649,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_amazonite"
+              "Name": "planetcore:innercorestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 12,
@@ -4667,11 +4667,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_amazonite"
+              "Name": "planetcore:innercorestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 14,
@@ -4685,11 +4685,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_amazonite"
+              "Name": "planetcore:innercorestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 16,
@@ -4703,11 +4703,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_amazonite"
+              "Name": "planetcore:innercorestone_amazonite"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 18,
@@ -4721,11 +4721,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_onyx"
+              "Name": "planetcore:innercorestone_onyx"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 10,
@@ -4739,11 +4739,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_onyx"
+              "Name": "planetcore:innercorestone_onyx"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 11,
@@ -4757,11 +4757,11 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:innercorestone_onyx"
+              "Name": "planetcore:innercorestone_onyx"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 12,
@@ -4775,14 +4775,14 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:core_lava"
+              "Name": "planetcore:core_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               },
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 40,
@@ -4796,14 +4796,14 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:core_lava"
+              "Name": "planetcore:core_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               },
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 50,
@@ -4817,14 +4817,14 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:core_lava"
+              "Name": "planetcore:core_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               },
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 55,
@@ -4838,14 +4838,14 @@
               "Properties": {
                 "level": "0"
               },
-              "Name": "totheearthcore:core_lava"
+              "Name": "planetcore:core_lava"
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               },
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               }
             ],
             "spawnSize": 65,
@@ -4860,52 +4860,52 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:innercorestone"
+                "Name": "planetcore:innercorestone"
               },
               {
                 "Properties": {
                   "level": "0"
                 },
-                "Name": "totheearthcore:core_lava"
+                "Name": "planetcore:core_lava"
               },
               {
-                "Name": "totheearthcore:innercorestone_coal"
+                "Name": "planetcore:innercorestone_coal"
               },
               {
-                "Name": "totheearthcore:innercorestone_iron"
+                "Name": "planetcore:innercorestone_iron"
               },
               {
-                "Name": "totheearthcore:innercorestone_redstone"
+                "Name": "planetcore:innercorestone_redstone"
               },
               {
-                "Name": "totheearthcore:innercorestone_silver"
+                "Name": "planetcore:innercorestone_silver"
               },
               {
-                "Name": "totheearthcore:innercorestone_gold"
+                "Name": "planetcore:innercorestone_gold"
               },
               {
-                "Name": "totheearthcore:innercorestone_platinum"
+                "Name": "planetcore:innercorestone_platinum"
               },
               {
-                "Name": "totheearthcore:innercorestone_emerald"
+                "Name": "planetcore:innercorestone_emerald"
               },
               {
-                "Name": "totheearthcore:innercorestone_lapis"
+                "Name": "planetcore:innercorestone_lapis"
               },
               {
-                "Name": "totheearthcore:innercorestone_sapphire"
+                "Name": "planetcore:innercorestone_sapphire"
               },
               {
-                "Name": "totheearthcore:innercorestone_ruby"
+                "Name": "planetcore:innercorestone_ruby"
               },
               {
-                "Name": "totheearthcore:innercorestone_diamond"
+                "Name": "planetcore:innercorestone_diamond"
               },
               {
-                "Name": "totheearthcore:innercorestone_amazonite"
+                "Name": "planetcore:innercorestone_amazonite"
               },
               {
-                "Name": "totheearthcore:innercorestone_onyx"
+                "Name": "planetcore:innercorestone_onyx"
               }
             ],
             "spawnSize": 600,
@@ -4920,52 +4920,52 @@
             },
             "genInBlockstates": [
               {
-                "Name": "totheearthcore:corestone"
+                "Name": "planetcore:corestone"
               },
               {
                 "Properties": {
                   "level": "0"
                 },
-                "Name": "totheearthcore:core_lava"
+                "Name": "planetcore:core_lava"
               },
               {
-                "Name": "totheearthcore:corestone_coal"
+                "Name": "planetcore:corestone_coal"
               },
               {
-                "Name": "totheearthcore:corestone_iron"
+                "Name": "planetcore:corestone_iron"
               },
               {
-                "Name": "totheearthcore:corestone_redstone"
+                "Name": "planetcore:corestone_redstone"
               },
               {
-                "Name": "totheearthcore:corestone_silver"
+                "Name": "planetcore:corestone_silver"
               },
               {
-                "Name": "totheearthcore:corestone_gold"
+                "Name": "planetcore:corestone_gold"
               },
               {
-                "Name": "totheearthcore:corestone_platinum"
+                "Name": "planetcore:corestone_platinum"
               },
               {
-                "Name": "totheearthcore:corestone_emerald"
+                "Name": "planetcore:corestone_emerald"
               },
               {
-                "Name": "totheearthcore:corestone_lapis"
+                "Name": "planetcore:corestone_lapis"
               },
               {
-                "Name": "totheearthcore:corestone_sapphire"
+                "Name": "planetcore:corestone_sapphire"
               },
               {
-                "Name": "totheearthcore:corestone_ruby"
+                "Name": "planetcore:corestone_ruby"
               },
               {
-                "Name": "totheearthcore:corestone_diamond"
+                "Name": "planetcore:corestone_diamond"
               },
               {
-                "Name": "totheearthcore:corestone_amazonite"
+                "Name": "planetcore:corestone_amazonite"
               },
               {
-                "Name": "totheearthcore:corestone_onyx"
+                "Name": "planetcore:corestone_onyx"
               }
             ],
             "spawnSize": 500,
@@ -5034,10 +5034,10 @@
           },
           "overrides": {
             "cubicgen:ocean_block": {
-              "Name": "totheearthcore:corestone"
+              "Name": "planetcore:corestone"
             },
             "cubicgen:terrain_fill_block": {
-              "Name": "totheearthcore:innercorestone"
+              "Name": "planetcore:innercorestone"
             },
             "cubicgen:mesa_depth": NaN,
             "cubicgen:biome_fill_depth_factor": NaN

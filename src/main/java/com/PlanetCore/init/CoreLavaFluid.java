@@ -36,7 +36,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 		setLightLevel(1);
 		setDensity(400);
-		setTickRate(20);
+		setTickRate(8);
 		setTickRandomly(true);
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(name));
@@ -144,24 +144,16 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		burnEntities(worldIn,X,Y,Z, 9);
 		Random rand = new Random();
 
-		if(pos.getY()<=-12750)
+		if(pos.getY()>-12670 && pos.getY()<=-12480)
 		{
-			if(rand.nextInt(300) == 0)
-			{
-				worldIn.setBlockState(pos, ModBlocks.INNERCORESTONE.getDefaultState());
-			}
-
-		}
-		else if(pos.getY()>=-10000 && worldIn.canBlockSeeSky(pos) == false)
-		{
-			if(rand.nextInt(300) == 0)
+			if(rand.nextInt(6000) == 0)
 			{
 				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 			}
 		}
 		else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == false)
 		{
-			if(rand.nextInt(60) == 0)
+			if(rand.nextInt(120) == 0)
 			{
 				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 			}
@@ -173,8 +165,8 @@ public class CoreLavaFluid extends BlockFluidClassic {
 				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 			}
 		}
-		else if(worldIn.canBlockSeeSky(pos) == false)
-			if(rand.nextInt(120) == 0)
+		else if(worldIn.canBlockSeeSky(pos) == false && pos.getY() > -1000)
+			if(rand.nextInt(240) == 0)
 			{
 				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 			}
@@ -192,6 +184,16 @@ public class CoreLavaFluid extends BlockFluidClassic {
 	{
 		super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
 		thermalEffects(worldIn, pos, state);
+		if(pos.getY()<=-12600 && pos.getY()>=-17950)
+		{
+			BlockPos pos2 = pos.up();
+			BlockPos pos3 = pos.down();
+			if(worldIn.getBlockState(pos2).getMaterial()==Material.AIR && worldIn.getBlockState(pos3).getBlock()==ModBlocks.CORE_LAVA_BLOCK)
+			{
+				worldIn.setBlockState(pos2, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
+			}
+
+		}
 	}
 
 	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
@@ -216,6 +218,16 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		super.updateTick(worldIn, pos, state, rand);
 		thermalEffects(worldIn,pos,state);
 		coreTemperature(worldIn,pos,state);
+		if(pos.getY()<=-12600 && pos.getY()>=-17950)
+		{
+			BlockPos pos2 = pos.up();
+			BlockPos pos3 = pos.down();
+			if(worldIn.getBlockState(pos2).getMaterial()==Material.AIR && worldIn.getBlockState(pos3).getBlock()==ModBlocks.CORE_LAVA_BLOCK)
+			{
+				worldIn.setBlockState(pos2, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
+			}
+
+		}
 	}
 
 

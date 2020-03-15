@@ -54,7 +54,7 @@ public class Corerock extends BlockBase {
 		Block block = this;
 		if (!world.isRemote) {
 			for (int i = 0; i < 4; i++) {
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
+				world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
 			}
 		}
 		return super.removedByPlayer(state, world, pos, entity, willHarvest);
@@ -282,37 +282,27 @@ public class Corerock extends BlockBase {
 						{
 							worldIn.setBlockState(pos.add(x, y, z), Blocks.FIRE.getDefaultState());
 						}
-						if(pos.getY()>=-12250 && pos.getY()<=-9900)
-						{
-							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
-						}
-						else if(pos.getY()>-9900 && pos.getY()<=-1000)
+						if(pos.getY()>=-17920 && pos.getY()<=-12700)
 						{
 							if(rand.nextInt(6000) == 0)
 							{
 								return;
 							}
-							if (this == ModBlocks.CENTERCORESTONE)
-								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-							else if (this == ModBlocks.INNERCORESTONE)
-								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-							else if (this == ModBlocks.CORESTONE)
-								worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
-							else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
 						}
-						else if(pos.getY()>-9900 && pos.getY()<=-1000)
+						else if(pos.getY()>-12675 && pos.getY()<=-1000)
 						{
-							if(rand.nextInt(3000) == 0)
+							if(rand.nextInt(6000) == 0)
 							{
 								return;
 							}
-							if (this == ModBlocks.CENTERCORESTONE)
+							if (this == ModBlocks.CENTERCORESTONE){
+								worldIn.setBlockState(pos, ModBlocks.INNERCORESTONE.getDefaultState());
+							}
+
+							else if (this == ModBlocks.INNERCORESTONE){
 								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-							else if (this == ModBlocks.INNERCORESTONE)
-								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-							else if (this == ModBlocks.CORESTONE)
-								worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
-							else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+							}
 						}
 						else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == false)
 						{
@@ -369,7 +359,7 @@ public class Corerock extends BlockBase {
 	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
 	{
 		super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
-		thermalEffects(worldIn, pos, state);
+		//thermalEffects(worldIn, pos, state);
 	}
 
 	@Override

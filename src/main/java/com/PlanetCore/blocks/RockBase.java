@@ -28,14 +28,9 @@ public class RockBase extends BlockBase
 		super(name, material);
 		
 		setSoundType(SoundType.STONE);
-		setHardness(30.0F);
-		setResistance(10.0F);
 		setHarvestLevel("pickaxe", 2);
 		Block block = this;
-
-	if (block == ModBlocks.HARDROCK) {
-		setHarvestLevel("pickaxe", 1);
-		setHardness(15.0F);}
+		setTickRandomly(true);
 
 	}
 

@@ -17,6 +17,7 @@ import net.minecraft.block.state.pattern.BlockPattern;
 import net.minecraft.block.state.pattern.BlockStateMatcher;
 import net.minecraft.block.state.pattern.FactoryBlockPattern;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
@@ -25,6 +26,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -33,68 +35,103 @@ import java.util.Arrays;
 import java.util.Random;
 
 
-public class BlockBase extends Block implements IHasModel
-{
+public class BlockBase extends Block implements IHasModel {
 	private BlockPattern snowmanPattern;
 	private BlockPattern golemBasePattern;
 	private BlockPattern golemPattern;
-	private static final Predicate<IBlockState> IS_PUMPKIN = new Predicate<IBlockState>()
-	{
-		public boolean apply(@Nullable IBlockState p_apply_1_)
-		{
+	private static final Predicate<IBlockState> IS_PUMPKIN = new Predicate<IBlockState>() {
+		public boolean apply(@Nullable IBlockState p_apply_1_) {
 			return p_apply_1_ != null && (p_apply_1_.getBlock() == Blocks.PUMPKIN || p_apply_1_.getBlock() == Blocks.LIT_PUMPKIN);
 		}
 	};
 
-	public BlockBase(String name, Material material)
-	{
+	public BlockBase(String name, Material material) {
 		super(material);
 		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-		setResistance(8.0F);
-		
+
 		ModBlocks.BLOCKS.add(this);
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 		setSoundType(SoundType.METAL);
 	}
-	Random rand = new Random();
 
+	Random rand = new Random();
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		int PressureLevel = (pos.getY() * -23808 *100)^3;
-		float chance = (pos.getY()/-23808);
-		if (pos.getY() < 0)
-		{
-			if (rand.nextFloat() <= chance)
-			{
+		float PressureLevel = (pos.getY() / -23808 * 100.0F) * (pos.getY() / -23808 * 100.0F) * (pos.getY() / -23808 * 100.0F);
+		if (pos.getY() < 0) {
+			if (Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof GemBase) && !(this instanceof CoreRockGemBase)) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
 					if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel
-							|| movedState.getMaterial() == Material.WATER || movedState.getMaterial() == Material.LAVA || movedState.getBlock() == Blocks.ANVIL)continue; // you can add more blocks to this check to exclude them
+							|| movedState.getMaterial() == Material.WATER || movedState.getMaterial() == Material.LAVA || movedState.getBlock() == Blocks.ANVIL)
+						continue; // you can add more blocks to this check to exclude them
+					//
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
 							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
 							.toArray(EnumFacing[]::new);
 					if (sides.length == 0) continue;
-					if (pos.getY() > -12544)
-					{
-						worldIn.setBlockState(movedPos, ModBlocks.MANTLEROCK.getDefaultState());
-					}
-					else if (pos.getY() <= -12544 && pos.getY() > -17920)
-					{
-						worldIn.setBlockState(movedPos, ModBlocks.CORESTONE.getDefaultState());
-					}
-					else if (pos.getY() <= -17920 && pos.getY() > -23168)
-					{
-						worldIn.setBlockState(movedPos, ModBlocks.INNERCORESTONE.getDefaultState());
-					}
-					else if (pos.getY() <= -23168 && pos.getY() > -23808)
-					{
-						worldIn.setBlockState(movedPos, ModBlocks.INNERCORESTONE.getDefaultState());
-					}
+					worldIn.setBlockState(movedPos, this.getDefaultState());
 					worldIn.setBlockState(pos.offset(sides[rand.nextInt(sides.length)]), movedState);
+				}
+			}
+		}
+	}
+
+	public static void unstableBlock(World world, int x, int y, int z, IBlockState state) {
+		Iterable<BlockPos> it = BlockPos.getAllInBox(x + 3, y, z - 3, x - 3, y, z + 3);
+	}
+
+	//Earthquake event
+//Upon destroying the block, by a player or by explosion, the surrounding area for the player have a chance to crumble.
+//How this event should work: No description
+	public static void unstable(World worldIn, BlockPos pos, IBlockState state) {
+		int x;
+		int y;
+		int z;
+		x = pos.getX();
+		y = pos.getY();
+		z = pos.getZ();
+		float counter = 0;
+		int counter1 = 0;
+		Random rand = new Random();
+		int rand2 = (rand.nextInt(3));
+		int rand4 = (rand.nextInt(6));
+		Iterable<BlockPos> it = BlockPos.getAllInBox(x - 8, y - 8, z - 8, x + 8, y + 8, z + 8);
+		for (BlockPos pos2 : it) {
+			IBlockState state2 = worldIn.getBlockState(pos2);
+			if (state2.getMaterial() == Material.AIR) {
+				counter++;
+			}
+		}
+		float SuperChance = (pos.getY() / (-600000.0F / ((counter + 1F) / 64F)));
+		float SuperChance1 = ((-6000 - pos.getY()) / (-1800000.0F / ((counter + 1F) / 64F)));
+		if (y <= 0 && y >= -1500 && Math.random() <= SuperChance || (y <= 1500 && y >= -6000 && Math.random() <= SuperChance1)) {
+			for (BlockPos pos2 : it) {
+				IBlockState state2 = worldIn.getBlockState(pos2);
+				if (state2.getMaterial() == Material.AIR) {
+					int x1 = pos2.getX();
+					int y1 = pos2.getY() + 1;
+					int z1 = pos2.getZ();
+					BlockPos pos3 = new BlockPos(x1, y1, z1);
+					IBlockState state3 = worldIn.getBlockState(pos3);
+					if (state3.getMaterial() == Material.ROCK && !worldIn.isRemote) {
+						int x2 = pos3.getX();
+						int y2 = pos3.getY();
+						int z2 = pos3.getZ();
+						Iterable<BlockPos> it1 = BlockPos.getAllInBox(x2 - rand4, y2 - rand2, z2 - rand4, x2 + rand4, y2 + rand2, z2 + rand4);
+						for (BlockPos pos4 : it1) {
+							int x3 = pos4.getX();
+							int y3 = pos4.getY();
+							int z3 = pos4.getZ();
+							EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x3 + 0.5, y3, z3 + 0.5,  worldIn.getBlockState(pos4));
+							entityfallingblock.setHurtEntities(true);
+							worldIn.spawnEntity(entityfallingblock);
+						}
+					}
 				}
 			}
 		}
@@ -177,16 +214,23 @@ public class BlockBase extends Block implements IHasModel
 			}
 		}
 	}
-	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-	{
-		super.updateTick(worldIn, pos, state, rand);
 
-		//unstableBlock(worldIn,pos,state);
-		//Only if the event has started
-		//pressure(rand, worldIn,pos,state);
+
+	@Override
+	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
+		super.onBlockExploded(world, pos, explosion);
+		//naturalGasExplosion(world, pos, (IBlockState)explosion);
+		unstable(world, pos, (IBlockState)explosion);
+		//lavaDecompression(world, pos, (IBlockState)explosion);
 	}
 
+	@Override
+	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
+		super.onPlayerDestroy(worldIn, pos, state);
+		//naturalGasExplosion(worldIn, pos, state);
+		unstable(worldIn, pos, state);
+		//lavaDecompression(worldIn, pos, state);
+	}
 	protected BlockPattern getSnowmanPattern()
 	{
 		if (this.snowmanPattern == null)
@@ -196,6 +240,7 @@ public class BlockBase extends Block implements IHasModel
 
 		return this.snowmanPattern;
 	}
+
 
 	protected BlockPattern getGolemBasePattern()
 	{
