@@ -109,7 +109,7 @@ public class BlockBase extends Block implements IHasModel {
 		}
 		float SuperChance = (pos.getY() / (-600000.0F / ((counter + 1F) / 64F)));
 		float SuperChance1 = ((-6000 - pos.getY()) / (-1800000.0F / ((counter + 1F) / 64F)));
-		if (y <= 0 && y >= -1500 && Math.random() <= SuperChance || (y <= 1500 && y >= -6000 && Math.random() <= SuperChance1)) {
+		if (y <= 0 && y >= -1500 && Math.random() <= SuperChance || (y <= -1500 && y >= -6000 && Math.random() <= SuperChance1)) {
 			for (BlockPos pos2 : it) {
 				IBlockState state2 = worldIn.getBlockState(pos2);
 				if (state2.getMaterial() == Material.AIR) {
@@ -118,7 +118,7 @@ public class BlockBase extends Block implements IHasModel {
 					int z1 = pos2.getZ();
 					BlockPos pos3 = new BlockPos(x1, y1, z1);
 					IBlockState state3 = worldIn.getBlockState(pos3);
-					if (state3.getMaterial() == Material.ROCK && !worldIn.isRemote) {
+					if (state3.getMaterial() == Material.ROCK) {
 						int x2 = pos3.getX();
 						int y2 = pos3.getY();
 						int z2 = pos3.getZ();
@@ -127,9 +127,11 @@ public class BlockBase extends Block implements IHasModel {
 							int x3 = pos4.getX();
 							int y3 = pos4.getY();
 							int z3 = pos4.getZ();
-							EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x3 + 0.5, y3, z3 + 0.5,  worldIn.getBlockState(pos4));
-							entityfallingblock.setHurtEntities(true);
-							worldIn.spawnEntity(entityfallingblock);
+							if (worldIn.getBlockState(pos4).getMaterial() == Material.ROCK && !worldIn.isRemote) {
+								EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x3 + 0.5, y3, z3 + 0.5, worldIn.getBlockState(pos4));
+								entityfallingblock.setHurtEntities(true);
+								worldIn.spawnEntity(entityfallingblock);
+							}
 
 						}
 					}

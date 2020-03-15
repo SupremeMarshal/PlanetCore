@@ -217,8 +217,6 @@ public class ModBlocks {
 	public static final Block HARDROCK1 = new RockBase("hardrock1", Material.ROCK);
 	public static final Block HARDROCK2 = new RockBase("hardrock2", Material.ROCK);
 	public static final Block HARDROCK3 = new RockBase("hardrock3", Material.ROCK);
-	public static final Block HARDROCK4 = new RockBase("hardrock4", Material.ROCK);
-	public static final Block HARDROCK5 = new RockBase("hardrock5", Material.ROCK);
 	public static final Block DEEPROCK = new RockBase("deeprock", Material.ROCK);
 	public static final Block DEEPROCK1 = new RockBase("deeprock1", Material.ROCK);
 	public static final Block DEEPROCK2 = new RockBase("deeprock2", Material.ROCK);
@@ -231,11 +229,6 @@ public class ModBlocks {
 	public static final Block CRUSTROCK3 = new RockBase("crustrock3", Material.ROCK);
 	public static final Block CRUSTROCK4 = new RockBase("crustrock4", Material.ROCK);
 	public static final Block CRUSTROCK5 = new RockBase("crustrock5", Material.ROCK);
-	public static final Block CRUSTROCK6 = new RockBase("crustrock6", Material.ROCK);
-	public static final Block CRUSTROCK7 = new RockBase("crustrock7", Material.ROCK);
-	public static final Block CRUSTROCK8 = new RockBase("crustrock8", Material.ROCK);
-	public static final Block CRUSTROCK9 = new RockBase("crustrock9", Material.ROCK);
-	public static final Block CRUSTROCK10 = new RockBase("crustrock10", Material.ROCK);
 	public static final Block MANTLEROCK = new Mantlerock("mantlerock", Material.ROCK).setLightLevel(0.0F);
 	public static final Block MANTLEROCK1 = new Mantlerock("mantlerock1", Material.ROCK).setLightLevel(0.05F);
 	public static final Block MANTLEROCK2 = new Mantlerock("mantlerock2", Material.ROCK).setLightLevel(0.01F);
