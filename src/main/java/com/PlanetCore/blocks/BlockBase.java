@@ -62,7 +62,7 @@ public class BlockBase extends Block implements IHasModel {
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		float PressureLevel = (pos.getY() / -23808 * 100.0F) * (pos.getY() / -23808 * 100.0F) * (pos.getY() / -23808 * 100.0F);
 		if (pos.getY() < 0) {
-			if (Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof GemBase) && !(this instanceof CoreRockGemBase)) {
+			if (Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof GemBase) && !(this instanceof CoreRockGemBase) && !(this instanceof BlocksBase)) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
@@ -85,6 +85,7 @@ public class BlockBase extends Block implements IHasModel {
 		Iterable<BlockPos> it = BlockPos.getAllInBox(x + 3, y, z - 3, x - 3, y, z + 3);
 	}
 
+
 	//Earthquake event
 //Upon destroying the block, by a player or by explosion, the surrounding area for the player have a chance to crumble.
 //How this event should work: No description
@@ -96,7 +97,6 @@ public class BlockBase extends Block implements IHasModel {
 		y = pos.getY();
 		z = pos.getZ();
 		float counter = 0;
-		int counter1 = 0;
 		Random rand = new Random();
 		int rand2 = (rand.nextInt(3));
 		int rand4 = (rand.nextInt(6));
@@ -130,6 +130,7 @@ public class BlockBase extends Block implements IHasModel {
 							EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x3 + 0.5, y3, z3 + 0.5,  worldIn.getBlockState(pos4));
 							entityfallingblock.setHurtEntities(true);
 							worldIn.spawnEntity(entityfallingblock);
+
 						}
 					}
 				}
@@ -214,6 +215,7 @@ public class BlockBase extends Block implements IHasModel {
 			}
 		}
 	}
+
 
 
 	@Override

@@ -9,6 +9,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -338,9 +339,20 @@ public class Mantlerock extends BlockBase
 	//Lava Decompression event
 	//Lava being spawned from removing the pressure
 	//This event can be stacked with earthquake.
-	public void lavaDecompression(World WorldIn, BlockPos pos, IBlockState state)
-	{
-
+	//=(G26+1536)/(-12500)/64
+	//=(G152+9600)/(-12500)/64
+	public void lavaDecompression(World worldIn, BlockPos pos, IBlockState state) {
+		float chance = pos.getY()+1536/-12500/64F;
+		float chance1 = pos.getY()+9600/-12500/64F;
+		if (pos.getY() < -1530 && pos.getY() > -9536 && Math.random() <= chance && !worldIn.isRemote) {
+			worldIn.setBlockState(pos, (IBlockState) Blocks.LAVA);
+		}
+		if (pos.getY() <= -9536 && Math.random() <= 0.01F && !worldIn.isRemote) {
+			worldIn.setBlockState(pos, (IBlockState) Blocks.LAVA);
+		}
+		if (pos.getY() < -9536 && pos.getY() > -12650 && Math.random() <= chance1 && !worldIn.isRemote) {
+			worldIn.setBlockState(pos, (IBlockState) ModBlocks.HOT_LAVA_BLOCK);
+		}
 	}
 
 
@@ -368,7 +380,7 @@ public class Mantlerock extends BlockBase
 
 		//unstableBlock(worldIn,pos,state);
 		//Only if the event has started
-		lavaDecompression(worldIn,pos,state);
+		//lavaDecompression(worldIn,pos,state);
 	}
 
 
