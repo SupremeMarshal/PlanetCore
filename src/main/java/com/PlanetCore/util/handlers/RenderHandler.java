@@ -67,7 +67,7 @@ public class RenderHandler
 	
 	public static void registerCustomMeshesAndStates()
 		{
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.HOT_LAVA_BLOCK), new ItemMeshDefinition() {
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.HOT_LAVA_FLUID), new ItemMeshDefinition() {
 
 				@Override
 				public ModelResourceLocation getModelLocation(ItemStack stack) {
@@ -77,7 +77,7 @@ public class RenderHandler
 				}
 			});
 
-			ModelLoader.setCustomStateMapper(ModBlocks.HOT_LAVA_BLOCK, new StateMapperBase() {
+			ModelLoader.setCustomStateMapper(ModBlocks.HOT_LAVA_FLUID, new StateMapperBase() {
 
 				@Override
 				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -86,7 +86,7 @@ public class RenderHandler
 				}
 			});
 
-		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.CORE_LAVA_BLOCK), new ItemMeshDefinition() {
+		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.CORE_LAVA_FLUID), new ItemMeshDefinition() {
 
 			@Override
 			public ModelResourceLocation getModelLocation(ItemStack stack) {
@@ -96,7 +96,7 @@ public class RenderHandler
 			}
 		});
 
-		ModelLoader.setCustomStateMapper(ModBlocks.CORE_LAVA_BLOCK, new StateMapperBase() {
+		ModelLoader.setCustomStateMapper(ModBlocks.CORE_LAVA_FLUID, new StateMapperBase() {
 
 			@Override
 			protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -106,7 +106,7 @@ public class RenderHandler
 		});
 
 
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SULFURIC_ACID_BLOCK), new ItemMeshDefinition() {
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SULFURIC_ACID_FLUID), new ItemMeshDefinition() {
 
 				@Override
 				public ModelResourceLocation getModelLocation(ItemStack stack) {
@@ -116,7 +116,7 @@ public class RenderHandler
 				}
 			});
 
-			ModelLoader.setCustomStateMapper(ModBlocks.SULFURIC_ACID_BLOCK, new StateMapperBase() {
+			ModelLoader.setCustomStateMapper(ModBlocks.SULFURIC_ACID_FLUID, new StateMapperBase() {
 
 				@Override
 				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
@@ -125,7 +125,7 @@ public class RenderHandler
 				}
 			});
 
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.ONYX_LAVA_BLOCK), new ItemMeshDefinition() {
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.ONYX_LAVA_FLUID), new ItemMeshDefinition() {
 
 				@Override
 				public ModelResourceLocation getModelLocation(ItemStack stack) {
@@ -135,7 +135,7 @@ public class RenderHandler
 				}
 			});
 
-			ModelLoader.setCustomStateMapper(ModBlocks.ONYX_LAVA_BLOCK, new StateMapperBase() {
+			ModelLoader.setCustomStateMapper(ModBlocks.ONYX_LAVA_FLUID, new StateMapperBase() {
 
 				@Override
 				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {

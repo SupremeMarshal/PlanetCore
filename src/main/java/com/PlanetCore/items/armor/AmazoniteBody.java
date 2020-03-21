@@ -62,6 +62,8 @@ public class AmazoniteBody extends ArmorBase
     	return mods;
     }
 
+
+
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
 	{

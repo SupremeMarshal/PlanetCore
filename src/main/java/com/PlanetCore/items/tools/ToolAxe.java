@@ -1,3 +1,4 @@
+
 package com.PlanetCore.items.tools;
 
 import com.PlanetCore.Main;
@@ -22,30 +23,14 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class ToolAxe extends ItemAxe implements IHasModel {
-	public ToolAxe(String name, ToolMaterial material)
-	{
+	public ToolAxe(String name, ToolMaterial material) {
 		super(material, 3.0F, -3.5F);
 		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.TOOLS);
-		
-		ModItems.ITEMS.add(this);
-		this.addPropertyOverride(new ResourceLocation("holding"), new IItemPropertyGetter() {
-
-
-			@SideOnly(Side.CLIENT)
-			public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
-
-
-				return entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE1
-						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE2
-						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE3
-						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE4
-						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE5
-						|| entityIn.getHeldItemMainhand() == stack && entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_AXE6? 1.0F : 0.0F;
-			}
-		});
 	}
+
+
 	
 	@Override
 	public void registerModels() 

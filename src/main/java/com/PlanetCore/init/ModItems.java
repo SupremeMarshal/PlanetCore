@@ -26,48 +26,24 @@ public class ModItems {
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 	
 	//TOOLS MATERIAL	(NAME, HARVEST LVL, MAX USE, EFFICIENCY, DAMAGE, ENCHANTABILITY)
-	public static final ToolMaterial MATERIAL_BRONZE = EnumHelper.addToolMaterial("material_bronze", 3, 200, 6.0F, 2.0F, 20);
-	public static final ToolMaterial MATERIAL_IRON = EnumHelper.addToolMaterial("material_iron", 4, 300, 8.0F, 2.5F, 20);
-	public static final ToolMaterial MATERIAL_STEEL = EnumHelper.addToolMaterial("material_steel", 5, 400, 10.0F, 3.0F, 18);
-	public static final ToolMaterial MATERIAL_SILVER = EnumHelper.addToolMaterial("material_silver", 6, 500, 12.0F, 3.6F, 16);
-	public static final ToolMaterial MATERIAL_GOLD = EnumHelper.addToolMaterial("material_gold", 7, 1000, 16.0F, 4.3F, 14);
-	public static final ToolMaterial MATERIAL_PLATINUM = EnumHelper.addToolMaterial("material_platinum", 8, 1500, 20.0F, 5.0F, 12);
-	public static final ToolMaterial MATERIAL_JADE = EnumHelper.addToolMaterial("material_jade", 9, 200, 18.0F, 4.0F, 5);
-	public static final ToolMaterial MATERIAL_TOPAZ = EnumHelper.addToolMaterial("material_topaz", 10, 100, 4.0F, 4.0F, 6);
-	public static final ToolMaterial MATERIAL_ES = EnumHelper.addToolMaterial("material_es", 9, 2000, 30.0F, 9.0F, 6);
-	public static final ToolMaterial MATERIAL_EMERALD = EnumHelper.addToolMaterial("material_emerald", 10, 25, 30.0F, 7.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD1 = EnumHelper.addToolMaterial("material_emerald1", 10, 50, 36.0F, 8.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD2 = EnumHelper.addToolMaterial("material_emerald2", 10, 100, 43.0F, 9.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD3 = EnumHelper.addToolMaterial("material_emerald3", 10, 200, 52.0F, 10.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD4 = EnumHelper.addToolMaterial("material_emerald4", 10, 400, 62.0F, 11.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD5 = EnumHelper.addToolMaterial("material_emerald5", 10, 800, 75.0F, 12.0F, 10);
-	public static final ToolMaterial MATERIAL_EMERALD6 = EnumHelper.addToolMaterial("material_emerald6", 10, 1600, 90.0F, 13.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE = EnumHelper.addToolMaterial("material_sapphire", 11, 30, 45.0F, 12.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE1 = EnumHelper.addToolMaterial("material_sapphire1", 11, 60, 54.0F, 13.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE2 = EnumHelper.addToolMaterial("material_sapphire2", 11, 120, 65.0F, 14.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE3 = EnumHelper.addToolMaterial("material_sapphire3", 11, 240, 78.0F, 15.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE4 = EnumHelper.addToolMaterial("material_sapphire4", 11, 480, 93.0F, 16.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE5 = EnumHelper.addToolMaterial("material_sapphire5", 11, 960, 112.0F, 17.0F, 10);
-	public static final ToolMaterial MATERIAL_SAPPHIRE6 = EnumHelper.addToolMaterial("material_sapphire6", 11, 1920, 134.0F, 18.0F, 10);
-	public static final ToolMaterial MATERIAL_RUBY = EnumHelper.addToolMaterial("material_ruby", 12, 36, 68.0F, 17.0F, 10);
-	public static final ToolMaterial MATERIAL_RUBY1 = EnumHelper.addToolMaterial("material_ruby1", 11, 72, 81.0F, 18.0F, 10);
-	public static final ToolMaterial MATERIAL_RUBY2 = EnumHelper.addToolMaterial("material_ruby2", 11, 144, 97.0F, 19.0F, 10);
-	public static final ToolMaterial MATERIAL_RUBY3 = EnumHelper.addToolMaterial("material_ruby3", 11, 288, 117.0F, 20.0F, 10);
-	public static final ToolMaterial MATERIAL_RUBY4 = EnumHelper.addToolMaterial("material_ruby4", 11, 576, 140.0F, 21.0F, 10);
-	public static final ToolMaterial MATERIAL_RUBY5 = EnumHelper.addToolMaterial("material_ruby5", 11, 1152, 168.0F, 22.0F, 10);
-	public static final ToolMaterial MATERIAL_RUBY6 = EnumHelper.addToolMaterial("material_ruby6", 11, 2304, 202.0F, 23.0F, 10);
-	public static final ToolMaterial MATERIAL_AMETHYST = EnumHelper.addToolMaterial("material_amethyst", 12, 100, 300.0F, 50.0F, 4);
-	public static final ToolMaterial MATERIAL_DIAMOND = EnumHelper.addToolMaterial("material_diamond", 13, 72, 101.0F, 22.0F, 6);
-	static final ToolMaterial MATERIAL_DIAMOND1 = EnumHelper.addToolMaterial("material_diamond1", 13, 144, 122.0F, 23.0F, 6);
-	static final ToolMaterial MATERIAL_DIAMOND2 = EnumHelper.addToolMaterial("material_diamond2", 13, 288, 146.0F, 24.0F, 6);
-	static final ToolMaterial MATERIAL_DIAMOND3 = EnumHelper.addToolMaterial("material_diamond3", 13, 576, 175.0F, 25.0F, 6);
-	static final ToolMaterial MATERIAL_DIAMOND4 = EnumHelper.addToolMaterial("material_diamond4", 13, 1152, 210.0F, 26.0F, 6);
-	static final ToolMaterial MATERIAL_DIAMOND5 = EnumHelper.addToolMaterial("material_diamond5", 13, 2304, 252.0F, 27.0F, 6);
-	static final ToolMaterial MATERIAL_DIAMOND6 = EnumHelper.addToolMaterial("material_diamond6", 13, 4608, 302.0F, 28.0F, 6);
-	public static final ToolMaterial MATERIAL_AMAZONITE = EnumHelper.addToolMaterial("material_amazonite", 14, 100, 200.0F, 27.0F, 5);
+	public static final ToolMaterial MATERIAL_BRONZE = EnumHelper.addToolMaterial("material_bronze", 3, 200, 12.0F, 2.0F, 20);
+	public static final ToolMaterial MATERIAL_IRON = EnumHelper.addToolMaterial("material_iron", 4, 300, 6.0F, 2.5F, 20);
+	public static final ToolMaterial MATERIAL_STEEL = EnumHelper.addToolMaterial("material_steel", 5, 400, 8.0F, 3.0F, 18);
+	public static final ToolMaterial MATERIAL_SILVER = EnumHelper.addToolMaterial("material_silver", 6, 500, 18.0F, 3.6F, 16);
+	public static final ToolMaterial MATERIAL_GOLD = EnumHelper.addToolMaterial("material_gold", 7, 1000, 27.0F, 4.3F, 14);
+	public static final ToolMaterial MATERIAL_AEROGEL_GOLD = EnumHelper.addToolMaterial("material_aerogel_gold", 7, 1000, 27.0F, 4.3F, 14);
+	public static final ToolMaterial MATERIAL_PLATINUM = EnumHelper.addToolMaterial("material_platinum", 8, 1500, 60.0F, 5.0F, 12);
+	public static final ToolMaterial MATERIAL_JADE = EnumHelper.addToolMaterial("material_jade", 9, 200, 40.0F, 4.0F, 5);
+	public static final ToolMaterial MATERIAL_TOPAZ = EnumHelper.addToolMaterial("material_topaz", 10, 100, 40.0F, 4.0F, 6);
+	public static final ToolMaterial MATERIAL_ES = EnumHelper.addToolMaterial("material_es", 9, 2000, 100.0F, 9.0F, 6);
+	public static final ToolMaterial MATERIAL_EMERALD = EnumHelper.addToolMaterial("material_emerald", 10, 1500, 150.0F, 7.0F, 10);
+	public static final ToolMaterial MATERIAL_RUBY = EnumHelper.addToolMaterial("material_ruby", 12, 1500, 800.0F, 17.0F, 10);
+	public static final ToolMaterial MATERIAL_SAPPHIRE = EnumHelper.addToolMaterial("material_sapphire", 12, 1500, 800.0F, 17.0F, 10);
+	public static final ToolMaterial MATERIAL_DIAMOND = EnumHelper.addToolMaterial("material_diamond", 13, 3000, 2400.0F, 22.0F, 6);
+	public static final ToolMaterial MATERIAL_AMAZONITE = EnumHelper.addToolMaterial("material_amazonite", 14, 5000, 200.0F, 27.0F, 5);
 	public static final ToolMaterial MATERIAL_DEMON = EnumHelper.addToolMaterial("material_demon", 10, 1000, 25.0F, 15F, 5);
 	public static final ToolMaterial MATERIAL_CORE = EnumHelper.addToolMaterial("material_core", 12, 0, 1000.0F, 500F, 5);
-	public static final ToolMaterial MATERIAL_ONYX = EnumHelper.addToolMaterial("material_onyx", 15, 100, 300.0F, 32.0F, 4);
+	public static final ToolMaterial MATERIAL_ONYX = EnumHelper.addToolMaterial("material_onyx", 15, 0, 300.0F, 32.0F, 4);
 	public static final ToolMaterial MATERIAL_AZURITE = EnumHelper.addToolMaterial("material_azurite", 15, 100, 1000.0F, 100.0F, 4);
 	
 	
@@ -86,93 +62,24 @@ public class ModItems {
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_GOLD = EnumHelper.addArmorMaterial("armor_material_gold", Reference.MOD_ID + ":gold", 45,
 			new int[] {4, 7, 6, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F);
-	
+
+	public static final ArmorMaterial ARMOR_MATERIAL_AEROGEL_GOLD = EnumHelper.addArmorMaterial("armor_material_aerogel_gold", Reference.MOD_ID + ":aerogel_gold", 45,
+			new int[] {4, 7, 6, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F);
+
 	public static final ArmorMaterial ARMOR_MATERIAL_PLATINUM = EnumHelper.addArmorMaterial("armor_material_platinum", Reference.MOD_ID + ":platinum", 56,
 			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD = EnumHelper.addArmorMaterial("armor_material_emerald", Reference.MOD_ID + ":emerald", 5,
 			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
 
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD1 = EnumHelper.addArmorMaterial("armor_material_emerald1", Reference.MOD_ID + ":emerald1", 10,
-			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD2 = EnumHelper.addArmorMaterial("armor_material_emerald2", Reference.MOD_ID + ":emerald2", 20,
-			new int[] {5, 9, 8, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD3 = EnumHelper.addArmorMaterial("armor_material_emerald3", Reference.MOD_ID + ":emerald3", 40,
-			new int[] {6, 9, 8, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD4 = EnumHelper.addArmorMaterial("armor_material_emerald4", Reference.MOD_ID + ":emerald4", 80,
-			new int[] {6, 9, 8, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD5 = EnumHelper.addArmorMaterial("armor_material_emerald5", Reference.MOD_ID + ":emerald5", 160,
-			new int[] {6, 10, 8, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD6 = EnumHelper.addArmorMaterial("armor_material_emerald6", Reference.MOD_ID + ":emerald6", 320,
-			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
-
 	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE = EnumHelper.addArmorMaterial("armor_material_sapphire", Reference.MOD_ID + ":sapphire", 6,
 			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE1 = EnumHelper.addArmorMaterial("armor_material_sapphire1", Reference.MOD_ID + ":sapphire1", 12,
-			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE2 = EnumHelper.addArmorMaterial("armor_material_sapphire2", Reference.MOD_ID + ":sapphire2", 24,
-			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 7.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE3 = EnumHelper.addArmorMaterial("armor_material_sapphire3", Reference.MOD_ID + ":sapphire3", 48,
-			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 7.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE4 = EnumHelper.addArmorMaterial("armor_material_sapphire4", Reference.MOD_ID + ":sapphire4", 96,
-			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 8.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE5 = EnumHelper.addArmorMaterial("armor_material_sapphire5", Reference.MOD_ID + ":sapphire5", 192,
-			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 8.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE6 = EnumHelper.addArmorMaterial("armor_material_sapphire6", Reference.MOD_ID + ":sapphire6", 384,
-			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 9.5F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 7,
 			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_RUBY1 = EnumHelper.addArmorMaterial("armor_material_ruby1", Reference.MOD_ID + ":ruby1", 14,
-			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_RUBY2 = EnumHelper.addArmorMaterial("armor_material_ruby2", Reference.MOD_ID + ":ruby2", 28,
-			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 11.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_RUBY3 = EnumHelper.addArmorMaterial("armor_material_ruby3", Reference.MOD_ID + ":ruby3", 56,
-			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 11.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_RUBY4 = EnumHelper.addArmorMaterial("armor_material_ruby4", Reference.MOD_ID + ":ruby4", 112,
-			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 12.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_RUBY5 = EnumHelper.addArmorMaterial("armor_material_ruby5", Reference.MOD_ID + ":ruby5", 224,
-			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 12.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_RUBY6 = EnumHelper.addArmorMaterial("armor_material_ruby6", Reference.MOD_ID + ":ruby6", 448,
-			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND = EnumHelper.addArmorMaterial("armor_material_diamond", Reference.MOD_ID + ":diamond", 14,
 			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND1 = EnumHelper.addArmorMaterial("armor_material_diamond1", Reference.MOD_ID + ":diamond", 28,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 14.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND2 = EnumHelper.addArmorMaterial("armor_material_diamond2", Reference.MOD_ID + ":diamond", 56,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 14.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND3 = EnumHelper.addArmorMaterial("armor_material_diamond3", Reference.MOD_ID + ":diamond", 112,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 15.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND4 = EnumHelper.addArmorMaterial("armor_material_diamond4", Reference.MOD_ID + ":diamond", 224,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 15.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND5 = EnumHelper.addArmorMaterial("armor_material_diamond5", Reference.MOD_ID + ":diamond", 448,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 16.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND6 = EnumHelper.addArmorMaterial("armor_material_diamond6", Reference.MOD_ID + ":diamond", 896,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 17.0F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_AMAZONITE = EnumHelper.addArmorMaterial("armor_material_amazonite", Reference.MOD_ID + ":amazonite", 250,
 			new int[] {6, 12, 9, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
@@ -249,6 +156,11 @@ public class ModItems {
 	public static final Item GOLD_CHESTPLATE = new GoldBody("gold_chestplate", ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.CHEST);
 	public static final Item GOLD_LEGGINGS = new GoldLegs("gold_leggings", ARMOR_MATERIAL_GOLD, 2, EntityEquipmentSlot.LEGS);
 	public static final Item GOLD_BOOTS = new GoldBoots("gold_boots", ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.FEET);
+
+	public static final Item AEROGEL_GOLD_HELMET = new GoldHelmet("aerogel_gold_helmet", ARMOR_MATERIAL_AEROGEL_GOLD, 1, EntityEquipmentSlot.HEAD);
+	public static final Item AEROGEL_GOLD_CHESTPLATE = new GoldBody("aerogel_gold_chestplate", ARMOR_MATERIAL_AEROGEL_GOLD, 1, EntityEquipmentSlot.CHEST);
+	public static final Item AEROGEL_GOLD_LEGGINGS = new GoldLegs("aerogel_gold_leggings", ARMOR_MATERIAL_AEROGEL_GOLD, 2, EntityEquipmentSlot.LEGS);
+	public static final Item AEROGEL_GOLD_BOOTS = new GoldBoots("aerogel_gold_boots", ARMOR_MATERIAL_AEROGEL_GOLD, 1, EntityEquipmentSlot.FEET);
 	
 	//PLATINUM//
 
@@ -265,99 +177,16 @@ public class ModItems {
 	public static final Item PLATINUM_BOOTS = new PlatinumBoots("platinum_boots", ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.FEET);
 	
 	//EMERALD//
-
-	
 	public static final ItemSword EMERALD_SWORD = new ToolSword("emerald_sword", MATERIAL_EMERALD);
 	public static final ItemSpade EMERALD_SHOVEL = new ToolSpade("emerald_shovel", MATERIAL_EMERALD);
 	public static final ItemPickaxe EMERALD_PICKAXE = new ToolPickaxe("emerald_pickaxe", MATERIAL_EMERALD);
 	public static final ItemAxe EMERALD_AXE = new ToolAxe("emerald_axe", MATERIAL_EMERALD);
 	public static final ItemHoe EMERALD_HOE = new ToolHoe("emerald_hoe", MATERIAL_EMERALD);
 
-
-
-	
 	public static final Item EMERALD_HELMET = new EmeraldHelmet("emerald_helmet", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
 	public static final Item EMERALD_CHESTPLATE = new EmeraldBody("emerald_chestplate", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
 	public static final Item EMERALD_LEGGINGS = new EmeraldLegs("emerald_leggings", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
 	public static final Item EMERALD_BOOTS = new EmeraldBoots("emerald_boots", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
-
-	//EMERALD+1//
-
-	public static final ItemSword EMERALD_SWORD1 = new ToolSword("emerald_sword1", MATERIAL_EMERALD1);
-	public static final ItemSpade EMERALD_SHOVEL1 = new ToolSpade("emerald_shovel1", MATERIAL_EMERALD1);
-	public static final ItemPickaxe EMERALD_PICKAXE1 = new ToolPickaxe("emerald_pickaxe1", MATERIAL_EMERALD1);
-	public static final ItemAxe EMERALD_AXE1 = new ToolAxe("emerald_axe1", MATERIAL_EMERALD1);
-
-
-	public static final Item EMERALD_HELMET1 = new EmeraldHelmet1("emerald_helmet1", ARMOR_MATERIAL_EMERALD1, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE1 = new EmeraldBody1("emerald_chestplate1", ARMOR_MATERIAL_EMERALD1, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS1 = new EmeraldLegs1("emerald_leggings1", ARMOR_MATERIAL_EMERALD1, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS1 = new EmeraldBoots1("emerald_boots1", ARMOR_MATERIAL_EMERALD1, 1, EntityEquipmentSlot.FEET);
-
-	//EMERALD+2//
-
-	public static final ItemSword EMERALD_SWORD2 = new ToolSword("emerald_sword2", MATERIAL_EMERALD2);
-	public static final ItemSpade EMERALD_SHOVEL2 = new ToolSpade("emerald_shovel2", MATERIAL_EMERALD2);
-	public static final ItemPickaxe EMERALD_PICKAXE2 = new ToolPickaxe("emerald_pickaxe2", MATERIAL_EMERALD2);
-	public static final ItemAxe EMERALD_AXE2 = new ToolAxe("emerald_axe2", MATERIAL_EMERALD2);
-
-
-	public static final Item EMERALD_HELMET2 = new EmeraldHelmet2("emerald_helmet2", ARMOR_MATERIAL_EMERALD2, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE2 = new EmeraldBody2("emerald_chestplate2", ARMOR_MATERIAL_EMERALD2, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS2 = new EmeraldLegs2("emerald_leggings2", ARMOR_MATERIAL_EMERALD2, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS2 = new EmeraldBoots2("emerald_boots2", ARMOR_MATERIAL_EMERALD2, 1, EntityEquipmentSlot.FEET);
-
-	//EMERALD+3//
-
-	public static final ItemSword EMERALD_SWORD3 = new ToolSword("emerald_sword3", MATERIAL_EMERALD3);
-	public static final ItemSpade EMERALD_SHOVEL3 = new ToolSpade("emerald_shovel3", MATERIAL_EMERALD3);
-	public static final ItemPickaxe EMERALD_PICKAXE3 = new ToolPickaxe("emerald_pickaxe3", MATERIAL_EMERALD3);
-	public static final ItemAxe EMERALD_AXE3 = new ToolAxe("emerald_axe3", MATERIAL_EMERALD3);
-
-
-	public static final Item EMERALD_HELMET3 = new EmeraldHelmet3("emerald_helmet3", ARMOR_MATERIAL_EMERALD3, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE3 = new EmeraldBody3("emerald_chestplate3", ARMOR_MATERIAL_EMERALD3, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS3 = new EmeraldLegs3("emerald_leggings3", ARMOR_MATERIAL_EMERALD3, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS3 = new EmeraldBoots3("emerald_boots3", ARMOR_MATERIAL_EMERALD3, 1, EntityEquipmentSlot.FEET);
-
-	//EMERALD+4//
-
-	public static final ItemSword EMERALD_SWORD4 = new ToolSword("emerald_sword4", MATERIAL_EMERALD4);
-	public static final ItemSpade EMERALD_SHOVEL4 = new ToolSpade("emerald_shovel4", MATERIAL_EMERALD4);
-	public static final ItemPickaxe EMERALD_PICKAXE4 = new ToolPickaxe("emerald_pickaxe4", MATERIAL_EMERALD4);
-	public static final ItemAxe EMERALD_AXE4 = new ToolAxe("emerald_axe4", MATERIAL_EMERALD4);
-
-
-	public static final Item EMERALD_HELMET4 = new EmeraldHelmet4("emerald_helmet4", ARMOR_MATERIAL_EMERALD4, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE4 = new EmeraldBody4("emerald_chestplate4", ARMOR_MATERIAL_EMERALD4, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS4 = new EmeraldLegs4("emerald_leggings4", ARMOR_MATERIAL_EMERALD4, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS4 = new EmeraldBoots4("emerald_boots4", ARMOR_MATERIAL_EMERALD4, 1, EntityEquipmentSlot.FEET);
-
-	//EMERALD+5//
-
-	public static final ItemSword EMERALD_SWORD5 = new ToolSword("emerald_sword5", MATERIAL_EMERALD5);
-	public static final ItemSpade EMERALD_SHOVEL5 = new ToolSpade("emerald_shovel5", MATERIAL_EMERALD5);
-	public static final ItemPickaxe EMERALD_PICKAXE5 = new ToolPickaxe("emerald_pickaxe5", MATERIAL_EMERALD5);
-	public static final ItemAxe EMERALD_AXE5 = new ToolAxe("emerald_axe5", MATERIAL_EMERALD5);
-
-
-	public static final Item EMERALD_HELMET5 = new EmeraldHelmet5("emerald_helmet5", ARMOR_MATERIAL_EMERALD5, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE5 = new EmeraldBody5("emerald_chestplate5", ARMOR_MATERIAL_EMERALD5, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS5 = new EmeraldLegs5("emerald_leggings5", ARMOR_MATERIAL_EMERALD5, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS5 = new EmeraldBoots5("emerald_boots5", ARMOR_MATERIAL_EMERALD5, 1, EntityEquipmentSlot.FEET);
-
-	//ULTIMATE EMERALD//
-
-	public static final ItemSword EMERALD_SWORD6 = new ToolSword("emerald_sword6", MATERIAL_EMERALD6);
-	public static final ItemSpade EMERALD_SHOVEL6 = new ToolSpade("emerald_shovel6", MATERIAL_EMERALD6);
-	public static final ItemPickaxe EMERALD_PICKAXE6 = new ToolPickaxe("emerald_pickaxe6", MATERIAL_EMERALD6);
-	public static final ItemAxe EMERALD_AXE6 = new ToolAxe("emerald_axe6", MATERIAL_EMERALD6);
-
-
-	public static final Item EMERALD_HELMET6 = new EmeraldHelmet6("emerald_helmet6", ARMOR_MATERIAL_EMERALD6, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE6 = new EmeraldBody6("emerald_chestplate6", ARMOR_MATERIAL_EMERALD6, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS6 = new EmeraldLegs6("emerald_leggings6", ARMOR_MATERIAL_EMERALD6, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS6 = new EmeraldBoots6("emerald_boots6", ARMOR_MATERIAL_EMERALD6, 1, EntityEquipmentSlot.FEET);
 
 	//SAPPHIRE//
 
@@ -372,66 +201,7 @@ public class ModItems {
 	public static final Item SAPPHIRE_CHESTPLATE = new SapphirBody("sapphire_chestplate", ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.CHEST);
 	public static final Item SAPPHIRE_LEGGINGS = new SapphirLegs("sapphire_leggings", ARMOR_MATERIAL_SAPPHIRE, 2, EntityEquipmentSlot.LEGS);
 	public static final Item SAPPHIRE_BOOTS = new SapphirBoots("sapphire_boots", ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.FEET);
-
-	public static final ItemSword SAPPHIRE_SWORD1 = new ToolSword("sapphire_sword1", MATERIAL_SAPPHIRE);
-	public static final ItemSpade SAPPHIRE_SHOVEL1 = new ToolSpade("sapphire_shovel1", MATERIAL_SAPPHIRE);
-	public static final ItemPickaxe SAPPHIRE_PICKAXE1 = new ToolPickaxe("sapphire_pickaxe1", MATERIAL_SAPPHIRE);
-	public static final ItemAxe SAPPHIRE_AXE1 = new ToolAxe("sapphire_axe1", MATERIAL_SAPPHIRE);
-
-	public static final Item SAPPHIRE_HELMET1 = new SapphirHelmet1("sapphire_helmet1", ARMOR_MATERIAL_SAPPHIRE1, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SAPPHIRE_CHESTPLATE1 = new SapphirBody1("sapphire_chestplate1", ARMOR_MATERIAL_SAPPHIRE1, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SAPPHIRE_LEGGINGS1 = new SapphirLegs1("sapphire_leggings1", ARMOR_MATERIAL_SAPPHIRE1, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SAPPHIRE_BOOTS1 = new SapphirBoots1("sapphire_boots1", ARMOR_MATERIAL_SAPPHIRE1, 1, EntityEquipmentSlot.FEET);
-
-	public static final ItemSword SAPPHIRE_SWORD2 = new ToolSword("sapphire_sword2", MATERIAL_SAPPHIRE2);
-	public static final ItemSpade SAPPHIRE_SHOVEL2 = new ToolSpade("sapphire_shovel2", MATERIAL_SAPPHIRE2);
-	public static final ItemPickaxe SAPPHIRE_PICKAXE2 = new ToolPickaxe("sapphire_pickaxe2", MATERIAL_SAPPHIRE2);
-	public static final ItemAxe SAPPHIRE_AXE2 = new ToolAxe("sapphire_axe2", MATERIAL_SAPPHIRE2);
-
-	public static final Item SAPPHIRE_HELMET2 = new SapphirHelmet2("sapphire_helmet2", ARMOR_MATERIAL_SAPPHIRE2, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SAPPHIRE_CHESTPLATE2 = new SapphirBody2("sapphire_chestplate2", ARMOR_MATERIAL_SAPPHIRE2, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SAPPHIRE_LEGGINGS2 = new SapphirLegs2("sapphire_leggings2", ARMOR_MATERIAL_SAPPHIRE2, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SAPPHIRE_BOOTS2 = new SapphirBoots2("sapphire_boots2", ARMOR_MATERIAL_SAPPHIRE2, 1, EntityEquipmentSlot.FEET);
-
-	public static final ItemSword SAPPHIRE_SWORD3 = new ToolSword("sapphire_sword3", MATERIAL_SAPPHIRE3);
-	public static final ItemSpade SAPPHIRE_SHOVEL3 = new ToolSpade("sapphire_shovel3", MATERIAL_SAPPHIRE3);
-	public static final ItemPickaxe SAPPHIRE_PICKAXE3 = new ToolPickaxe("sapphire_pickaxe3", MATERIAL_SAPPHIRE3);
-	public static final ItemAxe SAPPHIRE_AXE3 = new ToolAxe("sapphire_axe3", MATERIAL_SAPPHIRE3);
-
-	public static final Item SAPPHIRE_HELMET3 = new SapphirHelmet3("sapphire_helmet3", ARMOR_MATERIAL_SAPPHIRE3, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SAPPHIRE_CHESTPLATE3 = new SapphirBody3("sapphire_chestplate3", ARMOR_MATERIAL_SAPPHIRE3, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SAPPHIRE_LEGGINGS3 = new SapphirLegs3("sapphire_leggings3", ARMOR_MATERIAL_SAPPHIRE3, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SAPPHIRE_BOOTS3 = new SapphirBoots3("sapphire_boots3", ARMOR_MATERIAL_SAPPHIRE3, 1, EntityEquipmentSlot.FEET);
-
-	public static final ItemSword SAPPHIRE_SWORD4 = new ToolSword("sapphire_sword4", MATERIAL_SAPPHIRE4);
-	public static final ItemSpade SAPPHIRE_SHOVEL4 = new ToolSpade("sapphire_shovel4", MATERIAL_SAPPHIRE4);
-	public static final ItemPickaxe SAPPHIRE_PICKAXE4 = new ToolPickaxe("sapphire_pickaxe4", MATERIAL_SAPPHIRE4);
-	public static final ItemAxe SAPPHIRE_AXE4 = new ToolAxe("sapphire_axe4", MATERIAL_SAPPHIRE4);
-
-	public static final Item SAPPHIRE_HELMET4 = new SapphirHelmet4("sapphire_helmet4", ARMOR_MATERIAL_SAPPHIRE4, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SAPPHIRE_CHESTPLATE4 = new SapphirBody4("sapphire_chestplate4", ARMOR_MATERIAL_SAPPHIRE4, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SAPPHIRE_LEGGINGS4 = new SapphirLegs4("sapphire_leggings4", ARMOR_MATERIAL_SAPPHIRE4, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SAPPHIRE_BOOTS4 = new SapphirBoots4("sapphire_boots4", ARMOR_MATERIAL_SAPPHIRE4, 1, EntityEquipmentSlot.FEET);
-
-	public static final ItemSword SAPPHIRE_SWORD5 = new ToolSword("sapphire_sword5", MATERIAL_SAPPHIRE5);
-	public static final ItemSpade SAPPHIRE_SHOVEL5 = new ToolSpade("sapphire_shovel5", MATERIAL_SAPPHIRE5);
-	public static final ItemPickaxe SAPPHIRE_PICKAXE5 = new ToolPickaxe("sapphire_pickaxe5", MATERIAL_SAPPHIRE5);
-	public static final ItemAxe SAPPHIRE_AXE5 = new ToolAxe("sapphire_axe5", MATERIAL_SAPPHIRE5);
-
-	public static final Item SAPPHIRE_HELMET5 = new SapphirHelmet5("sapphire_helmet5", ARMOR_MATERIAL_SAPPHIRE5, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SAPPHIRE_CHESTPLATE5 = new SapphirBody5("sapphire_chestplate5", ARMOR_MATERIAL_SAPPHIRE5, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SAPPHIRE_LEGGINGS5 = new SapphirLegs5("sapphire_leggings5", ARMOR_MATERIAL_SAPPHIRE5, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SAPPHIRE_BOOTS5 = new SapphirBoots5("sapphire_boots5", ARMOR_MATERIAL_SAPPHIRE5, 1, EntityEquipmentSlot.FEET);
-
-	public static final ItemSword SAPPHIRE_SWORD6 = new ToolSword("sapphire_sword6", MATERIAL_SAPPHIRE6);
-	public static final ItemSpade SAPPHIRE_SHOVEL6 = new ToolSpade("sapphire_shovel6", MATERIAL_SAPPHIRE6);
-	public static final ItemPickaxe SAPPHIRE_PICKAXE6 = new ToolPickaxe("sapphire_pickaxe6", MATERIAL_SAPPHIRE6);
-	public static final ItemAxe SAPPHIRE_AXE6 = new ToolAxe("sapphire_axe6", MATERIAL_SAPPHIRE6);
-
-	public static final Item SAPPHIRE_HELMET6 = new SapphirHelmet6("sapphire_helmet6", ARMOR_MATERIAL_SAPPHIRE6, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SAPPHIRE_CHESTPLATE6 = new SapphirBody6("sapphire_chestplate6", ARMOR_MATERIAL_SAPPHIRE6, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SAPPHIRE_LEGGINGS6 = new SapphirLegs6("sapphire_leggings6", ARMOR_MATERIAL_SAPPHIRE6, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SAPPHIRE_BOOTS6 = new SapphirBoots6("sapphire_boots6", ARMOR_MATERIAL_SAPPHIRE6, 1, EntityEquipmentSlot.FEET);
+	
 	//RUBY//
 
 	
@@ -491,16 +261,7 @@ public class ModItems {
 	public static final Item AMAZONITE_CHESTPLATE = new AmazoniteBody("amazonite_chestplate", ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.CHEST);
 	public static final Item AMAZONITE_LEGGINGS = new AmazoniteLegs("amazonite_leggings", ARMOR_MATERIAL_AMAZONITE, 2, EntityEquipmentSlot.LEGS);
 	public static final Item AMAZONITE_BOOTS = new AmazoniteBoots("amazonite_boots", ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.FEET);
-
-
-	//AMETHYST//
 	
-	
-	public static final ItemSword AMETHYST_SWORD = new ToolSword("amethyst_sword", MATERIAL_AMETHYST);
-	public static final ItemSpade AMETHYST_SHOVEL = new ToolSpade("amethyst_shovel", MATERIAL_AMETHYST);
-	public static final ItemPickaxe AMETHYST_PICKAXE = new ToolPickaxe("amethyst_pickaxe", MATERIAL_AMETHYST);
-	public static final ItemAxe AMETHYST_AXE = new ToolAxe("amethyst_axe", MATERIAL_AMETHYST);
-	public static final ItemHoe AMETHYST_HOE = new ToolHoe("amethyst_hoe", MATERIAL_AMETHYST);
 
 	
 	//ONYX//

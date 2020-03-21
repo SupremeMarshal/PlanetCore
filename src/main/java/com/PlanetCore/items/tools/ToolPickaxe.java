@@ -29,26 +29,6 @@ public class ToolPickaxe extends ItemPickaxe implements IHasModel {
 		
 		ModItems.ITEMS.add(this);
 
-		this.addPropertyOverride(new ResourceLocation("holding"), new IItemPropertyGetter() {
-
-
-			@SideOnly(Side.CLIENT)
-			public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
-				IItemPropertyGetter pickaxe = this;
-				if (entityIn == null)
-				{
-					return 0.0F;
-				}
-				else
-
-				return entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_PICKAXE1
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_PICKAXE2
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_PICKAXE3
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_PICKAXE4
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_PICKAXE5
-						|| entityIn.getHeldItemMainhand().getItem() == ModItems.EMERALD_PICKAXE6? 1.0F : 0.0F;
-			}
-		});
 	}
 	
 	@Override

@@ -152,16 +152,6 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.CORESTONE_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 13.0F);
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 19.5F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 26.0F);
-
-		GameRegistry.addSmelting(ModBlocks.AMETHYST_ORE, new ItemStack(ModItems.AMETHYST, 1), 5.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_AMETHYST, new ItemStack(ModItems.AMETHYST, 1), 5.75F);
-		GameRegistry.addSmelting(ModBlocks.DEEPROCK_AMETHYST, new ItemStack(ModItems.AMETHYST, 1), 6.0F);
-		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_AMETHYST, new ItemStack(ModItems.AMETHYST, 1), 6.5F);
-		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_AMETHYST, new ItemStack(ModItems.AMETHYST, 1), 7.0F);
-		GameRegistry.addSmelting(ModBlocks.LOWER_MANTLEROCK_AMETHYST, new ItemStack(ModItems.AMETHYST, 1), 10.5F);
-		GameRegistry.addSmelting(ModBlocks.CORESTONE_AMETHYST, new ItemStack(ModItems.AMETHYST, 1), 14.0F);
-		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_AMETHYST, new ItemStack(ModItems.AMETHYST, 1), 21.0F);
-		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_AMETHYST, new ItemStack(ModItems.AMETHYST, 1), 28.0F);
 		
 		GameRegistry.addSmelting(ModBlocks.ONYX_ORE, new ItemStack(ModItems.ONYX, 1), 6.0F);
 		GameRegistry.addSmelting(ModBlocks.HARDROCK_ONYX, new ItemStack(ModItems.ONYX, 1), 6.25F);
@@ -172,16 +162,7 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.CORESTONE_ONYX, new ItemStack(ModItems.ONYX, 1), 15.0F);
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_ONYX, new ItemStack(ModItems.ONYX, 1), 22.5F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_ONYX, new ItemStack(ModItems.ONYX, 1), 30.0F);
-		
-		GameRegistry.addSmelting(ModBlocks.AZURITE_ORE, new ItemStack(ModItems.AZURITE, 1), 6.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_AZURITE, new ItemStack(ModItems.AZURITE, 1), 6.75F);
-		GameRegistry.addSmelting(ModBlocks.DEEPROCK_AZURITE, new ItemStack(ModItems.AZURITE, 1), 7.0F);
-		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_AZURITE, new ItemStack(ModItems.AZURITE, 1), 7.5F);
-		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_AZURITE, new ItemStack(ModItems.AZURITE, 1), 8.0F);
-		GameRegistry.addSmelting(ModBlocks.LOWER_MANTLEROCK_AZURITE, new ItemStack(ModItems.AZURITE, 1), 12.0F);
-		GameRegistry.addSmelting(ModBlocks.CORESTONE_AZURITE, new ItemStack(ModItems.AZURITE, 1), 16.0F);
-		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_AZURITE, new ItemStack(ModItems.AZURITE, 1), 24.0F);
-		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_AZURITE, new ItemStack(ModItems.AZURITE, 1), 32.0F);
+
 
 		GameRegistry.addSmelting(Items.IRON_HORSE_ARMOR, new ItemStack(ModItems.IRON_NUGGET, 1), 0.0F);
 

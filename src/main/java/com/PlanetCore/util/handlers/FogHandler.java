@@ -38,9 +38,9 @@ public class FogHandler {
         } else if (block instanceof BlockFluidBase) {
             if (block == Blocks.LAVA) {
                 event.setDensity(0.5F);
-            } else if (block == ModBlocks.HOT_LAVA_BLOCK) {
+            } else if (block == ModBlocks.HOT_LAVA_FLUID) {
                 event.setDensity(0.3F);
-            } else if (block == ModBlocks.CORE_LAVA_BLOCK) {
+            } else if (block == ModBlocks.CORE_LAVA_FLUID) {
                 event.setDensity(0.75F);
             } else if (block == Blocks.WATERLILY) {
                 event.setDensity(0.1F);
@@ -57,11 +57,11 @@ public class FogHandler {
             event.setRed(1.0F);
             event.setGreen(0.75F);
             event.setBlue(0.25F);
-        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == ModBlocks.HOT_LAVA_BLOCK) {
+        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == ModBlocks.HOT_LAVA_FLUID) {
             event.setRed(1.0F);
             event.setGreen(0.85F);
             event.setBlue(0.0F);
-        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == ModBlocks.CORE_LAVA_BLOCK) {
+        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == ModBlocks.CORE_LAVA_FLUID) {
             event.setRed(0.6F);
             event.setGreen(1.0F);
             event.setBlue(1.0F);

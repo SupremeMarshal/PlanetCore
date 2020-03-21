@@ -2,6 +2,9 @@ package com.PlanetCore.util.handlers;
 
 
 
+import com.PlanetCore.capability.IUserSettings;
+import com.PlanetCore.capability.UserSettings;
+import com.PlanetCore.capability.UserSettingsStorage;
 import com.PlanetCore.init.*;
 import com.PlanetCore.util.IHasModel;
 import com.PlanetCore.util.ModConfiguration;
@@ -15,6 +18,7 @@ import net.minecraft.item.ItemStack;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -37,11 +41,11 @@ public class RegistryHandler {
 	{
 		event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
 	}
-	
+
 	@SubscribeEvent
 	public static void onBlockRegister(RegistryEvent.Register<Block> event)
 	{
-		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
+		ModBlocks.register(event.getRegistry());
 	}
 	
 	@SubscribeEvent
@@ -80,6 +84,7 @@ public class RegistryHandler {
 		EntityInit.registerEntities();
 		ModConfiguration.registerConfig(event);
 		MinecraftForge.EVENT_BUS.register(new FogHandler());
+		//CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
 
 
 	}

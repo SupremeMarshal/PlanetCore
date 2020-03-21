@@ -188,9 +188,9 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		{
 			BlockPos pos2 = pos.up();
 			BlockPos pos3 = pos.down();
-			if(worldIn.getBlockState(pos2).getMaterial()==Material.AIR && worldIn.getBlockState(pos3).getBlock()==ModBlocks.CORE_LAVA_BLOCK)
+			if(worldIn.getBlockState(pos2).getMaterial()==Material.AIR && worldIn.getBlockState(pos3).getBlock()==ModBlocks.CORE_LAVA_FLUID)
 			{
-				worldIn.setBlockState(pos2, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
+				worldIn.setBlockState(pos2, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 			}
 
 		}
@@ -222,9 +222,9 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		{
 			BlockPos pos2 = pos.up();
 			BlockPos pos3 = pos.down();
-			if(worldIn.getBlockState(pos2).getMaterial()==Material.AIR && worldIn.getBlockState(pos3).getBlock()==ModBlocks.CORE_LAVA_BLOCK)
+			if(worldIn.getBlockState(pos2).getMaterial()==Material.AIR && worldIn.getBlockState(pos3).getBlock()==ModBlocks.CORE_LAVA_FLUID)
 			{
-				worldIn.setBlockState(pos2, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
+				worldIn.setBlockState(pos2, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 			}
 
 		}
