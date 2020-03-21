@@ -351,7 +351,7 @@ public class Mantlerock extends BlockBase
 			worldIn.setBlockState(pos, (IBlockState) Blocks.LAVA);
 		}
 		if (pos.getY() < -9536 && pos.getY() > -12650 && Math.random() <= chance1 && !worldIn.isRemote) {
-			worldIn.setBlockState(pos, (IBlockState) ModBlocks.HOT_LAVA_BLOCK);
+			worldIn.setBlockState(pos, (IBlockState) ModBlocks.CORE_LAVA_FLUID);
 		}
 	}
 

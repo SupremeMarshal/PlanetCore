@@ -65,12 +65,8 @@ public class Corerock extends BlockBase {
 	{
 		Block block = this;
 
-		if (block == ModBlocks.CORESTONE_AZURITE || block == ModBlocks.INNERCORESTONE_AZURITE || block == ModBlocks.CENTERCORESTONE_AZURITE)
-		{return new ItemStack(ModItems.AZURITE, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_ONYX || block == ModBlocks.INNERCORESTONE_ONYX || block == ModBlocks.CENTERCORESTONE_ONYX)
+		if (block == ModBlocks.CORESTONE_ONYX || block == ModBlocks.INNERCORESTONE_ONYX || block == ModBlocks.CENTERCORESTONE_ONYX)
 		{return new ItemStack(ModItems.ONYX, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_AMETHYST || block == ModBlocks.INNERCORESTONE_AMETHYST || block == ModBlocks.CENTERCORESTONE_AMETHYST)
-		{return new ItemStack(ModItems.AMETHYST, 1, 0).getItem();}
 		else if (block == ModBlocks.CORESTONE_AMAZONITE || block == ModBlocks.INNERCORESTONE_AMAZONITE || block == ModBlocks.CENTERCORESTONE_AMAZONITE)
 		{return new ItemStack(ModItems.AMAZONITE, 1, 0).getItem();}
 		else if (block == ModBlocks.CORESTONE_JADE || block == ModBlocks.INNERCORESTONE_JADE || block == ModBlocks.CENTERCORESTONE_JADE)
@@ -288,7 +284,7 @@ public class Corerock extends BlockBase {
 							{
 								return;
 							}
-							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_BLOCK.getDefaultState());
+							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 						}
 						else if(pos.getY()>-12675 && pos.getY()<=-1000)
 						{

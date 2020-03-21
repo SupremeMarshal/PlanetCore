@@ -52,12 +52,8 @@ public class CoreRockGemBase extends Corerock
 	{return new ItemStack(ModItems.JADE, (int) (1), 0).getItem();}
 	else if (block == ModBlocks.CORESTONE_AMAZONITE || block == ModBlocks.INNERCORESTONE_AMAZONITE || block == ModBlocks.CENTERCORESTONE_AMAZONITE)
 	{return new ItemStack(ModItems.AMAZONITE, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.CORESTONE_AMETHYST || block == ModBlocks.INNERCORESTONE_AMETHYST || block == ModBlocks.CENTERCORESTONE_AMETHYST)
-	{return new ItemStack(ModItems.AMETHYST, (int) (1), 0).getItem();}
 	else if (block == ModBlocks.CORESTONE_ONYX || block == ModBlocks.INNERCORESTONE_ONYX || block == ModBlocks.CENTERCORESTONE_ONYX)
 	{return new ItemStack(ModItems.ONYX, (int) (1), 0).getItem();}
-	else if (block == ModBlocks.CORESTONE_AZURITE || block == ModBlocks.INNERCORESTONE_AZURITE || block == ModBlocks.CENTERCORESTONE_AZURITE)
-	{return new ItemStack(ModItems.AZURITE, (int) (1), 0).getItem();}
 	else if (block == ModBlocks.INNERCORESTONE_COAL || block == ModBlocks.CENTERCORESTONE_COAL)
 	{return new ItemStack(Items.COAL, (int) (1), 0).getItem();}
 	else if (block == ModBlocks.INNERCORESTONE_REDSTONE || block == ModBlocks.CENTERCORESTONE_REDSTONE)
@@ -132,12 +128,6 @@ public class CoreRockGemBase extends Corerock
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.CORESTONE_FLAMING_TOPAZ || block == ModBlocks.INNERCORESTONE_FLAMING_TOPAZ || block == ModBlocks.CENTERCORESTONE_FLAMING_TOPAZ)
-		{
-			for (int i = 0; i < 6; i++) {
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
-			}
-		}
 		else if (block == ModBlocks.CORESTONE_RUBY || block == ModBlocks.INNERCORESTONE_RUBY || block == ModBlocks.CENTERCORESTONE_RUBY)
 		{
 			for (int i = 0; i < 8; i++) {
@@ -168,30 +158,12 @@ public class CoreRockGemBase extends Corerock
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
-		else if (block == ModBlocks.CORESTONE_AMETHYST || block == ModBlocks.INNERCORESTONE_AMETHYST || block == ModBlocks.CENTERCORESTONE_AMETHYST)
-		{
-			for (int i = 0; i < 4; i++) {
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 4));
-			}
-			for (int i = 0; i < 9; i++) {
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
-			}
-		}
 		else if (block == ModBlocks.CORESTONE_ONYX || block == ModBlocks.INNERCORESTONE_ONYX || block == ModBlocks.CENTERCORESTONE_ONYX )
 		{
 			for (int i = 0; i < 6; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 4));
 			}
 			for (int i = 0; i < 13; i++) {
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
-			}
-		}
-		else if (block == ModBlocks.CORESTONE_AZURITE || block == ModBlocks.INNERCORESTONE_AZURITE || block == ModBlocks.CENTERCORESTONE_AZURITE)
-		{
-			for (int i = 0; i < 9; i++) {
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 4));
-			}
-			for (int i = 0; i < 18; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, (int) 1));
 			}
 		}
