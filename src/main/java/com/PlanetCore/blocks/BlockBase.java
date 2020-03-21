@@ -19,16 +19,21 @@ import net.minecraft.block.state.pattern.FactoryBlockPattern;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.entity.monster.EntityIronGolem;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.fml.common.eventhandler.Cancelable;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
@@ -81,9 +86,6 @@ public class BlockBase extends Block implements IHasModel {
 		}
 	}
 
-	public static void unstableBlock(World world, int x, int y, int z, IBlockState state) {
-		Iterable<BlockPos> it = BlockPos.getAllInBox(x + 3, y, z - 3, x - 3, y, z + 3);
-	}
 
 
 	//Earthquake event
@@ -98,9 +100,10 @@ public class BlockBase extends Block implements IHasModel {
 		z = pos.getZ();
 		float counter = 0;
 		Random rand = new Random();
-		int rand2 = (rand.nextInt(3));
-		int rand4 = (rand.nextInt(6));
-		Iterable<BlockPos> it = BlockPos.getAllInBox(x - 8, y - 8, z - 8, x + 8, y + 8, z + 8);
+		int rand2 = (rand.nextInt(2));
+		int rand4 = (rand.nextInt(4));
+		float chance = (float)Math.random();
+		Iterable<BlockPos> it = BlockPos.getAllInBox(x - 12, y - 12, z - 12, x + 12, y + 12, z + 12);
 		for (BlockPos pos2 : it) {
 			IBlockState state2 = worldIn.getBlockState(pos2);
 			if (state2.getMaterial() == Material.AIR) {
@@ -109,30 +112,26 @@ public class BlockBase extends Block implements IHasModel {
 		}
 		float SuperChance = (pos.getY() / (-600000.0F / ((counter + 1F) / 64F)));
 		float SuperChance1 = ((-6000 - pos.getY()) / (-1800000.0F / ((counter + 1F) / 64F)));
-		if (y <= 0 && y >= -1500 && Math.random() <= SuperChance || (y <= -1500 && y >= -6000 && Math.random() <= SuperChance1)) {
+		if ((y <= 0 && y >= -1500 && Math.random() <= SuperChance) || (y <= -1500 && y >= -6000 && Math.random() <= SuperChance1))
+		{
 			for (BlockPos pos2 : it) {
 				IBlockState state2 = worldIn.getBlockState(pos2);
-				if (state2.getMaterial() == Material.AIR) {
+				if (state2.getMaterial() == Material.AIR)
+				{
 					int x1 = pos2.getX();
 					int y1 = pos2.getY() + 1;
 					int z1 = pos2.getZ();
 					BlockPos pos3 = new BlockPos(x1, y1, z1);
 					IBlockState state3 = worldIn.getBlockState(pos3);
-					if (state3.getMaterial() == Material.ROCK) {
+					if (state3.getMaterial() == Material.ROCK && !worldIn.isRemote && Math.random() <= chance)
+					{
 						int x2 = pos3.getX();
 						int y2 = pos3.getY();
 						int z2 = pos3.getZ();
-						Iterable<BlockPos> it1 = BlockPos.getAllInBox(x2 - rand4, y2 - rand2, z2 - rand4, x2 + rand4, y2 + rand2, z2 + rand4);
-						for (BlockPos pos4 : it1) {
-							int x3 = pos4.getX();
-							int y3 = pos4.getY();
-							int z3 = pos4.getZ();
-							if (worldIn.getBlockState(pos4).getMaterial() == Material.ROCK && !worldIn.isRemote) {
-								EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x3 + 0.5, y3, z3 + 0.5, worldIn.getBlockState(pos4));
-								entityfallingblock.setHurtEntities(true);
-								worldIn.spawnEntity(entityfallingblock);
-							}
-
+						{
+							EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x2 + 0.5, y2, z2 + 0.5, worldIn.getBlockState(pos3));
+							entityfallingblock.setHurtEntities(true);
+							worldIn.spawnEntity(entityfallingblock);
 						}
 					}
 				}
@@ -140,14 +139,17 @@ public class BlockBase extends Block implements IHasModel {
 		}
 	}
 
+	private void unharvestable(World worldIn, BlockPos pos, EntityPlayer entity) {
+
+	}
+
 	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
 	{
 		return this == ModBlocks.IRON_BLOCK || this == ModBlocks.STEEL_BLOCK || this == ModBlocks.SILVER_BLOCK || this ==  ModBlocks.GOLD_BLOCK
-				|| this == ModBlocks.PLATINUM_BLOCK || this == ModBlocks.SAPPHIRE_BLOCK || this == ModBlocks.FLAMING_TOPAZ_BLOCK || this == ModBlocks.RUBY_BLOCK
-				|| this == ModBlocks.TOPAZ_BLOCK || this == ModBlocks.DIAMOND_BLOCK || this == ModBlocks.JADE_BLOCK || this == ModBlocks.AMAZONITE_BLOCK || this == ModBlocks.AMETHYST_BLOCK || this == ModBlocks.ONYX_BLOCK || this == ModBlocks.AZURITE_BLOCK;
+				|| this == ModBlocks.PLATINUM_BLOCK || this == ModBlocks.SAPPHIRE_BLOCK || this == ModBlocks.RUBY_BLOCK
+				|| this == ModBlocks.TOPAZ_BLOCK || this == ModBlocks.DIAMOND_BLOCK || this == ModBlocks.JADE_BLOCK || this == ModBlocks.AMAZONITE_BLOCK || this == ModBlocks.ONYX_BLOCK;
 	}
-	
-	
+
 	private void add(BlockPos pos, IBlockState state) {
 		
 	}
@@ -235,6 +237,11 @@ public class BlockBase extends Block implements IHasModel {
 		unstable(worldIn, pos, state);
 		//lavaDecompression(worldIn, pos, state);
 	}
+
+
+
+
+
 	protected BlockPattern getSnowmanPattern()
 	{
 		if (this.snowmanPattern == null)
