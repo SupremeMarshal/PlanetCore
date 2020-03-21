@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "planetcore:deeprock2_coal" }
+    }
+}

@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+       "all": "planetcore:blocks/mantlerock4_gold"
+   }
+}
