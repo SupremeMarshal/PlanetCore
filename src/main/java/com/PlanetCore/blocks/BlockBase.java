@@ -65,7 +65,7 @@ public class BlockBase extends Block implements IHasModel {
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		float PressureLevel = (pos.getY() / -23808 * 100.0F) * (pos.getY() / -23808 * 100.0F) * (pos.getY() / -23808 * 100.0F);
+		float PressureLevel = (pos.getY() /64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
 		if (pos.getY() < 0) {
 			if (Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof GemBase) && !(this instanceof CoreRockGemBase) && !(this instanceof BlocksBase)) {
 				for (EnumFacing side : EnumFacing.values()) {

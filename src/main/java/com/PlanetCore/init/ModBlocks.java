@@ -1347,6 +1347,10 @@ public class ModBlocks {
 
 	public static final Block STEEL_BLOCK = _null();
 
+	public static final Block SOLID_BOULDER = _null();
+
+	public static final Block VERY_SOLID_BOULDER = _null();
+
 
 
 	public static final Block HARDROCK = _null();
@@ -1559,7 +1563,9 @@ public class ModBlocks {
 
 				new BlocksBase("steel_block", Material.ROCK).setResistance(500),
 
+				new Mantlerock("solid_boulder", Material.ROCK).setHardness(1000.0F).setResistance(1),
 
+				new Mantlerock("very_solid_boulder", Material.ROCK).setHardness(10000.0F).setResistance(10),
 
 				new Mantlerock("hardrock", Material.ROCK).setHardness(3.3F),
 

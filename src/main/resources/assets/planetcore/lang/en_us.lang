@@ -2088,6 +2088,9 @@ tile.centercorestone_coal.name=Blue Corerock Coal
 tile.centercorestone_redstone.name=Blue Corerock Redstone
 tile.centercorestone_sulfur.name=Blue Corerock Sulfur
 
+tile.solid_boulder.name=Solid Boulder
+tile.very_solid_boulder.name=Very Solid Boulder
+
 tile.hot_mantlerock_0.name=Hot Mantlerock
 tile.hot_mantlerock_1.name=Very Hot Mantlerock
 tile.hot_mantlerock_2.name=Super Hot Mantlerock
