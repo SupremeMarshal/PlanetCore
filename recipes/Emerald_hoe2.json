@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "B ",
+        "B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:emerald"
+        },
+        "B":
+        {
+            "item": "planetcore:emerald_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:emerald_hoe",
+        "count": 1
+    }
+}

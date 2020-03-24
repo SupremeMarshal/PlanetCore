@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:amazonite"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:amazonite_helmet",
+        "count": 1
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "type": "forge:ore_dict",
+            "ore": "ingotGold"
+        },
+        "B":
+        {
+            "type": "forge:ore_dict",
+            "ore": "blockGold"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:gold_shield",
+        "count": 1
+    }
+}

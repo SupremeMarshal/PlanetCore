@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "type": "forge:ore_dict",
+            "ore": "ingotSteel"
+        },
+        "B":
+        {
+            "type": "forge:ore_dict",
+            "ore": "blockSteel"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:steel_shield",
+        "count": 1
+    }
+}

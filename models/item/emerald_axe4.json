@@ -1,0 +1,15 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "__comment": "Default",
+    "layer0": "planetcore:items/emerald_axe4"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "holding": 1
+      },
+      "model": "planetcore:item/emerald_axe"
+    }
+  ]
+}

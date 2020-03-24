@@ -1,0 +1,21 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:sulfur_block"
+    },
+        {
+            "item": "minecraft:coal_block"
+        }
+
+    ],
+
+    "result": 
+    {
+        "item": "minecraft:gunpowder",
+        "count": 9
+    }
+}

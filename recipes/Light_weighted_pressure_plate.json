@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:gold_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:light_weighted_pressure_plate",
+        "count": 1
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "A",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:diamond"
+        },
+        "B":
+        {
+            "item": "planetcore:diamond_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:diamond_sword",
+        "count": 1
+    }
+}

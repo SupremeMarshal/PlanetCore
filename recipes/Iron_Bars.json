@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:iron_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:iron_bars",
+        "count": 16
+    }
+}

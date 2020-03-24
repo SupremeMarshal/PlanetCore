@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:flaming_topaz"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:flaming_topaz_rod",
+        "count": 1
+    }
+}

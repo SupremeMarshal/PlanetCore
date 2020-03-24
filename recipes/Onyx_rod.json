@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:onyx"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:onyx_rod",
+        "count": 1
+    }
+}

@@ -1,0 +1,16 @@
+
+{
+
+  "variants": {
+
+    "facing=north": { "model": "planetcore:block/damaged_emerald_anvil" },
+
+    "facing=west": { "model": "planetcore:block/damaged_emerald_anvil", "y": 90 },
+
+    "facing=south": { "model": "planetcore:block/damaged_emerald_anvil", "y": 180 },
+
+    "facing=east": { "model": "planetcore:block/damaged_emerald_anvil", "y": 270 }
+
+  }
+
+}

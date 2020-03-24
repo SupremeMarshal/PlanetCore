@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:steel_block"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:steel_ingot",
+        "count": 9
+    }
+}

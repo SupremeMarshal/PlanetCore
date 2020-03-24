@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+        "ABA",
+        " A "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:iron_ingot"
+        },
+        "B":
+        {
+            "item": "minecraft:chest"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:hopper",
+        "count": 1
+    }
+}

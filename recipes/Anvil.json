@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        " B ",
+        "BBB"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:steel_block"
+        },
+        "B":
+        {
+            "item": "planetcore:steel_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:anvil",
+        "data": 0,
+        "count": 1
+    }
+}

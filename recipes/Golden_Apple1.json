@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "ABA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:gold_block"
+        },
+        "B":
+        {
+            "item": "minecraft:apple"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:golden_apple",
+        "data": 1,
+        "count": 1
+    }
+}

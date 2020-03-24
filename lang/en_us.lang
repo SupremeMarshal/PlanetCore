@@ -1,0 +1,1336 @@
+//ANVILS
+tile.gold_anvil.name = Gold Anvil
+tile.chipped_gold_anvil.name = Chipped Gold Anvil
+tile.damaged_gold_anvil.name = Damaged Gold Anvil
+
+//ENCHANTMENTS
+
+
+//TOOLS
+item.bronze_sword.name=Bronze sword
+item.bronze_shovel.name=Bronze shovel
+item.bronze_pickaxe.name=Bronze pickaxe
+item.bronze_axe.name=Bronze axe
+item.bronze_hoe.name=Bronze hoe
+
+item.bronze_helmet.name=Bronze helmet
+item.bronze_helmet.tooltip.0=When equipped:
+item.bronze_helmet.tooltip.1=§9+1 Armor
+
+item.bronze_chestplate.name=Bronze chestplate
+item.bronze_chestplate.tooltip.0=When equipped:
+item.bronze_chestplate.tooltip.1=§9+3 Armor
+
+item.bronze_leggings.name=Bronze leggings
+item.bronze_leggings.tooltip.0=When equipped:
+item.bronze_leggings.tooltip.1=§9+2 Armor
+
+item.bronze_boots.name=Bronze boots
+item.bronze_boots.tooltip.0=When equipped:
+item.bronze_boots.tooltip.1=§9+1 Armor
+
+item.iron_sword.name=Iron sword
+item.iron_shovel.name=Iron shovel
+item.iron_pickaxe.name=Iron pickaxe
+item.iron_axe.name=Iron axe
+item.iron_hoe.name=Iron hoe
+
+item.iron_helmet.name=Iron helmet
+item.iron_helmet.tooltip.0=When equipped:
+item.iron_helmet.tooltip.1=§9+2 Armor
+
+item.iron_chestplate.name=Iron chestplate
+item.iron_chestplate.tooltip.0=When equipped:
+item.iron_chestplate.tooltip.1=§9+4 Armor
+
+item.iron_leggings.name=Iron leggings
+item.iron_leggings.tooltip.0=When equipped:
+item.iron_leggings.tooltip.1=§9+3 Armor
+
+item.iron_boots.name=Iron boots
+item.iron_boots.tooltip.0=When equipped:
+item.iron_boots.tooltip.1=§9+2 Armor
+
+
+item.steel_sword.name=Steel sword
+item.steel_shovel.name=Steel shovel
+item.steel_pickaxe.name=Steel pickaxe
+item.steel_axe.name=Steel axe
+item.steel_hoe.name=Steel hoe
+
+item.steel_helmet.name=Steel helmet
+item.steel_helmet.tooltip.0=When equipped:
+item.steel_helmet.tooltip.1=§9+3 Armor
+
+item.steel_chestplate.name=Steel chestplate
+item.steel_chestplate.tooltip.0=When equipped:
+item.steel_chestplate.tooltip.1=§9+5 Armor
+
+item.steel_leggings.name=Steel leggings
+item.steel_leggings.tooltip.0=When equipped:
+item.steel_leggings.tooltip.1=§9+4 Armor
+
+item.steel_boots.name=Steel boots
+item.steel_boots.tooltip.0=When equipped:
+item.steel_boots.tooltip.1=§9+3 Armor
+
+item.silver_sword.name=Silver sword
+item.silver_shovel.name=Silver shovel
+item.silver_pickaxe.name=Silver pickaxe
+item.silver_axe.name=Silver axe
+item.silver_hoe.name=Silver hoe
+
+item.silver_helmet.name=Silver helmet
+item.silver_helmet.tooltip.0=When equipped:
+item.silver_helmet.tooltip.1=§9+4 Armor
+item.silver_helmet.tooltip.2=§9+0.5 Toughness
+item.silver_helmet.tooltip.3=§a+1 Max health
+
+item.silver_chestplate.name=Silver chestplate
+item.silver_chestplate.tooltip.0=When equipped:
+item.silver_chestplate.tooltip.1=§9+6 Armor
+item.silver_chestplate.tooltip.2=§9+0.5 Toughness
+item.silver_chestplate.tooltip.3=§a+1 Max health
+
+item.silver_leggings.name=Silver leggings
+item.silver_leggings.tooltip.0=When equipped:
+item.silver_leggings.tooltip.1=§9+5 Armor
+item.silver_leggings.tooltip.2=§9+0.5 Toughness
+item.silver_leggings.tooltip.3=§a+1 Max health
+
+item.silver_boots.name=Silver boots
+item.silver_boots.tooltip.0=When equipped:
+item.silver_boots.tooltip.1=§9+3 Armor
+item.silver_boots.tooltip.2=§9+0.5 Toughness
+item.silver_boots.tooltip.3=§a+1 Max health
+
+item.gold_sword.name=Gold sword
+item.gold_shovel.name=Gold shovel
+item.gold_pickaxe.name=Gold pickaxe
+item.gold_axe.name=Gold axe
+item.gold_hoe.name=Gold hoe
+
+item.gold_helmet.name=Gold helmet
+item.gold_helmet.tooltip.0=When equipped:
+item.gold_helmet.tooltip.1=§9+4 Armor
+item.gold_helmet.tooltip.2=§9+1 Armor toughness
+item.gold_helmet.tooltip.3=§a+1 Max health
+
+item.gold_chestplate.name=Gold chestplate
+item.gold_chestplate.tooltip.0=When equipped:
+item.gold_chestplate.tooltip.1=§9+7 Armor
+item.gold_chestplate.tooltip.2=§9+1 Armor toughness
+item.gold_chestplate.tooltip.3=§a+1 Max health
+
+item.gold_leggings.name=Gold leggings
+item.gold_leggings.tooltip.0=When equipped:
+item.gold_leggings.tooltip.1=§9+6 Armor
+item.gold_leggings.tooltip.2=§9+1 Armor toughness
+item.gold_leggings.tooltip.3=§a+1 Max health
+
+item.gold_boots.name=Gold boots
+item.gold_boots.tooltip.0=When equipped:
+item.gold_boots.tooltip.1=§9+4 Armor
+item.gold_boots.tooltip.2=§9+1 Armor toughness
+item.gold_boots.tooltip.3=§a+1 Max health
+
+item.platinum_sword.name=Platinum sword
+item.platinum_shovel.name=Platinum shovel
+item.platinum_pickaxe.name=Platinum pickaxe
+item.platinum_axe.name=Platinum axe
+item.platinum_hoe.name=Platinum hoe
+
+item.platinum_helmet.name=Platinum helmet
+item.platinum_helmet.tooltip.0=When equipped:
+item.platinum_helmet.tooltip.1=§9+5 Armor
+item.platinum_helmet.tooltip.2=§9+1.5 Toughness
+item.platinum_helmet.tooltip.3=§a+2.5 Max health
+
+item.platinum_chestplate.name=Platinum chestplate
+item.platinum_chestplate.tooltip.0=When equipped:
+item.platinum_chestplate.tooltip.1=§9+7 Armor
+item.platinum_chestplate.tooltip.2=§9+1.5 Toughness
+item.platinum_chestplate.tooltip.3=§9+4 Max health
+
+item.platinum_leggings.name=Platinum leggings
+item.platinum_leggings.tooltip.0=When equipped:
+item.platinum_leggings.tooltip.1=§9+6 Armor
+item.platinum_leggings.tooltip.2=§9+1.5 Toughness
+item.platinum_leggings.tooltip.3=§9+3.5 Max health
+
+item.platinum_boots.name=Platinum boots
+item.platinum_boots.tooltip.0=When equipped:
+item.platinum_boots.tooltip.1=§9+4 Armor
+item.platinum_boots.tooltip.2=§9+1.5 Toughness
+item.platinum_boots.tooltip.4=§a+2 Max health
+
+item.es_sword.name=Einsteinium sword
+item.es_shovel.name=Einsteinium shovel
+item.es_pickaxe.name=Einsteinium pickaxe
+item.es_axe.name=Einsteinium axe
+item.es_hoe.name=Einsteinium hoe
+
+item.es_helmet.name=Einsteinium helmet
+item.es_helmet.tooltip.0=When equipped:
+item.es_helmet.tooltip.1=§9+5 Armor
+item.es_helmet.tooltip.2=§9+2 Toughness
+item.es_helmet.tooltip.3=§a+3.5 Max health
+
+item.es_chestplate.name=Einsteinium chestplate
+item.es_chestplate.tooltip.0=When equipped:
+item.es_chestplate.tooltip.1=§9+7 Armor
+item.es_chestplate.tooltip.2=§9+2 Toughness
+item.es_chestplate.tooltip.3=§9+5.5 Max health
+
+item.es_leggings.name=Einsteinium leggings
+item.es_leggings.tooltip.0=When equipped:
+item.es_leggings.tooltip.1=§9+7 Armor
+item.es_leggings.tooltip.2=§9+2 Toughness
+item.es_leggings.tooltip.3=§9+4.5 Max health
+
+item.es_boots.name=Einsteinium boots
+item.es_boots.tooltip.0=When equipped:
+item.es_boots.tooltip.1=§9+4 Armor
+item.es_boots.tooltip.2=§9+2 Toughness
+item.es_boots.tooltip.4=§a+2.5 Max health
+
+item.emerald_sword.name=Emerald sword
+item.emerald_shovel.name=Emerald shovel
+item.emerald_pickaxe.name=Emerald pickaxe
+item.emerald_axe.name=Emerald axe
+item.emerald_hoe.name=Emerald hoe
+
+item.emerald_shovel1.name=§aEmerald shovel+1
+item.emerald_shovel2.name=§aEmerald shovel+2
+item.emerald_shovel3.name=§aEmerald shovel+3
+item.emerald_shovel4.name=§aEmerald shovel+4
+item.emerald_shovel5.name=§aEmerald shovel+5
+item.emerald_shovel6.name=§aEmerald shovel+6
+
+item.emerald_pickaxe1.name=§aEmerald pickaxe+1
+item.emerald_pickaxe2.name=§aEmerald pickaxe+2
+item.emerald_pickaxe3.name=§aEmerald pickaxe+3
+item.emerald_pickaxe4.name=§aEmerald pickaxe+4
+item.emerald_pickaxe5.name=§aEmerald pickaxe+5
+item.emerald_pickaxe6.name=§aEmerald pickaxe+6
+
+item.emerald_sword1.name=§aEmerald sword+1
+item.emerald_sword2.name=§aEmerald sword+2
+item.emerald_sword3.name=§aEmerald sword+3
+item.emerald_sword4.name=§aEmerald sword+4
+item.emerald_sword5.name=§aEmerald sword+5
+item.emerald_sword6.name=§aEmerald sword+6
+
+item.emerald_axe1.name=§aEmerald axe+1
+item.emerald_axe2.name=§aEmerald axe+2
+item.emerald_axe3.name=§aEmerald axe+3
+item.emerald_axe4.name=§aEmerald axe+4
+item.emerald_axe5.name=§aEmerald axe+5
+item.emerald_axe6.name=§aEmerald axe+6
+
+item.emerald_axe6.name=Emerald axe+6
+
+item.emerald_helmet.name=Emerald helmet
+item.emerald_helmet.tooltip.0=When equipped:
+item.emerald_helmet.tooltip.1=§9+5 Armor
+item.emerald_helmet.tooltip.2=§9+2.5 Toughness
+item.emerald_helmet.tooltip.3=§a+2 Max health
+
+item.emerald_chestplate.name=Emerald chestplate
+item.emerald_chestplate.tooltip.0=When equipped:
+item.emerald_chestplate.tooltip.1=§9+8 Armor
+item.emerald_chestplate.tooltip.2=§9+2.5 Toughness
+item.emerald_chestplate.tooltip.3=§a+3 Max health
+
+item.emerald_leggings.name=Emerald leggings
+item.emerald_leggings.tooltip.0=When equipped:
+item.emerald_leggings.tooltip.1=§9+7 Armor
+item.emerald_leggings.tooltip.2=§9+2.5 Toughness
+item.emerald_leggings.tooltip.3=§a+3 Max health
+
+item.emerald_boots.name=Emerald boots
+item.emerald_boots.tooltip.0=When equipped:
+item.emerald_boots.tooltip.1=§9+4 Armor
+item.emerald_boots.tooltip.2=§9+2.5 Armor toughness
+item.emerald_boots.tooltip.3=§a+2 Max health
+
+item.emerald_helmet1.name=§aEmerald helmet+1
+item.emerald_helmet1.tooltip.0=When equipped:
+item.emerald_helmet1.tooltip.1=§9+5 Armor
+item.emerald_helmet1.tooltip.2=§9+3 Toughness
+item.emerald_helmet1.tooltip.3=§a+2 Max health
+
+item.emerald_chestplate1.name=§aEmerald chestplate+1
+item.emerald_chestplate1.tooltip.0=When equipped:
+item.emerald_chestplate1.tooltip.1=§9+8 Armor
+item.emerald_chestplate1.tooltip.2=§9+3 Toughness
+item.emerald_chestplate1.tooltip.3=§a+4 Max health
+
+item.emerald_leggings1.name=§aEmerald leggings+1
+item.emerald_leggings1.tooltip.0=When equipped:
+item.emerald_leggings1.tooltip.1=§9+7 Armor
+item.emerald_leggings1.tooltip.2=§9+3 Toughness
+item.emerald_leggings1.tooltip.3=§a+4 Max health
+
+item.emerald_boots1.name=§aEmerald boots+1
+item.emerald_boots1.tooltip.0=When equipped:
+item.emerald_boots1.tooltip.1=§9+4 Armor
+item.emerald_boots1.tooltip.2=§9+3 Armor toughness
+item.emerald_boots1.tooltip.3=§a+2 Max health
+
+item.emerald_helmet2.name=§aEmerald helmet+2
+item.emerald_helmet2.tooltip.0=When equipped:
+item.emerald_helmet2.tooltip.1=§9+5 Armor
+item.emerald_helmet2.tooltip.2=§9+3.5 Toughness
+item.emerald_helmet2.tooltip.3=§a+3 Max health
+
+item.emerald_chestplate2.name=§aEmerald chestplate+2
+item.emerald_chestplate2.tooltip.0=When equipped:
+item.emerald_chestplate2.tooltip.1=§9+9 Armor
+item.emerald_chestplate2.tooltip.2=§9+3.5 Toughness
+item.emerald_chestplate2.tooltip.3=§a+5 Max health
+
+item.emerald_leggings2.name=§aEmerald leggings+2
+item.emerald_leggings2.tooltip.0=When equipped:
+item.emerald_leggings2.tooltip.1=§9+8 Armor
+item.emerald_leggings2.tooltip.2=§9+3.5 Toughness
+item.emerald_leggings2.tooltip.3=§a+4 Max health
+
+item.emerald_boots2.name=§aEmerald boots+2
+item.emerald_boots2.tooltip.0=When equipped:
+item.emerald_boots2.tooltip.1=§9+4 Armor
+item.emerald_boots2.tooltip.2=§9+3.5 Armor toughness
+item.emerald_boots2.tooltip.3=§a+2 Max health
+
+item.emerald_helmet3.name=§aEmerald helmet+3
+item.emerald_helmet3.tooltip.0=When equipped:
+item.emerald_helmet3.tooltip.1=§9+6 Armor
+item.emerald_helmet3.tooltip.2=§9+4 Toughness
+item.emerald_helmet3.tooltip.3=§a+3 Max health
+
+item.emerald_chestplate3.name=§aEmerald chestplate+3
+item.emerald_chestplate3.tooltip.0=When equipped:
+item.emerald_chestplate3.tooltip.1=§9+9 Armor
+item.emerald_chestplate3.tooltip.2=§9+4 Toughness
+item.emerald_chestplate3.tooltip.3=§a+5 Max health
+
+item.emerald_leggings3.name=§aEmerald leggings+3
+item.emerald_leggings3.tooltip.0=When equipped:
+item.emerald_leggings3.tooltip.1=§9+8 Armor
+item.emerald_leggings3.tooltip.2=§9+4 Toughness
+item.emerald_leggings3.tooltip.3=§a+5 Max health
+
+item.emerald_boots3.name=§aEmerald boots+3
+item.emerald_boots3.tooltip.0=When equipped:
+item.emerald_boots3.tooltip.1=§9+4 Armor
+item.emerald_boots3.tooltip.2=§9+4 Armor toughness
+item.emerald_boots3.tooltip.3=§a+3 Max health
+
+item.emerald_helmet4.name=§aEmerald helmet+4
+item.emerald_helmet4.tooltip.0=When equipped:
+item.emerald_helmet4.tooltip.1=§9+6 Armor
+item.emerald_helmet4.tooltip.2=§9+4.5 Toughness
+item.emerald_helmet4.tooltip.3=§a+4 Max health
+
+item.emerald_chestplate4.name=§aEmerald chestplate+4
+item.emerald_chestplate4.tooltip.0=When equipped:
+item.emerald_chestplate4.tooltip.1=§9+9 Armor
+item.emerald_chestplate4.tooltip.2=§9+4.5 Toughness
+item.emerald_chestplate4.tooltip.3=§a+6 Max health
+
+item.emerald_leggings4.name=§aEmerald leggings+4
+item.emerald_leggings4.tooltip.0=When equipped:
+item.emerald_leggings4.tooltip.1=§9+8 Armor
+item.emerald_leggings4.tooltip.2=§9+4.5 Toughness
+item.emerald_leggings4.tooltip.3=§a+5 Max health
+
+item.emerald_boots4.name=§aEmerald boots+4
+item.emerald_boots4.tooltip.0=When equipped:
+item.emerald_boots4.tooltip.1=§9+5 Armor
+item.emerald_boots4.tooltip.2=§9+4.5 Armor toughness
+item.emerald_boots4.tooltip.3=§a+3 Max health
+
+item.emerald_helmet5.name=§aEmerald helmet+5
+item.emerald_helmet5.tooltip.0=When equipped:
+item.emerald_helmet5.tooltip.1=§9+6 Armor
+item.emerald_helmet5.tooltip.2=§9+5 Toughness
+item.emerald_helmet5.tooltip.3=§a+4 Max health
+
+item.emerald_chestplate5.name=§aEmerald chestplate+5
+item.emerald_chestplate5.tooltip.0=When equipped:
+item.emerald_chestplate5.tooltip.1=§9+10 Armor
+item.emerald_chestplate5.tooltip.2=§9+5 Toughness
+item.emerald_chestplate5.tooltip.3=§a+7 Max health
+
+item.emerald_leggings5.name=§aEmerald leggings+5
+item.emerald_leggings5.tooltip.0=When equipped:
+item.emerald_leggings5.tooltip.1=§9+8 Armor
+item.emerald_leggings5.tooltip.2=§9+5 Toughness
+item.emerald_leggings5.tooltip.3=§a+6 Max health
+
+item.emerald_boots5.name=§aEmerald boots+5
+item.emerald_boots5.tooltip.0=When equipped:
+item.emerald_boots5.tooltip.1=§9+5 Armor
+item.emerald_boots5.tooltip.2=§9+5 Armor toughness
+item.emerald_boots5.tooltip.3=§a+3 Max health
+
+item.emerald_helmet6.name=§aEmerald helmet+6
+item.emerald_helmet6.tooltip.0=When equipped:
+item.emerald_helmet6.tooltip.1=§9+6 Armor
+item.emerald_helmet6.tooltip.2=§9+6 Toughness
+item.emerald_helmet6.tooltip.3=§a+5 Max health
+
+item.emerald_chestplate6.name=§aEmerald chestplate+6
+item.emerald_chestplate6.tooltip.0=When equipped:
+item.emerald_chestplate6.tooltip.1=§9+10 Armor
+item.emerald_chestplate6.tooltip.2=§9+6 Toughness
+item.emerald_chestplate6.tooltip.3=§a+7 Max health
+
+item.emerald_leggings6.name=§aEmerald leggings+6
+item.emerald_leggings6.tooltip.0=When equipped:
+item.emerald_leggings6.tooltip.1=§9+9 Armor
+item.emerald_leggings6.tooltip.2=§9+6 Toughness
+item.emerald_leggings6.tooltip.3=§a+6 Max health
+
+item.emerald_boots6.name=§aEmerald boots+6
+item.emerald_boots6.tooltip.0=When equipped:
+item.emerald_boots6.tooltip.1=§9+5 Armor
+item.emerald_boots6.tooltip.2=§9+6 Armor toughness
+item.emerald_boots6.tooltip.3=§a+4 Max health
+
+item.sapphire_sword.name=§aSapphire sword
+item.sapphire_shovel.name=§aSapphire shovel
+item.sapphire_pickaxe.name=§aSapphire pickaxe
+item.sapphire_axe.name=§aSapphire axe
+item.sapphire_hoe.name=§aSapphire hoe
+item.sapphire_helmet.name=§aSapphire helmet
+item.sapphire_helmet.tooltip.0=When equipped:
+item.sapphire_helmet.tooltip.1=§9+6 Armor
+item.sapphire_helmet.tooltip.2=§9+6 Armor toughness
+item.sapphire_helmet.tooltip.3=Special bonus:
+item.sapphire_helmet.tooltip.4=§a+4 Max health
+item.sapphire_helmet.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate.name=§aSapphire chestplate
+item.sapphire_chestplate.tooltip.0=When equipped:
+item.sapphire_chestplate.tooltip.1=§9+10 Armor
+item.sapphire_chestplate.tooltip.2=§9+6 Armor toughness
+item.sapphire_chestplate.tooltip.3=Special bonus:
+item.sapphire_chestplate.tooltip.4=§a+7 Max health
+item.sapphire_chestplate.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings.name=§aSapphire leggings
+item.sapphire_leggings.tooltip.0=When equipped:
+item.sapphire_leggings.tooltip.1=§9+9 Armor
+item.sapphire_leggings.tooltip.2=§9+6 Armor toughness
+item.sapphire_leggings.tooltip.3=Special bonus:
+item.sapphire_leggings.tooltip.4=§a+6 Max health
+item.sapphire_leggings.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots.name=§aSapphire boots
+item.sapphire_boots.tooltip.0=When equipped:
+item.sapphire_boots.tooltip.1=§9+5 Armor
+item.sapphire_boots.tooltip.2=§9+6 Armor toughness
+item.sapphire_boots.tooltip.3=Special bonus:
+item.sapphire_boots.tooltip.4=§a+3 Max health
+item.sapphire_boots.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet1.name=§aSapphire helmet+1
+item.sapphire_helmet1.tooltip.0=When equipped:
+item.sapphire_helmet1.tooltip.1=§9+6 Armor
+item.sapphire_helmet1.tooltip.2=§9+6.5 Armor toughness
+item.sapphire_helmet1.tooltip.3=Special bonus:
+item.sapphire_helmet1.tooltip.4=§a+5 Max health
+item.sapphire_helmet1.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate1.name=§aSapphire chestplate+1
+item.sapphire_chestplate1.tooltip.0=When equipped:
+item.sapphire_chestplate1.tooltip.1=§9+10 Armor
+item.sapphire_chestplate1.tooltip.2=§9+6.5 Armor toughness
+item.sapphire_chestplate1.tooltip.3=Special bonus:
+item.sapphire_chestplate1.tooltip.4=§a+8 Max health
+item.sapphire_chestplate1.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings1.name=§aSapphire leggings+1
+item.sapphire_leggings1.tooltip.0=When equipped:
+item.sapphire_leggings1.tooltip.1=§9+9 Armor
+item.sapphire_leggings1.tooltip.2=§9+6.5 Armor toughness
+item.sapphire_leggings1.tooltip.3=Special bonus:
+item.sapphire_leggings1.tooltip.4=§a+7 Max health
+item.sapphire_leggings1.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots1.name=§aSapphire boots+1
+item.sapphire_boots1.tooltip.0=When equipped:
+item.sapphire_boots1.tooltip.1=§9+5 Armor
+item.sapphire_boots1.tooltip.2=§9+6.5 Armor toughness
+item.sapphire_boots1.tooltip.3=Special bonus:
+item.sapphire_boots1.tooltip.4=§a+4 Max health
+item.sapphire_boots1.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet2.name=§aSapphire helmet+2
+item.sapphire_helmet2.tooltip.0=When equipped:
+item.sapphire_helmet2.tooltip.1=§9+6 Armor
+item.sapphire_helmet2.tooltip.2=§9+7 Armor toughness
+item.sapphire_helmet2.tooltip.3=Special bonus:
+item.sapphire_helmet2.tooltip.4=§a+6 Max health
+item.sapphire_helmet2.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate2.name=§aSapphire chestplate+2
+item.sapphire_chestplate2.tooltip.0=When equipped:
+item.sapphire_chestplate2.tooltip.1=§9+10 Armor
+item.sapphire_chestplate2.tooltip.2=§9+7 Armor toughness
+item.sapphire_chestplate2.tooltip.3=Special bonus:
+item.sapphire_chestplate2.tooltip.4=§a+9 Max health
+item.sapphire_chestplate2.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings2.name=§aSapphire leggings+2
+item.sapphire_leggings2.tooltip.0=When equipped:
+item.sapphire_leggings2.tooltip.1=§9+9 Armor
+item.sapphire_leggings2.tooltip.2=§9+7 Armor toughness
+item.sapphire_leggings2.tooltip.3=Special bonus:
+item.sapphire_leggings2.tooltip.4=§a+8 Max health
+item.sapphire_leggings2.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots2.name=§aSapphire boots+2
+item.sapphire_boots2.tooltip.0=When equipped:
+item.sapphire_boots2.tooltip.1=§9+5 Armor
+item.sapphire_boots2.tooltip.2=§9+7 Armor toughness
+item.sapphire_boots2.tooltip.3=Special bonus:
+item.sapphire_boots2.tooltip.4=§a+5 Max health
+item.sapphire_boots2.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet3.name=§aSapphire helmet+3
+item.sapphire_helmet3.tooltip.0=When equipped:
+item.sapphire_helmet3.tooltip.1=§9+6 Armor
+item.sapphire_helmet3.tooltip.2=§9+7.5 Armor toughness
+item.sapphire_helmet3.tooltip.3=Special bonus:
+item.sapphire_helmet3.tooltip.4=§a+7 Max health
+item.sapphire_helmet3.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate3.name=§aSapphire chestplate+3
+item.sapphire_chestplate3.tooltip.0=When equipped:
+item.sapphire_chestplate3.tooltip.1=§9+10 Armor
+item.sapphire_chestplate3.tooltip.2=§9+7.5 Armor toughness
+item.sapphire_chestplate3.tooltip.3=Special bonus:
+item.sapphire_chestplate3.tooltip.4=§a+11 Max health
+item.sapphire_chestplate3.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings3.name=§aSapphire leggings+3
+item.sapphire_leggings3.tooltip.0=When equipped:
+item.sapphire_leggings3.tooltip.1=§9+9 Armor
+item.sapphire_leggings3.tooltip.2=§9+7.5 Armor toughness
+item.sapphire_leggings3.tooltip.3=Special bonus:
+item.sapphire_leggings3.tooltip.4=§a+9 Max health
+item.sapphire_leggings3.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots3.name=§aSapphire boots+3
+item.sapphire_boots3.tooltip.0=When equipped:
+item.sapphire_boots3.tooltip.1=§9+5 Armor
+item.sapphire_boots3.tooltip.2=§9+7.5 Armor toughness
+item.sapphire_boots3.tooltip.3=Special bonus:
+item.sapphire_boots3.tooltip.4=§a+5 Max health
+item.sapphire_boots3.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet4.name=§aSapphire helmet+4
+item.sapphire_helmet4.tooltip.0=When equipped:
+item.sapphire_helmet4.tooltip.1=§9+6 Armor
+item.sapphire_helmet4.tooltip.2=§9+8 Armor toughness
+item.sapphire_helmet4.tooltip.3=Special bonus:
+item.sapphire_helmet4.tooltip.4=§a+7 Max health
+item.sapphire_helmet4.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate4.name=§aSapphire chestplate+4
+item.sapphire_chestplate4.tooltip.0=When equipped:
+item.sapphire_chestplate4.tooltip.1=§9+10 Armor
+item.sapphire_chestplate4.tooltip.2=§9+8 Armor toughness
+item.sapphire_chestplate4.tooltip.3=Special bonus:
+item.sapphire_chestplate4.tooltip.4=§a+12 Max health
+item.sapphire_chestplate4.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings4.name=§aSapphire leggings+4
+item.sapphire_leggings4.tooltip.0=When equipped:
+item.sapphire_leggings4.tooltip.1=§9+9 Armor
+item.sapphire_leggings4.tooltip.2=§9+8 Armor toughness
+item.sapphire_leggings4.tooltip.3=Special bonus:
+item.sapphire_leggings4.tooltip.4=§a+11 Max health
+item.sapphire_leggings4.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots4.name=§aSapphire boots+4
+item.sapphire_boots4.tooltip.0=When equipped:
+item.sapphire_boots4.tooltip.1=§9+5 Armor
+item.sapphire_boots4.tooltip.2=§9+8 Armor toughness
+item.sapphire_boots4.tooltip.3=Special bonus:
+item.sapphire_boots4.tooltip.4=§a+6 Max health
+item.sapphire_boots4.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet5.name=§aSapphire helmet+5
+item.sapphire_helmet5.tooltip.0=When equipped:
+item.sapphire_helmet5.tooltip.1=§9+6 Armor
+item.sapphire_helmet5.tooltip.2=§9+8.5 Armor toughness
+item.sapphire_helmet5.tooltip.3=Special bonus:
+item.sapphire_helmet5.tooltip.4=§a+8 Max health
+item.sapphire_helmet5.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_chestplate5.name=§aSapphire chestplate+5
+item.sapphire_chestplate5.tooltip.0=When equipped:
+item.sapphire_chestplate5.tooltip.1=§9+10 Armor
+item.sapphire_chestplate5.tooltip.2=§9+8.5 Armor toughness
+item.sapphire_chestplate5.tooltip.3=Special bonus:
+item.sapphire_chestplate5.tooltip.4=§a+13 Max health
+item.sapphire_chestplate5.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_leggings5.name=§aSapphire leggings+5
+item.sapphire_leggings5.tooltip.0=When equipped:
+item.sapphire_leggings5.tooltip.1=§9+9 Armor
+item.sapphire_leggings5.tooltip.2=§9+8.5 Armor toughness
+item.sapphire_leggings5.tooltip.3=Special bonus:
+item.sapphire_leggings5.tooltip.4=§a+12 Max health
+item.sapphire_leggings5.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_boots5.name=§aSapphire boots+5
+item.sapphire_boots5.tooltip.0=When equipped:
+item.sapphire_boots5.tooltip.1=§9+5 Armor
+item.sapphire_boots5.tooltip.2=§9+8.5 Armor toughness
+item.sapphire_boots5.tooltip.3=Special bonus:
+item.sapphire_boots5.tooltip.4=§a+7 Max health
+item.sapphire_boots5.tooltip.5=§a+2.5%% Knockback resistance
+
+item.sapphire_helmet6.name=§aSapphire helmet+6
+item.sapphire_helmet6.tooltip.0=When equipped:
+item.sapphire_helmet6.tooltip.1=§9+6 Armor
+item.sapphire_helmet6.tooltip.2=§9+9.5 Armor toughness
+item.sapphire_helmet6.tooltip.3=Special bonus:
+item.sapphire_helmet6.tooltip.4=§a+9 Max health
+item.sapphire_helmet6.tooltip.5=§a+5%% Knockback resistance
+
+item.sapphire_chestplate6.name=§aSapphire chestplate+6
+item.sapphire_chestplate6.tooltip.0=When equipped:
+item.sapphire_chestplate6.tooltip.1=§9+10 Armor
+item.sapphire_chestplate6.tooltip.2=§9+9.5 Armor toughness
+item.sapphire_chestplate6.tooltip.3=Special bonus:
+item.sapphire_chestplate6.tooltip.4=§a+15 Max health
+item.sapphire_chestplate6.tooltip.5=§a+5%% Knockback resistance
+
+item.sapphire_leggings6.name=§aSapphire leggings+6
+item.sapphire_leggings6.tooltip.0=When equipped:
+item.sapphire_leggings6.tooltip.1=§9+9 Armor
+item.sapphire_leggings6.tooltip.2=§9+9.5 Armor toughness
+item.sapphire_leggings6.tooltip.3=Special bonus:
+item.sapphire_leggings6.tooltip.4=§a+13 Max health
+item.sapphire_leggings6.tooltip.5=§a+5%% Knockback resistance
+
+item.sapphire_boots5.name=§aSapphire boots+6
+item.sapphire_boots5.tooltip.0=When equipped:
+item.sapphire_boots5.tooltip.1=§9+5 Armor
+item.sapphire_boots5.tooltip.2=§9+9.5 Armor toughness
+item.sapphire_boots5.tooltip.3=Special bonus:
+item.sapphire_boots5.tooltip.4=§a+7 Max health
+item.sapphire_boots5.tooltip.5=§a+5%% Knockback resistance
+
+item.flaming_topaz_sword.name=Flaming topaz sword
+item.flaming_topaz_shovel.name=Flaming topaz shovel
+item.flaming_topaz_pickaxe.name=Flaming topaz pickaxe
+item.flaming_topaz_axe.name=Flaming topaz axe
+item.flaming_topaz_hoe.name=Flaming topaz hoe
+
+item.ruby_sword.name=§bRuby sword
+item.ruby_shovel.name=§bRuby shovel
+item.ruby_pickaxe.name=§bRuby pickaxe
+item.ruby_axe.name=§bRuby axe
+item.ruby_hoe.name=§bRuby hoe
+
+item.ruby_helmet.name=Ruby helmet
+item.ruby_helmet.tooltip.0=When equipped:
+item.ruby_helmet.tooltip.1=§9+7 Armor
+item.ruby_helmet.tooltip.2=§9+9.5 Armor toughness
+item.ruby_helmet.tooltip.4=§a+8 Max health
+item.ruby_helmet.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_chestplate.name=§Ruby chestplate
+item.ruby_chestplate.tooltip.0=When equipped:
+item.ruby_chestplate.tooltip.1=§9+12 Armor
+item.ruby_chestplate.tooltip.2=§9+9.5 Armor toughness
+item.ruby_chestplate.tooltip.4=§a+13 Max health
+item.ruby_chestplate.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_leggings.name=§Ruby leggings
+item.ruby_leggings.tooltip.0=When equipped:
+item.ruby_leggings.tooltip.1=§9+10 Armor
+item.ruby_leggings.tooltip.2=§9+9.5 Armor toughness
+item.ruby_leggings.tooltip.4=§a+12 Max health
+item.ruby_leggings.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_boots.name=§Ruby boots
+item.ruby_boots.tooltip.0=When equipped:
+item.ruby_boots.tooltip.1=§9+6 Armor
+item.ruby_boots.tooltip.2=§9+9.5 Armor toughness
+item.ruby_boots.tooltip.4=§a+7 Max health
+item.ruby_boots.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_helmet1.name=$aRuby helmet+1
+item.ruby_helmet1.tooltip.0=When equipped:
+item.ruby_helmet1.tooltip.1=§9+7 Armor
+item.ruby_helmet1.tooltip.2=§9+10 Armor toughness
+item.ruby_helmet1.tooltip.4=§a+9 Max health
+item.ruby_helmet1.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_chestplate1.name=§Ruby chestplate+1
+item.ruby_chestplate1.tooltip.0=When equipped:
+item.ruby_chestplate1.tooltip.1=§9+12 Armor
+item.ruby_chestplate1.tooltip.2=§9+10 Armor toughness
+item.ruby_chestplate1.tooltip.4=§a+15 Max health
+item.ruby_chestplate1.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_leggings1.name=§Ruby leggings+1
+item.ruby_leggings1.tooltip.0=When equipped:
+item.ruby_leggings1.tooltip.1=§9+10 Armor
+item.ruby_leggings1.tooltip.2=§9+10 Armor toughness
+item.ruby_leggings1.tooltip.4=§a+13 Max health
+item.ruby_leggings1.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_boots1.name=§Ruby boots+1
+item.ruby_boots1.tooltip.0=When equipped:
+item.ruby_boots1.tooltip.1=§9+6 Armor
+item.ruby_boots1.tooltip.2=§9+10 Armor toughness
+item.ruby_boots1.tooltip.4=§a+7 Max health
+item.ruby_boots1.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_helmet2.name=$aRuby helmet+2
+item.ruby_helmet2.tooltip.0=When equipped:
+item.ruby_helmet2.tooltip.1=§9+7 Armor
+item.ruby_helmet2.tooltip.2=§9+10.5 Armor toughness
+item.ruby_helmet2.tooltip.4=§a+10 Max health
+item.ruby_helmet2.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_chestplate2.name=§Ruby chestplate+2
+item.ruby_chestplate2.tooltip.0=When equipped:
+item.ruby_chestplate2.tooltip.1=§9+12 Armor
+item.ruby_chestplate2.tooltip.2=§9+10.5 Armor toughness
+item.ruby_chestplate2.tooltip.4=§a+16 Max health
+item.ruby_chestplate2.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_leggings2.name=§Ruby leggings+2
+item.ruby_leggings2.tooltip.0=When equipped:
+item.ruby_leggings2.tooltip.1=§9+10 Armor
+item.ruby_leggings2.tooltip.2=§9+10.5 Armor toughness
+item.ruby_leggings2.tooltip.4=§a+14 Max health
+item.ruby_leggings2.tooltip.5=§a+5%% Knockback resistance
+
+item.ruby_boots2.name=§Ruby boots+2
+item.ruby_boots2.tooltip.0=When equipped:
+item.ruby_boots2.tooltip.1=§9+6 Armor
+item.ruby_boots2.tooltip.2=§9+10.5 Armor toughness
+item.ruby_boots2.tooltip.4=§a+8 Max health
+item.ruby_boots2.tooltip.5=§a+5%% Knockback resistance
+
+item.topaz_sword.name=Topaz sword
+item.topaz_shovel.name=Topaz shovel
+item.topaz_pickaxe.name=Topaz pickaxe
+item.topaz_axe.name=Topaz axe
+item.topaz_hoe.name=Topaz hoe
+
+item.diamond_sword.name=§dDiamond sword
+item.diamond_shovel.name=§dDiamond shovel
+item.diamond_pickaxe.name=§dDiamond pickaxe
+item.diamond_axe.name=§dDiamond axe
+item.diamond_hoe.name=§dDiamond hoe
+
+item.diamond_helmet.name=§dDiamond helmet
+item.diamond_helmet.tooltip.0=When equipped:
+item.diamond_helmet.tooltip.1=§9+5 Armor
+item.diamond_helmet.tooltip.2=§9+4 Armor toughness
+item.diamond_helmet.tooltip.3=Special bonus:
+item.diamond_helmet.tooltip.4=§9+5 Max health
+item.diamond_helmet.tooltip.5=§9+7.5%% Knockback resistance
+item.diamond_helmet.tooltip.6=§a+1.2 Health regen per minute
+item.diamond_helmet.tooltip.7=When full diamond armor is equipped:
+item.diamond_helmet.tooltip.8=§6Resistance I
+
+
+item.diamond_chestplate.name=§dDiamond chestplate
+item.diamond_chestplate.tooltip.0=When equipped:
+item.diamond_chestplate.tooltip.1=§9+10 Armor
+item.diamond_chestplate.tooltip.2=§9+4 Armor toughness
+item.diamond_chestplate.tooltip.3=Special bonus:
+item.diamond_chestplate.tooltip.4=§9+10 Max health
+item.diamond_chestplate.tooltip.5=§9+7.5%% Knockback resistance
+item.diamond_chestplate.tooltip.6=§a+3.2 Health regen per minute
+item.diamond_chestplate.tooltip.7=When full diamond armor is equipped:
+item.diamond_chestplate.tooltip.8=§6Resistance I
+
+item.diamond_leggings.name=§dDiamond leggings
+item.diamond_leggings.tooltip.0=When equipped:
+item.diamond_leggings.tooltip.1=§9+8 Armor
+item.diamond_leggings.tooltip.2=§9+4 Armor toughness
+item.diamond_leggings.tooltip.3=Special bonus:
+item.diamond_leggings.tooltip.4=§9+8 Max health
+item.diamond_leggings.tooltip.5=§9+7.5%% Knockback resistance
+item.diamond_leggings.tooltip.6=§a+2.4 Health regen per minute
+item.diamond_leggings.tooltip.7=When full diamond armor is equipped:
+item.diamond_leggings.tooltip.8=§6Resistance I
+
+item.diamond_boots.name=§dDiamond boots
+item.diamond_boots.tooltip.0=When equipped:
+item.diamond_boots.tooltip.1=§9+5 Armor
+item.diamond_boots.tooltip.2=§9+4 Armor toughness
+item.diamond_boots.tooltip.3=Special bonus:
+item.diamond_boots.tooltip.4=§9+5 Max health
+item.diamond_boots.tooltip.5=§9+7.5%% Knockback resistance
+item.diamond_boots.tooltip.6=§a+1.2 Health regen per minute
+item.diamond_boots.tooltip.7=When full diamond armor is equipped:
+item.diamond_boots.tooltip.8=§6Resistance I
+
+item.jade_sword.name=Jade sword
+item.jade_shovel.name=Jade shovel
+item.jade_pickaxe.name=Jade pickaxe
+item.jade_axe.name=Jade axe
+item.jade_hoe.name=Jade hoe
+
+item.amazonite_sword.name=§6Amazonite sword
+item.amazonite_shovel.name=§6Amazonite shovel
+item.amazonite_pickaxe.name=§6Amazonite pickaxe
+item.amazonite_axe.name=§6Amazonite axe
+item.amazonite_hoe.name=§6Amazonite hoe
+
+item.amazonite_helmet.name=§6Amazonite helmet
+item.amazonite_helmet.tooltip.0=When equipped:
+item.amazonite_helmet.tooltip.1=§9+6 Armor
+item.amazonite_helmet.tooltip.2=§9+6 Armor toughness
+item.amazonite_helmet.tooltip.3=Special bonus:
+item.amazonite_helmet.tooltip.4=§9+7 Max health
+item.amazonite_helmet.tooltip.5=§9+10%% Knockback resistance
+item.amazonite_helmet.tooltip.6=§a+1.8 Health regen per minute
+item.amazonite_helmet.tooltip.7=Effect bonus:
+item.amazonite_helmet.tooltip.8=§6Resistance I
+item.amazonite_helmet.tooltip.9=When full amazonite armor is equipped:
+item.amazonite_helmet.tooltip.10=§6Fire Resistance I
+item.amazonite_helmet.tooltip.11=§6Strength I
+
+
+item.amazonite_chestplate.name=§6Amazonite chestplate
+item.amazonite_chestplate.tooltip.0=When equipped:
+item.amazonite_chestplate.tooltip.1=§9+12 Armor
+item.amazonite_chestplate.tooltip.2=§9+6 Armor toughness
+item.amazonite_chestplate.tooltip.3=Special bonus:
+item.amazonite_chestplate.tooltip.4=§9+14 Max health
+item.amazonite_chestplate.tooltip.5=§9+10%% Knockback resistance
+item.amazonite_chestplate.tooltip.6=§a+4.8 Health regen per minute
+item.amazonite_chestplate.tooltip.7=Effect bonus:
+item.amazonite_chestplate.tooltip.8=§6Resistance I
+item.amazonite_chestplate.tooltip.9=When full amazonite armor is equipped:
+item.amazonite_chestplate.tooltip.10=§6Fire Resistance I
+item.amazonite_chestplate.tooltip.11=§6Strength I
+
+item.amazonite_leggings.name=§6Amazonite leggings
+item.amazonite_leggings.tooltip.0=When equipped:
+item.amazonite_leggings.tooltip.1=§9+9 Armor
+item.amazonite_leggings.tooltip.2=§9+6 Armor toughness
+item.amazonite_leggings.tooltip.3=Special bonus:
+item.amazonite_leggings.tooltip.4=§9+12 Max health
+item.amazonite_leggings.tooltip.5=§9+10%% Knockback resistance
+item.amazonite_leggings.tooltip.6=§a+3.6 Health regen per minute
+item.amazonite_leggings.tooltip.7=Effect bonus:
+item.amazonite_leggings.tooltip.8=§6Resistance I
+item.amazonite_leggings.tooltip.9=When full amazonite armor is equipped:
+item.amazonite_leggings.tooltip.10=§6Fire Resistance I
+item.amazonite_leggings.tooltip.11=§6Strength I
+
+item.amazonite_boots.name=§6Amazonite boots
+item.amazonite_boots.tooltip.0=When equipped:
+item.amazonite_boots.tooltip.1=§9+6 Armor
+item.amazonite_boots.tooltip.2=§9+6 Armor toughness
+item.amazonite_boots.tooltip.3=Special bonus:
+item.amazonite_boots.tooltip.4=§9+7 Max health
+item.amazonite_boots.tooltip.5=§9+10%% Knockback resistance
+item.amazonite_boots.tooltip.6=§a+1.8 Health regen per minute
+item.amazonite_boots.tooltip.7=Effect bonus:
+item.amazonite_boots.tooltip.8=§6Resistance I
+item.amazonite_boots.tooltip.9=When full amazonite armor is equipped:
+item.amazonite_boots.tooltip.10=§6Fire Resistance I
+item.amazonite_boots.tooltip.11=§6Strength I
+
+
+item.amethyst_sword.name=Amethyst sword
+item.amethyst_shovel.name=Amethyst shovel
+item.amethyst_pickaxe.name=Amethyst pickaxe
+item.amethyst_axe.name=Amethyst axe
+item.amethyst_hoe.name=Amethyst hoe
+
+item.onyx_sword.name=§6Onyx sword
+item.onyx_shovel.name=§6Onyx shovel
+item.onyx_pickaxe.name=§6Onyx pickaxe
+item.onyx_axe.name=§6Onyx axe
+item.onyx_hoe.name=§6Onyx hoe
+
+item.onyx_helmet.name=§6Onyx helmet
+item.onyx_helmet.tooltip.0=When equipped:
+item.onyx_helmet.tooltip.1=§9+7 Armor
+item.onyx_helmet.tooltip.2=§9+8 Armor toughness
+item.onyx_helmet.tooltip.3=Special bonus:
+item.onyx_helmet.tooltip.4=§9+10 Max health
+item.onyx_helmet.tooltip.5=§9+15%% Knockback resistance
+item.onyx_helmet.tooltip.6=§a+3 Health regen per minute
+item.onyx_helmet.tooltip.7=Effect bonus:
+item.onyx_helmet.tooltip.8=§6Resistance I
+item.onyx_helmet.tooltip.9=§6Fire Resistance I
+item.onyx_helmet.tooltip.10=When full amazonite armor is equipped:
+item.onyx_helmet.tooltip.11=§6Resistance II
+item.onyx_helmet.tooltip.12=§6Strength II
+item.onyx_helmet.tooltip.13=§6Speed II
+
+item.onyx_chestplate.name=§6Onyx chestplate
+item.onyx_chestplate.tooltip.0=When equipped:
+item.onyx_chestplate.tooltip.1=§9+14 Armor
+item.onyx_chestplate.tooltip.2=§9+8 Armor toughness
+item.onyx_chestplate.tooltip.3=Special bonus:
+item.onyx_chestplate.tooltip.4=§9+18 Max health
+item.onyx_chestplate.tooltip.5=§9+15%% Knockback resistance
+item.onyx_chestplate.tooltip.6=§a+8 Health regen per minute
+item.onyx_chestplate.tooltip.7=Effect bonus:
+item.onyx_chestplate.tooltip.8=§6Resistance I
+item.onyx_chestplate.tooltip.9=§6Strength I
+item.onyx_chestplate.tooltip.10=§6Fire Resistance I
+item.onyx_chestplate.tooltip.11=When full onyx armor is equipped:
+item.onyx_chestplate.tooltip.12=§6Resistance II
+item.onyx_chestplate.tooltip.13=§6Strength II
+item.onyx_chestplate.tooltip.14=§6Speed II
+
+item.onyx_leggings.name=§6Onyx leggings
+item.onyx_leggings.tooltip.0=When equipped:
+item.onyx_leggings.tooltip.1=§9+10 Armor
+item.onyx_leggings.tooltip.2=§9+8 Armor toughness
+item.onyx_leggings.tooltip.3=Special bonus:
+item.onyx_leggings.tooltip.4=§9+14 Max health
+item.onyx_leggings.tooltip.5=§9+15%% Knockback resistance
+item.onyx_leggings.tooltip.6=§a+6 Health regen per minute
+item.onyx_leggings.tooltip.7=Effect bonus:
+item.onyx_leggings.tooltip.8=§6Resistance I
+item.onyx_leggings.tooltip.9=§6Strength I
+item.onyx_leggings.tooltip.10=§6Fire Resistance I
+item.onyx_leggings.tooltip.11=When full amazonite armor is equipped:
+item.onyx_leggings.tooltip.12=§6Resistance II
+item.onyx_leggings.tooltip.13=§6Strength II
+item.onyx_leggings.tooltip.14=§6Speed II
+
+item.onyx_boots.name=§6Onyx boots
+item.onyx_boots.tooltip.0=When equipped:
+item.onyx_boots.tooltip.1=§9+7 Armor
+item.onyx_boots.tooltip.2=§9+8 Armor toughness
+item.onyx_boots.tooltip.3=Special bonus:
+item.onyx_boots.tooltip.4=§9+8 Max health
+item.onyx_boots.tooltip.5=§9+15%% Knockback resistance
+item.onyx_boots.tooltip.6=§a+3 Health regen per minute
+item.onyx_boots.tooltip.7=Effect bonus:
+item.onyx_boots.tooltip.8=§6Resistance I
+item.onyx_boots.tooltip.9=§6Speed I
+item.onyx_boots.tooltip.10=§6Fire Resistance I
+item.onyx_boots.tooltip.11=When full amazonite armor is equipped:
+item.onyx_boots.tooltip.12=§6Resistance II
+item.onyx_boots.tooltip.13=§6Strength II
+item.onyx_boots.tooltip.14=§6Speed II
+
+//Items
+item.iron_ingot.name=Iron ingot
+item.steel_ingot.name=Steel ingot
+item.silver_ingot.name=Silver ingot
+item.gold_ingot.name=Gold ingot
+item.platinum_ingot.name=Platinum ingot
+
+item.iron_nugget.name=Iron nugget
+item.steel_nugget.name=Steel nugget
+item.silver_nugget.name=Silver nugget
+item.gold_nugget.name=Gold nugget
+item.platinum_nugget.name=Platinum nugget
+
+//gems
+item.sapphire.name=§aSapphire
+item.flaming_topaz.name=Flaming topaz
+item.ruby.name=§bRuby
+item.topaz.name=Topaz
+item.diamond.name=§dDiamond
+item.jade.name=Jade
+item.amazonite.name=§6Amazonite
+item.amethyst.name=Amethyst
+item.onyx.name=§6Onyx
+item.azurite.name=Azurite
+
+//BLOCKS
+
+tile.azurite_block.name=Block of azurite
+tile.onyx_block.name=Block of onyx
+tile.amethyst_block.name=Block of amethyst
+tile.amazonite_block.name=Block of amazonite
+tile.jade_block.name=Block of jade
+tile.diamond_block.name=Block of diamond
+tile.topaz_block.name=Block of topaz
+tile.ruby_block.name=Block of ruby
+tile.flaming_topaz_block.name=Block of flaming topaz
+tile.sapphire_block.name=Block of sapphire
+tile.platinum_block.name=Block of platinum
+tile.gold_block.name=Block of gold
+tile.silver_block.name=Block of silver
+tile.steel_block.name=Block of steel
+tile.iron_block.name=Block of iron
+tile.sulfur_block.name=Block of sulfur
+
+tile.azurite_ore.name=Azurite ore
+tile.onyx_ore.name=Onyx ore
+tile.amethyst_ore.name=Amethyst ore
+tile.amazonite_ore.name=Amazonite ore
+tile.jade_ore.name=Jade ore
+tile.diamond_ore.name=Diamond ore
+tile.topaz_ore.name=Topaz ore
+tile.ruby_ore.name=Ruby ore
+tile.flaming_topaz_ore.name=Flaming topaz ore
+tile.sapphire_ore.name=Sapphire ore
+tile.platinum_ore.name=Platinum ore
+tile.gold_ore.name=Gold ore
+tile.silver_ore.name=Silver ore
+tile.iron_ore.name=Iron ore
+tile.sulfur_ore.name=Sulfur ore
+
+tile.crustrock.name=Crustrock
+tile.crustrock_azurite.name=Crustrock Azurite
+tile.crustrock_onyx.name=Crustrock Onyx
+tile.crustrock_amethyst.name=Crustrock Amethyst
+tile.crustrock_amazonite.name=Crustrock Amazonite
+tile.crustrock_jade.name=Crustrock Jade
+tile.crustrock_diamond.name=Crustrock Diamond
+tile.crustrock_topaz.name=Crustrock Topaz
+tile.crustrock_ruby.name=Crustrock Ruby
+tile.crustrock_flaming_topaz.name=Crustrock Flaming Topaz
+tile.crustrock_sapphire.name=Crustrock Sapphire
+tile.crustrock_emerald.name=Crustrock Emerald
+tile.crustrock_lapis.name=Crustrock Lapis Lazuli
+tile.crustrock_platinum.name=Crustrock Platinum
+tile.crustrock_gold.name=Crustrock Gold
+tile.crustrock_silver.name=Crustrock Silver
+tile.crustrock_iron.name=Crustrock Iron
+tile.crustrock_coal.name=Crustrock Coal
+tile.crustrock_redstone.name=Crustrock Redstone
+tile.crustrock_sulfur.name=Crustrock Sulfur
+
+tile.crustrock1.name=Crustrock1
+tile.crustrock2.name=Crustrock2
+tile.crustrock3.name=Crustrock3
+tile.crustrock4.name=Crustrock4
+tile.crustrock5.name=Crustrock5
+tile.crustrock6.name=Crustrock6
+tile.crustrock7.name=Crustrock7
+tile.crustrock8.name=Crustrock8
+tile.crustrock9.name=Crustrock9
+tile.crustrock10.name=Crustrock10
+
+tile.hardrock.name=Hardrock
+tile.hardrock_azurite.name=Hardrock Azurite
+tile.hardrock_onyx.name=Hardrock Onyx
+tile.hardrock_amethyst.name=Hardrock Amethyst
+tile.hardrock_amazonite.name=Hardrock Amazonite
+tile.hardrock_jade.name=Hardrock Jade
+tile.hardrock_diamond.name=Hardrock Diamond
+tile.hardrock_topaz.name=Hardrock Topaz
+tile.hardrock_ruby.name=Hardrock Ruby
+tile.hardrock_flaming_topaz.name=Hardrock Flaming Topaz
+tile.hardrock_sapphire.name=Hardrock Sapphire
+tile.hardrock_emerald.name=Hardrock Emerald
+tile.hardrock_lapis.name=Hardrock Lapis Lazuli
+tile.hardrock_platinum.name=Hardrock Platinum
+tile.hardrock_gold.name=Hardrock Gold
+tile.hardrock_silver.name=Hardrock Silver
+tile.hardrock_iron.name=Hardrock Iron
+tile.hardrock_coal.name=Hardrock Coal
+tile.hardrock_redstone.name=Hardrock Redstone
+tile.hardrock_gas.name=Hardrock Gas
+tile.hardrock_sulfur.name=Hardrock Sulfur
+
+tile.hardrock1.name=Hardrock1
+tile.hardrock2.name=Hardrock2
+tile.hardrock3.name=Hardrock3
+tile.hardrock4.name=Hardrock4
+tile.hardrock5.name=Hardrock5
+
+tile.deeprock.name=Deeprock
+tile.deeprock_azurite.name=Deeprock Azurite
+tile.deeprock_onyx.name=Deeprock Onyx
+tile.deeprock_amethyst.name=Deeprock Amethyst
+tile.deeprock_amazonite.name=Deeprock Amazonite
+tile.deeprock_jade.name=Deeprock Jade
+tile.deeprock_diamond.name=Deeprock Diamond
+tile.deeprock_topaz.name=Deeprock Topaz
+tile.deeprock_ruby.name=Deeprock Ruby
+tile.deeprock_flaming_topaz.name=Deeprock Flaming Topaz
+tile.deeprock_sapphire.name=Deeprock Sapphire
+tile.deeprock_emerald.name=Deeprock Emerald
+tile.deeprock_lapis.name=Deeprock Lapis Lazuli
+tile.deeprock_platinum.name=Deeprock Platinum
+tile.deeprock_gold.name=Deeprock Gold
+tile.deeprock_silver.name=Deeprock Silver
+tile.deeprock_iron.name=Deeprock Iron
+tile.deeprock_coal.name=Deeprock Coal
+tile.deeprock_redstone.name=Deeprock Redstone
+tile.deeprock_sulfur.name=Deeprock Sulfur
+
+tile.deeprock1.name=Deeprock1
+tile.deeprock2.name=Deeprock2
+tile.deeprock3.name=Deeprock3
+tile.deeprock4.name=Deeprock4
+tile.deeprock5.name=Deeprock5
+
+tile.redrock.name=Redrock
+tile.redrock_azurite.name=Redrock Azurite
+tile.redrock_onyx.name=Redrock Onyx
+tile.redrock_amethyst.name=Redrock Amethyst
+tile.redrock_amazonite.name=Redrock Amazonite
+tile.redrock_jade.name=Redrock Jade
+tile.redrock_diamond.name=Redrock Diamond
+tile.redrock_topaz.name=Redrock Topaz
+tile.redrock_ruby.name=Redrock Ruby
+tile.redrock_flaming_topaz.name=Redrock Flaming Topaz
+tile.redrock_sapphire.name=Redrock Sapphire
+tile.redrock_emerald.name=Redrock Emerald
+tile.redrock_lapis.name=Redrock Lapis Lazuli
+tile.redrock_platinum.name=Redrock Platinum
+tile.redrock_gold.name=Redrock Gold
+tile.redrock_silver.name=Redrock Silver
+tile.redrock_iron.name=Redrock Iron
+tile.redrock_coal.name=Redrock Coal
+tile.redrock_redstone.name=Redrock Redstone
+tile.redrock_gas.name=Redrock Gas
+tile.redrock_sulfur.name=Redrock Sulfur
+
+tile.mantlerock.name=Mantlerock
+tile.mantlerock_azurite.name=Mantlerock Azurite
+tile.mantlerock_onyx.name=Mantlerock Onyx
+tile.mantlerock_amethyst.name=Mantlerock Amethyst
+tile.mantlerock_amazonite.name=Mantlerock Amazonite
+tile.mantlerock_jade.name=Mantlerock Jade
+tile.mantlerock_diamond.name=Mantlerock Diamond
+tile.mantlerock_topaz.name=Mantlerock Topaz
+tile.mantlerock_ruby.name=Mantlerock Ruby
+tile.mantlerock_flaming_topaz.name=Mantlerock Flaming Topaz
+tile.mantlerock_sapphire.name=Mantlerock Sapphire
+tile.mantlerock_emerald.name=Mantlerock Emerald
+tile.mantlerock_lapis.name=Mantlerock Lapis Lazuli
+tile.mantlerock_platinum.name=Mantlerock Platinum
+tile.mantlerock_gold.name=Mantlerock Gold
+tile.mantlerock_silver.name=Mantlerock Silver
+tile.mantlerock_iron.name=Mantlerock Iron
+tile.mantlerock_coal.name=Mantlerock Coal
+tile.mantlerock_redstone.name=Mantlerock Redstone
+tile.mantlerock_gas.name=Mantlerock Gas
+tile.mantlerock_sulfur.name=Mantlerock Sulfur
+
+tile.mantlerock1.name=Mantlerock1
+tile.mantlerock2.name=Mantlerock2
+tile.mantlerock3.name=Mantlerock3
+tile.mantlerock4.name=Mantlerock4
+tile.mantlerock5.name=Mantlerock5
+tile.mantlerock6.name=Mantlerock6
+tile.mantlerock7.name=Mantlerock7
+tile.mantlerock8.name=Mantlerock8
+tile.mantlerock9.name=Mantlerock9
+tile.mantlerock10.name=Lower Mantlerock10
+tile.lower_mantlerock1.name=Lower Mantlerock1
+tile.lower_mantlerock2.name=Lower Mantlerock2
+tile.lower_mantlerock3.name=Lower Mantlerock3
+tile.lower_mantlerock4.name=Lower Mantlerock4
+tile.lower_mantlerock5.name=Lower Mantlerock5
+tile.lower_mantlerock6.name=Lower Mantlerock6
+tile.lower_mantlerock7.name=Lower Mantlerock7
+tile.lower_mantlerock8.name=Lower Mantlerock8
+tile.lower_mantlerock9.name=Lower Mantlerock9
+tile.lower_mantlerock10.name=Lower Mantlerock10
+
+tile.lower_mantlerock.name=Lower Mantlerock
+tile.lower_mantlerock_azurite.name=Lower Mantlerock Azurite
+tile.lower_mantlerock_onyx.name=Lower Mantlerock Onyx
+tile.lower_mantlerock_amethyst.name=Lower Mantlerock Amethyst
+tile.lower_mantlerock_amazonite.name=Lower Mantlerock Amazonite
+tile.lower_mantlerock_jade.name=Lower Mantlerock Jade
+tile.lower_mantlerock_diamond.name=Lower Mantlerock Diamond
+tile.lower_mantlerock_topaz.name=Lower Mantlerock Topaz
+tile.lower_mantlerock_ruby.name=Lower Mantlerock Ruby
+tile.lower_mantlerock_flaming_topaz.name=Lower Mantlerock Flaming Topaz
+tile.lower_mantlerock_sapphire.name=Lower Mantlerock Sapphire
+tile.lower_mantlerock_emerald.name=Lower Mantlerock Emerald
+tile.lower_mantlerock_lapis.name=Lower Mantlerock Lapis Lazuli
+tile.lower_mantlerock_platinum.name=Lower Mantlerock Platinum
+tile.lower_mantlerock_gold.name=Lower Mantlerock Gold
+tile.lower_mantlerock_silver.name=Lower Mantlerock Silver
+tile.lower_mantlerock_iron.name=Lower Mantlerock Iron
+tile.lower_mantlerock_coal.name=Lower Mantlerock Coal
+tile.lower_mantlerock_redstone.name=Lower Mantlerock Redstone
+tile.lower_mantlerock_sulfur.name=Lower Mantlerock Sulfur
+
+tile.cold_corestone.name=Cold Corerock
+tile.magma_corestone.name=Magma Corerock
+tile.corestone.name=Corerock
+tile.corestone_azurite.name=Corerock Azurite
+tile.corestone_onyx.name=Corerock Onyx
+tile.corestone_amethyst.name=Corerock Amethyst
+tile.corestone_amazonite.name=Corerock Amazonite
+tile.corestone_jade.name=Corerock Jade
+tile.corestone_diamond.name=Corerock Diamond
+tile.corestone_topaz.name=Corerock Topaz
+tile.corestone_ruby.name=Corerock Ruby
+tile.corestone_flaming_topaz.name=Corerock Flaming Topaz
+tile.corestone_sapphire.name=Corerock Sapphire
+tile.corestone_emerald.name=Corerock Emerald
+tile.corestone_lapis.name=Corerock Lapis Lazuli
+tile.corestone_platinum.name=Corerock Platinum
+tile.corestone_gold.name=Corerock Gold
+tile.corestone_silver.name=Corerock Silver
+tile.corestone_iron.name=Corerock Iron
+tile.corestone_coal.name=Corerock Coal
+tile.corestone_redstone.name=Corerock Redstone
+tile.corestone_sulfur.name=Corerock Sulfur
+
+tile.innercorestone.name=Inner Corerock
+tile.innercorestone_azurite.name=Inner Corerock Azurite
+tile.innercorestone_onyx.name=Inner Corerock Onyx
+tile.innercorestone_amethyst.name=Inner Corerock Amethyst
+tile.innercorestone_amazonite.name=Inner Corerock Amazonite
+tile.innercorestone_jade.name=Inner Corerock Jade
+tile.innercorestone_diamond.name=Inner Corerock Diamond
+tile.innercorestone_topaz.name=Inner Corerock Topaz
+tile.innercorestone_ruby.name=Inner Corerock Ruby
+tile.innercorestone_flaming_topaz.name=Inner Corerock Flaming Topaz
+tile.innercorestone_sapphire.name=Inner Corerock Sapphire
+tile.innercorestone_emerald.name=Inner Corerock Emerald
+tile.innercorestone_lapis.name=Inner Corerock Lapis Lazuli
+tile.innercorestone_platinum.name=Inner Corerock Platinum
+tile.innercorestone_gold.name=Inner Corerock Gold
+tile.innercorestone_silver.name=Inner Corerock Silver
+tile.innercorestone_iron.name=Inner Corerock Iron
+tile.innercorestone_coal.name=Inner Corerock Coal
+tile.innercorestone_redstone.name=Inner Corerock Redstone
+tile.innercorestone_sulfur.name=Inner Corerock Sulfur
+
+tile.centercorestone.name=Blue Corerock
+tile.centercorestone_azurite.name=Blue Corerock Azurite
+tile.centercorestone_onyx.name=Blue Corerock Onyx
+tile.centercorestone_amethyst.name=Blue Corerock Amethyst
+tile.centercorestone_amazonite.name=Blue Corerock Amazonite
+tile.centercorestone_jade.name=Blue Corerock Jade
+tile.centercorestone_diamond.name=Blue Corerock Diamond
+tile.centercorestone_topaz.name=Blue Corerock Topaz
+tile.centercorestone_ruby.name=Blue Corerock Ruby
+tile.centercorestone_flaming_topaz.name=Blue Corerock Flaming Topaz
+tile.centercorestone_sapphire.name=Blue Corerock Sapphire
+tile.centercorestone_emerald.name=Blue Corerock Emerald
+tile.centercorestone_lapis.name=Blue Corerock Lapis Lazuli
+tile.centercorestone_platinum.name=Blue Corerock Platinum
+tile.centercorestone_gold.name=Blue Corerock Gold
+tile.centercorestone_silver.name=Blue Corerock Silver
+tile.centercorestone_iron.name=Blue Corerock Iron
+tile.centercorestone_coal.name=Blue Corerock Coal
+tile.centercorestone_redstone.name=Blue Corerock Redstone
+tile.centercorestone_sulfur.name=Blue Corerock Sulfur
+
+tile.hot_mantlerock_0.name=Hot Mantlerock
+tile.hot_mantlerock_1.name=Very Hot Mantlerock
+tile.hot_mantlerock_2.name=Super Hot Mantlerock
+
+tile.hotrock.name=Hot rock
+tile.mantlegas.name=Pocket of gas
+
+//SEDIMENTARY ROCKS
+tile.limestone.name=Limestone
+
+//TOOLS
+item.azurite_rod.name=Azurite rod
+item.onyx_rod.name=§6Onyx rod
+item.amethyst_rod.name=Amethyst rod
+item.amazonite_rod.name=§6Amazonite rod
+item.jade_rod.name=Jade rod
+item.diamond_rod.name=§dDiamond rod
+item.topaz_rod.name=Topaz rod
+item.ruby_rod.name=§bRuby rod
+item.flaming_topaz_rod.name=Flaming topaz rod
+item.sapphire_rod.name=§aSapphire rod
+item.emerald_rod.name=Emerald rod
+
+item.iron_coal.name=Iron and coal
+item.sulfur.name=Sulfur
+
+item.demon_star.name=Demon star
+item.demon_star_charged.name=Charged Demon star
+item.demon_sword.name=Demon sword
+
+item.core_star.name=Core star
+item.core_sword.name=Core sword
+
+entity.demon.name=Demon
+entity.blackdemon.name=Black demon
+entity.ghoul.name=Ghoul
+entity.hellhound.name=Hellhound
+
+item.platinum_apple.name=§bPlatinum apple
+item.enchanted_platinum_apple.name=§dEnchanted platinum apple
+
+fluid.hot_lava=Hot lava
+fluid.core_lava=Core lava
+fluid.sulfuric_acid=Sulfuric acid
+fluid.onyx_lava=Onyx lava
+
+//ARTIFACT ITEMS
+item.enhancing_gem.name=§6Enhancing gem
+
+//Shield
+
+item.iron_shield.tooltip.0=When holding the shield:
+item.iron_shield.tooltip.1=§9+5%% Knockback Resistance
+
+item.steel_shield.tooltip.0=When holding the shield:
+item.steel_shield.tooltip.1=§9+5%% Knockback Resistance
+
+item.silver_shield.tooltip.0=When holding the shield:
+item.silver_shield.tooltip.1=§9+4 Health
+item.silver_shield.tooltip.2=§9+10%% Knockback Resistance
+item.silver_shield.tooltip.3=§a+1 Health regen per minute
+
+item.gold_shield.tooltip.0=When holding the shield:
+item.gold_shield.tooltip.1=§9+4 Health
+item.gold_shield.tooltip.2=§9+15%% Knockback Resistance
+item.gold_shield.tooltip.3=§a+1 Health regen per minute
+
+item.platinum_shield.tooltip.0=When holding the shield:
+item.platinum_shield.tooltip.1=§9+8 Health
+item.platinum_shield.tooltip.2=§9+20%% Knockback Resistance
+item.platinum_shield.tooltip.3=§a+2.5 Health regen per minute
+
+item.sapphire_shield.name=§aSapphire Shield
+item.sapphire_shield.tooltip.0=When holding the shield:
+item.sapphire_shield.tooltip.1=§9+12 Health
+item.sapphire_shield.tooltip.2=§9+25%% Knockback Resistance
+item.sapphire_shield.tooltip.3=§a+5 Health regen per minute
+item.sapphire_shield.tooltip.4=Effect bonus:
+item.sapphire_shield.tooltip.5=§6+Resistance I
+
+item.ruby_shield.name=§bRuby Shield
+item.ruby_shield.tooltip.0=When holding the shield:
+item.ruby_shield.tooltip.1=§9+16 Health
+item.ruby_shield.tooltip.2=§9+30 Knockback Resistance
+item.ruby_shield.tooltip.3=§9+7.5 Health regen per minute
+item.ruby_shield.tooltip.4=§9+Resistance I
+
+item.diamond_shield.name=§dDiamond Shield
+item.diamond_shield.tooltip.0=When holding the shield:
+item.diamond_shield.tooltip.1=§9+20 Health
+item.diamond_shield.tooltip.2=§9+35 Knockback Resistance
+item.diamond_shield.tooltip.3=§9+10 Health regen per minute
+item.diamond_shield.tooltip.4=§9+Resistance I
+
+item.amazonite_shield.name=§6Amazonite Shield
+item.amazonite_shield.tooltip.0=When holding the shield:
+item.amazonite_shield.tooltip.1=§9+30 Health
+item.amazonite_shield.tooltip.2=§9+40 Knockback Resistance
+item.amazonite_shield.tooltip.3=§9+15 Health regen per minute
+item.amazonite_shield.tooltip.4=§9+Resistance II
+
+item.onyx_shield.name=§6Onyx Shield
+item.onyx_shield.tooltip.0=When holding the shield:
+item.onyx_shield.tooltip.1=§9+40 Health
+item.onyx_shield.tooltip.2=§9+50 Knockback Resistance
+item.onyx_shield.tooltip.3=§9+30 Health regen per minute
+item.onyx_shield.tooltip.4=§9+Resistance II

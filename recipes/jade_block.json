@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:jade"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:jade_block",
+        "count": 1
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "forest": "2020-03-06 09:05:10 -0500",
+      "desert": "2020-03-06 09:05:29 -0500"
+    },
+    "done": false
+  }
+}
