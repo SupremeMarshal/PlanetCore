@@ -182,6 +182,14 @@ public class ModBlocks {
 
 		ORE(1.0, 1.0, id -> new GemBase(id, Material.ROCK), id -> new GemBase(id, Material.ROCK)),
 
+		VERYSMALL(1.0, 1.0, id -> new GemBase_verysmall(id, Material.ROCK), id -> new GemBase_verysmall(id, Material.ROCK)),
+
+		SMALL(1.0, 1.0, id -> new GemBase_small(id, Material.ROCK), id -> new GemBase_small(id, Material.ROCK)),
+
+		COMPACT(1.0, 1.0, id -> new GemBase_compact(id, Material.ROCK), id -> new GemBase_compact(id, Material.ROCK)),
+
+		VERYCOMPACT(1.0, 1.0, id -> new GemBase_verycompact(id, Material.ROCK), id -> new GemBase_verycompact(id, Material.ROCK)),
+
 		HARDROCK(3.3F, 1.0, id -> new Mantlerock(id, Material.ROCK), id -> new GemBase(id, Material.ROCK)),
 
 		HARDROCK1(5.5F, 1.0, id -> new Mantlerock(id, Material.ROCK), id -> new GemBase(id, Material.ROCK)),
@@ -254,8 +262,6 @@ public class ModBlocks {
 
 		private final Function<String, Block> makeBlockGem;
 
-		private final Function<String, Block> makeBlockRock;
-
 
 
 		OreForm(double baseHardness, double baseResistance, Function<String, Block> makeBlockGem, Function<String, Block> makeBlockRock) {
@@ -266,23 +272,14 @@ public class ModBlocks {
 
 			this.makeBlockGem = makeBlockGem;
 
-			this.makeBlockRock = makeBlockRock;
-
 		}
 
 
 
-		public Block makeBlock(OreType type, String registryName) {
 
-			if (type == OreType.GEM) {
+		public Block makeBlock(String registryName) {
 
 				return makeBlockGem.apply(registryName);
-
-			} else {
-
-				return makeBlockRock.apply(registryName);
-
-			}
 
 		}
 
@@ -304,7 +301,98 @@ public class ModBlocks {
 
 	}
 
+	public enum Ore_small_Form {
 
+		ONYX(600000, 12000.0),
+
+		MAJORITE(600000, 12000.0),
+
+		BRIGMANITE(500000, 4800.0),
+
+		RINGWOODITE(4800.0, 40000.0),
+
+		AMAZONITE(12000.0, 75000.0),
+
+		DIAMOND(4800.0, 50000.0),
+
+		SAPPHIRE(1600.0, 10000.0),
+
+		WADSLEYITE(4800., 15000.0),
+
+		RUBY(1600.0, 10000.0),
+
+		TUNGSTEN(200.0, 5000.0),
+
+		EMERALD(150.0, 2500.0),
+
+		TITANIUM(100.0, 1000.0),
+
+		URANIUM(40.0, 120.0),
+
+		PLATINUM(60.0, 500.0),
+
+		OLIVINE(2400.0, 400),
+
+		JADE(60.0, 300.0),
+
+		TOPAZ(40.0, 250.0),
+
+		GOLD(27.0, 200.0),
+
+		SILVER(18.0, 60.0),
+
+		REDSTONE(18.0, 1.0),
+
+		LAPIS(12.0, 1.0),
+
+		SILICON(10.0, 1.0),
+
+		LEAD(10.0, 1.0),
+
+		SULFUR(10.0, 1.0),
+
+		IRON(5.0, 1.5),
+
+		TIN(5.0, 1.0),
+
+		COPPER(5.0, 1.0),
+
+		COAL(1.5, 0.0);
+
+
+
+		private final double baseHardness;
+
+		private final double baseResistance;
+
+
+
+		Ore_small_Form(double baseHardness, double baseResistance) {
+
+			this.baseHardness = baseHardness;
+
+			this.baseResistance = baseResistance;
+
+		}
+
+		
+
+
+		public double getBaseHardness() {
+
+			return baseHardness;
+
+		}
+
+
+
+		public double getBaseResistance() {
+
+			return baseResistance;
+
+		}
+
+	}
 
 
 
@@ -1509,7 +1597,7 @@ public class ModBlocks {
 
 
 
-				Block block = oreForm.makeBlock(ore.getType(), registryName);
+				Block block = oreForm.makeBlock(registryName);
 
 				block.setHardness((float) (ore.getOreHardness() + oreForm.getBaseHardness()));
 
