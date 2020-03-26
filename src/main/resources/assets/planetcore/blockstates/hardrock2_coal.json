@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:hardrock2_coal" }
-    }
-}
+{"variants":{"normal":{"model":"planetcore:hardrock2_coal"}}}

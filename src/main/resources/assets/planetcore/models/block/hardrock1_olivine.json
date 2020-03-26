@@ -1,6 +1,1 @@
-{
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "planetcore:blocks/hardrock1_olivine"
-   }
-}
+{"parent":"block/cube_all","textures":{"all":"planetcore:blocks/hardrock1_olivine"}}

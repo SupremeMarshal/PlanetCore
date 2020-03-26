@@ -1,5 +1,6 @@
 package com.PlanetCore.util.handlers;
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,5 +20,6 @@ public class CommonForgeEventHandler {
         if (breakTime <= 0.1F) {
             event.setNewSpeed(event.getOriginalSpeed()/(0.1F/breakTime));
         }
+
     }
 }

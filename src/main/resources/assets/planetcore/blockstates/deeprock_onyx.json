@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:deeprock_onyx" }
-    }
-}
+{"variants":{"normal":{"model":"planetcore:deeprock_onyx"}}}

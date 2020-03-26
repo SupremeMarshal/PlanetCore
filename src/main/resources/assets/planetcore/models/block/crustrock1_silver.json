@@ -1,6 +1,1 @@
-{
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "planetcore:blocks/crustrock1_silver"
-   }
-}
+{"parent":"block/cube_all","textures":{"all":"planetcore:blocks/crustrock1_silver"}}

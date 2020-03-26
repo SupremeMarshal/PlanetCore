@@ -1,6 +1,1 @@
-{
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "planetcore:blocks/crustrock2_aluminium"
-   }
-}
+{"parent":"block/cube_all","textures":{"all":"planetcore:blocks/crustrock2_aluminium"}}

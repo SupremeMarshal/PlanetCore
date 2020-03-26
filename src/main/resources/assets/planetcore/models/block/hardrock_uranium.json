@@ -1,6 +1,1 @@
-{
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "planetcore:blocks/hardrock_uranium"
-   }
-}
+{"parent":"block/cube_all","textures":{"all":"planetcore:blocks/hardrock_uranium"}}

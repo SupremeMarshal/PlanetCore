@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:deeprock_aluminium" }
-    }
-}
+{"variants":{"normal":{"model":"planetcore:deeprock_aluminium"}}}

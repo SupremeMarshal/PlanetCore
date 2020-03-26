@@ -1,6 +1,1 @@
-{
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "planetcore:blocks/mantlerock4_silicon"
-   }
-}
+{"parent":"block/cube_all","textures":{"all":"planetcore:blocks/mantlerock4_silicon"}}

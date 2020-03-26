@@ -1,6 +1,1 @@
-{
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "planetcore:blocks/hardrock_wadsleyite"
-   }
-}
+{"parent":"block/cube_all","textures":{"all":"planetcore:blocks/hardrock_wadsleyite"}}

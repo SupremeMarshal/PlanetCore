@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:innercorestone_redstone" }
-    }
-}
+{"variants":{"normal":{"model":"planetcore:innercorestone_redstone"}}}

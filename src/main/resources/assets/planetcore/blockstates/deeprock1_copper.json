@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:deeprock1_copper" }
-    }
-}
+{"variants":{"normal":{"model":"planetcore:deeprock1_copper"}}}

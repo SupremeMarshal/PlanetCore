@@ -1,6 +1,1 @@
-{
-   "parent": "block/cube_all",
-   "textures": {
-       "all": "planetcore:blocks/deeprock2_coal"
-   }
-}
+{"parent":"block/cube_all","textures":{"all":"planetcore:blocks/deeprock2_coal"}}

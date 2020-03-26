@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:lower_mantlerock_redstone" }
-    }
-}
+{"variants":{"normal":{"model":"planetcore:lower_mantlerock_redstone"}}}

@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:deeprock_zinc" }
-    }
-}
+{"variants":{"normal":{"model":"planetcore:deeprock_zinc"}}}

@@ -14,7 +14,7 @@ public class ModSmelting {
 
 	public static void init()
 	{
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_COAL, new ItemStack(Items.COAL, 1), 0.75F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_COAL, new ItemStack(Items.COAL, 1), 0.75F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_COAL, new ItemStack(Items.COAL, 2), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_COAL, new ItemStack(Items.COAL, 3), 1.5F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_COAL, new ItemStack(Items.COAL, 4), 2.0F);
@@ -23,7 +23,7 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_COAL, new ItemStack(Items.COAL, 7), 3.0F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_COAL, new ItemStack(Items.COAL, 9), 3.5F);
 		
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_SULFUR, new ItemStack(ModItems.SULFUR, 1), 0.75F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_SULFUR, new ItemStack(ModItems.SULFUR, 1), 0.75F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_SULFUR, new ItemStack(ModItems.SULFUR, 2), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_SULFUR, new ItemStack(ModItems.SULFUR, 3), 1.5F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_SULFUR, new ItemStack(ModItems.SULFUR, 4), 2.0F);
@@ -32,8 +32,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_SULFUR, new ItemStack(ModItems.SULFUR, 7), 3.0F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_SULFUR, new ItemStack(ModItems.SULFUR, 9), 3.5F);
 		
-		GameRegistry.addSmelting(ModBlocks.IRON_ORE, new ItemStack(ModItems.IRON_INGOT, 1), 0.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_IRON, new ItemStack(ModItems.IRON_INGOT, 1), 0.75F);
+		GameRegistry.addSmelting(ModBlocks.ORE_IRON, new ItemStack(ModItems.IRON_INGOT, 1), 0.5F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_IRON, new ItemStack(ModItems.IRON_INGOT, 1), 0.75F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_IRON, new ItemStack(ModItems.IRON_INGOT, 2), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_IRON, new ItemStack(ModItems.IRON_INGOT, 3), 1.5F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_IRON, new ItemStack(ModItems.IRON_INGOT, 4), 2.0F);
@@ -44,8 +44,8 @@ public class ModSmelting {
 
 		GameRegistry.addSmelting(ModItems.IRON_COAL, new ItemStack(ModItems.STEEL_INGOT, 1), 1.0F);
 
-		GameRegistry.addSmelting(ModBlocks.SILVER_ORE, new ItemStack(ModItems.SILVER_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_SILVER, new ItemStack(ModItems.SILVER_INGOT, 1), 1.25F);
+		GameRegistry.addSmelting(ModBlocks.ORE_SILVER, new ItemStack(ModItems.SILVER_INGOT, 1), 1.0F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_SILVER, new ItemStack(ModItems.SILVER_INGOT, 1), 1.25F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_SILVER, new ItemStack(ModItems.SILVER_INGOT, 1), 1.5F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_SILVER, new ItemStack(ModItems.SILVER_INGOT, 1), 2.0F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_SILVER, new ItemStack(ModItems.SILVER_INGOT, 2), 4.0F);
@@ -54,8 +54,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_SILVER, new ItemStack(ModItems.SILVER_INGOT, 4), 8.0F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_SILVER, new ItemStack(ModItems.SILVER_INGOT, 5), 10.0F);
 
-		GameRegistry.addSmelting(ModBlocks.GOLD_ORE, new ItemStack(ModItems.GOLD_INGOT, 1), 1.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_GOLD, new ItemStack(ModItems.GOLD_INGOT, 1), 1.75F);
+		GameRegistry.addSmelting(ModBlocks.ORE_GOLD, new ItemStack(ModItems.GOLD_INGOT, 1), 1.5F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_GOLD, new ItemStack(ModItems.GOLD_INGOT, 1), 1.75F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_GOLD, new ItemStack(ModItems.GOLD_INGOT, 1), 2.0F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_GOLD, new ItemStack(ModItems.GOLD_INGOT, 1), 2.5F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_GOLD, new ItemStack(ModItems.GOLD_INGOT, 2), 5.0F);
@@ -64,8 +64,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_GOLD, new ItemStack(ModItems.GOLD_INGOT, 4), 10.0F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_GOLD, new ItemStack(ModItems.GOLD_INGOT, 5), 12.5F);
 
-		GameRegistry.addSmelting(ModBlocks.PLATINUM_ORE, new ItemStack(ModItems.PLATINUM_INGOT, 1), 2F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_PLATINUM, new ItemStack(ModItems.PLATINUM_INGOT, 1), 2.25F);
+		GameRegistry.addSmelting(ModBlocks.ORE_PLATINUM, new ItemStack(ModItems.PLATINUM_INGOT, 1), 2F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_PLATINUM, new ItemStack(ModItems.PLATINUM_INGOT, 1), 2.25F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_PLATINUM, new ItemStack(ModItems.PLATINUM_INGOT, 1), 2.5F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_PLATINUM, new ItemStack(ModItems.PLATINUM_INGOT, 1), 3.0F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_PLATINUM, new ItemStack(ModItems.PLATINUM_INGOT, 2), 6.0F);
@@ -75,7 +75,7 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_PLATINUM, new ItemStack(ModItems.PLATINUM_INGOT, 5), 15.0F);
 
 		GameRegistry.addSmelting(Blocks.REDSTONE_ORE, new ItemStack(Items.REDSTONE, 5), 1.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_REDSTONE, new ItemStack(Items.REDSTONE, 6), 1.75F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_REDSTONE, new ItemStack(Items.REDSTONE, 6), 1.75F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_REDSTONE, new ItemStack(Items.REDSTONE, 7), 2.0F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_REDSTONE, new ItemStack(Items.REDSTONE, 10), 3.0F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_REDSTONE, new ItemStack(Items.REDSTONE, 14), 4.0F);
@@ -84,7 +84,7 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_REDSTONE, new ItemStack(Items.REDSTONE, 22), 6.0F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_REDSTONE, new ItemStack(Items.REDSTONE, 26), 7.0F);
 
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_EMERALD, new ItemStack(Items.EMERALD, 1), 2.25F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_EMERALD, new ItemStack(Items.EMERALD, 1), 2.25F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_EMERALD, new ItemStack(Items.EMERALD, 1), 2.5F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_EMERALD, new ItemStack(Items.EMERALD, 1), 3.0F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_EMERALD, new ItemStack(Items.EMERALD, 1), 3.5F);
@@ -93,8 +93,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_EMERALD, new ItemStack(Items.EMERALD, 1), 10.5F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_EMERALD, new ItemStack(Items.EMERALD, 1), 14.0F);
 
-		GameRegistry.addSmelting(ModBlocks.SAPPHIRE_ORE, new ItemStack(ModItems.SAPPHIRE, 1), 2.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 2.75F);
+		GameRegistry.addSmelting(ModBlocks.ORE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 2.5F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 2.75F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 3.0F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 3.5F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 4.0F);
@@ -103,8 +103,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 12.0F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 16.0F);
 		
-		GameRegistry.addSmelting(ModBlocks.RUBY_ORE, new ItemStack(ModItems.RUBY, 1), 3.0F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_RUBY, new ItemStack(ModItems.RUBY, 1), 3.25F);
+		GameRegistry.addSmelting(ModBlocks.ORE_RUBY, new ItemStack(ModItems.RUBY, 1), 3.0F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_RUBY, new ItemStack(ModItems.RUBY, 1), 3.25F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_RUBY, new ItemStack(ModItems.RUBY, 1), 3.5F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_RUBY, new ItemStack(ModItems.RUBY, 1), 4.0F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_RUBY, new ItemStack(ModItems.RUBY, 1), 4.5F);
@@ -113,8 +113,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_RUBY, new ItemStack(ModItems.RUBY, 1), 13.5F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_RUBY, new ItemStack(ModItems.RUBY, 1), 18.0F);
 		
-		GameRegistry.addSmelting(ModBlocks.TOPAZ_ORE, new ItemStack(ModItems.TOPAZ, 1), 3.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 3.75F);
+		GameRegistry.addSmelting(ModBlocks.ORE_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 3.5F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 3.75F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 4.0F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 4.5F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 5.0F);
@@ -123,8 +123,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 15.0F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 20.0F);
 		
-		GameRegistry.addSmelting(ModBlocks.DIAMOND_ORE, new ItemStack(ModItems.DIAMOND, 1), 4.0F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 4.25F);
+		GameRegistry.addSmelting(ModBlocks.ORE_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 4.0F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 4.25F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 4.5F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 5.0F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 5.5F);
@@ -133,8 +133,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 16.5F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 22.0F);
 
-		GameRegistry.addSmelting(ModBlocks.JADE_ORE, new ItemStack(ModItems.JADE, 1), 4.5F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_JADE, new ItemStack(ModItems.JADE, 1), 4.75F);
+		GameRegistry.addSmelting(ModBlocks.ORE_JADE, new ItemStack(ModItems.JADE, 1), 4.5F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_JADE, new ItemStack(ModItems.JADE, 1), 4.75F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_JADE, new ItemStack(ModItems.JADE, 1), 5.0F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_JADE, new ItemStack(ModItems.JADE, 1), 5.5F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_JADE, new ItemStack(ModItems.JADE, 1), 6.0F);
@@ -143,8 +143,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_JADE, new ItemStack(ModItems.JADE, 1), 18.0F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_JADE, new ItemStack(ModItems.JADE, 1), 24.0F);
 
-		GameRegistry.addSmelting(ModBlocks.AMAZONITE_ORE, new ItemStack(ModItems.AMAZONITE, 1), 5.0F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 5.25F);
+		GameRegistry.addSmelting(ModBlocks.ORE_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 5.0F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 5.25F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 5.5F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 6.0F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 6.5F);
@@ -153,8 +153,8 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.INNERCORESTONE_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 19.5F);
 		GameRegistry.addSmelting(ModBlocks.CENTERCORESTONE_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 26.0F);
 		
-		GameRegistry.addSmelting(ModBlocks.ONYX_ORE, new ItemStack(ModItems.ONYX, 1), 6.0F);
-		GameRegistry.addSmelting(ModBlocks.HARDROCK_ONYX, new ItemStack(ModItems.ONYX, 1), 6.25F);
+		GameRegistry.addSmelting(ModBlocks.ORE_ONYX, new ItemStack(ModItems.ONYX, 1), 6.0F);
+		//GameRegistry.addSmelting(ModBlocks.HARDROCK_ONYX, new ItemStack(ModItems.ONYX, 1), 6.25F);
 		GameRegistry.addSmelting(ModBlocks.DEEPROCK_ONYX, new ItemStack(ModItems.ONYX, 1), 6.5F);
 		GameRegistry.addSmelting(ModBlocks.CRUSTROCK_ONYX, new ItemStack(ModItems.ONYX, 1), 7.0F);
 		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_ONYX, new ItemStack(ModItems.ONYX, 1), 7.5F);

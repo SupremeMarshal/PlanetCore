@@ -1,5 +1,1 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:crustrock_copper" }
-    }
-}
+{"variants":{"normal":{"model":"planetcore:crustrock_copper"}}}
