@@ -49,7 +49,7 @@ public class Main {
 	
 	@EventHandler
     public static void init(FMLInitializationEvent event) {
-		ModSmelting.init();
+		//ModSmelting.init();
 		RegistryHandler.initRegistries(event);
     }
 

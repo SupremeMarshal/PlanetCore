@@ -4,15 +4,25 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
@@ -23,10 +33,15 @@ import java.util.Random;
 
 import static javax.swing.UIManager.put;
 
-public class Mantlerock extends BlockBase
+public class Mantlerock extends BlockBase implements IMetaName
 {
 
-	public Mantlerock(String name, Material material) {
+
+
+	public static final PropertyEnum<Mantlerock.EnumType> VARIANT = PropertyEnum.<Mantlerock.EnumType>create("variant",Mantlerock.EnumType.class);
+
+	public Mantlerock(String name, Material material)
+	{
 		super(name, material);
 
 		setSoundType(SoundType.STONE);
@@ -36,6 +51,105 @@ public class Mantlerock extends BlockBase
 		setTickRandomly(true);
 
 	}
+
+	@Override
+	public int damageDropped(IBlockState state)
+	{
+		return ((Mantlerock.EnumType)state.getValue(VARIANT)).getMeta();
+	}
+
+	@Override
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
+		for (Mantlerock.EnumType mantlerock$enumtype : Mantlerock.EnumType.values()) {
+			items.add(new ItemStack(this, 1, mantlerock$enumtype.getMeta()));
+		}
+	}
+
+	@Override
+	public IBlockState getStateFromMeta(int meta)
+	{
+		return this.getDefaultState().withProperty(VARIANT, Mantlerock.EnumType.byMetadata(meta));
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state)
+	{
+		return ((Mantlerock.EnumType)state.getValue(VARIANT)).getMeta();
+	}
+
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+		return new ItemStack(Item.getItemFromBlock(this),1,(int)(getMetaFromState(world.getBlockState(pos))));
+	}
+
+	@Override
+	protected BlockStateContainer createBlockState()
+	{
+		return new BlockStateContainer(this, new IProperty[] {VARIANT});
+	}
+
+	public static enum EnumType implements IStringSerializable
+	{
+		NORMAL(0, "normal"),
+		MANTLEROCK1(1, "mantlerock1");
+
+		private static final Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[values().length];
+		private final int meta;
+		private final String name, unlocalizedName;
+
+		private EnumType(int meta, String name)
+		{
+			this(meta, name, name);
+		}
+
+		private EnumType(int meta, String name, String unlocalizedName) {
+			this.meta = meta;
+			this.name = name;
+			this.unlocalizedName = unlocalizedName;
+		}
+
+		@Override
+		public String getName() {
+			return this.name;
+		}
+
+		public int getMeta()
+		{
+			return this.meta;
+		}
+
+		public String getUnlocalizedName()
+		{
+			return this.unlocalizedName;
+		}
+
+		@Override
+		public String toString()
+		{
+			return this.name;
+		}
+
+		public static Mantlerock.EnumType byMetadata(int meta)
+		{
+			return META_LOOKUP[meta];
+		}
+
+		static {
+			for(Mantlerock.EnumType mantlerock$enumtype : values())
+			{
+				META_LOOKUP[mantlerock$enumtype.getMeta()] = mantlerock$enumtype;
+			}
+		}
+
+	}
+
+	@Override
+	public String getSpecialName(ItemStack stack)
+	{
+		return Mantlerock.EnumType.values()[stack.getItemDamage()].getName();
+	}
+
+
 
 	//Natural Gas Explosion event
 	//Upon destroying the block, it has a small chance to explode. The deeper the rock is, the more probability it has to explode with a larger explosion.
@@ -382,8 +496,6 @@ public class Mantlerock extends BlockBase
 		//Only if the event has started
 		//lavaDecompression(worldIn,pos,state);
 	}
-
-
 
 
 
