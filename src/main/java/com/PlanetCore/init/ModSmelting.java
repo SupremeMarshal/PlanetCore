@@ -11,6 +11,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class ModSmelting {
+	/*
 
 	public static void init()
 	{
@@ -184,6 +185,8 @@ public class ModSmelting {
 			}
 		}
 	}
+
+	 */
 
 
 

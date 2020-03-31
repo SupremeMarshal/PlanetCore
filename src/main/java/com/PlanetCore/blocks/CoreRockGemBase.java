@@ -33,6 +33,7 @@ public class CoreRockGemBase extends Corerock
 
 	}
 
+	/*
 	@Override
 	public Item getItemDropped(IBlockState state, Random random, int l)
 	{
@@ -173,6 +174,8 @@ public class CoreRockGemBase extends Corerock
 
 
 // override getItemDropped() and damageDropped() respectively. one for the item, one for the meta
+
+	 */
 
 }
 

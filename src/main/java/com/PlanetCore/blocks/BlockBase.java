@@ -65,26 +65,26 @@ public class BlockBase extends Block implements IHasModel {
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		float PressureLevel = (pos.getY() /64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
-		if (pos.getY() < 0) {
-			if (Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof GemBase) && !(this instanceof CoreRockGemBase) && !(this instanceof BlocksBase)) {
-				for (EnumFacing side : EnumFacing.values()) {
-					BlockPos movedPos = pos.offset(side);
-					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel
-							|| movedState.getMaterial() == Material.WATER || movedState.getMaterial() == Material.LAVA || movedState.getBlock() == Blocks.ANVIL)
-						continue; // you can add more blocks to this check to exclude them
-					//
-					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
-							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
-							.toArray(EnumFacing[]::new);
-					if (sides.length == 0) continue;
-					worldIn.setBlockState(movedPos, this.getDefaultState());
-					worldIn.setBlockState(pos.offset(sides[rand.nextInt(sides.length)]), movedState);
-				}
+		float PressureLevel = (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
+		if (pos.getY() < 0 && Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof GemBase) && !(this instanceof CoreRockGemBase) && !(this instanceof BlocksBase)) {
+			for (EnumFacing side : EnumFacing.values()) {
+				BlockPos movedPos = pos.offset(side);
+				IBlockState movedState = worldIn.getBlockState(movedPos);
+				if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel
+						|| movedState.getMaterial() == Material.WATER || movedState.getMaterial() == Material.LAVA || movedState.getBlock() == Blocks.ANVIL)
+					continue; // you can add more blocks to this check to exclude them
+				//
+				EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
+						.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
+						.toArray(EnumFacing[]::new);
+				if (sides.length == 0) continue;
+				worldIn.setBlockState(movedPos, this.getDefaultState());
+				worldIn.setBlockState(pos.offset(sides[rand.nextInt(sides.length)]), movedState);
 			}
 		}
 	}
+
+
 
 
 

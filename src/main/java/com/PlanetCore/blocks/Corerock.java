@@ -59,8 +59,9 @@ public class Corerock extends BlockBase {
 		}
 		return super.removedByPlayer(state, world, pos, entity, willHarvest);
 	}
+}
 
-	@Override
+	/*@Override
 	public Item getItemDropped(IBlockState state, Random random, int l)
 	{
 		Block block = this;
@@ -92,6 +93,8 @@ public class Corerock extends BlockBase {
 		else
 		{return new ItemStack(block, 1, 0).getItem();}
 	}
+
+
 
 	@Override
 	public int quantityDropped(Random random) {
@@ -128,6 +131,8 @@ public class Corerock extends BlockBase {
 
 	}
 
+
+
 	@Override
 	public int damageDropped(IBlockState state) {
 		Block block = this;
@@ -153,6 +158,7 @@ public class Corerock extends BlockBase {
 		double d7;
 		double wat = radius/** 2 */
 				;
+				/*
 		boolean isOccupied = false;
 
 		// bombStartStrength *= 2.0F;
@@ -193,6 +199,7 @@ public class Corerock extends BlockBase {
 		}
 		radius = (int) f;
 	}
+
 
 
 
@@ -374,7 +381,7 @@ public class Corerock extends BlockBase {
 			{
 				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
 			}
-		}*/
+		}
 	}
 	@SideOnly(Side.CLIENT)
 	@Override
@@ -391,5 +398,9 @@ public class Corerock extends BlockBase {
 	}
 
 }
+
+				 */
+
+
 	
 

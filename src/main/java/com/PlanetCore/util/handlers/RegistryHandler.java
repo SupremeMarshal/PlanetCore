@@ -46,6 +46,7 @@ public class RegistryHandler {
 	public static void onBlockRegister(RegistryEvent.Register<Block> event)
 	{
 		ModBlocks.register(event.getRegistry());
+		ModBlocks.registerRenders();
 	}
 	
 	@SubscribeEvent
@@ -68,6 +69,7 @@ public class RegistryHandler {
 		}
 		RenderHandler.registerEntityRenders();
 		RenderHandler.registerCustomMeshesAndStates();
+		ModBlocks.registerRenders();
 	}
 
 	@SubscribeEvent

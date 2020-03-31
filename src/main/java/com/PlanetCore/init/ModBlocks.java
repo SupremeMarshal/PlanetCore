@@ -6,10 +6,15 @@ package com.PlanetCore.init;
 
 import com.PlanetCore.blocks.*;
 
+import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 
 import net.minecraft.block.material.Material;
 
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
 import net.minecraftforge.registries.IForgeRegistry;
@@ -35,9 +40,9 @@ public class ModBlocks {
 
     public enum Ore_size {
 
-        VERYSMALL(0.25, 1.0, id -> new GemBase_verysmall(id, Material.ROCK)),
+        VERYSMALL(0.25, 0.25, id -> new GemBase_verysmall(id, Material.ROCK)),
 
-        SMALL(0.5, 1.0, id -> new GemBase_small(id, Material.ROCK)),
+        SMALL(0.5, 0.5, id -> new GemBase_small(id, Material.ROCK)),
 
         COMPACT(4, 1.5, id -> new GemBase_compact(id, Material.ROCK)),
 
@@ -1590,38 +1595,6 @@ public class ModBlocks {
 
     public static final Block MANTLEROCK = _null();
 
-    public static final Block MANTLEROCK1 = _null();
-
-    public static final Block MANTLEROCK2 = _null();
-
-    public static final Block MANTLEROCK3 = _null();
-
-    public static final Block MANTLEROCK4 = _null();
-
-    public static final Block MANTLEROCK5 = _null();
-
-    public static final Block MANTLEROCK6 = _null();
-
-    public static final Block MANTLEROCK7 = _null();
-
-    public static final Block MANTLEROCK8 = _null();
-
-    public static final Block LOWER_MANTLEROCK1 = _null();
-
-    public static final Block LOWER_MANTLEROCK2 = _null();
-
-    public static final Block LOWER_MANTLEROCK3 = _null();
-
-    public static final Block LOWER_MANTLEROCK4 = _null();
-
-    public static final Block LOWER_MANTLEROCK5 = _null();
-
-    public static final Block LOWER_MANTLEROCK6 = _null();
-
-    public static final Block LOWER_MANTLEROCK7 = _null();
-
-    public static final Block LOWER_MANTLEROCK8 = _null();
-
     public static final Block CORESTONE = _null();
 
     public static final Block INNERCORESTONE = _null();
@@ -1652,7 +1625,7 @@ public class ModBlocks {
 
     public static final Block HOTROCK = _null();
 
-
+    public static List<Block> AllMantlerockBlocks = new ArrayList<>();
 
     public static void register(IForgeRegistry<Block> registry) {
 
@@ -1668,7 +1641,7 @@ public class ModBlocks {
 
                 String registryName;
 
-                    registryName = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT);
+                registryName = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT);
 
                 Block block = oreForm.makeBlock(registryName);
 
@@ -1685,27 +1658,33 @@ public class ModBlocks {
                 }
 
                 registry.register(block);
+                if (oreForm == ModBlocks.OreForm.MANTLEROCK) {
+                    AllMantlerockBlocks.add(block);
+                }
 
                 for (ModBlocks.Ore_size Ore_size : ModBlocks.Ore_size.values()) {
-                        String registryName1;
 
-                        registryName1 = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT) + "_" + Ore_size.name().toLowerCase(Locale.ROOT);
+                    String registryName1;
 
-                        Block block1 = Ore_size.makeBlock(registryName1);
+                    registryName1 = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT) + "_" + Ore_size.name().toLowerCase(Locale.ROOT);
 
-                        block1.setHardness((float) (oreForm.getBaseHardness() + (ore.getOreHardness() * (Ore_size.getBaseHardness()))));
+                    Block block1 = Ore_size.makeBlock(registryName1);
 
-                        block1.setResistance((float) (oreForm.getBaseResistance() + (ore.getOreResistance() * (Ore_size.getBaseResistance()))));
+                    block1.setHardness((float) (oreForm.getBaseHardness() + (ore.getOreHardness() * (Ore_size.getBaseHardness()))));
 
-                        if (generateHolders) {
+                    block1.setResistance((float) (oreForm.getBaseResistance() + (ore.getOreResistance() * (Ore_size.getBaseResistance()))));
 
-                            holderGenString.append("public static final ").append(block1.getClass().getSimpleName())
+                    if (generateHolders) {
 
-                                    .append(" ").append(block1.getRegistryName().getPath().toUpperCase(Locale.ROOT)).append(" = _null();\n");
+                        holderGenString.append("public static final ").append(block1.getClass().getSimpleName())
 
-                        }
+                                .append(" ").append(block1.getRegistryName().getPath().toUpperCase(Locale.ROOT)).append(" = _null();\n");
 
-                        registry.register(block1);
+                    }
+                    registry.register(block1);
+                    if (oreForm == ModBlocks.OreForm.MANTLEROCK) {
+                        AllMantlerockBlocks.add(block1);
+                    }
                 }
             }
             if (generateHolders) holderGenString.append("\n");
@@ -1783,5 +1762,15 @@ public class ModBlocks {
         );
 
     }
+
+    public static void registerRenders() {
+        for (Block block : AllMantlerockBlocks) {
+            for (int meta = 0; meta < 16; meta++) {
+                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+                        new ModelResourceLocation(block.getRegistryName() + Mantlerock.EnumType.values()[meta].getName(), "inventory"));
+            }
+        }
+    }
+
 
 }
