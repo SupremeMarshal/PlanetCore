@@ -54,43 +54,6 @@ public class SulfuricAcidFluid extends BlockFluidClassic {
 		}
 	}
 
-	public boolean checkForMixing(World worldIn, BlockPos pos, IBlockState state)
-	{
-		if (this.material == Material.LAVA)
-		{
-			boolean flag = false;
-
-			for (EnumFacing enumfacing : EnumFacing.values())
-			{
-				if (enumfacing != EnumFacing.DOWN && worldIn.getBlockState(pos.offset(enumfacing)).getMaterial() == Material.WATER)
-				{
-					flag = true;
-					break;
-				}
-			}
-
-			if (flag)
-			{
-				Integer integer = (Integer)state.getValue(LEVEL);
-
-				if (integer.intValue() == 0)
-				{
-					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_BLOCK.getDefaultState()));
-					this.triggerMixEffects(worldIn, pos);
-					return true;
-				}
-
-				if (integer.intValue() <= 4)
-				{
-					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DEEPROCK.getDefaultState()));
-					this.triggerMixEffects(worldIn, pos);
-					return true;
-				}
-			}
-		}
-
-		return false;
-	}
 
 	protected void triggerMixEffects(World worldIn, BlockPos pos)
 	{
@@ -105,14 +68,6 @@ public class SulfuricAcidFluid extends BlockFluidClassic {
 		}
 	}
 
-	@Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
-	{
-		if (!this.checkForMixing(worldIn, pos, state))
-		{
-			worldIn.scheduleUpdate(pos, this, tickRate);
-		}
-	}
 
 	@Override
 	protected boolean canFlowInto(IBlockAccess world, BlockPos pos)

@@ -2,6 +2,7 @@ package com.PlanetCore.blocks;
 
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
+import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -20,11 +21,9 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.NonNullList;
+import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -49,6 +48,11 @@ public class Corerock extends BlockBase implements IMetaName {
 		setLightLevel(1.0F);
 		setTickRandomly(true);
 
+	}
+
+	@Override
+	void addItemBlock() {
+		ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
 	}
 
 	@Override
@@ -81,11 +85,14 @@ public class Corerock extends BlockBase implements IMetaName {
 		return new ItemStack(Item.getItemFromBlock(this),1,(int)(getMetaFromState(world.getBlockState(pos))));
 	}
 
+
 	@Override
 	protected BlockStateContainer createBlockState()
 	{
 		return new BlockStateContainer(this, new IProperty[] {VARIANT});
 	}
+
+
 
 
 	public static enum EnumType implements IStringSerializable
@@ -94,19 +101,14 @@ public class Corerock extends BlockBase implements IMetaName {
 		INNERCORE(1, "innercorestone"),
 		CENTERCORE(2, "centercorestone");
 
-		private static final Corerock.EnumType[] META_LOOKUP = new Corerock.EnumType[values().length];
+		private static final Corerock.EnumType[] META_LOOKUP = new Corerock.EnumType[]{CORE,INNERCORE,CENTERCORE};
 		private final int meta;
-		private final String name, unlocalizedName;
+		private final String name;
 
 		private EnumType(int meta, String name)
 		{
-			this(meta, name, name);
-		}
-
-		private EnumType(int meta, String name, String unlocalizedName) {
-			this.meta = meta;
-			this.name = name;
-			this.unlocalizedName = unlocalizedName;
+			this.meta=meta;
+			this.name=name;
 		}
 
 		@Override
@@ -119,20 +121,15 @@ public class Corerock extends BlockBase implements IMetaName {
 			return this.meta;
 		}
 
-		public String getUnlocalizedName()
-		{
-			return this.unlocalizedName;
-		}
-
 		@Override
 		public String toString()
 		{
 			return this.name;
 		}
 
-		public static Corerock.EnumType byMetadata(int meta)
+		public static Corerock.EnumType byMetadata(int meta1)
 		{
-			return META_LOOKUP[meta];
+			return META_LOOKUP[meta1];
 		}
 
 		static {
@@ -141,7 +138,6 @@ public class Corerock extends BlockBase implements IMetaName {
 				META_LOOKUP[corerock$enumtype.getMeta()] = corerock$enumtype;
 			}
 		}
-
 	}
 
 	@Override
@@ -161,6 +157,12 @@ public class Corerock extends BlockBase implements IMetaName {
 			}
 		}
 		return super.removedByPlayer(state, world, pos, entity, willHarvest);
+	}
+
+	@Override
+	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
+		System.out.println(meta);
+		return this.getDefaultState().withProperty(VARIANT, Corerock.EnumType.byMetadata(meta));
 	}
 }
 

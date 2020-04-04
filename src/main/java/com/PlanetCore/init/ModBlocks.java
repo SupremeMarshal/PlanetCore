@@ -6,6 +6,7 @@ package com.PlanetCore.init;
 
 import com.PlanetCore.blocks.*;
 
+import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 
@@ -69,12 +70,10 @@ public class ModBlocks {
      */
 
 
-
     public enum OreType {
         GEM,
         METAL
     }
-
 
 
     public enum Ore {
@@ -197,19 +196,17 @@ public class ModBlocks {
 
 
     /**
-
      * The way ObjectHolder works with forge is that it reflectively sets public static final fields.
-
+     * <p>
      * Because creating instances in static initializers is discouraged, they have to be initialized to null.
-
-     *
-
+     * <p>
+     * <p>
+     * <p>
      * This method returns null, but forces IDE static analysis to see it as a non-null value which those fields will be at runtime.
-
-     *
-
+     * <p>
+     * <p>
+     * <p>
      * This removes a lot of useless warnings because those fields *may* be null.
-
      */
 
     @SuppressWarnings("ConstantConditions")
@@ -371,6 +368,7 @@ public class ModBlocks {
     public static final Crustrock CRUSTROCK_ALUMINIUM = _null();
     public static final Crustrock CRUSTROCK_SILICON = _null();
     public static final Crustrock CRUSTROCK_COAL = _null();
+    public static final Crustrock CRUSTROCK = _null();
 
     public static final Crustrock CRUSTROCK_COMPACT_ONYX = _null();
     public static final Crustrock CRUSTROCK_COMPACT_MAJORITE = _null();
@@ -526,6 +524,7 @@ public class ModBlocks {
     public static final Mantlerock MANTLEROCK_ALUMINIUM = _null();
     public static final Mantlerock MANTLEROCK_SILICON = _null();
     public static final Mantlerock MANTLEROCK_COAL = _null();
+    public static final Mantlerock MANTLEROCK = _null();
 
     public static final Mantlerock MANTLEROCK_COMPACT_ONYX = _null();
     public static final Mantlerock MANTLEROCK_COMPACT_MAJORITE = _null();
@@ -636,6 +635,7 @@ public class ModBlocks {
     public static final Corerock CORESTONE_TOPAZ = _null();
     public static final Corerock CORESTONE_REDSTONE = _null();
     public static final Corerock CORESTONE_LAPIS = _null();
+    public static final Corerock CORESTONE = _null();
 
     public static final Corerock CORESTONE_COMPACT_ONYX = _null();
     public static final Corerock CORESTONE_COMPACT_MAJORITE = _null();
@@ -672,13 +672,6 @@ public class ModBlocks {
     // GENERATED END
 
     public static final Block STEEL_BLOCK = _null();
-    public static final Block HARDROCK = _null();
-    public static final Block DEEPROCK = _null();
-    public static final Block CRUSTROCK = _null();
-    public static final Block MANTLEROCK = _null();
-    public static final Block CORESTONE = _null();
-    public static final Block INNERCORESTONE = _null();
-    public static final Block CENTERCORESTONE = _null();
 
     //SEDIMENTARY ROCK
 
@@ -689,14 +682,12 @@ public class ModBlocks {
     public static List<Block> AllCoreBlocks = new ArrayList<>();
 
 
-
     public static void register(IForgeRegistry<Block> registry) {
 
         boolean generateHolders = System.getProperty("planetcore.generate_holders", "false").equalsIgnoreCase("true");
 
 
-
-        StringBuilder holderGenString = generateHolders ? new StringBuilder(64*1024) : null;
+        StringBuilder holderGenString = generateHolders ? new StringBuilder(64 * 1024) : null;
 
         for (ModBlocks.OreForm oreForm : ModBlocks.OreForm.values()) {
 
@@ -713,14 +704,6 @@ public class ModBlocks {
 
                     block.setResistance((float) (ore.getOreResistance() + (oreForm.getBaseResistance())));
 
-                    if (generateHolders) {
-
-                        holderGenString.append("public static final ").append(block.getClass().getSimpleName())
-
-                                .append(" ").append(block.getRegistryName().getPath().toUpperCase(Locale.ROOT)).append(" = _null();\n");
-
-                    }
-
                     registry.register(block);
                     if (oreForm == ModBlocks.OreForm.CRUSTROCK_VERYSMALL || oreForm == ModBlocks.OreForm.CRUSTROCK_SMALL || oreForm == ModBlocks.OreForm.CRUSTROCK
                             || oreForm == ModBlocks.OreForm.CRUSTROCK_COMPACT || oreForm == ModBlocks.OreForm.CRUSTROCK_VERYCOMPACT) {
@@ -734,9 +717,35 @@ public class ModBlocks {
                             || oreForm == ModBlocks.OreForm.CORESTONE_COMPACT || oreForm == ModBlocks.OreForm.CORESTONE_VERYCOMPACT) {
                         AllCoreBlocks.add(block);
                     }
+                    if (generateHolders) {
+                        holderGenString.append("public static final ").append(block.getClass().getSimpleName())
+                                .append(" ").append(block.getRegistryName().getPath().toUpperCase(Locale.ROOT)).append(" = _null();\n");
+                    }
                 }
 
             }
+            if (oreForm == OreForm.CRUSTROCK || oreForm == OreForm.MANTLEROCK || oreForm == OreForm.CORESTONE) {
+                String registryName;
+                registryName = oreForm.name().toLowerCase(Locale.ROOT);
+                Block block = oreForm.makeBlock(registryName);
+                block.setHardness((float) oreForm.getBaseHardness());
+                block.setResistance((float) oreForm.getBaseResistance());
+                registry.register(block);
+                if (oreForm == OreForm.CRUSTROCK) {
+                    AllCrustBlocks.add(block);
+                }
+                if (oreForm == OreForm.MANTLEROCK) {
+                    AllMantleBlocks.add(block);
+                }
+                if (oreForm == OreForm.CORESTONE) {
+                    AllCoreBlocks.add(block);
+                }
+                if (generateHolders) {
+                    holderGenString.append("public static final ").append(block.getClass().getSimpleName())
+                            .append(" ").append(block.getRegistryName().getPath().toUpperCase(Locale.ROOT)).append(" = _null();\n");
+                }
+            }
+
             if (generateHolders) holderGenString.append("\n");
         }
 
@@ -762,8 +771,6 @@ public class ModBlocks {
                 new BlocksBase("diamond_block", Material.ROCK).setResistance(500),
                 new BlocksBase("amazonite_block", Material.ROCK).setResistance(500),
                 new BlocksBase("onyx_block", Material.ROCK).setResistance(500),
-                new Mantlerock("mantlerock", Material.ROCK),
-                new Corerock("corestone", Material.ROCK).setHardness(2128.8F),
                 new OreBase("limestone", Material.ROCK)
         );
     }
@@ -772,41 +779,48 @@ public class ModBlocks {
 
         for (Block block : AllCrustBlocks) {
             for (int meta = 0; meta < 3; meta++) {
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
-                        new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName(), "inventory"));
-
-                String name = block.getRegistryName().toString();
-                String removeRocktype = name.replace("crustrock_", "");
-                String ore = removeRocktype.replace("planetcore:", "");
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
-                        new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
+                if (block == ModBlocks.CRUSTROCK) {
+                    ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+                            new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName(), "inventory"));
+                }
+                else {
+                    String name = block.getRegistryName().toString();
+                    String removeRocktype = name.replace("crustrock_", "");
+                    String ore = removeRocktype.replace("planetcore:", "");
+                    ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+                            new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
+                }
             }
         }
         for (Block block : AllMantleBlocks) {
             for (int meta = 0; meta < 16; meta++) {
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
-                        new ModelResourceLocation(Reference.MOD_ID + ":" + Mantlerock.EnumType.values()[meta].getName(), "inventory"));
-
-                String name = block.getRegistryName().toString();
-                String removeRocktype = name.replace("mantlerock_","");
-                String ore = removeRocktype.replace("planetcore:","");
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
-                        new ModelResourceLocation(Reference.MOD_ID + ":" + Mantlerock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
+                if (block == ModBlocks.MANTLEROCK) {
+                    ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+                            new ModelResourceLocation(Reference.MOD_ID + ":" + Mantlerock.EnumType.values()[meta].getName(), "inventory"));
+                }
+                else {
+                    String name = block.getRegistryName().toString();
+                    String removeRocktype = name.replace("mantlerock_", "");
+                    String ore = removeRocktype.replace("planetcore:", "");
+                    ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+                            new ModelResourceLocation(Reference.MOD_ID + ":" + Mantlerock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
+                }
             }
         }
         for (Block block : AllCoreBlocks) {
             for (int meta = 0; meta < 3; meta++) {
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
-                        new ModelResourceLocation(Reference.MOD_ID + ":" + Corerock.EnumType.values()[meta].getName(), "inventory"));
-
-                String name = block.getRegistryName().toString();
-                String removeRocktype = name.replace("corestone_","");
-                String ore = removeRocktype.replace("planetcore:","");
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
-                        new ModelResourceLocation(Reference.MOD_ID + ":" + Corerock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
+                if (block == ModBlocks.CORESTONE) {
+                    ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+                            new ModelResourceLocation(Reference.MOD_ID + ":" + Corerock.EnumType.values()[meta].getName(), "inventory"));
+                }
+                else {
+                    String name = block.getRegistryName().toString();
+                    String removeRocktype = name.replace("corestone_", "");
+                    String ore = removeRocktype.replace("planetcore:", "");
+                    ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+                            new ModelResourceLocation(Reference.MOD_ID + ":" + Corerock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
+                }
             }
         }
     }
-
-
 }

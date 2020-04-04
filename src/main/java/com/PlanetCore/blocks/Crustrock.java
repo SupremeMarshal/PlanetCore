@@ -4,6 +4,8 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.init.ModItems;
+import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -42,6 +44,11 @@ public class Crustrock extends BlockBase implements IMetaName
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 
+	}
+
+	@Override
+	void addItemBlock() {
+		ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
 	}
 
 	@Override
@@ -87,19 +94,14 @@ public class Crustrock extends BlockBase implements IMetaName
 		DEEPROCK(1, "deeprock"),
 		CRUSTROCK(2, "crustrock");
 
-		private static final Crustrock.EnumType[] META_LOOKUP = new Crustrock.EnumType[values().length];
+		private static final Crustrock.EnumType[] META_LOOKUP = new Crustrock.EnumType[]{HARDROCK,DEEPROCK,CRUSTROCK};
 		private final int meta;
-		private final String name, unlocalizedName;
+		private final String name;
 
 		private EnumType(int meta, String name)
 		{
-			this(meta, name, name);
-		}
-
-		private EnumType(int meta, String name, String unlocalizedName) {
-			this.meta = meta;
-			this.name = name;
-			this.unlocalizedName = unlocalizedName;
+			this.meta=meta;
+			this.name=name;
 		}
 
 		@Override
@@ -110,11 +112,6 @@ public class Crustrock extends BlockBase implements IMetaName
 		public int getMeta()
 		{
 			return this.meta;
-		}
-
-		public String getUnlocalizedName()
-		{
-			return this.unlocalizedName;
 		}
 
 		@Override
@@ -134,7 +131,6 @@ public class Crustrock extends BlockBase implements IMetaName
 				META_LOOKUP[crustrock$enumtype.getMeta()] = crustrock$enumtype;
 			}
 		}
-
 	}
 
 	@Override

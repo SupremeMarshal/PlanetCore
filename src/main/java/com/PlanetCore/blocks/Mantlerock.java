@@ -4,6 +4,8 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.init.ModItems;
+import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -50,6 +52,11 @@ public class Mantlerock extends BlockBase implements IMetaName
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 
+	}
+
+	@Override
+	void addItemBlock() {
+		ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
 	}
 
 	@Override
@@ -123,19 +130,15 @@ public class Mantlerock extends BlockBase implements IMetaName
 
 		LOWER_MANTLEROCK6(15, "lower_mantlerock6");
 
-		private static final Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[values().length];
+		private static final 	Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[]{MANTLEROCK, MANTLEROCK1, MANTLEROCK2, MANTLEROCK3, MANTLEROCK4, MANTLEROCK5, MANTLEROCK6,
+		MANTLEROCK7, MANTLEROCK8, LOWER_MANTLEROCK, LOWER_MANTLEROCK1, LOWER_MANTLEROCK2, LOWER_MANTLEROCK3, LOWER_MANTLEROCK4, LOWER_MANTLEROCK5, LOWER_MANTLEROCK6};
 		private final int meta;
-		private final String name, unlocalizedName;
+		private final String name;
 
 		private EnumType(int meta, String name)
 		{
-			this(meta, name, name);
-		}
-
-		private EnumType(int meta, String name, String unlocalizedName) {
-			this.meta = meta;
-			this.name = name;
-			this.unlocalizedName = unlocalizedName;
+			this.meta=meta;
+			this.name=name;
 		}
 
 		@Override
@@ -146,11 +149,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 		public int getMeta()
 		{
 			return this.meta;
-		}
-
-		public String getUnlocalizedName()
-		{
-			return this.unlocalizedName;
 		}
 
 		@Override
@@ -170,7 +168,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 				META_LOOKUP[mantlerock$enumtype.getMeta()] = mantlerock$enumtype;
 			}
 		}
-
 	}
 
 	@Override
