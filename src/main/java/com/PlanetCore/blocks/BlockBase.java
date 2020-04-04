@@ -4,7 +4,6 @@ package com.PlanetCore.blocks;
 import com.PlanetCore.Main;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
-import com.PlanetCore.util.IHasModel;
 import com.google.common.base.Predicate;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
@@ -24,23 +23,19 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.fml.common.eventhandler.Cancelable;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.Random;
 
 
-public class BlockBase extends Block implements IHasModel {
+public class BlockBase extends Block {
 	private BlockPattern snowmanPattern;
 	private BlockPattern golemBasePattern;
 	private BlockPattern golemPattern;
@@ -162,12 +157,6 @@ public class BlockBase extends Block implements IHasModel {
 		
 	}
 
-
-	@Override
-	public void registerModels() 
-	{
-		Main.proxy.registerModel(Item.getItemFromBlock(this), 0);
-	}
 
 
 	@Override

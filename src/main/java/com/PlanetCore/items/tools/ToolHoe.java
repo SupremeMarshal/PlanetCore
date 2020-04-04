@@ -2,7 +2,6 @@ package com.PlanetCore.items.tools;
 
 import com.PlanetCore.Main;
 import com.PlanetCore.init.ModItems;
-import com.PlanetCore.util.IHasModel;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,7 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ToolHoe extends ItemHoe implements IHasModel {
+public class ToolHoe extends ItemHoe  {
 	public ToolHoe(String name, ToolMaterial material)
 	{
 		super(material);
@@ -26,12 +25,7 @@ public class ToolHoe extends ItemHoe implements IHasModel {
 		
 		ModItems.ITEMS.add(this);
 	}
-	
-	@Override
-	public void registerModels() 
-	{
-		Main.proxy.registerModel(this, 0);
-	}
+
 
 	@SideOnly(Side.CLIENT)
 	@Override

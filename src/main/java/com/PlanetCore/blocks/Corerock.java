@@ -127,9 +127,9 @@ public class Corerock extends BlockBase implements IMetaName {
 			return this.name;
 		}
 
-		public static Corerock.EnumType byMetadata(int meta1)
+		public static Corerock.EnumType byMetadata(int meta)
 		{
-			return META_LOOKUP[meta1];
+			return META_LOOKUP[meta];
 		}
 
 		static {

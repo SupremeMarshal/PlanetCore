@@ -679,6 +679,7 @@ public class ModBlocks {
 
     public static List<Block> AllCrustBlocks = new ArrayList<>();
     public static List<Block> AllMantleBlocks = new ArrayList<>();
+    public static List<Block> AllMantleBlocks1 = new ArrayList<>();
     public static List<Block> AllCoreBlocks = new ArrayList<>();
 
 
@@ -728,6 +729,7 @@ public class ModBlocks {
                 String registryName;
                 registryName = oreForm.name().toLowerCase(Locale.ROOT);
                 Block block = oreForm.makeBlock(registryName);
+                System.out.println(block.getRegistryName());
                 block.setHardness((float) oreForm.getBaseHardness());
                 block.setResistance((float) oreForm.getBaseResistance());
                 registry.register(block);
@@ -736,6 +738,7 @@ public class ModBlocks {
                 }
                 if (oreForm == OreForm.MANTLEROCK) {
                     AllMantleBlocks.add(block);
+                    AllMantleBlocks1.add(block);
                 }
                 if (oreForm == OreForm.CORESTONE) {
                     AllCoreBlocks.add(block);
@@ -776,14 +779,17 @@ public class ModBlocks {
     }
 
     public static void registerRenders() {
-
+        System.out.println(AllMantleBlocks1);
         for (Block block : AllCrustBlocks) {
             for (int meta = 0; meta < 3; meta++) {
+                /*
                 if (block == ModBlocks.CRUSTROCK) {
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName(), "inventory"));
                 }
-                else {
+
+                 */
+                if (block != ModBlocks.CRUSTROCK){
                     String name = block.getRegistryName().toString();
                     String removeRocktype = name.replace("crustrock_", "");
                     String ore = removeRocktype.replace("planetcore:", "");
@@ -794,11 +800,14 @@ public class ModBlocks {
         }
         for (Block block : AllMantleBlocks) {
             for (int meta = 0; meta < 16; meta++) {
+                /*
                 if (block == ModBlocks.MANTLEROCK) {
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(Reference.MOD_ID + ":" + Mantlerock.EnumType.values()[meta].getName(), "inventory"));
                 }
-                else {
+
+                 */
+                if (block != ModBlocks.MANTLEROCK) {
                     String name = block.getRegistryName().toString();
                     String removeRocktype = name.replace("mantlerock_", "");
                     String ore = removeRocktype.replace("planetcore:", "");
@@ -809,11 +818,14 @@ public class ModBlocks {
         }
         for (Block block : AllCoreBlocks) {
             for (int meta = 0; meta < 3; meta++) {
+                /*
                 if (block == ModBlocks.CORESTONE) {
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(Reference.MOD_ID + ":" + Corerock.EnumType.values()[meta].getName(), "inventory"));
                 }
-                else {
+
+                 */
+                if (block != ModBlocks.CORESTONE) {
                     String name = block.getRegistryName().toString();
                     String removeRocktype = name.replace("corestone_", "");
                     String ore = removeRocktype.replace("planetcore:", "");

@@ -1,7 +1,6 @@
 package com.PlanetCore.items.shields;
 
 import com.PlanetCore.Main;
-import com.PlanetCore.util.IHasModel;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
@@ -25,7 +24,7 @@ import java.util.Map;
 import java.util.UUID;
 
 
-public class EmeraldShield extends ShieldBase implements IHasModel {
+public class EmeraldShield extends ShieldBase  {
 
 
     /**
@@ -71,10 +70,7 @@ public class EmeraldShield extends ShieldBase implements IHasModel {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(this.getRegistryName(), "inventory"));
     }
 
-    @Override
-    public void registerModels() {
-        Main.proxy.registerModel(this, 0);
-    }
+
 
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {

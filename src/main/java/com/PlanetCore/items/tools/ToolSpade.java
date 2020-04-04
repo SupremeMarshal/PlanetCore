@@ -2,7 +2,6 @@ package com.PlanetCore.items.tools;
 
 import com.PlanetCore.Main;
 import com.PlanetCore.init.ModItems;
-import com.PlanetCore.util.IHasModel;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,7 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ToolSpade extends ItemSpade implements IHasModel 
+public class ToolSpade extends ItemSpade
 {
 	public ToolSpade(String name, ToolMaterial material)
 	{
@@ -27,12 +26,7 @@ public class ToolSpade extends ItemSpade implements IHasModel
 		
 		ModItems.ITEMS.add(this);
 	}
-	
-	@Override
-	public void registerModels() 
-	{
-		Main.proxy.registerModel(this, 0);
-	}
+
 
 	@SideOnly(Side.CLIENT)
 	@Override

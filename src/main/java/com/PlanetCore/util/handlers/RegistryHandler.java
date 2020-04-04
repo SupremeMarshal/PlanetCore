@@ -2,13 +2,10 @@ package com.PlanetCore.util.handlers;
 
 
 
-import com.PlanetCore.capability.IUserSettings;
-import com.PlanetCore.capability.UserSettings;
-import com.PlanetCore.capability.UserSettingsStorage;
 import com.PlanetCore.init.*;
-import com.PlanetCore.util.IHasModel;
 import com.PlanetCore.util.ModConfiguration;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -17,8 +14,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -27,7 +24,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 
-
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 
 
@@ -52,21 +49,11 @@ public class RegistryHandler {
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event)
 	{
-		for (Item item : ModItems.ITEMS)
-		{
-			if(item instanceof IHasModel)
-			{
-				((IHasModel)item).registerModels();
-			}
-		}
-		
-		for (Block block : ModBlocks.BLOCKS)
-		{
-			if(block instanceof IHasModel)
-			{
-				((IHasModel)block).registerModels();
-			}
-		}
+		ForgeRegistries.ITEMS.getValues().stream()
+				.filter(item -> "planetcore".equals(item.getRegistryName().getNamespace())).forEach(item -> {
+			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+		});
+
 		RenderHandler.registerEntityRenders();
 		RenderHandler.registerCustomMeshesAndStates();
 		ModBlocks.registerRenders();

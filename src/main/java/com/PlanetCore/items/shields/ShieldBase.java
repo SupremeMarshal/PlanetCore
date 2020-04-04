@@ -2,7 +2,6 @@ package com.PlanetCore.items.shields;
 
 import com.PlanetCore.Main;
 import com.PlanetCore.init.ModItems;
-import com.PlanetCore.util.IHasModel;
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -19,7 +18,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 
 
-public class ShieldBase extends ItemShield implements IHasModel
+public class ShieldBase extends ItemShield
 
          {
 
@@ -46,11 +45,7 @@ public class ShieldBase extends ItemShield implements IHasModel
              }
 
 
-             @Override
-             public void registerModels()
-             {
-                 Main.proxy.registerModel(this, 0);
-             }
+
 
 
              public static boolean isUsable(ItemStack stack) {

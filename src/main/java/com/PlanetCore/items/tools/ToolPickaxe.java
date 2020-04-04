@@ -2,16 +2,11 @@ package com.PlanetCore.items.tools;
 
 import com.PlanetCore.Main;
 import com.PlanetCore.init.ModItems;
-import com.PlanetCore.util.IHasModel;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.IItemPropertyGetter;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -19,7 +14,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ToolPickaxe extends ItemPickaxe implements IHasModel {
+public class ToolPickaxe extends ItemPickaxe  {
 	public ToolPickaxe(String name, ToolMaterial material)
 	{
 		super(material);
@@ -29,12 +24,6 @@ public class ToolPickaxe extends ItemPickaxe implements IHasModel {
 		
 		ModItems.ITEMS.add(this);
 
-	}
-	
-	@Override
-	public void registerModels() 
-	{
-		Main.proxy.registerModel(this, 0);
 	}
 
 
