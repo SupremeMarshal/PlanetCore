@@ -111,7 +111,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 					IBlockState state2 = worldIn.getBlockState(pos.add(x, y, z));
 					Block block = state2.getBlock();
 					if(state2.getMaterial()==Material.ROCK || state2.getMaterial()==Material.GROUND || state2.getMaterial()==Material.GRASS
-							&& !(block instanceof Corerock) && block!=Blocks.BEDROCK && block!=ModBlocks.COLD_CORESTONE)
+							&& !(block instanceof Corerock) && block!=Blocks.BEDROCK /*&& block!=ModBlocks.COLD_CORESTONE*/)
 					{
 						worldIn.setBlockState(new BlockPos(x, y, z), Blocks.LAVA.getDefaultState());
 					}

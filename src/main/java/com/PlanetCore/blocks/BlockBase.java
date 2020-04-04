@@ -61,12 +61,15 @@ public class BlockBase extends Block implements IHasModel {
 		setSoundType(SoundType.METAL);
 	}
 
-	Random rand = new Random();
-
+	/*
+	Pressure effect
+	The deeper it is, the more pressure effect will apply.
+	The pressure cause the natural generating blocks to spawn more blocks until there is no more places left to spawn blocks.
+	 */
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		float PressureLevel = (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
-		if (pos.getY() < 0 && Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof GemBase) && !(this instanceof CoreRockGemBase) && !(this instanceof BlocksBase)) {
+		if (pos.getY() < 0 && Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof OreBase) && !(this instanceof Corerock) && !(this instanceof BlocksBase)) {
 			for (EnumFacing side : EnumFacing.values()) {
 				BlockPos movedPos = pos.offset(side);
 				IBlockState movedState = worldIn.getBlockState(movedPos);
@@ -88,9 +91,10 @@ public class BlockBase extends Block implements IHasModel {
 
 
 
-	//Earthquake event
-//Upon destroying the block, by a player or by explosion, the surrounding area for the player have a chance to crumble.
-//How this event should work: No description
+	/*
+	The unstable effect cause the blocks to fall around you when destroying blocks.
+	I will change it to make it happen more often above a certain Y level and only decrease the further down you go.
+	 */
 	public static void unstable(World worldIn, BlockPos pos, IBlockState state) {
 		int x;
 		int y;

@@ -2,10 +2,15 @@ package com.PlanetCore.blocks;
 
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
+import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,10 +23,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.*;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -31,7 +35,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
-public class Corerock extends BlockBase {
+public class Corerock extends BlockBase implements IMetaName {
+
+	public static final PropertyEnum<Corerock.EnumType> VARIANT = PropertyEnum.<Corerock.EnumType>create("variant", Corerock.EnumType.class);
 
 	public Corerock(String name, Material material) {
 		super(name, material);
@@ -45,13 +51,110 @@ public class Corerock extends BlockBase {
 
 	}
 
+	@Override
+	public int damageDropped(IBlockState state)
+	{
+		return ((Corerock.EnumType)state.getValue(VARIANT)).getMeta();
+	}
+
+	@Override
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
+		for (Corerock.EnumType corerock$enumtype : Corerock.EnumType.values()) {
+			items.add(new ItemStack(this, 1, corerock$enumtype.getMeta()));
+		}
+	}
+
+	@Override
+	public IBlockState getStateFromMeta(int meta)
+	{
+		return this.getDefaultState().withProperty(VARIANT, Corerock.EnumType.byMetadata(meta));
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state)
+	{
+		return ((Corerock.EnumType)state.getValue(VARIANT)).getMeta();
+	}
+
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+		return new ItemStack(Item.getItemFromBlock(this),1,(int)(getMetaFromState(world.getBlockState(pos))));
+	}
+
+	@Override
+	protected BlockStateContainer createBlockState()
+	{
+		return new BlockStateContainer(this, new IProperty[] {VARIANT});
+	}
+
+
+	public static enum EnumType implements IStringSerializable
+	{
+		CORE(0, "corestone"),
+		INNERCORE(1, "innercorestone"),
+		CENTERCORE(2, "centercorestone");
+
+		private static final Corerock.EnumType[] META_LOOKUP = new Corerock.EnumType[values().length];
+		private final int meta;
+		private final String name, unlocalizedName;
+
+		private EnumType(int meta, String name)
+		{
+			this(meta, name, name);
+		}
+
+		private EnumType(int meta, String name, String unlocalizedName) {
+			this.meta = meta;
+			this.name = name;
+			this.unlocalizedName = unlocalizedName;
+		}
+
+		@Override
+		public String getName() {
+			return this.name;
+		}
+
+		public int getMeta()
+		{
+			return this.meta;
+		}
+
+		public String getUnlocalizedName()
+		{
+			return this.unlocalizedName;
+		}
+
+		@Override
+		public String toString()
+		{
+			return this.name;
+		}
+
+		public static Corerock.EnumType byMetadata(int meta)
+		{
+			return META_LOOKUP[meta];
+		}
+
+		static {
+			for(Corerock.EnumType corerock$enumtype : values())
+			{
+				META_LOOKUP[corerock$enumtype.getMeta()] = corerock$enumtype;
+			}
+		}
+
+	}
+
+	@Override
+	public String getSpecialName(ItemStack stack)
+	{
+		return Corerock.EnumType.values()[stack.getItemDamage()].getName();
+	}
 
 	@Override
 	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		Block block = this;
 		if (!world.isRemote) {
 			for (int i = 0; i < 4; i++) {
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
@@ -60,6 +163,8 @@ public class Corerock extends BlockBase {
 		return super.removedByPlayer(state, world, pos, entity, willHarvest);
 	}
 }
+
+
 
 	/*@Override
 	public Item getItemDropped(IBlockState state, Random random, int l)

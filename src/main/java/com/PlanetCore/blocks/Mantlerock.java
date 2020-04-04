@@ -92,20 +92,35 @@ public class Mantlerock extends BlockBase implements IMetaName
 	public static enum EnumType implements IStringSerializable
 	{
 		MANTLEROCK(0, "mantlerock"),
+
 		MANTLEROCK1(1, "mantlerock1"),
+
 		MANTLEROCK2(2, "mantlerock2"),
+
 		MANTLEROCK3(3, "mantlerock3"),
+
 		MANTLEROCK4(4, "mantlerock4"),
+
 		MANTLEROCK5(5, "mantlerock5"),
+
 		MANTLEROCK6(6, "mantlerock6"),
+
 		MANTLEROCK7(7, "mantlerock7"),
+
 		MANTLEROCK8(8, "mantlerock8"),
+
 		LOWER_MANTLEROCK(9, "lower_mantlerock"),
+
 		LOWER_MANTLEROCK1(10, "lower_mantlerock1"),
+
 		LOWER_MANTLEROCK2(11, "lower_mantlerock2"),
+
 		LOWER_MANTLEROCK3(12, "lower_mantlerock3"),
+
 		LOWER_MANTLEROCK4(13, "lower_mantlerock4"),
+
 		LOWER_MANTLEROCK5(14, "lower_mantlerock5"),
+
 		LOWER_MANTLEROCK6(15, "lower_mantlerock6");
 
 		private static final Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[values().length];

@@ -1,5 +1,4 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:crustrock" }
-    }
-}
+{"variants":{
+    "variant=hardrock":{"model":"planetcore:hardrock"},
+    "variant=deeprock":{"model":"planetcore:deeprock"},
+    "variant=crustrock":{"model":"planetcore:crustrock"}}}
