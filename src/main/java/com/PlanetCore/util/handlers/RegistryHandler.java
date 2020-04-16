@@ -49,10 +49,13 @@ public class RegistryHandler {
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event)
 	{
+		/*
 		ForgeRegistries.ITEMS.getValues().stream()
 				.filter(item -> "planetcore".equals(item.getRegistryName().getNamespace())).forEach(item -> {
 			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 		});
+
+		 */
 
 		RenderHandler.registerEntityRenders();
 		RenderHandler.registerCustomMeshesAndStates();

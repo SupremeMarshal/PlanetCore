@@ -152,7 +152,11 @@ public class ModBlocks {
     Crust have 3 meta. Mantle use 16 meta. Core use 3 meta (will add more meta later for core).
      */
     public enum OreForm {
+        ORE_VERYSMALL(0.0F, 0.0F, id -> new OreBase(id, Material.ROCK)),
+        ORE_SMALL(0.5F, 0.5F, id -> new OreBase(id, Material.ROCK)),
         ORE(1.0F, 1.0F, id -> new OreBase(id, Material.ROCK)),
+        ORE_COMPACT(4.0F, 4.0F, id -> new OreBase(id, Material.ROCK)),
+        ORE_VERYCOMPACT(16.0F, 16.0F, id -> new OreBase(id, Material.ROCK)),
         CRUSTROCK_VERYSMALL(0.0F, 0.0F, id -> new Crustrock(id, Material.ROCK)),
         CRUSTROCK_SMALL(0.5F, 0.5F, id -> new Crustrock(id, Material.ROCK)),
         CRUSTROCK(1.0F, 1.0F, id -> new Crustrock(id, Material.ROCK)),
@@ -245,429 +249,13 @@ public class ModBlocks {
 
     // GENERATED BEGIN
 
-    public static final OreBase ORE_ONYX = _null();
-    public static final OreBase ORE_MAJORITE = _null();
-    public static final OreBase ORE_BRIGMANITE = _null();
-    public static final OreBase ORE_RINGWOODITE = _null();
-    public static final OreBase ORE_AMAZONITE = _null();
-    public static final OreBase ORE_DIAMOND = _null();
-    public static final OreBase ORE_SAPPHIRE = _null();
-    public static final OreBase ORE_WADSLEYITE = _null();
-    public static final OreBase ORE_RUBY = _null();
-    public static final OreBase ORE_TUNGSTEN = _null();
-    public static final OreBase ORE_EMERALD = _null();
-    public static final OreBase ORE_TITANIUM = _null();
-    public static final OreBase ORE_URANIUM = _null();
-    public static final OreBase ORE_PLATINUM = _null();
-    public static final OreBase ORE_OLIVINE = _null();
-    public static final OreBase ORE_JADE = _null();
-    public static final OreBase ORE_TOPAZ = _null();
-    public static final OreBase ORE_GOLD = _null();
-    public static final OreBase ORE_SILVER = _null();
-    public static final OreBase ORE_REDSTONE = _null();
-    public static final OreBase ORE_LAPIS = _null();
-    public static final OreBase ORE_SULFUR = _null();
-    public static final OreBase ORE_TIN = _null();
-    public static final OreBase ORE_COPPER = _null();
-    public static final OreBase ORE_IRON = _null();
-    public static final OreBase ORE_LEAD = _null();
-    public static final OreBase ORE_ZINC = _null();
-    public static final OreBase ORE_ALUMINIUM = _null();
-    public static final OreBase ORE_SILICON = _null();
-    public static final OreBase ORE_COAL = _null();
 
-    public static final Crustrock CRUSTROCK_VERYSMALL_ONYX = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_MAJORITE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_BRIGMANITE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_RINGWOODITE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_AMAZONITE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_DIAMOND = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_SAPPHIRE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_WADSLEYITE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_RUBY = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_TUNGSTEN = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_EMERALD = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_TITANIUM = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_URANIUM = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_PLATINUM = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_OLIVINE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_JADE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_TOPAZ = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_GOLD = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_SILVER = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_REDSTONE = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_LAPIS = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_SULFUR = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_TIN = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_COPPER = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_IRON = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_LEAD = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_ZINC = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_ALUMINIUM = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_SILICON = _null();
-    public static final Crustrock CRUSTROCK_VERYSMALL_COAL = _null();
-
-    public static final Crustrock CRUSTROCK_SMALL_ONYX = _null();
-    public static final Crustrock CRUSTROCK_SMALL_MAJORITE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_BRIGMANITE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_RINGWOODITE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_AMAZONITE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_DIAMOND = _null();
-    public static final Crustrock CRUSTROCK_SMALL_SAPPHIRE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_WADSLEYITE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_RUBY = _null();
-    public static final Crustrock CRUSTROCK_SMALL_TUNGSTEN = _null();
-    public static final Crustrock CRUSTROCK_SMALL_EMERALD = _null();
-    public static final Crustrock CRUSTROCK_SMALL_TITANIUM = _null();
-    public static final Crustrock CRUSTROCK_SMALL_URANIUM = _null();
-    public static final Crustrock CRUSTROCK_SMALL_PLATINUM = _null();
-    public static final Crustrock CRUSTROCK_SMALL_OLIVINE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_JADE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_TOPAZ = _null();
-    public static final Crustrock CRUSTROCK_SMALL_GOLD = _null();
-    public static final Crustrock CRUSTROCK_SMALL_SILVER = _null();
-    public static final Crustrock CRUSTROCK_SMALL_REDSTONE = _null();
-    public static final Crustrock CRUSTROCK_SMALL_LAPIS = _null();
-    public static final Crustrock CRUSTROCK_SMALL_SULFUR = _null();
-    public static final Crustrock CRUSTROCK_SMALL_TIN = _null();
-    public static final Crustrock CRUSTROCK_SMALL_COPPER = _null();
-    public static final Crustrock CRUSTROCK_SMALL_IRON = _null();
-    public static final Crustrock CRUSTROCK_SMALL_LEAD = _null();
-    public static final Crustrock CRUSTROCK_SMALL_ZINC = _null();
-    public static final Crustrock CRUSTROCK_SMALL_ALUMINIUM = _null();
-    public static final Crustrock CRUSTROCK_SMALL_SILICON = _null();
-    public static final Crustrock CRUSTROCK_SMALL_COAL = _null();
-
-    public static final Crustrock CRUSTROCK_ONYX = _null();
-    public static final Crustrock CRUSTROCK_MAJORITE = _null();
-    public static final Crustrock CRUSTROCK_BRIGMANITE = _null();
-    public static final Crustrock CRUSTROCK_RINGWOODITE = _null();
-    public static final Crustrock CRUSTROCK_AMAZONITE = _null();
-    public static final Crustrock CRUSTROCK_DIAMOND = _null();
-    public static final Crustrock CRUSTROCK_SAPPHIRE = _null();
-    public static final Crustrock CRUSTROCK_WADSLEYITE = _null();
-    public static final Crustrock CRUSTROCK_RUBY = _null();
-    public static final Crustrock CRUSTROCK_TUNGSTEN = _null();
-    public static final Crustrock CRUSTROCK_EMERALD = _null();
-    public static final Crustrock CRUSTROCK_TITANIUM = _null();
-    public static final Crustrock CRUSTROCK_URANIUM = _null();
-    public static final Crustrock CRUSTROCK_PLATINUM = _null();
-    public static final Crustrock CRUSTROCK_OLIVINE = _null();
-    public static final Crustrock CRUSTROCK_JADE = _null();
-    public static final Crustrock CRUSTROCK_TOPAZ = _null();
-    public static final Crustrock CRUSTROCK_GOLD = _null();
-    public static final Crustrock CRUSTROCK_SILVER = _null();
-    public static final Crustrock CRUSTROCK_REDSTONE = _null();
-    public static final Crustrock CRUSTROCK_LAPIS = _null();
-    public static final Crustrock CRUSTROCK_SULFUR = _null();
-    public static final Crustrock CRUSTROCK_TIN = _null();
-    public static final Crustrock CRUSTROCK_COPPER = _null();
-    public static final Crustrock CRUSTROCK_IRON = _null();
-    public static final Crustrock CRUSTROCK_LEAD = _null();
-    public static final Crustrock CRUSTROCK_ZINC = _null();
-    public static final Crustrock CRUSTROCK_ALUMINIUM = _null();
-    public static final Crustrock CRUSTROCK_SILICON = _null();
-    public static final Crustrock CRUSTROCK_COAL = _null();
     public static final Crustrock CRUSTROCK = _null();
 
-    public static final Crustrock CRUSTROCK_COMPACT_ONYX = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_MAJORITE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_BRIGMANITE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_RINGWOODITE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_AMAZONITE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_DIAMOND = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_SAPPHIRE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_WADSLEYITE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_RUBY = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_TUNGSTEN = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_EMERALD = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_TITANIUM = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_URANIUM = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_PLATINUM = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_OLIVINE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_JADE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_TOPAZ = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_GOLD = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_SILVER = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_REDSTONE = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_LAPIS = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_SULFUR = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_TIN = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_COPPER = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_IRON = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_LEAD = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_ZINC = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_ALUMINIUM = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_SILICON = _null();
-    public static final Crustrock CRUSTROCK_COMPACT_COAL = _null();
-
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_ONYX = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_MAJORITE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_BRIGMANITE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_RINGWOODITE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_AMAZONITE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_DIAMOND = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_SAPPHIRE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_WADSLEYITE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_RUBY = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_TUNGSTEN = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_EMERALD = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_TITANIUM = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_URANIUM = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_PLATINUM = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_OLIVINE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_JADE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_TOPAZ = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_GOLD = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_SILVER = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_REDSTONE = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_LAPIS = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_SULFUR = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_TIN = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_COPPER = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_IRON = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_LEAD = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_ZINC = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_ALUMINIUM = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_SILICON = _null();
-    public static final Crustrock CRUSTROCK_VERYCOMPACT_COAL = _null();
-
-    public static final Mantlerock MANTLEROCK_VERYSMALL_ONYX = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_MAJORITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_BRIGMANITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_RINGWOODITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_AMAZONITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_DIAMOND = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_SAPPHIRE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_WADSLEYITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_RUBY = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_TUNGSTEN = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_EMERALD = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_TITANIUM = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_URANIUM = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_PLATINUM = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_OLIVINE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_JADE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_TOPAZ = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_GOLD = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_SILVER = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_REDSTONE = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_LAPIS = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_SULFUR = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_TIN = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_COPPER = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_IRON = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_LEAD = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_ZINC = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_ALUMINIUM = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_SILICON = _null();
-    public static final Mantlerock MANTLEROCK_VERYSMALL_COAL = _null();
-
-    public static final Mantlerock MANTLEROCK_SMALL_ONYX = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_MAJORITE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_BRIGMANITE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_RINGWOODITE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_AMAZONITE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_DIAMOND = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_SAPPHIRE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_WADSLEYITE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_RUBY = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_TUNGSTEN = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_EMERALD = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_TITANIUM = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_URANIUM = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_PLATINUM = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_OLIVINE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_JADE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_TOPAZ = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_GOLD = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_SILVER = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_REDSTONE = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_LAPIS = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_SULFUR = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_TIN = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_COPPER = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_IRON = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_LEAD = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_ZINC = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_ALUMINIUM = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_SILICON = _null();
-    public static final Mantlerock MANTLEROCK_SMALL_COAL = _null();
-
-    public static final Mantlerock MANTLEROCK_ONYX = _null();
-    public static final Mantlerock MANTLEROCK_MAJORITE = _null();
-    public static final Mantlerock MANTLEROCK_BRIGMANITE = _null();
-    public static final Mantlerock MANTLEROCK_RINGWOODITE = _null();
-    public static final Mantlerock MANTLEROCK_AMAZONITE = _null();
-    public static final Mantlerock MANTLEROCK_DIAMOND = _null();
-    public static final Mantlerock MANTLEROCK_SAPPHIRE = _null();
-    public static final Mantlerock MANTLEROCK_WADSLEYITE = _null();
-    public static final Mantlerock MANTLEROCK_RUBY = _null();
-    public static final Mantlerock MANTLEROCK_TUNGSTEN = _null();
-    public static final Mantlerock MANTLEROCK_EMERALD = _null();
-    public static final Mantlerock MANTLEROCK_TITANIUM = _null();
-    public static final Mantlerock MANTLEROCK_URANIUM = _null();
-    public static final Mantlerock MANTLEROCK_PLATINUM = _null();
-    public static final Mantlerock MANTLEROCK_OLIVINE = _null();
-    public static final Mantlerock MANTLEROCK_JADE = _null();
-    public static final Mantlerock MANTLEROCK_TOPAZ = _null();
-    public static final Mantlerock MANTLEROCK_GOLD = _null();
-    public static final Mantlerock MANTLEROCK_SILVER = _null();
-    public static final Mantlerock MANTLEROCK_REDSTONE = _null();
-    public static final Mantlerock MANTLEROCK_LAPIS = _null();
-    public static final Mantlerock MANTLEROCK_SULFUR = _null();
-    public static final Mantlerock MANTLEROCK_TIN = _null();
-    public static final Mantlerock MANTLEROCK_COPPER = _null();
-    public static final Mantlerock MANTLEROCK_IRON = _null();
-    public static final Mantlerock MANTLEROCK_LEAD = _null();
-    public static final Mantlerock MANTLEROCK_ZINC = _null();
-    public static final Mantlerock MANTLEROCK_ALUMINIUM = _null();
-    public static final Mantlerock MANTLEROCK_SILICON = _null();
-    public static final Mantlerock MANTLEROCK_COAL = _null();
     public static final Mantlerock MANTLEROCK = _null();
 
-    public static final Mantlerock MANTLEROCK_COMPACT_ONYX = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_MAJORITE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_BRIGMANITE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_RINGWOODITE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_AMAZONITE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_DIAMOND = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_SAPPHIRE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_WADSLEYITE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_RUBY = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_TUNGSTEN = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_EMERALD = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_TITANIUM = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_URANIUM = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_PLATINUM = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_OLIVINE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_JADE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_TOPAZ = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_GOLD = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_SILVER = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_REDSTONE = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_LAPIS = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_SULFUR = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_TIN = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_COPPER = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_IRON = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_LEAD = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_ZINC = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_ALUMINIUM = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_SILICON = _null();
-    public static final Mantlerock MANTLEROCK_COMPACT_COAL = _null();
-
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_ONYX = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_MAJORITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_BRIGMANITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_RINGWOODITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_AMAZONITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_DIAMOND = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_SAPPHIRE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_WADSLEYITE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_RUBY = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_TUNGSTEN = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_EMERALD = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_TITANIUM = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_URANIUM = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_PLATINUM = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_OLIVINE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_JADE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_TOPAZ = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_GOLD = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_SILVER = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_REDSTONE = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_LAPIS = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_SULFUR = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_TIN = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_COPPER = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_IRON = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_LEAD = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_ZINC = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_ALUMINIUM = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_SILICON = _null();
-    public static final Mantlerock MANTLEROCK_VERYCOMPACT_COAL = _null();
-
-    public static final Corerock CORESTONE_VERYSMALL_ONYX = _null();
-    public static final Corerock CORESTONE_VERYSMALL_MAJORITE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_BRIGMANITE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_RINGWOODITE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_AMAZONITE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_DIAMOND = _null();
-    public static final Corerock CORESTONE_VERYSMALL_SAPPHIRE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_WADSLEYITE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_RUBY = _null();
-    public static final Corerock CORESTONE_VERYSMALL_EMERALD = _null();
-    public static final Corerock CORESTONE_VERYSMALL_OLIVINE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_JADE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_TOPAZ = _null();
-    public static final Corerock CORESTONE_VERYSMALL_REDSTONE = _null();
-    public static final Corerock CORESTONE_VERYSMALL_LAPIS = _null();
-
-    public static final Corerock CORESTONE_SMALL_ONYX = _null();
-    public static final Corerock CORESTONE_SMALL_MAJORITE = _null();
-    public static final Corerock CORESTONE_SMALL_BRIGMANITE = _null();
-    public static final Corerock CORESTONE_SMALL_RINGWOODITE = _null();
-    public static final Corerock CORESTONE_SMALL_AMAZONITE = _null();
-    public static final Corerock CORESTONE_SMALL_DIAMOND = _null();
-    public static final Corerock CORESTONE_SMALL_SAPPHIRE = _null();
-    public static final Corerock CORESTONE_SMALL_WADSLEYITE = _null();
-    public static final Corerock CORESTONE_SMALL_RUBY = _null();
-    public static final Corerock CORESTONE_SMALL_EMERALD = _null();
-    public static final Corerock CORESTONE_SMALL_OLIVINE = _null();
-    public static final Corerock CORESTONE_SMALL_JADE = _null();
-    public static final Corerock CORESTONE_SMALL_TOPAZ = _null();
-    public static final Corerock CORESTONE_SMALL_REDSTONE = _null();
-    public static final Corerock CORESTONE_SMALL_LAPIS = _null();
-
-    public static final Corerock CORESTONE_ONYX = _null();
-    public static final Corerock CORESTONE_MAJORITE = _null();
-    public static final Corerock CORESTONE_BRIGMANITE = _null();
-    public static final Corerock CORESTONE_RINGWOODITE = _null();
-    public static final Corerock CORESTONE_AMAZONITE = _null();
-    public static final Corerock CORESTONE_DIAMOND = _null();
-    public static final Corerock CORESTONE_SAPPHIRE = _null();
-    public static final Corerock CORESTONE_WADSLEYITE = _null();
-    public static final Corerock CORESTONE_RUBY = _null();
-    public static final Corerock CORESTONE_EMERALD = _null();
-    public static final Corerock CORESTONE_OLIVINE = _null();
-    public static final Corerock CORESTONE_JADE = _null();
-    public static final Corerock CORESTONE_TOPAZ = _null();
-    public static final Corerock CORESTONE_REDSTONE = _null();
-    public static final Corerock CORESTONE_LAPIS = _null();
     public static final Corerock CORESTONE = _null();
 
-    public static final Corerock CORESTONE_COMPACT_ONYX = _null();
-    public static final Corerock CORESTONE_COMPACT_MAJORITE = _null();
-    public static final Corerock CORESTONE_COMPACT_BRIGMANITE = _null();
-    public static final Corerock CORESTONE_COMPACT_RINGWOODITE = _null();
-    public static final Corerock CORESTONE_COMPACT_AMAZONITE = _null();
-    public static final Corerock CORESTONE_COMPACT_DIAMOND = _null();
-    public static final Corerock CORESTONE_COMPACT_SAPPHIRE = _null();
-    public static final Corerock CORESTONE_COMPACT_WADSLEYITE = _null();
-    public static final Corerock CORESTONE_COMPACT_RUBY = _null();
-    public static final Corerock CORESTONE_COMPACT_EMERALD = _null();
-    public static final Corerock CORESTONE_COMPACT_OLIVINE = _null();
-    public static final Corerock CORESTONE_COMPACT_JADE = _null();
-    public static final Corerock CORESTONE_COMPACT_TOPAZ = _null();
-    public static final Corerock CORESTONE_COMPACT_REDSTONE = _null();
-    public static final Corerock CORESTONE_COMPACT_LAPIS = _null();
-
-    public static final Corerock CORESTONE_VERYCOMPACT_ONYX = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_MAJORITE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_BRIGMANITE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_RINGWOODITE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_AMAZONITE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_DIAMOND = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_SAPPHIRE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_WADSLEYITE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_RUBY = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_EMERALD = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_OLIVINE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_JADE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_TOPAZ = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_REDSTONE = _null();
-    public static final Corerock CORESTONE_VERYCOMPACT_LAPIS = _null();
 
     // GENERATED END
 
@@ -677,9 +265,9 @@ public class ModBlocks {
 
     public static final Block LIMESTONE = _null();
 
+    public static List<Block> AllOreBlocks = new ArrayList<>();
     public static List<Block> AllCrustBlocks = new ArrayList<>();
     public static List<Block> AllMantleBlocks = new ArrayList<>();
-    public static List<Block> AllMantleBlocks1 = new ArrayList<>();
     public static List<Block> AllCoreBlocks = new ArrayList<>();
 
 
@@ -688,6 +276,10 @@ public class ModBlocks {
         boolean generateHolders = System.getProperty("planetcore.generate_holders", "false").equalsIgnoreCase("true");
 
 
+        /*
+        Create a loop to get the coresponding blocks.
+        More info about it later.
+         */
         StringBuilder holderGenString = generateHolders ? new StringBuilder(64 * 1024) : null;
 
         for (ModBlocks.OreForm oreForm : ModBlocks.OreForm.values()) {
@@ -706,6 +298,10 @@ public class ModBlocks {
                     block.setResistance((float) (ore.getOreResistance() + (oreForm.getBaseResistance())));
 
                     registry.register(block);
+                    if (oreForm == ModBlocks.OreForm.ORE_VERYSMALL || oreForm == ModBlocks.OreForm.ORE_SMALL || oreForm == ModBlocks.OreForm.ORE
+                            || oreForm == ModBlocks.OreForm.ORE_COMPACT || oreForm == ModBlocks.OreForm.ORE_VERYCOMPACT) {
+                        AllOreBlocks.add(block);
+                    }
                     if (oreForm == ModBlocks.OreForm.CRUSTROCK_VERYSMALL || oreForm == ModBlocks.OreForm.CRUSTROCK_SMALL || oreForm == ModBlocks.OreForm.CRUSTROCK
                             || oreForm == ModBlocks.OreForm.CRUSTROCK_COMPACT || oreForm == ModBlocks.OreForm.CRUSTROCK_VERYCOMPACT) {
                         AllCrustBlocks.add(block);
@@ -738,7 +334,6 @@ public class ModBlocks {
                 }
                 if (oreForm == OreForm.MANTLEROCK) {
                     AllMantleBlocks.add(block);
-                    AllMantleBlocks1.add(block);
                 }
                 if (oreForm == OreForm.CORESTONE) {
                     AllCoreBlocks.add(block);
@@ -748,6 +343,8 @@ public class ModBlocks {
                             .append(" ").append(block.getRegistryName().getPath().toUpperCase(Locale.ROOT)).append(" = _null();\n");
                 }
             }
+
+
 
             if (generateHolders) holderGenString.append("\n");
         }
@@ -779,34 +376,38 @@ public class ModBlocks {
     }
 
     public static void registerRenders() {
-        System.out.println(AllMantleBlocks1);
+
+
+        for (Block block : AllOreBlocks) {
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
+        }
+
         for (Block block : AllCrustBlocks) {
             for (int meta = 0; meta < 3; meta++) {
-                /*
+
                 if (block == ModBlocks.CRUSTROCK) {
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName(), "inventory"));
-                }
 
-                 */
-                if (block != ModBlocks.CRUSTROCK){
+                }
+                if (block != ModBlocks.CRUSTROCK) {
                     String name = block.getRegistryName().toString();
                     String removeRocktype = name.replace("crustrock_", "");
                     String ore = removeRocktype.replace("planetcore:", "");
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
+
                 }
             }
         }
         for (Block block : AllMantleBlocks) {
             for (int meta = 0; meta < 16; meta++) {
-                /*
+
                 if (block == ModBlocks.MANTLEROCK) {
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(Reference.MOD_ID + ":" + Mantlerock.EnumType.values()[meta].getName(), "inventory"));
-                }
 
-                 */
+                }
                 if (block != ModBlocks.MANTLEROCK) {
                     String name = block.getRegistryName().toString();
                     String removeRocktype = name.replace("mantlerock_", "");
@@ -818,13 +419,11 @@ public class ModBlocks {
         }
         for (Block block : AllCoreBlocks) {
             for (int meta = 0; meta < 3; meta++) {
-                /*
                 if (block == ModBlocks.CORESTONE) {
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(Reference.MOD_ID + ":" + Corerock.EnumType.values()[meta].getName(), "inventory"));
-                }
 
-                 */
+                }
                 if (block != ModBlocks.CORESTONE) {
                     String name = block.getRegistryName().toString();
                     String removeRocktype = name.replace("corestone_", "");
