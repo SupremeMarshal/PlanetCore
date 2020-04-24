@@ -6,15 +6,15 @@ package com.PlanetCore.init;
 
 import com.PlanetCore.blocks.*;
 
-import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.Reference;
+import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
 
 import net.minecraft.block.material.Material;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.command.FunctionObject;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Locale;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 import static com.PlanetCore.init.ModBlocks.OreType.METAL;
 
@@ -38,6 +39,7 @@ import static com.PlanetCore.init.ModBlocks.OreType.METAL;
 @ObjectHolder("planetcore")
 
 public class ModBlocks {
+
 
     /*TO DO
     All size use same class as rocktype
@@ -75,64 +77,58 @@ public class ModBlocks {
         METAL
     }
 
+    public enum ItemDropped {
+        SHARD,
+        ORE
+    }
+
+
 
     public enum Ore {
 
-        ONYX(true, OreType.GEM, 900000, 36000.0, 90000.0),
-        MAJORITE(true, OreType.GEM, 600000, 12000.0, 60000.0),
-        BRIGMANITE(true, OreType.GEM, 500000, 4800.0, 50000.0),
-        RINGWOODITE(true, OreType.GEM, 400000, 4800.0, 40000.0),
-        AMAZONITE(true, OreType.GEM, 750000, 12000.0, 75000.0),
-        DIAMOND(true, OreType.GEM, 500000, 4800.0, 50000.0),
-        SAPPHIRE(true, OreType.GEM, 100000, 1600.0, 10000.0),
-        WADSLEYITE(true, OreType.GEM, 150000, 4800., 15000.0),
-        RUBY(true, OreType.GEM, 100000, 1600.0, 10000.0),
-        TUNGSTEN(true, METAL, 50000, 200.0, 5000.0),
-        EMERALD(true, OreType.GEM, 25000, 150.0, 2500.0),
-        TITANIUM(true, METAL, 10000, 100.0, 1000.0),
-        URANIUM(true, METAL, 1200, 40.0, 120.0),
-        PLATINUM(true, METAL, 5000, 60.0, 500.0),
-        OLIVINE(true, OreType.GEM, 4000, 2400.0, 400),
-        JADE(true, OreType.GEM, 3000, 60.0, 300.0),
-        TOPAZ(true, OreType.GEM, 2500, 40.0, 250.0),
-        GOLD(true, METAL, 2000, 27.0, 200.0),
-        SILVER(true, METAL, 600, 18.0, 60.0),
-        REDSTONE(true, OreType.GEM, 10, 18.0, 1.0),
-        LAPIS(true, OreType.GEM, 10, 12.0, 1.0),
-        SULFUR(true, METAL, 10, 10.0, 1.0),
-        TIN(true, METAL, 100, 5.0, 1.0),
-        COPPER(true, METAL, 100, 5.0, 1.0),
-        IRON(true, METAL, 300, 5.0, 1.5),
-        LEAD(true, METAL, 10, 10.0, 1.0),
-        ZINC(true, METAL, 10, 10.0, 1.0),
-        ALUMINIUM(true, METAL, 10, 10.0, 1.0),
-        SILICON(true, METAL, 10, 10.0, 1.0),
-        COAL(true, METAL, 0, 1.5, 0.0);
+        ONYX(OreType.GEM, 16286.0F, 500000.0F),
+        AMAZONITE( OreType.GEM, 12868.0F, 300000.0F),
+        MAJORITE( OreType.GEM, 10044.0F, 200000.0F),
+        BRIGMANITE( OreType.GEM, 7709.0F, 100000.0F),
+        RINGWOODITE( OreType.GEM, 5780.0F, 80000.0F),
+        WADSLEYITE( OreType.GEM, 4186.0F, 70000.0F),
+        OLIVINE( OreType.GEM, 2868.0F, 60000.0F),
+        DIAMOND( OreType.GEM, 1779.0F, 50000.0F),
+        SAPPHIRE( OreType.GEM, 879.0F, 10000.0F),
+        RUBY( OreType.GEM, 879.0F, 10000.0F),
+        EMERALD( OreType.GEM, 654.0F, 2500.0F),
+        TUNGSTEN( METAL, 510.0F, 5000.0F),
+        JADE( OreType.GEM, 389.0F, 1000.0F),
+        TOPAZ(OreType.GEM, 289.0F, 500.0F),
+        TITANIUM( METAL, 144.0F, 200.0F),
+        URANIUM( METAL, 18.0F, 10.0F),
+        PLATINUM( METAL, 95.0F, 100.0F),
+        GOLD(METAL, 59.0F, 60.0F),
+        SILVER(METAL, 34.0F, 30.0F),
+        IRON(METAL, 18.0F, 15.0F),
+        COPPER(METAL, 9.0F, 1.0F),
+        LAPIS(OreType.GEM, 5.0F, 1.0F),
+        REDSTONE(OreType.GEM, 4.0F, 1.0F),
+        SULFUR(METAL, 3.0F, 1.0F),
+        SILICON(METAL, 2.5F, 1.0F),
+        TIN(METAL, 2.0F, 1.0F),
+        LEAD(METAL, 2.0F, 1.0F),
+        ZINC(METAL, 1.5F, 1.0F),
+        ALUMINIUM(METAL, 0.5F, 1.0F),
+        COAL(METAL, 0.0F, 0.0F);
 
-        private final boolean makeOreAndBlock;
         private final OreType type;
-        private final double blockResistance;
         private final double oreHardness;
         private final double oreResistance;
 
-        Ore(boolean makeOreAndBlock, OreType type, double blockResistance, double oreHardness, double oreResistance) {
-            this.makeOreAndBlock = makeOreAndBlock;
+        Ore(OreType type, double oreHardness, double oreResistance) {
             this.type = type;
-            this.blockResistance = blockResistance;
             this.oreHardness = oreHardness;
             this.oreResistance = oreResistance;
         }
 
         public OreType getType() {
             return this.type;
-        }
-
-        public double getBlockResistance() {
-            return blockResistance;
-        }
-
-        public boolean makeOreAndBlock() {
-            return makeOreAndBlock;
         }
 
         public double getOreHardness() {
@@ -278,7 +274,6 @@ public class ModBlocks {
 
         /*
         Create a loop to get the coresponding blocks.
-        More info about it later.
          */
         StringBuilder holderGenString = generateHolders ? new StringBuilder(64 * 1024) : null;
 
@@ -286,21 +281,21 @@ public class ModBlocks {
 
             for (ModBlocks.Ore ore : ModBlocks.Ore.values()) {
 
-
                 if (!((oreForm == OreForm.CORESTONE || oreForm == OreForm.CORESTONE_VERYSMALL || oreForm == OreForm.CORESTONE_SMALL
                         || oreForm == OreForm.CORESTONE_COMPACT || oreForm == OreForm.CORESTONE_VERYCOMPACT) && ore.type == METAL)) {
                     String registryName;
                     registryName = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT);
                     Block block = oreForm.makeBlock(registryName);
 
-                    block.setHardness((float) (ore.getOreHardness() + (oreForm.getBaseHardness())));
+                    block.setHardness((float) (ore.getOreHardness() * (oreForm.getBaseHardness())));
 
-                    block.setResistance((float) (ore.getOreResistance() + (oreForm.getBaseResistance())));
+                    block.setResistance((float) (ore.getOreResistance() * (oreForm.getBaseResistance())));
 
                     registry.register(block);
                     if (oreForm == ModBlocks.OreForm.ORE_VERYSMALL || oreForm == ModBlocks.OreForm.ORE_SMALL || oreForm == ModBlocks.OreForm.ORE
                             || oreForm == ModBlocks.OreForm.ORE_COMPACT || oreForm == ModBlocks.OreForm.ORE_VERYCOMPACT) {
                         AllOreBlocks.add(block);
+
                     }
                     if (oreForm == ModBlocks.OreForm.CRUSTROCK_VERYSMALL || oreForm == ModBlocks.OreForm.CRUSTROCK_SMALL || oreForm == ModBlocks.OreForm.CRUSTROCK
                             || oreForm == ModBlocks.OreForm.CRUSTROCK_COMPACT || oreForm == ModBlocks.OreForm.CRUSTROCK_VERYCOMPACT) {
