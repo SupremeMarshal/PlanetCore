@@ -1,11 +1,9 @@
 package com.PlanetCore.items.tools;
 
-import com.PlanetCore.Main;
 import com.PlanetCore.init.ModItems;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -15,8 +13,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ToolHoe extends ItemHoe  {
-	public ToolHoe(String name, ToolMaterial material)
+public class ToolHoe extends ItemHoe {
+	public ToolHoe(String name, ModItems.ToolMaterialCustom material)
 	{
 		super(material);
 		setTranslationKey(name);

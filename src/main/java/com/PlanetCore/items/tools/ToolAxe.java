@@ -1,11 +1,9 @@
 
 package com.PlanetCore.items.tools;
 
-import com.PlanetCore.Main;
-
+import com.PlanetCore.init.ModItems;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -15,8 +13,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class ToolAxe extends ItemAxe  {
-	public ToolAxe(String name, ToolMaterial material) {
+public class ToolAxe extends ItemAxe {
+	public ToolAxe(String name, ModItems.ToolMaterialCustom material) {
 		super(material, 3.0F, -3.5F);
 		setTranslationKey(name);
 		setRegistryName(name);
