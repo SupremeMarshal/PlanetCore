@@ -17,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class FogHandler {
 
 
-    @SideOnly(Side.CLIENT)
+    /*@SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
     public void onEvent(EntityViewRenderEvent.FogDensity event) {
         Entity p = event.getEntity();
@@ -77,26 +77,29 @@ public class FogHandler {
                 event.setGreen(0.0F);
                 event.setBlue(0.0F);
             } else if (event.getEntity().posY <= -4000 && event.getEntity().posY > -6850) {
-                /* RED STARTING 0.48F at -4000Y, 0.99F at -6850Y */
+                // RED STARTING 0.48F at -4000Y, 0.99F at -6850Y
                 event.setRed(1.0F);
                 event.setGreen(0.1F);
                 event.setBlue(0.001F);
             } else if (event.getEntity().posY <= -6850 && event.getEntity().posY > -9200) {
-                /* RED STARTING 0.99F at -6850Y, 0.0F at  */
+                // RED STARTING 0.99F at -6850Y, 0.0F at
                 event.setRed(1.0F);
                 event.setGreen(0.15F);
                 event.setBlue(0.0F);
             } else if (event.getEntity().posY <= -9200 && event.getEntity().posY > -14993) {
-                /* RED STARTING 0.99F at -6850Y, 0.0F at  */
+                // RED STARTING 0.99F at -6850Y, 0.0F at
                 event.setRed(0.99F);
                 event.setGreen(0.99F);
                 event.setBlue(0.2F);
             } else if (event.getEntity().posY <= -14993) {
-                /* RED STARTING 0.99F at -6850Y, 0.0F at  */
+                // RED STARTING 0.99F at -6850Y, 0.0F at
                 event.setRed(0.50F);
                 event.setGreen(1.0F);
                 event.setBlue(1.0F);
             }
         }
     }
+
+     */
+
 }
