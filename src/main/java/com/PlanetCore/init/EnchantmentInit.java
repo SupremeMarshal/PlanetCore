@@ -6,6 +6,7 @@ import java.util.List;
 
 
 import com.PlanetCore.enchantments.CoolingCore;
+import com.PlanetCore.enchantments.Relentless;
 import com.PlanetCore.util.Reference;
 
 import net.minecraft.block.material.Material;
@@ -54,27 +55,28 @@ public class EnchantmentInit
 
     public static final Enchantment CoolingCore = new CoolingCore();
 
+    public static final Enchantment Relentless = new Relentless();
+
+
 
 
     @SubscribeEvent
-
     public static void createMagma(LivingUpdateEvent event)
 
     {
 
         EntityLivingBase living = event.getEntityLiving();
 
-        //int level = EnchantmentHelper.getMaxEnchantmentLevel(CoolingCore, living);
+        int CoolingCorelevel = EnchantmentHelper.getMaxEnchantmentLevel(CoolingCore, living);
+
 
         BlockPos pos = living.getPosition();
 
 
 
-        //if(level > 0)
-        if (living.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == ModItems.AMAZONITE_BOOTS)
-
+        //living.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == ModItems.AMAZONITE_BOOTS
+        if (CoolingCorelevel > 0)
         {
-
             World world = event.getEntity().world;
 
             if (living.onGround)
