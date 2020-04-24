@@ -17,22 +17,28 @@ import net.minecraft.block.state.pattern.BlockStateMatcher;
 import net.minecraft.block.state.pattern.FactoryBlockPattern;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityFallingBlock;
+import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import scala.annotation.meta.field;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.function.Supplier;
 
 
 public class BlockBase extends Block {
@@ -60,31 +66,120 @@ public class BlockBase extends Block {
 		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 	}
 
+
+	/*
+	@Override
+	public Block setHardness(float hardness) {
+		int meta = getMetaFromState(getDefaultState());
+		IBlockState state = this.getDefaultState();
+		if (meta == 1 && state == ModBlocks.MANTLEROCK.getDefaultState()) { return super.setHardness(-1F); }
+		else {return super.setHardness(hardness);}
+	}
+
+	 */
+	/**
+	 * Previous hardness's value + (3*Meta)
+	 * public static int recursive(int in) {
+	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
+	 * }
+	 */
+	private static final float [] crustHardnessByMeta = {3, 6, 12, 21, 33, 48, 66, 87, 111};
+	private static final float [] mantleHardnessByMeta = {140, 200, 290, 410, 560, 740, 950, 1190, 1460, 1760, 2090, 2450, 2840, 3260, 3710, 4190};
+	private static final float [] coreHardnessByMeta = {5210, 7250, 10310};
+
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		String a = this.getTranslationKey();
+		int meta = getMetaFromState(blockState);
+		float hardness = super.getBlockHardness(blockState, worldIn, pos);
+		if (a.contains("ore")) hardness = 1.5F + crustHardnessByMeta[meta];
+		if (a.contains("crustrock")) hardness = hardness + crustHardnessByMeta[meta];
+		if (a.contains("mantlerock")) hardness = hardness + mantleHardnessByMeta[meta];
+		if (a.contains("corestone")) hardness = hardness + coreHardnessByMeta[meta];
+		return hardness;
+	}
+
+	@Override
+	public Item getItemDropped(IBlockState state, Random random, int l) {
+		String a = this.getTranslationKey();
+		Boolean b;
+		Boolean c;
+		Item drop = null;
+		if (a.contains("small")) { b = true; }
+		else {b = false;}
+		if (a.contains("redstone")) { c = true; if (!b) { drop = Items.REDSTONE; } else { drop = ModItems.REDSTONE_SHARD; }}
+		else if (a.contains("lapis")) { c = true; if (!b) { drop = Items.DYE; } else { drop = ModItems.LAPIS_SHARD; }}
+		else if (a.contains("emerald")) { c = true; if (!b) { drop = Items.EMERALD; } else { drop = ModItems.EMERALD_SHARD; }}
+		else if (a.contains("sapphire")) { c = true; if (!b) { drop = ModItems.SAPPHIRE; } else { drop = ModItems.SAPPHIRE_SHARD; }}
+		else if (a.contains("ruby")) { c = true; if (!b) { drop = ModItems.RUBY; } else { drop = ModItems.RUBY_SHARD; }}
+		else if (a.contains("topaz")) { c = true; if (!b) { drop = ModItems.TOPAZ; } else { drop = ModItems.TOPAZ_SHARD; }}
+		else if (a.contains("jade")) { c = true; if (!b) { drop = ModItems.JADE; } else { drop = ModItems.JADE_SHARD; }}
+		else if (a.contains("diamond")) { c = true; if (!b) { drop = ModItems.DIAMOND; } else { drop = ModItems.DIAMOND_SHARD; }}
+		else if (a.contains("olivine")) { c = true; if (!b) { drop = ModItems.OLIVINE; } else { drop = ModItems.OLIVINE_SHARD; }}
+		else if (a.contains("wadsleyite")) { c = true; if (!b) { drop = ModItems.WADSLEYITE; } else { drop = ModItems.WADSLEYITE_SHARD; }}
+		else if (a.contains("ringwoodite")) { c = true; if (!b) { drop = ModItems.RINGWOODITE; } else { drop = ModItems.RINGWOODITE_SHARD; }}
+		else if (a.contains("brigmanite")) { c = true; if (!b) { drop = ModItems.BRIGMANITE; } else { drop = ModItems.BRIGMANITE_SHARD; }}
+		else if (a.contains("amazonite")) { c = true; if (!b) { drop = ModItems.AMAZONITE; } else { drop = ModItems.AMAZONITE_SHARD; }}
+		else if (a.contains("majorite")) { c = true; if (!b) { drop = ModItems.MAJORITE; } else { drop = ModItems.MAJORITE_SHARD; }}
+		else if (a.contains("onyx")) { c = true; if (!b) { drop = ModItems.ONYX; } else { drop = ModItems.ONYX_SHARD; }}
+		else { c = false;  }
+		if (!c) { return new ItemStack(this, 1, 0).getItem(); }
+		else { return new ItemStack(drop, 1, 0).getItem(); }
+	}
+
+
+
+	@Override
+	public int quantityDropped(Random random) {
+		String a = this.getTranslationKey();
+		int amount;
+		if (a.contains("verysmall")) { amount = 1; }
+		else if (a.contains("_small") || a.contains("_compact")) { amount = 3; }
+		else if (a.contains("_verycompact")) { amount = 6; }
+		else { amount = 1; }
+		return amount;
+	}
+
+	@Override
+	public boolean canDropFromExplosion(Explosion explosionIn) {
+		return false;
+	}
+
+	@Override
+	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity,
+								   boolean willHarvest) {
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		if (this.getTranslationKey().contains("redstone") && !world.isRemote) {
+			world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
+		}
+		return super.removedByPlayer(state, world, pos, entity, willHarvest);
+	}
+
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 			float PressureLevel = (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
-			if ((pos.getY() >= 0 && Math.random() > (pos.getY() / -47616.0F) && (this instanceof OreBase) && (this instanceof Corerock) && (this instanceof BlocksBase))) {
-				return;
-			}
-		if (this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK) {
-			for (EnumFacing side : EnumFacing.values()) {
-				BlockPos movedPos = pos.offset(side);
-				IBlockState movedState = worldIn.getBlockState(movedPos);
-				if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
-					continue;
+
+			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && (pos.getY() >= 0 && Math.random() > (pos.getY() / -47616.0F) && (this instanceof OreBase) && (this instanceof Corerock) && (this instanceof BlocksBase))) {
+				for (EnumFacing side : EnumFacing.values()) {
+					BlockPos movedPos = pos.offset(side);
+					IBlockState movedState = worldIn.getBlockState(movedPos);
+					if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
+						continue;
+					}
+					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
+							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
+							.toArray(EnumFacing[]::new);
+					if (sides.length == 0) {
+						continue;
+					}
+					worldIn.setBlockState(movedPos.offset(sides[rand.nextInt(sides.length)]), movedState);
+					worldIn.setBlockState(movedPos, worldIn.getBlockState(pos));
+					return;
 				}
-				EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
-						.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
-						.toArray(EnumFacing[]::new);
-				if (sides.length == 0) {
-					continue;
-				}
-				worldIn.setBlockState(movedPos.offset(sides[rand.nextInt(sides.length)]), movedState);
-				worldIn.setBlockState(movedPos, worldIn.getBlockState(pos));
-				return;
 			}
 		}
-	}
 
 
 
@@ -107,8 +202,8 @@ public class BlockBase extends Block {
 		int rand4 = (rand.nextInt(4));
 		float chance = (float)Math.random();
 		Iterable<BlockPos> it = BlockPos.getAllInBox(x - 12, y - 12, z - 12, x + 12, y + 12, z + 12);
-		for (BlockPos pos2 : it) {
-			IBlockState state2 = worldIn.getBlockState(pos2);
+		for (BlockPos pos1 : it) {
+			IBlockState state2 = worldIn.getBlockState(pos1);
 			if (state2.getMaterial() == Material.AIR) {
 				counter++;
 			}
