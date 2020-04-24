@@ -11,8 +11,11 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
+import net.minecraft.item.ItemTool;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,7 +29,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
+import scala.annotation.meta.field;
 
+import java.lang.reflect.Field;
 
 
 @EventBusSubscriber
@@ -49,13 +54,13 @@ public class RegistryHandler {
 	@SubscribeEvent
 	public static void onModelRegister(ModelRegistryEvent event)
 	{
-		/*
+
 		ForgeRegistries.ITEMS.getValues().stream()
 				.filter(item -> "planetcore".equals(item.getRegistryName().getNamespace())).forEach(item -> {
 			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 		});
 
-		 */
+
 
 		RenderHandler.registerEntityRenders();
 		RenderHandler.registerCustomMeshesAndStates();
@@ -75,7 +80,7 @@ public class RegistryHandler {
 		ModFluids.registerFluids();
 		EntityInit.registerEntities();
 		ModConfiguration.registerConfig(event);
-		MinecraftForge.EVENT_BUS.register(new FogHandler());
+		//MinecraftForge.EVENT_BUS.register(new FogHandler());
 		//CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
 
 
@@ -102,13 +107,17 @@ public class RegistryHandler {
 
 	public static void posInitRegistries(FMLPostInitializationEvent event)
 	{
-		net.minecraft.item.crafting.FurnaceRecipes.instance().getSmeltingList().remove(
-				new net.minecraft.item.ItemStack(net.minecraft.init.Items.IRON_HORSE_ARMOR, 1, 32767),
-				new net.minecraft.item.ItemStack(net.minecraft.init.Items.IRON_NUGGET));
-		net.minecraft.item.crafting.FurnaceRecipes.instance().getSmeltingList().put(
-				new net.minecraft.item.ItemStack(net.minecraft.init.Items.IRON_HORSE_ARMOR, 1, 32767),
-				new net.minecraft.item.ItemStack(ModItems.IRON_NUGGET));
 
+		//ToolItem field protected final float efficiency;
+		Items.WOODEN_PICKAXE.setHarvestLevel("pickaxe", 2);
+		Items.STONE_PICKAXE.setHarvestLevel("pickaxe", 2);
+		Items.IRON_PICKAXE.setHarvestLevel("pickaxe", 2);
+		FurnaceRecipes.instance().getSmeltingList().remove(
+				new ItemStack(Items.IRON_HORSE_ARMOR, 1, 32767),
+				new ItemStack(Items.IRON_NUGGET));
+		FurnaceRecipes.instance().getSmeltingList().put(
+				new ItemStack(Items.IRON_HORSE_ARMOR, 1, 32767),
+				new ItemStack(ModItems.IRON_NUGGET));
 	}
 
 
