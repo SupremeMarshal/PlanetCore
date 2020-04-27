@@ -1,6 +1,7 @@
 package com.PlanetCore;
 
 
+import com.PlanetCore.init.ModSmelting;
 import com.PlanetCore.util.Reference;
 import com.PlanetCore.util.handlers.RegistryHandler;
 
@@ -43,7 +44,7 @@ public class Main {
 	
 	@EventHandler
     public static void init(FMLInitializationEvent event) {
-		//ModSmelting.init();
+
 		RegistryHandler.initRegistries(event);
     }
 
@@ -52,6 +53,7 @@ public class Main {
 	public static void PostInit(FMLPostInitializationEvent event)
 	{
 		RegistryHandler.posInitRegistries(event);
+		ModSmelting.init();
 	}
 	
 	
