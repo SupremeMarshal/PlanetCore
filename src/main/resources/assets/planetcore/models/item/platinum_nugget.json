@@ -1,6 +1,1 @@
-{
-   "parent": "item/generated",
-   "textures": {
-       "layer0": "planetcore:items/platinum_nugget"
-   }
-}
+{"parent":"item/generated","textures":{"layer0":"planetcore:items/platinum_nugget"}}

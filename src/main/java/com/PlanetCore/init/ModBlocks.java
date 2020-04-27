@@ -15,6 +15,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.command.FunctionObject;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
@@ -23,6 +24,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 import java.util.ArrayList;
 
@@ -281,8 +283,6 @@ public class ModBlocks {
 
             for (ModBlocks.Ore ore : ModBlocks.Ore.values()) {
 
-                if (!((oreForm == OreForm.CORESTONE || oreForm == OreForm.CORESTONE_VERYSMALL || oreForm == OreForm.CORESTONE_SMALL
-                        || oreForm == OreForm.CORESTONE_COMPACT || oreForm == OreForm.CORESTONE_VERYCOMPACT) && ore.type == METAL)) {
                     String registryName;
                     registryName = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT);
                     Block block = oreForm.makeBlock(registryName);
@@ -313,8 +313,6 @@ public class ModBlocks {
                         holderGenString.append("public static final ").append(block.getClass().getSimpleName())
                                 .append(" ").append(block.getRegistryName().getPath().toUpperCase(Locale.ROOT)).append(" = _null();\n");
                     }
-                }
-
             }
             if (oreForm == OreForm.CRUSTROCK || oreForm == OreForm.MANTLEROCK || oreForm == OreForm.CORESTONE) {
                 String registryName;

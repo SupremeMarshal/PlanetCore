@@ -22,8 +22,10 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.util.EnumHelper;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
@@ -34,7 +36,7 @@ public class ModItems {
 	
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 
-	public enum ToolMaterialCustom
+    public enum ToolMaterialCustom
 	{
 		ALUMINIUM(2, 150, 1.0F, 0.0F, 15, 1),
 		LEAD(2, 50, 5.0F, 1.0F, 5, 2),
@@ -764,6 +766,7 @@ public class ModItems {
 	public static final Item ONYX_SHARD = new ItemBase("onyx_shard");
 	public static final Item SAPPHIRE = new ItemBase("sapphire");
 	public static final Item RUBY = new ItemBase("ruby");
+	public static final Item EMERALD = new ItemBase("emerald");
 	public static final Item TOPAZ = new ItemBase("topaz");
 	public static final Item JADE = new ItemBase("jade");
 	public static final Item DIAMOND = new ItemBase("diamond");
@@ -788,20 +791,46 @@ public class ModItems {
 	public static final Item AZURITE_ROD = new Gems("azurite_rod");
 	
 	//Ingot//
+	public static final Item ALUMINIUM_INGOT = new ItemBase("aluminium_ingot");
+	public static final Item LEAD_INGOT = new ItemBase("lead_ingot");
+	public static final Item SILICON_INGOT = new ItemBase("silicon_ingot");
+	public static final Item COPPER_INGOT = new ItemBase("copper_ingot");
+	public static final Item ZINC_INGOT = new ItemBase("zinc_ingot");
+	public static final Item TIN_INGOT = new ItemBase("tin_ingot");
 	public static final Item IRON_INGOT = new ItemBase("iron_ingot");
 	public static final Item STEEL_INGOT = new ItemBase("steel_ingot");
+	public static final Item BRONZE_INGOT = new ItemBase("bronze_ingot");
 	public static final Item SILVER_INGOT = new ItemBase("silver_ingot");
 	public static final Item GOLD_INGOT = new ItemBase("gold_ingot");
 	public static final Item PLATINUM_INGOT = new ItemBase("platinum_ingot");
+	public static final Item TITANIUM_INGOT = new ItemBase("titanium_ingot");
+	public static final Item URANIUM_INGOT = new ItemBase("uranium_ingot");
+	public static final Item TUNGSTEN_INGOT = new ItemBase("tungsten_ingot");
+	public static final Item TITANIUM_URANIUM_INGOT = new ItemBase("titanium_uranium_ingot");
+	public static final Item TUNGSTEN_URANIUM_INGOT = new ItemBase("tungsten_uranium_ingot");
+	public static final Item TUNGSTEN_TITANIUM_INGOT = new ItemBase("tungsten_titanium_ingot");
 
 	public static final Item IRON_COAL = new ItemBase("iron_coal");
 	public static final Item SULFUR = new ItemBase("sulfur");
 	
+	public static final Item ALUMINIUM_NUGGET = new ItemBase("aluminium_nugget");
+	public static final Item LEAD_NUGGET = new ItemBase("lead_nugget");
+	public static final Item SILICON_NUGGET = new ItemBase("silicon_nugget");
+	public static final Item COPPER_NUGGET = new ItemBase("copper_nugget");
+	public static final Item ZINC_NUGGET = new ItemBase("zinc_nugget");
+	public static final Item TIN_NUGGET = new ItemBase("tin_nugget");
 	public static final Item IRON_NUGGET = new ItemBase("iron_nugget");
 	public static final Item STEEL_NUGGET = new ItemBase("steel_nugget");
+	public static final Item BRONZE_NUGGET = new ItemBase("bronze_nugget");
 	public static final Item SILVER_NUGGET = new ItemBase("silver_nugget");
 	public static final Item GOLD_NUGGET = new ItemBase("gold_nugget");
 	public static final Item PLATINUM_NUGGET = new ItemBase("platinum_nugget");
+	public static final Item TITANIUM_NUGGET = new ItemBase("titanium_nugget");
+	public static final Item URANIUM_NUGGET = new ItemBase("uranium_nugget");
+	public static final Item TUNGSTEN_NUGGET = new ItemBase("tungsten_nugget");
+	public static final Item TITANIUM_URANIUM_NUGGET = new ItemBase("titanium_uranium_nugget");
+	public static final Item TUNGSTEN_URANIUM_NUGGET = new ItemBase("tungsten_uranium_nugget");
+	public static final Item TUNGSTEN_TITANIUM_NUGGET = new ItemBase("tungsten_titanium_nugget");
 	
 	public static final Item DEMON_STAR = new ItemBase("demon_star");
 	public static final Item DEMON_STAR_CHARGED = new Gems("demon_star_charged");
@@ -888,7 +917,6 @@ public class ModItems {
 	public static final Item DIAMOND_SHIELD = new DiamondShield("diamond_shield");
 	public static final Item AMAZONITE_SHIELD = new AmazoniteShield("amazonite_shield");
 	public static final Item ONYX_SHIELD = new OnyxShield("onyx_shield");
-
 
 
 }

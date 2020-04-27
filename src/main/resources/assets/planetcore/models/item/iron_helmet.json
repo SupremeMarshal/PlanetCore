@@ -1,6 +1,1 @@
-{
-   "parent": "item/generated",
-   "textures": {
-       "layer0": "planetcore:items/iron_helmet"
-   }
-}
+{"parent":"item/generated","textures":{"layer0":"planetcore:items/iron_helmet"}}
