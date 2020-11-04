@@ -26,14 +26,12 @@ public class ModSmelting {
 			"HELMET", "CHESTPLATE", "LEGGINGS", "BOOTS", "ROD"};
 	//"STEEL", "BRONZE", "TITANIUM_URANIUM", "TUNGSTEN_URANIUM", "TUNGSTEN_TITANIUM",
 	private static final String[] Material = {"ALUMINIUM", "ZINC", "LEAD", "TIN", "SILICON", "COPPER", "IRON", "SILVER",
-			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "TOPAZ", "JADE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
+			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "REDSTONE", "TOPAZ", "JADE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
 			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX"};
 
-	private static final String[] Meta = {"HARDROCK", "DEEPROCK", "CRUSTROCK"};
-
-	private static final String[] Rock = {"CRUSTROCK", "MANTLEROCK", "CORESTONE"};
-	private static final String[] Size = {"VERYSMALL", "SMALL", "", "COMPACT", "VERYCOMPACT"};
-	private static final int[] Amount = {1,3,1,6,9};
+	private static final String[] Rock = {"ORE", "CRUSTROCK", "MANTLEROCK", "CORESTONE"};
+	private static final String[] Size = {"SMALL", "", "COMPACT"};
+	private static final int[] Amount = {3,1,6};
 
 
 	public static void init()
@@ -45,13 +43,12 @@ public class ModSmelting {
 		/**
 		 * NORMAL FURNACE RECIPES
 		 */
-		for (int size = 0; size < 5; size++) {
-			for (int material = 0; (material < 26); material++) {
+		for (int size = 0; size < 3; size++) {
+			for (int material = 0; (material < 27); material++) {
 
 				if (material < 13)
 				{
-
-					if (size < 2)
+					if (size < 1)
 					{
 						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_nugget";
 					}
@@ -59,24 +56,36 @@ public class ModSmelting {
 				}
 				else
 				{
-					if (size < 2)
+					if (size < 1)
 					{
 						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_shard";
 					}
-					else itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT);
+					else
+					{
+						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT);
+						if (Material[material].contains("EMERALD") || Material[material].contains("REDSTONE"))
+						{
+							itemname = "minecraft:" + Material[material].toLowerCase(Locale.ROOT);
+						}
+					}
 				}
 
 				item = ItemBase.getByNameOrId(itemname).getDefaultInstance().getItem();
 
-				for (int rock = 0; rock < 3; rock++) {
+				for (int rock = 0; rock < 4; rock++)
+				{
+					if (rock == 3 && material < 13)
+					{
+						continue;
+					}
 
-					if (size == 2)
+					if (size == 1)
 					{
 						blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
 						block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
 						GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
 					}
-					if (size != 2)
+					if (size != 1)
 					{
 						blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Size[size].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
 						block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
@@ -85,97 +94,13 @@ public class ModSmelting {
 				}
 			}
 		}
-/*
-		public enum ToolMaterial
-		{
-			ALUMINIUM(
-			LEAD(
-			SILICON(
-			COPPER(
-			ZINC(
-			TIN(
-			IRON(
-			STEEL(
-			BRONZE(
-			SILVER(
-			GOLD(
-			PLATINUM(
-			TITANIUM(
-			URANIUM(
-			TOPAZ(
-			JADE(
-			TUNGSTEN(
-			TITANIUM_URANIUM(
-			TUNGSTEN_URANIUM(
-			TUNGSTEN_TITANIUM(
-			EMERALD(
-			RUBY(
-			SAPPHIRE(
-			DIAMOND(
-			OLIVINE(
-			WADSLEYITE(
-			RINGWOODITE(
-			BRIGMANITE(
-			MAJORITE(
-			AMAZONITE(
-			ONYX(
-
-	 */
-
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_COAL, new ItemStack(Items.COAL, 1), 0.75F);
-		
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_SULFUR, new ItemStack(ModItems.SULFUR, 1), 0.75F);
-
-		
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_IRON, new ItemStack(ModItems.IRON_INGOT, 1), 0.75F);
-
 
 		GameRegistry.addSmelting(ModItems.IRON_COAL, new ItemStack(ModItems.STEEL_INGOT, 1), 1.0F);
 
 
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_SILVER, new ItemStack(ModItems.SILVER_INGOT, 1), 1.25F);
-
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_GOLD, new ItemStack(ModItems.GOLD_INGOT, 1), 1.75F);
-
-
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_PLATINUM, new ItemStack(ModItems.PLATINUM_INGOT, 1), 2.25F);
-
 
 		GameRegistry.addSmelting(Blocks.REDSTONE_ORE, new ItemStack(Items.REDSTONE, 5), 1.5F);
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_REDSTONE, new ItemStack(Items.REDSTONE, 6), 1.75F);
 
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_EMERALD, new ItemStack(Items.EMERALD, 1), 2.25F);
-
-
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 2.75F);
-
-		
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_RUBY, new ItemStack(ModItems.RUBY, 1), 3.25F);
-
-		
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_TOPAZ, new ItemStack(ModItems.TOPAZ, 1), 3.75F);
-
-		
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_DIAMOND, new ItemStack(ModItems.DIAMOND, 1), 4.25F);
-
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_JADE, new ItemStack(ModItems.JADE, 1), 4.75F);
-
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 5.25F);
-
-		
-
-		//GameRegistry.addSmelting(ModBlocks.HARDROCK_ONYX, new ItemStack(ModItems.ONYX, 1), 6.25F);
 
 
 

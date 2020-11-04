@@ -20,6 +20,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -27,6 +28,7 @@ import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -164,7 +166,7 @@ public class Corerock extends BlockBase implements IMetaName {
 		System.out.println(meta);
 		return this.getDefaultState().withProperty(VARIANT, Corerock.EnumType.byMetadata(meta));
 	}
-}
+
 
 
 
@@ -252,7 +254,7 @@ public class Corerock extends BlockBase implements IMetaName {
 		}
 	}
 
-
+*/
 
 	public static void burnEntities(World world, int x, int y, int z, int radius) {
 		float f = radius;
@@ -265,7 +267,7 @@ public class Corerock extends BlockBase implements IMetaName {
 		double d7;
 		double wat = radius/** 2 */
 				;
-				/*
+
 		boolean isOccupied = false;
 
 		// bombStartStrength *= 2.0F;
@@ -319,14 +321,6 @@ public class Corerock extends BlockBase implements IMetaName {
 			{
 				entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 20.0F);
 			}
-			else if (block == ModBlocks.INNERCORESTONE)
-			{
-				entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 40.0F);
-			}
-			else if (block == ModBlocks.CENTERCORESTONE)
-			{
-				entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 80.0F);
-			}
 		}
 
 		super.onEntityWalk(worldIn, pos, entityIn);
@@ -343,7 +337,7 @@ public class Corerock extends BlockBase implements IMetaName {
 		int X = pos.getX();
 		int Y = pos.getY();
 		int Z = pos.getZ();
-		if((worldIn.isRaining() && this == ModBlocks.CORESTONE) || (worldIn.isRaining() && this == ModBlocks.MAGMA_CORESTONE)) {
+		if((worldIn.isRaining() && this == ModBlocks.CORESTONE)) {
 
 			worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, X, Y+1, Z, 0, 0, 0);
 		}
@@ -378,13 +372,8 @@ public class Corerock extends BlockBase implements IMetaName {
 
 							if (this == ModBlocks.CORESTONE)
 							{
-								worldIn.setBlockState(new BlockPos(x, y, z), ModBlocks.MAGMA_CORESTONE.getDefaultState());
-								worldIn.createExplosion(null, X+x, Y+y, Z+z, 8, false);
-							}
-							if (this == ModBlocks.MAGMA_CORESTONE)
-							{
 								worldIn.setBlockState(new BlockPos(x, y, z), ModBlocks.COLD_CORESTONE.getDefaultState());
-								worldIn.createExplosion(null, X+x, Y+y, Z+z, 4, false);
+								worldIn.createExplosion(null, X+x, Y+y, Z+z, 7, false);
 							}
 							worldIn.setBlockToAir(pos.add(x, y, z));
 						}
@@ -392,7 +381,7 @@ public class Corerock extends BlockBase implements IMetaName {
 						{
 							worldIn.setBlockState(pos.add(x, y, z), Blocks.FIRE.getDefaultState());
 						}
-						if(pos.getY()>=-17920 && pos.getY()<=-12700)
+						if(pos.getY()>=-4500 && pos.getY()<=-3000)
 						{
 							if(rand.nextInt(6000) == 0)
 							{
@@ -400,17 +389,17 @@ public class Corerock extends BlockBase implements IMetaName {
 							}
 							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 						}
-						else if(pos.getY()>-12675 && pos.getY()<=-1000)
+						else if(pos.getY()>-3000 && pos.getY()<=-1000)
 						{
 							if(rand.nextInt(6000) == 0)
 							{
 								return;
 							}
-							if (this == ModBlocks.CENTERCORESTONE){
-								worldIn.setBlockState(pos, ModBlocks.INNERCORESTONE.getDefaultState());
+							if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 2){
+								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getStateFromMeta(1));
 							}
 
-							else if (this == ModBlocks.INNERCORESTONE){
+							else if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 1){
 								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 							}
 						}
@@ -418,39 +407,36 @@ public class Corerock extends BlockBase implements IMetaName {
 						{
 							if(rand.nextInt(1200) == 0)
 							{
-								if (this == ModBlocks.CENTERCORESTONE)
+								if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 2)
+									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getStateFromMeta(1));
+								else if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 1)
 									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else if (this == ModBlocks.INNERCORESTONE)
-									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else if (this == ModBlocks.CORESTONE)
-									worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
-								else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+								else
+									worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 							}
 						}
 						else if(worldIn.canBlockSeeSky(pos) == false)
 						{
 							if(rand.nextInt(2400) == 0)
 							{
-								if (this == ModBlocks.CENTERCORESTONE)
+								if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 2)
 									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else if (this == ModBlocks.INNERCORESTONE)
+								else if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 1)
 									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else if (this == ModBlocks.CORESTONE)
-									worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
-								else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+								else
+									worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 							}
 						}
 						else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == true)
 						{
 							if(rand.nextInt(200) == 0)
 							{
-								if (this == ModBlocks.CENTERCORESTONE)
+								if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 2)
 									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else if (this == ModBlocks.INNERCORESTONE)
+								else if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 1)
 									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else if (this == ModBlocks.CORESTONE)
-									worldIn.setBlockState(pos, ModBlocks.MAGMA_CORESTONE.getDefaultState());
-								else worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
+								else
+									worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
 							}
 						}
 					}
@@ -476,7 +462,7 @@ public class Corerock extends BlockBase implements IMetaName {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 		thermalEffects(worldIn, pos, state);
-		/*BlockPos blockpos = pos.up();
+		BlockPos blockpos = pos.up();
 		IBlockState iblockstate = worldIn.getBlockState(blockpos);
 
 		if (iblockstate.getBlock() == Blocks.WATER || iblockstate.getBlock() == Blocks.FLOWING_WATER)
@@ -506,7 +492,7 @@ public class Corerock extends BlockBase implements IMetaName {
 
 }
 
-				 */
+
 
 
 	

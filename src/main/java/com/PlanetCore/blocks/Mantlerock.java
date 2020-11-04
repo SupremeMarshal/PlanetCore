@@ -7,6 +7,7 @@ import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
 import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.IMetaName;
+import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -45,13 +46,17 @@ public class Mantlerock extends BlockBase implements IMetaName
 	public Mantlerock(String name, Material material)
 	{
 		super(name, material);
-
 		setSoundType(SoundType.STONE);
-
-		setResistance(100.0F);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
+	}
 
+	public static final int [] mantleLightLevel = {0, 0, 0, 0, 0, 1, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15};
+
+	@Override
+	public int getLightValue(IBlockState state) {
+		int meta = getMetaFromState(state);
+		return (mantleLightLevel[meta]);
 	}
 
 	@Override
@@ -99,35 +104,20 @@ public class Mantlerock extends BlockBase implements IMetaName
 	public static enum EnumType implements IStringSerializable
 	{
 		MANTLEROCK(0, "mantlerock"),
-
 		MANTLEROCK1(1, "mantlerock1"),
-
 		MANTLEROCK2(2, "mantlerock2"),
-
 		MANTLEROCK3(3, "mantlerock3"),
-
 		MANTLEROCK4(4, "mantlerock4"),
-
 		MANTLEROCK5(5, "mantlerock5"),
-
 		MANTLEROCK6(6, "mantlerock6"),
-
 		MANTLEROCK7(7, "mantlerock7"),
-
 		MANTLEROCK8(8, "mantlerock8"),
-
 		LOWER_MANTLEROCK(9, "lower_mantlerock"),
-
 		LOWER_MANTLEROCK1(10, "lower_mantlerock1"),
-
 		LOWER_MANTLEROCK2(11, "lower_mantlerock2"),
-
 		LOWER_MANTLEROCK3(12, "lower_mantlerock3"),
-
 		LOWER_MANTLEROCK4(13, "lower_mantlerock4"),
-
 		LOWER_MANTLEROCK5(14, "lower_mantlerock5"),
-
 		LOWER_MANTLEROCK6(15, "lower_mantlerock6");
 
 		private static final 	Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[]{MANTLEROCK, MANTLEROCK1, MANTLEROCK2, MANTLEROCK3, MANTLEROCK4, MANTLEROCK5, MANTLEROCK6,

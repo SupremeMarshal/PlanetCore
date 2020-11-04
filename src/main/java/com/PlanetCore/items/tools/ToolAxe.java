@@ -14,11 +14,14 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class ToolAxe extends ItemAxe {
-	public ToolAxe(String name, ModItems.ToolMaterialCustom material) {
-		super(material, 3.0F, -3.5F);
+	public ToolAxe(String name, ModItems.ToolMaterialCustom material)
+	{
+		super(material);
 		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.TOOLS);
+
+		ModItems.ITEMS.add(this);
 	}
 
 

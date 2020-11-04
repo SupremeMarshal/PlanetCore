@@ -4,11 +4,13 @@ package com.PlanetCore.blocks;
 import com.PlanetCore.Main;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
+import com.PlanetCore.items.ItemBase;
 import com.google.common.base.Predicate;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.BlockWorldState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.state.pattern.BlockMaterialMatcher;
@@ -33,10 +35,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import scala.annotation.meta.field;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Random;
 import java.util.function.Supplier;
 
@@ -56,7 +60,6 @@ public class BlockBase extends Block {
 		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-
 		ModBlocks.BLOCKS.add(this);
 		addItemBlock();
 		setSoundType(SoundType.METAL);
@@ -77,6 +80,8 @@ public class BlockBase extends Block {
 	}
 
 	 */
+
+
 	/**
 	 * Previous hardness's value + (3*Meta)
 	 * public static int recursive(int in) {
@@ -87,12 +92,27 @@ public class BlockBase extends Block {
 	private static final float [] mantleHardnessByMeta = {140, 200, 290, 410, 560, 740, 950, 1190, 1460, 1760, 2090, 2450, 2840, 3260, 3710, 4190};
 	private static final float [] coreHardnessByMeta = {5210, 7250, 10310};
 
+
+
+	private static final String[] MaterialItem = {"ALUMINIUM", "ZINC", "LEAD", "TIN", "SILICON", "COPPER", "IRON", "SILVER",
+			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "TOPAZ", "JADE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
+			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX"};
+
+
+
+
+
+
+
+
+
+
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
 		String a = this.getTranslationKey();
 		int meta = getMetaFromState(blockState);
 		float hardness = super.getBlockHardness(blockState, worldIn, pos);
-		if (a.contains("ore")) hardness = 1.5F + crustHardnessByMeta[meta];
+		if (a.contains("ore")) hardness = hardness + 1.5F;
 		if (a.contains("crustrock")) hardness = hardness + crustHardnessByMeta[meta];
 		if (a.contains("mantlerock")) hardness = hardness + mantleHardnessByMeta[meta];
 		if (a.contains("corestone")) hardness = hardness + coreHardnessByMeta[meta];
@@ -132,13 +152,30 @@ public class BlockBase extends Block {
 	@Override
 	public int quantityDropped(Random random) {
 		String a = this.getTranslationKey();
-		int amount;
-		if (a.contains("verysmall")) { amount = 1; }
-		else if (a.contains("_small") || a.contains("_compact")) { amount = 3; }
-		else if (a.contains("_verycompact")) { amount = 6; }
-		else { amount = 1; }
+		String materialItem = MaterialItem[0];
+		int amount = 1;
+		for (int material = 0; (material < 26); material++) {
+
+			if (materialItem.contains(MaterialItem[material]) && material > 13) {
+				if (a.contains("verysmall")) {
+					amount = 1;
+				} else if (a.contains("_small") || a.contains("_compact")) {
+					amount = 3;
+				} else if (a.contains("_verycompact")) {
+					amount = 6;
+				} else {
+					amount = 1;
+				}
+				return amount;
+			}
+			else
+			{
+				return 1;
+			}
+		}
 		return amount;
 	}
+
 
 	@Override
 	public boolean canDropFromExplosion(Explosion explosionIn) {
@@ -157,11 +194,19 @@ public class BlockBase extends Block {
 		return super.removedByPlayer(state, world, pos, entity, willHarvest);
 	}
 
+
+	/**
+	 * cause the terrain to close on itself, creating a pressure effect inside the planet.
+	 * @param worldIn
+	 * @param pos
+	 * @param state
+	 * @param rand
+	 */
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 			float PressureLevel = (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
 
-			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && (pos.getY() >= 0 && Math.random() > (pos.getY() / -47616.0F) && (this instanceof OreBase) && (this instanceof Corerock) && (this instanceof BlocksBase))) {
+			if ((this == ModBlocks.CRUSTROCK || this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0 && (Math.random() <= (pos.getY() / -47616.0F))) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
@@ -180,6 +225,32 @@ public class BlockBase extends Block {
 				}
 			}
 		}
+
+
+
+		/**
+	@Override
+	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+		float PressureLevel = (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
+			if (pos.getY() < 0 && Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof OreBase) && !(this instanceof Corerock) && !(this instanceof BlocksBase)) {
+				for (EnumFacing side : EnumFacing.values()) {
+					BlockPos movedPos = pos.offset(side);
+					IBlockState movedState = worldIn.getBlockState(movedPos);
+					if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel
+							|| movedState.getMaterial() == Material.WATER || movedState.getMaterial() == Material.LAVA || movedState.getBlock() == Blocks.ANVIL)
+						continue; // you can add more blocks to this check to exclude them
+					//
+					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
+							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
+							.toArray(EnumFacing[]::new);
+					if (sides.length == 0) continue;
+					worldIn.setBlockState(movedPos, this.getDefaultState());
+					worldIn.setBlockState(pos.offset(sides[rand.nextInt(sides.length)]), movedState);
+				}
+			}
+		}
+
+		 */
 
 
 
