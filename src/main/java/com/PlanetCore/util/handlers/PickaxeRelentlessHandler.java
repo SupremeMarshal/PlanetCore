@@ -3,6 +3,7 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.blocks.*;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
+import javafx.geometry.Pos;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,11 +12,18 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+import java.awt.event.MouseEvent;
+import java.util.Random;
 
 import static com.PlanetCore.init.EnchantmentInit.Relentless;
 
@@ -37,15 +45,23 @@ public class PickaxeRelentlessHandler {
             ModItems.WADSLEYITE_PICKAXE, ModItems.RINGWOODITE_PICKAXE, ModItems.BRIGMANITE_PICKAXE, ModItems.MAJORITE_PICKAXE, ModItems.AMAZONITE_PICKAXE/**30*/,
             ModItems.ONYX_PICKAXE};
 
+    private static final SoundEvent[] sound = {SoundHandler.INDESTRUCTIBLE, SoundHandler.INDESTRUCTIBLE1, SoundHandler.INDESTRUCTIBLE2, SoundHandler.INDESTRUCTIBLE3, SoundHandler.INDESTRUCTIBLE4, SoundHandler.INDESTRUCTIBLE5, SoundHandler.INDESTRUCTIBLE6, SoundHandler.INDESTRUCTIBLE7, SoundHandler.INDESTRUCTIBLE8, SoundHandler.INDESTRUCTIBLE9, SoundHandler.INDESTRUCTIBLE10, SoundHandler.INDESTRUCTIBLE11, SoundHandler.INDESTRUCTIBLE12, SoundHandler.INDESTRUCTIBLE13, SoundHandler.INDESTRUCTIBLE14, SoundHandler.INDESTRUCTIBLE15, SoundHandler.INDESTRUCTIBLE16, SoundHandler.INDESTRUCTIBLE17, SoundHandler.INDESTRUCTIBLE18, SoundHandler.INDESTRUCTIBLE19 };
+
+
+
+
+
 
     @SubscribeEvent
     public static void onBreakEvent(PlayerEvent.BreakSpeed event) {
         int RelentlessLevel = EnchantmentHelper.getMaxEnchantmentLevel(Relentless, event.getEntityPlayer());
+        float breaktime;
         double Relentless = 0;
 
+        //
         if (event.getEntityPlayer().getHeldItemMainhand().getItem() == Items.WOODEN_PICKAXE) {
             if (event.getState().getMaterial() == Material.ROCK) {
-                event.setNewSpeed(event.getOriginalSpeed() / 10F);
+                event.setNewSpeed(event.getOriginalSpeed() / 12F);
             }
         }
 
@@ -65,15 +81,41 @@ public class PickaxeRelentlessHandler {
                     break;
                 }
             }
+            if (Relentless < 1) {Relentless = 1; }
+            breaktime = (event.getState().getBlockHardness(event.getEntityPlayer().world, event.getPos()) * 1.5F) / event.getOriginalSpeed();
 
-            float breakTime = (event.getState().getBlockHardness(event.getEntityPlayer().world, event.getPos()) * 1.5F) / event.getOriginalSpeed();
-            if (breakTime > Relentless) {
+
+
+            //Determine if the block is undestructible.
+            if (breaktime > Relentless) {
                 event.setCanceled(true);
+                if (event.getEntityPlayer().world.getTotalWorldTime() % 6 != 1) {
+                    return;
+                }
+                event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(19)], SoundCategory.getByName("action"), 1.0F, 1.0F);
             }
 
-            if (breakTime > 0.01F && breakTime <= 0.1F) {
-                event.setNewSpeed(event.getOriginalSpeed() / (0.1F / breakTime));
+            if (breaktime > 0.01F && breaktime <= 0.1F) {
+                event.setNewSpeed(event.getOriginalSpeed() / (0.1F / breaktime));
+
             }
         }
     }
+
+    @SubscribeEvent
+    public static void onBlockBreakEvent(BlockEvent.BreakEvent event) {
+        Item item = event.getPlayer().getHeldItemMainhand().getItem();
+        if (item == Items.WOODEN_PICKAXE)
+        {
+            item.setMaxDamage(3);
+        }
+        if (item == Items.STONE_PICKAXE)
+        {
+            item.setMaxDamage(18);
+        }
+
+    }
+
+
+
 }
