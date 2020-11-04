@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:jade"
+        },
+        "B":
+        {
+            "item": "planetcore:jade_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:jade_shovel",
+        "count": 1
+    }
+}

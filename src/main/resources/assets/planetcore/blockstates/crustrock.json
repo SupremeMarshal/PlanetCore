@@ -1,4 +1,31 @@
-{"variants":{
-    "variant=hardrock":{"model":"planetcore:hardrock"},
-    "variant=deeprock":{"model":"planetcore:deeprock"},
-    "variant=crustrock":{"model":"planetcore:crustrock"}}}
+{
+    "variants": {
+        "variant=crustrock": {
+            "model": "planetcore:crustrock"
+        },
+        "variant=crustrock1": {
+            "model": "planetcore:crustrock1"
+        },
+        "variant=crustrock2": {
+            "model": "planetcore:crustrock2"
+        },
+        "variant=crustrock3": {
+            "model": "planetcore:crustrock3"
+        },
+        "variant=crustrock4": {
+            "model": "planetcore:crustrock4"
+        },
+        "variant=crustrock5": {
+            "model": "planetcore:crustrock5"
+        },
+        "variant=crustrock6": {
+            "model": "planetcore:crustrock6"
+        },
+        "variant=crustrock7": {
+            "model": "planetcore:crustrock7"
+        },
+        "variant=crustrock8": {
+            "model": "planetcore:crustrock8"
+        }
+    }
+}

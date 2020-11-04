@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:titanium_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:titanium_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:titanium_shovel",
+        "count": 1
+    }
+}

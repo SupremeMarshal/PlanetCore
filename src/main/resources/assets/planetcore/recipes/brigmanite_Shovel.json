@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:brigmanite"
+        },
+        "B":
+        {
+            "item": "planetcore:brigmanite_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:brigmanite_shovel",
+        "count": 1
+    }
+}

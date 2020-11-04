@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        " B",
+        " B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:copper_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:copper_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:copper_hoe",
+        "count": 1
+    }
+}

@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:lead_block"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:lead_ingot",
+        "count": 9
+    }
+}

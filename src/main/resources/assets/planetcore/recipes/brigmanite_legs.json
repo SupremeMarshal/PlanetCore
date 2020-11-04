@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:brigmanite"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:brigmanite_leggings",
+        "count": 1
+    }
+}

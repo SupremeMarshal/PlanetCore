@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:jade_rod"
+        },
+        "B":
+        {
+            "item": "planetcore:jade_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:jade_shield",
+        "count": 1
+    }
+}

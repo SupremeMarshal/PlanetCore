@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:tin_rod"
+        },
+        "B":
+        {
+            "item": "planetcore:tin_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:tin_shield",
+        "count": 1
+    }
+}

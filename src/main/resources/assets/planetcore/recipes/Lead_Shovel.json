@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:lead_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:lead_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:lead_shovel",
+        "count": 1
+    }
+}

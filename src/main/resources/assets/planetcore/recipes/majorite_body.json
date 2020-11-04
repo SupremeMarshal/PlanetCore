@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+        "AAA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:majorite"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:majorite_chestplate",
+        "count": 1
+    }
+}

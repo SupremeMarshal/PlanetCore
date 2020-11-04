@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:uranium_block"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:uranium_ingot",
+        "count": 9
+    }
+}

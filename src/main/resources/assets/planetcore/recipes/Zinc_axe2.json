@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "BA",
+        "B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:zinc_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:zinc_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:zinc_axe",
+        "count": 1
+    }
+}

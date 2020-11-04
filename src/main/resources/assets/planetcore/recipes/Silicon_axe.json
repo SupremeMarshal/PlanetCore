@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "AB",
+        " B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:silicon_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:silicon_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:silicon_axe",
+        "count": 1
+    }
+}

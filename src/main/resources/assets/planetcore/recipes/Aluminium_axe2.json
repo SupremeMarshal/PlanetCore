@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "BA",
+        "B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:aluminium_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:aluminium_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:aluminium_axe",
+        "count": 1
+    }
+}

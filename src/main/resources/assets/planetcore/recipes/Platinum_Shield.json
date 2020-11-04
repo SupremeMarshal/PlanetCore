@@ -12,13 +12,11 @@
     {
         "A":
         {
-            "type": "forge:ore_dict",
-            "ore": "ingotPlatinum"
+            "item": "planetcore:platinum_rod"
         },
         "B":
         {
-            "type": "forge:ore_dict",
-            "ore": "blockPlatinum"
+            "item": "planetcore:platinum_block"
         }
     },
     

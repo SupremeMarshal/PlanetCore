@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:bronze_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:bronze_block",
+        "count": 1
+    }
+}

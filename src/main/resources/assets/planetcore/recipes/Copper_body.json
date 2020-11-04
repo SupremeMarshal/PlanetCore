@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+        "AAA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:copper_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:copper_chestplate",
+        "count": 1
+    }
+}

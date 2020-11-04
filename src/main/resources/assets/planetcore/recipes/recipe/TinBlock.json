@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:tin_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:tin_block",
+        "count": 1
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:zinc_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:zinc_leggings",
+        "count": 1
+    }
+}

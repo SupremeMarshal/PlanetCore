@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:copper_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:copper_leggings",
+        "count": 1
+    }
+}

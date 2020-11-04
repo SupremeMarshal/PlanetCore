@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:copper_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:copper_block",
+        "count": 1
+    }
+}

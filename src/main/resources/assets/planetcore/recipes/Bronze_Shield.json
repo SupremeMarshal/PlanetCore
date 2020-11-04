@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:bronze_rod"
+        },
+        "B":
+        {
+            "item": "planetcore:bronze_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:bronze_shield",
+        "count": 1
+    }
+}

@@ -12,13 +12,11 @@
     {
         "A":
         {
-            "type": "forge:ore_dict",
-            "ore": "ingotIron"
+            "item": "planetcore:iron_rod"
         },
         "B":
         {
-            "type": "forge:ore_dict",
-            "ore": "blockIron"
+            "item": "planetcore:iron_block"
         }
     },
     
