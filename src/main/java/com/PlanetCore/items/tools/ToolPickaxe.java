@@ -79,7 +79,7 @@ public class ToolPickaxe extends ItemPickaxe {
 		tooltip.add(net.minecraft.client.resources.I18n.format("When in main hand:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((int)this.attackDamage+" Attack Damage"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(this.attackSpeed+" Attack Speed"));
-		tooltip.add(net.minecraft.client.resources.I18n.format((int)this.efficiency+" Efficiency"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(this.efficiency+" Efficiency"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((int)this.relentless+" Relentless"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " +(getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
 	}

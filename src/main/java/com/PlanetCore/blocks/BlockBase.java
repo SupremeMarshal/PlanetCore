@@ -157,12 +157,10 @@ public class BlockBase extends Block {
 		for (int material = 0; (material < 26); material++) {
 
 			if (materialItem.contains(MaterialItem[material]) && material > 13) {
-				if (a.contains("verysmall")) {
-					amount = 1;
-				} else if (a.contains("_small") || a.contains("_compact")) {
-					amount = 3;
-				} else if (a.contains("_verycompact")) {
-					amount = 6;
+				if (a.contains("_small") || a.contains("_compact")) {
+					amount = 2;
+				} else if (a.contains("_supercompact")) {
+					amount = 4;
 				} else {
 					amount = 1;
 				}

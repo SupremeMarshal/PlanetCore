@@ -2,6 +2,7 @@ package com.PlanetCore.util.handlers;
 
 
 
+import com.PlanetCore.Main;
 import com.PlanetCore.init.*;
 import com.PlanetCore.util.ModConfiguration;
 import net.minecraft.block.Block;
@@ -27,6 +28,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import scala.annotation.meta.field;
@@ -49,6 +51,7 @@ public class RegistryHandler {
 	{
 		ModBlocks.register(event.getRegistry());
 		ModBlocks.registerRenders();
+		TileEntityHandler.registerTileEntities();
 	}
 	
 	@SubscribeEvent
@@ -59,6 +62,7 @@ public class RegistryHandler {
 				.filter(item -> "planetcore".equals(item.getRegistryName().getNamespace())).forEach(item -> {
 			ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 		});
+
 
 
 
@@ -90,8 +94,9 @@ public class RegistryHandler {
 
 	public static void initRegistries(FMLInitializationEvent event) {
 
-
+		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 		SoundHandler.registerSounds();
+
 
 		OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));

@@ -31,7 +31,7 @@ public class ModSmelting {
 
 	private static final String[] Rock = {"ORE", "CRUSTROCK", "MANTLEROCK", "CORESTONE"};
 	private static final String[] Size = {"SMALL", "", "COMPACT"};
-	private static final int[] Amount = {3,1,6};
+	private static final int[] Amount = {2,1,2};
 
 
 	public static void init()
@@ -95,7 +95,21 @@ public class ModSmelting {
 			}
 		}
 
-		GameRegistry.addSmelting(ModItems.IRON_COAL, new ItemStack(ModItems.STEEL_INGOT, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.ALUMINIUM_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.LEAD_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SILICON_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.TIN_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.COPPER_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.ZINC_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.IRON_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SULFUR_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.REDSTONE_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SILVER_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.GOLD_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.PLATINUM_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
+
+
+		GameRegistry.addSmelting(ModItems.IRON_COAL, new ItemStack(ModItems.STEEL_INGOT, 1), 0.25F);
 
 
 

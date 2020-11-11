@@ -22,7 +22,7 @@ import java.io.File;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
 
-	@Instance
+    @Instance
 	public static Main instance;
 
 

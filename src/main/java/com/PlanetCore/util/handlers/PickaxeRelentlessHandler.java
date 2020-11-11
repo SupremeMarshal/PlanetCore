@@ -92,7 +92,7 @@ public class PickaxeRelentlessHandler {
                 if (event.getEntityPlayer().world.getTotalWorldTime() % 6 != 1) {
                     return;
                 }
-                event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(19)], SoundCategory.getByName("action"), 1.0F, 1.0F);
+                event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.getByName("action"), 1.0F, 1.0F);
             }
 
             if (breaktime > 0.01F && breaktime <= 0.1F) {
