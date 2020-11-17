@@ -1,6 +1,9 @@
 package com.PlanetCore.util.handlers;
 
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -43,6 +46,21 @@ public class PlayerTickEventHandler {
             return;
         }
         event.player.heal(event.player.getMaxHealth() / (12000 / event.player.getFoodStats().getFoodLevel()));
+        }
+
+        int x,y,z;
+        x = event.player.getPosition().getX();
+        y = event.player.getPosition().getY();
+        z = event.player.getPosition().getZ();
+        Iterable<BlockPos> it = BlockPos.getAllInBox(x - 2, y - 2, z - 2, x + 2, y + 2, z + 2);
+        int randomLava = new Random().nextInt(60) + 1;
+        if (randomLava == 1) {
+            for (BlockPos pos1 : it) {
+                IBlockState state2 = event.player.world.getBlockState(pos1);
+                if (state2.getMaterial() == Material.LAVA) {
+                    event.player.setFire(5);
+                }
+            }
         }
 
 
