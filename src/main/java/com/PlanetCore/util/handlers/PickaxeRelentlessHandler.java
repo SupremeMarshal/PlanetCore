@@ -61,13 +61,13 @@ public class PickaxeRelentlessHandler {
         //
         if (event.getEntityPlayer().getHeldItemMainhand().getItem() == Items.WOODEN_PICKAXE) {
             if (event.getState().getMaterial() == Material.ROCK) {
-                event.setNewSpeed(event.getOriginalSpeed() / 12F);
+                event.setNewSpeed(event.getOriginalSpeed() / 8F);
             }
         }
 
         if (event.getEntityPlayer().getHeldItemMainhand().getItem() == Items.STONE_PICKAXE) {
             if (event.getState().getMaterial() == Material.ROCK) {
-                event.setNewSpeed(event.getOriginalSpeed() / 8F);
+                event.setNewSpeed(event.getOriginalSpeed() / 5F);
             }
         }
 
