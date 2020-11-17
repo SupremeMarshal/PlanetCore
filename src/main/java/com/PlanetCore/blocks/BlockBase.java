@@ -96,7 +96,7 @@ public class BlockBase extends Block {
 
 	private static final String[] MaterialItem = {"ALUMINIUM", "ZINC", "LEAD", "TIN", "SILICON", "COPPER", "IRON", "SILVER",
 			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "TOPAZ", "JADE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
-			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX"};
+			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX", "COAL"};
 
 
 
@@ -129,6 +129,7 @@ public class BlockBase extends Block {
 		else {b = false;}
 		if (a.contains("redstone")) { c = true; if (!b) { drop = Items.REDSTONE; } else { drop = ModItems.REDSTONE_SHARD; }}
 		else if (a.contains("lapis")) { c = true; if (!b) { drop = Items.DYE; } else { drop = ModItems.LAPIS_SHARD; }}
+		else if (a.contains("coal")) { c = true; if (!b) { drop = Items.COAL; } else { drop = ModItems.COAL_BIT; }}
 		else if (a.contains("emerald")) { c = true; if (!b) { drop = Items.EMERALD; } else { drop = ModItems.EMERALD_SHARD; }}
 		else if (a.contains("sapphire")) { c = true; if (!b) { drop = ModItems.SAPPHIRE; } else { drop = ModItems.SAPPHIRE_SHARD; }}
 		else if (a.contains("ruby")) { c = true; if (!b) { drop = ModItems.RUBY; } else { drop = ModItems.RUBY_SHARD; }}
@@ -154,13 +155,13 @@ public class BlockBase extends Block {
 		String a = this.getTranslationKey();
 		String materialItem = MaterialItem[0];
 		int amount = 1;
-		for (int material = 0; (material < 26); material++) {
+		for (int material = 0; (material < 27); material++) {
 
 			if (materialItem.contains(MaterialItem[material]) && material > 13) {
 				if (a.contains("_small") || a.contains("_compact")) {
-					amount = 2;
+					amount = new Random().nextInt(3) + 1;
 				} else if (a.contains("_supercompact")) {
-					amount = 4;
+					amount = new Random().nextInt(3) + 2;
 				} else {
 					amount = 1;
 				}
@@ -202,9 +203,9 @@ public class BlockBase extends Block {
 	 */
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-			float PressureLevel = (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
+			float PressureLevel = (pos.getY() / 64 / -6000 * 100.0F) * (pos.getY() / 64 / -6000 * 100.0F) * (pos.getY() / 64 / -6000 * 100.0F);
 
-			if ((this == ModBlocks.CRUSTROCK || this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0 && (Math.random() <= (pos.getY() / -47616.0F))) {
+			if ((this == ModBlocks.CRUSTROCK || this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0 && (Math.random() <= (pos.getY() / -12000.0F))) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
@@ -385,7 +386,7 @@ public class BlockBase extends Block {
 
 	@Override
 	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
-		super.onBlockExploded(world, pos, explosion);
+
 		//naturalGasExplosion(world, pos, (IBlockState)explosion);
 		unstable(world, pos, (IBlockState)explosion);
 		//lavaDecompression(world, pos, (IBlockState)explosion);
@@ -393,7 +394,6 @@ public class BlockBase extends Block {
 
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
-		super.onPlayerDestroy(worldIn, pos, state);
 		//naturalGasExplosion(worldIn, pos, state);
 		unstable(worldIn, pos, state);
 		//lavaDecompression(worldIn, pos, state);
