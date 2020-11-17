@@ -407,6 +407,7 @@ public class ModBlocks {
 
         registry.registerAll(
 
+                new BlockBase("crustrock_cobblestone", Material.ROCK).setResistance(500).setHardness(10.0F),
                 new SinteringFurnace("sintering_furnace", false).setHardness(8.0F).setResistance(500).setCreativeTab(CreativeTabs.DECORATIONS),
                 new SinteringFurnace("lit_sintering_furnace", true).setHardness(8.0F).setResistance(500).setLightLevel(0.975F),
                 new SulfuricAcidFluid("sulfuric_acid", ModFluids.SULFURIC_ACID_FLUID, Material.WATER),

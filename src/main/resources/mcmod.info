@@ -1,10 +1,9 @@
 [
 {
   "modid": "planetcore",
-  "name": "to the Earth core",
-  "description": "dig to the center of the Earth! This mod work with Cubic Chunk. Use my preset in custom cubic chunk world.
-  YOU CAN DIG DOWN TO 10 Thousand Block DEEP",
-  "version": "1.0",
+  "name": "planetcore pre-alpha 0.0.1",
+  "description": "dig down to the planet's core! This mod work with Cubic Chunk. You need to copy paste my preset in custom cubic world.",
+  "version": "pre-alpha 0.0.1",
   "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
@@ -12,6 +11,6 @@
   "credits": "Cubic Chunk",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["Cubic Chunk, Cubic world gen, malisicore, a preset made for this mod"]
 }
 ]
