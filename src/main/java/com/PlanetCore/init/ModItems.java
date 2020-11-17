@@ -38,14 +38,14 @@ public class ModItems {
 
     public enum ToolMaterialCustom
 	{
-		ALUMINIUM(2, 30, 1.0F, 1.0F, 15, 2),
-		LEAD(2, 45, 1.5F, 1.4F, 5, 3),
-		SILICON(2, 90, 2.0F, 1.8F, 14, 3),
-		COPPER(2, 120, 3.0F, 2.4F, 10, 4),
+		ALUMINIUM(2, 45, 1.5F, 1.0F, 15, 2),
+		LEAD(2, 60, 2.0F, 1.4F, 5, 2),
+		SILICON(2, 90, 2.5F, 1.8F, 14, 3),
+		COPPER(2, 120, 3.0F, 2.4F, 10, 3),
 		ZINC(2, 150, 5.0F, 3.4F, 22, 2),
 		TIN(2, 80, 4.0F, 2.8F, 22, 2),
-		BRONZE(2, 250, 6.0F, 4.0F, 22, 4),
-		IRON(2, 500, 7.0F, 4.6F, 22, 5),
+		BRONZE(2, 250, 6.0F, 4.0F, 22, 3),
+		IRON(2, 500, 7.0F, 4.6F, 22, 4),
 		STEEL(2, 800, 9.0F, 5.2F, 22, 5),
 		SILVER(3, 300, 12.0F, 5.8F, 22, 4),
 		GOLD(3, 400, 18.0F, 6.4F, 22, 5),
@@ -832,7 +832,8 @@ public class ModItems {
 
 	public static final Item IRON_COAL = new ItemBase("iron_coal");
 	public static final Item SULFUR = new ItemBase("sulfur");
-	
+
+	public static final Item COAL_BIT = new ItemBase("coal_bit");
 	public static final Item ALUMINIUM_NUGGET = new ItemBase("aluminium_nugget");
 	public static final Item LEAD_NUGGET = new ItemBase("lead_nugget");
 	public static final Item SILICON_NUGGET = new ItemBase("silicon_nugget");
