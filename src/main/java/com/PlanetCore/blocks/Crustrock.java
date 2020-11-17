@@ -471,15 +471,13 @@ public class Crustrock extends BlockBase implements IMetaName
 
 	@Override
 	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
-		super.onBlockExploded(world, pos, explosion);
-		//naturalGasExplosion(world, pos, (IBlockState)explosion);
-		//earthquake(world, pos, (IBlockState)explosion);
 		lavaDecompression(world, pos, (IBlockState)explosion);
 	}
 
+
+
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
-		super.onPlayerDestroy(worldIn, pos, state);
 		//naturalGasExplosion(worldIn, pos, state);
 		//earthquake(worldIn, pos, state);
 		lavaDecompression(worldIn, pos, state);
