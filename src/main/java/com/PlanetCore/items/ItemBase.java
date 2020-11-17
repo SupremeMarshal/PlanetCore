@@ -5,6 +5,7 @@ import com.PlanetCore.init.ModItems;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class ItemBase extends Item  {
 
@@ -46,5 +47,11 @@ public class ItemBase extends Item  {
 		}
 	}
 
-
+	@Override
+	public int getItemBurnTime(ItemStack itemStack) {
+		if (this == ModItems.COAL_BIT)
+			return 33;
+		else
+			return super.getItemBurnTime(itemStack);
+	}
 }
