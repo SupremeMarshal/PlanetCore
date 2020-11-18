@@ -6,6 +6,7 @@ import com.PlanetCore.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityFurnace;
 
 public class ItemBase extends Item  {
 
@@ -54,4 +55,6 @@ public class ItemBase extends Item  {
 		else
 			return super.getItemBurnTime(itemStack);
 	}
+
+
 }
