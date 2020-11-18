@@ -149,22 +149,22 @@ public class ModBlocks {
      */
     public enum OreForm {
         //ORE_VERYSMALL(0.0F, 0.0F, id -> new OreBase(id, Material.ROCK)),
-        ORE_SMALL(0.5F, 0.5F, id -> new BlockBase(id, Material.ROCK)),
+        ORE_SMALL(0.25F, 0.5F, id -> new BlockBase(id, Material.ROCK)),
         ORE(1.0F, 1.0F, id -> new BlockBase(id, Material.ROCK)),
         ORE_COMPACT(4.0F, 4.0F, id -> new BlockBase(id, Material.ROCK)),
         //ORE_VERYCOMPACT(16.0F, 16.0F, id -> new OreBase(id, Material.ROCK)),
         //CRUSTROCK_VERYSMALL(0.0F, 0.0F, id -> new Crustrock(id, Material.ROCK)),
-        CRUSTROCK_SMALL(0.5F, 0.5F, id -> new Crustrock(id, Material.ROCK)),
+        CRUSTROCK_SMALL(0.25F, 0.5F, id -> new Crustrock(id, Material.ROCK)),
         CRUSTROCK(1.0F, 1.0F, id -> new Crustrock(id, Material.ROCK)),
         CRUSTROCK_COMPACT(4.0F, 4.0F, id -> new Crustrock(id, Material.ROCK)),
         //CRUSTROCK_VERYCOMPACT(16.0F, 16.0F, id -> new Crustrock(id, Material.ROCK)),
         //MANTLEROCK_VERYSMALL(0.0F, 0.0F, id -> new Mantlerock(id, Material.ROCK)),
-        MANTLEROCK_SMALL(0.5F, 0.5F, id -> new Mantlerock(id, Material.ROCK)),
+        MANTLEROCK_SMALL(0.25F, 0.5F, id -> new Mantlerock(id, Material.ROCK)),
         MANTLEROCK(1.0F, 1.0F, id -> new Mantlerock(id, Material.ROCK)),
         MANTLEROCK_COMPACT(4.0F, 4.0F, id -> new Mantlerock(id, Material.ROCK)),
         //MANTLEROCK_VERYCOMPACT(16.0F, 16.0F, id -> new Mantlerock(id, Material.ROCK)),
         //CORESTONE_VERYSMALL(0.0F, 0.0F, id -> new Corerock(id, Material.ROCK)),
-        CORESTONE_SMALL(0.5F, 0.5F, id -> new Corerock(id, Material.ROCK)),
+        CORESTONE_SMALL(0.25F, 0.5F, id -> new Corerock(id, Material.ROCK)),
         CORESTONE(1.0F, 1.0F, id -> new Corerock(id, Material.ROCK)),
         CORESTONE_COMPACT(4.0F, 4.0F, id -> new Corerock(id, Material.ROCK));
         //CORESTONE_VERYCOMPACT(16.0F, 16.0F, id -> new Corerock(id, Material.ROCK));
