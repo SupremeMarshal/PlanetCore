@@ -388,7 +388,7 @@ public class BlockBase extends Block {
 	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
 
 		//naturalGasExplosion(world, pos, (IBlockState)explosion);
-		unstable(world, pos, (IBlockState)explosion);
+		unstable(world, pos, world.getBlockState(pos));
 		//lavaDecompression(world, pos, (IBlockState)explosion);
 	}
 
