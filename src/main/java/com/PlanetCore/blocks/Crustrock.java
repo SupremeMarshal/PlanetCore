@@ -65,6 +65,14 @@ public class Crustrock extends BlockBase implements IMetaName
 	}
 
 	@Override
+	public Item getItemDropped(IBlockState state, Random random, int l) {
+		int meta = this.getMetaFromState(state);
+		if (meta >= 3 && state == ModBlocks.CRUSTROCK)
+			return Item.getItemFromBlock(ModBlocks.CRUST_COBBLESTONE);
+		else return super.getItemDropped(state, random, l);
+	}
+
+	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
 		return this.getDefaultState().withProperty(VARIANT, Crustrock.EnumType.byMetadata(meta));

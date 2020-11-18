@@ -114,7 +114,7 @@ public class ModBlocks {
         TIN(METAL, 6.0F, 1.0F),
         LEAD(METAL, 1.5F, 1.0F),
         ZINC(METAL, 10.0F, 1.0F),
-        ALUMINIUM(METAL, 0.5F, 1.0F),
+        ALUMINIUM(METAL, 0.6F, 1.0F),
         COAL(METAL, 0.0F, 0.0F);
 
         private final OreType type;
@@ -310,6 +310,8 @@ public class ModBlocks {
     public static final BlocksBase ALUMINIUM_SUPERCOMPACT = _null();
     public static final BlocksBase COAL_SUPERCOMPACT = _null();
 
+    public static final Crustrock CRUST_COBBLESTONE = _null();
+
     // GENERATED BEGIN
 
 
@@ -407,8 +409,8 @@ public class ModBlocks {
 
         registry.registerAll(
 
-                new BlockBase("crustrock_cobblestone", Material.ROCK).setResistance(500).setHardness(10.0F),
-                new SinteringFurnace("sintering_furnace", false).setHardness(8.0F).setResistance(500).setCreativeTab(CreativeTabs.DECORATIONS),
+                new BlockBase("crust_cobblestone", Material.ROCK).setResistance(6).setHardness(10.0F),
+                new SinteringFurnace("sintering_furnace", false).setHardness(12.0F).setResistance(6).setCreativeTab(CreativeTabs.DECORATIONS),
                 new SinteringFurnace("lit_sintering_furnace", true).setHardness(8.0F).setResistance(500).setLightLevel(0.975F),
                 new SulfuricAcidFluid("sulfuric_acid", ModFluids.SULFURIC_ACID_FLUID, Material.WATER),
                 new HotLavaFluid("hot_lava", ModFluids.HOT_LAVA_FLUID, Material.LAVA),
