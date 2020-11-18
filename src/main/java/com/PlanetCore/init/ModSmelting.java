@@ -17,6 +17,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 
 import static org.apache.commons.io.FilenameUtils.getName;
 
@@ -95,21 +96,19 @@ public class ModSmelting {
 			}
 		}
 
-		GameRegistry.addSmelting(ModBlocks.ALUMINIUM_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.LEAD_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.SILICON_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.TIN_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.COPPER_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.ZINC_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.IRON_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.SULFUR_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.REDSTONE_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.SILVER_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.GOLD_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.PLATINUM_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 4), 1.0F);
-
-
-		GameRegistry.addSmelting(ModItems.IRON_COAL, new ItemStack(ModItems.STEEL_INGOT, 1), 0.25F);
+		int random = new Random().nextInt(4) + 1;
+		GameRegistry.addSmelting(ModBlocks.ALUMINIUM_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.LEAD_SUPERCOMPACT, new ItemStack(ModItems.LEAD_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SILICON_SUPERCOMPACT, new ItemStack(ModItems.SILICON_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.TIN_SUPERCOMPACT, new ItemStack(ModItems.TIN_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.COPPER_SUPERCOMPACT, new ItemStack(ModItems.COPPER_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.ZINC_SUPERCOMPACT, new ItemStack(ModItems.ZINC_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.IRON_SUPERCOMPACT, new ItemStack(ModItems.IRON_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SULFUR_SUPERCOMPACT, new ItemStack(ModBlocks.SULFUR_BLOCK, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.REDSTONE_SUPERCOMPACT, new ItemStack(Blocks.REDSTONE_BLOCK, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SILVER_SUPERCOMPACT, new ItemStack(ModItems.SILVER_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.GOLD_SUPERCOMPACT, new ItemStack(ModItems.GOLD_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.PLATINUM_SUPERCOMPACT, new ItemStack(ModItems.PLATINUM_INGOT, 9), 1.0F);
 
 
 
