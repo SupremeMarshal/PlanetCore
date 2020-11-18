@@ -473,16 +473,10 @@ public class Mantlerock extends BlockBase implements IMetaName
 	//=(G26+1536)/(-12500)/64
 	//=(G152+9600)/(-12500)/64
 	public void lavaDecompression(World worldIn, BlockPos pos, IBlockState state) {
-		float chance = pos.getY()+1536/-12500/64F;
-		float chance1 = pos.getY()+9600/-12500/64F;
-		if (pos.getY() < -1530 && pos.getY() > -9536 && Math.random() <= chance && !worldIn.isRemote) {
-			worldIn.setBlockState(pos, (IBlockState) Blocks.LAVA);
-		}
-		if (pos.getY() <= -9536 && Math.random() <= 0.01F && !worldIn.isRemote) {
-			worldIn.setBlockState(pos, (IBlockState) Blocks.LAVA);
-		}
-		if (pos.getY() < -9536 && pos.getY() > -12650 && Math.random() <= chance1 && !worldIn.isRemote) {
-			worldIn.setBlockState(pos, (IBlockState) ModBlocks.CORE_LAVA_FLUID);
+		float chance = pos.getY()+1000/-3000/64F;
+		float chance1 = pos.getY()+9600/-3000/64F;
+		if (pos.getY() < -1000 && Math.random() <= chance && !worldIn.isRemote) {
+			worldIn.setBlockState(pos, ModBlocks.HOT_LAVA_FLUID.getDefaultState());
 		}
 	}
 
