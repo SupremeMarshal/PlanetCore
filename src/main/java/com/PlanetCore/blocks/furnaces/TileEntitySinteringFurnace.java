@@ -281,21 +281,21 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
 
                     if (cookTime == totalCookTime) {
                         this.cookTime = 0;
-                        if (small_tin_slot0 || small_copper_slot0) this.totalCookTime = 200;
-                        if (tin_slot0 || copper_slot0) this.totalCookTime = 1800;
-                        if (compact_tin_slot0 || compact_copper_slot0) this.totalCookTime = 5400;
+                        if (small_tin_slot0 || small_copper_slot0) this.totalCookTime = 400;
+                        if (tin_slot0 || copper_slot0) this.totalCookTime = 400;
+                        if (compact_tin_slot0 || compact_copper_slot0) this.totalCookTime = 800;
                         if (iron_nugget_25 || iron_nugget_50) this.totalCookTime = 400;
-                        if (iron_ingot_25 || iron_ingot_50) this.totalCookTime = 3600;
-                        if (iron_compact_75 || iron_compact_150) this.totalCookTime = 10800;
+                        if (iron_ingot_25 || iron_ingot_50) this.totalCookTime = 400;
+                        if (iron_compact_75 || iron_compact_150) this.totalCookTime = 800;
                         if (steel_nugget) this.totalCookTime = 800;
-                        if (steel_ingot) this.totalCookTime = 7200;
+                        if (steel_ingot) this.totalCookTime = 1600;
                         if (this.furnaceItemStacks.get(0).isEmpty() || this.furnaceItemStacks.get(1).isEmpty()) {
                             return;
                         }
                         if (this.canSmelt()) {
                             int random = new Random().nextInt(4) + 1;
                             Boolean smelt25 = random == 1;
-                            Boolean smelt50 = random <= 2;
+                            Boolean smelt50 = random <= 1;
                             Boolean smelt75 = random <= 3;
                             int amount;
                             int amount1;
@@ -319,17 +319,17 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
                                 if (bronze_compact)
                                     furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_INGOT, 3));
                                 if (iron_nugget_25)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_NUGGET, amount));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_NUGGET, 2));
                                 if (iron_nugget_50)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_NUGGET, amount1));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_NUGGET, 4));
                                 if (iron_ingot_25)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, amount));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 1));
                                 if (iron_ingot_50)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, amount1));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 2));
                                 if (iron_compact_75)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, amount2));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 2));
                                 if (iron_compact_150)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, amount3));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 4));
                                 if (steel_nugget)
                                     furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_NUGGET, amount1));
                                 if (steel_ingot)
@@ -337,11 +337,10 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
                             } else {
                                 if (bronze_nugget || bronze_ingot) this.furnaceItemStacks.get(3).grow(1);
                                 if (bronze_compact) this.furnaceItemStacks.get(3).grow(3);
-                                if (iron_nugget_25 || iron_ingot_25) this.furnaceItemStacks.get(3).grow(amount);
-                                if (iron_nugget_50 || iron_ingot_50 || steel_nugget || steel_ingot)
-                                    this.furnaceItemStacks.get(3).grow(amount1);
-                                if (iron_compact_75) this.furnaceItemStacks.get(3).grow(amount2);
-                                if (iron_compact_150) this.furnaceItemStacks.get(3).grow(amount3);
+                                if (iron_nugget_50 || iron_ingot_50) this.furnaceItemStacks.get(3).grow(2);
+                                if (steel_ingot) this.furnaceItemStacks.get(3).grow(amount1);
+                                if (iron_compact_75) this.furnaceItemStacks.get(3).grow(2);
+                                if (iron_compact_150) this.furnaceItemStacks.get(3).grow(4);
                             }
                             inputs[0].shrink(1);
                             inputs[1].shrink(1);
