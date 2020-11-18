@@ -7,6 +7,18 @@ tile.damaged_gold_anvil.name = Damaged Gold Anvil
 
 
 //TOOLS
+item.wooden_sword.name=Wooden sword
+item.wooden_shovel.name=Wooden shovel
+item.wooden_pickaxe.name=Wooden pickaxe
+item.wooden_axe.name=Wooden axe
+item.wooden_hoe.name=Wooden hoe
+
+item.stone_sword.name=Stone sword
+item.stone_shovel.name=Stone shovel
+item.stone_pickaxe.name=Stone pickaxe
+item.stone_axe.name=Stone axe
+item.stone_hoe.name=Stone hoe
+
 item.bronze_sword.name=Bronze sword
 item.bronze_shovel.name=Bronze shovel
 item.bronze_pickaxe.name=Bronze pickaxe
@@ -1982,8 +1994,7 @@ tile.centercorestone_coal.name=Blue Corerock Coal
 tile.centercorestone_redstone.name=Blue Corerock Redstone
 tile.centercorestone_sulfur.name=Blue Corerock Sulfur
 
-tile.solid_boulder.name=Solid Boulder
-tile.very_solid_boulder.name=Very Solid Boulder
+tile.crust_cobblestone.name=Crust cobblestone
 
 tile.hot_mantlerock_0.name=Hot Mantlerock
 tile.hot_mantlerock_1.name=Very Hot Mantlerock

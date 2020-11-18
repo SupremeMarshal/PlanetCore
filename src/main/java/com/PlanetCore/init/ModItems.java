@@ -38,19 +38,21 @@ public class ModItems {
 
     public enum ToolMaterialCustom
 	{
-		ALUMINIUM(2, 45, 1.5F, 1.0F, 15, 2),
-		LEAD(2, 60, 2.0F, 1.4F, 5, 2),
+		WOODEN(1,3,0.5F,0.4F,15,1),
+		STONE(1,16,1.0F,0.8F,15,2),
+		ALUMINIUM(2, 45, 1.5F, 1.0F, 15, 3),
+		LEAD(2, 60, 2.0F, 1.4F, 5, 3),
 		SILICON(2, 90, 2.5F, 1.8F, 14, 3),
-		COPPER(2, 120, 3.0F, 2.4F, 10, 3),
-		ZINC(2, 150, 5.0F, 3.4F, 22, 2),
-		TIN(2, 80, 4.0F, 2.8F, 22, 2),
-		BRONZE(2, 250, 6.0F, 4.0F, 22, 3),
+		COPPER(2, 120, 3.0F, 2.4F, 10, 4),
+		ZINC(2, 150, 5.0F, 3.4F, 22, 3),
+		TIN(2, 80, 4.0F, 2.8F, 22, 3),
+		BRONZE(2, 250, 6.0F, 4.0F, 22, 4),
 		IRON(2, 500, 7.0F, 4.6F, 22, 4),
 		STEEL(2, 800, 9.0F, 5.2F, 22, 5),
 		SILVER(3, 300, 12.0F, 5.8F, 22, 4),
 		GOLD(3, 400, 18.0F, 6.4F, 22, 5),
 		PLATINUM(3, 500, 24.0F, 7.0F, 22, 6),
-		TITANIUM(3, 1000, 30.0F, 7.6F, 22, 4),
+		TITANIUM(3, 1000, 30.0F, 7.6F, 22, 6),
 		URANIUM(4, 30, 100.0F, 9.4F, 22, 8),
 		TOPAZ(4, 300, 50.0F, 8.2F, 22, 3),
 		JADE(4, 400, 75.0F, 8.8F, 22, 2),
@@ -147,25 +149,57 @@ public class ModItems {
 		@Deprecated // Use getRepairItemStack below
 		public Item getRepairItem()
 		{
-			if (this == ALUMINIUM)
+			if (this == WOODEN)
 			{
 				return Item.getItemFromBlock(Blocks.PLANKS);
 			}
-			else if (this == LEAD)
+			else if (this == STONE)
 			{
 				return Item.getItemFromBlock(Blocks.COBBLESTONE);
 			}
+			else if (this == ALUMINIUM)
+			{
+				return ModItems.ALUMINIUM_INGOT;
+			}
+			else if (this == LEAD)
+			{
+				return ModItems.LEAD_INGOT;
+			}
+			else if (this == SILICON)
+			{
+				return ModItems.SILICON_INGOT;
+			}
+			else if (this == TIN)
+			{
+				return ModItems.TIN_INGOT;
+			}
+			else if (this == COPPER)
+			{
+				return ModItems.COPPER_INGOT;
+			}
+			else if (this == ZINC)
+			{
+				return ModItems.ZINC_INGOT;
+			}
+			else if (this == BRONZE)
+			{
+				return ModItems.BRONZE_INGOT;
+			}
+			else if (this == SILVER)
+			{
+				return ModItems.SILVER_INGOT;
+			}
 			else if (this == GOLD)
 			{
-				return Items.GOLD_INGOT;
+				return ModItems.GOLD_INGOT;
 			}
 			else if (this == IRON)
 			{
-				return Items.IRON_INGOT;
+				return ModItems.IRON_INGOT;
 			}
 			else
 			{
-				return this == DIAMOND ? Items.DIAMOND : null;
+				return this == DIAMOND ? ModItems.DIAMOND : null;
 			}
 		}
 
@@ -366,6 +400,20 @@ public class ModItems {
 	
 	
 //TOOLS
+
+	//WOODEN//
+	public static final ItemSword WOODEN_SWORD = new ToolSword("wooden_sword", ToolMaterialCustom.WOODEN);
+	public static final ItemSpade WOODEN_SHOVEL = new ToolSpade("wooden_shovel", ToolMaterialCustom.WOODEN);
+	public static final ItemPickaxe WOODEN_PICKAXE = new ToolPickaxe("wooden_pickaxe", ToolMaterialCustom.WOODEN);
+	public static final ItemAxe WOODEN_AXE = new ToolAxe("wooden_axe", ToolMaterialCustom.WOODEN);
+	public static final ItemHoe WOODEN_HOE = new ToolHoe("wooden_hoe", ToolMaterialCustom.WOODEN);
+
+	//STONE//
+	public static final ItemSword STONE_SWORD = new ToolSword("stone_sword", ToolMaterialCustom.STONE);
+	public static final ItemSpade STONE_SHOVEL = new ToolSpade("stone_shovel", ToolMaterialCustom.STONE);
+	public static final ItemPickaxe STONE_PICKAXE = new ToolPickaxe("stone_pickaxe", ToolMaterialCustom.STONE);
+	public static final ItemAxe STONE_AXE = new ToolAxe("stone_axe", ToolMaterialCustom.STONE);
+	public static final ItemHoe STONE_HOE = new ToolHoe("stone_hoe", ToolMaterialCustom.STONE);
 
 	//ALUMINIUM//
 	public static final ItemSword ALUMINIUM_SWORD = new ToolSword("aluminium_sword", ToolMaterialCustom.ALUMINIUM);

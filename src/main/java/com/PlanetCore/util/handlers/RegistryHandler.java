@@ -4,7 +4,9 @@ package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.Main;
 import com.PlanetCore.init.*;
+import com.PlanetCore.recipes.TestRecipe;
 import com.PlanetCore.util.ModConfiguration;
+import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
@@ -17,6 +19,8 @@ import net.minecraft.item.ItemStack;
 
 import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +35,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.registries.IForgeRegistryModifiable;
 import scala.annotation.meta.field;
 
 import java.lang.reflect.Field;
@@ -79,11 +84,14 @@ public class RegistryHandler {
 	}
 
 
+
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
 		ModFluids.registerFluids();
 		EntityInit.registerEntities();
 		ModConfiguration.registerConfig(event);
+		RemovingVanillaRecipes recipesEvent = new RemovingVanillaRecipes();
+		MinecraftForge.EVENT_BUS.register(recipesEvent);
 		//MinecraftForge.EVENT_BUS.register(new FogHandler());
 		//CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
 
@@ -96,7 +104,6 @@ public class RegistryHandler {
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 		SoundHandler.registerSounds();
-
 
 		OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
 		OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
@@ -124,6 +131,7 @@ public class RegistryHandler {
 		Items.WOODEN_PICKAXE.setHarvestLevel("pickaxe", 2);
 		Items.STONE_PICKAXE.setHarvestLevel("pickaxe", 2);
 		Items.IRON_PICKAXE.setHarvestLevel("pickaxe", 2);
+
 		FurnaceRecipes.instance().getSmeltingList().remove(
 				new ItemStack(Items.IRON_HORSE_ARMOR, 1, 32767),
 				new ItemStack(Items.IRON_NUGGET));

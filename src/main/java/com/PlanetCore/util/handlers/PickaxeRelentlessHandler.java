@@ -59,15 +59,9 @@ public class PickaxeRelentlessHandler {
         double Relentless = 0;
 
         //
-        if (event.getEntityPlayer().getHeldItemMainhand().getItem() == Items.WOODEN_PICKAXE) {
+        if (!event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("pickaxe")) {
             if (event.getState().getMaterial() == Material.ROCK) {
-                event.setNewSpeed(event.getOriginalSpeed() / 8F);
-            }
-        }
-
-        if (event.getEntityPlayer().getHeldItemMainhand().getItem() == Items.STONE_PICKAXE) {
-            if (event.getState().getMaterial() == Material.ROCK) {
-                event.setNewSpeed(event.getOriginalSpeed() / 5F);
+                event.setNewSpeed(event.getOriginalSpeed() / 3F);
             }
         }
 
