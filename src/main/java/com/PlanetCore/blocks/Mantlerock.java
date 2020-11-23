@@ -170,7 +170,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 
 	//Natural Gas Explosion event
 	//Upon destroying the block, it has a small chance to explode. The deeper the rock is, the more probability it has to explode with a larger explosion.
-	/*public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
+	public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
 	{
 		Random rand = new Random();
 		int X = pos.getX();
@@ -179,7 +179,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 		{
 			int Strength = Y / -768 + 2;
 			if(Y < 768) {
-				if (rand.nextInt(10000 / (Y + 768)) == 0) {
+				if (rand.nextInt(-10000 / (Y + 768)) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, Strength, true);
 				}
 			}
@@ -188,13 +188,13 @@ public class Mantlerock extends BlockBase implements IMetaName
 		{
 			if(Y < 768) {
 				int Strength = Y / -768 + 2;
-				if (rand.nextInt(5000 / (Y + 4544)) == 0) {
+				if (rand.nextInt(-5000 / (Y + 4544)) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, Strength, true);
 				}
 			}
 		}
 	}
-	*/
+
 	/*
 	public static void push(World world, int X, int Y, int Z)
 	{
@@ -495,6 +495,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 		super.onPlayerDestroy(worldIn, pos, state);
 		//naturalGasExplosion(worldIn, pos, state);
 		//earthquake(worldIn, pos, state);
+		naturalGasExplosion(worldIn, pos, state);
 		lavaDecompression(worldIn, pos, state);
 	}
 
