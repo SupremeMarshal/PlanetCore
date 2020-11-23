@@ -310,7 +310,7 @@ public class ModBlocks {
     public static final BlocksBase ALUMINIUM_SUPERCOMPACT = _null();
     public static final BlocksBase COAL_SUPERCOMPACT = _null();
 
-    public static final Crustrock CRUST_COBBLESTONE = _null();
+    public static final BlockBase CRUST_COBBLESTONE = _null();
 
     // GENERATED BEGIN
 
