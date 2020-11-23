@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -15,6 +16,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.text.Style;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -65,13 +69,25 @@ public class PickaxeRelentlessHandler {
             }
         }
 
+        int broken_chance = new Random().nextInt(10000);
+        if (broken_chance == 1 && !event.getEntityPlayer().getHeldItemMainhand().getItem().getTranslationKey().contains("complete"))
+        {
+            EntityPlayer player = event.getEntityPlayer();
+            ItemStack stack = player.getHeldItemMainhand();
+
+            stack.damageItem(stack.getMaxDamage()/5, player);
+            event.getEntityPlayer().sendMessage(new TextComponentString("The wood on the pickaxe is getting weaker").setStyle(new Style().setColor(TextFormatting.RED)));
+        }
+
         if (event.getState().getBlock() instanceof BlockBase) {
             for (int i = 0; i < 29; i++) {
                 if (event.getEntityPlayer().getHeldItemMainhand().getItem() == pickaxe[i]) {
                     Relentless = relentless[i];
+
                     if (RelentlessLevel > 0) {
                         Relentless = relentless[i] * (1 + (RelentlessLevel / 4D));
                     }
+
                     break;
                 }
             }
