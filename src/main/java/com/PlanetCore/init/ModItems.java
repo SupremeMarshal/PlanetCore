@@ -40,26 +40,44 @@ public class ModItems {
 	{
 		WOODEN(1,3,0.5F,0.4F,15,1),
 		STONE(1,16,1.0F,0.8F,15,2),
-		ALUMINIUM(2, 45, 1.5F, 1.0F, 15, 3),
-		LEAD(2, 60, 2.0F, 1.4F, 5, 3),
+		ALUMINIUM(2, 30, 1.5F, 1.0F, 15, 3),
+		COMPLETE_ALUMINIUM(2, 60, 1.5F, 1.0F, 15, 3),
+		LEAD(2, 45, 2.0F, 1.4F, 5, 3),
+		COMPLETE_LEAD(2, 90, 2.0F, 1.4F, 5, 3),
 		SILICON(2, 90, 2.5F, 1.8F, 14, 3),
+		COMPLETE_SILICON(2, 160, 2.5F, 1.8F, 14, 3),
 		COPPER(2, 120, 3.0F, 2.4F, 10, 4),
+		COMPLETE_COPPER(2, 240, 3.0F, 2.4F, 10, 4),
 		ZINC(2, 150, 5.0F, 3.4F, 22, 3),
+		COMPLETE_ZINC(2, 300, 5.0F, 3.4F, 22, 3),
 		TIN(2, 80, 4.0F, 2.8F, 22, 3),
+		COMPLETE_TIN(2, 160, 4.0F, 2.8F, 22, 3),
 		BRONZE(2, 250, 6.0F, 4.0F, 22, 4),
+		COMPLETE_BRONZE(2, 500, 6.0F, 4.0F, 22, 4),
 		IRON(2, 500, 7.0F, 4.6F, 22, 4),
+		COMPLETE_IRON(2, 1000, 7.0F, 4.6F, 22, 4),
 		STEEL(2, 800, 9.0F, 5.2F, 22, 5),
+		COMPLETE_STEEL(2, 1600, 9.0F, 5.2F, 22, 5),
 		SILVER(3, 300, 12.0F, 5.8F, 22, 4),
+		COMPLETE_SILVER(3, 600, 12.0F, 5.8F, 22, 4),
 		GOLD(3, 400, 18.0F, 6.4F, 22, 5),
+		COMPLETE_GOLD(3, 800, 18.0F, 6.4F, 22, 5),
 		PLATINUM(3, 500, 24.0F, 7.0F, 22, 6),
+		COMPLETE_PLATINUM(3, 1000, 24.0F, 7.0F, 22, 6),
 		TITANIUM(3, 1000, 30.0F, 7.6F, 22, 6),
+		COMPLETE_TITANIUM(3, 2000, 30.0F, 7.6F, 22, 6),
 		URANIUM(4, 30, 100.0F, 9.4F, 22, 8),
+		COMPLETE_URANIUM(4, 60, 100.0F, 9.4F, 22, 8),
 		TOPAZ(4, 300, 50.0F, 8.2F, 22, 3),
 		JADE(4, 400, 75.0F, 8.8F, 22, 2),
 		TUNGSTEN(4, 3000, 40.0F, 7.0F, 22, 4),
+		COMPLETE_TUNGSTEN(4, 6000, 40.0F, 7.0F, 22, 4),
 		TITANIUM_URANIUM(4, 515, 90.0F, 12.0F, 22, 8),
+		COMPLETE_TITANIUM_URANIUM(4, 1030, 90.0F, 12.0F, 22, 8),
 		TUNGSTEN_URANIUM(4, 1515, 90.0F, 12.0F, 22, 8),
+		COMPLETE_TUNGSTEN_URANIUM(4, 3030, 90.0F, 12.0F, 22, 8),
 		TUNGSTEN_TITANIUM(4, 10000, 50.0F, 9.0F, 22, 4),
+		COMPLETE_TUNGSTEN_TITANIUM(4, 20000, 50.0F, 9.0F, 22, 4),
 		EMERALD(5, 800, 200.0F, 9.6F, 22, 8),
 		RUBY(6, 1600, 500.0F, 10.2F, 22, 8),
 		SAPPHIRE(6, 1600, 500.0F, 10.2F, 22, 8),
@@ -419,6 +437,7 @@ public class ModItems {
 	public static final ItemSword ALUMINIUM_SWORD = new ToolSword("aluminium_sword", ToolMaterialCustom.ALUMINIUM);
 	public static final ItemSpade ALUMINIUM_SHOVEL = new ToolSpade("aluminium_shovel", ToolMaterialCustom.ALUMINIUM);
 	public static final ItemPickaxe ALUMINIUM_PICKAXE = new ToolPickaxe("aluminium_pickaxe", ToolMaterialCustom.ALUMINIUM);
+	public static final ItemPickaxe COMPLETE_ALUMINIUM_PICKAXE = new ToolPickaxe("complete_aluminium_pickaxe", ToolMaterialCustom.COMPLETE_ALUMINIUM);
 	public static final ItemAxe ALUMINIUM_AXE = new ToolAxe("aluminium_axe", ToolMaterialCustom.ALUMINIUM);
 	public static final ItemHoe ALUMINIUM_HOE = new ToolHoe("aluminium_hoe", ToolMaterialCustom.ALUMINIUM);
 
@@ -431,6 +450,7 @@ public class ModItems {
 	public static final ItemSword ZINC_SWORD = new ToolSword("zinc_sword", ModItems.ToolMaterialCustom.ZINC);
 	public static final ItemSpade ZINC_SHOVEL = new ToolSpade("zinc_shovel", ToolMaterialCustom.ZINC);
 	public static final ItemPickaxe ZINC_PICKAXE = new ToolPickaxe("zinc_pickaxe", ToolMaterialCustom.ZINC);
+	public static final ItemPickaxe COMPLETE_ZINC_PICKAXE = new ToolPickaxe("complete_zinc_pickaxe", ToolMaterialCustom.COMPLETE_ZINC);
 	public static final ItemAxe ZINC_AXE = new ToolAxe("zinc_axe", ToolMaterialCustom.ZINC);
 	public static final ItemHoe ZINC_HOE = new ToolHoe("zinc_hoe", ToolMaterialCustom.ZINC);
 
@@ -443,6 +463,7 @@ public class ModItems {
 	public static final ItemSword LEAD_SWORD = new ToolSword("lead_sword", ToolMaterialCustom.LEAD);
 	public static final ItemSpade LEAD_SHOVEL = new ToolSpade("lead_shovel", ToolMaterialCustom.LEAD);
 	public static final ItemPickaxe LEAD_PICKAXE = new ToolPickaxe("lead_pickaxe", ToolMaterialCustom.LEAD);
+	public static final ItemPickaxe COMPLETE_LEAD_PICKAXE = new ToolPickaxe("complete_lead_pickaxe", ToolMaterialCustom.COMPLETE_LEAD);
 	public static final ItemAxe LEAD_AXE = new ToolAxe("lead_axe", ToolMaterialCustom.LEAD);
 	public static final ItemHoe LEAD_HOE = new ToolHoe("lead_hoe", ToolMaterialCustom.LEAD);
 
@@ -455,6 +476,7 @@ public class ModItems {
 	public static final ItemSword TIN_SWORD = new ToolSword("tin_sword", ToolMaterialCustom.TIN);
 	public static final ItemSpade TIN_SHOVEL = new ToolSpade("tin_shovel", ToolMaterialCustom.TIN);
 	public static final ItemPickaxe TIN_PICKAXE = new ToolPickaxe("tin_pickaxe", ToolMaterialCustom.TIN);
+	public static final ItemPickaxe COMPLETE_TIN_PICKAXE = new ToolPickaxe("complete_tin_pickaxe", ToolMaterialCustom.COMPLETE_TIN);
 	public static final ItemAxe TIN_AXE = new ToolAxe("tin_axe", ToolMaterialCustom.TIN);
 	public static final ItemHoe TIN_HOE = new ToolHoe("tin_hoe", ToolMaterialCustom.TIN);
 
@@ -467,6 +489,7 @@ public class ModItems {
 	public static final ItemSword SILICON_SWORD = new ToolSword("silicon_sword", ToolMaterialCustom.SILICON);
 	public static final ItemSpade SILICON_SHOVEL = new ToolSpade("silicon_shovel", ToolMaterialCustom.SILICON);
 	public static final ItemPickaxe SILICON_PICKAXE = new ToolPickaxe("silicon_pickaxe", ToolMaterialCustom.SILICON);
+	public static final ItemPickaxe COMPLETE_SILICON_PICKAXE = new ToolPickaxe("complete_silicon_pickaxe", ToolMaterialCustom.COMPLETE_SILICON);
 	public static final ItemAxe SILICON_AXE = new ToolAxe("silicon_axe", ToolMaterialCustom.SILICON);
 	public static final ItemHoe SILICON_HOE = new ToolHoe("silicon_hoe", ToolMaterialCustom.SILICON);
 
@@ -479,6 +502,7 @@ public class ModItems {
 	public static final ItemSword COPPER_SWORD = new ToolSword("copper_sword", ToolMaterialCustom.COPPER);
 	public static final ItemSpade COPPER_SHOVEL = new ToolSpade("copper_shovel", ToolMaterialCustom.COPPER);
 	public static final ItemPickaxe COPPER_PICKAXE = new ToolPickaxe("copper_pickaxe", ToolMaterialCustom.COPPER);
+	public static final ItemPickaxe COMPLETE_COPPER_PICKAXE = new ToolPickaxe("complete_copper_pickaxe", ToolMaterialCustom.COMPLETE_COPPER);
 	public static final ItemAxe COPPER_AXE = new ToolAxe("copper_axe", ToolMaterialCustom.COPPER);
 	public static final ItemHoe COPPER_HOE = new ToolHoe("copper_hoe", ToolMaterialCustom.COPPER);
 
@@ -491,6 +515,7 @@ public class ModItems {
 	public static final ItemSword IRON_SWORD = new ToolSword("iron_sword", ToolMaterialCustom.IRON);
 	public static final ItemSpade IRON_SHOVEL = new ToolSpade("iron_shovel", ToolMaterialCustom.IRON);
 	public static final ItemPickaxe IRON_PICKAXE = new ToolPickaxe("iron_pickaxe", ToolMaterialCustom.IRON);
+	public static final ItemPickaxe COMPLETE_IRON_PICKAXE = new ToolPickaxe("complete_iron_pickaxe", ToolMaterialCustom.COMPLETE_IRON);
 	public static final ItemAxe IRON_AXE = new ToolAxe("iron_axe", ToolMaterialCustom.IRON);
 	public static final ItemHoe IRON_HOE = new ToolHoe("iron_hoe", ToolMaterialCustom.IRON);
 	
@@ -503,6 +528,7 @@ public class ModItems {
 	public static final ItemSword STEEL_SWORD = new ToolSword("steel_sword", ToolMaterialCustom.STEEL);
 	public static final ItemSpade STEEL_SHOVEL = new ToolSpade("steel_shovel", ToolMaterialCustom.STEEL);
 	public static final ItemPickaxe STEEL_PICKAXE = new ToolPickaxe("steel_pickaxe", ToolMaterialCustom.STEEL);
+	public static final ItemPickaxe COMPLETE_STEEL_PICKAXE = new ToolPickaxe("complete_steel_pickaxe", ToolMaterialCustom.COMPLETE_STEEL);
 	public static final ItemAxe STEEL_AXE = new ToolAxe("steel_axe", ToolMaterialCustom.STEEL);
 	public static final ItemHoe STEEL_HOE = new ToolHoe("steel_hoe", ToolMaterialCustom.STEEL);
 	
@@ -515,6 +541,7 @@ public class ModItems {
 	public static final ItemSword BRONZE_SWORD = new ToolSword("bronze_sword", ToolMaterialCustom.BRONZE);
 	public static final ItemSpade BRONZE_SHOVEL = new ToolSpade("bronze_shovel", ToolMaterialCustom.BRONZE);
 	public static final ItemPickaxe BRONZE_PICKAXE = new ToolPickaxe("bronze_pickaxe", ToolMaterialCustom.BRONZE);
+	public static final ItemPickaxe COMPLETE_BRONZE_PICKAXE = new ToolPickaxe("complete_bronze_pickaxe", ToolMaterialCustom.COMPLETE_BRONZE);
 	public static final ItemAxe BRONZE_AXE = new ToolAxe("bronze_axe", ToolMaterialCustom.BRONZE);
 	public static final ItemHoe BRONZE_HOE = new ToolHoe("bronze_hoe", ToolMaterialCustom.BRONZE);
 
@@ -527,6 +554,7 @@ public class ModItems {
 	public static final ItemSword SILVER_SWORD = new ToolSword("silver_sword", ToolMaterialCustom.SILVER);
 	public static final ItemSpade SILVER_SHOVEL = new ToolSpade("silver_shovel", ToolMaterialCustom.SILVER);
 	public static final ItemPickaxe SILVER_PICKAXE = new ToolPickaxe("silver_pickaxe", ToolMaterialCustom.SILVER);
+	public static final ItemPickaxe COMPLETE_SILVER_PICKAXE = new ToolPickaxe("complete_silver_pickaxe", ToolMaterialCustom.COMPLETE_SILVER);
 	public static final ItemAxe SILVER_AXE = new ToolAxe("silver_axe", ToolMaterialCustom.SILVER);
 	public static final ItemHoe SILVER_HOE = new ToolHoe("silver_hoe", ToolMaterialCustom.SILVER);
 	
@@ -539,6 +567,7 @@ public class ModItems {
 	public static final ItemSword GOLD_SWORD = new ToolSword("gold_sword", ToolMaterialCustom.GOLD);
 	public static final ItemSpade GOLD_SHOVEL = new ToolSpade("gold_shovel", ToolMaterialCustom.GOLD);
 	public static final ItemPickaxe GOLD_PICKAXE = new ToolPickaxe("gold_pickaxe", ToolMaterialCustom.GOLD);
+	public static final ItemPickaxe COMPLETE_GOLD_PICKAXE = new ToolPickaxe("complete_gold_pickaxe", ToolMaterialCustom.COMPLETE_GOLD);
 	public static final ItemAxe GOLD_AXE = new ToolAxe("gold_axe", ToolMaterialCustom.GOLD);
 	public static final ItemHoe GOLD_HOE = new ToolHoe("gold_hoe", ToolMaterialCustom.GOLD);
 	
@@ -556,6 +585,7 @@ public class ModItems {
 	public static final ItemSword PLATINUM_SWORD = new ToolSword("platinum_sword", ToolMaterialCustom.PLATINUM);
 	public static final ItemSpade PLATINUM_SHOVEL = new ToolSpade("platinum_shovel", ToolMaterialCustom.PLATINUM);
 	public static final ItemPickaxe PLATINUM_PICKAXE = new ToolPickaxe("platinum_pickaxe", ToolMaterialCustom.PLATINUM);
+	public static final ItemPickaxe COMPLETE_PLATINUM_PICKAXE = new ToolPickaxe("complete_platinum_pickaxe", ToolMaterialCustom.COMPLETE_PLATINUM);
 	public static final ItemAxe PLATINUM_AXE = new ToolAxe("platinum_axe", ToolMaterialCustom.PLATINUM);
 	public static final ItemHoe PLATINUM_HOE = new ToolHoe("platinum_hoe", ToolMaterialCustom.PLATINUM);
 	
@@ -568,6 +598,7 @@ public class ModItems {
 	public static final ItemSword TITANIUM_SWORD = new ToolSword("titanium_sword", ToolMaterialCustom.TITANIUM);
 	public static final ItemSpade TITANIUM_SHOVEL = new ToolSpade("titanium_shovel", ToolMaterialCustom.TITANIUM);
 	public static final ItemPickaxe TITANIUM_PICKAXE = new ToolPickaxe("titanium_pickaxe", ToolMaterialCustom.TITANIUM);
+	public static final ItemPickaxe COMPLETE_TITANIUM_PICKAXE = new ToolPickaxe("complete_titanium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM);
 	public static final ItemAxe TITANIUM_AXE = new ToolAxe("titanium_axe", ToolMaterialCustom.TITANIUM);
 	public static final ItemHoe TITANIUM_HOE = new ToolHoe("titanium_hoe", ToolMaterialCustom.TITANIUM);
 
@@ -580,6 +611,7 @@ public class ModItems {
 	public static final ItemSword URANIUM_SWORD = new ToolSword("uranium_sword", ToolMaterialCustom.URANIUM);
 	public static final ItemSpade URANIUM_SHOVEL = new ToolSpade("uranium_shovel", ToolMaterialCustom.URANIUM);
 	public static final ItemPickaxe URANIUM_PICKAXE = new ToolPickaxe("uranium_pickaxe", ToolMaterialCustom.URANIUM);
+	public static final ItemPickaxe COMPLETE_URANIUM_PICKAXE = new ToolPickaxe("complete_uranium_pickaxe", ToolMaterialCustom.COMPLETE_URANIUM);
 	public static final ItemAxe URANIUM_AXE = new ToolAxe("uranium_axe", ToolMaterialCustom.URANIUM);
 	public static final ItemHoe URANIUM_HOE = new ToolHoe("uranium_hoe", ToolMaterialCustom.URANIUM);
 
@@ -616,6 +648,7 @@ public class ModItems {
 	public static final ItemSword TUNGSTEN_SWORD = new ToolSword("tungsten_sword", ToolMaterialCustom.TUNGSTEN);
 	public static final ItemSpade TUNGSTEN_SHOVEL = new ToolSpade("tungsten_shovel", ToolMaterialCustom.TUNGSTEN);
 	public static final ItemPickaxe TUNGSTEN_PICKAXE = new ToolPickaxe("tungsten_pickaxe", ToolMaterialCustom.TUNGSTEN);
+	public static final ItemPickaxe COMPLETE_TUNGSTEN_PICKAXE = new ToolPickaxe("complete_tungsten_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
 	public static final ItemAxe TUNGSTEN_AXE = new ToolAxe("tungsten_axe", ToolMaterialCustom.TUNGSTEN);
 	public static final ItemHoe TUNGSTEN_HOE = new ToolHoe("tungsten_hoe", ToolMaterialCustom.TUNGSTEN);
 
@@ -628,6 +661,7 @@ public class ModItems {
 	public static final ItemSword TITANIUM_URANIUM_SWORD = new ToolSword("titanium_uranium_sword", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemSpade TITANIUM_URANIUM_SHOVEL = new ToolSpade("titanium_uranium_shovel", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemPickaxe TITANIUM_URANIUM_PICKAXE = new ToolPickaxe("titanium_uranium_pickaxe", ToolMaterialCustom.TITANIUM_URANIUM);
+	public static final ItemPickaxe COMPLETE_TITANIUM_URANIUM_PICKAXE = new ToolPickaxe("complete_titanium_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
 	public static final ItemAxe TITANIUM_URANIUM_AXE = new ToolAxe("titanium_uranium_axe", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemHoe TITANIUM_URANIUM_HOE = new ToolHoe("titanium_uranium_hoe", ToolMaterialCustom.TITANIUM_URANIUM);
 
@@ -640,6 +674,7 @@ public class ModItems {
 	public static final ItemSword TUNGSTEN_URANIUM_SWORD = new ToolSword("tungsten_uranium_sword", ToolMaterialCustom.TUNGSTEN_URANIUM);
 	public static final ItemSpade TUNGSTEN_URANIUM_SHOVEL = new ToolSpade("tungsten_uranium_shovel", ToolMaterialCustom.TUNGSTEN_URANIUM);
 	public static final ItemPickaxe TUNGSTEN_URANIUM_PICKAXE = new ToolPickaxe("tungsten_uranium_pickaxe", ToolMaterialCustom.TUNGSTEN_URANIUM);
+	public static final ItemPickaxe COMPLETE_TUNGSTEN_URANIUM_PICKAXE = new ToolPickaxe("complete_tungsten_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN_URANIUM);
 	public static final ItemAxe TUNGSTEN_URANIUM_AXE = new ToolAxe("tungsten_uranium_axe", ToolMaterialCustom.TUNGSTEN_URANIUM);
 	public static final ItemHoe TUNGSTEN_URANIUM_HOE = new ToolHoe("tungsten_uranium_hoe", ToolMaterialCustom.TUNGSTEN_URANIUM);
 
@@ -652,6 +687,7 @@ public class ModItems {
 	public static final ItemSword TUNGSTEN_TITANIUM_SWORD = new ToolSword("tungsten_titanium_sword", ToolMaterialCustom.TUNGSTEN_TITANIUM);
 	public static final ItemSpade TUNGSTEN_TITANIUM_SHOVEL = new ToolSpade("tungsten_titanium_shovel", ToolMaterialCustom.TUNGSTEN_TITANIUM);
 	public static final ItemPickaxe TUNGSTEN_TITANIUM_PICKAXE = new ToolPickaxe("tungsten_titanium_pickaxe", ToolMaterialCustom.TUNGSTEN_TITANIUM);
+	public static final ItemPickaxe COMPLETE_TUNGSTEN_TITANIUM_PICKAXE = new ToolPickaxe("complete_tungsten_titanium_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN_TITANIUM);
 	public static final ItemAxe TUNGSTEN_TITANIUM_AXE = new ToolAxe("tungsten_titanium_axe", ToolMaterialCustom.TUNGSTEN_TITANIUM);
 	public static final ItemHoe TUNGSTEN_TITANIUM_HOE = new ToolHoe("tungsten_titanium_hoe", ToolMaterialCustom.TUNGSTEN_TITANIUM);
 
