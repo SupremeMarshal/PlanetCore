@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "pre-alpha 004"
+version = "pre-alpha 005"
 group = "com.PlanetCore.planetcore" 
 archivesBaseName = "planetcore"
 
