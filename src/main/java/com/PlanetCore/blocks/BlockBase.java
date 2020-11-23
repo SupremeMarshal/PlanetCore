@@ -144,6 +144,7 @@ public class BlockBase extends Block {
 		else if (a.contains("majorite")) { c = true; if (!b) { drop = ModItems.MAJORITE; } else { drop = ModItems.MAJORITE_SHARD; }}
 		else if (a.contains("onyx")) { c = true; if (!b) { drop = ModItems.ONYX; } else { drop = ModItems.ONYX_SHARD; }}
 		else { c = false;  }
+
 		if (!c) { return new ItemStack(this, 1, 0).getItem(); }
 		else { return new ItemStack(drop, 1, 0).getItem(); }
 	}
@@ -178,7 +179,9 @@ public class BlockBase extends Block {
 
 	@Override
 	public boolean canDropFromExplosion(Explosion explosionIn) {
-		return false;
+		int random = new Random().nextInt(3)+1;
+		if (random == 1) return true;
+		else return false;
 	}
 
 	@Override
@@ -381,7 +384,6 @@ public class BlockBase extends Block {
 			}
 		}
 	}
-
 
 
 	@Override
