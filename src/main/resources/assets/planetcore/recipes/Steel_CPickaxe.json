@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:platinum_ingot"
+            "item": "planetcore:steel_ingot"
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:steel_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:platinum_pickaxe",
+        "item": "planetcore:complete_steel_pickaxe",
         "count": 1
     }
 }
