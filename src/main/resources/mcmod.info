@@ -1,9 +1,9 @@
 [
 {
   "modid": "planetcore",
-  "name": "planetcore pre-alpha 0.0.8",
+  "name": "planetcore alpha 0.0.9",
   "description": "dig down to the planet's core! This mod work with Cubic Chunk. You need to copy paste my preset in custom cubic world.",
-  "version": "pre-alpha 0.0.8",
+  "version": "alpha 0.0.9",
   "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
