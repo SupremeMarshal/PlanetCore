@@ -206,13 +206,13 @@ public class BlockBase extends Block {
 	 */
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-			float PressureLevel = (pos.getY() / 64 / -6000 * 100.0F) * (pos.getY() / 64 / -6000 * 100.0F) * (pos.getY() / 64 / -6000 * 100.0F);
+			float PressureLevel = (pos.getY() / 64 / -24000 * 100.0F) * (pos.getY() / 64 / -24000 * 100.0F) * (pos.getY() / 64 / -24000 * 100.0F);
 
-			if ((this == ModBlocks.CRUSTROCK || this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0 && (Math.random() <= (pos.getY() / -12000.0F))) {
+			if ((this == ModBlocks.CRUSTROCK || this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < 500 && (Math.random() <= (pos.getY()+499 / -12000.0F))) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
+					if (!movedState.getBlock().getTranslationKey().contains("crustrock") || movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
