@@ -38,8 +38,8 @@ public class ModItems {
 
     public enum ToolMaterialCustom
 	{
-		WOODEN(1,3,0.5F,0.4F,15,1),
-		STONE(1,16,1.0F,0.8F,15,2),
+		WOODEN(1,2,0.5F,0.4F,15,1),
+		STONE(1,15,1.0F,0.8F,15,3),
 		ALUMINIUM(2, 30, 1.5F, 1.0F, 15, 3),
 		COMPLETE_ALUMINIUM(2, 60, 1.5F, 1.0F, 15, 3),
 		LEAD(2, 45, 2.0F, 1.4F, 5, 3),
@@ -52,12 +52,12 @@ public class ModItems {
 		COMPLETE_ZINC(2, 300, 5.0F, 3.4F, 22, 3),
 		TIN(2, 80, 4.0F, 2.8F, 22, 3),
 		COMPLETE_TIN(2, 160, 4.0F, 2.8F, 22, 3),
-		BRONZE(2, 250, 6.0F, 4.0F, 22, 4),
-		COMPLETE_BRONZE(2, 500, 6.0F, 4.0F, 22, 4),
+		BRONZE(2, 250, 9.0F, 4.0F, 22, 3),
+		COMPLETE_BRONZE(2, 500, 9.0F, 4.0F, 22, 3),
 		IRON(2, 500, 7.0F, 4.6F, 22, 4),
 		COMPLETE_IRON(2, 1000, 7.0F, 4.6F, 22, 4),
-		STEEL(2, 800, 9.0F, 5.2F, 22, 5),
-		COMPLETE_STEEL(2, 1600, 9.0F, 5.2F, 22, 5),
+		STEEL(2, 800, 8.0F, 5.2F, 22, 5),
+		COMPLETE_STEEL(2, 1600, 8.0F, 5.2F, 22, 5),
 		SILVER(3, 300, 12.0F, 5.8F, 22, 4),
 		COMPLETE_SILVER(3, 600, 12.0F, 5.8F, 22, 4),
 		GOLD(3, 400, 18.0F, 6.4F, 22, 5),
@@ -78,7 +78,7 @@ public class ModItems {
 		COMPLETE_TUNGSTEN_URANIUM(4, 3030, 90.0F, 12.0F, 22, 8),
 		TUNGSTEN_TITANIUM(4, 10000, 50.0F, 9.0F, 22, 4),
 		COMPLETE_TUNGSTEN_TITANIUM(4, 20000, 50.0F, 9.0F, 22, 4),
-		EMERALD(5, 800, 200.0F, 9.6F, 22, 8),
+		EMERALD(5, 100, 16.0F, 6.6F, 22, 5),
 		RUBY(6, 1600, 500.0F, 10.2F, 22, 8),
 		SAPPHIRE(6, 1600, 500.0F, 10.2F, 22, 8),
 		DIAMOND(10, 3200, 1000.0F, 10.8F, 22, 16),
@@ -383,7 +383,7 @@ public class ModItems {
 			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD = EnumHelper.addArmorMaterial("armor_material_emerald", Reference.MOD_ID + ":emerald", 36,
-			new int[] {5, 8, 7, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
+			new int[] {3, 5, 4, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 36,
 			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F);
@@ -848,6 +848,7 @@ public class ModItems {
 	public static final Item AMAZONITE_SHARD = new ItemBase("amazonite_shard");
 	public static final Item MAJORITE_SHARD = new ItemBase("majorite_shard");
 	public static final Item ONYX_SHARD = new ItemBase("onyx_shard");
+	public static final Item EMERALD = new ItemBase("emerald");
 	public static final Item SAPPHIRE = new ItemBase("sapphire");
 	public static final Item RUBY = new ItemBase("ruby");
 	public static final Item TOPAZ = new ItemBase("topaz");

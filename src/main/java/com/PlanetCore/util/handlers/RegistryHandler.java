@@ -55,7 +55,6 @@ public class RegistryHandler {
 	public static void onBlockRegister(RegistryEvent.Register<Block> event)
 	{
 		ModBlocks.register(event.getRegistry());
-		ModBlocks.registerRenders();
 		TileEntityHandler.registerTileEntities();
 	}
 	
@@ -88,7 +87,7 @@ public class RegistryHandler {
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{
 		ModFluids.registerFluids();
-		EntityInit.registerEntities();
+		//EntityInit.registerEntities();
 		ModConfiguration.registerConfig(event);
 		RemovingVanillaRecipes recipesEvent = new RemovingVanillaRecipes();
 		MinecraftForge.EVENT_BUS.register(recipesEvent);

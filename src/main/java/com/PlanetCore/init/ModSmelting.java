@@ -32,7 +32,7 @@ public class ModSmelting {
 
 	private static final String[] Rock = {"ORE", "CRUSTROCK", "MANTLEROCK", "CORESTONE"};
 	private static final String[] Size = {"SMALL", "", "COMPACT"};
-	private static final int[] Amount = {2,1,2};
+	private static final int[] Amount = {1,1,3};
 
 
 	public static void init()
@@ -71,7 +71,7 @@ public class ModSmelting {
 					}
 				}
 
-				item = ItemBase.getByNameOrId(itemname).getDefaultInstance().getItem();
+				item = ItemBase.getByNameOrId(itemname);
 
 				for (int rock = 0; rock < 4; rock++)
 				{
@@ -104,7 +104,7 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.COPPER_SUPERCOMPACT, new ItemStack(ModItems.COPPER_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.ZINC_SUPERCOMPACT, new ItemStack(ModItems.ZINC_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.IRON_SUPERCOMPACT, new ItemStack(ModItems.IRON_INGOT, 9), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.SULFUR_SUPERCOMPACT, new ItemStack(ModBlocks.SULFUR_BLOCK, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SULFUR_SUPERCOMPACT, new ItemStack(ModItems.SULFUR, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.REDSTONE_SUPERCOMPACT, new ItemStack(Blocks.REDSTONE_BLOCK, 1), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.SILVER_SUPERCOMPACT, new ItemStack(ModItems.SILVER_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.GOLD_SUPERCOMPACT, new ItemStack(ModItems.GOLD_INGOT, 9), 1.0F);

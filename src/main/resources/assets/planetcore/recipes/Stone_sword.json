@@ -12,7 +12,7 @@
     {
         "A":
         {
-            "item": "minecraft:stone"
+            "item": "minecraft:cobblestone"
         },
         "B":
         {
@@ -22,7 +22,7 @@
     
     "result":
     {
-        "item": "planetcore:stone_hoe",
+        "item": "planetcore:stone_sword",
         "count": 1
     }
 }

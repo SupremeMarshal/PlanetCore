@@ -212,7 +212,7 @@ public class BlockBase extends Block {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
+					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
@@ -300,7 +300,7 @@ public class BlockBase extends Block {
 						int y2 = pos3.getY();
 						int z2 = pos3.getZ();
 						{
-							EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x2 + 0.5, y2, z2 + 0.5, worldIn.getBlockState(pos3));
+							EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x2 + 0.5, y2, z2 + 0.5,state3);
 							entityfallingblock.setHurtEntities(true);
 							worldIn.spawnEntity(entityfallingblock);
 						}

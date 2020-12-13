@@ -247,6 +247,18 @@ public class ModBlocks {
     public static final Crustrock CRUSTROCK_TIN = _null();
     public static final Crustrock CRUSTROCK_COMPACT_TIN = _null();
 
+    public static final BlockBase ORE_SMALL_IRON = _null();
+    public static final BlockBase ORE_IRON = _null();
+    public static final BlockBase ORE_COMPACT_IRON = _null();
+
+    public static final Crustrock CRUSTROCK_SMALL_IRON = _null();
+    public static final Crustrock CRUSTROCK_IRON = _null();
+    public static final Crustrock CRUSTROCK_COMPACT_IRON = _null();
+
+    public static final Mantlerock MANTLEROCK_SMALL_IRON = _null();
+    public static final Mantlerock MANTLEROCK_IRON = _null();
+    public static final Mantlerock MANTLEROCK_COMPACT_IRON = _null();
+
     public static final Mantlerock MANTLEROCK_SMALL_COPPER = _null();
     public static final Mantlerock MANTLEROCK_COPPER = _null();
     public static final Mantlerock MANTLEROCK_COMPACT_COPPER = _null();
@@ -448,25 +460,25 @@ public class ModBlocks {
                 new BlocksBase("majorite_block", Material.ROCK).setResistance(500),
                 new BlocksBase("amazonite_block", Material.ROCK).setResistance(500),
                 new BlocksBase("onyx_block", Material.ROCK).setResistance(500),
-                new BlocksBase("sulfur_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("redstone_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("lapis_supercompact", Material.ROCK).setResistance(500),
+                new BlocksBase("sulfur_supercompact", Material.ROCK).setResistance(500).setHardness(64),
+                new BlocksBase("redstone_supercompact", Material.ROCK).setResistance(500).setHardness(192),
+                new BlocksBase("lapis_supercompact", Material.ROCK).setResistance(500).setHardness(224),
                 new BlocksBase("coal_supercompact", Material.ROCK).setResistance(500).setHardness(5.0F),
-                new BlocksBase("aluminium_supercompact", Material.ROCK).setResistance(500).setHardness(10.0F),
-                new BlocksBase("zinc_supercompact", Material.ROCK).setResistance(500).setHardness(100.0F),
-                new BlocksBase("lead_supercompact", Material.ROCK).setResistance(500).setHardness(20.0F),
-                new BlocksBase("tin_supercompact", Material.ROCK).setResistance(500).setHardness(65.0F),
-                new BlocksBase("copper_supercompact", Material.ROCK).setResistance(500).setHardness(85.0F),
-                new BlocksBase("silicon_supercompact", Material.ROCK).setResistance(500).setHardness(35.0F),
-                new BlocksBase("iron_supercompact", Material.ROCK).setResistance(500).setHardness(185.0F),
-                new BlocksBase("silver_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("gold_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("platinum_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("titanium_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("uranium_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("tungsten_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("topaz_supercompact", Material.ROCK).setResistance(500),
-                new BlocksBase("jade_supercompact", Material.ROCK).setResistance(500),
+                new BlocksBase("aluminium_supercompact", Material.ROCK).setResistance(500).setHardness(9.6F),
+                new BlocksBase("zinc_supercompact", Material.ROCK).setResistance(500).setHardness(160.0F),
+                new BlocksBase("lead_supercompact", Material.ROCK).setResistance(500).setHardness(24.0F),
+                new BlocksBase("tin_supercompact", Material.ROCK).setResistance(500).setHardness(96.0F),
+                new BlocksBase("copper_supercompact", Material.ROCK).setResistance(500).setHardness(128.0F),
+                new BlocksBase("silicon_supercompact", Material.ROCK).setResistance(500).setHardness(48.0F),
+                new BlocksBase("iron_supercompact", Material.ROCK).setResistance(500).setHardness(288.0F),
+                new BlocksBase("silver_supercompact", Material.ROCK).setResistance(500).setHardness(544),
+                new BlocksBase("gold_supercompact", Material.ROCK).setResistance(500).setHardness(944),
+                new BlocksBase("platinum_supercompact", Material.ROCK).setResistance(500).setHardness(1520),
+                new BlocksBase("titanium_supercompact", Material.ROCK).setResistance(500).setHardness(2304),
+                new BlocksBase("uranium_supercompact", Material.ROCK).setResistance(500).setHardness(288),
+                new BlocksBase("tungsten_supercompact", Material.ROCK).setResistance(500).setHardness(8160),
+                new BlocksBase("topaz_supercompact", Material.ROCK).setResistance(500).setHardness(4624),
+                new BlocksBase("jade_supercompact", Material.ROCK).setResistance(500).setHardness(6224),
                 new BlocksBase("emerald_supercompact", Material.ROCK).setResistance(500),
                 new BlocksBase("sapphire_supercompact", Material.ROCK).setResistance(500),
                 new BlocksBase("ruby_supercompact", Material.ROCK).setResistance(500),

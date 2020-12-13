@@ -40,12 +40,16 @@ public class EntityInit
 		EntityRegistry.addSpawn(EntityHellHound.class, 20, 4, 25, EnumCreatureType.MONSTER, spawnBiomes);
 	}
 
-	private static Biome[] allbiomes(net.minecraft.util.registry.RegistryNamespaced<ResourceLocation, Biome> in) {
+	private static Biome[] allbiomes(net.minecraft.util.registry.RegistryNamespaced<ResourceLocation, Biome> in)
+	{
+
 		Iterator<Biome> itr = in.iterator();
 		ArrayList<Biome> ls = new ArrayList<Biome>();
 		while (itr.hasNext())
 			ls.add(itr.next());
 		return ls.toArray(new Biome[ls.size()]);
+
+
 	}
 	
 }

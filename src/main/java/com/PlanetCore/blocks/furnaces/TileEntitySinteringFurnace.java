@@ -32,6 +32,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import scala.Console;
 
 import java.util.Random;
 
@@ -211,41 +212,87 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
         Boolean compact_tin_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("compact_tin");
         Boolean compact_copper_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("compact_copper");
         Boolean compact_copper_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("compact_copper");
+        Boolean tin_supercompact_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("tin_supercompact");
+        Boolean tin_supercompact_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("tin_supercompact");
+        Boolean copper_supercompact_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("copper_supercompact");
+        Boolean copper_supercompact_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("copper_supercompact");
         Boolean bronze_compact = ((compact_tin_slot0 && compact_copper_slot1) || (compact_copper_slot0 && compact_tin_slot1));
+        Boolean bronze_block = (tin_supercompact_slot0 && copper_supercompact_slot1) || (tin_supercompact_slot1 && copper_supercompact_slot0);
         Boolean small_iron_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("small_iron");
         Boolean small_iron_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("small_iron");
         Boolean iron_slot0 = (this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("ore_iron") || (this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("crustrock_iron")) || (this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("mantlerock_iron")));
         Boolean iron_slot1 = (this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("ore_iron") || (this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("crustrock_iron")) || (this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("mantlerock_iron")));
         Boolean compact_iron_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("compact_iron");
         Boolean compact_iron_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("compact_iron");
-        Boolean iron_nugget_50 = ((small_iron_slot0 && small_iron_slot1) || (small_iron_slot0 && small_iron_slot1));
-        Boolean iron_nugget_25 = ((small_iron_slot0 && empty_slot1) || (empty_slot0 && small_iron_slot1));
-        Boolean iron_ingot_50 = ((iron_slot0 && iron_slot1) || (iron_slot0 && iron_slot1));
-        Boolean iron_ingot_25 = ((iron_slot0 && empty_slot1) || (empty_slot0 && iron_slot1));
+        Boolean iron_supercompact_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("iron_supercompact");
+        Boolean iron_supercompact_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("iron_supercompact");
+        Boolean iron_nugget_50 = ((small_iron_slot0 && small_iron_slot1) || (small_iron_slot0 && small_iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_NUGGET);
+        Boolean iron_nugget_25 = ((small_iron_slot0 && empty_slot1) || (empty_slot0 && small_iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_NUGGET);
+        Boolean iron_ingot_50 = ((iron_slot0 && iron_slot1) || (iron_slot0 && iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);
+        Boolean iron_ingot_25 = ((iron_slot0 && empty_slot1) || (empty_slot0 && iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);;
         Boolean iron_compact_150 = ((compact_iron_slot0 && compact_iron_slot1) || (compact_iron_slot0 && compact_iron_slot1));
         Boolean iron_compact_75 = ((compact_iron_slot0 && empty_slot1) || (empty_slot0 && compact_iron_slot1));
         Boolean iron_nugget_slot0 = this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_NUGGET;
         Boolean iron_nugget_slot1 = this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_NUGGET;
         Boolean iron_ingot_slot0 = this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT;
         Boolean iron_ingot_slot1 = this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT;
+        Boolean iron_block = (iron_supercompact_slot0 && empty_slot1) || (iron_supercompact_slot1 && empty_slot0);
+        Boolean iron_block_double = (iron_supercompact_slot0 && iron_supercompact_slot1);
         Boolean coal_slot0 = this.furnaceItemStacks.get(0).getItem() == Items.COAL;
         Boolean coal_slot1 = this.furnaceItemStacks.get(1).getItem() == Items.COAL;
         Boolean coal_block_slot0 = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.COAL_SUPERCOMPACT));
         Boolean coal_block_slot1 = (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.COAL_SUPERCOMPACT));
-        Boolean steel_nugget = ((iron_nugget_slot0 && coal_slot1) || (iron_nugget_slot1 && coal_slot0));
-        Boolean steel_ingot = ((iron_ingot_slot0 && coal_block_slot1) || (iron_ingot_slot1 && coal_block_slot0));
+        Boolean steel_nugget = ((iron_nugget_slot0 && coal_slot1) || (iron_nugget_slot1 && coal_slot0) || (small_iron_slot0 && coal_slot1) || (small_iron_slot1 && coal_slot0));
+        Boolean steel_ingot =
+                (
+                (iron_ingot_slot0 && coal_block_slot1) || (iron_ingot_slot1 && coal_block_slot0)
+                        || (iron_slot0 && coal_slot1 && this.furnaceItemStacks.get(1).getCount() >= 3)
+                        || (iron_slot1 && coal_slot0 && this.furnaceItemStacks.get(0).getCount() >= 3));
+        Boolean steel_ingot_compact =
+                (
+                (iron_ingot_slot0 && coal_block_slot1) || (iron_ingot_slot1 && coal_block_slot0)
+                || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.ORE_COMPACT_IRON)
+                || this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_IRON)
+                || this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_IRON)
+                && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)
+                && this.furnaceItemStacks.get(0).getCount() >= 3)
+                || (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.ORE_COMPACT_IRON)
+                || this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_IRON)
+                || this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_IRON)
+                && this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)
+                && this.furnaceItemStacks.get(0).getCount() >= 3)
+                );
+        Boolean steel_block =
+                (
+                (iron_ingot_slot0 && coal_block_slot1) || (iron_ingot_slot1 && coal_block_slot0)
+                || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_SUPERCOMPACT)
+                || this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK)
+                && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)
+                && this.furnaceItemStacks.get(1).getCount() >= 9)
+                || (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_SUPERCOMPACT)
+                || this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK)
+                && this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)
+                && this.furnaceItemStacks.get(0).getCount() >= 9)
+                );
         boolean flag = this.isBurning();
         boolean flag1 = false;
         if (this.isBurning()) {
             --this.furnaceBurnTime;
-            if (small_tin_slot0 || small_copper_slot0) this.totalCookTime = 200;
-            if (tin_slot0 || copper_slot0) this.totalCookTime = 400;
-            if (compact_tin_slot0 || compact_copper_slot0) this.totalCookTime = 800;
-            if (iron_nugget_25 || iron_nugget_50) this.totalCookTime = 400;
-            if (iron_ingot_25 || iron_ingot_50) this.totalCookTime = 800;
-            if (iron_compact_75 || iron_compact_150) this.totalCookTime = 1600;
-            if (steel_nugget) this.totalCookTime = 800;
-            if (steel_ingot) this.totalCookTime = 1600;
+            if (iron_nugget_25 || iron_nugget_50) this.totalCookTime = 200;
+            if (iron_ingot_25) this.totalCookTime = 200;
+            if (iron_ingot_50) this.totalCookTime = 400;
+            if (iron_compact_75) this.totalCookTime = 200;
+            if (iron_compact_150) this.totalCookTime = 400;
+            if (iron_block) this.totalCookTime = 200;
+            if (iron_block_double) this.totalCookTime = 400;
+            if (steel_nugget) this.totalCookTime = 200;
+            if (steel_ingot) this.totalCookTime = 400;
+            if (steel_ingot_compact) this.totalCookTime = 800;
+            if (steel_block) this.totalCookTime = 1600;
+            if (small_tin_slot0 || small_copper_slot0) this.totalCookTime = 400;
+            if (tin_slot0 || copper_slot0) this.totalCookTime = 800;
+            if (compact_tin_slot0 || compact_copper_slot0) this.totalCookTime = 1600;
+            if (bronze_block) this.totalCookTime = 3200;
         }
 
         if (!world.isRemote) {
@@ -255,11 +302,14 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
             ItemStack result = this.furnaceItemStacks.get(3);
 
 
-            if (this.furnaceItemStacks.get(0).isEmpty() || this.furnaceItemStacks.get(1).isEmpty()) {
+
+            if (this.furnaceItemStacks.get(0).isEmpty() && this.furnaceItemStacks.get(1).isEmpty()) {
                 this.cookTime = 0;
             }
 
-            if ((this.isBurning() || !fuel.isEmpty()) && (!this.furnaceItemStacks.get(0).isEmpty() && !this.furnaceItemStacks.get(1).isEmpty())) {
+
+
+            if ((this.isBurning() || !fuel.isEmpty()) && (!this.furnaceItemStacks.get(0).isEmpty() || !this.furnaceItemStacks.get(1).isEmpty())) {
                 if (!this.isBurning() && this.canSmelt()) {
                     this.furnaceBurnTime = getItemBurnTime(fuel);
                     this.currentItemBurnTime = furnaceBurnTime;
@@ -281,21 +331,14 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
 
                     if (cookTime == totalCookTime) {
                         this.cookTime = 0;
-                        if (small_tin_slot0 || small_copper_slot0) this.totalCookTime = 400;
-                        if (tin_slot0 || copper_slot0) this.totalCookTime = 400;
-                        if (compact_tin_slot0 || compact_copper_slot0) this.totalCookTime = 800;
-                        if (iron_nugget_25 || iron_nugget_50) this.totalCookTime = 400;
-                        if (iron_ingot_25 || iron_ingot_50) this.totalCookTime = 400;
-                        if (iron_compact_75 || iron_compact_150) this.totalCookTime = 800;
-                        if (steel_nugget) this.totalCookTime = 800;
-                        if (steel_ingot) this.totalCookTime = 1600;
-                        if (this.furnaceItemStacks.get(0).isEmpty() || this.furnaceItemStacks.get(1).isEmpty()) {
+                        if (this.furnaceItemStacks.get(0).isEmpty() && this.furnaceItemStacks.get(1).isEmpty()) {
                             return;
                         }
                         if (this.canSmelt()) {
                             int random = new Random().nextInt(4) + 1;
+                            Console.println(random);
                             Boolean smelt25 = random == 1;
-                            Boolean smelt50 = random <= 1;
+                            Boolean smelt50 = random <= 2;
                             Boolean smelt75 = random <= 3;
                             int amount;
                             int amount1;
@@ -314,36 +357,48 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
                             else amount2 = 0;
                             if (result.isEmpty()) {
 
-                                if (bronze_nugget) furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_NUGGET));
-                                if (bronze_ingot) furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_INGOT));
+                                if (bronze_nugget) furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_NUGGET, amount));
+                                if (bronze_ingot) furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_INGOT, amount));
                                 if (bronze_compact)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_INGOT, 3));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_INGOT, amount*3));
                                 if (iron_nugget_25)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_NUGGET, 2));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_NUGGET, 1));
                                 if (iron_nugget_50)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_NUGGET, 4));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_NUGGET, 2));
                                 if (iron_ingot_25)
                                     furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 1));
                                 if (iron_ingot_50)
                                     furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 2));
                                 if (iron_compact_75)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 2));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 3));
                                 if (iron_compact_150)
-                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 4));
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.IRON_INGOT, 6));
                                 if (steel_nugget)
                                     furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_NUGGET, amount1));
                                 if (steel_ingot)
                                     furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_INGOT, amount1));
+                                if (steel_ingot_compact)
+                                    furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_INGOT, 3));
+                                if (steel_block)
+                                    furnaceItemStacks.set(3, new ItemStack(ModBlocks.STEEL_BLOCK, 1));
+                                inputs[0].shrink(1);
+                                inputs[1].shrink(1);
                             } else {
-                                if (bronze_nugget || bronze_ingot) this.furnaceItemStacks.get(3).grow(1);
-                                if (bronze_compact) this.furnaceItemStacks.get(3).grow(3);
+                                boolean smelt = true;
+                                if (bronze_nugget || bronze_ingot) this.furnaceItemStacks.get(3).grow(amount);
+                                if (bronze_compact) this.furnaceItemStacks.get(3).grow(amount*3);
+                                if (iron_nugget_25) this.furnaceItemStacks.get(3).grow(1);
+                                if (iron_ingot_25) this.furnaceItemStacks.get(3).grow(1);
                                 if (iron_nugget_50 || iron_ingot_50) this.furnaceItemStacks.get(3).grow(2);
-                                if (steel_ingot) this.furnaceItemStacks.get(3).grow(amount1);
-                                if (iron_compact_75) this.furnaceItemStacks.get(3).grow(2);
-                                if (iron_compact_150) this.furnaceItemStacks.get(3).grow(4);
+                                if (iron_compact_75) this.furnaceItemStacks.get(3).grow(3);
+                                if (iron_compact_150) this.furnaceItemStacks.get(3).grow(6);
+                                if (steel_ingot || steel_nugget) this.furnaceItemStacks.get(3).grow(amount1);
+                                if (steel_ingot_compact) this.furnaceItemStacks.get(3).grow(3);
+                                if (steel_block) this.furnaceItemStacks.get(3).grow(1);
+                                inputs[0].shrink(1);
+                                inputs[1].shrink(1);
                             }
-                            inputs[0].shrink(1);
-                            inputs[1].shrink(1);
+
                         }
                         flag1 = true;
                     }
@@ -372,7 +427,7 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
     private boolean canSmelt()
     {
         Boolean empty_slot0 = this.furnaceItemStacks.get(0).isEmpty();
-        Boolean empty_slot1 = this.furnaceItemStacks.get(1).isEmpty();
+        Boolean empty_slot1 = this.furnaceItemStacks.get(1).getCount() == 0;
         Boolean small_tin_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("small_tin");
         Boolean small_tin_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("small_tin");
         Boolean small_copper_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("small_copper");
@@ -387,30 +442,69 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
         Boolean compact_tin_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("compact_tin");
         Boolean compact_copper_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("compact_copper");
         Boolean compact_copper_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("compact_copper");
+        Boolean tin_supercompact_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("tin_supercompact");
+        Boolean tin_supercompact_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("tin_supercompact");
+        Boolean copper_supercompact_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("copper_supercompact");
+        Boolean copper_supercompact_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("copper_supercompact");
         Boolean bronze_compact = ((compact_tin_slot0 && compact_copper_slot1) || (compact_copper_slot0 && compact_tin_slot1));
+        Boolean bronze_block = (tin_supercompact_slot0 && copper_supercompact_slot1) || (tin_supercompact_slot1 && copper_supercompact_slot0);
         Boolean small_iron_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("small_iron");
         Boolean small_iron_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("small_iron");
         Boolean iron_slot0 = (this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("ore_iron") || (this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("crustrock_iron")) || (this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("mantlerock_iron")));
         Boolean iron_slot1 = (this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("ore_iron") || (this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("crustrock_iron")) || (this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("mantlerock_iron")));
         Boolean compact_iron_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("compact_iron");
         Boolean compact_iron_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("compact_iron");
-        Boolean iron_nugget_50 = ((small_iron_slot0 && small_iron_slot1) || (small_iron_slot0 && small_iron_slot1));
-        Boolean iron_nugget_25 = ((small_iron_slot0 && empty_slot1) || (empty_slot0 && small_iron_slot1));
-        Boolean iron_ingot_50 = ((iron_slot0 && iron_slot1) || (iron_slot0 && iron_slot1));
-        Boolean iron_ingot_25 = ((iron_slot0 && empty_slot1) || (empty_slot0 && iron_slot1));
+        Boolean iron_supercompact_slot0 = this.furnaceItemStacks.get(0).getItem().getTranslationKey().contains("iron_supercompact");
+        Boolean iron_supercompact_slot1 = this.furnaceItemStacks.get(1).getItem().getTranslationKey().contains("iron_supercompact");
+        Boolean iron_nugget_50 = ((small_iron_slot0 && small_iron_slot1) || (small_iron_slot0 && small_iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_NUGGET);
+        Boolean iron_nugget_25 = ((small_iron_slot0 && empty_slot1) || (empty_slot0 && small_iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_NUGGET);
+        Boolean iron_ingot_50 = ((iron_slot0 && iron_slot1) || (iron_slot0 && iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);
+        Boolean iron_ingot_25 = ((iron_slot0 && empty_slot1) || (empty_slot0 && iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);;
         Boolean iron_compact_150 = ((compact_iron_slot0 && compact_iron_slot1) || (compact_iron_slot0 && compact_iron_slot1));
         Boolean iron_compact_75 = ((compact_iron_slot0 && empty_slot1) || (empty_slot0 && compact_iron_slot1));
         Boolean iron_nugget_slot0 = this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_NUGGET;
         Boolean iron_nugget_slot1 = this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_NUGGET;
         Boolean iron_ingot_slot0 = this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT;
         Boolean iron_ingot_slot1 = this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT;
+        Boolean iron_block = (iron_supercompact_slot0 && empty_slot1) || (iron_supercompact_slot1 && empty_slot0);
+        Boolean iron_block_double = (iron_supercompact_slot0 && iron_supercompact_slot1);
         Boolean coal_slot0 = this.furnaceItemStacks.get(0).getItem() == Items.COAL;
         Boolean coal_slot1 = this.furnaceItemStacks.get(1).getItem() == Items.COAL;
         Boolean coal_block_slot0 = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.COAL_SUPERCOMPACT));
         Boolean coal_block_slot1 = (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.COAL_SUPERCOMPACT));
-        Boolean steel_nugget = ((iron_nugget_slot0 && coal_slot1) || (iron_nugget_slot1 && coal_slot0));
-        Boolean steel_ingot = ((iron_ingot_slot0 && coal_block_slot1) || (iron_ingot_slot1 && coal_block_slot0));
-        Boolean canSmelt = (bronze_nugget || bronze_ingot || bronze_compact || iron_nugget_25 || iron_nugget_50 || iron_ingot_25 || iron_ingot_50 || iron_compact_75 || iron_compact_150 || steel_nugget || steel_ingot);
+        Boolean steel_nugget = ((iron_nugget_slot0 && coal_slot1) || (iron_nugget_slot1 && coal_slot0) || (small_iron_slot0 && coal_slot1) || (small_iron_slot1 && coal_slot0));
+        Boolean steel_ingot =
+                (
+                        (iron_ingot_slot0 && coal_block_slot1) || (iron_ingot_slot1 && coal_block_slot0)
+                                || (iron_slot0 && coal_slot1 && this.furnaceItemStacks.get(1).getCount() >= 3)
+                                || (iron_slot1 && coal_slot0 && this.furnaceItemStacks.get(0).getCount() >= 3));
+        Boolean steel_ingot_compact =
+                (
+                        (iron_ingot_slot0 && coal_block_slot1) || (iron_ingot_slot1 && coal_block_slot0)
+                                || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.ORE_COMPACT_IRON)
+                                || this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_IRON)
+                                || this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_IRON)
+                                && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)
+                                && this.furnaceItemStacks.get(0).getCount() >= 3)
+                                || (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.ORE_COMPACT_IRON)
+                                || this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_IRON)
+                                || this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_IRON)
+                                && this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)
+                                && this.furnaceItemStacks.get(0).getCount() >= 3)
+                );
+        Boolean steel_block =
+                (
+                        (iron_ingot_slot0 && coal_block_slot1) || (iron_ingot_slot1 && coal_block_slot0)
+                                || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_SUPERCOMPACT)
+                                || this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK)
+                                && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)
+                                && this.furnaceItemStacks.get(1).getCount() >= 9)
+                                || (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_SUPERCOMPACT)
+                                || this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK)
+                                && this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)
+                                && this.furnaceItemStacks.get(0).getCount() >= 9)
+                );
+        Boolean canSmelt = (bronze_nugget || bronze_ingot || bronze_compact || iron_nugget_25 || iron_nugget_50 || iron_ingot_25 || iron_ingot_50 || iron_compact_75 || iron_compact_150 || iron_block || iron_block_double || steel_nugget || steel_ingot || steel_ingot_compact || steel_block || bronze_block);
         if (canSmelt && this.furnaceItemStacks.get(3).getCount() <= 64)
         {
             if (!furnaceItemStacks.get(3).isEmpty() && bronze_nugget && furnaceItemStacks.get(3).getItem() != ModItems.BRONZE_NUGGET) return false;
