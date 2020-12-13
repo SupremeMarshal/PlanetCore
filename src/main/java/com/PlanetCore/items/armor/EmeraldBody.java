@@ -35,7 +35,7 @@ public class EmeraldBody extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 3, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_EMERALDBODY_UUID, "MAX_HEALTH_EMERALDBODY_UUID", 1, 0));
 	}
    
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
