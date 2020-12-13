@@ -229,9 +229,9 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
         Boolean iron_nugget_50 = ((small_iron_slot0 && small_iron_slot1) || (small_iron_slot0 && small_iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_NUGGET);
         Boolean iron_nugget_25 = ((small_iron_slot0 && empty_slot1) || (empty_slot0 && small_iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_NUGGET);
         Boolean iron_ingot_50 = ((iron_slot0 && iron_slot1) || (iron_slot0 && iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);
-        Boolean iron_ingot_25 = ((iron_slot0 && empty_slot1) || (empty_slot0 && iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);;
-        Boolean iron_compact_150 = ((compact_iron_slot0 && compact_iron_slot1) || (compact_iron_slot0 && compact_iron_slot1));
-        Boolean iron_compact_75 = ((compact_iron_slot0 && empty_slot1) || (empty_slot0 && compact_iron_slot1));
+        Boolean iron_ingot_25 = ((iron_slot0 && empty_slot1) || (empty_slot0 && iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);
+        Boolean iron_compact_150 = ((compact_iron_slot0 && compact_iron_slot1) || (compact_iron_slot0 && compact_iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);
+        Boolean iron_compact_75 = ((compact_iron_slot0 && empty_slot1) || (empty_slot0 && compact_iron_slot1)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.IRON_INGOT);
         Boolean iron_nugget_slot0 = this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_NUGGET;
         Boolean iron_nugget_slot1 = this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_NUGGET;
         Boolean iron_ingot_slot0 = this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT;
@@ -242,15 +242,15 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
         Boolean coal_slot1 = this.furnaceItemStacks.get(1).getItem() == Items.COAL;
         Boolean coal_block_slot0 = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.COAL_SUPERCOMPACT));
         Boolean coal_block_slot1 = (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.COAL_SUPERCOMPACT));
-        Boolean steel_nugget = ((iron_nugget_slot0 || small_iron_slot0)  && coal_slot1) || ((iron_nugget_slot1 || small_iron_slot1) && coal_slot0);
-        Boolean steel_ingot1 = ((iron_ingot_slot0 || iron_slot0) && coal_slot1 && this.furnaceItemStacks.get(1).getCount() >= 9);
-        Boolean steel_ingot0 = ((iron_ingot_slot1 || iron_slot1) && coal_slot0 && this.furnaceItemStacks.get(0).getCount() >= 9);
-        Boolean steel_ingot_coalblock = ((iron_ingot_slot0 || iron_slot0) && coal_block_slot1) || ((iron_ingot_slot1 || iron_slot1) && coal_block_slot0);
-        Boolean steel_ingot_compact1 = (compact_iron_slot0 && coal_slot1) && this.furnaceItemStacks.get(1).getCount() >= 27;
-        Boolean steel_ingot_compact0 = (compact_iron_slot1 && coal_slot0) && this.furnaceItemStacks.get(0).getCount() >= 27;
-        Boolean steel_ingot_compact_coalblock = (compact_iron_slot1 && coal_block_slot0 && this.furnaceItemStacks.get(0).getCount() >= 3) || (compact_iron_slot0 && coal_block_slot1 && this.furnaceItemStacks.get(1).getCount() >= 3);
-        Boolean steel_block0 = ((iron_supercompact_slot1 || this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK)) && coal_block_slot0 && this.furnaceItemStacks.get(0).getCount() >= 3);
-        Boolean steel_block1 = ((iron_supercompact_slot0 || this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK)) && coal_block_slot0 && this.furnaceItemStacks.get(1).getCount() >= 3);
+        Boolean steel_nugget = (((iron_nugget_slot0 || small_iron_slot0)  && coal_slot1) || ((iron_nugget_slot1 || small_iron_slot1) && coal_slot0)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.STEEL_NUGGET);
+        Boolean steel_ingot1 = ((iron_ingot_slot0 || iron_slot0) && coal_slot1 && this.furnaceItemStacks.get(1).getCount() >= 9) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.STEEL_INGOT);
+        Boolean steel_ingot0 = ((iron_ingot_slot1 || iron_slot1) && coal_slot0 && this.furnaceItemStacks.get(0).getCount() >= 9) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.STEEL_INGOT);
+        Boolean steel_ingot_coalblock = (((iron_ingot_slot0 || iron_slot0) && coal_block_slot1) || ((iron_ingot_slot1 || iron_slot1) && coal_block_slot0)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.STEEL_INGOT);
+        Boolean steel_ingot_compact1 = ((compact_iron_slot0 && coal_slot1) && this.furnaceItemStacks.get(1).getCount() >= 27) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.STEEL_INGOT);
+        Boolean steel_ingot_compact0 = ((compact_iron_slot1 && coal_slot0) && this.furnaceItemStacks.get(0).getCount() >= 27) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.STEEL_INGOT);
+        Boolean steel_ingot_compact_coalblock = ((compact_iron_slot1 && coal_block_slot0 && this.furnaceItemStacks.get(0).getCount() >= 3) || (compact_iron_slot0 && coal_block_slot1 && this.furnaceItemStacks.get(1).getCount() >= 3)) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == ModItems.STEEL_INGOT);
+        Boolean steel_block0 = ((iron_supercompact_slot1 || this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK)) && coal_block_slot0 && this.furnaceItemStacks.get(0).getCount() >= 3) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == Item.getItemFromBlock(ModBlocks.STEEL_BLOCK));
+        Boolean steel_block1 = ((iron_supercompact_slot0 || this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK)) && coal_block_slot0 && this.furnaceItemStacks.get(1).getCount() >= 3) && (this.furnaceItemStacks.get(3).isEmpty() || this.furnaceItemStacks.get(3).getItem() == Item.getItemFromBlock(ModBlocks.STEEL_BLOCK));
 
         boolean flag = this.isBurning();
         boolean flag1 = false;
