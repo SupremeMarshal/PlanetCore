@@ -4,7 +4,7 @@
     "pattern":
     [
         "AA",
-        "B ",
+        "BA",
         "B "
     ],
     
@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:steel_ingot"
+            "item": "planetcore:silver_ingot"
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:silver_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:steel_hoe",
+        "item": "planetcore:complete_silver_axe",
         "count": 1
     }
 }

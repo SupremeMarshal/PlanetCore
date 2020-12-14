@@ -4,25 +4,25 @@
     "pattern":
     [
         "AA",
-        "B ",
-        "B "
+        "AB",
+        " B"
     ],
     
     "key":
     {
         "A":
         {
-            "item": "planetcore:steel_ingot"
+            "item": "planetcore:tin_ingot"
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:tin_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:steel_hoe",
+        "item": "planetcore:complete_tin_axe",
         "count": 1
     }
 }

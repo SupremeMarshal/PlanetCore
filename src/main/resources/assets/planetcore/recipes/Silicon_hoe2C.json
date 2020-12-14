@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:steel_ingot"
+            "item": "planetcore:silicon_ingot"
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:silicon_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:steel_hoe",
+        "item": "planetcore:complete_silicon_hoe",
         "count": 1
     }
 }

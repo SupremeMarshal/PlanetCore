@@ -3,9 +3,9 @@
     
     "pattern":
     [
-        "AA",
-        "B ",
-        "B "
+        "A",
+        "A",
+        "B"
     ],
     
     "key":
@@ -16,13 +16,13 @@
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:steel_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:steel_hoe",
+        "item": "planetcore:complete_steel_sword",
         "count": 1
     }
 }
