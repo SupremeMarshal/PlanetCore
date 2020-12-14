@@ -6,6 +6,8 @@ tile.damaged_gold_anvil.name = Damaged Gold Anvil
 //ENCHANTMENTS
 
 
+generator.PlanetCore=PlanetCore
+
 //TOOLS
 item.wooden_sword.name=Wooden sword
 item.wooden_shovel.name=Wooden shovel
