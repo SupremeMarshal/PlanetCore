@@ -1,8 +1,0 @@
-{
-  "parent": "block/anvil",
-  "textures": {
-    "particle": "blocks/gold_block",
-    "body": "blocks/gold_block",
-    "top": "planetcore:blocks/gold_anvil_top_damaged"
-  }
-}
