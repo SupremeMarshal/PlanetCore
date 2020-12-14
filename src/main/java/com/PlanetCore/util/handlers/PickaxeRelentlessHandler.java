@@ -106,6 +106,8 @@ public class PickaxeRelentlessHandler {
                 event.getEntityPlayer().sendMessage(new TextComponentString("The wood on the shovel is getting weaker").setStyle(new Style().setColor(TextFormatting.RED)));
         }
 
+
+
         if (event.getState().getBlock() instanceof BlockBase) {
             for (int i = 0; i < 31; i++) {
                 if (event.getEntityPlayer().getHeldItemMainhand().getItem() == pickaxe[i]) {
@@ -129,6 +131,8 @@ public class PickaxeRelentlessHandler {
                 if (event.getEntityPlayer().world.getTotalWorldTime() % 6 != 1) {
                     return;
                 }
+                // I want to play the sound effect here and make it work in server (so client side)? without kicking player out
+                event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.getByName("action"), 1.0F, 1.0F);
             }
 
             if (breaktime > 0.01F && breaktime <= 0.1F) {
@@ -138,41 +142,7 @@ public class PickaxeRelentlessHandler {
         }
     }
 
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent
-    public static void onBreakEvent0(PlayerEvent.BreakSpeed event) {
-        int RelentlessLevel = EnchantmentHelper.getMaxEnchantmentLevel(Relentless, event.getEntityPlayer());
-        float breaktime;
-        double Relentless = 0;
 
-        //
-
-        if (event.getState().getBlock() instanceof BlockBase) {
-            for (int i = 0; i < 31; i++) {
-                if (event.getEntityPlayer().getHeldItemMainhand().getItem() == pickaxe[i]) {
-                    Relentless = relentless[i];
-
-                    if (RelentlessLevel > 0) {
-                        Relentless = relentless[i] * (1 + (RelentlessLevel / 4D));
-                    }
-                    break;
-                }
-            }
-            if (Relentless < 1) {Relentless = 1; }
-            breaktime = (event.getState().getBlockHardness(event.getEntityPlayer().world, event.getPos()) * 1.5F) / event.getOriginalSpeed();
-
-
-
-            //Determine if the block is undestructible.
-            if (breaktime > Relentless) {
-                event.setCanceled(true);
-                if (event.getEntityPlayer().world.getTotalWorldTime() % 6 != 1) {
-                    return;
-                }
-                event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.getByName("action"), 1.0F, 1.0F);
-            }
-        }
-    }
 
     @SubscribeEvent
     public static void onBlockBreakEvent(BlockEvent.BreakEvent event) {

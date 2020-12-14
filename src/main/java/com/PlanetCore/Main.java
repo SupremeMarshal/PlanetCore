@@ -2,6 +2,7 @@ package com.PlanetCore;
 
 
 import com.PlanetCore.cwg.CustomCaveInjector;
+import com.PlanetCore.cwg.PlanetCoreWorldType;
 import com.PlanetCore.init.ModSmelting;
 import com.PlanetCore.util.Reference;
 import com.PlanetCore.util.handlers.RegistryHandler;
@@ -43,6 +44,7 @@ public class Main {
         RegistryHandler.preInitRegistries(event);
 
         MinecraftForge.TERRAIN_GEN_BUS.register(new CustomCaveInjector());
+        new PlanetCoreWorldType();
     }
 
     @EventHandler
