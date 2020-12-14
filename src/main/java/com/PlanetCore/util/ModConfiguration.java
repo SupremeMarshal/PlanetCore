@@ -17,7 +17,7 @@ public class ModConfiguration
 	public static int ENTITY_GHOUL_ID = 203;
 	public static int ENTITY_HELLHOUND_ID = 204;
 	public static int ENTITY_FALLING_BLOCK_ID = 205;
-	public static int GUI_SINTERING_FURNACE_ID = 1;
+	public static int GUI_CRUSTROCK_FURNACE_ID = 1;
 
 	public static void init(File file)
 	{
@@ -35,7 +35,7 @@ public class ModConfiguration
 
 		category = "GUI IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the GUI's to ensure that they don't clash with other mod's ids");
-		GUI_SINTERING_FURNACE_ID = config.getInt("GUI_SINTERING_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Sintering Furnace (Non-Electric)");
+		GUI_CRUSTROCK_FURNACE_ID = config.getInt("GUI_CRUSTROCK_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Crustrock Furnace (Non-Electric)");
 	}
 	
 	public static void registerConfig(FMLPreInitializationEvent event)

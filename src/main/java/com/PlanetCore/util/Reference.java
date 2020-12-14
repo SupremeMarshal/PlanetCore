@@ -15,5 +15,5 @@ public class Reference {
 	public static final int ENTITY_GHOUL = 3;
 	public static final int ENTITY_HELLHOUND = 4;
 
-	public static final int GUI_SINTERING_FURNACE = 0;
+	public static final int GUI_CRUSTROCK_FURNACE = 0;
 }

@@ -969,7 +969,7 @@ item.azurite.name=Azurite
 //BLOCKS
 
 //BLOCKS/FURNACE
-tile.sintering_furnace.name=Alloy Furnace
+tile.crustrock_furnace.name=Alloy Furnace
 
 tile.majorite_block.name=Block of Majorite
 tile.brigmanite_block.name=Block of Brigmanite

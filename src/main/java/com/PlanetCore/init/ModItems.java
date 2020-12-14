@@ -848,7 +848,6 @@ public class ModItems {
 	public static final Item AMAZONITE_SHARD = new ItemBase("amazonite_shard");
 	public static final Item MAJORITE_SHARD = new ItemBase("majorite_shard");
 	public static final Item ONYX_SHARD = new ItemBase("onyx_shard");
-	public static final Item EMERALD = new ItemBase("emerald");
 	public static final Item SAPPHIRE = new ItemBase("sapphire");
 	public static final Item RUBY = new ItemBase("ruby");
 	public static final Item TOPAZ = new ItemBase("topaz");

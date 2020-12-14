@@ -1,5 +1,6 @@
 package com.PlanetCore.util.handlers;
 
+import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.DamageSource;
@@ -36,21 +37,20 @@ public class PlayerTickEventHandler {
         }
     }
     */
-    /*
+
     @SideOnly(Side.CLIENT)
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 
         //Heal player based on food level. Heal from 0% to 100% in 600 seconds at max food lvl. Heal fully in 3 hours if food level is 1. At 0 food, player stop healing.
-        /*if (event.player.getFoodStats().getFoodLevel() >= 1) {
+        if (event.player.getFoodStats().getFoodLevel() >= 1) {
         if (event.player.world.getTotalWorldTime() % 20 != 1) {
             return;
         }
         event.player.heal(event.player.getMaxHealth() / (12000 / event.player.getFoodStats().getFoodLevel()));
         }
 
-         */
-/*
+
         int x,y,z;
         x = event.player.getPosition().getX();
         y = event.player.getPosition().getY();
@@ -62,6 +62,12 @@ public class PlayerTickEventHandler {
                 IBlockState state2 = event.player.world.getBlockState(pos1);
                 if (state2.getMaterial() == Material.LAVA) {
                     event.player.setFire(5);
+                }
+            }
+            for (BlockPos pos1 : it) {
+                IBlockState state2 = event.player.world.getBlockState(pos1);
+                if (state2.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
+                    event.player.setFire(15);
                 }
             }
         }
@@ -86,5 +92,5 @@ public class PlayerTickEventHandler {
         }
     }
 
- */
+
 }

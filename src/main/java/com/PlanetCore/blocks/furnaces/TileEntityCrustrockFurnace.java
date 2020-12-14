@@ -36,7 +36,7 @@ import scala.Console;
 
 import java.util.Random;
 
-public class TileEntitySinteringFurnace extends TileEntityLockable implements ITickable, IInventory {
+public class TileEntityCrustrockFurnace extends TileEntityLockable implements ITickable, IInventory {
 
 
     /** The ItemStacks that hold the items currently being used in the furnace */
@@ -119,7 +119,7 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
 
     public String getName()
     {
-        return this.hasCustomName() ? this.furnaceCustomName : "container.sintering_furnace";
+        return this.hasCustomName() ? this.furnaceCustomName : "container.crustrock_furnace";
     }
 
 
@@ -415,7 +415,7 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
             }
             if (flag != this.isBurning()) {
                 flag1 = true;
-                SinteringFurnace.setState(this.isBurning(), this.world, this.pos);
+                CrustrockFurnace.setState(this.isBurning(), this.world, this.pos);
             }
         }
         if (flag1) {
@@ -711,12 +711,12 @@ public class TileEntitySinteringFurnace extends TileEntityLockable implements IT
 
     public String getGuiID()
     {
-        return "planetcore:sintering_furnace";
+        return "planetcore:crustrock_furnace";
     }
 
     public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn)
     {
-        return new ContainerSinteringFurnace(playerInventory, this);
+        return new ContainerCrustrockFurnace(playerInventory, this);
     }
 
     public int getField(int id)

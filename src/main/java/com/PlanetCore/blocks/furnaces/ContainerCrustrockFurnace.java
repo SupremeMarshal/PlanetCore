@@ -15,12 +15,12 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
 
-public class ContainerSinteringFurnace extends Container
+public class ContainerCrustrockFurnace extends Container
 {
     private final IInventory tileFurnace;
     private int cookTime, totalCookTime, burnTime, currentBurnTime;
 
-    public ContainerSinteringFurnace(InventoryPlayer playerInventory, IInventory furnaceInventory)
+    public ContainerCrustrockFurnace(InventoryPlayer playerInventory, IInventory furnaceInventory)
     {
         this.tileFurnace = furnaceInventory;
 

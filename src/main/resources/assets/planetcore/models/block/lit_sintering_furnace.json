@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "planetcore:blocks/sintering_furnace_top",
-    "front": "planetcore:blocks/sintering_furnace_front_on",
-    "side": "planetcore:blocks/sintering_furnace_side"
-  }
-}
