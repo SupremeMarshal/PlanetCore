@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:tungsten_uranium_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:tungsten_uranium_helmet",
+        "count": 1
+    }
+}
