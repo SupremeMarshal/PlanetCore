@@ -10,6 +10,9 @@ public class CustomCaveInjector {
             case CAVE:
                 event.setNewGen(new ImprovedCaveGenerator());
                 break;
+            case RAVINE:
+                event.setNewGen(new RavineGeneratorProxy());
+                break;
         }
     }
 }
