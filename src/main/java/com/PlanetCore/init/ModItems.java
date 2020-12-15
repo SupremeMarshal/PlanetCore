@@ -89,7 +89,7 @@ public class ModItems {
 		MAJORITE(15, 7200, 5000.0F, 16.6F, 22, 32),
 		AMAZONITE(100, 8000, 10000.0F, 18.2F, 22, 64),
 		ONYX(1000, 16000, 20000.0F, 20.0F, 22, 128);
-		
+
 
 		/** The level of material this tool can harvest (3 = DIAMOND, 2 = IRON, 1 = STONE, 0 = WOOD/GOLD) */
 		private final int harvestLevel;
@@ -239,7 +239,7 @@ public class ModItems {
 			return repairMaterial;
 		}
 	}
-	
+
 	public enum ItemOre {
 
 		ONYX("onyx", id -> new ItemBase(id)),
@@ -317,7 +317,7 @@ public class ModItems {
 	}
 
 
-	
+
 	//ARMOR MATERIAL (name, textureName, durability, reductionAmounts, enchantability, soundOnEquip, toughness)
 	public static final ArmorMaterial ARMOR_MATERIAL_ALUMINIUM = EnumHelper.addArmorMaterial("armor_material_aluminium", Reference.MOD_ID + ":aluminium", 2,
 			new int[] {1, 1, 1, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
@@ -342,13 +342,13 @@ public class ModItems {
 
 	public static final ArmorMaterial ARMOR_MATERIAL_BRONZE = EnumHelper.addArmorMaterial("armor_material_bronze", Reference.MOD_ID + ":bronze", 18,
 			new int[] {2, 4, 3, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-	
+
 	public static final ArmorMaterial ARMOR_MATERIAL_STEEL = EnumHelper.addArmorMaterial("armor_material_steel", Reference.MOD_ID + ":steel", 36,
 			new int[] {4, 6, 5, 3}, 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-	
+
 	public static final ArmorMaterial ARMOR_MATERIAL_SILVER = EnumHelper.addArmorMaterial("armor_material_silver", Reference.MOD_ID + ":silver", 18,
 			new int[] {4, 7, 6, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.5F);
-	
+
 	public static final ArmorMaterial ARMOR_MATERIAL_GOLD = EnumHelper.addArmorMaterial("armor_material_gold", Reference.MOD_ID + ":gold", 18,
 			new int[] {4, 7, 6, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F);
 
@@ -384,13 +384,13 @@ public class ModItems {
 
 	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD = EnumHelper.addArmorMaterial("armor_material_emerald", Reference.MOD_ID + ":emerald", 36,
 			new int[] {3, 5, 4, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
-	
+
 	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 36,
 			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE = EnumHelper.addArmorMaterial("armor_material_sapphire", Reference.MOD_ID + ":sapphire", 36,
 			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
-	
+
 	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND = EnumHelper.addArmorMaterial("armor_material_diamond", Reference.MOD_ID + ":diamond", 99,
 			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
 
@@ -408,15 +408,15 @@ public class ModItems {
 
 	public static final ArmorMaterial ARMOR_MATERIAL_MAJORITE = EnumHelper.addArmorMaterial("armor_material_majorite", Reference.MOD_ID + ":majorite", 99,
 			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
-	
+
 	public static final ArmorMaterial ARMOR_MATERIAL_AMAZONITE = EnumHelper.addArmorMaterial("armor_material_amazonite", Reference.MOD_ID + ":amazonite", 250,
 			new int[] {6, 12, 9, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_ONYX = EnumHelper.addArmorMaterial("armor_material_onyx", Reference.MOD_ID + ":onyx", 500,
 			new int[] {7, 14, 10, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 8.0F);
-	
-	
-	
+
+
+
 //TOOLS
 
 	//WOODEN//
@@ -437,9 +437,13 @@ public class ModItems {
 	public static final ItemSword ALUMINIUM_SWORD = new ToolSword("aluminium_sword", ToolMaterialCustom.ALUMINIUM);
 	public static final ItemSpade ALUMINIUM_SHOVEL = new ToolSpade("aluminium_shovel", ToolMaterialCustom.ALUMINIUM);
 	public static final ItemPickaxe ALUMINIUM_PICKAXE = new ToolPickaxe("aluminium_pickaxe", ToolMaterialCustom.ALUMINIUM);
-	public static final ItemPickaxe COMPLETE_ALUMINIUM_PICKAXE = new ToolPickaxe("complete_aluminium_pickaxe", ToolMaterialCustom.COMPLETE_ALUMINIUM);
 	public static final ItemAxe ALUMINIUM_AXE = new ToolAxe("aluminium_axe", ToolMaterialCustom.ALUMINIUM);
 	public static final ItemHoe ALUMINIUM_HOE = new ToolHoe("aluminium_hoe", ToolMaterialCustom.ALUMINIUM);
+	public static final ItemSword COMPLETE_ALUMINIUM_SWORD = new ToolSword("complete_aluminium_sword", ToolMaterialCustom.COMPLETE_ALUMINIUM);
+	public static final ItemSpade COMPLETE_ALUMINIUM_SHOVEL = new ToolSpade("complete_aluminium_shovel", ToolMaterialCustom.COMPLETE_ALUMINIUM);
+	public static final ItemPickaxe COMPLETE_ALUMINIUM_PICKAXE = new ToolPickaxe("complete_aluminium_pickaxe", ToolMaterialCustom.COMPLETE_ALUMINIUM);
+	public static final ItemAxe COMPLETE_ALUMINIUM_AXE = new ToolAxe("complete_aluminium_axe", ToolMaterialCustom.COMPLETE_ALUMINIUM);
+	public static final ItemHoe COMPLETE_ALUMINIUM_HOE = new ToolHoe("complete_aluminium_hoe", ToolMaterialCustom.COMPLETE_ALUMINIUM);
 
 	public static final Item ALUMINIUM_HELMET = new ArmorBase("aluminium_helmet", ARMOR_MATERIAL_ALUMINIUM, 1, EntityEquipmentSlot.HEAD);
 	public static final Item ALUMINIUM_CHESTPLATE = new ArmorBase("aluminium_chestplate", ARMOR_MATERIAL_ALUMINIUM, 1, EntityEquipmentSlot.CHEST);
@@ -450,9 +454,13 @@ public class ModItems {
 	public static final ItemSword ZINC_SWORD = new ToolSword("zinc_sword", ModItems.ToolMaterialCustom.ZINC);
 	public static final ItemSpade ZINC_SHOVEL = new ToolSpade("zinc_shovel", ToolMaterialCustom.ZINC);
 	public static final ItemPickaxe ZINC_PICKAXE = new ToolPickaxe("zinc_pickaxe", ToolMaterialCustom.ZINC);
-	public static final ItemPickaxe COMPLETE_ZINC_PICKAXE = new ToolPickaxe("complete_zinc_pickaxe", ToolMaterialCustom.COMPLETE_ZINC);
 	public static final ItemAxe ZINC_AXE = new ToolAxe("zinc_axe", ToolMaterialCustom.ZINC);
 	public static final ItemHoe ZINC_HOE = new ToolHoe("zinc_hoe", ToolMaterialCustom.ZINC);
+	public static final ItemSword COMPLETE_ZINC_SWORD = new ToolSword("complete_zinc_sword", ToolMaterialCustom.COMPLETE_ZINC);
+	public static final ItemSpade COMPLETE_ZINC_SHOVEL = new ToolSpade("complete_zinc_shovel", ToolMaterialCustom.COMPLETE_ZINC);
+	public static final ItemPickaxe COMPLETE_ZINC_PICKAXE = new ToolPickaxe("complete_zinc_pickaxe", ToolMaterialCustom.COMPLETE_ZINC);
+	public static final ItemAxe COMPLETE_ZINC_AXE = new ToolAxe("complete_zinc_axe", ToolMaterialCustom.COMPLETE_ZINC);
+	public static final ItemHoe COMPLETE_ZINC_HOE = new ToolHoe("complete_zinc_hoe", ToolMaterialCustom.COMPLETE_ZINC);
 
 	public static final Item ZINC_HELMET = new ArmorBase("zinc_helmet", ARMOR_MATERIAL_ZINC, 1, EntityEquipmentSlot.HEAD);
 	public static final Item ZINC_CHESTPLATE = new ArmorBase("zinc_chestplate", ARMOR_MATERIAL_ZINC, 1, EntityEquipmentSlot.CHEST);
@@ -463,9 +471,13 @@ public class ModItems {
 	public static final ItemSword LEAD_SWORD = new ToolSword("lead_sword", ToolMaterialCustom.LEAD);
 	public static final ItemSpade LEAD_SHOVEL = new ToolSpade("lead_shovel", ToolMaterialCustom.LEAD);
 	public static final ItemPickaxe LEAD_PICKAXE = new ToolPickaxe("lead_pickaxe", ToolMaterialCustom.LEAD);
-	public static final ItemPickaxe COMPLETE_LEAD_PICKAXE = new ToolPickaxe("complete_lead_pickaxe", ToolMaterialCustom.COMPLETE_LEAD);
 	public static final ItemAxe LEAD_AXE = new ToolAxe("lead_axe", ToolMaterialCustom.LEAD);
 	public static final ItemHoe LEAD_HOE = new ToolHoe("lead_hoe", ToolMaterialCustom.LEAD);
+	public static final ItemSword COMPLETE_LEAD_SWORD = new ToolSword("complete_lead_sword", ToolMaterialCustom.COMPLETE_LEAD);
+	public static final ItemSpade COMPLETE_LEAD_SHOVEL = new ToolSpade("complete_lead_shovel", ToolMaterialCustom.COMPLETE_LEAD);
+	public static final ItemPickaxe COMPLETE_LEAD_PICKAXE = new ToolPickaxe("complete_lead_pickaxe", ToolMaterialCustom.COMPLETE_LEAD);
+	public static final ItemAxe COMPLETE_LEAD_AXE = new ToolAxe("complete_lead_axe", ToolMaterialCustom.COMPLETE_LEAD);
+	public static final ItemHoe COMPLETE_LEAD_HOE = new ToolHoe("complete_lead_hoe", ToolMaterialCustom.COMPLETE_LEAD);
 
 	public static final Item LEAD_HELMET = new ArmorBase("lead_helmet", ARMOR_MATERIAL_LEAD, 1, EntityEquipmentSlot.HEAD);
 	public static final Item LEAD_CHESTPLATE = new ArmorBase("lead_chestplate", ARMOR_MATERIAL_LEAD, 1, EntityEquipmentSlot.CHEST);
@@ -476,9 +488,13 @@ public class ModItems {
 	public static final ItemSword TIN_SWORD = new ToolSword("tin_sword", ToolMaterialCustom.TIN);
 	public static final ItemSpade TIN_SHOVEL = new ToolSpade("tin_shovel", ToolMaterialCustom.TIN);
 	public static final ItemPickaxe TIN_PICKAXE = new ToolPickaxe("tin_pickaxe", ToolMaterialCustom.TIN);
-	public static final ItemPickaxe COMPLETE_TIN_PICKAXE = new ToolPickaxe("complete_tin_pickaxe", ToolMaterialCustom.COMPLETE_TIN);
 	public static final ItemAxe TIN_AXE = new ToolAxe("tin_axe", ToolMaterialCustom.TIN);
 	public static final ItemHoe TIN_HOE = new ToolHoe("tin_hoe", ToolMaterialCustom.TIN);
+	public static final ItemSword COMPLETE_TIN_SWORD = new ToolSword("complete_tin_sword", ToolMaterialCustom.COMPLETE_TIN);
+	public static final ItemSpade COMPLETE_TIN_SHOVEL = new ToolSpade("complete_tin_shovel", ToolMaterialCustom.COMPLETE_TIN);
+	public static final ItemPickaxe COMPLETE_TIN_PICKAXE = new ToolPickaxe("complete_tin_pickaxe", ToolMaterialCustom.COMPLETE_TIN);
+	public static final ItemAxe COMPLETE_TIN_AXE = new ToolAxe("complete_tin_axe", ToolMaterialCustom.COMPLETE_TIN);
+	public static final ItemHoe COMPLETE_TIN_HOE = new ToolHoe("complete_tin_hoe", ToolMaterialCustom.COMPLETE_TIN);
 
 	public static final Item TIN_HELMET = new ArmorBase("tin_helmet", ARMOR_MATERIAL_TIN, 1, EntityEquipmentSlot.HEAD);
 	public static final Item TIN_CHESTPLATE = new ArmorBase("tin_chestplate", ARMOR_MATERIAL_TIN, 1, EntityEquipmentSlot.CHEST);
@@ -489,9 +505,13 @@ public class ModItems {
 	public static final ItemSword SILICON_SWORD = new ToolSword("silicon_sword", ToolMaterialCustom.SILICON);
 	public static final ItemSpade SILICON_SHOVEL = new ToolSpade("silicon_shovel", ToolMaterialCustom.SILICON);
 	public static final ItemPickaxe SILICON_PICKAXE = new ToolPickaxe("silicon_pickaxe", ToolMaterialCustom.SILICON);
-	public static final ItemPickaxe COMPLETE_SILICON_PICKAXE = new ToolPickaxe("complete_silicon_pickaxe", ToolMaterialCustom.COMPLETE_SILICON);
 	public static final ItemAxe SILICON_AXE = new ToolAxe("silicon_axe", ToolMaterialCustom.SILICON);
 	public static final ItemHoe SILICON_HOE = new ToolHoe("silicon_hoe", ToolMaterialCustom.SILICON);
+	public static final ItemSword COMPLETE_SILICON_SWORD = new ToolSword("complete_silicon_sword", ToolMaterialCustom.COMPLETE_SILICON);
+	public static final ItemSpade COMPLETE_SILICON_SHOVEL = new ToolSpade("complete_silicon_shovel", ToolMaterialCustom.COMPLETE_SILICON);
+	public static final ItemPickaxe COMPLETE_SILICON_PICKAXE = new ToolPickaxe("complete_silicon_pickaxe", ToolMaterialCustom.COMPLETE_SILICON);
+	public static final ItemAxe COMPLETE_SILICON_AXE = new ToolAxe("complete_silicon_axe", ToolMaterialCustom.COMPLETE_SILICON);
+	public static final ItemHoe COMPLETE_SILICON_HOE = new ToolHoe("complete_silicon_hoe", ToolMaterialCustom.COMPLETE_SILICON);
 
 	public static final Item SILICON_HELMET = new ArmorBase("silicon_helmet", ARMOR_MATERIAL_SILICON, 1, EntityEquipmentSlot.HEAD);
 	public static final Item SILICON_CHESTPLATE = new ArmorBase("silicon_chestplate", ARMOR_MATERIAL_SILICON, 1, EntityEquipmentSlot.CHEST);
@@ -502,36 +522,48 @@ public class ModItems {
 	public static final ItemSword COPPER_SWORD = new ToolSword("copper_sword", ToolMaterialCustom.COPPER);
 	public static final ItemSpade COPPER_SHOVEL = new ToolSpade("copper_shovel", ToolMaterialCustom.COPPER);
 	public static final ItemPickaxe COPPER_PICKAXE = new ToolPickaxe("copper_pickaxe", ToolMaterialCustom.COPPER);
-	public static final ItemPickaxe COMPLETE_COPPER_PICKAXE = new ToolPickaxe("complete_copper_pickaxe", ToolMaterialCustom.COMPLETE_COPPER);
 	public static final ItemAxe COPPER_AXE = new ToolAxe("copper_axe", ToolMaterialCustom.COPPER);
 	public static final ItemHoe COPPER_HOE = new ToolHoe("copper_hoe", ToolMaterialCustom.COPPER);
+	public static final ItemSword COMPLETE_COPPER_SWORD = new ToolSword("complete_copper_sword", ToolMaterialCustom.COMPLETE_COPPER);
+	public static final ItemSpade COMPLETE_COPPER_SHOVEL = new ToolSpade("complete_copper_shovel", ToolMaterialCustom.COMPLETE_COPPER);
+	public static final ItemPickaxe COMPLETE_COPPER_PICKAXE = new ToolPickaxe("complete_copper_pickaxe", ToolMaterialCustom.COMPLETE_COPPER);
+	public static final ItemAxe COMPLETE_COPPER_AXE = new ToolAxe("complete_copper_axe", ToolMaterialCustom.COMPLETE_COPPER);
+	public static final ItemHoe COMPLETE_COPPER_HOE = new ToolHoe("complete_copper_hoe", ToolMaterialCustom.COMPLETE_COPPER);
 
 	public static final Item COPPER_HELMET = new ArmorBase("copper_helmet", ARMOR_MATERIAL_COPPER, 1, EntityEquipmentSlot.HEAD);
 	public static final Item COPPER_CHESTPLATE = new ArmorBase("copper_chestplate", ARMOR_MATERIAL_COPPER, 1, EntityEquipmentSlot.CHEST);
 	public static final Item COPPER_LEGGINGS = new ArmorBase("copper_leggings", ARMOR_MATERIAL_COPPER, 2, EntityEquipmentSlot.LEGS);
 	public static final Item COPPER_BOOTS = new ArmorBase("copper_boots", ARMOR_MATERIAL_COPPER, 1, EntityEquipmentSlot.FEET);
-	
+
 	//IRON//
 	public static final ItemSword IRON_SWORD = new ToolSword("iron_sword", ToolMaterialCustom.IRON);
 	public static final ItemSpade IRON_SHOVEL = new ToolSpade("iron_shovel", ToolMaterialCustom.IRON);
 	public static final ItemPickaxe IRON_PICKAXE = new ToolPickaxe("iron_pickaxe", ToolMaterialCustom.IRON);
-	public static final ItemPickaxe COMPLETE_IRON_PICKAXE = new ToolPickaxe("complete_iron_pickaxe", ToolMaterialCustom.COMPLETE_IRON);
 	public static final ItemAxe IRON_AXE = new ToolAxe("iron_axe", ToolMaterialCustom.IRON);
 	public static final ItemHoe IRON_HOE = new ToolHoe("iron_hoe", ToolMaterialCustom.IRON);
-	
+	public static final ItemSword COMPLETE_IRON_SWORD = new ToolSword("complete_iron_sword", ToolMaterialCustom.COMPLETE_IRON);
+	public static final ItemSpade COMPLETE_IRON_SHOVEL = new ToolSpade("complete_iron_shovel", ToolMaterialCustom.COMPLETE_IRON);
+	public static final ItemPickaxe COMPLETE_IRON_PICKAXE = new ToolPickaxe("complete_iron_pickaxe", ToolMaterialCustom.COMPLETE_IRON);
+	public static final ItemAxe COMPLETE_IRON_AXE = new ToolAxe("complete_iron_axe", ToolMaterialCustom.COMPLETE_IRON);
+	public static final ItemHoe COMPLETE_IRON_HOE = new ToolHoe("complete_iron_hoe", ToolMaterialCustom.COMPLETE_IRON);
+
 	public static final Item IRON_HELMET = new ArmorBase("iron_helmet", ARMOR_MATERIAL_IRON, 1, EntityEquipmentSlot.HEAD);
 	public static final Item IRON_CHESTPLATE = new ArmorBase("iron_chestplate", ARMOR_MATERIAL_IRON, 1, EntityEquipmentSlot.CHEST);
 	public static final Item IRON_LEGGINGS = new ArmorBase("iron_leggings", ARMOR_MATERIAL_IRON, 2, EntityEquipmentSlot.LEGS);
 	public static final Item IRON_BOOTS = new ArmorBase("iron_boots", ARMOR_MATERIAL_IRON, 1, EntityEquipmentSlot.FEET);
-	
+
 	//STEEL//
 	public static final ItemSword STEEL_SWORD = new ToolSword("steel_sword", ToolMaterialCustom.STEEL);
 	public static final ItemSpade STEEL_SHOVEL = new ToolSpade("steel_shovel", ToolMaterialCustom.STEEL);
 	public static final ItemPickaxe STEEL_PICKAXE = new ToolPickaxe("steel_pickaxe", ToolMaterialCustom.STEEL);
-	public static final ItemPickaxe COMPLETE_STEEL_PICKAXE = new ToolPickaxe("complete_steel_pickaxe", ToolMaterialCustom.COMPLETE_STEEL);
 	public static final ItemAxe STEEL_AXE = new ToolAxe("steel_axe", ToolMaterialCustom.STEEL);
 	public static final ItemHoe STEEL_HOE = new ToolHoe("steel_hoe", ToolMaterialCustom.STEEL);
-	
+	public static final ItemSword COMPLETE_STEEL_SWORD = new ToolSword("complete_steel_sword", ToolMaterialCustom.COMPLETE_STEEL);
+	public static final ItemSpade COMPLETE_STEEL_SHOVEL = new ToolSpade("complete_steel_shovel", ToolMaterialCustom.COMPLETE_STEEL);
+	public static final ItemPickaxe COMPLETE_STEEL_PICKAXE = new ToolPickaxe("complete_steel_pickaxe", ToolMaterialCustom.COMPLETE_STEEL);
+	public static final ItemAxe COMPLETE_STEEL_AXE = new ToolAxe("complete_steel_axe", ToolMaterialCustom.COMPLETE_STEEL);
+	public static final ItemHoe COMPLETE_STEEL_HOE = new ToolHoe("complete_steel_hoe", ToolMaterialCustom.COMPLETE_STEEL);
+
 	public static final Item STEEL_HELMET = new ArmorBase("steel_helmet", ARMOR_MATERIAL_STEEL, 1, EntityEquipmentSlot.HEAD);
 	public static final Item STEEL_CHESTPLATE = new ArmorBase("steel_chestplate", ARMOR_MATERIAL_STEEL, 1, EntityEquipmentSlot.CHEST);
 	public static final Item STEEL_LEGGINGS = new ArmorBase("steel_leggings", ARMOR_MATERIAL_STEEL, 2, EntityEquipmentSlot.LEGS);
@@ -541,9 +573,13 @@ public class ModItems {
 	public static final ItemSword BRONZE_SWORD = new ToolSword("bronze_sword", ToolMaterialCustom.BRONZE);
 	public static final ItemSpade BRONZE_SHOVEL = new ToolSpade("bronze_shovel", ToolMaterialCustom.BRONZE);
 	public static final ItemPickaxe BRONZE_PICKAXE = new ToolPickaxe("bronze_pickaxe", ToolMaterialCustom.BRONZE);
-	public static final ItemPickaxe COMPLETE_BRONZE_PICKAXE = new ToolPickaxe("complete_bronze_pickaxe", ToolMaterialCustom.COMPLETE_BRONZE);
 	public static final ItemAxe BRONZE_AXE = new ToolAxe("bronze_axe", ToolMaterialCustom.BRONZE);
 	public static final ItemHoe BRONZE_HOE = new ToolHoe("bronze_hoe", ToolMaterialCustom.BRONZE);
+	public static final ItemSword COMPLETE_BRONZE_SWORD = new ToolSword("complete_bronze_sword", ToolMaterialCustom.COMPLETE_BRONZE);
+	public static final ItemSpade COMPLETE_BRONZE_SHOVEL = new ToolSpade("complete_bronze_shovel", ToolMaterialCustom.COMPLETE_BRONZE);
+	public static final ItemPickaxe COMPLETE_BRONZE_PICKAXE = new ToolPickaxe("complete_bronze_pickaxe", ToolMaterialCustom.COMPLETE_BRONZE);
+	public static final ItemAxe COMPLETE_BRONZE_AXE = new ToolAxe("complete_bronze_axe", ToolMaterialCustom.COMPLETE_BRONZE);
+	public static final ItemHoe COMPLETE_BRONZE_HOE = new ToolHoe("complete_bronze_hoe", ToolMaterialCustom.COMPLETE_BRONZE);
 
 	public static final Item BRONZE_HELMET = new ArmorBase("bronze_helmet", ARMOR_MATERIAL_BRONZE, 1, EntityEquipmentSlot.HEAD);
 	public static final Item BRONZE_CHESTPLATE = new ArmorBase("bronze_chestplate", ARMOR_MATERIAL_BRONZE, 1, EntityEquipmentSlot.CHEST);
@@ -554,23 +590,31 @@ public class ModItems {
 	public static final ItemSword SILVER_SWORD = new ToolSword("silver_sword", ToolMaterialCustom.SILVER);
 	public static final ItemSpade SILVER_SHOVEL = new ToolSpade("silver_shovel", ToolMaterialCustom.SILVER);
 	public static final ItemPickaxe SILVER_PICKAXE = new ToolPickaxe("silver_pickaxe", ToolMaterialCustom.SILVER);
-	public static final ItemPickaxe COMPLETE_SILVER_PICKAXE = new ToolPickaxe("complete_silver_pickaxe", ToolMaterialCustom.COMPLETE_SILVER);
 	public static final ItemAxe SILVER_AXE = new ToolAxe("silver_axe", ToolMaterialCustom.SILVER);
 	public static final ItemHoe SILVER_HOE = new ToolHoe("silver_hoe", ToolMaterialCustom.SILVER);
-	
+	public static final ItemSword COMPLETE_SILVER_SWORD = new ToolSword("complete_silver_sword", ToolMaterialCustom.COMPLETE_SILVER);
+	public static final ItemSpade COMPLETE_SILVER_SHOVEL = new ToolSpade("complete_silver_shovel", ToolMaterialCustom.COMPLETE_SILVER);
+	public static final ItemPickaxe COMPLETE_SILVER_PICKAXE = new ToolPickaxe("complete_silver_pickaxe", ToolMaterialCustom.COMPLETE_SILVER);
+	public static final ItemAxe COMPLETE_SILVER_AXE = new ToolAxe("complete_silver_axe", ToolMaterialCustom.COMPLETE_SILVER);
+	public static final ItemHoe COMPLETE_SILVER_HOE = new ToolHoe("complete_silver_hoe", ToolMaterialCustom.COMPLETE_SILVER);
+
 	public static final Item SILVER_HELMET = new SilverHelmet("silver_helmet", ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.HEAD);
 	public static final Item SILVER_CHESTPLATE = new SilverBody("silver_chestplate", ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.CHEST);
 	public static final Item SILVER_LEGGINGS = new SilverLegs("silver_leggings", ARMOR_MATERIAL_SILVER, 2, EntityEquipmentSlot.LEGS);
 	public static final Item SILVER_BOOTS = new SilverBoots("silver_boots", ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.FEET);
-	
+
 	//GOLD//
 	public static final ItemSword GOLD_SWORD = new ToolSword("gold_sword", ToolMaterialCustom.GOLD);
 	public static final ItemSpade GOLD_SHOVEL = new ToolSpade("gold_shovel", ToolMaterialCustom.GOLD);
 	public static final ItemPickaxe GOLD_PICKAXE = new ToolPickaxe("gold_pickaxe", ToolMaterialCustom.GOLD);
-	public static final ItemPickaxe COMPLETE_GOLD_PICKAXE = new ToolPickaxe("complete_gold_pickaxe", ToolMaterialCustom.COMPLETE_GOLD);
 	public static final ItemAxe GOLD_AXE = new ToolAxe("gold_axe", ToolMaterialCustom.GOLD);
 	public static final ItemHoe GOLD_HOE = new ToolHoe("gold_hoe", ToolMaterialCustom.GOLD);
-	
+	public static final ItemSword COMPLETE_GOLD_SWORD = new ToolSword("complete_gold_sword", ToolMaterialCustom.COMPLETE_GOLD);
+	public static final ItemSpade COMPLETE_GOLD_SHOVEL = new ToolSpade("complete_gold_shovel", ToolMaterialCustom.COMPLETE_GOLD);
+	public static final ItemPickaxe COMPLETE_GOLD_PICKAXE = new ToolPickaxe("complete_gold_pickaxe", ToolMaterialCustom.COMPLETE_GOLD);
+	public static final ItemAxe COMPLETE_GOLD_AXE = new ToolAxe("complete_gold_axe", ToolMaterialCustom.COMPLETE_GOLD);
+	public static final ItemHoe COMPLETE_GOLD_HOE = new ToolHoe("complete_gold_hoe", ToolMaterialCustom.COMPLETE_GOLD);
+
 	public static final Item GOLD_HELMET = new GoldHelmet("gold_helmet", ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.HEAD);
 	public static final Item GOLD_CHESTPLATE = new GoldBody("gold_chestplate", ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.CHEST);
 	public static final Item GOLD_LEGGINGS = new GoldLegs("gold_leggings", ARMOR_MATERIAL_GOLD, 2, EntityEquipmentSlot.LEGS);
@@ -580,15 +624,19 @@ public class ModItems {
 	public static final Item AEROGEL_GOLD_CHESTPLATE = new GoldBody("aerogel_gold_chestplate", ARMOR_MATERIAL_AEROGEL_GOLD, 1, EntityEquipmentSlot.CHEST);
 	public static final Item AEROGEL_GOLD_LEGGINGS = new GoldLegs("aerogel_gold_leggings", ARMOR_MATERIAL_AEROGEL_GOLD, 2, EntityEquipmentSlot.LEGS);
 	public static final Item AEROGEL_GOLD_BOOTS = new GoldBoots("aerogel_gold_boots", ARMOR_MATERIAL_AEROGEL_GOLD, 1, EntityEquipmentSlot.FEET);
-	
+
 	//PLATINUM//
 	public static final ItemSword PLATINUM_SWORD = new ToolSword("platinum_sword", ToolMaterialCustom.PLATINUM);
 	public static final ItemSpade PLATINUM_SHOVEL = new ToolSpade("platinum_shovel", ToolMaterialCustom.PLATINUM);
 	public static final ItemPickaxe PLATINUM_PICKAXE = new ToolPickaxe("platinum_pickaxe", ToolMaterialCustom.PLATINUM);
-	public static final ItemPickaxe COMPLETE_PLATINUM_PICKAXE = new ToolPickaxe("complete_platinum_pickaxe", ToolMaterialCustom.COMPLETE_PLATINUM);
 	public static final ItemAxe PLATINUM_AXE = new ToolAxe("platinum_axe", ToolMaterialCustom.PLATINUM);
 	public static final ItemHoe PLATINUM_HOE = new ToolHoe("platinum_hoe", ToolMaterialCustom.PLATINUM);
-	
+	public static final ItemSword COMPLETE_PLATINUM_SWORD = new ToolSword("complete_platinum_sword", ToolMaterialCustom.COMPLETE_PLATINUM);
+	public static final ItemSpade COMPLETE_PLATINUM_SHOVEL = new ToolSpade("complete_platinum_shovel", ToolMaterialCustom.COMPLETE_PLATINUM);
+	public static final ItemPickaxe COMPLETE_PLATINUM_PICKAXE = new ToolPickaxe("complete_platinum_pickaxe", ToolMaterialCustom.COMPLETE_PLATINUM);
+	public static final ItemAxe COMPLETE_PLATINUM_AXE = new ToolAxe("complete_platinum_axe", ToolMaterialCustom.COMPLETE_PLATINUM);
+	public static final ItemHoe COMPLETE_PLATINUM_HOE = new ToolHoe("complete_platinum_hoe", ToolMaterialCustom.COMPLETE_PLATINUM);
+
 	public static final Item PLATINUM_HELMET = new PlatinumHelmet("platinum_helmet", ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.HEAD);
 	public static final Item PLATINUM_CHESTPLATE = new PlatinumBody("platinum_chestplate", ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.CHEST);
 	public static final Item PLATINUM_LEGGINGS = new PlatinumLegs("platinum_leggings", ARMOR_MATERIAL_PLATINUM, 2, EntityEquipmentSlot.LEGS);
@@ -598,9 +646,13 @@ public class ModItems {
 	public static final ItemSword TITANIUM_SWORD = new ToolSword("titanium_sword", ToolMaterialCustom.TITANIUM);
 	public static final ItemSpade TITANIUM_SHOVEL = new ToolSpade("titanium_shovel", ToolMaterialCustom.TITANIUM);
 	public static final ItemPickaxe TITANIUM_PICKAXE = new ToolPickaxe("titanium_pickaxe", ToolMaterialCustom.TITANIUM);
-	public static final ItemPickaxe COMPLETE_TITANIUM_PICKAXE = new ToolPickaxe("complete_titanium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM);
 	public static final ItemAxe TITANIUM_AXE = new ToolAxe("titanium_axe", ToolMaterialCustom.TITANIUM);
 	public static final ItemHoe TITANIUM_HOE = new ToolHoe("titanium_hoe", ToolMaterialCustom.TITANIUM);
+	public static final ItemSword COMPLETE_TITANIUM_SWORD = new ToolSword("complete_uranium_sword", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemSpade COMPLETE_TITANIUM_SHOVEL = new ToolSpade("complete_uranium_shovel", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemPickaxe COMPLETE_TITANIUM_PICKAXE = new ToolPickaxe("complete_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemAxe COMPLETE_TITANIUM_AXE = new ToolAxe("complete_uranium_axe", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemHoe COMPLETE_TITANIUM_HOE = new ToolHoe("complete_uranium_hoe", ToolMaterialCustom.COMPLETE_TITANIUM);
 
 	public static final Item TITANIUM_HELMET = new ArmorBase("titanium_helmet", ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.HEAD);
 	public static final Item TITANIUM_CHESTPLATE = new ArmorBase("titanium_chestplate", ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.CHEST);
@@ -611,9 +663,13 @@ public class ModItems {
 	public static final ItemSword URANIUM_SWORD = new ToolSword("uranium_sword", ToolMaterialCustom.URANIUM);
 	public static final ItemSpade URANIUM_SHOVEL = new ToolSpade("uranium_shovel", ToolMaterialCustom.URANIUM);
 	public static final ItemPickaxe URANIUM_PICKAXE = new ToolPickaxe("uranium_pickaxe", ToolMaterialCustom.URANIUM);
-	public static final ItemPickaxe COMPLETE_URANIUM_PICKAXE = new ToolPickaxe("complete_uranium_pickaxe", ToolMaterialCustom.COMPLETE_URANIUM);
 	public static final ItemAxe URANIUM_AXE = new ToolAxe("uranium_axe", ToolMaterialCustom.URANIUM);
 	public static final ItemHoe URANIUM_HOE = new ToolHoe("uranium_hoe", ToolMaterialCustom.URANIUM);
+	public static final ItemSword COMPLETE_URANIUM_SWORD = new ToolSword("complete_uranium_sword", ToolMaterialCustom.COMPLETE_URANIUM);
+	public static final ItemSpade COMPLETE_URANIUM_SHOVEL = new ToolSpade("complete_uranium_shovel", ToolMaterialCustom.COMPLETE_URANIUM);
+	public static final ItemPickaxe COMPLETE_URANIUM_PICKAXE = new ToolPickaxe("complete_uranium_pickaxe", ToolMaterialCustom.COMPLETE_URANIUM);
+	public static final ItemAxe COMPLETE_URANIUM_AXE = new ToolAxe("complete_uranium_axe", ToolMaterialCustom.COMPLETE_URANIUM);
+	public static final ItemHoe COMPLETE_URANIUM_HOE = new ToolHoe("complete_uranium_hoe", ToolMaterialCustom.COMPLETE_URANIUM);
 
 	public static final Item URANIUM_HELMET = new ArmorBase("uranium_helmet", ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.HEAD);
 	public static final Item URANIUM_CHESTPLATE = new ArmorBase("uranium_chestplate", ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.CHEST);
@@ -648,9 +704,13 @@ public class ModItems {
 	public static final ItemSword TUNGSTEN_SWORD = new ToolSword("tungsten_sword", ToolMaterialCustom.TUNGSTEN);
 	public static final ItemSpade TUNGSTEN_SHOVEL = new ToolSpade("tungsten_shovel", ToolMaterialCustom.TUNGSTEN);
 	public static final ItemPickaxe TUNGSTEN_PICKAXE = new ToolPickaxe("tungsten_pickaxe", ToolMaterialCustom.TUNGSTEN);
-	public static final ItemPickaxe COMPLETE_TUNGSTEN_PICKAXE = new ToolPickaxe("complete_tungsten_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
 	public static final ItemAxe TUNGSTEN_AXE = new ToolAxe("tungsten_axe", ToolMaterialCustom.TUNGSTEN);
 	public static final ItemHoe TUNGSTEN_HOE = new ToolHoe("tungsten_hoe", ToolMaterialCustom.TUNGSTEN);
+	public static final ItemSword COMPLETE_TUNGSTEN_SWORD = new ToolSword("complete_uranium_sword", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemSpade COMPLETE_TUNGSTEN_SHOVEL = new ToolSpade("complete_uranium_shovel", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemPickaxe COMPLETE_TUNGSTEN_PICKAXE = new ToolPickaxe("complete_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemAxe COMPLETE_TUNGSTEN_AXE = new ToolAxe("complete_uranium_axe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemHoe COMPLETE_TUNGSTEN_HOE = new ToolHoe("complete_uranium_hoe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
 
 	public static final Item TUNGSTEN_HELMET = new ArmorBase("tungsten_helmet", ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.HEAD);
 	public static final Item TUNGSTEN_CHESTPLATE = new ArmorBase("tungsten_chestplate", ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.CHEST);
@@ -661,7 +721,7 @@ public class ModItems {
 	public static final ItemSword TITANIUM_URANIUM_SWORD = new ToolSword("titanium_uranium_sword", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemSpade TITANIUM_URANIUM_SHOVEL = new ToolSpade("titanium_uranium_shovel", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemPickaxe TITANIUM_URANIUM_PICKAXE = new ToolPickaxe("titanium_uranium_pickaxe", ToolMaterialCustom.TITANIUM_URANIUM);
-	public static final ItemPickaxe COMPLETE_TITANIUM_URANIUM_PICKAXE = new ToolPickaxe("complete_titanium_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
+	public static final ItemPickaxe COMPLETE_TITANIUM_URANIUM_PICKAXE = new ToolPickaxe("complete_uranium_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
 	public static final ItemAxe TITANIUM_URANIUM_AXE = new ToolAxe("titanium_uranium_axe", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemHoe TITANIUM_URANIUM_HOE = new ToolHoe("titanium_uranium_hoe", ToolMaterialCustom.TITANIUM_URANIUM);
 
@@ -707,19 +767,19 @@ public class ModItems {
 	public static final Item EMERALD_CHESTPLATE = new EmeraldBody("emerald_chestplate", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
 	public static final Item EMERALD_LEGGINGS = new EmeraldLegs("emerald_leggings", ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
 	public static final Item EMERALD_BOOTS = new EmeraldBoots("emerald_boots", ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
-	
+
 	//RUBY//
 	public static final ItemSword RUBY_SWORD = new ToolSword("ruby_sword", ToolMaterialCustom.RUBY);
 	public static final ItemSpade RUBY_SHOVEL = new ToolSpade("ruby_shovel", ToolMaterialCustom.RUBY);
 	public static final ItemPickaxe RUBY_PICKAXE = new ToolPickaxe("ruby_pickaxe", ToolMaterialCustom.RUBY);
 	public static final ItemAxe RUBY_AXE = new ToolAxe("ruby_axe", ToolMaterialCustom.RUBY);
 	public static final ItemHoe RUBY_HOE = new ToolHoe("ruby_hoe", ToolMaterialCustom.RUBY);
-	
+
 	public static final Item RUBY_HELMET = new RubyHelmet("ruby_helmet", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.HEAD);
 	public static final Item RUBY_CHESTPLATE = new RubyBody("ruby_chestplate", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.CHEST);
 	public static final Item RUBY_LEGGINGS = new RubyLegs("ruby_leggings", ARMOR_MATERIAL_RUBY, 2, EntityEquipmentSlot.LEGS);
 	public static final Item RUBY_BOOTS = new RubyBoots("ruby_boots", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.FEET);
-	
+
 	//SAPPHIRE//
 	public static final ItemSword SAPPHIRE_SWORD = new ToolSword("sapphire_sword", ToolMaterialCustom.SAPPHIRE);
 	public static final ItemSpade SAPPHIRE_SHOVEL = new ToolSpade("sapphire_shovel", ToolMaterialCustom.SAPPHIRE);
@@ -731,19 +791,19 @@ public class ModItems {
 	public static final Item SAPPHIRE_CHESTPLATE = new SapphirBody("sapphire_chestplate", ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.CHEST);
 	public static final Item SAPPHIRE_LEGGINGS = new SapphirLegs("sapphire_leggings", ARMOR_MATERIAL_SAPPHIRE, 2, EntityEquipmentSlot.LEGS);
 	public static final Item SAPPHIRE_BOOTS = new SapphirBoots("sapphire_boots", ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.FEET);
-	
+
 	//DIAMOND//
 	public static final ItemSword DIAMOND_SWORD = new ToolSword("diamond_sword", ToolMaterialCustom.DIAMOND);
 	public static final ItemSpade DIAMOND_SHOVEL = new ToolSpade("diamond_shovel", ToolMaterialCustom.DIAMOND);
 	public static final ItemPickaxe DIAMOND_PICKAXE = new ToolPickaxe("diamond_pickaxe", ToolMaterialCustom.DIAMOND);
 	public static final ItemAxe DIAMOND_AXE = new ToolAxe("diamond_axe", ToolMaterialCustom.DIAMOND);
 	public static final ItemHoe DIAMOND_HOE = new ToolHoe("diamond_hoe", ToolMaterialCustom.DIAMOND);
-	
+
 	public static final Item DIAMOND_HELMET = new DiamondHelmet("diamond_helmet", ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.HEAD);
 	public static final Item DIAMOND_CHESTPLATE = new DiamondBody("diamond_chestplate", ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.CHEST);
 	public static final Item DIAMOND_LEGGINGS = new DiamondLegs("diamond_leggings", ARMOR_MATERIAL_DIAMOND, 2, EntityEquipmentSlot.LEGS);
 	public static final Item DIAMOND_BOOTS = new DiamondBoots("diamond_boots", ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.FEET);
-	
+
 	//OLIVINE//
 	public static final ItemSword OLIVINE_SWORD = new ToolSword("olivine_sword", ToolMaterialCustom.OLIVINE);
 	public static final ItemSpade OLIVINE_SHOVEL = new ToolSpade("olivine_shovel", ToolMaterialCustom.OLIVINE);
@@ -767,7 +827,7 @@ public class ModItems {
 	public static final Item WADSLEYITE_CHESTPLATE = new SapphirBody("wadsleyite_chestplate", ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.CHEST);
 	public static final Item WADSLEYITE_LEGGINGS = new SapphirLegs("wadsleyite_leggings", ARMOR_MATERIAL_WADSLEYITE, 2, EntityEquipmentSlot.LEGS);
 	public static final Item WADSLEYITE_BOOTS = new SapphirBoots("wadsleyite_boots", ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.FEET);
-	
+
 	//RINGWOODITE//
 	public static final ItemSword RINGWOODITE_SWORD = new ToolSword("ringwoodite_sword", ToolMaterialCustom.RINGWOODITE);
 	public static final ItemSpade RINGWOODITE_SHOVEL = new ToolSpade("ringwoodite_shovel", ToolMaterialCustom.RINGWOODITE);
@@ -810,7 +870,7 @@ public class ModItems {
 	public static final ItemPickaxe AMAZONITE_PICKAXE = new ToolPickaxe("amazonite_pickaxe", ToolMaterialCustom.AMAZONITE);
 	public static final ItemAxe AMAZONITE_AXE = new ToolAxe("amazonite_axe", ToolMaterialCustom.AMAZONITE);
 	public static final ItemHoe AMAZONITE_HOE = new ToolHoe("amazonite_hoe", ToolMaterialCustom.AMAZONITE);
-	
+
 	public static final Item AMAZONITE_HELMET = new AmazoniteHelmet("amazonite_helmet", ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.HEAD);
 	public static final Item AMAZONITE_CHESTPLATE = new AmazoniteBody("amazonite_chestplate", ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.CHEST);
 	public static final Item AMAZONITE_LEGGINGS = new AmazoniteLegs("amazonite_leggings", ARMOR_MATERIAL_AMAZONITE, 2, EntityEquipmentSlot.LEGS);
@@ -860,7 +920,7 @@ public class ModItems {
 	public static final Item AMAZONITE = new ItemBase("amazonite");
 	public static final Item MAJORITE = new ItemBase("majorite");
 	public static final Item ONYX = new ItemBase("onyx");
-	
+
 	//ROD//
 	public static final Item ALUMINIUM_ROD = new ItemBase("aluminium_rod");
 	public static final Item LEAD_ROD = new ItemBase("lead_rod");
@@ -893,7 +953,7 @@ public class ModItems {
 	public static final Item AMAZONITE_ROD = new Gems("amazonite_rod");
 	public static final Item MAJORITE_ROD = new Gems("majorite_rod");
 	public static final Item ONYX_ROD = new Gems("onyx_rod");
-	
+
 	//Ingot//
 	public static final Item ALUMINIUM_INGOT = new ItemBase("aluminium_ingot");
 	public static final Item LEAD_INGOT = new ItemBase("lead_ingot");
@@ -936,7 +996,7 @@ public class ModItems {
 	public static final Item TITANIUM_URANIUM_NUGGET = new ItemBase("titanium_uranium_nugget");
 	public static final Item TUNGSTEN_URANIUM_NUGGET = new ItemBase("tungsten_uranium_nugget");
 	public static final Item TUNGSTEN_TITANIUM_NUGGET = new ItemBase("tungsten_titanium_nugget");
-	
+
 	public static final Item DEMON_STAR = new ItemBase("demon_star");
 	public static final Item DEMON_STAR_CHARGED = new Gems("demon_star_charged");
 	public static final Item CORE_STAR = new ItemBase("core_star");

@@ -55,19 +55,21 @@ public class PlayerTickEventHandler {
         x = event.player.getPosition().getX();
         y = event.player.getPosition().getY();
         z = event.player.getPosition().getZ();
-        Iterable<BlockPos> it = BlockPos.getAllInBox(x - 2, y - 2, z - 2, x + 2, y + 2, z + 2);
+        Iterable<BlockPos> it = BlockPos.getAllInBox(x - 6, y - 6, z - 6, x + 6, y + 6, z + 6);
         int randomLava = new Random().nextInt(60) + 1;
         if (randomLava == 1) {
             for (BlockPos pos1 : it) {
                 IBlockState state2 = event.player.world.getBlockState(pos1);
                 if (state2.getMaterial() == Material.LAVA) {
                     event.player.setFire(5);
+                    event.player.attackEntityFrom(DamageSource.LAVA,0.5F);
                 }
             }
             for (BlockPos pos1 : it) {
                 IBlockState state2 = event.player.world.getBlockState(pos1);
                 if (state2.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
                     event.player.setFire(15);
+                    event.player.attackEntityFrom(DamageSource.LAVA,4.0F);
                 }
             }
         }

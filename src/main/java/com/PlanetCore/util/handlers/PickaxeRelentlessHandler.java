@@ -132,7 +132,7 @@ public class PickaxeRelentlessHandler {
                     return;
                 }
                 // I want to play the sound effect here and make it work in server (so client side)? without kicking player out
-                event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.getByName("action"), 1.0F, 1.0F);
+                //event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.getByName("action"), 1.0F, 1.0F);
             }
 
             if (breaktime > 0.01F && breaktime <= 0.1F) {
