@@ -76,13 +76,13 @@ public class PickaxeRelentlessHandler {
         //
         if (!event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("pickaxe")) {
             if (event.getState().getMaterial() == Material.ROCK) {
-                event.setNewSpeed(event.getOriginalSpeed() / 3F);
+                event.setNewSpeed(event.getOriginalSpeed() / 1.5F);
             }
         }
 
         if (!event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("axe")) {
             if (event.getState().getMaterial() == Material.WOOD) {
-                event.setNewSpeed(event.getOriginalSpeed() / 3F);
+                event.setNewSpeed(event.getOriginalSpeed() / 1.5F);
             }
         }
 
@@ -128,11 +128,12 @@ public class PickaxeRelentlessHandler {
             //Determine if the block is undestructible.
             if (breaktime > Relentless) {
                 event.setCanceled(true);
-                if (event.getEntityPlayer().world.getTotalWorldTime() % 6 != 1) {
+                if (event.getEntityPlayer().world.getTotalWorldTime() % 6 == 1) {
+                    event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return;
                 }
                 // I want to play the sound effect here and make it work in server (so client side)? without kicking player out
-                //event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.getByName("action"), 1.0F, 1.0F);
+
             }
 
             if (breaktime > 0.01F && breaktime <= 0.1F) {
