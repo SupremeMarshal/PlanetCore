@@ -8,6 +8,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -31,7 +32,7 @@ public class BlocksBase extends BlockBase {
 				|| a.contains("ruby") || a.contains("diamond") || a.contains("topaz") || a.contains("jade")
 				|| a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite") || a.contains("brigmanite")
 				|| a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
-			return new Random().nextInt(5) + 4;
+			return new Random().nextInt(6) + 4;
 		}
 		else return 1;
 	}
@@ -81,6 +82,15 @@ public class BlocksBase extends BlockBase {
 
 		if (!b) return new ItemStack(this, 1, 0).getItem();
 		else return new ItemStack(drop, 1, 0).getItem();
+	}
+
+	@Override
+	public int damageDropped(IBlockState state) {
+		String a = this.getTranslationKey();
+		if (a.contains("lapis")) {
+			return EnumDyeColor.BLUE.getDyeDamage();
+		}
+		else return super.damageDropped(state);
 	}
 
 	@Override

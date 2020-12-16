@@ -40,7 +40,7 @@ public class Crustrock extends BlockBase implements IMetaName
 
 		setSoundType(SoundType.STONE);
 
-		setResistance(1.0F);
+		setResistance(0.2F);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 

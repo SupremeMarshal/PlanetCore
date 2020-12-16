@@ -26,7 +26,7 @@ public class ModSmelting {
 	private static final String[] Item1 = {"INGOT", "SWORD", "AXE", "PICKAXE", "SPADE", "HOE",
 			"HELMET", "CHESTPLATE", "LEGGINGS", "BOOTS", "ROD"};
 	//"STEEL", "BRONZE", "TITANIUM_URANIUM", "TUNGSTEN_URANIUM", "TUNGSTEN_TITANIUM",
-	private static final String[] Material = {"ALUMINIUM", "ZINC", "LEAD", "TIN", "SILICON", "COPPER", "IRON", "SILVER",
+	private static final String[] Material = {"SULFUR","ALUMINIUM", "ZINC", "LEAD", "TIN", "SILICON", "COPPER", "IRON", "SILVER",
 			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "REDSTONE", "TOPAZ", "JADE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
 			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX"};
 
@@ -45,7 +45,7 @@ public class ModSmelting {
 		 * NORMAL FURNACE RECIPES
 		 */
 		for (int size = 0; size < 3; size++) {
-			for (int material = 0; (material < 27); material++) {
+			for (int material = 0; (material < 28); material++) {
 
 				if (material < 13)
 				{
@@ -75,7 +75,7 @@ public class ModSmelting {
 
 				for (int rock = 0; rock < 4; rock++)
 				{
-					if (rock == 3 && material < 13)
+					if (rock == 3 && material < 14)
 					{
 						continue;
 					}

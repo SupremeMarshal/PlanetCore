@@ -25,10 +25,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.IItemPropertyGetter;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
@@ -88,15 +85,15 @@ public class BlockBase extends Block {
 	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
 	 * }
 	 */
-	private static final float [] crustHardnessByMeta = {2, 3, 6, 10, 17, 24, 33, 44, 55};
-	private static final float [] mantleHardnessByMeta = {70, 100, 145, 205, 280, 370, 475, 595, 730, 880, 1045, 1225, 1420, 1630, 1855, 2095};
-	private static final float [] coreHardnessByMeta = {5210, 7250, 10310};
+	private static final float [] crustHardnessByMeta = {2, 3, 6, 10, 15, 20, 25, 30, 35};
+	private static final float [] mantleHardnessByMeta = {50, 55, 60, 66, 73, 80, 88, 97, 107, 130, 143, 157, 173, 190, 208, 229};
+	private static final float [] coreHardnessByMeta = {300, 500, 1000};
 
 
 
 	private static final String[] MaterialItem = {"ALUMINIUM", "ZINC", "LEAD", "TIN", "SILICON", "COPPER", "IRON", "SILVER",
 			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "TOPAZ", "JADE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
-			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX", "COAL"};
+			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX", "COAL", "SULFUR"};
 
 
 
@@ -129,6 +126,7 @@ public class BlockBase extends Block {
 		else {b = false;}
 		if (a.contains("redstone")) { c = true; if (!b) { drop = Items.REDSTONE; } else { drop = ModItems.REDSTONE_SHARD; }}
 		else if (a.contains("lapis")) { c = true; if (!b) { drop = Items.DYE; } else { drop = ModItems.LAPIS_SHARD; }}
+		else if (a.contains("sulfur")) { c = true; if (!b) { drop = ModItems.SULFUR; } else { drop = ModItems.SULFUR_SHARD; }}
 		else if (a.contains("coal")) { c = true; if (!b) { drop = Items.COAL; } else { drop = ModItems.COAL_BIT; }}
 		else if (a.contains("emerald")) { c = true; if (!b) { drop = Items.EMERALD; } else { drop = ModItems.EMERALD_SHARD; }}
 		else if (a.contains("sapphire")) { c = true; if (!b) { drop = ModItems.SAPPHIRE; } else { drop = ModItems.SAPPHIRE_SHARD; }}
@@ -147,32 +145,36 @@ public class BlockBase extends Block {
 
 		if (!c) { return new ItemStack(this, 1, 0).getItem(); }
 		else { return new ItemStack(drop, 1, 0).getItem(); }
+
 	}
 
-
+	@Override
+	public int damageDropped(IBlockState state) {
+		String a = this.getTranslationKey();
+		if (a.contains("lapis")) {
+			return EnumDyeColor.BLUE.getDyeDamage();
+		}
+		else return super.damageDropped(state);
+	}
 
 	@Override
 	public int quantityDropped(Random random) {
 		String a = this.getTranslationKey();
 		String materialItem = MaterialItem[0];
 		int amount = 1;
-		for (int material = 0; (material < 27); material++) {
-
-			if (materialItem.contains(MaterialItem[material]) && material > 13) {
-				if (a.contains("_small") || a.contains("_compact")) {
-					amount = new Random().nextInt(3) + 1;
-				} else if (a.contains("_supercompact")) {
-					amount = new Random().nextInt(3) + 2;
-				} else {
-					amount = 1;
-				}
-				return amount;
+		if (a.contains("sulfur") || a.contains("coal") || a.contains("redstone") || a.contains("lapis")
+				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
+				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
+				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
+			if (a.contains("small")) {
+				amount = new Random().nextInt(2) + 1;
 			}
-			else
-			{
-				return 1;
+			if (a.contains("compact")) {
+				amount = new Random().nextInt(2) + 2;
 			}
 		}
+		else amount = 1;
+
 		return amount;
 	}
 
@@ -185,13 +187,14 @@ public class BlockBase extends Block {
 	}
 
 	@Override
-	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity,
-								   boolean willHarvest) {
+	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		if (this.getTranslationKey().contains("redstone") && !world.isRemote) {
-			world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
+		if (!world.isRemote) {
+			if (this.getTranslationKey().contains("redstone")) {
+				world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
+			}
 		}
 		return super.removedByPlayer(state, world, pos, entity, willHarvest);
 	}
@@ -208,11 +211,11 @@ public class BlockBase extends Block {
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 			float PressureLevel = (pos.getY() / 64 / -24000 * 100.0F) * (pos.getY() / 64 / -24000 * 100.0F) * (pos.getY() / 64 / -24000 * 100.0F);
 
-			if ((this == ModBlocks.CRUSTROCK || this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < 500 && (Math.random() <= (pos.getY()+499 / -12000.0F))) {
+			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -500 && (Math.random() <= (pos.getY()+499 / -12000.0F))) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (!movedState.getBlock().getTranslationKey().contains("crustrock") || movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
+					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
