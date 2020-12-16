@@ -44,10 +44,10 @@ public class PlayerTickEventHandler {
 
         //Heal player based on food level. Heal from 0% to 100% in 600 seconds at max food lvl. Heal fully in 3 hours if food level is 1. At 0 food, player stop healing.
         if (event.player.getFoodStats().getFoodLevel() >= 1) {
-        if (event.player.world.getTotalWorldTime() % 20 != 1) {
-            return;
+        if (event.player.world.getTotalWorldTime() % 20 == 1) {
+            event.player.heal(event.player.getMaxHealth() / (12000 / event.player.getFoodStats().getFoodLevel()));
         }
-        event.player.heal(event.player.getMaxHealth() / (12000 / event.player.getFoodStats().getFoodLevel()));
+
         }
 
 
@@ -55,21 +55,26 @@ public class PlayerTickEventHandler {
         x = event.player.getPosition().getX();
         y = event.player.getPosition().getY();
         z = event.player.getPosition().getZ();
-        Iterable<BlockPos> it = BlockPos.getAllInBox(x - 6, y - 6, z - 6, x + 6, y + 6, z + 6);
-        int randomLava = new Random().nextInt(60) + 1;
+        Iterable<BlockPos> it = BlockPos.getAllInBox(x - 4, y - 4, z - 4, x + 4, y + 4, z + 4);
+        int randomLava = new Random().nextInt(30) + 1;
         if (randomLava == 1) {
-            for (BlockPos pos1 : it) {
-                IBlockState state2 = event.player.world.getBlockState(pos1);
-                if (state2.getMaterial() == Material.LAVA) {
-                    event.player.setFire(5);
-                    event.player.attackEntityFrom(DamageSource.LAVA,0.5F);
+            for (BlockPos pos : it) {
+                IBlockState state = event.player.world.getBlockState(pos);
+                if (state.getMaterial() == Material.LAVA) {
+
+                    if (event.player.world.getTotalWorldTime() % 5 == 1) {
+                        event.player.setFire(5);
+                        event.player.attackEntityFrom(DamageSource.LAVA,1.0F);
+                    }
                 }
             }
             for (BlockPos pos1 : it) {
-                IBlockState state2 = event.player.world.getBlockState(pos1);
-                if (state2.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
-                    event.player.setFire(15);
-                    event.player.attackEntityFrom(DamageSource.LAVA,4.0F);
+                IBlockState state1 = event.player.world.getBlockState(pos1);
+                if (state1.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
+                    if (event.player.world.getTotalWorldTime() % 5 == 1) {
+                        event.player.setFire(15);
+                        event.player.attackEntityFrom(DamageSource.LAVA,5.0F);
+                    }
                 }
             }
         }
