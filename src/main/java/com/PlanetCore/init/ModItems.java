@@ -52,43 +52,43 @@ public class ModItems {
 		COMPLETE_ZINC(2, 300, 5.0F, 3.4F, 22, 3),
 		TIN(2, 80, 4.0F, 2.8F, 22, 3),
 		COMPLETE_TIN(2, 160, 4.0F, 2.8F, 22, 3),
-		BRONZE(2, 250, 9.0F, 4.0F, 22, 3),
-		COMPLETE_BRONZE(2, 500, 9.0F, 4.0F, 22, 3),
-		IRON(2, 500, 7.0F, 4.6F, 22, 4),
-		COMPLETE_IRON(2, 1000, 7.0F, 4.6F, 22, 4),
-		STEEL(2, 800, 8.0F, 5.2F, 22, 5),
-		COMPLETE_STEEL(2, 1600, 8.0F, 5.2F, 22, 5),
-		SILVER(3, 300, 12.0F, 5.8F, 22, 4),
-		COMPLETE_SILVER(3, 600, 12.0F, 5.8F, 22, 4),
-		GOLD(3, 400, 18.0F, 6.4F, 22, 5),
-		COMPLETE_GOLD(3, 800, 18.0F, 6.4F, 22, 5),
-		PLATINUM(3, 500, 24.0F, 7.0F, 22, 6),
-		COMPLETE_PLATINUM(3, 1000, 24.0F, 7.0F, 22, 6),
-		TITANIUM(3, 1000, 30.0F, 7.6F, 22, 6),
-		COMPLETE_TITANIUM(3, 2000, 30.0F, 7.6F, 22, 6),
-		URANIUM(4, 30, 100.0F, 9.4F, 22, 8),
-		COMPLETE_URANIUM(4, 60, 100.0F, 9.4F, 22, 8),
-		TOPAZ(4, 300, 50.0F, 8.2F, 22, 3),
-		JADE(4, 400, 75.0F, 8.8F, 22, 2),
-		TUNGSTEN(4, 3000, 40.0F, 7.0F, 22, 4),
-		COMPLETE_TUNGSTEN(4, 6000, 40.0F, 7.0F, 22, 4),
-		TITANIUM_URANIUM(4, 515, 90.0F, 12.0F, 22, 8),
-		COMPLETE_TITANIUM_URANIUM(4, 1030, 90.0F, 12.0F, 22, 8),
-		TUNGSTEN_URANIUM(4, 1515, 90.0F, 12.0F, 22, 8),
-		COMPLETE_TUNGSTEN_URANIUM(4, 3030, 90.0F, 12.0F, 22, 8),
-		TUNGSTEN_TITANIUM(4, 10000, 50.0F, 9.0F, 22, 4),
-		COMPLETE_TUNGSTEN_TITANIUM(4, 20000, 50.0F, 9.0F, 22, 4),
+		BRONZE(2, 250, 9.3F, 4.0F, 22, 3),
+		COMPLETE_BRONZE(2, 500, 9.3F, 4.0F, 22, 3),
+		IRON(2, 500, 6.0F, 4.6F, 22, 4),
+		COMPLETE_IRON(2, 1000, 6.0F, 4.6F, 22, 4),
+		STEEL(2, 800, 7.5F, 5.2F, 22, 5),
+		COMPLETE_STEEL(2, 1600, 7.5F, 5.2F, 22, 5),
+		SILVER(3, 300, 11.7F, 5.8F, 22, 4),
+		COMPLETE_SILVER(3, 600, 11.7F, 5.8F, 22, 4),
+		GOLD(3, 400, 14.6F, 6.4F, 22, 5),
+		COMPLETE_GOLD(3, 800, 14.6F, 6.4F, 22, 5),
+		PLATINUM(3, 500, 18.3F, 7.0F, 22, 6),
+		COMPLETE_PLATINUM(3, 1000, 18.3F, 7.0F, 22, 6),
+		TITANIUM(3, 1000, 22.8F, 7.6F, 22, 6),
+		COMPLETE_TITANIUM(3, 2000, 22.8F, 7.6F, 22, 6),
+		URANIUM(4, 30, 35.7F, 9.4F, 22, 8),
+		COMPLETE_URANIUM(4, 60, 35.7F, 9.4F, 22, 8),
+		TOPAZ(4, 300, 44.7F, 8.2F, 22, 3),
+		JADE(4, 400, 55.9F, 8.8F, 22, 2),
+		TUNGSTEN(4, 3000, 28.6F, 7.0F, 22, 4),
+		COMPLETE_TUNGSTEN(4, 6000, 28.6F, 7.0F, 22, 4),
+		TITANIUM_URANIUM(4, 515, 58.5F, 12.0F, 22, 8),
+		COMPLETE_TITANIUM_URANIUM(4, 1030, 58.5F, 12.0F, 22, 8),
+		TUNGSTEN_URANIUM(4, 1515, 64.3F, 12.0F, 22, 8),
+		COMPLETE_TUNGSTEN_URANIUM(4, 3030, 64.3F, 12.0F, 22, 8),
+		TUNGSTEN_TITANIUM(4, 10000, 51.4F, 9.0F, 22, 4),
+		COMPLETE_TUNGSTEN_TITANIUM(4, 20000, 51.4F, 9.0F, 22, 4),
 		EMERALD(5, 100, 16.0F, 6.6F, 22, 5),
-		RUBY(6, 1600, 500.0F, 10.2F, 22, 8),
-		SAPPHIRE(6, 1600, 500.0F, 10.2F, 22, 8),
-		DIAMOND(10, 3200, 1000.0F, 10.8F, 22, 16),
-		OLIVINE(11, 4000, 1200.0F, 11.6F, 22, 24),
-		WADSLEYITE(12, 4800, 1500.0F, 12.6F, 22, 26),
-		RINGWOODITE(13, 5600, 2000.0F, 13.8F, 22, 28),
-		BRIGMANITE(14, 6400, 3000.0F, 15.2F, 22, 30),
-		MAJORITE(15, 7200, 5000.0F, 16.6F, 22, 32),
-		AMAZONITE(100, 8000, 10000.0F, 18.2F, 22, 64),
-		ONYX(1000, 16000, 20000.0F, 20.0F, 22, 128);
+		RUBY(6, 1600, 87.3F, 10.2F, 22, 8),
+		SAPPHIRE(6, 1600, 87.3F, 10.2F, 22, 8),
+		DIAMOND(10, 3200, 109.0F, 10.8F, 22, 16),
+		OLIVINE(11, 4000, 136.5F, 11.6F, 22, 24),
+		WADSLEYITE(12, 4800, 170.5F, 12.6F, 22, 26),
+		RINGWOODITE(13, 5600, 213.2F, 13.8F, 22, 28),
+		BRIGMANITE(14, 6400, 266.5F, 15.2F, 22, 30),
+		MAJORITE(15, 7200, 333.0F, 16.6F, 22, 32),
+		AMAZONITE(100, 8000, 416.0F, 18.2F, 22, 64),
+		ONYX(1000, 16000, 520.0F, 20.0F, 22, 128);
 
 
 		/** The level of material this tool can harvest (3 = DIAMOND, 2 = IRON, 1 = STONE, 0 = WOOD/GOLD) */
@@ -648,11 +648,11 @@ public class ModItems {
 	public static final ItemPickaxe TITANIUM_PICKAXE = new ToolPickaxe("titanium_pickaxe", ToolMaterialCustom.TITANIUM);
 	public static final ItemAxe TITANIUM_AXE = new ToolAxe("titanium_axe", ToolMaterialCustom.TITANIUM);
 	public static final ItemHoe TITANIUM_HOE = new ToolHoe("titanium_hoe", ToolMaterialCustom.TITANIUM);
-	public static final ItemSword COMPLETE_TITANIUM_SWORD = new ToolSword("complete_uranium_sword", ToolMaterialCustom.COMPLETE_TITANIUM);
-	public static final ItemSpade COMPLETE_TITANIUM_SHOVEL = new ToolSpade("complete_uranium_shovel", ToolMaterialCustom.COMPLETE_TITANIUM);
-	public static final ItemPickaxe COMPLETE_TITANIUM_PICKAXE = new ToolPickaxe("complete_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM);
-	public static final ItemAxe COMPLETE_TITANIUM_AXE = new ToolAxe("complete_uranium_axe", ToolMaterialCustom.COMPLETE_TITANIUM);
-	public static final ItemHoe COMPLETE_TITANIUM_HOE = new ToolHoe("complete_uranium_hoe", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemSword COMPLETE_TITANIUM_SWORD = new ToolSword("complete_titanium_sword", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemSpade COMPLETE_TITANIUM_SHOVEL = new ToolSpade("complete_titanium_shovel", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemPickaxe COMPLETE_TITANIUM_PICKAXE = new ToolPickaxe("complete_titanium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemAxe COMPLETE_TITANIUM_AXE = new ToolAxe("complete_titanium_axe", ToolMaterialCustom.COMPLETE_TITANIUM);
+	public static final ItemHoe COMPLETE_TITANIUM_HOE = new ToolHoe("complete_titanium_hoe", ToolMaterialCustom.COMPLETE_TITANIUM);
 
 	public static final Item TITANIUM_HELMET = new ArmorBase("titanium_helmet", ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.HEAD);
 	public static final Item TITANIUM_CHESTPLATE = new ArmorBase("titanium_chestplate", ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.CHEST);
@@ -706,11 +706,11 @@ public class ModItems {
 	public static final ItemPickaxe TUNGSTEN_PICKAXE = new ToolPickaxe("tungsten_pickaxe", ToolMaterialCustom.TUNGSTEN);
 	public static final ItemAxe TUNGSTEN_AXE = new ToolAxe("tungsten_axe", ToolMaterialCustom.TUNGSTEN);
 	public static final ItemHoe TUNGSTEN_HOE = new ToolHoe("tungsten_hoe", ToolMaterialCustom.TUNGSTEN);
-	public static final ItemSword COMPLETE_TUNGSTEN_SWORD = new ToolSword("complete_uranium_sword", ToolMaterialCustom.COMPLETE_TUNGSTEN);
-	public static final ItemSpade COMPLETE_TUNGSTEN_SHOVEL = new ToolSpade("complete_uranium_shovel", ToolMaterialCustom.COMPLETE_TUNGSTEN);
-	public static final ItemPickaxe COMPLETE_TUNGSTEN_PICKAXE = new ToolPickaxe("complete_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
-	public static final ItemAxe COMPLETE_TUNGSTEN_AXE = new ToolAxe("complete_uranium_axe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
-	public static final ItemHoe COMPLETE_TUNGSTEN_HOE = new ToolHoe("complete_uranium_hoe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemSword COMPLETE_TUNGSTEN_SWORD = new ToolSword("complete_tungsten_sword", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemSpade COMPLETE_TUNGSTEN_SHOVEL = new ToolSpade("complete_tungsten_shovel", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemPickaxe COMPLETE_TUNGSTEN_PICKAXE = new ToolPickaxe("complete_tungsten_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemAxe COMPLETE_TUNGSTEN_AXE = new ToolAxe("complete_tungsten_axe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
+	public static final ItemHoe COMPLETE_TUNGSTEN_HOE = new ToolHoe("complete_tungsten_hoe", ToolMaterialCustom.COMPLETE_TUNGSTEN);
 
 	public static final Item TUNGSTEN_HELMET = new ArmorBase("tungsten_helmet", ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.HEAD);
 	public static final Item TUNGSTEN_CHESTPLATE = new ArmorBase("tungsten_chestplate", ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.CHEST);
@@ -721,9 +721,13 @@ public class ModItems {
 	public static final ItemSword TITANIUM_URANIUM_SWORD = new ToolSword("titanium_uranium_sword", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemSpade TITANIUM_URANIUM_SHOVEL = new ToolSpade("titanium_uranium_shovel", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemPickaxe TITANIUM_URANIUM_PICKAXE = new ToolPickaxe("titanium_uranium_pickaxe", ToolMaterialCustom.TITANIUM_URANIUM);
-	public static final ItemPickaxe COMPLETE_TITANIUM_URANIUM_PICKAXE = new ToolPickaxe("complete_uranium_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
 	public static final ItemAxe TITANIUM_URANIUM_AXE = new ToolAxe("titanium_uranium_axe", ToolMaterialCustom.TITANIUM_URANIUM);
 	public static final ItemHoe TITANIUM_URANIUM_HOE = new ToolHoe("titanium_uranium_hoe", ToolMaterialCustom.TITANIUM_URANIUM);
+	public static final ItemSword COMPLETE_TITANIUM_URANIUM_SWORD = new ToolSword("complete_titanium_uranium_sword", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
+	public static final ItemSpade COMPLETE_TITANIUM_URANIUM_SHOVEL = new ToolSpade("complete_titanium_uranium_shovel", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
+	public static final ItemPickaxe COMPLETE_TITANIUM_URANIUM_PICKAXE = new ToolPickaxe("complete_titanium_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
+	public static final ItemAxe COMPLETE_TITANIUM_URANIUM_AXE = new ToolAxe("complete_titanium_uranium_axe", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
+	public static final ItemHoe COMPLETE_TITANIUM_URANIUM_HOE = new ToolHoe("complete_titanium_uranium_hoe", ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM);
 
 	public static final Item TITANIUM_URANIUM_HELMET = new ArmorBase("titanium_uranium_helmet", ARMOR_MATERIAL_TITANIUM_URANIUM, 1, EntityEquipmentSlot.HEAD);
 	public static final Item TITANIUM_URANIUM_CHESTPLATE = new ArmorBase("titanium_uranium_chestplate", ARMOR_MATERIAL_TITANIUM_URANIUM, 1, EntityEquipmentSlot.CHEST);
@@ -734,9 +738,13 @@ public class ModItems {
 	public static final ItemSword TUNGSTEN_URANIUM_SWORD = new ToolSword("tungsten_uranium_sword", ToolMaterialCustom.TUNGSTEN_URANIUM);
 	public static final ItemSpade TUNGSTEN_URANIUM_SHOVEL = new ToolSpade("tungsten_uranium_shovel", ToolMaterialCustom.TUNGSTEN_URANIUM);
 	public static final ItemPickaxe TUNGSTEN_URANIUM_PICKAXE = new ToolPickaxe("tungsten_uranium_pickaxe", ToolMaterialCustom.TUNGSTEN_URANIUM);
-	public static final ItemPickaxe COMPLETE_TUNGSTEN_URANIUM_PICKAXE = new ToolPickaxe("complete_tungsten_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN_URANIUM);
 	public static final ItemAxe TUNGSTEN_URANIUM_AXE = new ToolAxe("tungsten_uranium_axe", ToolMaterialCustom.TUNGSTEN_URANIUM);
 	public static final ItemHoe TUNGSTEN_URANIUM_HOE = new ToolHoe("tungsten_uranium_hoe", ToolMaterialCustom.TUNGSTEN_URANIUM);
+	public static final ItemSword COMPLETE_TUNGSTEN_URANIUM_SWORD = new ToolSword("complete_tungsten_uranium_sword", ToolMaterialCustom.COMPLETE_TUNGSTEN_URANIUM);
+	public static final ItemSpade COMPLETE_TUNGSTEN_URANIUM_SHOVEL = new ToolSpade("complete_tungsten_uranium_shovel", ToolMaterialCustom.COMPLETE_TUNGSTEN_URANIUM);
+	public static final ItemPickaxe COMPLETE_TUNGSTEN_URANIUM_PICKAXE = new ToolPickaxe("complete_tungsten_uranium_pickaxe", ToolMaterialCustom.COMPLETE_TUNGSTEN_URANIUM);
+	public static final ItemAxe COMPLETE_TUNGSTEN_URANIUM_AXE = new ToolAxe("complete_tungsten_uranium_axe", ToolMaterialCustom.COMPLETE_TUNGSTEN_URANIUM);
+	public static final ItemHoe COMPLETE_TUNGSTEN_URANIUM_HOE = new ToolHoe("complete_tungsten_uranium_hoe", ToolMaterialCustom.COMPLETE_TUNGSTEN_URANIUM);
 
 	public static final Item TUNGSTEN_URANIUM_HELMET = new ArmorBase("tungsten_uranium_helmet", ARMOR_MATERIAL_TUNGSTEN_URANIUM, 1, EntityEquipmentSlot.HEAD);
 	public static final Item TUNGSTEN_URANIUM_CHESTPLATE = new ArmorBase("tungsten_uranium_chestplate", ARMOR_MATERIAL_TUNGSTEN_URANIUM, 1, EntityEquipmentSlot.CHEST);
@@ -893,6 +901,7 @@ public class ModItems {
 
 
 	//GEMS//
+	public static final Item SULFUR_SHARD = new ItemBase("sulfur_shard");
 	public static final Item REDSTONE_SHARD = new ItemBase("redstone_shard");
 	public static final Item LAPIS_SHARD = new ItemBase("lapis_shard");
 	public static final Item EMERALD_SHARD = new ItemBase("emerald_shard");
