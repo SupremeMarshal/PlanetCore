@@ -3,9 +3,9 @@
     
     "pattern":
     [
-        "AA",
-        " B",
-        " B"
+        "A",
+        "B",
+        "B"
     ],
     
     "key":
@@ -16,13 +16,13 @@
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:zinc_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:zinc_hoe",
+        "item": "planetcore:complete_zinc_shovel",
         "count": 1
     }
 }

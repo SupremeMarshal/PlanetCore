@@ -4,7 +4,7 @@
     "pattern":
     [
         "AA",
-        " B",
+        "AB",
         " B"
     ],
     
@@ -16,13 +16,13 @@
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:zinc_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:zinc_hoe",
+        "item": "planetcore:complete_zinc_axe",
         "count": 1
     }
 }
