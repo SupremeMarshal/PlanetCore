@@ -314,7 +314,6 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
                         }
                         if (this.canSmelt()) {
                             int random = new Random().nextInt(4) + 1;
-                            Console.println(random);
                             Boolean smelt25 = random == 1;
                             Boolean smelt50 = random <= 2;
                             Boolean smelt75 = random <= 3;
