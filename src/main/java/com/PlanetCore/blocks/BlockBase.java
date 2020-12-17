@@ -85,9 +85,9 @@ public class BlockBase extends Block {
 	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
 	 * }
 	 */
-	private static final float [] crustHardnessByMeta = {2, 3, 6, 10, 15, 20, 25, 30, 35};
-	private static final float [] mantleHardnessByMeta = {50, 55, 60, 66, 73, 80, 88, 97, 107, 130, 143, 157, 173, 190, 208, 229};
-	private static final float [] coreHardnessByMeta = {300, 500, 1000};
+	private static final float [] crustHardnessByMeta = {2, 3, 6, 9, 12, 15, 18, 21, 24};
+	private static final float [] mantleHardnessByMeta = {27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72};
+	private static final float [] coreHardnessByMeta = {100, 200, 300};
 
 
 
