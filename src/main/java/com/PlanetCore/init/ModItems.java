@@ -45,7 +45,7 @@ public class ModItems {
 		LEAD(2, 45, 2.0F, 1.4F, 5, 3),
 		COMPLETE_LEAD(2, 90, 2.0F, 1.4F, 5, 3),
 		SILICON(2, 90, 2.5F, 1.8F, 14, 3),
-		COMPLETE_SILICON(2, 160, 2.5F, 1.8F, 14, 3),
+		COMPLETE_SILICON(2, 180, 2.5F, 1.8F, 14, 3),
 		COPPER(2, 120, 3.0F, 2.4F, 10, 4),
 		COMPLETE_COPPER(2, 240, 3.0F, 2.4F, 10, 4),
 		ZINC(2, 150, 5.0F, 3.4F, 22, 3),

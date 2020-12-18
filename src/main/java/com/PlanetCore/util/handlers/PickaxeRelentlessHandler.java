@@ -39,7 +39,7 @@ public class PickaxeRelentlessHandler {
 
     private static final int[] relentless = {ModItems.ToolMaterialCustom.WOODEN.getRelentless(), ModItems.ToolMaterialCustom.STONE.getRelentless(), ModItems.ToolMaterialCustom.ALUMINIUM.getRelentless(), ModItems.ToolMaterialCustom.ZINC.getRelentless(), ModItems.ToolMaterialCustom.LEAD.getRelentless(), ModItems.ToolMaterialCustom.TIN.getRelentless(), ModItems.ToolMaterialCustom.SILICON.getRelentless()/**5*/,
             ModItems.ToolMaterialCustom.COPPER.getRelentless(), ModItems.ToolMaterialCustom.IRON.getRelentless(), ModItems.ToolMaterialCustom.BRONZE.getRelentless(), ModItems.ToolMaterialCustom.STEEL.getRelentless(), ModItems.ToolMaterialCustom.SILVER.getRelentless()/**10*/,
-            ModItems.ToolMaterialCustom.GOLD.getRelentless(), ModItems.ToolMaterialCustom.PLATINUM.getRelentless(), ModItems.ToolMaterialCustom.TITANIUM.getRelentless(), ModItems.ToolMaterialCustom.URANIUM.getRelentless(), ModItems.ToolMaterialCustom.TOPAZ.getRelentless()/**15*/,
+            ModItems.ToolMaterialCustom.GOLD.getRelentless(), ModItems.ToolMaterialCustom.PLATINUM.getRelentless(), ModItems.ToolMaterialCustom.TITANIUM.getRelentless(), ModItems.ToolMaterialCustom.URANIUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.TOPAZ.getRelentless()/**15*/,
             ModItems.ToolMaterialCustom.JADE.getRelentless(), ModItems.ToolMaterialCustom.TUNGSTEN.getRelentless(), ModItems.ToolMaterialCustom.TITANIUM_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.TUNGSTEN_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.TUNGSTEN_TITANIUM.getRelentless()/**20*/,
             ModItems.ToolMaterialCustom.COMPLETE_ALUMINIUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_ZINC.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_LEAD.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_TIN.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_SILICON.getRelentless()/**5*/,
             ModItems.ToolMaterialCustom.COMPLETE_COPPER.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_IRON.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_BRONZE.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_STEEL.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_SILVER.getRelentless()/**10*/,
@@ -109,7 +109,7 @@ public class PickaxeRelentlessHandler {
 
 
         if (event.getState().getBlock() instanceof BlockBase) {
-            for (int i = 0; i < 31; i++) {
+            for (int i = 0; i < 51; i++) {
                 if (event.getEntityPlayer().getHeldItemMainhand().getItem() == pickaxe[i]) {
                     Relentless = relentless[i];
 
