@@ -24,6 +24,8 @@ import static net.minecraft.util.math.MathHelper.floor;
 
 public class ImprovedRavineGenerator implements ICubicStructureGenerator {
 
+    //V17
+
     /**
      * Vanilla value: 50
      * <p>
