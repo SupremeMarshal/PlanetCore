@@ -7,6 +7,8 @@ import io.github.opencubicchunks.cubicchunks.api.worldgen.structure.ICubicStruct
 import net.minecraft.world.World;
 
 public class WrappedStructureGenerator implements ICubicStructureGenerator {
+
+    //V17
     private final ICubicStructureGenerator[] generators;
 
     public WrappedStructureGenerator(ICubicStructureGenerator... generators) {
