@@ -37,6 +37,8 @@ import static com.PlanetCore.init.EnchantmentInit.Relentless;
 @Mod.EventBusSubscriber(modid="planetcore")
 public class PickaxeRelentlessHandler {
 
+    //V17
+
     private static final int[] relentless = {ModItems.ToolMaterialCustom.WOODEN.getRelentless(), ModItems.ToolMaterialCustom.STONE.getRelentless(), ModItems.ToolMaterialCustom.ALUMINIUM.getRelentless(), ModItems.ToolMaterialCustom.ZINC.getRelentless(), ModItems.ToolMaterialCustom.LEAD.getRelentless(), ModItems.ToolMaterialCustom.TIN.getRelentless(), ModItems.ToolMaterialCustom.SILICON.getRelentless()/**5*/,
             ModItems.ToolMaterialCustom.COPPER.getRelentless(), ModItems.ToolMaterialCustom.IRON.getRelentless(), ModItems.ToolMaterialCustom.BRONZE.getRelentless(), ModItems.ToolMaterialCustom.STEEL.getRelentless(), ModItems.ToolMaterialCustom.SILVER.getRelentless()/**10*/,
             ModItems.ToolMaterialCustom.GOLD.getRelentless(), ModItems.ToolMaterialCustom.PLATINUM.getRelentless(), ModItems.ToolMaterialCustom.TITANIUM.getRelentless(), ModItems.ToolMaterialCustom.URANIUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.TOPAZ.getRelentless()/**15*/,
