@@ -335,7 +335,7 @@ public class GiantRavineGenerator implements ICubicStructureGenerator {
                     if (localToBlock(generatedCubeY, localY) < variable4)  {
                         cube.setBlockState(localX, localY, localZ, Blocks.FLOWING_LAVA.getDefaultState());
                     } else {
-                        cube.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
+                        cube.setBlockState(localX, localY, localZ, Blocks.LAVA.getDefaultState());
                     }
                 }
             }

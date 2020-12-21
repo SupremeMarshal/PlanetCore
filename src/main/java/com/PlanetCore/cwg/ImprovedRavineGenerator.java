@@ -43,14 +43,14 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
      * Do not put zero as it create a divide by zero error.
      * The base height is always 0 and lava will have 0% chance at base height.
      */
-    private static final double CAVE_MAX_LAVA_HEIGHT = -2000;
+    private static final double CAVE_MAX_LAVA_HEIGHT = -4000;
 
-    private static final double VERT_SIZE_FACTOR = 3.0;
+    private static final double VERT_SIZE_FACTOR = 8.0;
 
     /**
      * Value added to the size of the cave (radius)
      */
-    private static final double RAVINE_SIZE_ADD = 1.5D;
+    private static final double RAVINE_SIZE_ADD = 2.0D;
 
     private static final double MIN_RAND_SIZE_FACTOR = 0.75;
     private static final double MAX_RAND_SIZE_FACTOR = 1.00;

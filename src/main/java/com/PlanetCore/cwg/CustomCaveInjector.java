@@ -8,7 +8,10 @@ public class CustomCaveInjector {
     public void inject(InitCubicStructureGeneratorEvent event) {
         switch (event.getType()) {
             case CAVE:
-                event.setNewGen(new ImprovedCaveGenerator());
+                event.setNewGen(new WrappedStructureGenerator(
+                        new ImprovedCaveGenerator(),
+                        new NoiseCaveGenerator()
+                ));
                 break;
             case RAVINE:
                 event.setNewGen(new RavineGeneratorProxy());
