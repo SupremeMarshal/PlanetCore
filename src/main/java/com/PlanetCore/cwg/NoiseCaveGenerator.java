@@ -22,6 +22,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
 public class NoiseCaveGenerator implements ICubicStructureGenerator {
+    //V17
     private IBuilder builder;
     private IBlockState stoneBlock;
 
