@@ -343,114 +343,6 @@ public class Corerock extends BlockBase implements IMetaName {
 		}
 	}
 
-	public void thermalEffects(World worldIn, BlockPos pos, IBlockState state)
-	{
-		int X = pos.getX();
-		int Y = pos.getY();
-		int Z = pos.getZ();
-		Random rand = new Random();
-		burnEntities(worldIn,X,Y,Z, 8);
-
-		if (this != ModBlocks.COLD_CORESTONE)
-		{
-			for(int x = -2; x < 3; x++) {
-				for(int y = -2; y < 3; y++) {
-					for(int z = -2; z < 3; z++) {
-						IBlockState state2 = worldIn.getBlockState(pos.add(x, y, z));
-						Block block = state2.getBlock();
-						if(state2.getMaterial()==Material.ROCK || state2.getMaterial()==Material.GROUND || state2.getMaterial()==Material.GRASS
-								&& !(block instanceof Corerock) && block!=Blocks.BEDROCK && block!=ModBlocks.COLD_CORESTONE)
-						{
-							worldIn.setBlockState(new BlockPos(x, y, z),Blocks.LAVA.getDefaultState());
-						}
-						if(state2.getMaterial()==Material.SNOW)
-						{
-							worldIn.setBlockToAir(new BlockPos(x, y, z));
-						}
-						if(state2.getMaterial()==Material.WATER || state2.getMaterial()==Material.ICE || state2.getMaterial()==Material.CRAFTED_SNOW)
-						{
-
-							if (this == ModBlocks.CORESTONE)
-							{
-								worldIn.setBlockState(new BlockPos(x, y, z), ModBlocks.COLD_CORESTONE.getDefaultState());
-								worldIn.createExplosion(null, X+x, Y+y, Z+z, 7, false);
-							}
-							worldIn.setBlockToAir(pos.add(x, y, z));
-						}
-						if(state2.getBlock().getFlammability(worldIn, pos, null)>0 || state2.getMaterial()==Material.WOOD || state2.getMaterial()==Material.CLOTH || state2.getMaterial()==Material.PLANTS || state2.getMaterial()==Material.LEAVES)
-						{
-							worldIn.setBlockState(pos.add(x, y, z), Blocks.FIRE.getDefaultState());
-						}
-						if(pos.getY()>=-4500 && pos.getY()<=-3000)
-						{
-							if(rand.nextInt(6000) == 0)
-							{
-								return;
-							}
-							worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-						}
-						else if(pos.getY()>-3000 && pos.getY()<=-1000)
-						{
-							if(rand.nextInt(6000) == 0)
-							{
-								return;
-							}
-							if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 2){
-								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getStateFromMeta(1));
-							}
-
-							else if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 1){
-								worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-							}
-						}
-						else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == false)
-						{
-							if(rand.nextInt(1200) == 0)
-							{
-								if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 2)
-									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getStateFromMeta(1));
-								else if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 1)
-									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else
-									worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
-							}
-						}
-						else if(worldIn.canBlockSeeSky(pos) == false)
-						{
-							if(rand.nextInt(2400) == 0)
-							{
-								if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 2)
-									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 1)
-									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else
-									worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
-							}
-						}
-						else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == true)
-						{
-							if(rand.nextInt(200) == 0)
-							{
-								if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 2)
-									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else if (this == ModBlocks.CORESTONE && this.getMetaFromState(this.getDefaultState()) == 1)
-									worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-								else
-									worldIn.setBlockState(pos, ModBlocks.COLD_CORESTONE.getDefaultState());
-							}
-						}
-					}
-				}
-			}
-		}
-
-	}
-	@Override
-	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
-	{
-		thermalEffects(worldIn, pos, state);
-	}
-
 	@Override
 	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
 	{
@@ -461,7 +353,6 @@ public class Corerock extends BlockBase implements IMetaName {
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-		thermalEffects(worldIn, pos, state);
 		BlockPos blockpos = pos.up();
 		IBlockState iblockstate = worldIn.getBlockState(blockpos);
 

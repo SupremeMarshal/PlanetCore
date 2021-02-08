@@ -52,49 +52,163 @@ public class PlayerTickEventHandler {
             }
 
 
+
             int x, y, z;
             x = event.player.getPosition().getX();
             y = event.player.getPosition().getY();
             z = event.player.getPosition().getZ();
             Iterable<BlockPos> it = BlockPos.getAllInBox(x - 4, y - 4, z - 4, x + 4, y + 4, z + 4);
-            int randomLava = new Random().nextInt(30) + 1;
-            if (randomLava == 1) {
-                for (BlockPos pos : it) {
-                    IBlockState state = event.player.world.getBlockState(pos);
-                    if (state.getMaterial() == Material.LAVA) {
+                if (!event.player.isImmuneToFire()) {
+                    for (BlockPos pos : it) {
+                        IBlockState state = event.player.world.getBlockState(pos);
+                        if (state.getMaterial() == Material.LAVA) {
 
-                        if (event.player.world.getTotalWorldTime() % 5 == 1) {
-                            event.player.setFire(5);
-                            event.player.attackEntityFrom(DamageSource.LAVA, 1.0F);
+                            if (event.player.world.getTotalWorldTime() % 200 == 1) {
+                                event.player.setFire(5);
+                                event.player.attackEntityFrom(DamageSource.LAVA, 2.0F);
+                            }
+                        }
+                    }
+                    for (BlockPos pos1 : it) {
+                        IBlockState state1 = event.player.world.getBlockState(pos1);
+                        if (state1.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
+                            if (event.player.world.getTotalWorldTime() % 100 == 1) {
+                                event.player.setFire(15);
+                                event.player.attackEntityFrom(DamageSource.LAVA, 4.0F);
+                            }
                         }
                     }
                 }
-                for (BlockPos pos1 : it) {
-                    IBlockState state1 = event.player.world.getBlockState(pos1);
-                    if (state1.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
-                        if (event.player.world.getTotalWorldTime() % 5 == 1) {
-                            event.player.setFire(15);
-                            event.player.attackEntityFrom(DamageSource.LAVA, 5.0F);
-                        }
+
+
+            if (event.player.posY > -1500 && event.player.posY < -1000) {
+                if (event.player.world.getTotalWorldTime() % 1000 == 1) {
+
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(1);
                     }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 0);
                 }
             }
-
-
-            int random = new Random().nextInt(5) + 1;
-            if (event.player.posY < -600) {
-                if (event.player.world.getTotalWorldTime() % (int) (-600000 * random / (event.player.posY + 500)) != 1) {
-                    return;
+            if (event.player.posY > -2000 && event.player.posY < -1500) {
+                if (event.player.world.getTotalWorldTime() % 909 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(2);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 1);
                 }
-                if (!event.player.isImmuneToFire()) {
-                    event.player.setFire((int) (event.player.posY / -250));
+            }
+            if (event.player.posY > -2500 && event.player.posY < -2000) {
+                if (event.player.world.getTotalWorldTime() % 826 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(3);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 2);
                 }
-                event.player.attackEntityFrom(DamageSource.LAVA, (float) (-1 * event.player.posY / 500));
-                //every A seconds, 1/10 chance to burn player for B seconds below -1k Y.
-                //A = (1 minute/(latitude+500)*-500);  (-1k Y = 1-5 minute,  -2k Y = 20-100 seconds, -5k = 6.67-33 seconds, -10k = 3.16-15.8 seconds.)
-                //B = (latitude/-100-9); (At -1k latitude, burn for 2 second. at -1500, burn for 6 seconds. At -5k, burn for 41 seconds.
-                //Damage = 5 damage every 1k distance downward. Starting at -1k. -2k = 10 damages, -5k = 25 damages, -10k = 50 damages.
-
+            }
+            if (event.player.posY > -3000 && event.player.posY < -2500) {
+                if (event.player.world.getTotalWorldTime() % 751 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(4);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 3);
+                }
+            }
+            if (event.player.posY > -3500 && event.player.posY < -3000) {
+                if (event.player.world.getTotalWorldTime() % 683 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(5);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 4);
+                }
+            }
+            if (event.player.posY > -4000 && event.player.posY < -3500) {
+                if (event.player.world.getTotalWorldTime() % 620 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(6);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 5);
+                }
+            }
+            if (event.player.posY > -4500 && event.player.posY < -4000) {
+                if (event.player.world.getTotalWorldTime() % 516 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(7);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 6);
+                }
+            }
+            if (event.player.posY > -5000 && event.player.posY < -4500) {
+                if (event.player.world.getTotalWorldTime() % 430 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(8);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 7);
+                }
+            }
+            if (event.player.posY > -5500 && event.player.posY < -5000) {
+                if (event.player.world.getTotalWorldTime() % 358 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(9);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 9);
+                }
+            }
+            if (event.player.posY > -6000 && event.player.posY < -5500) {
+                if (event.player.world.getTotalWorldTime() % 298 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(10);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 10);
+                }
+            }
+            if (event.player.posY > -6500 && event.player.posY < -6000) {
+                if (event.player.world.getTotalWorldTime() % 249 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(10);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 11);
+                }
+            }
+            if (event.player.posY > -7000 && event.player.posY < -6500) {
+                if (event.player.world.getTotalWorldTime() % 207 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(10);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 12);
+                }
+            }
+            if (event.player.posY > -7500 && event.player.posY < -7000) {
+                if (event.player.world.getTotalWorldTime() % 173 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(10);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 13);
+                }
+            }
+            if (event.player.posY > -8000 && event.player.posY < -7500) {
+                if (event.player.world.getTotalWorldTime() % 144 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(10);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 14);
+                }
+            }
+            if (event.player.posY > -8500 && event.player.posY < -8000) {
+                if (event.player.world.getTotalWorldTime() % 120 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(10);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 15);
+                }
+            }
+            if (event.player.posY > -11000 && event.player.posY < -8500) {
+                if (event.player.world.getTotalWorldTime() % 100 == 1) {
+                    if (!event.player.isImmuneToFire()) {
+                        event.player.setFire(10);
+                    }
+                    event.player.attackEntityFrom(DamageSource.LAVA, 16);
+                }
             }
         }
     }

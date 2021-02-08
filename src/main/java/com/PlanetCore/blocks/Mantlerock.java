@@ -177,84 +177,34 @@ public class Mantlerock extends BlockBase implements IMetaName
 		int Z = pos.getZ();
 		int Y = pos.getY();
 		if (!worldIn.isRemote) {
-			if (Y <= -512 && Y > -576) {
+			if (Y <= -3000 && Y > -4000) {
+				if (rand.nextInt(4000) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
+				}
+			}
+			if (Y <= -4000 && Y > -4500) {
 				if (rand.nextInt(2000) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
-				}
-			}
-			if (Y <= -576 && Y > -640) {
-				if (rand.nextInt(1600) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
-				}
-			}
-			if (Y <= -640 && Y > -704) {
-				if (rand.nextInt(1280) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
-				}
-			}
-			if (Y <= -704 && Y > -768) {
-				if (rand.nextInt(1024) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
-				}
-			}
-			if (Y <= -768 && Y > -832) {
-				if (rand.nextInt(819) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
 				}
 			}
-			if (Y <= -832 && Y > -896) {
-				if (rand.nextInt(655) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
-				}
-			}
-			if (Y <= -896 && Y > -960) {
-				if (rand.nextInt(524) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
-				}
-			}
-			if (Y <= -960 && Y > -1024) {
-				if (rand.nextInt(419) == 0) {
+			if (Y <= -4500 && Y > -4750) {
+				if (rand.nextInt(1000) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(4) + 1, true);
 				}
 			}
-			if (Y <= -1024 && Y > -1280) {
-				if (rand.nextInt(381) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(4) + 1, true);
-				}
-			}
-			if (Y <= -1280 && Y > -1536) {
-				if (rand.nextInt(346) == 0) {
+			if (Y <= -4750 && Y > -5000) {
+				if (rand.nextInt(500) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 				}
 			}
-			if (Y <= -1536 && Y > -1792) {
-				if (rand.nextInt(315) == 0) {
+			if (Y <= -5000 && Y > -5250) {
+				if (rand.nextInt(250) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 1, true);
 				}
 			}
-			if (Y <= -1792 && Y > -2048) {
-				if (rand.nextInt(286) == 0) {
+			if (Y <= -5250 && Y > -6000) {
+				if (rand.nextInt(200) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 1, true);
-				}
-			}
-			if (Y <= -2048 && Y > -2304) {
-				if (rand.nextInt(260) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 2, true);
-				}
-			}
-			if (Y <= -2304 && Y > -2560) {
-				if (rand.nextInt(236) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 3, true);
-				}
-			}
-			if (Y <= -2560 && Y > -2816) {
-				if (rand.nextInt(215) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 3, true);
-				}
-			}
-			if (Y <= -2816 && Y > -3072) {
-				if (rand.nextInt(195) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 3, true);
 				}
 			}
 		}

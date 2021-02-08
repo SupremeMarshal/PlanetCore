@@ -265,7 +265,7 @@ public class BlockBase extends Block {
 	The unstable effect cause the blocks to fall around you when destroying blocks.
 	I will change it to make it happen more often above a certain Y level and only decrease the further down you go.
 	 */
-	public static void unstable(World worldIn, BlockPos pos, IBlockState state) {
+	/*public static void unstable(World worldIn, BlockPos pos, IBlockState state) {
 		int x;
 		int y;
 		int z;
@@ -312,6 +312,7 @@ public class BlockBase extends Block {
 			}
 		}
 	}
+	 */
 
 	private void unharvestable(World worldIn, BlockPos pos, EntityPlayer entity) {
 
@@ -393,14 +394,12 @@ public class BlockBase extends Block {
 	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
 
 		//naturalGasExplosion(world, pos, (IBlockState)explosion);
-		unstable(world, pos, world.getBlockState(pos));
 		//lavaDecompression(world, pos, (IBlockState)explosion);
 	}
 
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		//naturalGasExplosion(worldIn, pos, state);
-		unstable(worldIn, pos, state);
 		//lavaDecompression(worldIn, pos, state);
 	}
 

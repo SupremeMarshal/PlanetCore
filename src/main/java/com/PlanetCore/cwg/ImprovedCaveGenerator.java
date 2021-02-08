@@ -1,5 +1,6 @@
 package com.PlanetCore.cwg;
 
+import com.PlanetCore.init.ModBlocks;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
 import io.github.opencubicchunks.cubicchunks.api.util.MathUtil;
 import io.github.opencubicchunks.cubicchunks.api.world.ICube;
@@ -122,34 +123,34 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
     public enum CaveType {
 
-        CAVE0(Blocks.STONE,1.0, -4.0,2,10000,-10000, 10000, 16, 0),
-        CAVE1(Block.getBlockFromName("planetcore:coal_supercompact"),0.1, -32.0,64,10000,-10000, 10000, 16, 0),
-        CAVE2(Block.getBlockFromName("planetcore:aluminium_supercompact"),0.7, -32.0,64,10000,-10000, 10000, 16, 0),
-        CAVE3(Block.getBlockFromName("planetcore:zinc_supercompact"),0.4, -32.0,64,10000,-10000, 10000, 16, 0),
-        CAVE4(Block.getBlockFromName("planetcore:lead_supercompact"),0.4, -32.0,64,10000, -10000, 10000, 16, 0),
-        CAVE5(Block.getBlockFromName("planetcore:tin_supercompact"),0.3, -64.0,64,10000, -10000, 10000, 16, 0),
-        CAVE6(Block.getBlockFromName("planetcore:copper_supercompact"),0.3, -64.0,64,10000,-10000, 10000, 16, 0),
-        CAVE7(Block.getBlockFromName("planetcore:iron_supercompact"),0.5, -96.0,64,10000,-10000, 10000, 16, 0),
-        CAVE8(Block.getBlockFromName("planetcore:redstone_supercompact"),0.2, -128.0,64,10000, -10000, 10000, 16, 0),
-        CAVE9(Block.getBlockFromName("planetcore:silver_supercompact"),0.2, -128.0,64,10000, -10000, 10000, 16, 0),
-        CAVE10(Block.getBlockFromName("planetcore:gold_supercompact"),0.1, -192.0,64,10000,-10000, 10000, 16, 0),
-        CAVE11(Block.getBlockFromName("planetcore:platinum_supercompact"),0.1, -256.0,64,10000,-10000, 10000, 16, 0),
-        CAVE12(Block.getBlockFromName("planetcore:titanium_supercompact"),0.1, -320.0,64,10000, -10000, 10000, 16, 0),
-        CAVE13(Block.getBlockFromName("planetcore:uranium_supercompact"),0.1, -384.0,64,10000, -10000, 10000, 16, 0),
-        CAVE14(Block.getBlockFromName("planetcore:tungsten_supercompact"),0.1, -448.0,64,10000, -10000, 10000, 16, 0),
-        CAVE15(Block.getBlockFromName("planetcore:topaz_supercompact"),0.1, -512.0,64,10000, -10000, 10000, 16, 0),
-        CAVE16(Block.getBlockFromName("planetcore:jade_supercompact"),0.1, -512.0,64,10000, -10000, 10000, 16, 0),
-        CAVE17(Block.getBlockFromName("planetcore:emerald_supercompact"),0.05, -576.0,64,10000, -10000, 10000, 16, 0),
-        CAVE18(Block.getBlockFromName("planetcore:ruby_supercompact"),0.05, -640.0,64,10000, -10000, 10000, 16, 0),
-        CAVE19(Block.getBlockFromName("planetcore:sapphire_supercompact"),0.05, -640.0,64,10000, -10000, 10000, 16, 0),
-        CAVE20(Block.getBlockFromName("planetcore:diamond_supercompact"),0.05, -704.0,64,10000, -10000, 10000, 16, 0),
-        CAVE21(Block.getBlockFromName("planetcore:olivine_supercompact"),0.05, -768.0,64,10000, -10000, 10000, 16, 0),
-        CAVE22(Block.getBlockFromName("planetcore:wadsleyite_supercompact"),0.05, -832.0,64,10000, -10000, 10000, 16, 0),
-        CAVE23(Block.getBlockFromName("planetcore:ringwoodite_supercompact"),0.05, -896.0,64,10000, -10000, 10000, 16, 0),
-        CAVE24(Block.getBlockFromName("planetcore:brigmanite_supercompact"),0.05, -960.0,64,10000, -10000, 10000, 16, 0),
-        CAVE25(Block.getBlockFromName("planetcore:majorite_supercompact"),0.05, -1024.0,64,10000, -10000, 10000, 16, 0),
-        CAVE26(Block.getBlockFromName("planetcore:amazonite_supercompact"),0.05, -1088.0,64,10000, -10000, 10000, 16, 0),
-        CAVE27(Block.getBlockFromName("planetcore:onyx_supercompact"),0.05, -1375.0,64,10000, -10000, 10000, 16, 0);
+        CAVE0(Blocks.STONE,1.0, -30.0,128,10000,-10000, 10000, 64, 64),
+        CAVE1(Block.getBlockFromName("planetcore:coal_supercompact"),0.01, -10.0,16,10000,-10000, 10000, 64, 64),
+        CAVE2(Block.getBlockFromName("planetcore:aluminium_supercompact"),0.07, -11.0,16,10000,-10000, 10000, 64, 64),
+        CAVE3(Block.getBlockFromName("planetcore:zinc_supercompact"),0.04, -12.0,16,10000,-10000, 10000, 64, 64),
+        CAVE4(Block.getBlockFromName("planetcore:lead_supercompact"),0.04, -13.0,16,10000, -10000, 10000, 64, 64),
+        CAVE5(Block.getBlockFromName("planetcore:tin_supercompact"),0.03, -14.0,16,10000, -10000, 10000, 64, 64),
+        CAVE6(Block.getBlockFromName("planetcore:copper_supercompact"),0.03, -15.0,16,10000,-10000, 10000, 64, 64),
+        CAVE7(Block.getBlockFromName("planetcore:iron_supercompact"),0.05, -16.0,16,10000,-10000, 10000, 64, 64),
+        CAVE8(Block.getBlockFromName("planetcore:redstone_supercompact"),0.02, -17.0,16,10000, -10000, 10000, 64, 64),
+        CAVE9(Block.getBlockFromName("planetcore:silver_supercompact"),0.02, -18.0,16,10000, -10000, 10000, 64, 64),
+        CAVE10(Block.getBlockFromName("planetcore:gold_supercompact"),0.01, -19.0,16,10000,-10000, 10000, 64, 64),
+        CAVE11(Block.getBlockFromName("planetcore:platinum_supercompact"),0.01, -20.0,16,10000,-10000, 10000, 64, 64),
+        CAVE12(Block.getBlockFromName("planetcore:titanium_supercompact"),0.01, -21.0,16,10000, -10000, 10000, 64, 64),
+        CAVE13(Block.getBlockFromName("planetcore:uranium_supercompact"),0.01, -23.0,16,10000, -10000, 10000, 64, 64),
+        CAVE14(Block.getBlockFromName("planetcore:tungsten_supercompact"),0.01, -25.0,16,10000, -10000, 10000, 64, 64),
+        CAVE15(Block.getBlockFromName("planetcore:topaz_supercompact"),0.01, -30.0,16,10000, -10000, 10000, 64, 64),
+        CAVE16(Block.getBlockFromName("planetcore:jade_supercompact"),0.01, -35.0,16,10000, -10000, 10000, 64, 64),
+        CAVE17(Block.getBlockFromName("planetcore:emerald_supercompact"),0.005, -40.0,16,10000, -10000, 10000, 64, 64),
+        CAVE18(Block.getBlockFromName("planetcore:ruby_supercompact"),0.005, -50.0,16,10000, -10000, 10000, 64, 64),
+        CAVE19(Block.getBlockFromName("planetcore:sapphire_supercompact"),0.005, -50.0,16,10000, -10000, 10000, 64, 64),
+        CAVE20(Block.getBlockFromName("planetcore:diamond_supercompact"),0.005, -60.0,16,10000, -10000, 10000, 64, 64),
+        CAVE21(Block.getBlockFromName("planetcore:olivine_supercompact"),0.005, -80.0,16,10000, -10000, 10000, 64, 64),
+        CAVE22(Block.getBlockFromName("planetcore:wadsleyite_supercompact"),0.005, -100.0,16,10000, -10000, 10000, 64, 64),
+        CAVE23(Block.getBlockFromName("planetcore:ringwoodite_supercompact"),0.005, -120.0,16,10000, -10000, 10000, 64, 64),
+        CAVE24(Block.getBlockFromName("planetcore:brigmanite_supercompact"),0.005, -140.0,16,10000, -10000, 10000, 64, 64),
+        CAVE25(Block.getBlockFromName("planetcore:majorite_supercompact"),0.005, -160.0,16,10000, -10000, 10000, 64, 64),
+        CAVE26(Block.getBlockFromName("planetcore:amazonite_supercompact"),0.005, -180.0,16,10000, -10000, 10000, 64, 64),
+        CAVE27(Block.getBlockFromName("planetcore:onyx_supercompact"),0.005, -200.0,16,10000, -10000, 10000, 64, 64);
 
 
         private final Block block;
@@ -226,7 +227,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
      * Controls which blocks can be replaced by cave
      */
     private static Predicate<IBlockState> isBlockReplaceable = (state ->
-            state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS || state.getBlock() == Blocks.AIR || state.getBlock() == Blocks.GLASS);
+            state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS || state.getBlock() == Blocks.AIR || state.getBlock() == Blocks.GLASS || state.getBlock() == ModBlocks.CORE_LAVA_FLUID);
 
     @Override public void generate(World world, CubePrimer cube, CubePos cubePos) {
         this.generate(world, cube, cubePos, this::generate, RANGE, RANGE, 1, 1);
