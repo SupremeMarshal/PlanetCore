@@ -1,35 +1,25 @@
 package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.blocks.*;
-import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
+import com.PlanetCore.init.ToolMaterials;
 import javafx.geometry.Pos;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
-import java.awt.event.MouseEvent;
 import java.util.Random;
 
 import static com.PlanetCore.init.EnchantmentInit.Relentless;
@@ -39,17 +29,17 @@ public class PickaxeRelentlessHandler {
 
     //V17
 
-    private static final int[] relentless = {ModItems.ToolMaterialCustom.WOODEN.getRelentless(), ModItems.ToolMaterialCustom.STONE.getRelentless(), ModItems.ToolMaterialCustom.ALUMINIUM.getRelentless(), ModItems.ToolMaterialCustom.ZINC.getRelentless(), ModItems.ToolMaterialCustom.LEAD.getRelentless(), ModItems.ToolMaterialCustom.TIN.getRelentless(), ModItems.ToolMaterialCustom.SILICON.getRelentless()/**5*/,
-            ModItems.ToolMaterialCustom.COPPER.getRelentless(), ModItems.ToolMaterialCustom.IRON.getRelentless(), ModItems.ToolMaterialCustom.BRONZE.getRelentless(), ModItems.ToolMaterialCustom.STEEL.getRelentless(), ModItems.ToolMaterialCustom.SILVER.getRelentless()/**10*/,
-            ModItems.ToolMaterialCustom.GOLD.getRelentless(), ModItems.ToolMaterialCustom.PLATINUM.getRelentless(), ModItems.ToolMaterialCustom.TITANIUM.getRelentless(), ModItems.ToolMaterialCustom.URANIUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.TOPAZ.getRelentless()/**15*/,
-            ModItems.ToolMaterialCustom.JADE.getRelentless(), ModItems.ToolMaterialCustom.TUNGSTEN.getRelentless(), ModItems.ToolMaterialCustom.TITANIUM_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.TUNGSTEN_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.TUNGSTEN_TITANIUM.getRelentless()/**20*/,
-            ModItems.ToolMaterialCustom.COMPLETE_ALUMINIUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_ZINC.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_LEAD.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_TIN.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_SILICON.getRelentless()/**5*/,
-            ModItems.ToolMaterialCustom.COMPLETE_COPPER.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_IRON.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_BRONZE.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_STEEL.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_SILVER.getRelentless()/**10*/,
-            ModItems.ToolMaterialCustom.COMPLETE_GOLD.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_PLATINUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_TITANIUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_URANIUM.getRelentless(),
-            ModItems.ToolMaterialCustom.COMPLETE_TUNGSTEN.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_TITANIUM_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_TUNGSTEN_URANIUM.getRelentless(), ModItems.ToolMaterialCustom.COMPLETE_TUNGSTEN_TITANIUM.getRelentless()/**20*/,
-            ModItems.ToolMaterialCustom.EMERALD.getRelentless(), ModItems.ToolMaterialCustom.RUBY.getRelentless(), ModItems.ToolMaterialCustom.SAPPHIRE.getRelentless(), ModItems.ToolMaterialCustom.DIAMOND.getRelentless(), ModItems.ToolMaterialCustom.OLIVINE.getRelentless()/**25*/,
-            ModItems.ToolMaterialCustom.WADSLEYITE.getRelentless(), ModItems.ToolMaterialCustom.RINGWOODITE.getRelentless(), ModItems.ToolMaterialCustom.BRIGMANITE.getRelentless(), ModItems.ToolMaterialCustom.MAJORITE.getRelentless(), ModItems.ToolMaterialCustom.AMAZONITE.getRelentless()/**30*/,
-            ModItems.ToolMaterialCustom.ONYX.getRelentless()};
+    private static final int[] relentless = {ToolMaterials.WOODEN.getRelentless(), ToolMaterials.STONE.getRelentless(), ToolMaterials.ALUMINIUM.getRelentless(), ToolMaterials.ZINC.getRelentless(), ToolMaterials.LEAD.getRelentless(), ToolMaterials.TIN.getRelentless(), ToolMaterials.SILICON.getRelentless()/**5*/,
+            ToolMaterials.COPPER.getRelentless(), ToolMaterials.IRON.getRelentless(), ToolMaterials.BRONZE.getRelentless(), ToolMaterials.STEEL.getRelentless(), ToolMaterials.SILVER.getRelentless()/**10*/,
+            ToolMaterials.GOLD.getRelentless(), ToolMaterials.PLATINUM.getRelentless(), ToolMaterials.TITANIUM.getRelentless(), ToolMaterials.URANIUM.getRelentless(), ToolMaterials.COMPLETE_URANIUM.getRelentless(), ToolMaterials.TOPAZ.getRelentless()/**15*/,
+            ToolMaterials.JADE.getRelentless(), ToolMaterials.TUNGSTEN.getRelentless(), ToolMaterials.TITANIUM_URANIUM.getRelentless(), ToolMaterials.TUNGSTEN_URANIUM.getRelentless(), ToolMaterials.TUNGSTEN_TITANIUM.getRelentless()/**20*/,
+            ToolMaterials.COMPLETE_ALUMINIUM.getRelentless(), ToolMaterials.COMPLETE_ZINC.getRelentless(), ToolMaterials.COMPLETE_LEAD.getRelentless(), ToolMaterials.COMPLETE_TIN.getRelentless(), ToolMaterials.COMPLETE_SILICON.getRelentless()/**5*/,
+            ToolMaterials.COMPLETE_COPPER.getRelentless(), ToolMaterials.COMPLETE_IRON.getRelentless(), ToolMaterials.COMPLETE_BRONZE.getRelentless(), ToolMaterials.COMPLETE_STEEL.getRelentless(), ToolMaterials.COMPLETE_SILVER.getRelentless()/**10*/,
+            ToolMaterials.COMPLETE_GOLD.getRelentless(), ToolMaterials.COMPLETE_PLATINUM.getRelentless(), ToolMaterials.COMPLETE_TITANIUM.getRelentless(), ToolMaterials.COMPLETE_URANIUM.getRelentless(),
+            ToolMaterials.COMPLETE_TUNGSTEN.getRelentless(), ToolMaterials.COMPLETE_TITANIUM_URANIUM.getRelentless(), ToolMaterials.COMPLETE_TUNGSTEN_URANIUM.getRelentless(), ToolMaterials.COMPLETE_TUNGSTEN_TITANIUM.getRelentless()/**20*/,
+            ToolMaterials.EMERALD.getRelentless(), ToolMaterials.RUBY.getRelentless(), ToolMaterials.SAPPHIRE.getRelentless(), ToolMaterials.DIAMOND.getRelentless(), ToolMaterials.OLIVINE.getRelentless()/**25*/,
+            ToolMaterials.WADSLEYITE.getRelentless(), ToolMaterials.RINGWOODITE.getRelentless(), ToolMaterials.BRIGMANITE.getRelentless(), ToolMaterials.MAJORITE.getRelentless(), ToolMaterials.AMAZONITE.getRelentless()/**30*/,
+            ToolMaterials.ONYX.getRelentless()};
     private static final com.PlanetCore.items.tools.ItemPickaxe[] pickaxe = {ModItems.WOODEN_PICKAXE, ModItems.STONE_PICKAXE,ModItems.ALUMINIUM_PICKAXE, ModItems.ZINC_PICKAXE, ModItems.LEAD_PICKAXE, ModItems.TIN_PICKAXE, ModItems.SILICON_PICKAXE/**5*/,
             ModItems.COPPER_PICKAXE, ModItems.IRON_PICKAXE, ModItems.BRONZE_PICKAXE, ModItems.STEEL_PICKAXE, ModItems.SILVER_PICKAXE/**10*/,
             ModItems.GOLD_PICKAXE, ModItems.PLATINUM_PICKAXE, ModItems.TITANIUM_PICKAXE, ModItems.URANIUM_PICKAXE, ModItems.TOPAZ_PICKAXE/**15*/,

@@ -1,13 +1,11 @@
 package com.PlanetCore.init;
 
 
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.DamageSource;
@@ -35,7 +33,6 @@ public class SulfuricAcidFluid extends BlockFluidClassic {
 		setLightLevel(0);
 		setTickRate(10);
 		ModBlocks.BLOCKS.add(this);
-		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(name));
 
 		this.setDefaultState(this.blockState.getBaseState().withProperty(LEVEL, Integer.valueOf(0)));
 		this.setTickRandomly(true);

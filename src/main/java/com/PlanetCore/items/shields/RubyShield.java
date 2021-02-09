@@ -10,6 +10,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -24,7 +25,7 @@ import java.util.Map;
 import java.util.UUID;
 
 
-public class RubyShield extends ShieldBase  {
+public class RubyShield extends ItemShield {
 
 
     /**
@@ -58,21 +59,9 @@ public class RubyShield extends ShieldBase  {
 
     }
 
+        //this.setMaxDamage(10000);
 
-    public RubyShield(String name) {
-        super(name);
-        this.setMaxDamage(10000);
-    }
-
-
-    @SideOnly(Side.CLIENT)
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(this.getRegistryName(), "inventory"));
-    }
-
-
-
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
         return repair.getItem() == Item.getItemFromBlock(ModBlocks.RUBY_BLOCK) ? true : super.getIsRepairable(toRepair, repair);
     }
