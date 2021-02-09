@@ -38,7 +38,6 @@ public class OnyxLavaFluid extends BlockFluidClassic {
 		setTickRate(20);
 		setTickRandomly(true);
 		ModBlocks.BLOCKS.add(this);
-		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(name));
 	}
 
 

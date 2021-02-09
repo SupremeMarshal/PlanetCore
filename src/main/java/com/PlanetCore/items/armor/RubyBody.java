@@ -1,12 +1,10 @@
 package com.PlanetCore.items.armor;
 
-import com.PlanetCore.init.ModItems;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -24,8 +22,8 @@ public class RubyBody extends ArmorBase
 
 {
 
-	public RubyBody(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+	public RubyBody(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, renderIndexIn, equipmentSlotIn);
 		// TODO Auto-generated constructor stub
 	}
     

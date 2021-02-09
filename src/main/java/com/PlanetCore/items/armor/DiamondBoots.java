@@ -24,8 +24,8 @@ public class DiamondBoots extends ArmorBase
 
 {
 
-	public DiamondBoots(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+	public DiamondBoots(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, renderIndexIn, equipmentSlotIn);
 		// TODO Auto-generated constructor stub
 	}
 	

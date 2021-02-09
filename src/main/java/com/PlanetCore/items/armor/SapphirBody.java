@@ -24,8 +24,8 @@ public class SapphirBody extends ArmorBase
 
 {
 
-	public SapphirBody(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+	public SapphirBody(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, renderIndexIn, equipmentSlotIn);
 		// TODO Auto-generated constructor stub
 	}
     

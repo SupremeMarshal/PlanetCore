@@ -22,8 +22,8 @@ public class PlatinumLegs extends ArmorBase
 
 {
 
-	public PlatinumLegs(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+	public PlatinumLegs(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, renderIndexIn, equipmentSlotIn);
 		// TODO Auto-generated constructor stub
 	}
 	

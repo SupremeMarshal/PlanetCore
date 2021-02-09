@@ -22,8 +22,8 @@ public class PlatinumHelmet extends ArmorBase
 
 {
 
-	public PlatinumHelmet(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+	public PlatinumHelmet(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, renderIndexIn, equipmentSlotIn);
 		// TODO Auto-generated constructor stub
 	}
     

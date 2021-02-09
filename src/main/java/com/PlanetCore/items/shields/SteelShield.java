@@ -1,19 +1,17 @@
 package com.PlanetCore.items.shields;
 
-import com.PlanetCore.Main;
 import com.PlanetCore.init.ModBlocks;
 import com.google.common.collect.Multimap;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -24,7 +22,7 @@ import java.util.Map;
 import java.util.UUID;
 
 
-public class SteelShield extends ShieldBase  {
+public class SteelShield extends ItemShield {
 
 
     /**
@@ -48,21 +46,7 @@ public class SteelShield extends ShieldBase  {
 
     }
 
-
-    public SteelShield(String name) {
-        super(name);
-        this.setMaxDamage(2000);
-    }
-
-
-    @SideOnly(Side.CLIENT)
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(this.getRegistryName(), "inventory"));
-    }
-
-
-
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
         return repair.getItem() == Item.getItemFromBlock(ModBlocks.STEEL_BLOCK) ? true : super.getIsRepairable(toRepair, repair);
     }

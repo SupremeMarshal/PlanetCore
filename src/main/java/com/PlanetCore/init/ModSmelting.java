@@ -2,14 +2,10 @@ package com.PlanetCore.init;
 
 
 import com.PlanetCore.blocks.BlockBase;
-import com.PlanetCore.blocks.Crustrock;
-import com.PlanetCore.items.ItemBase;
-import com.PlanetCore.items.tools.ItemPickaxe;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -18,8 +14,6 @@ import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
-
-import static org.apache.commons.io.FilenameUtils.getName;
 
 public class ModSmelting {
 
@@ -38,7 +32,7 @@ public class ModSmelting {
 	public static void init()
 	{
 		String blockname;
-		String itemname = new String();
+		String itemname;
 		Block block;
 		Item item;
 		/**
@@ -71,7 +65,7 @@ public class ModSmelting {
 					}
 				}
 
-				item = ItemBase.getByNameOrId(itemname);
+				item = Item.getByNameOrId(itemname);
 
 				for (int rock = 0; rock < 4; rock++)
 				{

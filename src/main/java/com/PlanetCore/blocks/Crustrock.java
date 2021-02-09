@@ -47,19 +47,23 @@ public class Crustrock extends BlockBase implements IMetaName
 	}
 
 	@Override
-	void addItemBlock() {
-		ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
+	public Item getItemDropped(IBlockState state, Random random, int l) {
+		int meta = this.getMetaFromState(state);
+		if (meta >= 3 && this == ModBlocks.CRUSTROCK)
+			return Item.getItemFromBlock(ModBlocks.CRUST_COBBLESTONE);
+		else if (meta < 3 && this == ModBlocks.CRUSTROCK)
+			return Item.getItemFromBlock(Blocks.COBBLESTONE);
+		else return super.getItemDropped(state, random, l);
 	}
 
+
 	@Override
-public Item getItemDropped(IBlockState state, Random random, int l) {
-	int meta = this.getMetaFromState(state);
-	if (meta >= 3 && this == ModBlocks.CRUSTROCK)
-		return Item.getItemFromBlock(ModBlocks.CRUST_COBBLESTONE);
-	else if (meta < 3 && this == ModBlocks.CRUSTROCK)
-		return Item.getItemFromBlock(Blocks.COBBLESTONE);
-	else return super.getItemDropped(state, random, l);
-}
+	public int damageDropped(IBlockState state) {
+		if (this == ModBlocks.CRUSTROCK)
+			return super.damageDropped(state);
+		else return ((Crustrock.EnumType)state.getValue(VARIANT)).getMeta();
+
+	}
 
 	@Override
 	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {

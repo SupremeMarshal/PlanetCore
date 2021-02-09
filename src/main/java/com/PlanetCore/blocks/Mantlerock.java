@@ -60,8 +60,9 @@ public class Mantlerock extends BlockBase implements IMetaName
 	}
 
 	@Override
-	void addItemBlock() {
-		ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
+	public int damageDropped(IBlockState state)
+	{
+		return ((Mantlerock.EnumType)state.getValue(VARIANT)).getMeta();
 	}
 
 	@Override

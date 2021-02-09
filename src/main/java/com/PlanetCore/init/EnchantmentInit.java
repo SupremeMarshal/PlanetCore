@@ -6,7 +6,7 @@ import java.util.List;
 
 
 import com.PlanetCore.enchantments.CoolingCore;
-import com.PlanetCore.enchantments.Relentless;
+import com.PlanetCore.enchantments.RelentlessEnchantment;
 import com.PlanetCore.util.Reference;
 
 import net.minecraft.block.material.Material;
@@ -22,7 +22,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 
 
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.potion.Potion;
 
 import net.minecraft.potion.PotionEffect;
@@ -55,7 +54,7 @@ public class EnchantmentInit
 
     public static final Enchantment CoolingCore = new CoolingCore();
 
-    public static final Enchantment Relentless = new Relentless();
+    public static final Enchantment Relentless = new RelentlessEnchantment();
 
 
 

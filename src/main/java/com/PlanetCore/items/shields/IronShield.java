@@ -10,6 +10,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -27,7 +28,7 @@ import java.util.UUID;
 
 
 
-public class IronShield extends ShieldBase  {
+public class IronShield extends ItemShield {
 
 
     /**
@@ -51,23 +52,12 @@ public class IronShield extends ShieldBase  {
 
     }
 
-
-    public IronShield(String name) {
-        super(name);
-        this.setMaxDamage(1000);
-    }
+        //this.setMaxDamage(1000);
 
 
-    @SideOnly(Side.CLIENT)
-    public void initModel() {
-        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(this.getRegistryName(), "inventory"));
-    }
-
-
-
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
-        return repair.getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK) ? true : super.getIsRepairable(toRepair, repair);
+        return repair.getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK) || super.getIsRepairable(toRepair, repair);
     }
 
     @Override

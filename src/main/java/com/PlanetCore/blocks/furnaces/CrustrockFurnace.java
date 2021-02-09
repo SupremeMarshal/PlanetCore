@@ -51,7 +51,6 @@ public class CrustrockFurnace extends BlockContainer
         setRegistryName(name);
         setSoundType(SoundType.STONE);
         ModBlocks.BLOCKS.add(this);
-        ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.isBurning = isBurning;
     }

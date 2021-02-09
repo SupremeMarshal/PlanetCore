@@ -22,8 +22,8 @@ public class EmeraldHelmet extends ArmorBase
 
 {
 
-	public EmeraldHelmet(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(name, materialIn, renderIndexIn, equipmentSlotIn);
+	public EmeraldHelmet(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+		super(materialIn, renderIndexIn, equipmentSlotIn);
 		this.setMaxStackSize(16);
 		// TODO Auto-generated constructor stub
 	}

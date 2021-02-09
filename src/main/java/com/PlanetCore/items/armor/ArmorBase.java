@@ -1,8 +1,6 @@
 package com.PlanetCore.items.armor;
 
 
-import com.PlanetCore.Main;
-import com.PlanetCore.init.ModItems;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -21,14 +19,9 @@ public class ArmorBase extends ItemArmor
 {   
 
  
-    public ArmorBase(String name, ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn)
-    {
+    public ArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
-        setTranslationKey(name);
-        setRegistryName(name);
         setCreativeTab(CreativeTabs.COMBAT);
-        
-        ModItems.ITEMS.add(this);
     }
 
 

@@ -1,9 +1,6 @@
 package com.PlanetCore.init;
 
 
-
-
-
 import com.PlanetCore.blocks.*;
 
 import com.PlanetCore.blocks.furnaces.CrustrockFurnace;
@@ -21,9 +18,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.registries.IForgeRegistry;
 
 
-
 import javax.annotation.Nonnull;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -83,26 +80,25 @@ public class ModBlocks {
     }
 
 
-
     public enum Ore {
 
         ONYX(OreType.GEM, 276.0F, 500000.0F),
-        AMAZONITE( OreType.GEM, 191.7F, 300000.0F),
-        MAJORITE( OreType.GEM, 133.1F, 200000.0F),
-        BRIGMANITE( OreType.GEM, 110.9F, 100000.0F),
-        RINGWOODITE( OreType.GEM, 92.4F, 80000.0F),
-        WADSLEYITE( OreType.GEM, 77.0F, 70000.0F),
-        OLIVINE( OreType.GEM, 64.2F, 60000.0F),
-        DIAMOND( OreType.GEM, 53.5F, 50000.0F),
-        SAPPHIRE( OreType.GEM, 37.15F, 10000.0F),
-        RUBY( OreType.GEM, 37.15F, 10000.0F),
-        EMERALD( OreType.GEM, 30.9F, 2500.0F),
-        TUNGSTEN( METAL, 17.9F, 5000.0F),
-        JADE( OreType.GEM, 25.8F, 1000.0F),
+        AMAZONITE(OreType.GEM, 191.7F, 300000.0F),
+        MAJORITE(OreType.GEM, 133.1F, 200000.0F),
+        BRIGMANITE(OreType.GEM, 110.9F, 100000.0F),
+        RINGWOODITE(OreType.GEM, 92.4F, 80000.0F),
+        WADSLEYITE(OreType.GEM, 77.0F, 70000.0F),
+        OLIVINE(OreType.GEM, 64.2F, 60000.0F),
+        DIAMOND(OreType.GEM, 53.5F, 50000.0F),
+        SAPPHIRE(OreType.GEM, 37.15F, 10000.0F),
+        RUBY(OreType.GEM, 37.15F, 10000.0F),
+        EMERALD(OreType.GEM, 30.9F, 2500.0F),
+        TUNGSTEN(METAL, 17.9F, 5000.0F),
+        JADE(OreType.GEM, 25.8F, 1000.0F),
         TOPAZ(OreType.GEM, 21.5F, 500.0F),
-        TITANIUM( METAL, 12.4F, 200.0F),
-        URANIUM( METAL, 8.0F, 2.0F),
-        PLATINUM( METAL, 10.4F, 5.0F),
+        TITANIUM(METAL, 12.4F, 200.0F),
+        URANIUM(METAL, 8.0F, 2.0F),
+        PLATINUM(METAL, 10.4F, 5.0F),
         GOLD(METAL, 8.6F, 4.0F),
         SILVER(METAL, 7.2F, 3.0F),
         IRON(METAL, 6.0F, 2.0F),
@@ -365,18 +361,15 @@ public class ModBlocks {
          */
         StringBuilder holderGenString = generateHolders ? new StringBuilder(64 * 1024) : null;
 
-        for (ModBlocks.OreForm oreForm : ModBlocks.OreForm.values())
-        {
+        for (ModBlocks.OreForm oreForm : ModBlocks.OreForm.values()) {
 
-            if (oreForm == OreForm.CRUSTROCK || oreForm == OreForm.MANTLEROCK || oreForm == OreForm.CORESTONE)
-            {
+            if (oreForm == OreForm.CRUSTROCK || oreForm == OreForm.MANTLEROCK || oreForm == OreForm.CORESTONE) {
                 Block block;
                 String registryName;
                 registryName = oreForm.name().toLowerCase(Locale.ROOT);
                 block = oreForm.makeBlock(registryName);
                 String name = registryName;
-                if (registryName.equals("crustrock") || registryName.equals("mantlerock") || registryName.equals("corestone"))
-                {
+                if (registryName.equals("crustrock") || registryName.equals("mantlerock") || registryName.equals("corestone")) {
                     registry.register(block);
                     rock.add(block);
                 }
@@ -387,7 +380,7 @@ public class ModBlocks {
             for (ModBlocks.Ore ore : ModBlocks.Ore.values()) {
                 String registryName;
                 if (ore.type == OreType.METAL && (oreForm == OreForm.CORESTONE || /*oreForm == OreForm.CORESTONE_VERYSMALL || */ oreForm == OreForm.CORESTONE_SMALL
-                        || oreForm == OreForm.CORESTONE_COMPACT /* || oreForm == OreForm.CORESTONE_VERYCOMPACT */ )) {
+                        || oreForm == OreForm.CORESTONE_COMPACT /* || oreForm == OreForm.CORESTONE_VERYCOMPACT */)) {
                     continue;
                 }
                 registryName = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT);
@@ -504,7 +497,6 @@ public class ModBlocks {
     }
 
 
-
     public static void registerRenders() {
         for (Block block : rock) {
             if (block.getRegistryName().toString().equals("planetcore:crustrock")) {
@@ -535,12 +527,12 @@ public class ModBlocks {
         for (Block block : AllCrustBlocks) {
             for (int meta = 0; meta < 9; meta++) {
                 if (block.getRegistryName().toString().contains("crustrock_")) {
-                String name = block.getRegistryName().toString();
-                String removeRocktype = name.replace("crustrock_", "");
-                String ore = removeRocktype.replace("planetcore:", "");
-                String name1 = Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore;
-                ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
-                        new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
+                    String name = block.getRegistryName().toString();
+                    String removeRocktype = name.replace("crustrock_", "");
+                    String ore = removeRocktype.replace("planetcore:", "");
+                    String name1 = Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore;
+                    ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
+                            new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
                 }
             }
         }
@@ -568,5 +560,21 @@ public class ModBlocks {
                 }
             }
         }
+    }
+
+    public static List<Block> getBlocks() {
+        List<Block> blocks = new ArrayList<>();
+        Field[] fields = ModBlocks.class.getDeclaredFields();
+        for (Field field : fields) {
+            try {
+                Object obj = field.get(null);
+                if (obj instanceof Block) {
+                    blocks.add((Block) obj);
+                }
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+        return blocks;
     }
 }
