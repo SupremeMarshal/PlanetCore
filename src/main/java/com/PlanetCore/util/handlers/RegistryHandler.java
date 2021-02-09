@@ -13,6 +13,7 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -36,6 +37,10 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(ModItems.getItems().toArray(new Item[0]));
+        for (Block block : ModBlocks.getBlocks()) {
+            ItemBlock itemBlock = new ItemBlock(block);
+            event.getRegistry().register(itemBlock.setRegistryName(block.getRegistryName()));
+        }
     }
 
     @SubscribeEvent

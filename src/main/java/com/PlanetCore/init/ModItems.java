@@ -15,6 +15,7 @@ import net.minecraft.potion.PotionEffect;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 public class ModItems {
@@ -726,6 +727,10 @@ public class ModItems {
 				try {
 					Object obj = field.get(null);
 					if (obj instanceof Item) {
+						Item item = (Item)obj;
+						if (item.getRegistryName() == null) {
+							item.setRegistryName(field.getName().toLowerCase(Locale.ROOT));
+						}
 						ITEMS.add((Item)obj);
 					}
 				} catch (IllegalAccessException e) {
