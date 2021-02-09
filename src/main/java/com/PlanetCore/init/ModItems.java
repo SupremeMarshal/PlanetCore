@@ -48,8 +48,8 @@ public class ModItems {
 		COMPLETE_SILICON(2, 720, 4.5F, 1.8F, 14, 3),
 		COPPER(2, 240, 5.0F, 2.4F, 10, 4),
 		COMPLETE_COPPER(2, 480, 5.5F, 2.4F, 10, 4),
-		ZINC(2, 300, 6.0F, 3.4F, 22, 3),
-		COMPLETE_ZINC(2, 600, 6.5F, 3.4F, 22, 3),
+		ZINC(2, 300, 8.0F, 3.4F, 22, 3),
+		COMPLETE_ZINC(2, 600, 8.5F, 3.4F, 22, 3),
 		TIN(2, 190, 5.0F, 2.8F, 22, 3),
 		COMPLETE_TIN(2, 380, 5.5F, 2.8F, 22, 3),
 		BRONZE(2, 500, 9.0F, 4.0F, 22, 5),
@@ -320,31 +320,31 @@ public class ModItems {
 
 	//ARMOR MATERIAL (name, textureName, durability, reductionAmounts, enchantability, soundOnEquip, toughness)
 	public static final ArmorMaterial ARMOR_MATERIAL_ALUMINIUM = EnumHelper.addArmorMaterial("armor_material_aluminium", Reference.MOD_ID + ":aluminium", 20,
-			new int[] {1, 1, 1, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {1, 3, 2, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_ZINC = EnumHelper.addArmorMaterial("armor_material_zinc", Reference.MOD_ID + ":zinc", 100,
-			new int[] {1, 3, 2, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
+			new int[] {2, 5, 4, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_LEAD = EnumHelper.addArmorMaterial("armor_material_lead", Reference.MOD_ID + ":lead", 40,
-			new int[] {1, 2, 2, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {2, 4, 3, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_TIN = EnumHelper.addArmorMaterial("armor_material_tin", Reference.MOD_ID + ":tin", 50,
 			new int[] {2, 4, 3, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_SILICON = EnumHelper.addArmorMaterial("armor_material_silicon", Reference.MOD_ID + ":silicon", 30,
-			new int[] {1, 2, 2, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {2, 4, 3, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_COPPER = EnumHelper.addArmorMaterial("armor_material_copper", Reference.MOD_ID + ":copper", 50,
-			new int[] {1, 2, 2, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {2, 3, 3, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_IRON = EnumHelper.addArmorMaterial("armor_material_iron", Reference.MOD_ID + ":iron", 150,
 			new int[] {3, 5, 4, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_BRONZE = EnumHelper.addArmorMaterial("armor_material_bronze", Reference.MOD_ID + ":bronze", 180,
-			new int[] {2, 4, 3, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {3, 6, 5, 3}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_STEEL = EnumHelper.addArmorMaterial("armor_material_steel", Reference.MOD_ID + ":steel", 300,
-			new int[] {4, 6, 5, 3}, 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+			new int[] {3, 6, 5, 3}, 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
 	public static final ArmorMaterial ARMOR_MATERIAL_SILVER = EnumHelper.addArmorMaterial("armor_material_silver", Reference.MOD_ID + ":silver", 180,
 			new int[] {4, 7, 6, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.5F);
