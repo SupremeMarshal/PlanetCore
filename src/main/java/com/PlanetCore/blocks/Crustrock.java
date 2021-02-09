@@ -47,11 +47,6 @@ public class Crustrock extends BlockBase implements IMetaName
 	}
 
 	@Override
-	void addItemBlock() {
-		ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
-	}
-
-	@Override
 	public Item getItemDropped(IBlockState state, Random random, int l) {
 		int meta = this.getMetaFromState(state);
 		if (meta >= 3 && this == ModBlocks.CRUSTROCK)

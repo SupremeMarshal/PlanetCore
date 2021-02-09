@@ -2,24 +2,19 @@ package com.PlanetCore.util.handlers;
 
 
 import com.PlanetCore.Main;
-import com.PlanetCore.init.*;
-import com.PlanetCore.recipes.TestRecipe;
+import com.PlanetCore.init.EnchantmentInit;
+import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.init.ModFluids;
+import com.PlanetCore.init.ModItems;
 import com.PlanetCore.util.ModConfiguration;
-import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
-
-import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,15 +24,9 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
-
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.registries.IForgeRegistryModifiable;
-import scala.annotation.meta.field;
-
-import java.lang.reflect.Field;
 
 
 @EventBusSubscriber
@@ -46,7 +35,7 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
+        event.getRegistry().registerAll(ModItems.getItems().toArray(new Item[0]));
     }
 
     @SubscribeEvent

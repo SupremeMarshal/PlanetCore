@@ -53,14 +53,8 @@ public class BlockBase extends Block {
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
 		ModBlocks.BLOCKS.add(this);
-		addItemBlock();
 		setSoundType(SoundType.METAL);
 	}
-
-	void addItemBlock() {
-		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
-	}
-
 
 	/*
 	@Override

@@ -35,7 +35,6 @@ public class HotLavaFluid extends BlockFluidClassic {
 		setLightLevel(1);
 		setTickRate(60);
 		ModBlocks.BLOCKS.add(this);
-		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(name));
 
 		this.setDefaultState(this.blockState.getBaseState().withProperty(LEVEL, Integer.valueOf(0)));
 		this.setTickRandomly(true);

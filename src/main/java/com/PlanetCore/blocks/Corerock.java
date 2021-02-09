@@ -38,7 +38,7 @@ import java.util.Random;
 
 public class Corerock extends BlockBase implements IMetaName {
 
-	public static final PropertyEnum<Corerock.EnumType> VARIANT = PropertyEnum.<Corerock.EnumType>create("variant", Corerock.EnumType.class);
+	public static final PropertyEnum<Corerock.EnumType> VARIANT = PropertyEnum.create("variant", Corerock.EnumType.class);
 
 	public Corerock(String name, Material material) {
 		super(name, material);
@@ -53,14 +53,9 @@ public class Corerock extends BlockBase implements IMetaName {
 	}
 
 	@Override
-	void addItemBlock() {
-		ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
-	}
-
-	@Override
 	public int damageDropped(IBlockState state)
 	{
-		return ((Corerock.EnumType)state.getValue(VARIANT)).getMeta();
+		return state.getValue(VARIANT).getMeta();
 	}
 
 	@Override
@@ -79,25 +74,25 @@ public class Corerock extends BlockBase implements IMetaName {
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return ((Corerock.EnumType)state.getValue(VARIANT)).getMeta();
+		return state.getValue(VARIANT).getMeta();
 	}
 
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		return new ItemStack(Item.getItemFromBlock(this),1,(int)(getMetaFromState(world.getBlockState(pos))));
+		return new ItemStack(Item.getItemFromBlock(this),1, getMetaFromState(world.getBlockState(pos)));
 	}
 
 
 	@Override
 	protected BlockStateContainer createBlockState()
 	{
-		return new BlockStateContainer(this, new IProperty[] {VARIANT});
+		return new BlockStateContainer(this, VARIANT);
 	}
 
 
 
 
-	public static enum EnumType implements IStringSerializable
+	public enum EnumType implements IStringSerializable
 	{
 		CORE(0, "corestone"),
 		INNERCORE(1, "innercorestone"),
@@ -107,7 +102,7 @@ public class Corerock extends BlockBase implements IMetaName {
 		private final int meta;
 		private final String name;
 
-		private EnumType(int meta, String name)
+		EnumType(int meta, String name)
 		{
 			this.meta=meta;
 			this.name=name;
@@ -359,7 +354,7 @@ public class Corerock extends BlockBase implements IMetaName {
 		if (iblockstate.getBlock() == Blocks.WATER || iblockstate.getBlock() == Blocks.FLOWING_WATER)
 		{
 			worldIn.setBlockToAir(blockpos);
-			worldIn.playSound((EntityPlayer)null, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (worldIn.rand.nextFloat() - worldIn.rand.nextFloat()) * 0.8F);
+			worldIn.playSound(null, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (worldIn.rand.nextFloat() - worldIn.rand.nextFloat()) * 0.8F);
 
 			if (worldIn instanceof WorldServer)
 			{

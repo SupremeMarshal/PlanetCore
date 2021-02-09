@@ -40,7 +40,7 @@ public class BlocksBase extends BlockBase {
 	@Override
 	public Item getItemDropped(IBlockState state, Random random, int l) {
 		String a = this.getTranslationKey();
-		Boolean b = true;
+		boolean b = true;
 		int amount = new Random().nextInt(5) + 4;
 		Item drop = null;
 		if (a.contains("redstone")) {
@@ -98,7 +98,6 @@ public class BlocksBase extends BlockBase {
 
 
 			int random = new Random().nextInt(3) + 1;
-			if (random == 1) return true;
-			else return false;
+		return random == 1;
 		}
 }

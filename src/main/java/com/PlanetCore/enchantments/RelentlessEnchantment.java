@@ -9,11 +9,11 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.ResourceLocation;
 
 
-public class Relentless extends Enchantment
+public class RelentlessEnchantment extends Enchantment
 
 {
 
-    public Relentless()
+    public RelentlessEnchantment()
 
     {
 
