@@ -74,9 +74,9 @@ public class BlockBase extends Block {
 	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
 	 * }
 	 */
-	private static final float [] crustHardnessByMeta = {2, 3, 6, 9, 12, 15, 18, 21, 24};
-	private static final float [] mantleHardnessByMeta = {27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72};
-	private static final float [] coreHardnessByMeta = {100, 200, 300};
+	private static final float [] crustHardnessByMeta = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+	private static final float [] mantleHardnessByMeta = {10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40};
+	private static final float [] coreHardnessByMeta = {50, 100, 200};
 
 
 
@@ -132,10 +132,11 @@ public class BlockBase extends Block {
 		else if (a.contains("onyx")) { c = true; if (!b) { drop = ModItems.ONYX; } else { drop = ModItems.ONYX_SHARD; }}
 		else { c = false;  }
 
-		if (!c) { return new ItemStack(this, 1, 0).getItem(); }
-		else { return new ItemStack(drop, 1, 0).getItem(); }
-
+		if (!c) { return Item.getItemFromBlock(this); }
+		else { return drop; }
 	}
+
+
 
 	@Override
 	public int damageDropped(IBlockState state) {
@@ -143,29 +144,29 @@ public class BlockBase extends Block {
 		if (a.contains("lapis")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-		else return super.damageDropped(state);
+			return super.damageDropped(state);
 	}
+
 
 	@Override
 	public int quantityDropped(Random random) {
 		String a = this.getTranslationKey();
 		String materialItem = MaterialItem[0];
-		int amount = 1;
 		if (a.contains("sulfur") || a.contains("coal") || a.contains("redstone") || a.contains("lapis")
 				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
 				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
-				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
+				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
+		{
 			if (a.contains("small")) {
-				amount = new Random().nextInt(2) + 1;
+				return new Random().nextInt(2) + 1;
 			}
 			if (a.contains("compact")) {
-				amount = new Random().nextInt(2) + 2;
+				return new Random().nextInt(2) + 2;
 			}
 		}
-		else amount = 1;
-
-		return amount;
+		return 1;
 	}
+
 
 
 	@Override

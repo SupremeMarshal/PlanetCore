@@ -482,13 +482,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 	//This event can be stacked with earthquake.
 	//=(G26+1536)/(-12500)/64
 	//=(G152+9600)/(-12500)/64
-	public void lavaDecompression(World worldIn, BlockPos pos, IBlockState state) {
-		float chance = pos.getY()+1000/-3000/64F;
-		float chance1 = pos.getY()+9600/-3000/64F;
-		if (pos.getY() < -1000 && Math.random() <= chance && !worldIn.isRemote) {
-			worldIn.setBlockState(pos, ModBlocks.HOT_LAVA_FLUID.getDefaultState());
-		}
-	}
 
 
 
@@ -497,7 +490,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 		super.onBlockExploded(world, pos, explosion);
 		//naturalGasExplosion(world, pos, (IBlockState)explosion);
 		//earthquake(world, pos, (IBlockState)explosion);
-		lavaDecompression(world, pos, (IBlockState)explosion);
 	}
 
 	@Override
@@ -506,7 +498,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 		//naturalGasExplosion(worldIn, pos, state);
 		//earthquake(worldIn, pos, state);
 		naturalGasExplosion(worldIn, pos, state);
-		lavaDecompression(worldIn, pos, state);
 	}
 
 	@Override
