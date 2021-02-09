@@ -48,7 +48,7 @@ public class PlatinumShield extends ShieldBase  {
 
                 new AttributeModifier(KNOCKBACK_RESISTANCE_PLATINUMSHIELD_UUID,
 
-                        "Platinum Shield knockback resistance", 0.2D, 0));
+                        "Platinum Shield knockback resistance", 0.4D, 0));
 
         modMap.put(SharedMonsterAttributes.MAX_HEALTH,
 
@@ -121,7 +121,7 @@ public class PlatinumShield extends ShieldBase  {
             String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
             String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_PLATINUMSHIELD_UUID, "Platinum Shield knockback resistance", 0.2D, 0));
+            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_PLATINUMSHIELD_UUID, "Platinum Shield knockback resistance", 0.4D, 0));
             mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_PLATINUMSHIELD_UUID, "Platinum Shield max health", 8, 0));
 
 

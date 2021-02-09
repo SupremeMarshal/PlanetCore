@@ -48,7 +48,7 @@ public class SilverShield extends ShieldBase  {
 
                 new AttributeModifier(KNOCKBACK_RESISTANCE_SILVERSHIELD_UUID,
 
-                        "Silver Shield knockback resistance", 0.1D, 0));
+                        "Silver Shield knockback resistance", 0.2D, 0));
 
         modMap.put(SharedMonsterAttributes.MAX_HEALTH,
 
@@ -61,7 +61,7 @@ public class SilverShield extends ShieldBase  {
 
     public SilverShield(String name) {
         super(name);
-        this.setMaxDamage(800);
+        this.setMaxDamage(3000);
     }
 
 
@@ -121,7 +121,7 @@ public class SilverShield extends ShieldBase  {
             String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
             String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_SILVERSHIELD_UUID, "Silver Shield knockback resistance", 0.1D, 0));
+            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_SILVERSHIELD_UUID, "Silver Shield knockback resistance", 0.2D, 0));
             mods.put(knockback, new AttributeModifier (MAX_HEALTH_SILVERSHIELD_UUID, "Silver Shield max health", 4, 0));
 
 

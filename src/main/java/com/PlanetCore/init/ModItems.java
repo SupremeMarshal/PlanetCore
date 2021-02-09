@@ -52,43 +52,43 @@ public class ModItems {
 		COMPLETE_ZINC(2, 600, 8.5F, 3.4F, 22, 3),
 		TIN(2, 190, 5.0F, 2.8F, 22, 3),
 		COMPLETE_TIN(2, 380, 5.5F, 2.8F, 22, 3),
-		BRONZE(2, 500, 9.0F, 4.0F, 22, 5),
-		COMPLETE_BRONZE(2, 1000, 10.0F, 4.0F, 22, 5),
+		BRONZE(2, 500, 12.0F, 4.0F, 22, 5),
+		COMPLETE_BRONZE(2, 1000, 14.0F, 4.0F, 22, 5),
 		IRON(2, 1000, 7.0F, 4.6F, 22, 5),
 		COMPLETE_IRON(2, 2000, 8.0F, 4.6F, 22, 5),
-		STEEL(2, 1600, 8.0F, 5.2F, 22, 5),
-		COMPLETE_STEEL(2, 3200, 9.0F, 5.2F, 22, 5),
-		SILVER(3, 600, 11.7F, 5.8F, 22, 5),
-		COMPLETE_SILVER(3, 1200, 11.7F, 5.8F, 22, 5),
-		GOLD(3, 800, 14.6F, 6.4F, 22, 5),
-		COMPLETE_GOLD(3, 1600, 14.6F, 6.4F, 22, 5),
-		PLATINUM(3, 1000, 18.3F, 7.0F, 22, 5),
-		COMPLETE_PLATINUM(3, 2000, 18.3F, 7.0F, 22, 5),
-		TITANIUM(3, 2000, 22.8F, 7.6F, 22, 5),
-		COMPLETE_TITANIUM(3, 4000, 22.8F, 7.6F, 22, 5),
-		URANIUM(4, 100, 35.7F, 9.4F, 22, 6),
-		COMPLETE_URANIUM(4, 200, 35.7F, 9.4F, 22, 6),
-		TOPAZ(4, 600, 44.7F, 8.2F, 22, 5),
-		JADE(4, 800, 55.9F, 8.8F, 22, 5),
-		TUNGSTEN(4, 6000, 28.6F, 7.0F, 22, 5),
-		COMPLETE_TUNGSTEN(4, 12000, 28.6F, 7.0F, 22, 5),
-		TITANIUM_URANIUM(4, 2100, 58.5F, 12.0F, 22, 7),
-		COMPLETE_TITANIUM_URANIUM(4, 4200, 58.5F, 12.0F, 22, 7),
-		TUNGSTEN_URANIUM(4, 6100, 64.3F, 12.0F, 22, 7),
-		COMPLETE_TUNGSTEN_URANIUM(4, 12200, 64.3F, 12.0F, 22, 7),
-		TUNGSTEN_TITANIUM(4, 20000, 51.4F, 9.0F, 22, 7),
-		COMPLETE_TUNGSTEN_TITANIUM(4, 40000, 51.4F, 9.0F, 22, 7),
+		STEEL(2, 1600, 9.0F, 5.2F, 22, 5),
+		COMPLETE_STEEL(2, 3200, 10.0F, 5.2F, 22, 5),
+		SILVER(3, 600, 16.0F, 5.8F, 22, 5),
+		COMPLETE_SILVER(3, 1200, 18.0F, 5.8F, 22, 5),
+		GOLD(3, 800, 20.0F, 6.4F, 22, 5),
+		COMPLETE_GOLD(3, 1600, 22.0F, 6.4F, 22, 5),
+		PLATINUM(3, 1000, 24.0F, 7.0F, 22, 5),
+		COMPLETE_PLATINUM(3, 2000, 26.0F, 7.0F, 22, 5),
+		TITANIUM(3, 2000, 28.0F, 7.6F, 22, 5),
+		COMPLETE_TITANIUM(3, 4000, 30.0F, 7.6F, 22, 5),
+		URANIUM(4, 100, 46.0F, 9.4F, 22, 6),
+		COMPLETE_URANIUM(4, 200, 50.0F, 9.4F, 22, 6),
+		TOPAZ(4, 600, 36.0F, 8.2F, 22, 4),
+		JADE(4, 900, 44.0F, 8.8F, 22, 4),
+		TUNGSTEN(4, 6000, 32.0F, 7.0F, 22, 5),
+		COMPLETE_TUNGSTEN(4, 12000, 34.0F, 7.0F, 22, 5),
+		TITANIUM_URANIUM(4, 2100, 46.0F, 12.0F, 22, 7),
+		COMPLETE_TITANIUM_URANIUM(4, 4200, 50.0F, 12.0F, 22, 7),
+		TUNGSTEN_URANIUM(4, 6100, 46.0F, 12.0F, 22, 7),
+		COMPLETE_TUNGSTEN_URANIUM(4, 12200, 50.0F, 12.0F, 22, 7),
+		TUNGSTEN_TITANIUM(4, 20000, 36.0F, 9.0F, 22, 7),
+		COMPLETE_TUNGSTEN_TITANIUM(4, 40000, 38.0F, 9.0F, 22, 7),
 		EMERALD(5, 1000, 16.0F, 6.6F, 22, 5),
-		RUBY(6, 2000, 87.3F, 10.2F, 22, 8),
-		SAPPHIRE(6, 2400, 87.3F, 10.2F, 22, 8),
-		DIAMOND(10, 6400, 109.0F, 10.8F, 22, 16),
-		OLIVINE(11, 8000, 136.5F, 11.6F, 22, 24),
-		WADSLEYITE(12, 9600, 170.5F, 12.6F, 22, 26),
-		RINGWOODITE(13, 10200, 213.2F, 13.8F, 22, 28),
-		BRIGMANITE(14, 12800, 266.5F, 15.2F, 22, 30),
-		MAJORITE(15, 14400, 333.0F, 16.6F, 22, 32),
-		AMAZONITE(100, 32000, 416.0F, 18.2F, 22, 64),
-		ONYX(1000, 128000, 520.0F, 20.0F, 22, 128);
+		RUBY(6, 2000, 70.0F, 10.2F, 22, 8),
+		SAPPHIRE(6, 2400, 80.0F, 10.2F, 22, 8),
+		DIAMOND(10, 6400, 100.0F, 10.8F, 22, 16),
+		OLIVINE(11, 8000, 120.0F, 11.6F, 22, 24),
+		WADSLEYITE(12, 9600, 140.0F, 12.6F, 22, 26),
+		RINGWOODITE(13, 10200, 160.0F, 13.8F, 22, 28),
+		BRIGMANITE(14, 12800, 180.0F, 15.2F, 22, 30),
+		MAJORITE(15, 14400, 200.0F, 16.6F, 22, 32),
+		AMAZONITE(100, 32000, 250.0F, 18.2F, 22, 64),
+		ONYX(1000, 128000, 300.0F, 20.0F, 22, 128);
 
 
 		/** The level of material this tool can harvest (3 = DIAMOND, 2 = IRON, 1 = STONE, 0 = WOOD/GOLD) */
@@ -1087,12 +1087,12 @@ public class ModItems {
 	public static final Item COPPER_SHIELD = new ShieldBase("copper_shield");
 	public static final Item ZINC_SHIELD = new ShieldBase("zinc_shield");
 	public static final Item TIN_SHIELD = new ShieldBase("tin_shield");
-	public static final Item IRON_SHIELD = new ShieldBase("iron_shield");
-	public static final Item STEEL_SHIELD = new ShieldBase("steel_shield");
+	public static final Item IRON_SHIELD = new IronShield("iron_shield");
+	public static final Item STEEL_SHIELD = new SteelShield("steel_shield");
 	public static final Item BRONZE_SHIELD = new ShieldBase("bronze_shield");
-	public static final Item SILVER_SHIELD = new ShieldBase("silver_shield");
-	public static final Item GOLD_SHIELD = new ShieldBase("gold_shield");
-	public static final Item PLATINUM_SHIELD = new ShieldBase("platinum_shield");
+	public static final Item SILVER_SHIELD = new SilverShield("silver_shield");
+	public static final Item GOLD_SHIELD = new GoldShield("gold_shield");
+	public static final Item PLATINUM_SHIELD = new PlatinumShield("platinum_shield");
 	public static final Item TITANIUM_SHIELD = new ShieldBase("titanium_shield");
 	public static final Item URANIUM_SHIELD = new ShieldBase("uranium_shield");
 	public static final Item TUNGSTEN_SHIELD = new ShieldBase("tungsten_shield");
@@ -1101,17 +1101,17 @@ public class ModItems {
 	public static final Item TUNGSTEN_TITANIUM_SHIELD = new ShieldBase("tungsten_titanium_shield");
 	public static final Item TOPAZ_SHIELD = new ShieldBase("topaz_shield");
 	public static final Item JADE_SHIELD = new ShieldBase("jade_shield");
-	public static final Item EMERALD_SHIELD = new ShieldBase("emerald_shield");
-	public static final Item SAPPHIRE_SHIELD = new ShieldBase("sapphire_shield");
-	public static final Item RUBY_SHIELD = new ShieldBase("ruby_shield");
-	public static final Item DIAMOND_SHIELD = new ShieldBase("diamond_shield");
+	public static final Item EMERALD_SHIELD = new EmeraldShield("emerald_shield");
+	public static final Item SAPPHIRE_SHIELD = new SapphireShield("sapphire_shield");
+	public static final Item RUBY_SHIELD = new RubyShield("ruby_shield");
+	public static final Item DIAMOND_SHIELD = new DiamondShield("diamond_shield");
 	public static final Item OLIVINE_SHIELD = new ShieldBase("olivine_shield");
 	public static final Item WADSLEYITE_SHIELD = new ShieldBase("wadsleyite_shield");
 	public static final Item RINGWOODITE_SHIELD = new ShieldBase("ringwoodite_shield");
 	public static final Item BRIGMANITE_SHIELD = new ShieldBase("brigmanite_shield");
 	public static final Item AMAZONITE_SHIELD = new ShieldBase("amazonite_shield");
 	public static final Item MAJORITE_SHIELD = new ShieldBase("majorite_shield");
-	public static final Item ONYX_SHIELD = new ShieldBase("onyx_shield");
+	public static final Item ONYX_SHIELD = new OnyxShield("onyx_shield");
 
 
 }

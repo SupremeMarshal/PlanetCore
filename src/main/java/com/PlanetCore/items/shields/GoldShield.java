@@ -48,7 +48,7 @@ public class GoldShield extends ShieldBase  {
 
                 new AttributeModifier(KNOCKBACK_RESISTANCE_GOLDSHIELD_UUID,
 
-                        "Gold Shield knockback resistance", 0.1D, 0));
+                        "Gold Shield knockback resistance", 0.2D, 0));
 
         modMap.put(SharedMonsterAttributes.MAX_HEALTH,
 
@@ -121,7 +121,7 @@ public class GoldShield extends ShieldBase  {
             String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
             String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_GOLDSHIELD_UUID, "Gold Shield knockback resistance", 0.1D, 0));
+            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_GOLDSHIELD_UUID, "Gold Shield knockback resistance", 0.2D, 0));
             mods.put(knockback, new AttributeModifier (MAX_HEALTH_GOLDSHIELD_UUID, "Gold Shield max health", 4, 0));
 
 

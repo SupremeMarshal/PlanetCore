@@ -32,7 +32,7 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
     @Override
     public void generate(World world, CubePrimer cubePrimer, CubePos cubePos) {
         if (this.builder == null) {
-            double scaleFactor = 6;
+            double scaleFactor = 7;
             // the scale for caves when they generate
             // smaller value = bigger caves
             double caveScale = scaleFactor * 1 / 100.0;
@@ -44,17 +44,17 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
             // value 1 and above means they won't generate
-            double caveSystemSizeFactor = 0.30;
+            double caveSystemSizeFactor = 0.22;
 
             // bigger values = less smooth transition on the edges of cave system
             double transitionConstant1 = 40;
             // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
-            double transitionConstant2 = 0.02;
+            double transitionConstant2 = 0.03;
 
             // bigger value = finer detail for caves. Adding 1 = double the detail
-            int caveOctaves = 6;
+            int caveOctaves = 9;
             // bigger value = finer detail for placement. Adding 1 = double the detail
-            int placementOctaves = 6;
+            int placementOctaves = 9;
 
             IBuilder caveNoise = NoiseSource.perlin().frequency(caveScale).octaves(caveOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1024).create();
             IBuilder placementNoise = NoiseSource.perlin().frequency(placementScale).octaves(placementOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1025).create()

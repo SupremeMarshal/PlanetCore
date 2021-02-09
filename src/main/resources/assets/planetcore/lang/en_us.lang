@@ -4415,27 +4415,27 @@ item.iron_shield.tooltip.0=When holding the shield:
 item.iron_shield.tooltip.1=§9+5%% Knockback Resistance
 
 item.steel_shield.tooltip.0=When holding the shield:
-item.steel_shield.tooltip.1=§9+5%% Knockback Resistance
+item.steel_shield.tooltip.1=§9+10%% Knockback Resistance
 
 item.silver_shield.tooltip.0=When holding the shield:
 item.silver_shield.tooltip.1=§9+4 Health
-item.silver_shield.tooltip.2=§9+10%% Knockback Resistance
+item.silver_shield.tooltip.2=§9+20%% Knockback Resistance
 item.silver_shield.tooltip.3=§a+1 Health regen per minute
 
 item.gold_shield.tooltip.0=When holding the shield:
 item.gold_shield.tooltip.1=§9+4 Health
-item.gold_shield.tooltip.2=§9+15%% Knockback Resistance
+item.gold_shield.tooltip.2=§9+30%% Knockback Resistance
 item.gold_shield.tooltip.3=§a+1 Health regen per minute
 
 item.platinum_shield.tooltip.0=When holding the shield:
 item.platinum_shield.tooltip.1=§9+8 Health
-item.platinum_shield.tooltip.2=§9+20%% Knockback Resistance
+item.platinum_shield.tooltip.2=§9+40%% Knockback Resistance
 item.platinum_shield.tooltip.3=§a+2.5 Health regen per minute
 
 item.sapphire_shield.name=§aSapphire Shield
 item.sapphire_shield.tooltip.0=When holding the shield:
 item.sapphire_shield.tooltip.1=§9+12 Health
-item.sapphire_shield.tooltip.2=§9+25%% Knockback Resistance
+item.sapphire_shield.tooltip.2=§9+50%% Knockback Resistance
 item.sapphire_shield.tooltip.3=§a+5 Health regen per minute
 item.sapphire_shield.tooltip.4=Effect bonus:
 item.sapphire_shield.tooltip.5=§6+Resistance I
@@ -4443,27 +4443,27 @@ item.sapphire_shield.tooltip.5=§6+Resistance I
 item.ruby_shield.name=§bRuby Shield
 item.ruby_shield.tooltip.0=When holding the shield:
 item.ruby_shield.tooltip.1=§9+16 Health
-item.ruby_shield.tooltip.2=§9+30 Knockback Resistance
+item.ruby_shield.tooltip.2=§9+60%% Knockback Resistance
 item.ruby_shield.tooltip.3=§9+7.5 Health regen per minute
 item.ruby_shield.tooltip.4=§9+Resistance I
 
 item.diamond_shield.name=§dDiamond Shield
 item.diamond_shield.tooltip.0=When holding the shield:
 item.diamond_shield.tooltip.1=§9+20 Health
-item.diamond_shield.tooltip.2=§9+35 Knockback Resistance
+item.diamond_shield.tooltip.2=§9+70%% Knockback Resistance
 item.diamond_shield.tooltip.3=§9+10 Health regen per minute
 item.diamond_shield.tooltip.4=§9+Resistance I
 
 item.amazonite_shield.name=§6Amazonite Shield
 item.amazonite_shield.tooltip.0=When holding the shield:
 item.amazonite_shield.tooltip.1=§9+30 Health
-item.amazonite_shield.tooltip.2=§9+40 Knockback Resistance
+item.amazonite_shield.tooltip.2=§9+80%% Knockback Resistance
 item.amazonite_shield.tooltip.3=§9+15 Health regen per minute
 item.amazonite_shield.tooltip.4=§9+Resistance II
 
 item.onyx_shield.name=§6Onyx Shield
 item.onyx_shield.tooltip.0=When holding the shield:
 item.onyx_shield.tooltip.1=§9+40 Health
-item.onyx_shield.tooltip.2=§9+50 Knockback Resistance
+item.onyx_shield.tooltip.2=§9+100%% Knockback Resistance
 item.onyx_shield.tooltip.3=§9+30 Health regen per minute
 item.onyx_shield.tooltip.4=§9+Resistance II
