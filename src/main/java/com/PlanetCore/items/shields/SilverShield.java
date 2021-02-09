@@ -49,7 +49,7 @@ public class SilverShield extends ItemShield {
 
                 new AttributeModifier(KNOCKBACK_RESISTANCE_SILVERSHIELD_UUID,
 
-                        "Silver Shield knockback resistance", 0.1D, 0));
+                        "Silver Shield knockback resistance", 0.2D, 0));
 
         modMap.put(SharedMonsterAttributes.MAX_HEALTH,
 
@@ -61,7 +61,8 @@ public class SilverShield extends ItemShield {
 
         //this.setMaxDamage(800);
 
-public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
         return repair.getItem() == Item.getItemFromBlock(ModBlocks.SILVER_BLOCK) ? true : super.getIsRepairable(toRepair, repair);
     }
@@ -110,7 +111,7 @@ public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
             String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
             String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_SILVERSHIELD_UUID, "Silver Shield knockback resistance", 0.1D, 0));
+            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_SILVERSHIELD_UUID, "Silver Shield knockback resistance", 0.2D, 0));
             mods.put(knockback, new AttributeModifier (MAX_HEALTH_SILVERSHIELD_UUID, "Silver Shield max health", 4, 0));
 
 

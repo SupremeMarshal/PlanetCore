@@ -133,7 +133,7 @@ public class BlockBase extends Block {
 		else { c = false;  }
 
 		if (!c) { return Item.getItemFromBlock(this); }
-		else { return drop; }
+		else { return new ItemStack(drop, 1, 0).getItem(); }
 	}
 
 
@@ -144,8 +144,9 @@ public class BlockBase extends Block {
 		if (a.contains("lapis")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-			return super.damageDropped(state);
+		return 0;
 	}
+
 
 
 	@Override

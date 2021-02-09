@@ -49,7 +49,7 @@ public class EmeraldShield extends ItemShield {
 
                 new AttributeModifier(KNOCKBACK_RESISTANCE_EMERALDSHIELD_UUID,
 
-                        "Emerald Shield knockback resistance", 0.25D, 0));
+                        "Emerald Shield knockback resistance", 0.5D, 0));
 
         modMap.put(SharedMonsterAttributes.MAX_HEALTH,
 
@@ -112,7 +112,7 @@ public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
             String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
             String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_EMERALDSHIELD_UUID, "Emerald Shield knockback resistance", 0.25D, 0));
+            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_EMERALDSHIELD_UUID, "Emerald Shield knockback resistance", 0.5D, 0));
             mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_EMERALDSHIELD_UUID, "Emerald Shield max health", 12, 0));
 
 

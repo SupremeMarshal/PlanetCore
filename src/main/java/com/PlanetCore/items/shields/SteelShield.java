@@ -42,7 +42,7 @@ public class SteelShield extends ItemShield {
 
                 new AttributeModifier(KNOCKBACK_RESISTANCE_STEELSHIELD_UUID,
 
-                        "Steel Shield knockback resistance", 0.05D, 0));
+                        "Steel Shield knockback resistance", 0.10D, 0));
 
     }
 
@@ -92,7 +92,7 @@ public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 
             String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_STEELSHIELD_UUID, "Steel Shield knockback resistance", 0.05D, 0));
+            mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_STEELSHIELD_UUID, "Steel Shield knockback resistance", 0.10D, 0));
 
         }
         return mods;

@@ -20,8 +20,6 @@ import java.util.Locale;
 
 public class ModItems {
 
-	private static final List<Item> ITEMS = new ArrayList<>();
-
 
 	//TOOLS
 =======
