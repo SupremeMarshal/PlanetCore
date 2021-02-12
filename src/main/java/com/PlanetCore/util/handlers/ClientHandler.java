@@ -16,7 +16,7 @@ public class ClientHandler {
     public static void addTooltips(ItemTooltipEvent event) {
         ItemStack stack = event.getItemStack();
         if (stack.getItem() instanceof ItemTool) {
-            float efficiency = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemTool)stack.getItem(),"field_78010_h");
+            float efficiency = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemTool)stack.getItem(),"field_77864_a");
             event.getToolTip().add("Efficiency: "+ efficiency);
             if (stack.getItem() instanceof ItemPickaxe) {
                 event.getToolTip().add("Relentless: " + PickaxeRelentlessHandler.getRelentless(stack));
