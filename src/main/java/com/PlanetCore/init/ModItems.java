@@ -7,6 +7,16 @@ import com.PlanetCore.items.armor.*;
 import com.PlanetCore.items.food.SixEffectFoodItem;
 import com.PlanetCore.items.food.EightEffectFoodItem;
 import com.PlanetCore.items.food.ThreeEffectFoodItem;
+import com.PlanetCore.items.shields.DiamondShield;
+import com.PlanetCore.items.shields.EmeraldShield;
+import com.PlanetCore.items.shields.GoldShield;
+import com.PlanetCore.items.shields.IronShield;
+import com.PlanetCore.items.shields.OnyxShield;
+import com.PlanetCore.items.shields.PlatinumShield;
+import com.PlanetCore.items.shields.RubyShield;
+import com.PlanetCore.items.shields.SapphireShield;
+import com.PlanetCore.items.shields.SilverShield;
+import com.PlanetCore.items.shields.SteelShield;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
@@ -21,142 +31,10 @@ import java.util.Locale;
 public class ModItems {
 
 
+	private static final List<Item> ITEMS = new ArrayList<>();
+
+
 	//TOOLS
-=======
-		public String getOreName() {
-			return OreName;
-		}
-
-		public Item makeItem(String registryName) {
-			return makeItem.apply(registryName);
-		}
-	}
-
-	public enum MaterialTier {
-
-		WEAK(0.25, id -> new ItemBase(id)),
-		NORMAL(1.00, id -> new ItemBase(id)),
-		STRONG(4.00, id -> new ItemBase(id));
-
-		private final double DurabilityModifier;
-		private final Function<String, Item> makeItem;
-
-		MaterialTier(double DurabilityModifier, Function<String, Item> makeItem) {
-			this.DurabilityModifier = DurabilityModifier;
-			this.makeItem = makeItem;
-		}
-
-		public double getDurabilityModifier() {
-			return DurabilityModifier;
-		}
-
-		public Item makeItem(String registryName) {
-			return makeItem.apply(registryName);
-		}
-	}
-
-
-
-	//ARMOR MATERIAL (name, textureName, durability, reductionAmounts, enchantability, soundOnEquip, toughness)
-	public static final ArmorMaterial ARMOR_MATERIAL_ALUMINIUM = EnumHelper.addArmorMaterial("armor_material_aluminium", Reference.MOD_ID + ":aluminium", 20,
-			new int[] {1, 3, 2, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_ZINC = EnumHelper.addArmorMaterial("armor_material_zinc", Reference.MOD_ID + ":zinc", 100,
-			new int[] {2, 5, 4, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_LEAD = EnumHelper.addArmorMaterial("armor_material_lead", Reference.MOD_ID + ":lead", 40,
-			new int[] {2, 4, 3, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_TIN = EnumHelper.addArmorMaterial("armor_material_tin", Reference.MOD_ID + ":tin", 50,
-			new int[] {2, 4, 3, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SILICON = EnumHelper.addArmorMaterial("armor_material_silicon", Reference.MOD_ID + ":silicon", 30,
-			new int[] {2, 4, 3, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_COPPER = EnumHelper.addArmorMaterial("armor_material_copper", Reference.MOD_ID + ":copper", 50,
-			new int[] {2, 3, 3, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_IRON = EnumHelper.addArmorMaterial("armor_material_iron", Reference.MOD_ID + ":iron", 150,
-			new int[] {3, 5, 4, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_BRONZE = EnumHelper.addArmorMaterial("armor_material_bronze", Reference.MOD_ID + ":bronze", 180,
-			new int[] {3, 6, 5, 3}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_STEEL = EnumHelper.addArmorMaterial("armor_material_steel", Reference.MOD_ID + ":steel", 300,
-			new int[] {3, 6, 5, 3}, 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SILVER = EnumHelper.addArmorMaterial("armor_material_silver", Reference.MOD_ID + ":silver", 180,
-			new int[] {4, 7, 6, 3}, 16, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_GOLD = EnumHelper.addArmorMaterial("armor_material_gold", Reference.MOD_ID + ":gold", 180,
-			new int[] {4, 7, 6, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_AEROGEL_GOLD = EnumHelper.addArmorMaterial("armor_material_aerogel_gold", Reference.MOD_ID + ":aerogel_gold", 360,
-			new int[] {4, 7, 6, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_PLATINUM = EnumHelper.addArmorMaterial("armor_material_platinum", Reference.MOD_ID + ":platinum", 400,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_TITANIUM = EnumHelper.addArmorMaterial("armor_material_titanium", Reference.MOD_ID + ":titanium", 600,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_URANIUM = EnumHelper.addArmorMaterial("armor_material_uranium", Reference.MOD_ID + ":uranium", 60,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_TOPAZ = EnumHelper.addArmorMaterial("armor_material_topaz", Reference.MOD_ID + ":topaz", 300,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_JADE = EnumHelper.addArmorMaterial("armor_material_jade", Reference.MOD_ID + ":jade", 400,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_TUNGSTEN = EnumHelper.addArmorMaterial("armor_material_tungsten", Reference.MOD_ID + ":tungsten", 1000,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_TITANIUM_URANIUM = EnumHelper.addArmorMaterial("armor_material_titanium_uranium", Reference.MOD_ID + ":titanium_uranium", 660,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_TUNGSTEN_URANIUM = EnumHelper.addArmorMaterial("armor_material_tungsten_uranium", Reference.MOD_ID + ":tungsten_uranium", 1060,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_TUNGSTEN_TITANIUM = EnumHelper.addArmorMaterial("armor_material_tungsten_titanium", Reference.MOD_ID + ":tungsten_titanium", 1600,
-			new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_EMERALD = EnumHelper.addArmorMaterial("armor_material_emerald", Reference.MOD_ID + ":emerald", 36,
-			new int[] {3, 5, 4, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial("armor_material_ruby", Reference.MOD_ID + ":ruby", 3000,
-			new int[] {7, 12, 10, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 10.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_SAPPHIRE = EnumHelper.addArmorMaterial("armor_material_sapphire", Reference.MOD_ID + ":sapphire", 3000,
-			new int[] {6, 10, 9, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_DIAMOND = EnumHelper.addArmorMaterial("armor_material_diamond", Reference.MOD_ID + ":diamond", 4500,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_OLIVINE = EnumHelper.addArmorMaterial("armor_material_olivine", Reference.MOD_ID + ":olivine", 6000,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_WADSLEYITE = EnumHelper.addArmorMaterial("armor_material_wadsleyite", Reference.MOD_ID + ":wadsleyite", 7000,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_RINGWOODITE = EnumHelper.addArmorMaterial("armor_material_ringwoodite", Reference.MOD_ID + ":ringwoodite", 8000,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_BRIGMANITE = EnumHelper.addArmorMaterial("armor_material_brigmanite", Reference.MOD_ID + ":brigmanite", 9000,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_MAJORITE = EnumHelper.addArmorMaterial("armor_material_majorite", Reference.MOD_ID + ":majorite", 10000,
-			new int[] {8, 14, 12, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 13.5F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_AMAZONITE = EnumHelper.addArmorMaterial("armor_material_amazonite", Reference.MOD_ID + ":amazonite", 20000,
-			new int[] {6, 12, 9, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.0F);
-
-	public static final ArmorMaterial ARMOR_MATERIAL_ONYX = EnumHelper.addArmorMaterial("armor_material_onyx", Reference.MOD_ID + ":onyx", 50000,
-			new int[] {7, 14, 10, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 8.0F);
-
-
-
-//TOOLS
 
 	//WOODEN//
 	public static final ItemSword WOODEN_SWORD = new ItemSword(ToolMaterials.WOODEN);
@@ -826,12 +704,12 @@ public class ModItems {
 	public static final Item COPPER_SHIELD = new ItemShield();
 	public static final Item ZINC_SHIELD = new ItemShield();
 	public static final Item TIN_SHIELD = new ItemShield();
-	public static final Item IRON_SHIELD = new ItemShield();
-	public static final Item STEEL_SHIELD = new ItemShield();
+	public static final Item IRON_SHIELD = new IronShield();
+	public static final Item STEEL_SHIELD = new SteelShield();
 	public static final Item BRONZE_SHIELD = new ItemShield();
-	public static final Item SILVER_SHIELD = new ItemShield();
-	public static final Item GOLD_SHIELD = new ItemShield();
-	public static final Item PLATINUM_SHIELD = new ItemShield();
+	public static final Item SILVER_SHIELD = new SilverShield();
+	public static final Item GOLD_SHIELD = new GoldShield();
+	public static final Item PLATINUM_SHIELD = new PlatinumShield();
 	public static final Item TITANIUM_SHIELD = new ItemShield();
 	public static final Item URANIUM_SHIELD = new ItemShield();
 	public static final Item TUNGSTEN_SHIELD = new ItemShield();
@@ -840,17 +718,17 @@ public class ModItems {
 	public static final Item TUNGSTEN_TITANIUM_SHIELD = new ItemShield();
 	public static final Item TOPAZ_SHIELD = new ItemShield();
 	public static final Item JADE_SHIELD = new ItemShield();
-	public static final Item EMERALD_SHIELD = new ItemShield();
-	public static final Item SAPPHIRE_SHIELD = new ItemShield();
-	public static final Item RUBY_SHIELD = new ItemShield();
-	public static final Item DIAMOND_SHIELD = new ItemShield();
+	public static final Item EMERALD_SHIELD = new EmeraldShield();
+	public static final Item SAPPHIRE_SHIELD = new SapphireShield();
+	public static final Item RUBY_SHIELD = new RubyShield();
+	public static final Item DIAMOND_SHIELD = new DiamondShield();
 	public static final Item OLIVINE_SHIELD = new ItemShield();
 	public static final Item WADSLEYITE_SHIELD = new ItemShield();
 	public static final Item RINGWOODITE_SHIELD = new ItemShield();
 	public static final Item BRIGMANITE_SHIELD = new ItemShield();
 	public static final Item AMAZONITE_SHIELD = new ItemShield();
 	public static final Item MAJORITE_SHIELD = new ItemShield();
-	public static final Item ONYX_SHIELD = new ItemShield();
+	public static final Item ONYX_SHIELD = new OnyxShield();
 
 	public static List<Item> getItems() {
 		if (ITEMS.isEmpty()) {

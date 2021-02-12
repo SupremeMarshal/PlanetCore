@@ -59,6 +59,12 @@ public class Mantlerock extends BlockBase implements IMetaName
 		return (mantleLightLevel[meta]);
 	}
 
+	// TODO: how to make this work?
+	// @Override
+	// void addItemBlock() {
+	// 	ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
+	// }
+
 	@Override
 	public int damageDropped(IBlockState state)
 	{
