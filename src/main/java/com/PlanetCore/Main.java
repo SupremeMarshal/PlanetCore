@@ -37,7 +37,6 @@ public class Main {
 
     static {
         FluidRegistry.enableUniversalBucket();
-        ToolMaterials.class.toString();
     }
 
     @EventHandler
