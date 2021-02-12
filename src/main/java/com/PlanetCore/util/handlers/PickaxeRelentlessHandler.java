@@ -1,6 +1,7 @@
 package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.blocks.BlockBase;
+import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.init.ToolMaterials;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -114,7 +115,9 @@ public class PickaxeRelentlessHandler {
         Item item = stack.getItem();
         if (item instanceof ItemPickaxe) {
             Item.ToolMaterial toolMaterial = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemPickaxe)item,"field_77843_a");
-            return ToolMaterials.relentlessMap.get(toolMaterial);
+            int base = ToolMaterials.relentlessMap.get(toolMaterial);
+            int enchLevel = EnchantmentHelper.getEnchantmentLevel(Relentless,stack);
+            return base + enchLevel;
         }
         return 0;
     }
