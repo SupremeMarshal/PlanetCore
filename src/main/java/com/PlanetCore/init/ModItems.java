@@ -739,7 +739,9 @@ public class ModItems {
 					if (obj instanceof Item) {
 						Item item = (Item)obj;
 						if (item.getRegistryName() == null) {
-							item.setRegistryName(field.getName().toLowerCase(Locale.ROOT));
+							String name = field.getName().toLowerCase(Locale.ROOT);
+							item.setRegistryName(name);
+							item.setTranslationKey(name);
 						}
 						ITEMS.add((Item)obj);
 					}

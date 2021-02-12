@@ -33,6 +33,12 @@ minecraft {
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
+idea {
+    module {
+        inheritOutputDirs = true
+    }
+}
+
 repositories {
     maven { //needed for CubicWorldGen
         name = "JitPack"
