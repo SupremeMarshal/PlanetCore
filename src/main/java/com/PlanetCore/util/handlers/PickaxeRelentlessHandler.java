@@ -114,8 +114,8 @@ public class PickaxeRelentlessHandler {
     public static int getRelentless(ItemStack stack) {
         Item item = stack.getItem();
         if (item instanceof ItemPickaxe) {
-            Item.ToolMaterial toolMaterial = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemPickaxe)item,"field_77843_a");
-            int base = ToolMaterials.relentlessMap.get(toolMaterial);
+            Item.ToolMaterial toolMaterial = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemPickaxe)item,"field_77862_b");
+            int base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,0);
             int enchLevel = EnchantmentHelper.getEnchantmentLevel(Relentless,stack);
             return base + enchLevel;
         }
