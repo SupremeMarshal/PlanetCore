@@ -67,7 +67,6 @@ public class BlockBase extends Block {
 
 	 */
 
-
 	/**
 	 * Previous hardness's value + (3*Meta)
 	 * public static int recursive(int in) {
@@ -198,6 +197,7 @@ public class BlockBase extends Block {
 	 * @param state
 	 * @param rand
 	 */
+	/**
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 			float PressureLevel = (pos.getY() / 64 / -24000 * 100.0F) * (pos.getY() / 64 / -24000 * 100.0F) * (pos.getY() / 64 / -24000 * 100.0F);
@@ -221,19 +221,20 @@ public class BlockBase extends Block {
 				}
 			}
 		}
+	 */
 
 
 
-		/**
+
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		float PressureLevel = (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F) * (pos.getY() / 64 / -23808 * 100.0F);
-			if (pos.getY() < 0 && Math.random() <= (pos.getY() / -47616.0F) && !(this instanceof OreBase) && !(this instanceof Corerock) && !(this instanceof BlocksBase)) {
+		float PressureLevel = pos.getY()*-1;
+			if (pos.getY() < 0 && Math.random() <= (pos.getY() / -40000.0F) && !(this instanceof Corerock) && !(this instanceof BlocksBase)) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
 					if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel
-							|| movedState.getMaterial() == Material.WATER || movedState.getMaterial() == Material.LAVA || movedState.getBlock() == Blocks.ANVIL)
+							|| movedState.getBlock() == Blocks.ANVIL)
 						continue; // you can add more blocks to this check to exclude them
 					//
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
@@ -246,7 +247,7 @@ public class BlockBase extends Block {
 			}
 		}
 
-		 */
+
 
 
 
