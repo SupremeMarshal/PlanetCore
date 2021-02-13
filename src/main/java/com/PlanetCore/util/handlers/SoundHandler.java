@@ -3,7 +3,7 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.util.Reference;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.registries.IForgeRegistry;
 
 public class SoundHandler
 {
@@ -27,35 +27,35 @@ public class SoundHandler
     public static SoundEvent INDESTRUCTIBLE17;
     public static SoundEvent INDESTRUCTIBLE18;
     public static SoundEvent INDESTRUCTIBLE19;
-    public static void registerSounds()
+    public static void registerSounds(IForgeRegistry<SoundEvent> registry)
     {
-        INDESTRUCTIBLE = registerSound("action.indestructible");
-        INDESTRUCTIBLE1 = registerSound("action.indestructible1");
-        INDESTRUCTIBLE2 = registerSound("action.indestructible2");
-        INDESTRUCTIBLE3 = registerSound("action.indestructible3");
-        INDESTRUCTIBLE4 = registerSound("action.indestructible4");
-        INDESTRUCTIBLE5 = registerSound("action.indestructible5");
-        INDESTRUCTIBLE6 = registerSound("action.indestructible6");
-        INDESTRUCTIBLE7 = registerSound("action.indestructible7");
-        INDESTRUCTIBLE8 = registerSound("action.indestructible8");
-        INDESTRUCTIBLE9 = registerSound("action.indestructible9");
-        INDESTRUCTIBLE10 = registerSound("action.indestructible10");
-        INDESTRUCTIBLE11 = registerSound("action.indestructible11");
-        INDESTRUCTIBLE12 = registerSound("action.indestructible12");
-        INDESTRUCTIBLE13 = registerSound("action.indestructible13");
-        INDESTRUCTIBLE14 = registerSound("action.indestructible14");
-        INDESTRUCTIBLE15 = registerSound("action.indestructible15");
-        INDESTRUCTIBLE16 = registerSound("action.indestructible16");
-        INDESTRUCTIBLE17 = registerSound("action.indestructible17");
-        INDESTRUCTIBLE18 = registerSound("action.indestructible18");
-        INDESTRUCTIBLE19 = registerSound("action.indestructible19");
+        INDESTRUCTIBLE = registerSound("action.indestructible",registry);
+        INDESTRUCTIBLE1 = registerSound("action.indestructible1", registry);
+        INDESTRUCTIBLE2 = registerSound("action.indestructible2", registry);
+        INDESTRUCTIBLE3 = registerSound("action.indestructible3", registry);
+        INDESTRUCTIBLE4 = registerSound("action.indestructible4", registry);
+        INDESTRUCTIBLE5 = registerSound("action.indestructible5", registry);
+        INDESTRUCTIBLE6 = registerSound("action.indestructible6", registry);
+        INDESTRUCTIBLE7 = registerSound("action.indestructible7", registry);
+        INDESTRUCTIBLE8 = registerSound("action.indestructible8", registry);
+        INDESTRUCTIBLE9 = registerSound("action.indestructible9", registry);
+        INDESTRUCTIBLE10 = registerSound("action.indestructible10", registry);
+        INDESTRUCTIBLE11 = registerSound("action.indestructible11", registry);
+        INDESTRUCTIBLE12 = registerSound("action.indestructible12", registry);
+        INDESTRUCTIBLE13 = registerSound("action.indestructible13", registry);
+        INDESTRUCTIBLE14 = registerSound("action.indestructible14", registry);
+        INDESTRUCTIBLE15 = registerSound("action.indestructible15", registry);
+        INDESTRUCTIBLE16 = registerSound("action.indestructible16", registry);
+        INDESTRUCTIBLE17 = registerSound("action.indestructible17", registry);
+        INDESTRUCTIBLE18 = registerSound("action.indestructible18", registry);
+        INDESTRUCTIBLE19 = registerSound("action.indestructible19", registry);
     }
-    private static SoundEvent registerSound(String name)
+    private static SoundEvent registerSound(String name, IForgeRegistry<SoundEvent> registry)
     {
         ResourceLocation location = new ResourceLocation(Reference.MOD_ID, name);
         SoundEvent event = new SoundEvent(location);
         event.setRegistryName(name);
-        ForgeRegistries.SOUND_EVENTS.register(event);
+        registry.register(event);
         return event;
     }
 }
