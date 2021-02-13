@@ -6,6 +6,8 @@ import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModFluids;
 import com.PlanetCore.init.ModItems;
+import com.PlanetCore.init.blocks.item.ItemBlockVariants;
+import com.PlanetCore.util.IMetaName;
 import com.PlanetCore.util.ModConfiguration;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -38,8 +40,14 @@ public class RegistryHandler {
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(ModItems.getItems().toArray(new Item[0]));
         for (Block block : ModBlocks.getBlocks()) {
-            ItemBlock itemBlock = new ItemBlock(block);
+            ItemBlock itemBlock;
+            if (block instanceof IMetaName) {
+                itemBlock = new ItemBlockVariants(block);
+            } else {
+                itemBlock = new ItemBlock(block);
+            }
             event.getRegistry().register(itemBlock.setRegistryName(block.getRegistryName()));
+
         }
     }
 
@@ -54,7 +62,13 @@ public class RegistryHandler {
 
         ForgeRegistries.ITEMS.getValues().stream()
                 .filter(item -> "planetcore".equals(item.getRegistryName().getNamespace())).forEach(item -> {
-            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+                    if (item instanceof ItemBlockVariants) {
+                        for (int i = 0; i < 3;i++) {
+                            ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+                        }
+                    } else {
+                        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+                    }
         });
 
 
