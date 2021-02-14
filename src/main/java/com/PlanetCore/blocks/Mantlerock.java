@@ -178,33 +178,33 @@ public class Mantlerock extends BlockBase implements IMetaName
 		int Z = pos.getZ();
 		int Y = pos.getY();
 		if (!worldIn.isRemote) {
-			if (Y <= -3000 && Y > -4000) {
-				if (rand.nextInt(4000) == 0) {
+			if (Y <= -3000 && Y > -3500) {
+				if (rand.nextInt(2000) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
 				}
 			}
-			if (Y <= -4000 && Y > -4500) {
-				if (rand.nextInt(2000) == 0) {
+			if (Y <= -3500 && Y > -4000) {
+				if (rand.nextInt(1000) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
 				}
 			}
-			if (Y <= -4500 && Y > -4750) {
-				if (rand.nextInt(1000) == 0) {
+			if (Y <= -4000 && Y > -4500) {
+				if (rand.nextInt(500) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(4) + 1, true);
 				}
 			}
-			if (Y <= -4750 && Y > -5000) {
-				if (rand.nextInt(500) == 0) {
+			if (Y <= -4500 && Y > -5000) {
+				if (rand.nextInt(250) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 				}
 			}
 			if (Y <= -5000 && Y > -5250) {
-				if (rand.nextInt(250) == 0) {
+				if (rand.nextInt(200) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 1, true);
 				}
 			}
 			if (Y <= -5250 && Y > -6000) {
-				if (rand.nextInt(200) == 0) {
+				if (rand.nextInt(150) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 1, true);
 				}
 			}

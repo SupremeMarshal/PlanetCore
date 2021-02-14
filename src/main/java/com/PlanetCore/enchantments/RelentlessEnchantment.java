@@ -61,7 +61,7 @@ public class RelentlessEnchantment extends Enchantment
 
     {
 
-        return 10;
+        return 5;
 
     }
 

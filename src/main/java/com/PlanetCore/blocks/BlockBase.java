@@ -228,7 +228,7 @@ public class BlockBase extends Block {
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		float PressureLevel = pos.getY()*-1;
+		float PressureLevel = pos.getY()*-0.01F;
 			if (pos.getY() < 0 && Math.random() <= (pos.getY() / -40000.0F) && !(this instanceof Corerock) && !(this instanceof BlocksBase)) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);

@@ -296,6 +296,8 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
      */
     private boolean canSmelt()
     {
+        Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT);
+        Boolean steel_ingot1 = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT);
         Boolean bronze_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TIN_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.COPPER_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.COPPER_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TIN_INGOT);
         Boolean titanium_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TITANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.URANIUM_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.URANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TITANIUM_INGOT);
         Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.URANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TUNGSTEN_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.TUNGSTEN_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.URANIUM_INGOT);
