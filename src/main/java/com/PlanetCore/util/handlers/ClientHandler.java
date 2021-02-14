@@ -1,6 +1,5 @@
 package com.PlanetCore.util.handlers;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemPickaxe;
@@ -20,7 +19,7 @@ public class ClientHandler {
         ItemStack stack = event.getItemStack();
         if (stack.getItem() instanceof ItemTool) {
             float efficiency = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemTool)stack.getItem(),"field_77864_a");
-            if (Minecraft.getMinecraft().player != null) {
+            if (event.getEntityPlayer() != null) {
                 int effLevel = EnchantmentHelper.getEnchantmentLevel(Enchantments.EFFICIENCY,stack);
                 if (effLevel > 0) {
                     efficiency += effLevel * effLevel + 1;
