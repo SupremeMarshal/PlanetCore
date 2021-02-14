@@ -320,7 +320,7 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
                     if (!isBlockReplaceable.test(cube.getBlockState(localX, localY, localZ))) {
                         continue;
                     }
-                    double lava = (ravineY-50) - (((ravineY-50)-(ravineY+50))*lavaHeight);
+                    double lava = (ravineY-20) - (((ravineY-20)-(ravineY+20))*lavaHeight);
                     if (localToBlock(generatedCubeY, localY) < lava)  {
                         cube.setBlockState(localX, localY, localZ, Blocks.FLOWING_LAVA.getDefaultState());
                     } else {

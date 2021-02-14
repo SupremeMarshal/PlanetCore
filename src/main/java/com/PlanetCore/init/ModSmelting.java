@@ -41,7 +41,7 @@ public class ModSmelting {
 		for (int size = 0; size < 3; size++) {
 			for (int material = 0; (material < 28); material++) {
 
-				if (material < 13)
+				if (material < 14)
 				{
 					if (size < 1)
 					{
@@ -103,6 +103,21 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.SILVER_SUPERCOMPACT, new ItemStack(ModItems.SILVER_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.GOLD_SUPERCOMPACT, new ItemStack(ModItems.GOLD_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.PLATINUM_SUPERCOMPACT, new ItemStack(ModItems.PLATINUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.TITANIUM_SUPERCOMPACT, new ItemStack(ModItems.TITANIUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.URANIUM_SUPERCOMPACT, new ItemStack(ModItems.URANIUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.TUNGSTEN_SUPERCOMPACT, new ItemStack(ModItems.TUNGSTEN_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.TOPAZ_SUPERCOMPACT, new ItemStack(ModItems.TOPAZ, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.JADE_SUPERCOMPACT, new ItemStack(ModItems.JADE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.EMERALD_SUPERCOMPACT, new ItemStack(Items.EMERALD, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.RUBY_SUPERCOMPACT, new ItemStack(ModItems.RUBY, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SAPPHIRE_SUPERCOMPACT, new ItemStack(ModItems.SAPPHIRE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.DIAMOND_SUPERCOMPACT, new ItemStack(ModItems.DIAMOND, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.OLIVINE_SUPERCOMPACT, new ItemStack(ModItems.OLIVINE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.WADSLEYITE_SUPERCOMPACT, new ItemStack(ModItems.WADSLEYITE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.RINGWOODITE_SUPERCOMPACT, new ItemStack(ModItems.RINGWOODITE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MAJORITE_SUPERCOMPACT, new ItemStack(ModItems.MAJORITE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.AMAZONITE_SUPERCOMPACT, new ItemStack(ModItems.AMAZONITE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.ONYX_SUPERCOMPACT, new ItemStack(ModItems.ONYX, 9), 1.0F);
 
 
 

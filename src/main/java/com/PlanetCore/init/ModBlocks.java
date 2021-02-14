@@ -82,34 +82,34 @@ public class ModBlocks {
 
     public enum Ore {
 
-        ONYX(OreType.GEM, 276.0F, 500000.0F),
-        AMAZONITE(OreType.GEM, 191.7F, 300000.0F),
-        MAJORITE(OreType.GEM, 133.1F, 200000.0F),
-        BRIGMANITE(OreType.GEM, 110.9F, 100000.0F),
-        RINGWOODITE(OreType.GEM, 92.4F, 80000.0F),
-        WADSLEYITE(OreType.GEM, 77.0F, 70000.0F),
-        OLIVINE(OreType.GEM, 64.2F, 60000.0F),
-        DIAMOND(OreType.GEM, 53.5F, 50000.0F),
-        SAPPHIRE(OreType.GEM, 37.15F, 10000.0F),
-        RUBY(OreType.GEM, 37.15F, 10000.0F),
-        EMERALD(OreType.GEM, 30.9F, 2500.0F),
-        TUNGSTEN(METAL, 17.9F, 5000.0F),
-        JADE(OreType.GEM, 25.8F, 1000.0F),
-        TOPAZ(OreType.GEM, 21.5F, 500.0F),
-        TITANIUM(METAL, 12.4F, 200.0F),
+        ONYX(OreType.GEM, 600.0F, 9.5F),
+        AMAZONITE(OreType.GEM, 500.0F, 9.0F),
+        MAJORITE(OreType.GEM, 400.0F, 8.5F),
+        BRIGMANITE(OreType.GEM, 360.0F, 8.0F),
+        RINGWOODITE(OreType.GEM, 320.0F, 7.5F),
+        WADSLEYITE(OreType.GEM, 280.0F, 7.0F),
+        OLIVINE(OreType.GEM, 240.0F, 6.5F),
+        DIAMOND(OreType.GEM, 200.0F, 6.0F),
+        SAPPHIRE(OreType.GEM, 170.0F, 5.5F),
+        RUBY(OreType.GEM, 150.0F, 5.0F),
+        EMERALD(OreType.GEM, 120.0F, 4.5F),
+        TUNGSTEN(METAL, 100.0F, 4.0F),
+        JADE(OreType.GEM, 40.0F, 3.5F),
+        TOPAZ(OreType.GEM, 30.0F, 3.0F),
+        TITANIUM(METAL, 25.0F, 2.5F),
         URANIUM(METAL, 8.0F, 2.0F),
-        PLATINUM(METAL, 10.4F, 5.0F),
-        GOLD(METAL, 8.6F, 4.0F),
-        SILVER(METAL, 7.2F, 3.0F),
+        PLATINUM(METAL, 16.0F, 2.3F),
+        GOLD(METAL, 12.0F, 2.2F),
+        SILVER(METAL, 8.0F, 2.1F),
         IRON(METAL, 6.0F, 2.0F),
-        COPPER(METAL, 3.0F, 1.0F),
-        LAPIS(OreType.GEM, 7.0F, 1.0F),
-        REDSTONE(OreType.GEM, 6.0F, 1.0F),
+        LAPIS(OreType.GEM, 5.0F, 1.0F),
+        REDSTONE(OreType.GEM, 3.0F, 1.0F),
         SULFUR(METAL, 2.0F, 1.0F),
-        SILICON(METAL, 1.0F, 1.0F),
-        TIN(METAL, 2.0F, 1.0F),
-        LEAD(METAL, 0.5F, 1.0F),
         ZINC(METAL, 5.0F, 1.0F),
+        COPPER(METAL, 2.0F, 1.0F),
+        TIN(METAL, 2.0F, 1.0F),
+        SILICON(METAL, 1.0F, 1.0F),
+        LEAD(METAL, 0.5F, 1.0F),
         ALUMINIUM(METAL, 0.1F, 1.0F),
         COAL(METAL, 0.0F, 0.0F);
 
@@ -300,10 +300,14 @@ public class ModBlocks {
     public static final BlocksBase BRIGMANITE_SUPERCOMPACT = _null();
     public static final BlocksBase RINGWOODITE_SUPERCOMPACT = _null();
     public static final BlocksBase OLIVINE_SUPERCOMPACT = _null();
+    public static final BlocksBase WADSLEYITE_SUPERCOMPACT = _null();
     public static final BlocksBase DIAMOND_SUPERCOMPACT = _null();
     public static final BlocksBase SAPPHIRE_SUPERCOMPACT = _null();
     public static final BlocksBase RUBY_SUPERCOMPACT = _null();
+    public static final BlocksBase EMERALD_SUPERCOMPACT = _null();
     public static final BlocksBase URANIUM_SUPERCOMPACT = _null();
+    public static final BlocksBase TUNGSTEN_SUPERCOMPACT = _null();
+    public static final BlocksBase TITANIUM_SUPERCOMPACT = _null();
     public static final BlocksBase PLATINUM_SUPERCOMPACT = _null();
     public static final BlocksBase JADE_SUPERCOMPACT = _null();
     public static final BlocksBase TOPAZ_SUPERCOMPACT = _null();
@@ -476,17 +480,17 @@ public class ModBlocks {
                 new BlocksBase("tungsten_supercompact", Material.ROCK).setResistance(8).setHardness(8160),
                 new BlocksBase("topaz_supercompact", Material.ROCK).setResistance(7).setHardness(4624),
                 new BlocksBase("jade_supercompact", Material.ROCK).setResistance(8).setHardness(6224),
-                new BlocksBase("emerald_supercompact", Material.ROCK).setResistance(3),
-                new BlocksBase("sapphire_supercompact", Material.ROCK).setResistance(9),
-                new BlocksBase("ruby_supercompact", Material.ROCK).setResistance(10),
-                new BlocksBase("diamond_supercompact", Material.ROCK).setResistance(11),
-                new BlocksBase("olivine_supercompact", Material.ROCK).setResistance(12),
-                new BlocksBase("wadsleyite_supercompact", Material.ROCK).setResistance(13),
-                new BlocksBase("ringwoodite_supercompact", Material.ROCK).setResistance(14),
-                new BlocksBase("brigmanite_supercompact", Material.ROCK).setResistance(15),
-                new BlocksBase("majorite_supercompact", Material.ROCK).setResistance(16),
-                new BlocksBase("amazonite_supercompact", Material.ROCK).setResistance(17),
-                new BlocksBase("onyx_supercompact", Material.ROCK).setResistance(18),
+                new BlocksBase("emerald_supercompact", Material.ROCK).setResistance(3).setHardness(6224),
+                new BlocksBase("sapphire_supercompact", Material.ROCK).setResistance(9).setHardness(10000),
+                new BlocksBase("ruby_supercompact", Material.ROCK).setResistance(10).setHardness(10000),
+                new BlocksBase("diamond_supercompact", Material.ROCK).setResistance(11).setHardness(20000),
+                new BlocksBase("olivine_supercompact", Material.ROCK).setResistance(12).setHardness(22000),
+                new BlocksBase("wadsleyite_supercompact", Material.ROCK).setResistance(13).setHardness(24000),
+                new BlocksBase("ringwoodite_supercompact", Material.ROCK).setResistance(14).setHardness(26000),
+                new BlocksBase("brigmanite_supercompact", Material.ROCK).setResistance(15).setHardness(28000),
+                new BlocksBase("majorite_supercompact", Material.ROCK).setResistance(16).setHardness(30000),
+                new BlocksBase("amazonite_supercompact", Material.ROCK).setResistance(17).setHardness(32000),
+                new BlocksBase("onyx_supercompact", Material.ROCK).setResistance(18).setHardness(50000),
                 new BlockBase("limestone", Material.ROCK));
                 /*
                 new Crustrock("crustrock", Material.ROCK),

@@ -31,7 +31,7 @@ public class GiantRavineGenerator implements ICubicStructureGenerator {
      * <p>
      * Multiply by 16 and divide by 8: 16 cubes in vanilla chunks, only one in 8 cubes has structures generated
      */
-    private static final int RAVINE_RARITY = 50 * 16 / (2 * 2 * 2);
+    private static final int RAVINE_RARITY = 100 * 16 / (2 * 2 * 2);
 
     /**
      * Add this value to lava height (Y below which lava exists)
@@ -96,7 +96,7 @@ public class GiantRavineGenerator implements ICubicStructureGenerator {
      * Higher values will make width difference between top/bottom and center smaller
      * lower values will make top and bottom of the ravine smaller. Values less than one will shrink size of the ravine
      */
-    private static final double STRETCH_Y_FACTOR = 6.0;
+    private static final double STRETCH_Y_FACTOR = 5.0;
 
     /**
      * Controls which blocks can be replaced by cave
@@ -331,13 +331,13 @@ public class GiantRavineGenerator implements ICubicStructureGenerator {
                     double variable1 = generatedCubePos.getMaxBlockY();
                     double variable2 = ravineY;
                     double variable3 = localToBlock(generatedCubeY, localY);
-                    double variable4 = (ravineY-50) - (((ravineY-50)-(ravineY+50))*lavaHeight);
+                    double variable4 = (ravineY-20) - (((ravineY-20)-(ravineY+20))*lavaHeight);
                     double variable5 = ravineY - ravineSizeVert*16;
                     double variable6 = lavaHeight;
                     if (localToBlock(generatedCubeY, localY) < variable4)  {
                         cube.setBlockState(localX, localY, localZ, Blocks.FLOWING_LAVA.getDefaultState());
                     } else {
-                        cube.setBlockState(localX, localY, localZ, Blocks.LAVA.getDefaultState());
+                        cube.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
                     }
                 }
             }

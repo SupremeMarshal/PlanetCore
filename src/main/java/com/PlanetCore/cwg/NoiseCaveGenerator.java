@@ -32,7 +32,7 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
     @Override
     public void generate(World world, CubePrimer cubePrimer, CubePos cubePos) {
         if (this.builder == null) {
-            double scaleFactor = 7;
+            double scaleFactor = 9;
             // the scale for caves when they generate
             // smaller value = bigger caves
             double caveScale = scaleFactor * 1 / 100.0;
@@ -44,7 +44,7 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
             // value 1 and above means they won't generate
-            double caveSystemSizeFactor = 0.22;
+            double caveSystemSizeFactor = 0.33;
 
             // bigger values = less smooth transition on the edges of cave system
             double transitionConstant1 = 40;
