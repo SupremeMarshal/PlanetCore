@@ -62,18 +62,27 @@ public class PlayerTickEventHandler {
                         IBlockState state = event.player.world.getBlockState(pos);
                         if (state.getMaterial() == Material.LAVA) {
 
+                            if (event.player.world.getTotalWorldTime() % 1600 == 0) {
+                                event.player.setFire(5);
+                                event.player.attackEntityFrom(DamageSource.LAVA, 1.0F);
+                            }
+                        }
+                        if (state.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
                             if (event.player.world.getTotalWorldTime() % 800 == 0) {
                                 event.player.setFire(5);
                                 event.player.attackEntityFrom(DamageSource.LAVA, 2.0F);
                             }
                         }
-                    }
-                    for (BlockPos pos1 : it) {
-                        IBlockState state1 = event.player.world.getBlockState(pos1);
-                        if (state1.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
-                            if (event.player.world.getTotalWorldTime() % 200 == 0) {
-                                event.player.setFire(10);
+                        if (state.getBlock() == ModBlocks.CORE_LAVA_FLUID) {
+                            if (event.player.world.getTotalWorldTime() % 400 == 0) {
+                                event.player.setFire(5);
                                 event.player.attackEntityFrom(DamageSource.LAVA, 4.0F);
+                            }
+                        }
+                        if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) {
+                            if (event.player.world.getTotalWorldTime() % 200 == 0) {
+                                event.player.setFire(5);
+                                event.player.attackEntityFrom(DamageSource.LAVA, 6.0F);
                             }
                         }
                     }
