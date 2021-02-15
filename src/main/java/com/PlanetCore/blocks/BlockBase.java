@@ -15,6 +15,9 @@ import net.minecraft.block.state.pattern.BlockPattern;
 import net.minecraft.block.state.pattern.BlockStateMatcher;
 import net.minecraft.block.state.pattern.FactoryBlockPattern;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,8 +28,10 @@ import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
@@ -66,6 +71,23 @@ public class BlockBase extends Block {
 	}
 
 	 */
+
+	@Override
+	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
+		ResourceLocation a = this.getRegistryName();
+		IBlockState b = worldIn.getBlockState(pos);
+		if (a.toString().contains("mantlerock") &&
+				b.getBlock().getMetaFromState(b) >= 7 &&
+				!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn)) {
+			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 0.25F * b.getBlock().getMetaFromState(b) - 1.50F);
+		}
+		else if (a.toString().contains("corestone") &&
+				!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn)) {
+			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.25F * b.getBlock().getMetaFromState(b) + 1.25F);
+		}
+
+		super.onEntityWalk(worldIn, pos, entityIn);
+	}
 
 	/**
 	 * Previous hardness's value + (3*Meta)
