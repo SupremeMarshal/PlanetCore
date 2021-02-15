@@ -9,6 +9,7 @@ import com.PlanetCore.init.ModItems;
 import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.IMetaName;
 import com.PlanetCore.util.ModConfiguration;
+import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
@@ -48,7 +49,6 @@ public class RegistryHandler {
                 itemBlock = new ItemBlock(block);
             }
             event.getRegistry().register(itemBlock.setRegistryName(block.getRegistryName()));
-
         }
     }
 
@@ -62,10 +62,10 @@ public class RegistryHandler {
     public static void onModelRegister(ModelRegistryEvent event) {
 
         ForgeRegistries.ITEMS.getValues().stream()
-                .filter(item -> "planetcore".equals(item.getRegistryName().getNamespace())).forEach(item -> {
+                .filter(item -> Reference.MOD_ID.equals(item.getRegistryName().getNamespace())).forEach(item -> {
                     if (item instanceof ItemBlockVariants) {
                         for (int i = 0; i < 3;i++) {
-                            ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+                        //    ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(item.getRegistryName(), "inventory"));
                         }
                     } else {
                         ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));

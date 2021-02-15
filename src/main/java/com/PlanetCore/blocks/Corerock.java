@@ -51,13 +51,7 @@ public class Corerock extends BlockBase implements IMetaName {
 		setTickRandomly(true);
 
 	}
-
-	@Override
-	public int damageDropped(IBlockState state)
-	{
-		return state.getValue(VARIANT).getMeta();
-	}
-
+	
 	@Override
 	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
 		for (Corerock.EnumType corerock$enumtype : Corerock.EnumType.values()) {

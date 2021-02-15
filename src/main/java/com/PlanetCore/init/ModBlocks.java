@@ -23,6 +23,7 @@ import javax.annotation.Nonnull;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
+import java.util.HashSet;
 import java.util.List;
 
 import java.util.Locale;
@@ -188,7 +189,7 @@ public class ModBlocks {
         }
     }
 
-    public static List<Block> BLOCKS = new ArrayList<Block>(); // being final breaks ObjectHolder, either move to separate class or keep non-final
+    public static List<Block> BLOCKS = new ArrayList<>(); // being final breaks ObjectHolder, either move to separate class or keep non-final
 
 
     /**
@@ -365,29 +366,23 @@ public class ModBlocks {
          */
         StringBuilder holderGenString = generateHolders ? new StringBuilder(64 * 1024) : null;
 
-        for (ModBlocks.OreForm oreForm : ModBlocks.OreForm.values()) {
+        OreForm[] oreForms = new OreForm[] {OreForm.CRUSTROCK ,OreForm.MANTLEROCK, OreForm.CORESTONE};
 
-            if (oreForm == OreForm.CRUSTROCK || oreForm == OreForm.MANTLEROCK || oreForm == OreForm.CORESTONE) {
-                Block block;
-                String registryName;
-                registryName = oreForm.name().toLowerCase(Locale.ROOT);
-                block = oreForm.makeBlock(registryName);
-                String name = registryName;
-                if (registryName.equals("crustrock") || registryName.equals("mantlerock") || registryName.equals("corestone")) {
-                    registry.register(block);
-                    rock.add(block);
-                }
-            }
+        for (OreForm oreForm : oreForms) {
+            String registryName = oreForm.name().toLowerCase(Locale.ROOT);
+            Block block = oreForm.makeBlock(registryName);
+            registry.register(block);
+            rock.add(block);
         }
+
         for (ModBlocks.OreForm oreForm : ModBlocks.OreForm.values()) {
 
             for (ModBlocks.Ore ore : ModBlocks.Ore.values()) {
-                String registryName;
                 if (ore.type == OreType.METAL && (oreForm == OreForm.CORESTONE || /*oreForm == OreForm.CORESTONE_VERYSMALL || */ oreForm == OreForm.CORESTONE_SMALL
                         || oreForm == OreForm.CORESTONE_COMPACT /* || oreForm == OreForm.CORESTONE_VERYCOMPACT */)) {
                     continue;
                 }
-                registryName = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT);
+                String registryName = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT);
                 Block block = oreForm.makeBlock(registryName);
 
                 block.setHardness((float) (ore.getOreHardness() * (oreForm.getBaseHardness())));
@@ -395,6 +390,7 @@ public class ModBlocks {
                 block.setResistance((float) (ore.getOreResistance() * (oreForm.getBaseResistance())));
 
                 registry.register(block);
+                //BLOCKS.add(block);
 
                 if (registryName.contains("ore_")) {
                     AllOreBlocks.add(block);
@@ -507,7 +503,7 @@ public class ModBlocks {
                 for (int meta = 0; meta < 9; meta++) {
                     String name = Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName();
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
-                            new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName(), "inventory"));
+                            new ModelResourceLocation(name, "inventory"));
                 }
             }
             if (block.getRegistryName().toString().equals("planetcore:mantlerock")) {
@@ -534,7 +530,6 @@ public class ModBlocks {
                     String name = block.getRegistryName().toString();
                     String removeRocktype = name.replace("crustrock_", "");
                     String ore = removeRocktype.replace("planetcore:", "");
-                    String name1 = Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore;
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName() + "_" + ore, "inventory"));
                 }
@@ -567,18 +562,6 @@ public class ModBlocks {
     }
 
     public static List<Block> getBlocks() {
-        List<Block> blocks = new ArrayList<>();
-        Field[] fields = ModBlocks.class.getDeclaredFields();
-        for (Field field : fields) {
-            try {
-                Object obj = field.get(null);
-                if (obj instanceof Block) {
-                    blocks.add((Block) obj);
-                }
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }
-        return blocks;
+        return BLOCKS;
     }
 }

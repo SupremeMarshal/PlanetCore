@@ -32,7 +32,7 @@ public class Crustrock extends BlockBase implements IMetaName
 
 
 
-	public static final PropertyEnum<Crustrock.EnumType> VARIANT = PropertyEnum.<Crustrock.EnumType>create("variant", Crustrock.EnumType.class);
+	public static final PropertyEnum<Crustrock.EnumType> VARIANT = PropertyEnum.create("variant", Crustrock.EnumType.class);
 
 	public Crustrock(String name, Material material)
 	{
@@ -56,15 +56,6 @@ public class Crustrock extends BlockBase implements IMetaName
 		else return super.getItemDropped(state, random, l);
 	}
 
-
-	@Override
-	public int damageDropped(IBlockState state) {
-		if (this == ModBlocks.CRUSTROCK)
-			return super.damageDropped(state);
-		else return ((Crustrock.EnumType)state.getValue(VARIANT)).getMeta();
-
-	}
-
 	@Override
 	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
 		for (Crustrock.EnumType crustrock$enumtype : Crustrock.EnumType.values()) {
@@ -83,22 +74,22 @@ public class Crustrock extends BlockBase implements IMetaName
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return ((Crustrock.EnumType)state.getValue(VARIANT)).getMeta();
+		return state.getValue(VARIANT).getMeta();
 	}
 
 	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		return new ItemStack(Item.getItemFromBlock(this),1,(int)(getMetaFromState(world.getBlockState(pos))));
+		return new ItemStack(Item.getItemFromBlock(this),1, getMetaFromState(world.getBlockState(pos)));
 	}
 
 	@Override
 	protected BlockStateContainer createBlockState()
 	{
-		return new BlockStateContainer(this, new IProperty[] {VARIANT});
+		return new BlockStateContainer(this, VARIANT);
 	}
 
 
-	public static enum EnumType implements IStringSerializable
+	public enum EnumType implements IStringSerializable
 	{
 		CRUSTROCK(0, "crustrock"),
 		CRUSTROCK1(1, "crustrock1"),
@@ -116,7 +107,7 @@ public class Crustrock extends BlockBase implements IMetaName
 		private final int meta;
 		private final String name;
 
-		private EnumType(int meta, String name)
+		EnumType(int meta, String name)
 		{
 			this.meta=meta;
 			this.name=name;
