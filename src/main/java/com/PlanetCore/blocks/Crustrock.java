@@ -56,15 +56,6 @@ public class Crustrock extends BlockBase implements IMetaName
 		else return super.getItemDropped(state, random, l);
 	}
 
-
-	@Override
-	public int damageDropped(IBlockState state) {
-		if (this == ModBlocks.CRUSTROCK)
-			return super.damageDropped(state);
-		else return state.getValue(VARIANT).getMeta();
-
-	}
-
 	@Override
 	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
 		for (Crustrock.EnumType crustrock$enumtype : Crustrock.EnumType.values()) {
