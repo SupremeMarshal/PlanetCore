@@ -197,6 +197,8 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
      */
     public void update() {
         Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT);
+        Boolean steel_ingot1 = (this.furnaceItemStacks.get(0).getItem() == Items.COAL && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT);
+        Boolean steel_ingot2 = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT && this.furnaceItemStacks.get(1).getItem() == Items.COAL);
         Boolean bronze_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TIN_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.COPPER_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.COPPER_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TIN_INGOT);
         Boolean titanium_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TITANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.URANIUM_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.URANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TITANIUM_INGOT);
         Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.URANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TUNGSTEN_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.TUNGSTEN_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.URANIUM_INGOT);
@@ -206,11 +208,11 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
         boolean flag1 = false;
         if (this.isBurning()) {
             --this.furnaceBurnTime;
-            if (steel_ingot) this.totalCookTime = 1000;
+            if (steel_ingot || steel_ingot1 || steel_ingot2) this.totalCookTime = 1000;
             if (bronze_ingot) this.totalCookTime = 2000;
             if (titanium_uranium_ingot) this.totalCookTime = 5000;
-            if (tungsten_uranium_ingot) this.totalCookTime = 10000;
-            if (tungsten_titanium_ingot) this.totalCookTime = 15000;
+            if (tungsten_uranium_ingot) this.totalCookTime = 100;
+            if (tungsten_titanium_ingot) this.totalCookTime = 150;
         }
 
         if (!world.isRemote) {
@@ -255,18 +257,46 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
                         if (this.canSmelt()) {
                             if (result.isEmpty()) {
 
-                                if (steel_ingot) furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_INGOT, 1));
+                                if (steel_ingot || steel_ingot1 || steel_ingot2) furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_INGOT, 1));
                                 if (bronze_ingot) furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_INGOT, 1));
                                 if (titanium_uranium_ingot) furnaceItemStacks.set(3, new ItemStack(ModItems.TITANIUM_URANIUM_INGOT, 1));
                                 if (tungsten_uranium_ingot) furnaceItemStacks.set(3, new ItemStack(ModItems.TUNGSTEN_URANIUM_INGOT, 1));
                                 if (tungsten_titanium_ingot) furnaceItemStacks.set(3, new ItemStack(ModItems.TUNGSTEN_TITANIUM_INGOT, 1));
 
-                                inputs[0].shrink(1);
-                                inputs[1].shrink(1);
+                                if (steel_ingot1)
+                                {
+                                    inputs[0].shrink(8);
+                                    inputs[1].shrink(1);
+                                }
+                                if (steel_ingot2)
+                                {
+                                    inputs[1].shrink(8);
+                                    inputs[0].shrink(1);
+                                }
+                                if (bronze_ingot || titanium_uranium_ingot || tungsten_uranium_ingot || tungsten_titanium_ingot)
+                                {
+                                    inputs[1].shrink(2);
+                                    inputs[0].shrink(2);
+                                }
+
+
                             } else {
                                 this.furnaceItemStacks.get(3).grow(1);
-                                inputs[0].shrink(1);
-                                inputs[1].shrink(1);
+                                if (steel_ingot1)
+                                {
+                                    inputs[0].shrink(8);
+                                    inputs[1].shrink(1);
+                                }
+                                if (steel_ingot2)
+                                {
+                                    inputs[1].shrink(8);
+                                    inputs[0].shrink(1);
+                                }
+                                if (bronze_ingot || titanium_uranium_ingot || tungsten_uranium_ingot || tungsten_titanium_ingot)
+                                {
+                                    inputs[1].shrink(2);
+                                    inputs[0].shrink(2);
+                                }
                             }
 
                         }
@@ -296,25 +326,33 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
      */
     private boolean canSmelt()
     {
+        ItemStack[] inputs = new ItemStack[]{this.furnaceItemStacks.get(0), this.furnaceItemStacks.get(1)};
         Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT);
-        Boolean steel_ingot1 = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT);
+        Boolean steel_ingot1 = (this.furnaceItemStacks.get(0).getItem() == Items.COAL && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_INGOT);
+        Boolean steel_ingot2 = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_INGOT && this.furnaceItemStacks.get(1).getItem() == Items.COAL);
         Boolean bronze_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TIN_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.COPPER_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.COPPER_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TIN_INGOT);
         Boolean titanium_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TITANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.URANIUM_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.URANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TITANIUM_INGOT);
         Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.URANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TUNGSTEN_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.TUNGSTEN_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.URANIUM_INGOT);
         Boolean tungsten_titanium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TITANIUM_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TUNGSTEN_INGOT) || (this.furnaceItemStacks.get(0).getItem() == ModItems.TUNGSTEN_INGOT && this.furnaceItemStacks.get(1).getItem() == ModItems.TITANIUM_INGOT);
 
         Boolean canSmelt = (
-                bronze_ingot || titanium_uranium_ingot
+                steel_ingot || steel_ingot1 || steel_ingot2 || bronze_ingot || titanium_uranium_ingot
                 || tungsten_uranium_ingot || tungsten_titanium_ingot
         );
+
         if (canSmelt && this.furnaceItemStacks.get(3).getCount() <= 64)
         {
+
             if (!furnaceItemStacks.get(3).isEmpty() && (bronze_ingot) && furnaceItemStacks.get(3).getItem() != ModItems.BRONZE_INGOT) return false;
             if (!furnaceItemStacks.get(3).isEmpty() && (titanium_uranium_ingot) && furnaceItemStacks.get(3).getItem() != ModItems.TITANIUM_URANIUM_INGOT) return false;
             if (!furnaceItemStacks.get(3).isEmpty() && (tungsten_uranium_ingot) && furnaceItemStacks.get(3).getItem() != ModItems.TUNGSTEN_URANIUM_INGOT) return false;
             if (!furnaceItemStacks.get(3).isEmpty() && (tungsten_titanium_ingot) && furnaceItemStacks.get(3).getItem() != ModItems.TUNGSTEN_TITANIUM_INGOT) return false;
-            else return true;
-
+            if (steel_ingot1 && inputs[0].getCount() < 9) return false;
+            if (steel_ingot2 && inputs[1].getCount() < 9) return false;
+            if (bronze_ingot && inputs[0].getCount() < 9) return false;
+            if ((titanium_uranium_ingot || tungsten_uranium_ingot || tungsten_titanium_ingot) && inputs[0].getCount() < 2) return false;
+            if ((titanium_uranium_ingot || tungsten_uranium_ingot || tungsten_titanium_ingot) && inputs[1].getCount() < 2) return false;
+            return true;
         }
         else return false;
     }
