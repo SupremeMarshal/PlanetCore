@@ -23,6 +23,7 @@ import javax.annotation.Nonnull;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
+import java.util.HashSet;
 import java.util.List;
 
 import java.util.Locale;
@@ -188,7 +189,7 @@ public class ModBlocks {
         }
     }
 
-    public static List<Block> BLOCKS = new ArrayList<Block>(); // being final breaks ObjectHolder, either move to separate class or keep non-final
+    public static List<Block> BLOCKS = new ArrayList<>(); // being final breaks ObjectHolder, either move to separate class or keep non-final
 
 
     /**
@@ -371,7 +372,6 @@ public class ModBlocks {
             String registryName = oreForm.name().toLowerCase(Locale.ROOT);
             Block block = oreForm.makeBlock(registryName);
             registry.register(block);
-            BLOCKS.add(block);
             rock.add(block);
         }
 
@@ -390,7 +390,7 @@ public class ModBlocks {
                 block.setResistance((float) (ore.getOreResistance() * (oreForm.getBaseResistance())));
 
                 registry.register(block);
-                BLOCKS.add(block);
+                //BLOCKS.add(block);
 
                 if (registryName.contains("ore_")) {
                     AllOreBlocks.add(block);
@@ -562,19 +562,6 @@ public class ModBlocks {
     }
 
     public static List<Block> getBlocks() {
-        List<Block> blocks = new ArrayList<>();
-        Field[] fields = ModBlocks.class.getDeclaredFields();
-        for (Field field : fields) {
-            try {
-                Object obj = field.get(null);
-                if (obj instanceof Block) {
-                    blocks.add((Block) obj);
-                }
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }
-        blocks.addAll(BLOCKS);
-        return blocks;
+        return BLOCKS;
     }
 }
