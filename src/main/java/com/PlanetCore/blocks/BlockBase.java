@@ -228,21 +228,21 @@ public class BlockBase extends Block {
 
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		float PressureLevel = pos.getY()*-0.01F;
+		float PressureLevel = pos.getY()*-0.05F;
 			if (pos.getY() < 0 && Math.random() <= (pos.getY() / -40000.0F) && !(this instanceof Corerock) && !(this instanceof BlocksBase)) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (movedState == Blocks.AIR.getDefaultState() || movedState.getBlock().getExplosionResistance(null) < PressureLevel
-							|| movedState.getBlock() == Blocks.ANVIL)
-						continue; // you can add more blocks to this check to exclude them
-					//
+					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getBlockHardness(state, worldIn, pos) < PressureLevel) {
+						continue;
+					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
 							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
 							.toArray(EnumFacing[]::new);
 					if (sides.length == 0) continue;
-					worldIn.setBlockState(movedPos, this.getDefaultState());
-					worldIn.setBlockState(pos.offset(sides[rand.nextInt(sides.length)]), movedState);
+					worldIn.setBlockState(movedPos.offset(sides[rand.nextInt(sides.length)]), movedState);
+					worldIn.setBlockState(movedPos, worldIn.getBlockState(pos));
+					return;
 				}
 			}
 		}
