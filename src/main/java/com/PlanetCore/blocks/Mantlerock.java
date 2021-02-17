@@ -55,12 +55,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 	// }
 
 	@Override
-	public int damageDropped(IBlockState state)
-	{
-		return ((Mantlerock.EnumType)state.getValue(VARIANT)).getMeta();
-	}
-
-	@Override
 	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
 		for (Mantlerock.EnumType mantlerock$enumtype : Mantlerock.EnumType.values()) {
 			items.add(new ItemStack(this, 1, mantlerock$enumtype.getMeta()));
