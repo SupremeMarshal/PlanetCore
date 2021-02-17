@@ -31,7 +31,7 @@ public class GiantRavineGenerator implements ICubicStructureGenerator {
      * <p>
      * Multiply by 16 and divide by 8: 16 cubes in vanilla chunks, only one in 8 cubes has structures generated
      */
-    private static final int RAVINE_RARITY = 100 * 16 / (2 * 2 * 2);
+    private static final int RAVINE_RARITY = 120 * 16 / (2 * 2 * 2);
 
     /**
      * Add this value to lava height (Y below which lava exists)
@@ -52,10 +52,10 @@ public class GiantRavineGenerator implements ICubicStructureGenerator {
     /**
      * Value added to the size of the cave (radius)
      */
-    private static final double RAVINE_SIZE_ADD = 2.1D;
+    private static final double RAVINE_SIZE_ADD = 1.1D;
 
     private static final double MIN_RAND_SIZE_FACTOR = 0.4;
-    private static final double MAX_RAND_SIZE_FACTOR = 4.00;
+    private static final double MAX_RAND_SIZE_FACTOR = 2.00;
 
     /**
      * After each step the Y direction component will be multiplied by this value
@@ -331,8 +331,8 @@ public class GiantRavineGenerator implements ICubicStructureGenerator {
                     double variable1 = generatedCubePos.getMaxBlockY();
                     double variable2 = ravineY;
                     double variable3 = localToBlock(generatedCubeY, localY);
-                    double variable4 = (ravineY-20) - (((ravineY-20)-(ravineY+20))*lavaHeight);
-                    double variable5 = ravineY - ravineSizeVert*16;
+                    double variable4 = (ravineY-50) - (((ravineY-50)-(ravineY+50))*lavaHeight);
+                    double variable5 = ravineY - ravineSizeVert*8;
                     double variable6 = lavaHeight;
                     if (localToBlock(generatedCubeY, localY) < variable4)  {
                         cube.setBlockState(localX, localY, localZ, Blocks.FLOWING_LAVA.getDefaultState());
