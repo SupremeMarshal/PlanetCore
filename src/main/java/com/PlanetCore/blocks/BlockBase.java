@@ -81,7 +81,7 @@ public class BlockBase extends Block {
 				!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn)) {
 			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 0.25F * b.getBlock().getMetaFromState(b) - 1.50F);
 		}
-		else if (a.toString().contains("corestone") &&
+		if (a.toString().contains("corestone") &&
 				!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn)) {
 			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.25F * b.getBlock().getMetaFromState(b) + 1.25F);
 		}
@@ -165,7 +165,7 @@ public class BlockBase extends Block {
 		if (a.contains("lapis")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-		return 0;
+		else return 0;
 	}
 
 
@@ -247,7 +247,7 @@ public class BlockBase extends Block {
 
 
 
-
+/**
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		float PressureLevel = pos.getY()*-0.05F;
@@ -268,6 +268,8 @@ public class BlockBase extends Block {
 				}
 			}
 		}
+
+ */
 
 
 
