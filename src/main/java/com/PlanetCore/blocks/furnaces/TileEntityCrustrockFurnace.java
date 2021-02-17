@@ -349,7 +349,7 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
             if (!furnaceItemStacks.get(3).isEmpty() && (tungsten_titanium_ingot) && furnaceItemStacks.get(3).getItem() != ModItems.TUNGSTEN_TITANIUM_INGOT) return false;
             if (steel_ingot1 && inputs[0].getCount() < 9) return false;
             if (steel_ingot2 && inputs[1].getCount() < 9) return false;
-            if (bronze_ingot && inputs[0].getCount() < 9) return false;
+            if (bronze_ingot && inputs[0].getCount() < 2 || bronze_ingot && inputs[1].getCount() < 2) return false;
             if ((titanium_uranium_ingot || tungsten_uranium_ingot || tungsten_titanium_ingot) && inputs[0].getCount() < 2) return false;
             if ((titanium_uranium_ingot || tungsten_uranium_ingot || tungsten_titanium_ingot) && inputs[1].getCount() < 2) return false;
             return true;
