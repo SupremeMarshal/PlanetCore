@@ -207,7 +207,17 @@ public class BlockBase extends Block {
 		int y = pos.getY();
 		int z = pos.getZ();
 		if (!world.isRemote) {
-			if (this.getTranslationKey().contains("redstone")) {
+			if (this.getTranslationKey().contains("redstone") || this.getTranslationKey().contains("coal")
+					|| this.getTranslationKey().contains("sulfur") || this.getTranslationKey().contains("lapis")
+					|| this.getTranslationKey().contains("emerald") || this.getTranslationKey().contains("topaz")
+					|| this.getTranslationKey().contains("jade") || this.getTranslationKey().contains("ruby")
+					|| this.getTranslationKey().contains("sapphire") || this.getTranslationKey().contains("diamond")
+					|| this.getTranslationKey().contains("olivine") || this.getTranslationKey().contains("wadsleyite")
+					|| this.getTranslationKey().contains("ringwoodite") || this.getTranslationKey().contains("brigmanite")
+					|| this.getTranslationKey().contains("majorite") || this.getTranslationKey().contains("amazonite")
+					|| this.getTranslationKey().contains("onyx")
+			) {
+				world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
 				world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
 			}
 		}
