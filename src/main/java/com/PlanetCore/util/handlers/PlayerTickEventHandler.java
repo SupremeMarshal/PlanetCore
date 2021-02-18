@@ -3,6 +3,8 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.MobEffects;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.common.Mod;
@@ -57,36 +59,72 @@ public class PlayerTickEventHandler {
             y = event.player.getPosition().getY();
             z = event.player.getPosition().getZ();
             Iterable<BlockPos> it = BlockPos.getAllInBox(x - 3, y - 3, z - 3, x + 3, y + 3, z + 3);
-                if (!event.player.isImmuneToFire()) {
+            PotionEffect effect = event.player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
                     for (BlockPos pos : it) {
                         IBlockState state = event.player.world.getBlockState(pos);
                         if (state.getMaterial() == Material.LAVA) {
 
                             if (event.player.world.getTotalWorldTime() % 1600 == 0) {
-                                event.player.setFire(5);
-                                event.player.attackEntityFrom(DamageSource.LAVA, 1.0F);
+
+                                if(!event.player.isImmuneToFire())
+                                {
+                                    event.player.setFire(4);
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 2.0F);
+                                }
+                                if(effect != null && effect.getAmplifier() == 1) {
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 1.0F);
+                                }
+                                if(effect != null && effect.getAmplifier() == 2) {
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 0.5F);
+                                }
                             }
                         }
                         if (state.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
                             if (event.player.world.getTotalWorldTime() % 800 == 0) {
-                                event.player.setFire(5);
-                                event.player.attackEntityFrom(DamageSource.LAVA, 2.0F);
+                                if(!event.player.isImmuneToFire())
+                                {
+                                    event.player.setFire(6);
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 4.0F);
+                                }
+                                if(effect != null && effect.getAmplifier() == 1) {
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 2.0F);
+                                }
+                                if(effect != null && effect.getAmplifier() == 2) {
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 1.0F);
+                                }
                             }
                         }
                         if (state.getBlock() == ModBlocks.CORE_LAVA_FLUID) {
                             if (event.player.world.getTotalWorldTime() % 400 == 0) {
-                                event.player.setFire(5);
-                                event.player.attackEntityFrom(DamageSource.LAVA, 4.0F);
+                                if(!event.player.isImmuneToFire())
+                                {
+                                    event.player.setFire(8);
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 8.0F);
+                                }
+                                if(effect != null && effect.getAmplifier() == 1) {
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 4.0F);
+                                }
+                                if(effect != null && effect.getAmplifier() == 2) {
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 2.0F);
+                                }
                             }
                         }
                         if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) {
                             if (event.player.world.getTotalWorldTime() % 200 == 0) {
-                                event.player.setFire(5);
-                                event.player.attackEntityFrom(DamageSource.LAVA, 6.0F);
+                                if(!event.player.isImmuneToFire())
+                                {
+                                    event.player.setFire(8);
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 12.0F);
+                                }
+                                if(effect != null && effect.getAmplifier() == 1) {
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 8.0F);
+                                }
+                                if(effect != null && effect.getAmplifier() == 2) {
+                                    event.player.attackEntityFrom(DamageSource.LAVA, 4.0F);
+                                }
                             }
                         }
                     }
-                }
 
                 /*
 
