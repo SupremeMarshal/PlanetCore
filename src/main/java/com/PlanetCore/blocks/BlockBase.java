@@ -156,19 +156,21 @@ public class BlockBase extends Block {
 		if (!c) { return Item.getItemFromBlock(this); }
 		else { return new ItemStack(drop, 1, 0).getItem(); }
 	}
-
-
-
+	
 	@Override
 	public int damageDropped(IBlockState state) {
 		String a = this.getTranslationKey();
 		if (a.contains("lapis")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-		else return 0;
+		else if (a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
+				|| a.contains("sapphire") || a.contains("ruby") || a.contains("topaz") || a.contains("jade")
+				|| a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite")
+				|| a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
+			return 0;
+		}
+		else return this.getMetaFromState(state);
 	}
-
-
 
 	@Override
 	public int quantityDropped(Random random) {
@@ -189,14 +191,6 @@ public class BlockBase extends Block {
 		return 1;
 	}
 
-
-
-	@Override
-	public boolean canDropFromExplosion(Explosion explosionIn) {
-		int random = new Random().nextInt(3)+1;
-		if (random == 1) return true;
-		else return false;
-	}
 
 	@Override
 	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
