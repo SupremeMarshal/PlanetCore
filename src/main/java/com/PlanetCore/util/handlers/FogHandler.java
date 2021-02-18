@@ -18,18 +18,17 @@ public class FogHandler {
 
 
     @SideOnly(Side.CLIENT)
-    @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
+    @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+
     public void onEvent(EntityViewRenderEvent.FogDensity event) {
         Entity p = event.getEntity();
-        double Y = p.posY;
+        float Y = (float) p.posY;
         Block block = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock();
         if (Y < 0) {
-            if (Y < 0 && Y > -1000) {
-                event.setDensity(0.01F);
-            } else if (Y <= -1000 && Y > -14993) {
-                event.setDensity(0.02F);
-            } else if (Y <= -14993) {
-                event.setDensity(0.1F);
+            if (Y < 0 && Y > -10000) {
+                event.setDensity(-0.00025F * Y);
+            } else if (Y <= -10000) {
+                event.setDensity(0.5F);
             } else {
                 //return;
                 event.setDensity(0.001F);
@@ -46,6 +45,7 @@ public class FogHandler {
                 event.setDensity(0.1F);
             }
         }
+        else event.setDensity(0.001F);
     }
 
 

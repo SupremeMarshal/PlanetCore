@@ -156,7 +156,8 @@ public class BlockBase extends Block {
 		if (!c) { return Item.getItemFromBlock(this); }
 		else { return new ItemStack(drop, 1, 0).getItem(); }
 	}
-	
+
+
 	@Override
 	public int damageDropped(IBlockState state) {
 		String a = this.getTranslationKey();
@@ -169,8 +170,16 @@ public class BlockBase extends Block {
 				|| a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
 			return 0;
 		}
-		else return this.getMetaFromState(state);
+		else return super.damageDropped(state);
 	}
+
+/*
+	@Override
+	public int damageDropped(IBlockState state) {
+		return super.damageDropped(state);
+	}
+
+ */
 
 	@Override
 	public int quantityDropped(Random random) {
