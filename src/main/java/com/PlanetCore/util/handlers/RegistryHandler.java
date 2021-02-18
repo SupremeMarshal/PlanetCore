@@ -32,6 +32,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.RecipeSorter;
 
 
 @EventBusSubscriber
@@ -121,9 +122,7 @@ public class RegistryHandler {
         OreDictionary.registerOre("itemDiamond", new ItemStack(ModItems.DIAMOND, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemAmazonite", new ItemStack(ModItems.AMAZONITE, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemSulfur", new ItemStack(ModItems.SULFUR, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotIron", new ItemStack(ModItems.IRON_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotBronze", new ItemStack(ModItems.BRONZE_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotGold", new ItemStack(ModItems.GOLD_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotTitanium", new ItemStack(ModItems.TITANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotTitanum", new ItemStack(ModItems.TITANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotUranium", new ItemStack(ModItems.URANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
@@ -143,7 +142,7 @@ public class RegistryHandler {
         Items.WOODEN_PICKAXE.setHarvestLevel("pickaxe", 2);
         Items.STONE_PICKAXE.setHarvestLevel("pickaxe", 2);
         Items.IRON_PICKAXE.setHarvestLevel("pickaxe", 2);
-
+        
         FurnaceRecipes.instance().getSmeltingList().remove(
                 new ItemStack(Items.IRON_HORSE_ARMOR, 1, 32767),
                 new ItemStack(Items.IRON_NUGGET));
