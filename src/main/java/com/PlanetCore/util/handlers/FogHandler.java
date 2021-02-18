@@ -17,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class FogHandler {
 
 
-    /*@SideOnly(Side.CLIENT)
+    @SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
     public void onEvent(EntityViewRenderEvent.FogDensity event) {
         Entity p = event.getEntity();
@@ -50,7 +50,7 @@ public class FogHandler {
 
 
     @SideOnly(Side.CLIENT)
-    @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
+    @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
     public void onEvent(EntityViewRenderEvent.FogColors event) {
         Entity p = event.getEntity();
         if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == Blocks.LAVA) {
@@ -70,36 +70,39 @@ public class FogHandler {
             event.setGreen(0.15F);
             event.setBlue(0.80F);
         }
-        double Y = event.getEntity().posY;
+        float Y = (float) event.getEntity().posY;
         if (Y < 0) {
-            if (event.getEntity().posY < 0 && event.getEntity().posY > -4000) {
-                event.setRed(0.9F);
-                event.setGreen(0.0F);
-                event.setBlue(0.0F);
-            } else if (event.getEntity().posY <= -4000 && event.getEntity().posY > -6850) {
+            if (Y < 0 && Y > -2000) {
+                event.setRed(0.0F);
+                event.setGreen(-0.0005F * Y);
+                event.setBlue(-0.0001F * Y);
+            } else if (Y <= -2000 && Y > -4000) {
                 // RED STARTING 0.48F at -4000Y, 0.99F at -6850Y
-                event.setRed(1.0F);
-                event.setGreen(0.1F);
-                event.setBlue(0.001F);
-            } else if (event.getEntity().posY <= -6850 && event.getEntity().posY > -9200) {
+                event.setRed(-0.0005F * Y);
+                event.setGreen(1.0F + (0.0005F * (Y + 2000)));
+                event.setBlue(0.2F + (0.0001F * (Y + 2000)));
+            } else if (Y <= -4000 && Y > -6000) {
                 // RED STARTING 0.99F at -6850Y, 0.0F at
                 event.setRed(1.0F);
-                event.setGreen(0.15F);
+                event.setGreen(-0.0005F * (Y + 4000));
                 event.setBlue(0.0F);
-            } else if (event.getEntity().posY <= -9200 && event.getEntity().posY > -14993) {
+            } else if (Y <= -6000 && Y > -8000) {
                 // RED STARTING 0.99F at -6850Y, 0.0F at
-                event.setRed(0.99F);
-                event.setGreen(0.99F);
-                event.setBlue(0.2F);
-            } else if (event.getEntity().posY <= -14993) {
-                // RED STARTING 0.99F at -6850Y, 0.0F at
-                event.setRed(0.50F);
+                event.setRed(1.0F);
                 event.setGreen(1.0F);
+                event.setBlue(-0.0001F * (Y + 6000));
+            } else if (Y <= -8000 && Y > -10000) {
+                // RED STARTING 0.99F at -6850Y, 0.0F at
+                event.setRed(1.0F + (0.0002F * (Y + 8000)));
+                event.setGreen(1.0F + (0.0002F * (Y + 8000)));
+                event.setBlue(0.2F - (0.0004F * (Y + 8000)));
+            }
+            else if (Y <= -10000) {
+                // RED STARTING 0.99F at -6850Y, 0.0F at
+                event.setRed(0.6F);
+                event.setGreen(0.6F);
                 event.setBlue(1.0F);
             }
         }
     }
-
-     */
-
 }

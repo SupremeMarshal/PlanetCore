@@ -91,7 +91,7 @@ public class RegistryHandler {
         ModConfiguration.registerConfig(event);
         RemovingVanillaRecipes recipesEvent = new RemovingVanillaRecipes();
         MinecraftForge.EVENT_BUS.register(recipesEvent);
-        //MinecraftForge.EVENT_BUS.register(new FogHandler());
+        MinecraftForge.EVENT_BUS.register(new FogHandler());
         //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
 
 
@@ -142,7 +142,7 @@ public class RegistryHandler {
         Items.WOODEN_PICKAXE.setHarvestLevel("pickaxe", 2);
         Items.STONE_PICKAXE.setHarvestLevel("pickaxe", 2);
         Items.IRON_PICKAXE.setHarvestLevel("pickaxe", 2);
-        
+
         FurnaceRecipes.instance().getSmeltingList().remove(
                 new ItemStack(Items.IRON_HORSE_ARMOR, 1, 32767),
                 new ItemStack(Items.IRON_NUGGET));
