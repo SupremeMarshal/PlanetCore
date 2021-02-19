@@ -184,7 +184,6 @@ public class BlockBase extends Block {
 	@Override
 	public int quantityDropped(Random random) {
 		String a = this.getTranslationKey();
-		String materialItem = MaterialItem[0];
 		if (a.contains("sulfur") || a.contains("coal") || a.contains("redstone") || a.contains("lapis")
 				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
 				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
@@ -200,6 +199,23 @@ public class BlockBase extends Block {
 		return 1;
 	}
 
+	@Override
+	public int quantityDroppedWithBonus(int fortune, Random random) {
+		String a = this.getTranslationKey();
+		if (a.contains("sulfur") || a.contains("coal") || a.contains("redstone") || a.contains("lapis")
+				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
+				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
+				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
+		{
+			if (a.contains("small")) {
+				return this.quantityDropped(random) + random.nextInt(fortune * 2) + 1;
+			}
+			if (a.contains("compact")) {
+				return this.quantityDropped(random) + random.nextInt(fortune * 2) + 2;
+			}
+		}
+		return super.quantityDroppedWithBonus(fortune, random);
+	}
 
 	@Override
 	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
@@ -232,16 +248,16 @@ public class BlockBase extends Block {
 	 * @param state
 	 * @param rand
 	 */
-	/**
+
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-			float PressureLevel = (pos.getY() / 64 / -24000 * 100.0F) * (pos.getY() / 64 / -24000 * 100.0F) * (pos.getY() / 64 / -24000 * 100.0F);
+			float PressureLevel = pos.getY()*-0.05F;
 
-			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -500 && (Math.random() <= (pos.getY()+499 / -12000.0F))) {
+			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -1000 && (Math.random() <= (pos.getY() / -40000.0F))) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getExplosionResistance(null) < PressureLevel) {
+					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getBlockHardness(state, worldIn, pos) < PressureLevel) {
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
@@ -256,7 +272,7 @@ public class BlockBase extends Block {
 				}
 			}
 		}
-	 */
+
 
 
 
