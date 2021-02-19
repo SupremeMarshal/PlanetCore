@@ -17,10 +17,8 @@ public class RavineGeneratorProxy implements ICubicStructureGenerator {
             //we need this hack because we need the generator settings, and the populator init event doesn't provide access to them
             int maxCubeY = Coords.blockToCube(CustomGeneratorSettings.getFromWorld(world).expectedBaseHeight);
             this.ravines = new ImprovedRavineGenerator(maxCubeY);
-            this.giantRavines = new GiantRavineGenerator(maxCubeY);
         }
 
         this.ravines.generate(world, cubePrimer, cubePos);
-        this.giantRavines.generate(world, cubePrimer, cubePos);
     }
 }
