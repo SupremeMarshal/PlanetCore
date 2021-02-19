@@ -129,8 +129,8 @@ public class RegistryHandler {
         OreDictionary.registerOre("ingotUranum", new ItemStack(ModItems.URANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotTungsten", new ItemStack(ModItems.TUNGSTEN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotZinc", new ItemStack(ModItems.ZINC_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("gemDiamond", new ItemStack(ModItems.TOPAZ, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("gemDiamond", new ItemStack(ModItems.JADE, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemTopaz", new ItemStack(ModItems.TOPAZ, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemJade", new ItemStack(ModItems.JADE, 1, OreDictionary.WILDCARD_VALUE));
 
 
 
