@@ -127,7 +127,7 @@ public class BlockBase extends Block {
 	}
 
 	@Override
-	public Item getItemDropped(IBlockState state, Random random, int l) {
+	public Item getItemDropped(IBlockState state, Random random, int fortune) {
 		String a = this.getTranslationKey();
 		Boolean b;
 		Boolean c;
@@ -154,7 +154,7 @@ public class BlockBase extends Block {
 		else { c = false;  }
 
 		if (!c) { return Item.getItemFromBlock(this); }
-		else { return new ItemStack(drop, 1, 0).getItem(); }
+		else { return new ItemStack(drop, 1+fortune, 0).getItem(); }
 	}
 
 
@@ -170,7 +170,7 @@ public class BlockBase extends Block {
 				|| a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
 			return 0;
 		}
-		else return super.damageDropped(state);
+		else return this.getMetaFromState(state);
 	}
 
 /*
@@ -180,6 +180,11 @@ public class BlockBase extends Block {
 	}
 
  */
+
+	@Override
+	public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune) {
+		super.dropBlockAsItemWithChance(worldIn, pos, state, chance, fortune);
+	}
 
 	@Override
 	public int quantityDropped(Random random) {
@@ -214,7 +219,7 @@ public class BlockBase extends Block {
 				return this.quantityDropped(random) + random.nextInt(fortune * 2) + 2;
 			}
 		}
-		return super.quantityDroppedWithBonus(fortune, random);
+		return this.quantityDropped(random) + random.nextInt(fortune + 1);
 	}
 
 	@Override
@@ -249,9 +254,10 @@ public class BlockBase extends Block {
 	 * @param rand
 	 */
 
+	/**
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-			float PressureLevel = pos.getY()*-0.05F;
+			float PressureLevel = pos.getY()*-0.01F;
 
 			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -1000 && (Math.random() <= (pos.getY() / -40000.0F))) {
 				for (EnumFacing side : EnumFacing.values()) {
@@ -272,6 +278,7 @@ public class BlockBase extends Block {
 				}
 			}
 		}
+		*/
 
 
 
