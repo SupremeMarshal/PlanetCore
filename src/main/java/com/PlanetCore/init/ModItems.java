@@ -536,6 +536,7 @@ public class ModItems {
 	public static final Item MAJORITE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SAPPHIRE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item EMERALD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RUBY = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TOPAZ = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item JADE = new Item().setCreativeTab(CreativeTabs.MATERIALS);

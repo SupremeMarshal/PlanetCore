@@ -138,7 +138,7 @@ public class BlockBase extends Block {
 		else if (a.contains("lapis")) { c = true; if (!b) { drop = Items.DYE; } else { drop = ModItems.LAPIS_SHARD; }}
 		else if (a.contains("sulfur")) { c = true; if (!b) { drop = ModItems.SULFUR; } else { drop = ModItems.SULFUR_SHARD; }}
 		else if (a.contains("coal")) { c = true; if (!b) { drop = Items.COAL; } else { drop = ModItems.COAL_BIT; }}
-		else if (a.contains("emerald")) { c = true; if (!b) { drop = Items.EMERALD; } else { drop = ModItems.EMERALD_SHARD; }}
+		else if (a.contains("emerald")) { c = true; if (!b) { drop = ModItems.EMERALD; } else { drop = ModItems.EMERALD_SHARD; }}
 		else if (a.contains("sapphire")) { c = true; if (!b) { drop = ModItems.SAPPHIRE; } else { drop = ModItems.SAPPHIRE_SHARD; }}
 		else if (a.contains("ruby")) { c = true; if (!b) { drop = ModItems.RUBY; } else { drop = ModItems.RUBY_SHARD; }}
 		else if (a.contains("topaz")) { c = true; if (!b) { drop = ModItems.TOPAZ; } else { drop = ModItems.TOPAZ_SHARD; }}
@@ -164,7 +164,7 @@ public class BlockBase extends Block {
 		if (a.contains("lapis")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-		else if (a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
+		else if (a.contains("cobblestone") || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
 				|| a.contains("sapphire") || a.contains("ruby") || a.contains("topaz") || a.contains("jade")
 				|| a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite")
 				|| a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
@@ -215,11 +215,13 @@ public class BlockBase extends Block {
 			if (a.contains("small")) {
 				return this.quantityDropped(random) + random.nextInt(fortune * 2) + 1;
 			}
-			if (a.contains("compact")) {
+			else if (a.contains("compact")) {
 				return this.quantityDropped(random) + random.nextInt(fortune * 2) + 2;
 			}
+			else return this.quantityDropped(random) + random.nextInt(fortune * 1);
+
 		}
-		return this.quantityDropped(random) + random.nextInt(fortune + 1);
+		else return 1;
 	}
 
 	@Override
