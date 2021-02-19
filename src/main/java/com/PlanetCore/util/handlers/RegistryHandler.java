@@ -117,10 +117,10 @@ public class RegistryHandler {
         OreDictionary.registerOre("ingotTin", new ItemStack(ModItems.TIN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSilver", new ItemStack(ModItems.SILVER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotPlatinum", new ItemStack(ModItems.PLATINUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("itemSapphire", new ItemStack(ModItems.SAPPHIRE, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("itemRuby", new ItemStack(ModItems.RUBY, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("itemDiamond", new ItemStack(ModItems.DIAMOND, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("itemAmazonite", new ItemStack(ModItems.AMAZONITE, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemSapphire", new ItemStack(ModItems.SAPPHIRE, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemRuby", new ItemStack(ModItems.RUBY, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemDiamond", new ItemStack(ModItems.DIAMOND, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemAmazonite", new ItemStack(ModItems.AMAZONITE, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemSulfur", new ItemStack(ModItems.SULFUR, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotBronze", new ItemStack(ModItems.BRONZE_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotTitanium", new ItemStack(ModItems.TITANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
@@ -129,8 +129,8 @@ public class RegistryHandler {
         OreDictionary.registerOre("ingotUranum", new ItemStack(ModItems.URANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotTungsten", new ItemStack(ModItems.TUNGSTEN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotZinc", new ItemStack(ModItems.ZINC_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("itemDiamond", new ItemStack(ModItems.TOPAZ, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("itemDiamond", new ItemStack(ModItems.JADE, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemDiamond", new ItemStack(ModItems.TOPAZ, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemDiamond", new ItemStack(ModItems.JADE, 1, OreDictionary.WILDCARD_VALUE));
 
 
 

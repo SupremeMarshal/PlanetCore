@@ -12,7 +12,8 @@
     {
         "A":
         {
-            "item": "planetcore:sapphire"
+            "type": "forge:ore_dict",
+            "ore": "gemDiamond"
         },
         "B":
         {
