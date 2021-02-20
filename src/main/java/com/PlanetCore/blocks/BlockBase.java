@@ -33,6 +33,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -127,7 +128,7 @@ public class BlockBase extends Block {
 	}
 
 	@Override
-	public Item getItemDropped(IBlockState state, Random random, int fortune) {
+	public Item getItemDropped(IBlockState state, Random random, int l) {
 		String a = this.getTranslationKey();
 		Boolean b;
 		Boolean c;
@@ -154,7 +155,7 @@ public class BlockBase extends Block {
 		else { c = false;  }
 
 		if (!c) { return Item.getItemFromBlock(this); }
-		else { return new ItemStack(drop, 1+fortune, 0).getItem(); }
+		else { return new ItemStack(drop, 1, 0).getItem(); }
 	}
 
 
@@ -164,7 +165,7 @@ public class BlockBase extends Block {
 		if (a.contains("lapis")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-		else if (a.contains("cobblestone") || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
+		else if (a.contains("crustrock") || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
 				|| a.contains("sapphire") || a.contains("ruby") || a.contains("topaz") || a.contains("jade")
 				|| a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite")
 				|| a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
@@ -182,24 +183,55 @@ public class BlockBase extends Block {
  */
 
 	@Override
-	public void dropBlockAsItemWithChance(World worldIn, BlockPos pos, IBlockState state, float chance, int fortune) {
-		super.dropBlockAsItemWithChance(worldIn, pos, state, chance, fortune);
+	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
+		String a = this.getTranslationKey();
+		Random rand = world instanceof World ? ((World)world).rand : new Random();
+		if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
+			int i = 0;
+			if (a.contains("sulfur") || a.contains("coal")) {
+				i = MathHelper.getInt(rand, 0, 2);
+			} else if (a.contains("lapis")) {
+				i = MathHelper.getInt(rand, 1, 3);
+			} else if (a.contains("topaz") || a.contains("jade") || a.contains("emerald")) {
+				i = MathHelper.getInt(rand, 2, 4);
+			} else if (a.contains("ruby") || a.contains("sapphire") || a.contains("diamond")) {
+				i = MathHelper.getInt(rand, 3, 7);
+			} else if (a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite") || a.contains("brigmanite")) {
+				i = MathHelper.getInt(rand, 5, 9);
+			} else if (a.contains("majorite") || a.contains("amazonite") || a.contains("onyx")) {
+				i = MathHelper.getInt(rand, 7, 12);
+			}
+
+			return i;
+		} else {
+			return 0;
+		}
 	}
 
 	@Override
 	public int quantityDropped(Random random) {
 		String a = this.getTranslationKey();
-		if (a.contains("sulfur") || a.contains("coal") || a.contains("redstone") || a.contains("lapis")
+		if (a.contains("sulfur") || a.contains("coal")
 				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
 				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
 				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
 		{
 			if (a.contains("small")) {
-				return new Random().nextInt(2) + 1;
+				return 1 + random.nextInt(2);
 			}
 			if (a.contains("compact")) {
-				return new Random().nextInt(2) + 2;
+				return 2 + random.nextInt(1);
 			}
+		}
+		else if (a.contains("redstone") || a.contains("lapis"))
+		{
+			if (a.contains("small")) {
+				return 8 + random.nextInt(4);
+			}
+			else if (a.contains("compact")) {
+				return 8 + random.nextInt(4);
+			}
+			else return 4 + random.nextInt(2);
 		}
 		return 1;
 	}
@@ -207,44 +239,27 @@ public class BlockBase extends Block {
 	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random) {
 		String a = this.getTranslationKey();
-		if (a.contains("sulfur") || a.contains("coal") || a.contains("redstone") || a.contains("lapis")
+		if (a.contains("sulfur") || a.contains("coal")
 				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
 				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
 				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
 		{
+			if (a.contains("small") || a.contains("compact")) {
+				return this.quantityDropped(random) + random.nextInt(fortune * 2 + 1);
+			}
+			else return this.quantityDropped(random) + random.nextInt(fortune + 1);
+		}
+		else if (a.contains("redstone") || a.contains("lapis"))
+		{
 			if (a.contains("small")) {
-				return this.quantityDropped(random) + random.nextInt(fortune * 2) + 1;
+				return this.quantityDropped(random) + random.nextInt(fortune * random.nextInt(4));
 			}
 			else if (a.contains("compact")) {
-				return this.quantityDropped(random) + random.nextInt(fortune * 2) + 2;
+				return this.quantityDropped(random) + random.nextInt(fortune * random.nextInt(4));
 			}
-			else return this.quantityDropped(random) + random.nextInt(fortune * 1);
-
+			else return this.quantityDropped(random) + random.nextInt(fortune * random.nextInt(2));
 		}
-		else return 1;
-	}
-
-	@Override
-	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		if (!world.isRemote) {
-			if (this.getTranslationKey().contains("redstone") || this.getTranslationKey().contains("coal")
-					|| this.getTranslationKey().contains("sulfur") || this.getTranslationKey().contains("lapis")
-					|| this.getTranslationKey().contains("emerald") || this.getTranslationKey().contains("topaz")
-					|| this.getTranslationKey().contains("jade") || this.getTranslationKey().contains("ruby")
-					|| this.getTranslationKey().contains("sapphire") || this.getTranslationKey().contains("diamond")
-					|| this.getTranslationKey().contains("olivine") || this.getTranslationKey().contains("wadsleyite")
-					|| this.getTranslationKey().contains("ringwoodite") || this.getTranslationKey().contains("brigmanite")
-					|| this.getTranslationKey().contains("majorite") || this.getTranslationKey().contains("amazonite")
-					|| this.getTranslationKey().contains("onyx")
-			) {
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
-			}
-		}
-		return super.removedByPlayer(state, world, pos, entity, willHarvest);
+		return 1;
 	}
 
 

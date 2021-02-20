@@ -633,7 +633,7 @@ public class ModItems {
 	public static final Item PLATINUM_APPLE = new ThreeEffectFoodItem(10, 3.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 6000, 4, false, false),
 			new PotionEffect(MobEffects.REGENERATION, 400, 2, false, false),
-			new PotionEffect(MobEffects.STRENGTH, 3000, 0, false, false));
+			new PotionEffect(MobEffects.FIRE_RESISTANCE, 3600, 0, false, false));
 
 	public static final Item ENCHANTED_PLATINUM_APPLE = new SixEffectFoodItem(10, 3.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 6000, 4, false, false),
@@ -643,7 +643,7 @@ public class ModItems {
 			new PotionEffect(MobEffects.RESISTANCE, 6000, 1, false, false),
 			new PotionEffect(MobEffects.GLOWING, 3000, 0, false, false));
 
-	public static final Item SAPPHIRE_APPLE = new SixEffectFoodItem(15, 6.0F, false,
+	public static final Item TITANIUM_APPLE = new SixEffectFoodItem(15, 6.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 12000, 8, false, false),
 			new PotionEffect(MobEffects.REGENERATION, 1200, 3, false, false),
 			new PotionEffect(MobEffects.STRENGTH, 6000, 1, false, false),
@@ -652,7 +652,7 @@ public class ModItems {
 			new PotionEffect(MobEffects.GLOWING, 3000, 0, false, false));
 
 
-	public static final Item ENCHANTED_SAPPHIRE_APPLE = new EightEffectFoodItem(15, 6.0F, false,
+	public static final Item ENCHANTED_TITANIUM_APPLE = new EightEffectFoodItem(15, 6.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 12000, 8, false, false),
 			new PotionEffect(MobEffects.REGENERATION, 1200, 3, false, false),
 			new PotionEffect(MobEffects.STRENGTH, 6000, 2, false, false),
@@ -662,10 +662,10 @@ public class ModItems {
 			new PotionEffect(MobEffects.JUMP_BOOST, 6000, 1, false, false),
 			new PotionEffect(MobEffects.GLOWING, 6000, 0, false, false));
 
-	public static final Item RUBY_APPLE = new SixEffectFoodItem(20, 12.0F, false,
+	public static final Item TUNGSTEN_APPLE = new SixEffectFoodItem(20, 12.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 12000, 12, false, false),
 			new PotionEffect(MobEffects.REGENERATION, 3000, 4, false, false),
-			new PotionEffect(MobEffects.STRENGTH, 6000, 2, false, false),
+			new PotionEffect(MobEffects.HEALTH_BOOST, 12000, 12, false, false),
 			new PotionEffect(MobEffects.SPEED, 6000, 1, false, false),
 			new PotionEffect(MobEffects.JUMP_BOOST, 6000, 1, false, false),
 			new PotionEffect(MobEffects.GLOWING, 6000, 0, false, false));
