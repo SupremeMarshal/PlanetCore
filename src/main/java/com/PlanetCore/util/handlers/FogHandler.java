@@ -17,25 +17,24 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class FogHandler {
 
 
-    /*@SideOnly(Side.CLIENT)
+    @SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
+
     public void onEvent(EntityViewRenderEvent.FogDensity event) {
+        event.setCanceled(true);
         Entity p = event.getEntity();
-        double Y = p.posY;
+        float Y = (float) p.posY;
         Block block = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock();
-        if (Y < 0) {
-            if (Y < 0 && Y > -1000) {
-                event.setDensity(0.01F);
-            } else if (Y <= -1000 && Y > -14993) {
-                event.setDensity(0.02F);
-            } else if (Y <= -14993) {
-                event.setDensity(0.1F);
-            } else {
-                //return;
-                event.setDensity(0.001F);
-            }
-            event.setCanceled(true);
-        } else if (block instanceof BlockFluidBase) {
+        if (Y > 1) {
+            event.setDensity(0.00003F);
+        }
+        else if (Y < 0 && Y > -6000) {
+            event.setDensity(-0.00001F * Y);
+        }
+        else if (Y <= -6000) {
+            event.setDensity(0.06F);
+        }
+        if (block instanceof BlockFluidBase) {
             if (block == Blocks.LAVA) {
                 event.setDensity(0.5F);
             } else if (block == ModBlocks.HOT_LAVA_FLUID) {
@@ -46,6 +45,7 @@ public class FogHandler {
                 event.setDensity(0.1F);
             }
         }
+
     }
 
 
@@ -70,36 +70,40 @@ public class FogHandler {
             event.setGreen(0.15F);
             event.setBlue(0.80F);
         }
-        double Y = event.getEntity().posY;
+        float Y = (float) event.getEntity().posY;
         if (Y < 0) {
-            if (event.getEntity().posY < 0 && event.getEntity().posY > -4000) {
-                event.setRed(0.9F);
-                event.setGreen(0.0F);
-                event.setBlue(0.0F);
-            } else if (event.getEntity().posY <= -4000 && event.getEntity().posY > -6850) {
+            if (Y < 0 && Y > -2000) {
+                event.setRed(0.1F);
+                event.setGreen(0.2F);
+                event.setBlue(0.1F);
+            } else if (Y <= -2000 && Y > -4000) {
                 // RED STARTING 0.48F at -4000Y, 0.99F at -6850Y
-                event.setRed(1.0F);
-                event.setGreen(0.1F);
-                event.setBlue(0.001F);
-            } else if (event.getEntity().posY <= -6850 && event.getEntity().posY > -9200) {
+                event.setRed(0.1F -0.00045F * (Y + 2000));
+                event.setGreen(0.2F);
+                event.setBlue(0.1F + (0.00005F * (Y + 2000)));
+            } else if (Y <= -4000 && Y > -6000) {
                 // RED STARTING 0.99F at -6850Y, 0.0F at
                 event.setRed(1.0F);
-                event.setGreen(0.15F);
+                event.setGreen(0.2F -0.0004F * (Y + 4000));
                 event.setBlue(0.0F);
-            } else if (event.getEntity().posY <= -9200 && event.getEntity().posY > -14993) {
+            } else if (Y <= -6000 && Y > -8000) {
                 // RED STARTING 0.99F at -6850Y, 0.0F at
-                event.setRed(0.99F);
-                event.setGreen(0.99F);
-                event.setBlue(0.2F);
-            } else if (event.getEntity().posY <= -14993) {
-                // RED STARTING 0.99F at -6850Y, 0.0F at
-                event.setRed(0.50F);
-                event.setGreen(1.0F);
+                event.setRed(0.5F + (0.00005F * (Y + 6000)));
+                event.setGreen(1.0F + (0.0004F * (Y + 6000)));
                 event.setBlue(1.0F);
+            }
+            else if (Y <= -8000 && Y > -10000) {
+                // RED STARTING 0.99F at -6850Y, 0.0F at
+                event.setRed(0.4F + (0.0002F * (Y + 8000)));
+                event.setGreen(0.2F + (0.0001F * (Y + 8000)));
+                event.setBlue(1.0F + (0.00045F * (Y + 8000)));
+            }
+            else if (Y <= -10000) {
+                // RED STARTING 0.99F at -6850Y, 0.0F at
+                event.setRed(0.0F);
+                event.setGreen(0.0F);
+                event.setBlue(0.1F);
             }
         }
     }
-
-     */
-
 }

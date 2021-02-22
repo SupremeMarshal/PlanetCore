@@ -77,7 +77,7 @@ public class EntityGhoul extends EntityMob
 	}
 
 	protected float getSoundVolume() {
-		return 1.0F;
+		return 0.6F;
 	}
 	
 	@Override

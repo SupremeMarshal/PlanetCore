@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:brigmanite_shard"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:brigmanite",
+        "count": 1
+    }
+}

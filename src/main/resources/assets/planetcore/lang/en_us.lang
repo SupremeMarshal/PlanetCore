@@ -1,3 +1,10 @@
+//POTIONS
+effect.fire_resistance_II=Fire resistance II
+potion.effect.fire_resistance_II=Fire resistance II
+splash_potion.effect.fire_resistance_II=Splash fire resistance II
+lingering_potion.effect.fire_resistance_II=Lingering fire resistance II
+tipped_arrow.effect.fire_resistance_II=Arrow of fire resistance II
+
 //ANVILS
 tile.gold_anvil.name = Gold Anvil
 tile.chipped_gold_anvil.name = Chipped Gold Anvil
@@ -647,95 +654,39 @@ item.flaming_topaz_pickaxe.name=Flaming topaz pickaxe
 item.flaming_topaz_axe.name=Flaming topaz axe
 item.flaming_topaz_hoe.name=Flaming topaz hoe
 
-item.ruby_sword.name=§bRuby sword
+item.ruby_sword.name=§aRuby sword
 item.ruby_shovel.name=§bRuby shovel
 item.ruby_pickaxe.name=§bRuby pickaxe
 item.ruby_axe.name=§bRuby axe
 item.ruby_hoe.name=§bRuby hoe
 
-item.ruby_helmet.name=Ruby helmet
+item.ruby_helmet.name=§aRuby helmet
 item.ruby_helmet.tooltip.0=When equipped:
 item.ruby_helmet.tooltip.1=§9+7 Armor
 item.ruby_helmet.tooltip.2=§9+9.5 Armor toughness
 item.ruby_helmet.tooltip.4=§a+8 Max health
 item.ruby_helmet.tooltip.5=§a+5%% Knockback resistance
 
-item.ruby_chestplate.name=§Ruby chestplate
+item.ruby_chestplate.name=§aRuby chestplate
 item.ruby_chestplate.tooltip.0=When equipped:
 item.ruby_chestplate.tooltip.1=§9+12 Armor
 item.ruby_chestplate.tooltip.2=§9+9.5 Armor toughness
 item.ruby_chestplate.tooltip.4=§a+13 Max health
 item.ruby_chestplate.tooltip.5=§a+5%% Knockback resistance
 
-item.ruby_leggings.name=§Ruby leggings
+item.ruby_leggings.name=§aRuby leggings
 item.ruby_leggings.tooltip.0=When equipped:
 item.ruby_leggings.tooltip.1=§9+10 Armor
 item.ruby_leggings.tooltip.2=§9+9.5 Armor toughness
 item.ruby_leggings.tooltip.4=§a+12 Max health
 item.ruby_leggings.tooltip.5=§a+5%% Knockback resistance
 
-item.ruby_boots.name=§Ruby boots
+item.ruby_boots.name=§aRuby boots
 item.ruby_boots.tooltip.0=When equipped:
 item.ruby_boots.tooltip.1=§9+6 Armor
 item.ruby_boots.tooltip.2=§9+9.5 Armor toughness
 item.ruby_boots.tooltip.4=§a+7 Max health
 item.ruby_boots.tooltip.5=§a+5%% Knockback resistance
-
-item.ruby_helmet1.name=$aRuby helmet+1
-item.ruby_helmet1.tooltip.0=When equipped:
-item.ruby_helmet1.tooltip.1=§9+7 Armor
-item.ruby_helmet1.tooltip.2=§9+10 Armor toughness
-item.ruby_helmet1.tooltip.4=§a+9 Max health
-item.ruby_helmet1.tooltip.5=§a+5%% Knockback resistance
-
-item.ruby_chestplate1.name=§Ruby chestplate+1
-item.ruby_chestplate1.tooltip.0=When equipped:
-item.ruby_chestplate1.tooltip.1=§9+12 Armor
-item.ruby_chestplate1.tooltip.2=§9+10 Armor toughness
-item.ruby_chestplate1.tooltip.4=§a+15 Max health
-item.ruby_chestplate1.tooltip.5=§a+5%% Knockback resistance
-
-item.ruby_leggings1.name=§Ruby leggings+1
-item.ruby_leggings1.tooltip.0=When equipped:
-item.ruby_leggings1.tooltip.1=§9+10 Armor
-item.ruby_leggings1.tooltip.2=§9+10 Armor toughness
-item.ruby_leggings1.tooltip.4=§a+13 Max health
-item.ruby_leggings1.tooltip.5=§a+5%% Knockback resistance
-
-item.ruby_boots1.name=§Ruby boots+1
-item.ruby_boots1.tooltip.0=When equipped:
-item.ruby_boots1.tooltip.1=§9+6 Armor
-item.ruby_boots1.tooltip.2=§9+10 Armor toughness
-item.ruby_boots1.tooltip.4=§a+7 Max health
-item.ruby_boots1.tooltip.5=§a+5%% Knockback resistance
-
-item.ruby_helmet2.name=$aRuby helmet+2
-item.ruby_helmet2.tooltip.0=When equipped:
-item.ruby_helmet2.tooltip.1=§9+7 Armor
-item.ruby_helmet2.tooltip.2=§9+10.5 Armor toughness
-item.ruby_helmet2.tooltip.4=§a+10 Max health
-item.ruby_helmet2.tooltip.5=§a+5%% Knockback resistance
-
-item.ruby_chestplate2.name=§Ruby chestplate+2
-item.ruby_chestplate2.tooltip.0=When equipped:
-item.ruby_chestplate2.tooltip.1=§9+12 Armor
-item.ruby_chestplate2.tooltip.2=§9+10.5 Armor toughness
-item.ruby_chestplate2.tooltip.4=§a+16 Max health
-item.ruby_chestplate2.tooltip.5=§a+5%% Knockback resistance
-
-item.ruby_leggings2.name=§Ruby leggings+2
-item.ruby_leggings2.tooltip.0=When equipped:
-item.ruby_leggings2.tooltip.1=§9+10 Armor
-item.ruby_leggings2.tooltip.2=§9+10.5 Armor toughness
-item.ruby_leggings2.tooltip.4=§a+14 Max health
-item.ruby_leggings2.tooltip.5=§a+5%% Knockback resistance
-
-item.ruby_boots2.name=§Ruby boots+2
-item.ruby_boots2.tooltip.0=When equipped:
-item.ruby_boots2.tooltip.1=§9+6 Armor
-item.ruby_boots2.tooltip.2=§9+10.5 Armor toughness
-item.ruby_boots2.tooltip.4=§a+8 Max health
-item.ruby_boots2.tooltip.5=§a+5%% Knockback resistance
 
 item.topaz_sword.name=Topaz sword
 item.topaz_shovel.name=Topaz shovel

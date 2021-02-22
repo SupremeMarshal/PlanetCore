@@ -1,6 +1,7 @@
 package com.PlanetCore.blocks;
 
 
+import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -9,9 +10,14 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
@@ -49,12 +55,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 	// void addItemBlock() {
 	// 	ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
 	// }
-
-	@Override
-	public int damageDropped(IBlockState state)
-	{
-		return ((Mantlerock.EnumType)state.getValue(VARIANT)).getMeta();
-	}
 
 	@Override
 	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
@@ -117,6 +117,8 @@ public class Mantlerock extends BlockBase implements IMetaName
 			this.name=name;
 		}
 
+
+
 		@Override
 		public String getName() {
 			return this.name;
@@ -154,6 +156,37 @@ public class Mantlerock extends BlockBase implements IMetaName
 
 
 
+	public void spawnLava(World worldIn, BlockPos pos, IBlockState state)
+	{
+		Random rand = new Random();
+		if (!worldIn.isRemote)
+		{
+			if (state.getBlock().getMetaFromState(state) == 13)
+			{
+				if (rand.nextInt(150) == 0) {
+					if (rand.nextInt(2) == 0) {
+						worldIn.setBlockState(pos, Blocks.LAVA.getDefaultState());
+					}
+					else {
+						worldIn.setBlockState(pos, ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+					}
+				}
+			}
+			if (state.getBlock().getMetaFromState(state) == 14)
+			{
+				if (rand.nextInt(100) == 0) {
+					worldIn.setBlockState(pos, ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+				}
+			}
+			if (state.getBlock().getMetaFromState(state) == 15)
+			{
+				if (rand.nextInt(50) == 0) {
+					worldIn.setBlockState(pos, ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+				}
+			}
+		}
+	}
+
 	//Natural Gas Explosion event
 	//Upon destroying the block, it has a small chance to explode. The deeper the rock is, the more probability it has to explode with a larger explosion.
 	public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
@@ -188,9 +221,19 @@ public class Mantlerock extends BlockBase implements IMetaName
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 1, true);
 				}
 			}
-			if (Y <= -5250 && Y > -6000) {
+			if (Y <= -5250 && Y > -5500) {
 				if (rand.nextInt(150) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 1, true);
+				}
+			}
+			if (Y <= -5500 && Y > -5750) {
+				if (rand.nextInt(100) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 1, true);
+				}
+			}
+			if (Y <= -5750) {
+				if (rand.nextInt(60) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 1, true);
 				}
 			}
 		}
@@ -489,6 +532,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 		//naturalGasExplosion(worldIn, pos, state);
 		//earthquake(worldIn, pos, state);
 		naturalGasExplosion(worldIn, pos, state);
+		spawnLava(worldIn, pos, state);
 	}
 
 	@Override

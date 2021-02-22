@@ -77,7 +77,7 @@ public class EntityDeathEnderman extends EntityEnderman
 	}
 
 	protected float getSoundVolume() {
-		return 2.0F;
+		return 0.6F;
 	}
 	
 	@Override

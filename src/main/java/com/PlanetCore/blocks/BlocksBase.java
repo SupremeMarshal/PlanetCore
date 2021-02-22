@@ -25,17 +25,6 @@ public class BlocksBase extends BlockBase {
 		setTickRandomly(true);
 	}
 
-	@Override
-	public int quantityDropped(Random random) {
-		String a = this.getTranslationKey();
-		if (a.contains("redstone") || a.contains("lapis") || a.contains("coal") || a.contains("sulfur") || a.contains("emerald") || a.contains("sapphire")
-				|| a.contains("ruby") || a.contains("diamond") || a.contains("topaz") || a.contains("jade")
-				|| a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite") || a.contains("brigmanite")
-				|| a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
-			return new Random().nextInt(6) + 4;
-		}
-		else return 1;
-	}
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random random, int l) {
