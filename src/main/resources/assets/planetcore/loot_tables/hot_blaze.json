@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "name":"powder",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "planetcore:hot_blaze_powder"
+        },
+        {
+          "type": "empty",
+          "weight": 19
+        }
+      ]
+    }
+  ]
+}

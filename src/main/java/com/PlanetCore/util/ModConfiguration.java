@@ -17,6 +17,8 @@ public class ModConfiguration
 	public static int ENTITY_GHOUL_ID = 203;
 	public static int ENTITY_HELLHOUND_ID = 204;
 	public static int ENTITY_FALLING_BLOCK_ID = 205;
+	public static int ENTITY_DEATH_ENDERMAN_ID = 206;
+	public static int ENTITY_HOT_BLASE_ID = 207;
 	public static int GUI_CRUSTROCK_FURNACE_ID = 1;
 
 	public static void init(File file)
@@ -31,6 +33,7 @@ public class ModConfiguration
 		ENTITY_BLACKDEMON_ID = config.getInt("ENTITY_BLACKDEMON_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_GHOUL_ID = config.getInt("ENTITY_GHOUL_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_HELLHOUND_ID = config.getInt("ENTITY_HELLHOUND_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_DEATH_ENDERMAN_ID = config.getInt("ENTITY_DEATH_ENDERMAN_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_FALLING_BLOCK_ID = config.getInt("ENTITY_FALLING_BLOCK_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 
 		category = "GUI IDs";
