@@ -72,15 +72,15 @@ public class EntityBlackDemon extends EntityMob
 	}
 	
 	public net.minecraft.util.SoundEvent getAmbientSound() {
-		return (net.minecraft.util.SoundEvent) net.minecraft.util.SoundEvent.REGISTRY.getObject(new ResourceLocation("entity.enderdragon.growl"));
+		return net.minecraft.util.SoundEvent.REGISTRY.getObject(new ResourceLocation("entity.enderdragon.growl"));
 	}
 
 	public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-		return (net.minecraft.util.SoundEvent) net.minecraft.util.SoundEvent.REGISTRY.getObject(new ResourceLocation("entity.enderdragon.hurt"));
+		return net.minecraft.util.SoundEvent.REGISTRY.getObject(new ResourceLocation("entity.enderdragon.hurt"));
 	}
 
 	public net.minecraft.util.SoundEvent getDeathSound() {
-		return (net.minecraft.util.SoundEvent) net.minecraft.util.SoundEvent.REGISTRY.getObject(new ResourceLocation(
+		return net.minecraft.util.SoundEvent.REGISTRY.getObject(new ResourceLocation(
 				"entity.enderdragon_fireball.explode"));
 	}
 
@@ -91,13 +91,14 @@ public class EntityBlackDemon extends EntityMob
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
+
+		this.getAttributeMap().registerAttribute(SharedMonsterAttributes.FLYING_SPEED).setBaseValue(0.3D);
+
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.5D);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(250D);
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(10.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.FLYING_SPEED).setBaseValue(0.3D);
 		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(1.0D);
-		if (this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) != null)
-			this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(32D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(32D);
 	}
 
 	@Override
