@@ -82,11 +82,6 @@ public class BlockBase extends Block {
 				!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn)) {
 			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 0.25F * b.getBlock().getMetaFromState(b) - 1.50F);
 		}
-		if (a.toString().contains("corestone") &&
-				!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn)) {
-			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.25F * b.getBlock().getMetaFromState(b) + 1.25F);
-		}
-
 		super.onEntityWalk(worldIn, pos, entityIn);
 	}
 
@@ -165,7 +160,7 @@ public class BlockBase extends Block {
 		if (a.contains("lapis")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-		else if (a.contains("crustrock") || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
+		else if (this == ModBlocks.CRUSTROCK || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
 				|| a.contains("sapphire") || a.contains("ruby") || a.contains("topaz") || a.contains("jade")
 				|| a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite")
 				|| a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
@@ -211,28 +206,6 @@ public class BlockBase extends Block {
 	@Override
 	public int quantityDropped(Random random) {
 		String a = this.getTranslationKey();
-		if (a.contains("sulfur") || a.contains("coal")
-				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
-				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
-				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
-		{
-			if (a.contains("small")) {
-				return 1 + random.nextInt(2);
-			}
-			if (a.contains("compact")) {
-				return 2 + random.nextInt(1);
-			}
-		}
-		else if (a.contains("redstone") || a.contains("lapis"))
-		{
-			if (a.contains("small")) {
-				return 8 + random.nextInt(4);
-			}
-			else if (a.contains("compact")) {
-				return 8 + random.nextInt(4);
-			}
-			else return 4 + random.nextInt(2);
-		}
 		return 1;
 	}
 
@@ -245,22 +218,29 @@ public class BlockBase extends Block {
 				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
 		{
 			if (a.contains("small") || a.contains("compact")) {
-				return this.quantityDropped(random) + random.nextInt(fortune * 2 + 1);
+				return 3 + random.nextInt(fortune * 3 + 1);
 			}
-			else return this.quantityDropped(random) + random.nextInt(fortune + 1);
+			else return 1 + random.nextInt(fortune + 1);
 		}
 		else if (a.contains("redstone") || a.contains("lapis"))
 		{
+
 			if (a.contains("small")) {
-				return this.quantityDropped(random) + random.nextInt(fortune * random.nextInt(4));
+				return 8 + new Random().nextInt(fortune * 4 + 4);
 			}
 			else if (a.contains("compact")) {
-				return this.quantityDropped(random) + random.nextInt(fortune * random.nextInt(4));
+				return 8 + new Random().nextInt(fortune * 4 + 4);
 			}
-			else return this.quantityDropped(random) + random.nextInt(fortune * random.nextInt(2));
+			else if (a.contains("ore_redstone") || a.contains("crustrock_redstone") || a.contains("mantlerock_redstone")
+					|| a.contains("ore_lapis") || a.contains("crustrock_lapis") || a.contains("mantlerock_lapis"))
+			{
+				return 4 + new Random().nextInt(fortune * 2 + 2);
+			}
 		}
 		return 1;
 	}
+
+
 
 
 	/**
