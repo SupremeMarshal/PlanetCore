@@ -2,10 +2,7 @@ package com.PlanetCore.util.handlers;
 
 
 import com.PlanetCore.Main;
-import com.PlanetCore.init.EnchantmentInit;
-import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.init.ModFluids;
-import com.PlanetCore.init.ModItems;
+import com.PlanetCore.init.*;
 import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.IMetaName;
 import com.PlanetCore.util.ModConfiguration;
@@ -87,11 +84,12 @@ public class RegistryHandler {
 
     public static void preInitRegistries(FMLPreInitializationEvent event) {
         ModFluids.registerFluids();
-        //EntityInit.registerEntities();
+        EntityInit.registerEntities();
         ModConfiguration.registerConfig(event);
         RemovingVanillaRecipes recipesEvent = new RemovingVanillaRecipes();
         MinecraftForge.EVENT_BUS.register(recipesEvent);
         MinecraftForge.EVENT_BUS.register(new FogHandler());
+        ModPotions.registerPotions();
         //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
 
 

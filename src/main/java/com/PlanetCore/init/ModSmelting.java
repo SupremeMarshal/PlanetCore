@@ -26,7 +26,7 @@ public class ModSmelting {
 
 	private static final String[] Rock = {"ORE", "CRUSTROCK", "MANTLEROCK", "CORESTONE"};
 	private static final String[] Size = {"SMALL", "", "COMPACT"};
-	private static final int[] Amount = {1,1,3};
+	private static final int[] Amount = {2,1,3};
 
 
 	public static void init()
