@@ -17,6 +17,7 @@ public class ModConfiguration
 	public static int ENTITY_GHOUL_ID = 203;
 	public static int ENTITY_HELLHOUND_ID = 204;
 	public static int ENTITY_FALLING_BLOCK_ID = 205;
+	public static int ENTITY_HOT_BLASE_ID = 206;
 	public static int GUI_CRUSTROCK_FURNACE_ID = 1;
 
 	public static void init(File file)

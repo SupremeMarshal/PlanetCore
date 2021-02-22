@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import com.PlanetCore.Main;
-import com.PlanetCore.entity.EntityBlackDemon;
-import com.PlanetCore.entity.EntityDemon;
-import com.PlanetCore.entity.EntityGhoul;
-import com.PlanetCore.entity.EntityHellHound;
+import com.PlanetCore.entity.*;
 import com.PlanetCore.entity.model.EntityFallingBlock;
 import com.PlanetCore.util.ModConfiguration;
 import com.PlanetCore.util.Reference;
@@ -28,6 +25,7 @@ public class EntityInit
 		registerEntity("ghoul", EntityGhoul.class, ModConfiguration.ENTITY_GHOUL_ID, 50, 888888, 222222);
 		registerEntity("hellhound", EntityHellHound.class, ModConfiguration.ENTITY_HELLHOUND_ID, 50, 666666, 000000);
 		registerEntity("entityfallingblock", EntityFallingBlock.class, ModConfiguration.ENTITY_FALLING_BLOCK_ID, 50, 666666, 000000);
+		registerEntity("hot_blaze", EntityHotBlaze.class, ModConfiguration.ENTITY_HOT_BLASE_ID, 50, 999999, 000000);
 	}
 
 	private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int color1, int color2)

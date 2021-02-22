@@ -1,0 +1,6 @@
+{
+   "parent": "item/handheld",
+   "textures": {
+        "layer0": "planetcore:items/hot_blaze_powder"
+    }
+}

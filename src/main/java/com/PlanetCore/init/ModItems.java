@@ -35,6 +35,8 @@ public class ModItems {
 	private static final List<Item> ITEMS = new ArrayList<>();
 
 
+	public static final Item HOT_BLAZE_POWDER = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+
 	//TOOLS
 
 	//WOODEN//
@@ -516,7 +518,6 @@ public class ModItems {
 
 
 	//DEMON//CORE//
-
 
 	//GEMS//
 	public static final Item SULFUR_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);

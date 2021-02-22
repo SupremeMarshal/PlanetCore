@@ -4335,9 +4335,12 @@ entity.demon.name=Demon
 entity.blackdemon.name=Black demon
 entity.ghoul.name=Ghoul
 entity.hellhound.name=Hellhound
+entity.hot_blaze.name=Hot Blaze
 
 item.platinum_apple.name=§bPlatinum apple
 item.enchanted_platinum_apple.name=§dEnchanted platinum apple
+
+item.hot_blaze_powder.name=Hot Blaze Powder
 
 fluid.hot_lava=Hot lava
 fluid.core_lava=Core lava

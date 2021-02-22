@@ -1,13 +1,7 @@
 package com.PlanetCore.util.handlers;
 
-import com.PlanetCore.entity.EntityBlackDemon;
-import com.PlanetCore.entity.EntityDemon;
-import com.PlanetCore.entity.EntityGhoul;
-import com.PlanetCore.entity.EntityHellHound;
-import com.PlanetCore.entity.render.RenderBlackDemon;
-import com.PlanetCore.entity.render.RenderDemon;
-import com.PlanetCore.entity.render.RenderGhoul;
-import com.PlanetCore.entity.render.RenderHellHound;
+import com.PlanetCore.entity.*;
+import com.PlanetCore.entity.render.*;
 import com.PlanetCore.init.ModBlocks;
 
 import net.minecraft.block.state.IBlockState;
@@ -63,6 +57,8 @@ public class RenderHandler
 			return new RenderHellHound(manager);
 			}
 		});
+
+		RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
 	}
 	
 	public static void registerCustomMeshesAndStates()

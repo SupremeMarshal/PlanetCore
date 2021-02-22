@@ -1,5 +1,7 @@
 package com.PlanetCore.util.handlers;
 
+import com.PlanetCore.Main;
+import com.PlanetCore.entity.EntityHotBlaze;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModPotions;
 import net.minecraft.block.material.Material;
@@ -7,13 +9,17 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.List;
 import java.util.Random;
 
 @Mod.EventBusSubscriber(modid="planetcore")
@@ -347,6 +353,32 @@ public class PlayerTickEventHandler {
                     }
                     if(effect != null && effect.getAmplifier() == 1) {
                         event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
+                    }
+                }
+            }
+
+            // HotBlaze damages you when nearby
+            if (event.player.world.getTotalWorldTime() % 400 == 0){
+                Main.LOGGER.debug("doing hot blaze fire");
+
+                World world = event.player.world;
+                Vec3d pos = event.player.getPositionVector();
+                double range = 3;
+                List<EntityHotBlaze> blazes = world.getEntitiesWithinAABB(EntityHotBlaze.class, new AxisAlignedBB(pos.x + range, pos.y + range, pos.z + range, pos.x - range, pos.y - range, pos.z - range));
+
+                if (blazes.size() > 0){
+                    if(!event.player.isImmuneToFire())
+                    {
+                        event.player.setFire(4);
+                        event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
+                    }
+                    if(effect != null && effect.getAmplifier() == 0)
+                    {
+                        event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
+                    }
+                    if(effect != null && effect.getAmplifier() == 1)
+                    {
+                        event.player.attackEntityFrom(DamageSource.GENERIC, 0.5F);
                     }
                 }
             }
