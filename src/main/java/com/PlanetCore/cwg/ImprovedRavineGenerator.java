@@ -1,6 +1,5 @@
 package com.PlanetCore.cwg;
 
-import com.PlanetCore.init.ModBlocks;
 import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
 import io.github.opencubicchunks.cubicchunks.api.world.ICube;
@@ -42,18 +41,18 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
     private static final double LAVA_HEIGHT_OFFSET = -10;
 
     /**
-     * Add Y value multiplied by this to lava height
-     * <p>
-     * Negative value will generate more lava in ravines that are deeper
+     * Determine the height at which lava can generate up to 100%, filling the ravine.
+     * Do not put zero as it create a divide by zero error.
+     * The base height is always 0 and lava will have 0% chance at base height.
      */
-    private static final double LAVA_HEIGHT_Y_FACTOR = -0.004;
+    private static final double CAVE_MAX_LAVA_HEIGHT = -4000;
 
-    private static final double VERT_SIZE_FACTOR = 3.0;
+    private static final double VERT_SIZE_FACTOR = 8.0;
 
     /**
      * Value added to the size of the cave (radius)
      */
-    private static final double RAVINE_SIZE_ADD = 6.0D;
+    private static final double RAVINE_SIZE_ADD = 2.0D;
 
     private static final double MIN_RAND_SIZE_FACTOR = 0.75;
     private static final double MAX_RAND_SIZE_FACTOR = 1.00;
@@ -97,7 +96,7 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
      * Higher values will make width difference between top/bottom and center smaller
      * lower values will make top and bottom of the ravine smaller. Values less than one will shrink size of the ravine
      */
-    private static final double STRETCH_Y_FACTOR = 2.0;
+    private static final double STRETCH_Y_FACTOR = 6.0;
 
     /**
      * Controls which blocks can be replaced by cave
@@ -142,9 +141,7 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
         int startWalkedDistance = 0;
         int maxWalkedDistance = 0;//choose value automatically
 
-        int lavaHeight = (int) (startY -
-                (baseRavineSize + RAVINE_SIZE_ADD) * VERT_SIZE_FACTOR +
-                LAVA_HEIGHT_OFFSET + startY * LAVA_HEIGHT_Y_FACTOR);
+        int lavaHeight = (int) (maxCubeY/16/CAVE_MAX_LAVA_HEIGHT);
 
         this.generateNode(cube, rand.nextLong(), generatedCubePos, startX, startY, startZ,
                 baseRavineSize, vertDirectionAngle, horizDirectionAngle,
@@ -323,8 +320,9 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
                     if (!isBlockReplaceable.test(cube.getBlockState(localX, localY, localZ))) {
                         continue;
                     }
-                    if (localToBlock(generatedCubeY, localY) < lavaHeight) {
-                        cube.setBlockState(localX, localY, localZ, ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+                    double lava = (ravineY-20) - (((ravineY-20)-(ravineY+20))*lavaHeight);
+                    if (localToBlock(generatedCubeY, localY) < lava)  {
+                        cube.setBlockState(localX, localY, localZ, Blocks.FLOWING_LAVA.getDefaultState());
                     } else {
                         cube.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
                     }

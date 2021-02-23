@@ -8,7 +8,7 @@ public class EntityHotBlaze extends EntityBlaze {
     public EntityHotBlaze(World worldIn) {
         super(worldIn);
 
-        this.setSize(1, 2);
+        this.setSize(2, 4);
     }
 
     @Override
