@@ -1,30 +1,34 @@
 package com.PlanetCore.cwg;
 
+import static io.github.opencubicchunks.cubicchunks.api.util.Coords.cubeToMinBlock;
+import static io.github.opencubicchunks.cubicchunks.api.util.Coords.localToBlock;
+import static net.minecraft.util.math.MathHelper.cos;
+import static net.minecraft.util.math.MathHelper.floor;
+import static net.minecraft.util.math.MathHelper.sin;
+
 import io.github.opencubicchunks.cubicchunks.api.util.Coords;
+import io.github.opencubicchunks.cubicchunks.api.worldgen.CubePrimer;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
 import io.github.opencubicchunks.cubicchunks.api.world.ICube;
-import io.github.opencubicchunks.cubicchunks.api.worldgen.CubePrimer;
 import io.github.opencubicchunks.cubicchunks.api.worldgen.structure.ICubicStructureGenerator;
 import io.github.opencubicchunks.cubicchunks.cubicgen.StructureGenUtil;
 import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.CustomGeneratorSettings;
+import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
-import javax.annotation.Nonnull;
 import java.util.Random;
 import java.util.function.Predicate;
 
-import static io.github.opencubicchunks.cubicchunks.api.util.Coords.cubeToMinBlock;
-import static io.github.opencubicchunks.cubicchunks.api.util.Coords.localToBlock;
-import static net.minecraft.util.math.MathHelper.*;
-import static net.minecraft.util.math.MathHelper.floor;
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
 public class ImprovedRavineGenerator implements ICubicStructureGenerator {
-
-    //V17
 
     /**
      * Vanilla value: 50
@@ -41,18 +45,18 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
     private static final double LAVA_HEIGHT_OFFSET = -10;
 
     /**
-     * Determine the height at which lava can generate up to 100%, filling the ravine.
-     * Do not put zero as it create a divide by zero error.
-     * The base height is always 0 and lava will have 0% chance at base height.
+     * Add Y value multiplied by this to lava height
+     * <p>
+     * Negative value will generate more lava in ravines that are deeper
      */
     private static final double CAVE_MAX_LAVA_HEIGHT = -4000;
 
-    private static final double VERT_SIZE_FACTOR = 8.0;
+    private static final double VERT_SIZE_FACTOR = 3.0;
 
     /**
      * Value added to the size of the cave (radius)
      */
-    private static final double RAVINE_SIZE_ADD = 2.0D;
+    private static final double RAVINE_SIZE_ADD = 2.2D;
 
     private static final double MIN_RAND_SIZE_FACTOR = 0.75;
     private static final double MAX_RAND_SIZE_FACTOR = 1.00;
@@ -240,6 +244,7 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
         }
     }
 
+
     private void tryCarveBlocks(CubePrimer cube, CubePos generatedCubePos,
                                 double ravineX, double ravineY, double ravineZ,
                                 double ravineSizeHoriz, double ravineSizeVert, int lavaHeight) {
@@ -320,8 +325,7 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
                     if (!isBlockReplaceable.test(cube.getBlockState(localX, localY, localZ))) {
                         continue;
                     }
-                    double lava = (ravineY-20) - (((ravineY-20)-(ravineY+20))*lavaHeight);
-                    if (localToBlock(generatedCubeY, localY) < lava)  {
+                    if (localToBlock(generatedCubeY, localY) < lavaHeight) {
                         cube.setBlockState(localX, localY, localZ, Blocks.FLOWING_LAVA.getDefaultState());
                     } else {
                         cube.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
