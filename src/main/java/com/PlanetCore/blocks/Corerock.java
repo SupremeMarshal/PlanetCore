@@ -44,8 +44,8 @@ public class Corerock extends BlockBase implements IMetaName {
 		super(name, material);
 
 		setSoundType(SoundType.METAL);
-		setHardness(-1.0F);
-		setResistance(100.0F);
+		setHardness(100.0F);
+		setResistance(2.0F);
 		setHarvestLevel("pickaxe", 3);
 		setLightLevel(1.0F);
 		setTickRandomly(true);
@@ -135,19 +135,6 @@ public class Corerock extends BlockBase implements IMetaName {
 	public String getSpecialName(ItemStack stack)
 	{
 		return Corerock.EnumType.values()[stack.getItemDamage()].getName();
-	}
-
-	@Override
-	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		if (!world.isRemote) {
-			for (int i = 0; i < 4; i++) {
-				world.spawnEntity(new EntityXPOrb(world, x, y, z, 1));
-			}
-		}
-		return super.removedByPlayer(state, world, pos, entity, willHarvest);
 	}
 
 	@Override

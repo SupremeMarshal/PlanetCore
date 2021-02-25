@@ -25,6 +25,7 @@ public class EntityInit
 		registerEntity("ghoul", EntityGhoul.class, ModConfiguration.ENTITY_GHOUL_ID, 50, 888888, 222222);
 		registerEntity("hellhound", EntityHellHound.class, ModConfiguration.ENTITY_HELLHOUND_ID, 50, 666666, 000000);
 		registerEntity("entityfallingblock", EntityFallingBlock.class, ModConfiguration.ENTITY_FALLING_BLOCK_ID, 50, 666666, 000000);
+		registerEntity("death_enderman", EntityFallingBlock.class, ModConfiguration.ENTITY_DEATH_ENDERMAN_ID, 50, 666666, 000000);
 		registerEntity("hot_blaze", EntityHotBlaze.class, ModConfiguration.ENTITY_HOT_BLASE_ID, 50, 999999, 000000);
 	}
 
@@ -36,6 +37,7 @@ public class EntityInit
 		EntityRegistry.addSpawn(EntityBlackDemon.class, 10, 2, 20, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityGhoul.class, 20, 3, 27, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityHellHound.class, 20, 4, 25, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityDeathEnderman.class, 20, 4, 25, EnumCreatureType.MONSTER, spawnBiomes);
 	}
 
 	private static Biome[] allbiomes(net.minecraft.util.registry.RegistryNamespaced<ResourceLocation, Biome> in)

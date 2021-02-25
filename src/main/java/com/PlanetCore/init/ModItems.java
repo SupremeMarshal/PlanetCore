@@ -630,6 +630,7 @@ public class ModItems {
 	public static final Item DEMON_STAR_CHARGED = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item CORE_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ENHANCING_GEM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item HOT_BLAZE_POWDER = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	public static final Item PLATINUM_APPLE = new ThreeEffectFoodItem(10, 3.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 6000, 4, false, false),

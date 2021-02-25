@@ -31,10 +31,8 @@ public class PlayerTickEventHandler {
         EntityPlayer player = event.getEntityPlayer();
         IUserSettings cap = player.getCapability(UserSettingsStorageProvider.SETTINGS_CAP, null);
         IUserSettings old = event.getOriginal().getCapability(UserSettingsStorageProvider.SETTINGS_CAP, null);
-
         cap.setHeatResistance(old.getHeatResistance());
     }
-
     @SubscribeEvent
     public static void onPlayerEquip(LivingEquipmentChangeEvent.LivingUpdateEvent event) {
         Entity entity = event.getEntityLiving();
@@ -69,75 +67,74 @@ public class PlayerTickEventHandler {
             z = event.player.getPosition().getZ();
             Iterable<BlockPos> it = BlockPos.getAllInBox(x - 3, y - 3, z - 3, x + 3, y + 3, z + 3);
             PotionEffect effect = event.player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
-                    for (BlockPos pos : it) {
-                        IBlockState state = event.player.world.getBlockState(pos);
-                        if (state.getMaterial() == Material.LAVA) {
+            for (BlockPos pos : it) {
+                IBlockState state = event.player.world.getBlockState(pos);
+                if (state.getMaterial() == Material.LAVA) {
 
-                            if (event.player.world.getTotalWorldTime() % 1600 == 0) {
+                    if (event.player.world.getTotalWorldTime() % 1600 == 0) {
 
-                                if(!event.player.isImmuneToFire())
-                                {
-                                    event.player.setFire(4);
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
-                                }
-                                if(effect != null && effect.getAmplifier() == 0) {
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
-                                }
-                                if(effect != null && effect.getAmplifier() == 1) {
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 0.5F);
-                                }
-                            }
+                        if(!event.player.isImmuneToFire())
+                        {
+                            event.player.setFire(4);
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
                         }
-                        if (state.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
-                            if (event.player.world.getTotalWorldTime() % 800 == 0) {
-                                if(!event.player.isImmuneToFire())
-                                {
-                                    event.player.setFire(6);
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
-                                }
-                                if(effect != null && effect.getAmplifier() == 0) {
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
-                                }
-                                if(effect != null && effect.getAmplifier() == 1) {
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
-                                }
-                            }
+                        if(effect != null && effect.getAmplifier() == 0) {
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
                         }
-                        if (state.getBlock() == ModBlocks.CORE_LAVA_FLUID) {
-                            if (event.player.world.getTotalWorldTime() % 400 == 0) {
-                                if(!event.player.isImmuneToFire())
-                                {
-                                    event.player.setFire(8);
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 8.0F);
-                                }
-                                if(effect != null && effect.getAmplifier() == 0) {
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
-                                }
-                                if(effect != null && effect.getAmplifier() == 1) {
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
-                                }
-                            }
-                        }
-                        if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) {
-                            if (event.player.world.getTotalWorldTime() % 200 == 0) {
-                                if(!event.player.isImmuneToFire())
-                                {
-                                    event.player.setFire(8);
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 12.0F);
-                                }
-                                if(effect != null && effect.getAmplifier() == 0) {
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 8.0F);
-                                }
-                                if(effect != null && effect.getAmplifier() == 1) {
-                                    event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
-                                }
-                            }
+                        if(effect != null && effect.getAmplifier() == 1) {
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 0.5F);
                         }
                     }
+                }
+                if (state.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
+                    if (event.player.world.getTotalWorldTime() % 800 == 0) {
+                        if(!event.player.isImmuneToFire())
+                        {
+                            event.player.setFire(6);
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
+                        }
+                        if(effect != null && effect.getAmplifier() == 0) {
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
+                        }
+                        if(effect != null && effect.getAmplifier() == 1) {
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
+                        }
+                    }
+                }
+                if (state.getBlock() == ModBlocks.CORE_LAVA_FLUID) {
+                    if (event.player.world.getTotalWorldTime() % 400 == 0) {
+                        if(!event.player.isImmuneToFire())
+                        {
+                            event.player.setFire(8);
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 8.0F);
+                        }
+                        if(effect != null && effect.getAmplifier() == 0) {
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
+                        }
+                        if(effect != null && effect.getAmplifier() == 1) {
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
+                        }
+                    }
+                }
+                if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) {
+                    if (event.player.world.getTotalWorldTime() % 200 == 0) {
+                        if(!event.player.isImmuneToFire())
+                        {
+                            event.player.setFire(8);
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 12.0F);
+                        }
+                        if(effect != null && effect.getAmplifier() == 0) {
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 8.0F);
+                        }
+                        if(effect != null && effect.getAmplifier() == 1) {
+                            event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
+                        }
+                    }
+                }
+            }
 
-                /*
-
-                 */
+            /*
+             */
 
 
             if (event.player.posY > -1500 && event.player.posY < -1000) {
