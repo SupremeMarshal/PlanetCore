@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:hot_blaze_powder"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    }
+
+  ],
+
+  "result":
+  {
+    "item": "planetcore:hot_magma_cream",
+    "count": 1
+  }
+}

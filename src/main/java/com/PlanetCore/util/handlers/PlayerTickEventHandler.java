@@ -47,19 +47,13 @@ public class PlayerTickEventHandler {
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-
         if (!event.player.getEntityWorld().isRemote) {
             //Heal player based on food level. Heal from 0% to 100% in 600 seconds at max food lvl. Heal fully in 3 hours if food level is 1. At 0 food, player stop healing.
             if (event.player.getFoodStats().getFoodLevel() >= 1) {
                 if (event.player.world.getTotalWorldTime() % 20 == 1) {
                     event.player.heal(event.player.getMaxHealth() / (12000 / event.player.getFoodStats().getFoodLevel()));
                 }
-
             }
-
-            boolean isActive = false;
-            if (event.player.isPotionActive(ModPotions.FIRE_RESISTANCE_II)) isActive = true;
-            if (isActive) event.player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 1));
 
             int x, y, z;
             x = event.player.getPosition().getX();
@@ -356,25 +350,22 @@ public class PlayerTickEventHandler {
 
             // HotBlaze damages you when nearby
             if (event.player.world.getTotalWorldTime() % 400 == 0){
-                Main.LOGGER.debug("doing hot blaze fire");
-
                 World world = event.player.world;
                 Vec3d pos = event.player.getPositionVector();
                 double range = 3;
                 List<EntityHotBlaze> blazes = world.getEntitiesWithinAABB(EntityHotBlaze.class, new AxisAlignedBB(pos.x + range, pos.y + range, pos.z + range, pos.x - range, pos.y - range, pos.z - range));
 
                 if (blazes.size() > 0){
-                    if(!event.player.isImmuneToFire())
-                    {
+                    if(!event.player.isImmuneToFire()) {
                         event.player.setFire(4);
                         event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
                     }
-                    if(effect != null && effect.getAmplifier() == 0)
-                    {
+
+                    if(effect != null && effect.getAmplifier() == 0) {
                         event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
                     }
-                    if(effect != null && effect.getAmplifier() == 1)
-                    {
+
+                    if(effect != null && effect.getAmplifier() == 1) {
                         event.player.attackEntityFrom(DamageSource.GENERIC, 0.5F);
                     }
                 }

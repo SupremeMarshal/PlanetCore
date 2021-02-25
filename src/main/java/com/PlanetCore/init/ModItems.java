@@ -35,6 +35,9 @@ public class ModItems {
 	private static final List<Item> ITEMS = new ArrayList<>();
 
 
+	public static final Item HOT_BLAZE_POWDER = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item HOT_MAGMA_CREAM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+
 	//TOOLS
 
 	//WOODEN//
@@ -517,7 +520,6 @@ public class ModItems {
 
 	//DEMON//CORE//
 
-
 	//GEMS//
 	public static final Item SULFUR_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item REDSTONE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -629,7 +631,6 @@ public class ModItems {
 	public static final Item DEMON_STAR_CHARGED = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item CORE_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ENHANCING_GEM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item HOT_BLAZE_POWDER = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	public static final Item PLATINUM_APPLE = new ThreeEffectFoodItem(10, 3.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 6000, 4, false, false),
