@@ -356,8 +356,6 @@ public class PlayerTickEventHandler {
 
             // HotBlaze damages you when nearby
             if (event.player.world.getTotalWorldTime() % 400 == 0){
-                Main.LOGGER.debug("doing hot blaze fire");
-
                 World world = event.player.world;
                 Vec3d pos = event.player.getPositionVector();
                 double range = 3;
