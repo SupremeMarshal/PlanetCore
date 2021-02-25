@@ -5,6 +5,12 @@ splash_potion.effect.fire_resistance_II=Splash fire resistance II
 lingering_potion.effect.fire_resistance_II=Lingering fire resistance II
 tipped_arrow.effect.fire_resistance_II=Arrow of fire resistance II
 
+effect.long_fire_resistance_II=Long Fire resistance II
+potion.effect.long_fire_resistance_II=Long Fire resistance II
+splash_potion.effect.long_fire_resistance_II=Long Splash fire resistance II
+lingering_potion.effect.long_fire_resistance_II=Long Lingering fire resistance II
+tipped_arrow.effect.long_fire_resistance_II=Long Arrow of fire resistance II
+
 //ANVILS
 tile.gold_anvil.name = Gold Anvil
 tile.chipped_gold_anvil.name = Chipped Gold Anvil
@@ -4324,6 +4330,7 @@ item.majorite_axe.name=Majorite axe
 item.iron_coal.name=Iron and coal
 item.sulfur.name=Sulfur
 
+item.hot_magma_cream.name=Hot Magma Cream
 item.demon_star.name=Demon star
 item.demon_star_charged.name=Charged Demon star
 item.demon_sword.name=Demon sword

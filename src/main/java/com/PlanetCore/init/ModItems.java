@@ -36,6 +36,7 @@ public class ModItems {
 
 
 	public static final Item HOT_BLAZE_POWDER = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item HOT_MAGMA_CREAM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//TOOLS
 
