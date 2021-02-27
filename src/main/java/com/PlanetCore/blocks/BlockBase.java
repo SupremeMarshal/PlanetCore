@@ -92,8 +92,8 @@ public class BlockBase extends Block {
 	 * }
 	 */
 	private static final float [] crustHardnessByMeta = {2, 3, 4, 5, 6, 7, 8, 9, 10};
-	private static final float [] mantleHardnessByMeta = {12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 45};
-	private static final float [] coreHardnessByMeta = {50, 100, 200};
+	private static final float [] mantleHardnessByMeta = {12, 14, 16, 18, 20, 22, 24, 26, 28, 31, 35, 40, 46, 53, 61, 70};
+	private static final float [] coreHardnessByMeta = {100, 160, 280};
 
 
 
@@ -251,22 +251,27 @@ public class BlockBase extends Block {
 	 * @param rand
 	 */
 
-	/**
+
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-			float PressureLevel = pos.getY()*-0.01F;
 
-			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -1000 && (Math.random() <= (pos.getY() / -40000.0F))) {
-				for (EnumFacing side : EnumFacing.values()) {
+
+			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -1000 && (Math.random() <= (pos.getY() / -40000.0F)))
+			{
+				for (EnumFacing side : EnumFacing.values())
+				{
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getBlockHardness(state, worldIn, pos) < PressureLevel) {
+					float PressureLevel = (movedPos.getY()+900) * -0.04F;
+					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlockHardness(worldIn, movedPos) - 10F > PressureLevel)
+					{
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
 							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
 							.toArray(EnumFacing[]::new);
-					if (sides.length == 0) {
+					if (sides.length == 0)
+					{
 						continue;
 					}
 					worldIn.setBlockState(movedPos.offset(sides[rand.nextInt(sides.length)]), movedState);
@@ -275,7 +280,7 @@ public class BlockBase extends Block {
 				}
 			}
 		}
-		*/
+
 
 
 
