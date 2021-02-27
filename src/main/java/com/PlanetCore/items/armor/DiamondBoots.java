@@ -37,7 +37,7 @@ public class DiamondBoots extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_DIAMONDBOOTS_UUID, "MAX_HEALTH_DIAMONDBOOTS_UUID", 5, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_DIAMONDBOOTS_UUID, "MAX_HEALTH_DIAMONDBOOTS_UUID", 8, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_DIAMONDBOOTS_UUID, "KNOCKBACK_RESISTANCE_DIAMONDBOOTS_UUID", 0.075, 0));
 	}
    
@@ -53,7 +53,7 @@ public class DiamondBoots extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_DIAMONDBOOTS_UUID, "MAX_HEALTH_DIAMONDBOOTS_UUID", 5, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_DIAMONDBOOTS_UUID, "MAX_HEALTH_DIAMONDBOOTS_UUID", 8, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_DIAMONDBOOTS_UUID, "KNOCKBACK_RESISTANCE_DIAMONDBOOTS_UUID", 0.075, 0));
     	}
     	return mods;
@@ -94,6 +94,9 @@ public class DiamondBoots extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.2"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.4"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.5"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.6"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.7"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability: "+(getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}
 }

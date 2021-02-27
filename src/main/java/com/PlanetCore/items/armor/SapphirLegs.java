@@ -37,7 +37,7 @@ public class SapphirLegs extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 12, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 7, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID", 0.025, 0));
 	}
    
@@ -53,7 +53,7 @@ public class SapphirLegs extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 12, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SAPPHIRLEGS_UUID, "MAX_HEALTH_SAPPHIRLEGS_UUID", 7, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID, "KNOCKBACK_RESISTANCE_SAPPHIRLEGS_UUID", 0.025, 0));
     	}
     	return mods;

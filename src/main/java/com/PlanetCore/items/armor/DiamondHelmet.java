@@ -37,7 +37,7 @@ public class DiamondHelmet extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_DIAMONDHELM_UUID, "MAX_HEALTH_DIAMONDHELM_UUID", 5, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_DIAMONDHELM_UUID, "MAX_HEALTH_DIAMONDHELM_UUID", 8, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_DIAMONDHELM_UUID, "KNOCKBACK_RESISTANCE_DIAMONDHELM_UUID", 0.075, 0));
 
 	}
@@ -55,7 +55,7 @@ public class DiamondHelmet extends ArmorBase
     		String maxhealthplatinumhelm = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockbackplatinumhelm = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_DIAMONDHELM_UUID, "MAX_HEALTH_DIAMONDHELM_UUID", 5, 0));
+    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_DIAMONDHELM_UUID, "MAX_HEALTH_DIAMONDHELM_UUID", 8, 0));
     		mods.put(knockbackplatinumhelm, new AttributeModifier (KNOCKBACK_RESISTANCE_DIAMONDHELM_UUID, "KNOCKBACK_RESISTANCE_DIAMONDHELM_UUID", 0.075, 0));
     	}
     	return mods;
@@ -96,6 +96,9 @@ public class DiamondHelmet extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.2"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.4"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.5"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.6"));
+		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.7"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability: "+(getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}
 }

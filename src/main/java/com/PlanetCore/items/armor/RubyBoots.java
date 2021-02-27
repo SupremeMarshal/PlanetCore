@@ -35,7 +35,7 @@ public class RubyBoots extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_RUBYBOOTS_UUID, "MAX_HEALTH_RUBYBOOTS_UUID", 7, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_RUBYBOOTS_UUID, "MAX_HEALTH_RUBYBOOTS_UUID", 6, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_RUBYBOOTS_UUID, "KNOCKBACK_RESISTANCE_RUBYBOOTS_UUID", 0.05, 0));
 	}
    
@@ -51,7 +51,7 @@ public class RubyBoots extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_RUBYBOOTS_UUID, "MAX_HEALTH_RUBYBOOTS_UUID", 7, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_RUBYBOOTS_UUID, "MAX_HEALTH_RUBYBOOTS_UUID", 6, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_RUBYBOOTS_UUID, "KNOCKBACK_RESISTANCE_RUBYBOOTS_UUID", 0.05, 0));
     	}
     	return mods;

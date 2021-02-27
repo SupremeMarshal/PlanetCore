@@ -37,7 +37,7 @@ public class RubyHelmet extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_RUBYHELM_UUID, "MAX_HEALTH_RUBYHELM_UUID", 8, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_RUBYHELM_UUID, "MAX_HEALTH_RUBYHELM_UUID", 6, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_RUBYHELM_UUID, "KNOCKBACK_RESISTANCE_RUBYHELM_UUID", 0.05, 0));
 
 	}
@@ -55,7 +55,7 @@ public class RubyHelmet extends ArmorBase
     		String maxhealthplatinumhelm = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockbackplatinumhelm = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_RUBYHELM_UUID, "MAX_HEALTH_RUBYHELM_UUID", 8, 0));
+    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_RUBYHELM_UUID, "MAX_HEALTH_RUBYHELM_UUID", 6, 0));
     		mods.put(knockbackplatinumhelm, new AttributeModifier (KNOCKBACK_RESISTANCE_RUBYHELM_UUID, "KNOCKBACK_RESISTANCE_RUBYHELM_UUID", 0.05, 0));
     	}
     	return mods;

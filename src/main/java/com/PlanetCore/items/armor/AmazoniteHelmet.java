@@ -39,7 +39,7 @@ public class AmazoniteHelmet extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_AMAZONITEHELM_UUID, "MAX_HEALTH_AMAZONITEHELM_UUID", 7, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_AMAZONITEHELM_UUID, "MAX_HEALTH_AMAZONITEHELM_UUID", 16, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_AMAZONITEHELM_UUID, "KNOCKBACK_RESISTANCE_AMAZONITEHELM_UUID", 0.1, 0));
 	}
    
@@ -55,7 +55,7 @@ public class AmazoniteHelmet extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_AMAZONITEHELM_UUID, "MAX_HEALTH_AMAZONITEHELM_UUID", 7, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_AMAZONITEHELM_UUID, "MAX_HEALTH_AMAZONITEHELM_UUID", 16, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_AMAZONITEHELM_UUID, "KNOCKBACK_RESISTANCE_AMAZONITEHELM_UUID", 0.1, 0));
     	}
     	return mods;
@@ -102,8 +102,6 @@ public class AmazoniteHelmet extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.7"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.8"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.9"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.10"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.11"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}

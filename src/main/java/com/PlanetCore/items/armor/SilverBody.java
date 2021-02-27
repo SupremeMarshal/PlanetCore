@@ -34,7 +34,7 @@ public class SilverBody extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SILVERBODY_UUID, "MAX_HEALTH_SILVERBODY_UUID", 3, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_SILVERBODY_UUID, "MAX_HEALTH_SILVERBODY_UUID", 0.5, 0));
     }
    
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
@@ -48,7 +48,7 @@ public class SilverBody extends ArmorBase
 
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SILVERBODY_UUID, "MAX_HEALTH_SILVERBODY_UUID", 3, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_SILVERBODY_UUID, "MAX_HEALTH_SILVERBODY_UUID", 0.5, 0));
     	}
     	return mods;
     }

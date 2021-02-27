@@ -39,7 +39,7 @@ public class OnyxHelmet extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_ONYXHELM_UUID, "MAX_HEALTH_ONYXHELM_UUID", 10, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_ONYXHELM_UUID, "MAX_HEALTH_ONYXHELM_UUID", 20, 0));
 		modMap.put(SharedMonsterAttributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ONYXHELM_UUID, "KNOCKBACK_RESISTANCE_ONYXHELM_UUID", 0.15, 0));
 	}
    
@@ -55,7 +55,7 @@ public class OnyxHelmet extends ArmorBase
     		String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
     		String knockback = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
-    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_ONYXHELM_UUID, "MAX_HEALTH_ONYXHELM_UUID", 10, 0));
+    		mods.put(maxhealth, new AttributeModifier (MAX_HEALTH_ONYXHELM_UUID, "MAX_HEALTH_ONYXHELM_UUID", 20, 0));
     		mods.put(knockback, new AttributeModifier (KNOCKBACK_RESISTANCE_ONYXHELM_UUID, "KNOCKBACK_RESISTANCE_ONYXHELM_UUID", 0.15, 0));
     	}
     	return mods;
@@ -104,8 +104,6 @@ public class OnyxHelmet extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.9"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.10"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.11"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.12"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.13"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}

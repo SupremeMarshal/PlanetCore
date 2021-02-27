@@ -34,7 +34,7 @@ public class PlatinumHelmet extends ArmorBase
     
     static {
 
-		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_PLATINUMHELM_UUID, "MAX_HEALTH_PLATINUMHELM_UUID", 2, 0));
+		modMap.put(SharedMonsterAttributes.MAX_HEALTH, new AttributeModifier(MAX_HEALTH_PLATINUMHELM_UUID, "MAX_HEALTH_PLATINUMHELM_UUID", 1.5, 0));
 	}
    
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
@@ -49,7 +49,7 @@ public class PlatinumHelmet extends ArmorBase
 
     		String maxhealthplatinumhelm = SharedMonsterAttributes.MAX_HEALTH.getName();
 
-    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_PLATINUMHELM_UUID, "MAX_HEALTH_PLATINUMHELM_UUID", 2, 0));
+    		mods.put(maxhealthplatinumhelm, new AttributeModifier (MAX_HEALTH_PLATINUMHELM_UUID, "MAX_HEALTH_PLATINUMHELM_UUID", 1.5, 0));
     		}
     	return mods;
     }
@@ -75,7 +75,6 @@ public class PlatinumHelmet extends ArmorBase
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.1"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.2"));
 		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.3"));
-		tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey()+".tooltip.4"));
 		tooltip.add(net.minecraft.client.resources.I18n.format("Durability:"));
 		tooltip.add(net.minecraft.client.resources.I18n.format((getMaxDamage() - getDamage(stack)) +" / "+getMaxDamage()));
 	}
