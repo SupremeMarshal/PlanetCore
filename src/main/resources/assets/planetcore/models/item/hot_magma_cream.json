@@ -1,6 +1,1 @@
-{
-   "parent": "item/handheld",
-   "textures": {
-        "layer0": "minecraft:item/magma_cream"
-    }
-}
+{"parent":"item/generated","textures":{"layer0":"planetcore:items/hot_magma_cream"}}

@@ -32,6 +32,6 @@ public class RenderHotBlaze extends RenderLiving<EntityHotBlaze> {
         GlStateManager.scale(-2.0F, -2.0F, 2.0F);
         this.preRenderCallback(entitylivingbaseIn, partialTicks);
         GlStateManager.translate(0.0F, -3F, 0.0F);
-        return 0.0625F;
+        return 0.0625F * 1.5F;
     }
 }
