@@ -146,24 +146,24 @@ public class ModBlocks {
      */
     public enum OreForm {
         //ORE_VERYSMALL(0.0F, 0.0F, id -> new OreBase(id, Material.ROCK)),
-        ORE_SMALL(0.25F, 0.5F, id -> new BlockBase(id, Material.ROCK)),
-        ORE(1.0F, 1.0F, id -> new BlockBase(id, Material.ROCK)),
-        ORE_COMPACT(8.0F, 4.0F, id -> new BlockBase(id, Material.ROCK)),
+        ORE_SMALL(0.25F, 1 + 0.5F, id -> new BlockBase(id, Material.ROCK)),
+        ORE(1.0F, 1 + 1F, id -> new BlockBase(id, Material.ROCK)),
+        ORE_COMPACT(8.0F, 1 + 1.2F, id -> new BlockBase(id, Material.ROCK)),
         //ORE_VERYCOMPACT(16.0F, 16.0F, id -> new OreBase(id, Material.ROCK)),
         //CRUSTROCK_VERYSMALL(0.0F, 0.0F, id -> new Crustrock(id, Material.ROCK)),
-        CRUSTROCK_SMALL(0.25F, 0.5F, id -> new Crustrock(id, Material.ROCK)),
-        CRUSTROCK(1.0F, 1.0F, id -> new Crustrock(id, Material.ROCK)),
-        CRUSTROCK_COMPACT(8.0F, 4.0F, id -> new Crustrock(id, Material.ROCK)),
+        CRUSTROCK_SMALL(0.25F, 1 + 0.5F, id -> new Crustrock(id, Material.ROCK)),
+        CRUSTROCK(1.0F, 1 + 1F, id -> new Crustrock(id, Material.ROCK)),
+        CRUSTROCK_COMPACT(8.0F, 1 + 1.2F, id -> new Crustrock(id, Material.ROCK)),
         //CRUSTROCK_VERYCOMPACT(16.0F, 16.0F, id -> new Crustrock(id, Material.ROCK)),
         //MANTLEROCK_VERYSMALL(0.0F, 0.0F, id -> new Mantlerock(id, Material.ROCK)),
-        MANTLEROCK_SMALL(0.25F, 0.5F, id -> new Mantlerock(id, Material.ROCK)),
-        MANTLEROCK(1.0F, 1.0F, id -> new Mantlerock(id, Material.ROCK)),
-        MANTLEROCK_COMPACT(8.0F, 4.0F, id -> new Mantlerock(id, Material.ROCK)),
+        MANTLEROCK_SMALL(0.25F, 1 + 0.5F, id -> new Mantlerock(id, Material.ROCK)),
+        MANTLEROCK(1.0F, 1 + 1F, id -> new Mantlerock(id, Material.ROCK)),
+        MANTLEROCK_COMPACT(8.0F, 1 + 1.2F, id -> new Mantlerock(id, Material.ROCK)),
         //MANTLEROCK_VERYCOMPACT(16.0F, 16.0F, id -> new Mantlerock(id, Material.ROCK)),
         //CORESTONE_VERYSMALL(0.0F, 0.0F, id -> new Corerock(id, Material.ROCK)),
         CORESTONE_SMALL(0.25F, 0.5F, id -> new Corerock(id, Material.ROCK)),
-        CORESTONE(1.0F, 1.0F, id -> new Corerock(id, Material.ROCK)),
-        CORESTONE_COMPACT(8.0F, 4.0F, id -> new Corerock(id, Material.ROCK));
+        CORESTONE(1.0F, 2 + 1F, id -> new Corerock(id, Material.ROCK)),
+        CORESTONE_COMPACT(8.0F, 2 + 1.2F, id -> new Corerock(id, Material.ROCK));
         //CORESTONE_VERYCOMPACT(16.0F, 16.0F, id -> new Corerock(id, Material.ROCK));
 
         private final double baseHardness;
@@ -220,6 +220,8 @@ public class ModBlocks {
     public static final Block SULFURIC_ACID_FLUID = _null();
     @ObjectHolder("hot_lava")
     public static final Block HOT_LAVA_FLUID = _null();
+    @ObjectHolder("active_lava")
+    public static final Block ACTIVE_LAVA_FLUID = _null();
     @ObjectHolder("core_lava")
     public static final Block CORE_LAVA_FLUID = _null();
     @ObjectHolder("onyx_lava")
@@ -424,12 +426,13 @@ public class ModBlocks {
                 new CrustrockFurnace("lit_crustrock_furnace", true).setHardness(8.0F).setResistance(500).setLightLevel(0.975F),
                 new SulfuricAcidFluid("sulfuric_acid", ModFluids.SULFURIC_ACID_FLUID, Material.WATER),
                 new HotLavaFluid("hot_lava", ModFluids.HOT_LAVA_FLUID, Material.LAVA),
+                new ActiveLavaFluid("active_lava", ModFluids.ACTIVE_LAVA_FLUID, Material.LAVA),
                 new CoreLavaFluid("core_lava", ModFluids.CORE_LAVA_FLUID, Material.LAVA),
                 new OnyxLavaFluid("onyx_lava", ModFluids.ONYX_LAVA_FLUID, Material.LAVA),
                 new BlocksBase("sulfur_block", Material.ROCK).setResistance(1).setHardness(40F),
-                new BlocksBase("aluminium_block", Material.ROCK).setResistance(1).setHardness(5F),
+                new BlocksBase("aluminium_block", Material.ROCK).setResistance(1).setHardness(10F),
                 new BlocksBase("zinc_block", Material.ROCK).setResistance(1).setHardness(60.0F),
-                new BlocksBase("lead_block", Material.ROCK).setResistance(1).setHardness(10.0F),
+                new BlocksBase("lead_block", Material.ROCK).setResistance(1).setHardness(15.0F),
                 new BlocksBase("tin_block", Material.ROCK).setResistance(2).setHardness(50.0F),
                 new BlocksBase("copper_block", Material.ROCK).setResistance(2).setHardness(50.0F),
                 new BlocksBase("silicon_block", Material.ROCK).setResistance(1).setHardness(25.0F),

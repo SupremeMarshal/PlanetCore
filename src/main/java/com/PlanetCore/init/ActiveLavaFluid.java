@@ -25,10 +25,10 @@ import net.minecraftforge.fluids.Fluid;
 import java.util.Random;
 
 
-public class HotLavaFluid extends BlockFluidClassic {
+public class ActiveLavaFluid extends BlockFluidClassic {
 
 
-	public HotLavaFluid(String name, Fluid fluid, Material material) {
+	public ActiveLavaFluid(String name, Fluid fluid, Material material) {
 		super(fluid, material);
 		setTranslationKey(name);
 		setRegistryName(name);
@@ -47,6 +47,13 @@ public class HotLavaFluid extends BlockFluidClassic {
 
 		if (entityIn instanceof EntityPlayerMP)
 		{
+			//EntityPlayerMP player = (EntityPlayerMP) entityIn;
+			//no protection = 10 damage each second (without the normal lava damage)
+			//Full Amazonite protect 100%
+
+			//no protection
+
+
 			PotionEffect effect = ((EntityPlayerMP) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 			entityIn.setFire(10);
 			if(effect == null)
@@ -83,14 +90,14 @@ public class HotLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() == 0)
 				{
-					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
+					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}
 
 				if (integer.intValue() <= 4)
 				{
-					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
+					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}
@@ -133,18 +140,18 @@ public class HotLavaFluid extends BlockFluidClassic {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 
-		if (Math.random() <= 0.000002) {
-			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState())
+		if (pos.getY() <= -3000 && Math.random() <= 0.2) {
+			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
 				worldIn.setBlockState(pos.up(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
 				worldIn.setBlockState(pos.down(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState())
+			if (worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
 				worldIn.setBlockState(pos.north(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState())
+			if (worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
 				worldIn.setBlockState(pos.south(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState())
+			if (worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
 				worldIn.setBlockState(pos.west(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState())
+			if (worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
 				worldIn.setBlockState(pos.east(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
 		}
 		int quantaRemaining = quantaPerBlock - state.getValue(LEVEL);
@@ -258,7 +265,7 @@ public class HotLavaFluid extends BlockFluidClassic {
 						{
 							if (this.isSurroundingBlockFlammable(worldIn, blockpos))
 							{
-								worldIn.setBlockState(blockpos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, blockpos, pos, Blocks.FIRE.getDefaultState()));
+								worldIn.setBlockState(blockpos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, blockpos, pos, Blocks.FIRE.getDefaultState()));
 								return;
 							}
 						}
@@ -281,7 +288,7 @@ public class HotLavaFluid extends BlockFluidClassic {
 
 						if (worldIn.isAirBlock(blockpos1.up()) && this.getCanBlockBurn(worldIn, blockpos1))
 						{
-							worldIn.setBlockState(blockpos1.up(), net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, blockpos1.up(), pos, Blocks.FIRE.getDefaultState()));
+							worldIn.setBlockState(blockpos1.up(), ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, blockpos1.up(), pos, Blocks.FIRE.getDefaultState()));
 						}
 					}
 				}
