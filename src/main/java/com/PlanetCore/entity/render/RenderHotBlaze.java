@@ -17,7 +17,7 @@ public class RenderHotBlaze extends RenderLiving<EntityHotBlaze> {
     public static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":textures/entity/hot_blaze.png");
 
     public RenderHotBlaze(RenderManager manager) {
-        super(manager, new ModelBlaze(), 1.0F);
+        super(manager, new ModelBlaze(), 0F);
     }
 
 
