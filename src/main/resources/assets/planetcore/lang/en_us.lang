@@ -11,6 +11,18 @@ splash_potion.effect.long_fire_resistance_II=Long Splash fire resistance II
 lingering_potion.effect.long_fire_resistance_II=Long Lingering fire resistance II
 tipped_arrow.effect.long_fire_resistance_II=Long Arrow of fire resistance II
 
+effect.fire_resistance_III=Fire resistance III
+potion.effect.fire_resistance_III=Fire resistance III
+splash_potion.effect.fire_resistance_III=Splash fire resistance III
+lingering_potion.effect.fire_resistance_III=Lingering fire resistance III
+tipped_arrow.effect.fire_resistance_III=Arrow of fire resistance III
+
+effect.long_fire_resistance_III=Long Fire resistance III
+potion.effect.long_fire_resistance_III=Long Fire resistance III
+splash_potion.effect.long_fire_resistance_III=Long Splash fire resistance III
+lingering_potion.effect.long_fire_resistance_III=Long Lingering fire resistance III
+tipped_arrow.effect.long_fire_resistance_III=Long Arrow of fire resistance III
+
 //ANVILS
 tile.gold_anvil.name = Gold Anvil
 tile.chipped_gold_anvil.name = Chipped Gold Anvil
