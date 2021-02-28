@@ -91,9 +91,9 @@ public class BlockBase extends Block {
 	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
 	 * }
 	 */
-	private static final float [] crustHardnessByMeta = {2, 3, 4, 5, 6, 7, 8, 9, 10};
-	private static final float [] mantleHardnessByMeta = {12, 14, 16, 18, 20, 22, 24, 26, 28, 31, 35, 40, 46, 53, 61, 70};
-	private static final float [] coreHardnessByMeta = {100, 160, 280};
+	private static final float [] crustHardnessByMeta = {2, 2.5F, 3, 3.5F, 4, 4.5F, 5, 5.5F, 6};
+	private static final float [] mantleHardnessByMeta = {7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22};
+	private static final float [] coreHardnessByMeta = {50, 100, 200};
 
 
 
@@ -256,13 +256,13 @@ public class BlockBase extends Block {
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 
 
-			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -1000 && (Math.random() <= (pos.getY() / -40000.0F)))
+			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -1000 && (Math.random() <= (pos.getY() / -160000.0F)))
 			{
 				for (EnumFacing side : EnumFacing.values())
 				{
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					float PressureLevel = (movedPos.getY()+900) * -0.04F;
+					float PressureLevel = (movedPos.getY()+1000) * -0.04F;
 					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlockHardness(worldIn, movedPos) - 10F > PressureLevel)
 					{
 						continue;
