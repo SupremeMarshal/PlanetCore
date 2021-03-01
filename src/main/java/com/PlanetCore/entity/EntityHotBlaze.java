@@ -36,8 +36,8 @@ public class EntityHotBlaze extends EntityBlaze {
     protected void initEntityAI(){
         this.tasks.addTask(10, new EntityHotBlaze.AIRandomFly(this));
         this.tasks.addTask(4, new EntityHotBlaze.AIFireballAttack(this));
-        this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
-        this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D, 0.0F));
+        // this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
+        // this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D, 0.0F));
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
