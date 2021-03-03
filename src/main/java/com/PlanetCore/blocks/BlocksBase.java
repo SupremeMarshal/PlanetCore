@@ -74,6 +74,29 @@ public class BlocksBase extends BlockBase {
 	}
 
 	@Override
+	public int quantityDroppedWithBonus(int fortune, Random random) {
+		String a = this.getTranslationKey();
+		if (a.contains("sulfur") || a.contains("coal")
+				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
+				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
+				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
+		{
+				return 6 + random.nextInt(fortune * 6 + 1);
+		}
+		else if (a.contains("redstone") || a.contains("lapis"))
+		{
+				return 24 + new Random().nextInt(fortune * 12 + 12);
+		}
+		return 1;
+	}
+
+	@Override
+	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
+		world.setBlockToAir(pos);
+		this.onExplosionDestroy(world, pos, explosion);
+	}
+
+	@Override
 	public int damageDropped(IBlockState state) {
 		String a = this.getTranslationKey();
 		if (a.contains("lapis")) {
