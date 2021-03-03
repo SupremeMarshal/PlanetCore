@@ -92,8 +92,8 @@ public class BlockBase extends Block {
 	 * }
 	 */
 	private static final float [] crustHardnessByMeta = {2, 2.5F, 3, 3.5F, 4, 4.5F, 5, 5.5F, 6};
-	private static final float [] mantleHardnessByMeta = {7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22};
-	private static final float [] coreHardnessByMeta = {50, 100, 200};
+	private static final float [] mantleHardnessByMeta = {7, 8, 9, 10, 12, 14, 17, 20, 25, 30, 36, 43, 51, 62, 74, 100};
+	private static final float [] coreHardnessByMeta = {200, 400, 600};
 
 
 
@@ -157,7 +157,7 @@ public class BlockBase extends Block {
 	@Override
 	public int damageDropped(IBlockState state) {
 		String a = this.getTranslationKey();
-		if (a.contains("lapis")) {
+		if (a.contains("lapis") && !a.contains("small")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
 		else if (this == ModBlocks.CRUSTROCK || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
@@ -201,6 +201,12 @@ public class BlockBase extends Block {
 		} else {
 			return 0;
 		}
+	}
+
+	@Override
+	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
+		world.setBlockToAir(pos);
+		this.onExplosionDestroy(world, pos, explosion);
 	}
 
 	@Override
@@ -256,13 +262,14 @@ public class BlockBase extends Block {
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 
 
-			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CORESTONE) && pos.getY() < -1000 && (Math.random() <= (pos.getY() / -160000.0F)))
+			if ((this == ModBlocks.MANTLEROCK) && pos.getY() < -1000 && (Math.random() <= ((pos.getY() +1000) / -100000.0F)))
 			{
 				for (EnumFacing side : EnumFacing.values())
 				{
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
 					float PressureLevel = (movedPos.getY()+1000) * -0.04F;
+					if (movedState.getMaterial() == Material.IRON) return;
 					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlockHardness(worldIn, movedPos) - 10F > PressureLevel)
 					{
 						continue;
@@ -441,14 +448,6 @@ public class BlockBase extends Block {
 				}
 			}
 		}
-	}
-
-
-	@Override
-	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
-
-		//naturalGasExplosion(world, pos, (IBlockState)explosion);
-		//lavaDecompression(world, pos, (IBlockState)explosion);
 	}
 
 	@Override
