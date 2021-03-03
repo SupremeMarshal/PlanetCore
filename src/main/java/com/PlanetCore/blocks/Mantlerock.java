@@ -212,27 +212,27 @@ public class Mantlerock extends BlockBase implements IMetaName
 				}
 			}
 			if (Y <= -4500 && Y > -5000) {
-				if (rand.nextInt(250) == 0) {
+				if (rand.nextInt(400) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 				}
 			}
 			if (Y <= -5000 && Y > -5250) {
-				if (rand.nextInt(200) == 0) {
+				if (rand.nextInt(300) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 1, true);
 				}
 			}
 			if (Y <= -5250 && Y > -5500) {
-				if (rand.nextInt(150) == 0) {
+				if (rand.nextInt(200) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 1, true);
 				}
 			}
 			if (Y <= -5500 && Y > -5750) {
-				if (rand.nextInt(100) == 0) {
+				if (rand.nextInt(150) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 1, true);
 				}
 			}
 			if (Y <= -5750) {
-				if (rand.nextInt(60) == 0) {
+				if (rand.nextInt(120) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 1, true);
 				}
 			}
