@@ -54,18 +54,9 @@ public class ActiveLavaFluid extends BlockFluidClassic {
 			//no protection
 
 
-			PotionEffect effect = ((EntityPlayerMP) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 			entityIn.setFire(10);
-			if(effect == null)
-			{
-				entityIn.attackEntityFrom(DamageSource.GENERIC, 8.0F);
-			}
-			if(entityIn != null && effect.getAmplifier() == 0) {
-				entityIn.attackEntityFrom(DamageSource.GENERIC, 2.0F);
-			}
-			if(effect != null && effect.getAmplifier() == 1) {
-				entityIn.attackEntityFrom(DamageSource.GENERIC, 1.0F);
-			}
+			entityIn.attackEntityFrom(DamageSource.LAVA, 8.0F);
+			entityIn.attackEntityFrom(DamageSource.GENERIC, 2.0F);
 		}
 	}
 
@@ -140,7 +131,7 @@ public class ActiveLavaFluid extends BlockFluidClassic {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 
-		if (pos.getY() <= -3000 && Math.random() <= 0.2) {
+		if (pos.getY() <= -3000 && Math.random() <= 0.15) {
 			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
 				worldIn.setBlockState(pos.up(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
 			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)

@@ -6,7 +6,7 @@
             "entries": [
                 {
                     "type": "item",
-                    "weight": 1,
+                    "weight": 3,
                     "name": "telepads:ender_bead",
                     "conditions": [
                         {
@@ -14,7 +14,7 @@
                         },
                         {
                             "condition": "random_chance",
-                            "chance": 0.2
+                            "chance": 0.5
                         }
                     ],
                     "functions": [
@@ -58,7 +58,7 @@
                         },
                         {
                             "condition": "random_chance",
-                            "chance": 0.3
+                            "chance": 0.01
                         }
                     ]
                 },
@@ -66,20 +66,6 @@
                     "type": "item",
                     "weight": 1,
                     "name": "planetcore:ruby",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        },
-                        {
-                            "condition": "random_chance",
-                            "chance": 0.1
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:diamond",
                     "conditions": [
                         {
                             "condition": "killed_by_player"
