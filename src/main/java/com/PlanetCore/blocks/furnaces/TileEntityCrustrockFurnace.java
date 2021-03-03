@@ -209,10 +209,10 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
         if (this.isBurning()) {
             --this.furnaceBurnTime;
             if (steel_ingot || steel_ingot1 || steel_ingot2) this.totalCookTime = 1000;
-            if (bronze_ingot) this.totalCookTime = 2000;
-            if (titanium_uranium_ingot) this.totalCookTime = 5000;
-            if (tungsten_uranium_ingot) this.totalCookTime = 100;
-            if (tungsten_titanium_ingot) this.totalCookTime = 150;
+            if (bronze_ingot) this.totalCookTime = 250;
+            if (titanium_uranium_ingot) this.totalCookTime = 500;
+            if (tungsten_uranium_ingot) this.totalCookTime = 750;
+            if (tungsten_titanium_ingot) this.totalCookTime = 1000;
         }
 
         if (!world.isRemote) {
