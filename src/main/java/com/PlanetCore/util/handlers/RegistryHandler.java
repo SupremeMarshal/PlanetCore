@@ -104,6 +104,8 @@ public class RegistryHandler {
 
         NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 
+        OreDictionary.registerOre("ingotIron", new ItemStack(ModItems.IRON_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotGold", new ItemStack(ModItems.GOLD_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.STEEL_INGOT, 1, OreDictionary.WILDCARD_VALUE));
