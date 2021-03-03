@@ -336,13 +336,81 @@ public class Corerock extends BlockBase implements IMetaName {
 		{
 			worldIn.setBlockToAir(blockpos);
 			worldIn.playSound(null, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (worldIn.rand.nextFloat() - worldIn.rand.nextFloat()) * 0.8F);
-
 			if (worldIn instanceof WorldServer)
 			{
 				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
 			}
 		}
+
+		
 	}
+
+	public void spawnLava(World worldIn, BlockPos pos, IBlockState state)
+	{
+		Random rand = new Random();
+		if (!worldIn.isRemote)
+		{
+			if (state.getBlock().getMetaFromState(state) == 0)
+			{
+				if (rand.nextInt(150) == 0) {
+					if (rand.nextInt(2) == 0) {
+						worldIn.setBlockState(pos, Blocks.LAVA.getDefaultState());
+					}
+					else {
+						worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
+					}
+				}
+			}
+			if (state.getBlock().getMetaFromState(state) == 1)
+			{
+				if (rand.nextInt(120) == 0) {
+					worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
+				}
+			}
+			if (state.getBlock().getMetaFromState(state) == 2)
+			{
+				if (rand.nextInt(90) == 0) {
+					worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
+				}
+			}
+		}
+	}
+
+	public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
+	{
+		Random rand = new Random();
+		int X = pos.getX();
+		int Z = pos.getZ();
+		int Y = pos.getY();
+		if (!worldIn.isRemote) {
+			if (Y <= -5750 && Y > -6000) {
+				if (rand.nextInt(400) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 1, true);
+				}
+			}
+			if (Y <= -6000 && Y > -7000) {
+				if (rand.nextInt(300) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(10) + 1, true);
+				}
+			}
+			if (Y <= -7000 && Y > -8000) {
+				if (rand.nextInt(250) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(12) + 1, true);
+				}
+			}
+			if (Y <= -8000 && Y > -9000) {
+				if (rand.nextInt(200) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(14) + 1, true);
+				}
+			}
+			if (Y <= -9000) {
+				if (rand.nextInt(150) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(18) + 1, true);
+				}
+			}
+		}
+	}
+
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
@@ -350,6 +418,15 @@ public class Corerock extends BlockBase implements IMetaName {
 		particleEffects(stateIn, worldIn, pos, rand);
 	}
 
+
+	@Override
+	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
+		super.onPlayerDestroy(worldIn, pos, state);
+		//naturalGasExplosion(worldIn, pos, state);
+		//earthquake(worldIn, pos, state);
+		naturalGasExplosion(worldIn, pos, state);
+		spawnLava(worldIn, pos, state);
+	}
 
 
 	public boolean canEntitySpawn(IBlockState state, Entity entityIn)
