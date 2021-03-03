@@ -30,7 +30,7 @@ public class EntityGhoul extends EntityMob
 	{
 		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityPlayerMP.class, false, false));
 		this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, true));
-		this.tasks.addTask(3, new EntityAIAttackMelee(this, 1.2, true));
+		this.tasks.addTask(3, new EntityAIAttackMelee(this, 1.0, true));
 		this.tasks.addTask(4, new EntityAIWatchClosest(this, EntityPlayerMP.class, (float) 12));
 		this.tasks.addTask(5, new EntityAIWander(this, 0.6));
 		this.tasks.addTask(6, new EntityAILookIdle(this));
@@ -83,11 +83,10 @@ public class EntityGhoul extends EntityMob
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30D);
-		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(6.0D);
-		if (this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE) != null)
-			this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(6D);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.3D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20D);
+		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(3.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(6D);
 	}
 
 	
