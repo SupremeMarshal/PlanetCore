@@ -111,11 +111,9 @@ public class OnyxLavaFluid extends BlockFluidClassic {
 		{
 			entityIn.attackEntityFrom(DamageSource.GENERIC, 20.0F);
 		}
-
+		else
 		{
-			//no protection = entity Set dead
-
-			//entityIn.setDead();
+			entityIn.attackEntityFrom(DamageSource.GENERIC, 999.0F);
 		}
 	}
 
