@@ -33,6 +33,8 @@ tile.damaged_gold_anvil.name = Damaged Gold Anvil
 
 generator.PlanetCore=PlanetCore
 
+
+
 //TOOLS
 item.wooden_sword.name=Wooden sword
 item.wooden_shovel.name=Wooden shovel
@@ -4396,16 +4398,94 @@ item.enhancing_gem.name=§6Enhancing gem
 item.hot_blaze_powder.name=Hot Blaze Powder
 
 
+item.aluminium_ore.name=Aluminium ore
+item.lead_ore.name=Lead ore
+item.silicon_ore.name=Silicon ore
+item.tin_ore.name=Tin ore
+item.copper_ore.name=Copper ore
+item.zinc_ore.name=Zinc ore
+item.bronze_ore.name=Bronze ore
+item.iron_ore.name=Iron ore
+item.steel_ore.name=Steel ore
+item.silver_ore.name=Silver ore
+item.gold_ore.name=Gold ore
+item.platinum_ore.name=Platinum ore
+item.titanium_ore.name=Titanium ore
+item.uranium_ore.name=Uranium ore
+item.tungsten_ore.name=Tungsten ore
+
+item.aluminium_shard.name=Aluminium shard
+item.lead_shard.name=Lead shard
+item.silicon_shard.name=Silicon shard
+item.tin_shard.name=Tin shard
+item.copper_shard.name=Copper shard
+item.zinc_shard.name=Zinc shard
+item.bronze_shard.name=Bronze shard
+item.iron_shard.name=Iron shard
+item.steel_shard.name=Steel shard
+item.silver_shard.name=Silver shard
+item.gold_shard.name=Gold shard
+item.platinum_shard.name=Platinum shard
+item.titanium_shard.name=Titanium shard
+item.uranium_shard.name=Uranium shard
+item.tungsten_shard.name=Tungsten shard
+
 //Ingot
 
 item.aluminium_ingot.name=Aluminium ingot
 item.lead_ingot.name=Lead ingot
 item.silicon_ingot.name=Silicon ingot
-item.zinc_ingot.name=Zinc ingot
 item.tin_ingot.name=Tin ingot
 item.copper_ingot.name=Copper ingot
+item.zinc_ingot.name=Zinc ingot
 item.bronze_ingot.name=Bronze ingot
 item.iron_ingot.name=Iron ingot
+item.steel_ingot.name=Steel ingot
+item.silver_ingot.name=Silver ingot
+item.gold_ingot.name=Gold ingot
+item.platinum_ingot.name=Platinum ingot
+item.titanium_ingot.name=Titanium ingot
+item.uranium_ingot.name=Uranium ingot
+item.tungsten_ingot.name=Tungsten ingot
+item.titanium_uranium_ingot.name=Titanium and Uranium alloy ingot
+item.tungsten_uranium_ingot.name=Tungsten and Uranium alloy ingot
+item.tungsten_titanium_ingot.name=Tungsten and Titanium alloy ingot
+
+//Rod
+
+item.azurite_rod.name=Azurite rod
+item.onyx_rod.name=§6Onyx rod
+item.amethyst_rod.name=Amethyst rod
+item.amazonite_rod.name=§6Amazonite rod
+item.jade_rod.name=Jade rod
+item.diamond_rod.name=§dDiamond rod
+item.topaz_rod.name=Topaz rod
+item.ruby_rod.name=§bRuby rod
+item.sapphire_rod.name=§aSapphire rod
+item.emerald_rod.name=Emerald rod
+item.aluminium_rod.name=Aluminium rod
+item.lead_rod.name=Lead rod
+item.silicon_rod.name=Silicon rod
+item.tin_rod.name=Tin rod
+item.copper_rod.name=Copper rod
+item.zinc_rod.name=Zinc rod
+item.bronze_rod.name=Bronze rod
+item.iron_rod.name=Iron rod
+item.steel_rod.name=Steel rod
+item.silver_rod.name=Silver rod
+item.gold_rod.name=Gold rod
+item.platinum_rod.name=Platinum rod
+item.titanium_rod.name=Titanium rod
+item.uranium_rod.name=Uranium rod
+item.tungsten_rod.name=Tungsten rod
+item.titanium_uranium_rod.name=Titanium and Uranium alloy rod
+item.tungsten_uranium_rod.name=Tungsten and Uranium alloy rod
+item.tungsten_titanium_rod.name=Tungsten and Titanium alloy rod
+item.olivine_rod.name=Olivine rod
+item.wadsleyite_rod.name=Wadsleyite rod
+item.ringwoodite_rod.name=Ringwoodite rod
+item.brigmanite_rod.name=Brigmanite rod
+item.majorite_rod.name=Majorite rod
 
 
 //Shield

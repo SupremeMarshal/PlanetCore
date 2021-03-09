@@ -1,6 +1,6 @@
 {
    "parent": "item/generated",
    "textures": {
-        "layer0": "planetcore:items/silicon_ore"
+        "layer0": "planetcore:items/zinc_ore"
     }
 }

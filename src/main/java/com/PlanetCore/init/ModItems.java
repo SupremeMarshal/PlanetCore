@@ -595,6 +595,46 @@ public class ModItems {
 	public static final Item TUNGSTEN_URANIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_TITANIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
+	//Ingot//
+	public static final Item ALUMINIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item LEAD_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item SILICON_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item COPPER_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item ZINC_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TIN_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item IRON_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item STEEL_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BRONZE_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item SILVER_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item GOLD_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item PLATINUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TITANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item URANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TUNGSTEN_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TITANIUM_URANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TUNGSTEN_URANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TUNGSTEN_TITANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+
+	//Ingot//
+	public static final Item ALUMINIUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item LEAD_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item SILICON_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item COPPER_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item ZINC_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TIN_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item IRON_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item STEEL_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BRONZE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item SILVER_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item GOLD_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item PLATINUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TITANIUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item URANIUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TUNGSTEN_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TITANIUM_URANIUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TUNGSTEN_URANIUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TUNGSTEN_TITANIUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+
 	public static final Item IRON_COAL = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SULFUR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
@@ -722,7 +762,6 @@ public class ModItems {
 	public static final Item RINGWOODITE_SHIELD = new ItemShield();
 	public static final Item BRIGMANITE_SHIELD = new ItemShield();
 	public static final Item AMAZONITE_SHIELD = new ItemShield();
-	public static final Item MAJORITE_SHIELD = new MajoriteShield();
 	public static final Item ONYX_SHIELD = new OnyxShield();
 
 	public static List<Item> getItems() {
