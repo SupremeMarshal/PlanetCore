@@ -91,9 +91,9 @@ public class BlockBase extends Block {
 	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
 	 * }
 	 */
-	private static final float [] crustHardnessByMeta = {2, 2.5F, 3, 3.5F, 4, 4.5F, 5, 5.5F, 6};
-	private static final float [] mantleHardnessByMeta = {7, 8, 9, 10, 12, 14, 17, 20, 25, 30, 36, 43, 51, 62, 74, 100};
-	private static final float [] coreHardnessByMeta = {200, 400, 600};
+	private static final float [] crustHardnessByMeta = {2.25F, 3.37F, 5, 7.5F, 11, 17, 25, 38, 57};
+	private static final float [] mantleHardnessByMeta = {86, 129, 194, 291, 437, 656, 985, 1477, 2216, 3325, 4987, 7481, 11222, 16834, 25251, 37876};
+	private static final float [] coreHardnessByMeta = {56815, 85222, 127834};
 
 
 
@@ -134,6 +134,19 @@ public class BlockBase extends Block {
 		else if (a.contains("lapis")) { c = true; if (!b) { drop = Items.DYE; } else { drop = ModItems.LAPIS_SHARD; }}
 		else if (a.contains("sulfur")) { c = true; if (!b) { drop = ModItems.SULFUR; } else { drop = ModItems.SULFUR_SHARD; }}
 		else if (a.contains("coal")) { c = true; if (!b) { drop = Items.COAL; } else { drop = ModItems.COAL_BIT; }}
+		else if (a.contains("aluminium")) { c = true; if (!b) { drop = ModItems.ALUMINIUM_ORE; } else { drop = ModItems.ALUMINIUM_SHARD; }}
+		else if (a.contains("silicon")) { c = true; if (!b) { drop = ModItems.SILICON_ORE; } else { drop = ModItems.SILICON_SHARD; }}
+		else if (a.contains("lead")) { c = true; if (!b) { drop = ModItems.LEAD_ORE; } else { drop = ModItems.LEAD_SHARD; }}
+		else if (a.contains("tin")) { c = true; if (!b) { drop = ModItems.TIN_ORE; } else { drop = ModItems.TIN_SHARD; }}
+		else if (a.contains("copper")) { c = true; if (!b) { drop = ModItems.COPPER_ORE; } else { drop = ModItems.COPPER_SHARD; }}
+		else if (a.contains("zinc")) { c = true; if (!b) { drop = ModItems.ZINC_ORE; } else { drop = ModItems.ZINC_SHARD; }}
+		else if (a.contains("iron")) { c = true; if (!b) { drop = ModItems.IRON_ORE; } else { drop = ModItems.IRON_SHARD; }}
+		else if (a.contains("silver")) { c = true; if (!b) { drop = ModItems.SILVER_ORE; } else { drop = ModItems.SILVER_SHARD; }}
+		else if (a.contains("gold")) { c = true; if (!b) { drop = ModItems.GOLD_ORE; } else { drop = ModItems.GOLD_SHARD; }}
+		else if (a.contains("platinum")) { c = true; if (!b) { drop = ModItems.PLATINUM_ORE; } else { drop = ModItems.PLATINUM_SHARD; }}
+		else if (a.contains("titanium")) { c = true; if (!b) { drop = ModItems.TITANIUM_ORE; } else { drop = ModItems.TITANIUM_SHARD; }}
+		else if (a.contains("uranium")) { c = true; if (!b) { drop = ModItems.URANIUM_ORE; } else { drop = ModItems.URANIUM_SHARD; }}
+		else if (a.contains("tungsten")) { c = true; if (!b) { drop = ModItems.TUNGSTEN_ORE; } else { drop = ModItems.TUNGSTEN_SHARD; }}
 		else if (a.contains("emerald")) { c = true; if (!b) { drop = ModItems.EMERALD; } else { drop = ModItems.EMERALD_SHARD; }}
 		else if (a.contains("sapphire")) { c = true; if (!b) { drop = ModItems.SAPPHIRE; } else { drop = ModItems.SAPPHIRE_SHARD; }}
 		else if (a.contains("ruby")) { c = true; if (!b) { drop = ModItems.RUBY; } else { drop = ModItems.RUBY_SHARD; }}
@@ -160,7 +173,7 @@ public class BlockBase extends Block {
 		if (a.contains("lapis") && !a.contains("small")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-		else if (this == ModBlocks.CRUSTROCK || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("emerald")
+		else if (this == ModBlocks.CRUSTROCK || a.contains("lapis") || a.contains("redstone") || a.contains("sulfur") || a.contains("iron") || a.contains("coal") || a.contains("emerald")
 				|| a.contains("sapphire") || a.contains("ruby") || a.contains("topaz") || a.contains("jade")
 				|| a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite")
 				|| a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
@@ -218,7 +231,9 @@ public class BlockBase extends Block {
 	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random) {
 		String a = this.getTranslationKey();
-		if (a.contains("sulfur") || a.contains("coal")
+		if (a.contains("sulfur") || a.contains("coal") || a.contains("aluminium") || a.contains("silicon") || a.contains("lead")
+				|| a.contains("tin") || a.contains("copper") || a.contains("zinc") || a.contains("iron")
+				|| a.contains("silver") || a.contains("gold") || a.contains("platinum") || a.contains("titanium") || a.contains("uranium") || a.contains("tungsten")
 				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
 				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
 				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
