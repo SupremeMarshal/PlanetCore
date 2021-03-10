@@ -173,10 +173,12 @@ public class BlockBase extends Block {
 		if (a.contains("lapis") && !a.contains("small")) {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
-		else if (this == ModBlocks.CRUSTROCK || a.contains("lapis") || a.contains("redstone") || a.contains("sulfur") || a.contains("iron") || a.contains("coal") || a.contains("emerald")
-				|| a.contains("sapphire") || a.contains("ruby") || a.contains("topaz") || a.contains("jade")
-				|| a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite")
-				|| a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
+		else if (this == ModBlocks.CRUSTROCK || a.contains("lapis") || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("aluminium") || a.contains("silicon") || a.contains("lead")
+				|| a.contains("tin") || a.contains("copper") || a.contains("zinc") || a.contains("iron")
+				|| a.contains("silver") || a.contains("gold") || a.contains("platinum") || a.contains("titanium") || a.contains("uranium") || a.contains("tungsten")
+				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
+				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
+				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
 			return 0;
 		}
 		else return this.getMetaFromState(state);
