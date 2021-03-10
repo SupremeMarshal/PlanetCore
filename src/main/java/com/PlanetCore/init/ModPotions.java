@@ -16,10 +16,10 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class ModPotions {
-    public static final PotionType FIRE_RESISTANCE_II_POTION = new PotionType("fire_resistance_II", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 3600, 1)}).setRegistryName("fire_resistance_II");
-    public static final PotionType LONG_FIRE_RESISTANCE_II_POTION = new PotionType("long_fire_resistance_II", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 20*60*8, 1)}).setRegistryName("long_fire_resistance_II");
-    public static final PotionType FIRE_RESISTANCE_III_POTION = new PotionType("fire_resistance_III", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 3600, 2)}).setRegistryName("fire_resistance_III");
-    public static final PotionType LONG_FIRE_RESISTANCE_III_POTION = new PotionType("long_fire_resistance_III", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 20*60*8, 2)}).setRegistryName("long_fire_resistance_III");
+    public static final PotionType FIRE_RESISTANCE_II_POTION = new PotionType("fire_resistance_II", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 9600, 1)}).setRegistryName("fire_resistance_II");
+    public static final PotionType LONG_FIRE_RESISTANCE_II_POTION = new PotionType("long_fire_resistance_II", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 20*60*30, 1)}).setRegistryName("long_fire_resistance_II");
+    public static final PotionType FIRE_RESISTANCE_III_POTION = new PotionType("fire_resistance_III", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 9600, 2)}).setRegistryName("fire_resistance_III");
+    public static final PotionType LONG_FIRE_RESISTANCE_III_POTION = new PotionType("long_fire_resistance_III", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 20*60*30, 2)}).setRegistryName("long_fire_resistance_III");
 
     public static void registerPotions(){
         ForgeRegistries.POTION_TYPES.register(FIRE_RESISTANCE_II_POTION);
