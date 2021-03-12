@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "B ",
+        "B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:lead_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:lead_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:complete_lead_hoe",
+        "count": 1
+    }
+}

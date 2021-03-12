@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+        "AAA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:olivine"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:olivine_chestplate",
+        "count": 1
+    }
+}

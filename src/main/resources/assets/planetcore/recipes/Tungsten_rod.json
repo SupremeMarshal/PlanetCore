@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:tungsten_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:tungsten_rod",
+        "count": 1
+    }
+}

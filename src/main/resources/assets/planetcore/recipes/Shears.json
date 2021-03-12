@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " A",
+        "A "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:iron_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:shears",
+        "count": 1
+    }
+}

@@ -1,0 +1,17 @@
+{"variants":{
+  "variant=mantlerock":{"model":"planetcore:mantlerock"},
+  "variant=mantlerock1":{"model":"planetcore:mantlerock1"},
+  "variant=mantlerock2":{"model":"planetcore:mantlerock2"},
+  "variant=mantlerock3":{"model":"planetcore:mantlerock3"},
+  "variant=mantlerock4":{"model":"planetcore:mantlerock4"},
+  "variant=mantlerock5":{"model":"planetcore:mantlerock5"},
+  "variant=mantlerock6":{"model":"planetcore:mantlerock6"},
+  "variant=mantlerock7":{"model":"planetcore:mantlerock7"},
+  "variant=mantlerock8":{"model":"planetcore:mantlerock8"},
+  "variant=lower_mantlerock":{"model":"planetcore:lower_mantlerock"},
+  "variant=lower_mantlerock1":{"model":"planetcore:lower_mantlerock1"},
+  "variant=lower_mantlerock2":{"model":"planetcore:lower_mantlerock2"},
+  "variant=lower_mantlerock3":{"model":"planetcore:lower_mantlerock3"},
+  "variant=lower_mantlerock4":{"model":"planetcore:lower_mantlerock4"},
+  "variant=lower_mantlerock5":{"model":"planetcore:lower_mantlerock5"},
+  "variant=lower_mantlerock6":{"model":"planetcore:lower_mantlerock6"}}}

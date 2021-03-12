@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "A",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:sapphire"
+        },
+        "B":
+        {
+            "item": "planetcore:sapphire_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:sapphire_sword",
+        "count": 1
+    }
+}

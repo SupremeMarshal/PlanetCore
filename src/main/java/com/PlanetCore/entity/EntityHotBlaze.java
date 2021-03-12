@@ -1,0 +1,232 @@
+package com.PlanetCore.entity;
+
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.*;
+import net.minecraft.entity.ai.attributes.IAttributeInstance;
+import net.minecraft.entity.monster.EntityBlaze;
+import net.minecraft.entity.monster.EntityGhast;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntitySmallFireball;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.World;
+
+import java.util.Random;
+
+public class EntityHotBlaze extends EntityBlaze {
+    public EntityHotBlaze(World worldIn) {
+        super(worldIn);
+
+        this.setSize(2, 4);
+    }
+
+    @Override
+    protected void applyEntityAttributes() {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(8.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(100.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(3.0D);
+    }
+
+    @Override
+    protected void initEntityAI(){
+        this.tasks.addTask(10, new EntityHotBlaze.AIRandomFly(this));
+        this.tasks.addTask(4, new EntityHotBlaze.AIFireballAttack(this));
+        // this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
+        // this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D, 0.0F));
+        this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+        this.tasks.addTask(8, new EntityAILookIdle(this));
+        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
+    }
+
+    // same as vanilla but doesn't randomize hover height
+    @Override
+    protected void updateAITasks(){
+        if (this.isWet()){
+            this.attackEntityFrom(DamageSource.DROWN, 1.0F);
+        }
+
+        EntityLivingBase target = this.getAttackTarget();
+
+        double heightOffset = 0.75;
+        if (target != null && target.posY + target.getEyeHeight() > this.posY + this.getEyeHeight() + heightOffset) {
+            this.motionY += (0.30000001192092896D - this.motionY) * 0.30000001192092896D;
+            this.isAirBorne = true;
+        }
+    }
+
+    // stolen from ghast, added target check
+    static class AIRandomFly extends EntityAIBase
+    {
+        private final EntityHotBlaze parentEntity;
+
+        public AIRandomFly(EntityHotBlaze ghast)
+        {
+            this.parentEntity = ghast;
+            this.setMutexBits(1);
+        }
+
+        /**
+         * Returns whether the EntityAIBase should begin execution.
+         */
+        public boolean shouldExecute(){
+            if (this.parentEntity.getAttackTarget() != null) return false;
+
+            EntityMoveHelper entitymovehelper = this.parentEntity.getMoveHelper();
+
+            if (!entitymovehelper.isUpdating())
+            {
+                return true;
+            }
+            else
+            {
+                double d0 = entitymovehelper.getX() - this.parentEntity.posX;
+                double d1 = entitymovehelper.getY() - this.parentEntity.posY;
+                double d2 = entitymovehelper.getZ() - this.parentEntity.posZ;
+                double d3 = d0 * d0 + d1 * d1 + d2 * d2;
+                return d3 < 1.0D || d3 > 3600.0D;
+            }
+        }
+
+        /**
+         * Returns whether an in-progress EntityAIBase should continue executing
+         */
+        public boolean shouldContinueExecuting()
+        {
+            return false;
+        }
+
+        /**
+         * Execute a one shot task or start executing a continuous task
+         */
+        public void startExecuting()
+        {
+            Random random = this.parentEntity.getRNG();
+            double d0 = this.parentEntity.posX + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
+            double d1 = this.parentEntity.posY + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
+            double d2 = this.parentEntity.posZ + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
+            this.parentEntity.getMoveHelper().setMoveTo(d0, d1, d2, 1.0D);
+        }
+    }
+
+    // same as vanilla
+    static class AIFireballAttack extends EntityAIBase
+    {
+        private final EntityBlaze blaze;
+        private int attackStep;
+        private int attackTime;
+
+        public AIFireballAttack(EntityBlaze blazeIn)
+        {
+            this.blaze = blazeIn;
+            this.setMutexBits(3);
+        }
+
+        /**
+         * Returns whether the EntityAIBase should begin execution.
+         */
+        public boolean shouldExecute()
+        {
+            EntityLivingBase entitylivingbase = this.blaze.getAttackTarget();
+            return entitylivingbase != null && entitylivingbase.isEntityAlive();
+        }
+
+        /**
+         * Execute a one shot task or start executing a continuous task
+         */
+        public void startExecuting()
+        {
+            this.attackStep = 0;
+            this.blaze.getNavigator().clearPath();
+        }
+
+        /**
+         * Reset the task's internal state. Called when this task is interrupted by another one
+         */
+        public void resetTask()
+        {
+            this.blaze.setOnFire(false);
+        }
+
+        /**
+         * Keep ticking a continuous task that has already been started
+         */
+        public void updateTask()
+        {
+            --this.attackTime;
+            EntityLivingBase entitylivingbase = this.blaze.getAttackTarget();
+            double d0 = this.blaze.getDistanceSq(entitylivingbase);
+
+            if (d0 < 4.0D)
+            {
+                if (this.attackTime <= 0)
+                {
+                    this.attackTime = 20;
+                    this.blaze.attackEntityAsMob(entitylivingbase);
+                }
+
+                this.blaze.getMoveHelper().setMoveTo(entitylivingbase.posX, entitylivingbase.posY, entitylivingbase.posZ, 1.0D);
+            }
+            else if (d0 < this.getFollowDistance() * this.getFollowDistance())
+            {
+                double d1 = entitylivingbase.posX - this.blaze.posX;
+                double d2 = entitylivingbase.getEntityBoundingBox().minY + (double)(entitylivingbase.height / 2.0F) - (this.blaze.posY + (double)(this.blaze.height / 2.0F));
+                double d3 = entitylivingbase.posZ - this.blaze.posZ;
+
+                if (this.attackTime <= 0)
+                {
+                    ++this.attackStep;
+
+                    if (this.attackStep == 1)
+                    {
+                        this.attackTime = 60;
+                        this.blaze.setOnFire(true);
+                    }
+                    else if (this.attackStep <= 4)
+                    {
+                        this.attackTime = 6;
+                    }
+                    else
+                    {
+                        this.attackTime = 100;
+                        this.attackStep = 0;
+                        this.blaze.setOnFire(false);
+                    }
+
+                    if (this.attackStep > 1)
+                    {
+                        float f = MathHelper.sqrt(MathHelper.sqrt(d0)) * 0.5F;
+                        this.blaze.world.playEvent((EntityPlayer)null, 1018, new BlockPos((int)this.blaze.posX, (int)this.blaze.posY, (int)this.blaze.posZ), 0);
+
+                        for (int i = 0; i < 1; ++i)
+                        {
+                            EntitySmallFireball entitysmallfireball = new EntitySmallFireball(this.blaze.world, this.blaze, d1 + this.blaze.getRNG().nextGaussian() * (double)f, d2, d3 + this.blaze.getRNG().nextGaussian() * (double)f);
+                            entitysmallfireball.posY = this.blaze.posY + (double)(this.blaze.height / 2.0F) + 0.5D;
+                            this.blaze.world.spawnEntity(entitysmallfireball);
+                        }
+                    }
+                }
+
+                this.blaze.getLookHelper().setLookPositionWithEntity(entitylivingbase, 10.0F, 10.0F);
+            }
+            else
+            {
+                this.blaze.getNavigator().clearPath();
+                this.blaze.getMoveHelper().setMoveTo(entitylivingbase.posX, entitylivingbase.posY, entitylivingbase.posZ, 1.0D);
+            }
+
+            super.updateTask();
+        }
+
+        private double getFollowDistance()
+        {
+            IAttributeInstance iattributeinstance = this.blaze.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE);
+            return iattributeinstance == null ? 16.0D : iattributeinstance.getAttributeValue();
+        }
+    }
+}

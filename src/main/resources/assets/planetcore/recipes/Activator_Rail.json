@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "ABA",
+        "ACA",
+        "ABA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:iron_ingot"
+        },
+        "B":
+        {
+            "item": "minecraft:stick"
+        },
+        "C":
+        {
+            "item": "minecraft:redstone_torch"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:activator_rail",
+        "count": 6
+    }
+}

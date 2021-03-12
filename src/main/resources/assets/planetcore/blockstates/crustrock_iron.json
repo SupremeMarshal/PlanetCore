@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "variant=crustrock": {
+      "model": "planetcore:crustrock_iron"
+    },
+    "variant=crustrock1": {
+      "model": "planetcore:crustrock1_iron"
+    },
+    "variant=crustrock2": {
+      "model": "planetcore:crustrock2_iron"
+    },
+    "variant=crustrock3": {
+      "model": "planetcore:crustrock3_iron"
+    },
+    "variant=crustrock4": {
+      "model": "planetcore:crustrock4_iron"
+    },
+    "variant=crustrock5": {
+      "model": "planetcore:crustrock5_iron"
+    },
+    "variant=crustrock6": {
+      "model": "planetcore:crustrock6_iron"
+    },
+    "variant=crustrock7": {
+      "model": "planetcore:crustrock7_iron"
+    },
+    "variant=crustrock8": {
+      "model": "planetcore:crustrock8_iron"
+    }
+  }
+}

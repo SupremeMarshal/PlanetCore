@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:topaz"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:topaz_block",
+        "count": 1
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:tin_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:tin_helmet",
+        "count": 1
+    }
+}

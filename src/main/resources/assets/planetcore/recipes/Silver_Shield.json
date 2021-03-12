@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:silver_rod"
+        },
+        "B":
+        {
+            "item": "planetcore:silver_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:silver_shield",
+        "count": 1
+    }
+}

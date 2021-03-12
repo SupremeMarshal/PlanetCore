@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:emerald"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:emerald_leggings",
+        "count": 1
+    }
+}

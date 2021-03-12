@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:lead_rod"
+        },
+        "B":
+        {
+            "item": "planetcore:lead_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:lead_shield",
+        "count": 1
+    }
+}

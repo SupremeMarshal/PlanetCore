@@ -1,0 +1,122 @@
+{
+  "action.indestructible":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible",
+    "sounds": [{"name": "planetcore:action/indestructible", "stream": true}]
+  },
+  "action.indestructible1":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible1",
+    "sounds": [{"name": "planetcore:action/indestructible1", "stream": true}]
+  },
+  "action.indestructible2":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible2",
+    "sounds": [{"name": "planetcore:action/indestructible2", "stream": true}]
+  },
+  "action.indestructible3":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible3",
+    "sounds": [{"name": "planetcore:action/indestructible3", "stream": true}]
+  },
+  "action.indestructible4":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible4",
+    "sounds": [{"name": "planetcore:action/indestructible4", "stream": true}]
+  },
+  "action.indestructible5":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible5",
+    "sounds": [{"name": "planetcore:action/indestructible5", "stream": true}]
+  },
+  "action.indestructible6":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible6",
+    "sounds": [{"name": "planetcore:action/indestructible6", "stream": true}]
+  },
+  "action.indestructible7":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible7",
+    "sounds": [{"name": "planetcore:action/indestructible7", "stream": true}]
+  },
+  "action.indestructible8":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible8",
+    "sounds": [{"name": "planetcore:action/indestructible8", "stream": true}]
+  },
+  "action.indestructible9":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible9",
+    "sounds": [{"name": "planetcore:action/indestructible9", "stream": true}]
+  },
+  "action.indestructible10":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible10",
+    "sounds": [{"name": "planetcore:action/indestructible10", "stream": true}]
+  },
+  "action.indestructible11":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible11",
+    "sounds": [{"name": "planetcore:action/indestructible11", "stream": true}]
+  },
+  "action.indestructible12":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible12",
+    "sounds": [{"name": "planetcore:action/indestructible12", "stream": true}]
+  },
+  "action.indestructible13":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible13",
+    "sounds": [{"name": "planetcore:action/indestructible13", "stream": true}]
+  },
+  "action.indestructible14":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible14",
+    "sounds": [{"name": "planetcore:action/indestructible14", "stream": true}]
+  },
+  "action.indestructible15":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible15",
+    "sounds": [{"name": "planetcore:action/indestructible15", "stream": true}]
+  },
+  "action.indestructible16":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible16",
+    "sounds": [{"name": "planetcore:action/indestructible16", "stream": true}]
+  },
+  "action.indestructible17":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible17",
+    "sounds": [{"name": "planetcore:action/indestructible17", "stream": true}]
+  },
+  "action.indestructible18":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible18",
+    "sounds": [{"name": "planetcore:action/indestructible18", "stream": true}]
+  },
+  "action.indestructible19":
+  {
+    "category": "action",
+    "subtitle": "action.indestructible19",
+    "sounds": [{"name": "planetcore:action/indestructible19", "stream": true}]
+  }
+}

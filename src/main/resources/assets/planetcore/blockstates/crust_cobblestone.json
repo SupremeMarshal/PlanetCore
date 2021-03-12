@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "planetcore:crust_cobblestone" }
+    }
+}

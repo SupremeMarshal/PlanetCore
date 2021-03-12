@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:zinc_rod"
+        },
+        "B":
+        {
+            "item": "planetcore:zinc_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:zinc_shield",
+        "count": 1
+    }
+}

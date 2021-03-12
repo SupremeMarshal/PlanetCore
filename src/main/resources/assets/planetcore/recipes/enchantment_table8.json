@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " C ",
+        "ABA",
+        "BBB"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:wadsleyite"
+        },
+        "B":
+        {
+            "item": "minecraft:obsidian"
+        },
+        "C":
+        {
+            "item": "minecraft:book"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:enchanting_table",
+        "count": 1
+    }
+}

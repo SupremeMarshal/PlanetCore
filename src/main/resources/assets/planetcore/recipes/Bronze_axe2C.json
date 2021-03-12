@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "BA",
+        "B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:bronze_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:bronze_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:complete_bronze_axe",
+        "count": 1
+    }
+}

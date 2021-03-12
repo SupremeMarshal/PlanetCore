@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "A A",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:amazonite"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:amazonite_leggings",
+        "count": 1
+    }
+}

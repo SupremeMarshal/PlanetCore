@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "R R",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:crust_cobblestone"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:crustrock_furnace",
+        "count": 1
+    }
+}

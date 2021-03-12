@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:zinc_block"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:zinc_ingot",
+        "count": 9
+    }
+}

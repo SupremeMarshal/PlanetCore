@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        " B ",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:silicon_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:silicon_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:complete_silicon_pickaxe",
+        "count": 1
+    }
+}

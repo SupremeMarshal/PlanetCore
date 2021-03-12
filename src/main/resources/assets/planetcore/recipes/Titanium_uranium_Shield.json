@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:titanium_uranium_rod"
+        },
+        "B":
+        {
+            "item": "planetcore:titanium_uranium_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:titanium_uranium_shield",
+        "count": 1
+    }
+}
