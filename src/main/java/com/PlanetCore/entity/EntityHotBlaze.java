@@ -1,5 +1,6 @@
 package com.PlanetCore.entity;
 
+import com.PlanetCore.Main;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -9,7 +10,10 @@ import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySmallFireball;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -22,6 +26,8 @@ public class EntityHotBlaze extends EntityBlaze {
         super(worldIn);
 
         this.setSize(2, 4);
+        this.moveHelper = new EntityHotBlaze.GhastMoveHelper(this);
+        this.setNoGravity(true);
     }
 
     @Override
@@ -30,11 +36,12 @@ public class EntityHotBlaze extends EntityBlaze {
         this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(8.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(100.0D);
         this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(3.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(16.0D);
     }
 
     @Override
     protected void initEntityAI(){
-        this.tasks.addTask(10, new EntityHotBlaze.AIRandomFly(this));
+        this.tasks.addTask(5, new EntityHotBlaze.AIRandomFly(this));
         this.tasks.addTask(4, new EntityHotBlaze.AIFireballAttack(this));
         // this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
         // this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D, 0.0F));
@@ -44,20 +51,18 @@ public class EntityHotBlaze extends EntityBlaze {
         this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
     }
 
-    // same as vanilla but doesn't randomize hover height
     @Override
-    protected void updateAITasks(){
-        if (this.isWet()){
-            this.attackEntityFrom(DamageSource.DROWN, 1.0F);
-        }
+    public void onLivingUpdate()
+    {
+        super.onLivingUpdate();
+        System.out.println(this.motionX + " " + this.motionY + " " + this.motionZ);
+    }
 
-        EntityLivingBase target = this.getAttackTarget();
-
-        double heightOffset = 0.75;
-        if (target != null && target.posY + target.getEyeHeight() > this.posY + this.getEyeHeight() + heightOffset) {
-            this.motionY += (0.30000001192092896D - this.motionY) * 0.30000001192092896D;
-            this.isAirBorne = true;
-        }
+    protected boolean hasAttackTarget(){
+        boolean living = this.getAttackTarget() != null && this.getAttackTarget().isEntityAlive();
+        if (!living) return false;
+        boolean notCreative = !(this.getAttackTarget() instanceof EntityPlayer) || !((EntityPlayer)this.getAttackTarget()).isCreative();
+        return living && notCreative;
     }
 
     // stolen from ghast, added target check
@@ -75,7 +80,8 @@ public class EntityHotBlaze extends EntityBlaze {
          * Returns whether the EntityAIBase should begin execution.
          */
         public boolean shouldExecute(){
-            if (this.parentEntity.getAttackTarget() != null) return false;
+            if (this.parentEntity.hasAttackTarget()) return false;
+            if (this.parentEntity.getRNG().nextInt(30) == 0) return true;
 
             EntityMoveHelper entitymovehelper = this.parentEntity.getMoveHelper();
 
@@ -91,6 +97,8 @@ public class EntityHotBlaze extends EntityBlaze {
                 double d3 = d0 * d0 + d1 * d1 + d2 * d2;
                 return d3 < 1.0D || d3 > 3600.0D;
             }
+
+
         }
 
         /**
@@ -106,11 +114,26 @@ public class EntityHotBlaze extends EntityBlaze {
          */
         public void startExecuting()
         {
+            System.out.println("random fly start");
+
             Random random = this.parentEntity.getRNG();
-            double d0 = this.parentEntity.posX + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-            double d1 = this.parentEntity.posY + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-            double d2 = this.parentEntity.posZ + (double)((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-            this.parentEntity.getMoveHelper().setMoveTo(d0, d1, d2, 1.0D);
+
+            double d0 = this.parentEntity.posX + (double)((random.nextFloat() - 0.5F) * 64.0F);
+            double d1 = this.parentEntity.posY + (double)((random.nextFloat() - 0.5F) * 16.0F);
+            double d2 = this.parentEntity.posZ + (double)((random.nextFloat() - 0.5F) * 64.0F);
+            for (int i=0;i<16;i++){
+                BlockPos go = new BlockPos(d0, d1, d2);
+                if (this.parentEntity.world.getBlockState(go).getBlock() == Blocks.AIR){
+                    System.out.println("found air");
+                    break;
+                }
+
+                d0 = this.parentEntity.posX + (double)((random.nextFloat() - 0.5F) * 64.0F);
+                d1 = this.parentEntity.posY + (double)((random.nextFloat() - 0.5F) * 16.0F);
+                d2 = this.parentEntity.posZ + (double)((random.nextFloat() - 0.5F) * 64.0F);
+            }
+
+            this.parentEntity.getMoveHelper().setMoveTo(d0, d1, d2, 1.5D);
         }
     }
 
@@ -227,6 +250,72 @@ public class EntityHotBlaze extends EntityBlaze {
         {
             IAttributeInstance iattributeinstance = this.blaze.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE);
             return iattributeinstance == null ? 16.0D : iattributeinstance.getAttributeValue();
+        }
+    }
+
+    static class GhastMoveHelper extends EntityMoveHelper
+    {
+        private final EntityHotBlaze parentEntity;
+        private int courseChangeCooldown;
+
+        public GhastMoveHelper(EntityHotBlaze ghast)
+        {
+            super(ghast);
+            this.parentEntity = ghast;
+        }
+
+        public void onUpdateMoveHelper()
+        {
+            if (this.action == EntityMoveHelper.Action.MOVE_TO)
+            {
+                double d0 = this.posX - this.parentEntity.posX;
+                double d1 = this.posY - this.parentEntity.posY;
+                double d2 = this.posZ - this.parentEntity.posZ;
+                double d3 = d0 * d0 + d1 * d1 + d2 * d2;
+
+                if (this.courseChangeCooldown-- <= 0)
+                {
+                    this.courseChangeCooldown += this.parentEntity.getRNG().nextInt(5) + 2;
+                    d3 = (double)MathHelper.sqrt(d3);
+
+                    if (this.isNotColliding(this.posX, this.posY, this.posZ, d3))
+                    {
+                        this.parentEntity.motionX += d0 / d3 * 0.1D;
+                        this.parentEntity.motionY += d1 / d3 * 0.1D;
+                        this.parentEntity.motionZ += d2 / d3 * 0.1D;
+                    }
+                    else {
+                        if (this.parentEntity.hasAttackTarget()) {
+                            this.action = EntityMoveHelper.Action.WAIT;
+                        } else {
+                            this.parentEntity.motionY += 0.3;
+                        }
+                    }
+                }
+            }
+        }
+
+        /**
+         * Checks if entity bounding box is not colliding with terrain
+         */
+        private boolean isNotColliding(double x, double y, double z, double p_179926_7_)
+        {
+            double d0 = (x - this.parentEntity.posX) / p_179926_7_;
+            double d1 = (y - this.parentEntity.posY) / p_179926_7_;
+            double d2 = (z - this.parentEntity.posZ) / p_179926_7_;
+            AxisAlignedBB axisalignedbb = this.parentEntity.getEntityBoundingBox();
+
+            for (int i = 1; (double)i < p_179926_7_; ++i)
+            {
+                axisalignedbb = axisalignedbb.offset(d0, d1, d2);
+
+                if (!this.parentEntity.world.getCollisionBoxes(this.parentEntity, axisalignedbb).isEmpty())
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
