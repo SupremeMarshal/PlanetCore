@@ -17,7 +17,13 @@ public class ModelDemon extends AnimatedGeoModel<EntityDemon> {
 
     @Override
     public ResourceLocation getTextureLocation(EntityDemon entity) {
-        // return new ResourceLocation(Reference.MOD_ID, "textures/entity/demon_black.png");
+        if (entity.getTextureType() == 1)
+            return new ResourceLocation(Reference.MOD_ID, "textures/entity/demon_black.png");
+
+        if (entity.getTextureType() == 0)
+            return new ResourceLocation(Reference.MOD_ID, "textures/entity/demon_red.png");
+
+        System.out.println("INVALID DEMON TYPE defaulting to red");
         return new ResourceLocation(Reference.MOD_ID, "textures/entity/demon_red.png");
     }
 
