@@ -21,7 +21,7 @@ public class EntityInit
 	public static void registerEntities()
 	{
 		registerEntity("demon", EntityDemon.class, ModConfiguration.ENTITY_DEMON_ID, 50, 11437146, 000000);
-		registerEntity("blackdemon", EntityBlackDemon.class, ModConfiguration.ENTITY_BLACKDEMON_ID, 50, 999999, 000000);
+		// registerEntity("blackdemon", EntityDemon.class, ModConfiguration.ENTITY_BLACKDEMON_ID, 50, 999999, 000000);
 		registerEntity("ghoul", EntityGhoul.class, ModConfiguration.ENTITY_GHOUL_ID, 50, 888888, 222222);
 		registerEntity("hellhound", EntityHellHound.class, ModConfiguration.ENTITY_HELLHOUND_ID, 50, 666666, 000000);
 		registerEntity("entityfallingblock", EntityFallingBlock.class, ModConfiguration.ENTITY_FALLING_BLOCK_ID, 50, 666666, 000000);
@@ -34,7 +34,6 @@ public class EntityInit
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
 		Biome[] spawnBiomes = allbiomes(Biome.REGISTRY);
 		EntityRegistry.addSpawn(EntityDemon.class, 15, 2, 20, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityBlackDemon.class, 10, 2, 20, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityGhoul.class, 20, 3, 27, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityHellHound.class, 20, 4, 25, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityDeathEnderman.class, 20, 4, 25, EnumCreatureType.MONSTER, spawnBiomes);

@@ -30,15 +30,6 @@ public class RenderHandler
 				return new RenderDemon(manager);
 			}
 		});
-		//Black demon
-		RenderingRegistry.registerEntityRenderingHandler(EntityBlackDemon.class, new IRenderFactory<EntityBlackDemon>()
-		{
-		
-		@Override
-		public Render<? super EntityBlackDemon> createRenderFor(RenderManager manager) {
-			return new RenderBlackDemon(manager);
-			}
-		});
 		//Ghoul
 		RenderingRegistry.registerEntityRenderingHandler(EntityGhoul.class, new IRenderFactory<EntityGhoul>()
 		{

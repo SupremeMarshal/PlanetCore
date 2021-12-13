@@ -19,12 +19,18 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
+import software.bernie.geckolib3.GeckoLib;
+
 
 import java.io.File;
 
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
+    public Main(){
+        GeckoLib.initialize();
+    }
+    
 
     @Instance
     public static Main instance;
