@@ -106,12 +106,9 @@ public class ModBlocks {
         LAPIS(OreType.GEM, 5.0F, 1.0F),
         REDSTONE(OreType.GEM, 5.0F, 1.0F),
         SULFUR(METAL, 3.0F, 1.0F),
-        ZINC(METAL, 6.75F, 1.0F),
         COPPER(METAL, 4.5F, 1.0F),
         TIN(METAL, 4.5F, 1.0F),
-        SILICON(METAL, 3F, 1.0F),
-        LEAD(METAL, 2.0F, 1.0F),
-        ALUMINIUM(METAL, 1.0F, 1.0F),
+        ALUMINIUM(METAL, 0.5F, 1.0F),
         COAL(METAL, 0.1F, 0.0F);
 
         private final OreType type;
@@ -146,22 +143,18 @@ public class ModBlocks {
      */
     public enum OreForm {
         //ORE_VERYSMALL(0.0F, 0.0F, id -> new OreBase(id, Material.ROCK)),
-        ORE_SMALL(0.25F, 1 + 0.5F, id -> new BlockBase(id, Material.ROCK)),
         ORE(1.0F, 1 + 1F, id -> new BlockBase(id, Material.ROCK)),
         ORE_COMPACT(4.0F, 1 + 1.2F, id -> new BlockBase(id, Material.ROCK)),
         //ORE_VERYCOMPACT(16.0F, 16.0F, id -> new OreBase(id, Material.ROCK)),
         //CRUSTROCK_VERYSMALL(0.0F, 0.0F, id -> new Crustrock(id, Material.ROCK)),
-        CRUSTROCK_SMALL(0.25F, 1 + 0.5F, id -> new Crustrock(id, Material.ROCK)),
         CRUSTROCK(1.0F, 1 + 1F, id -> new Crustrock(id, Material.ROCK)),
         CRUSTROCK_COMPACT(4.0F, 1 + 1.2F, id -> new Crustrock(id, Material.ROCK)),
         //CRUSTROCK_VERYCOMPACT(16.0F, 16.0F, id -> new Crustrock(id, Material.ROCK)),
         //MANTLEROCK_VERYSMALL(0.0F, 0.0F, id -> new Mantlerock(id, Material.ROCK)),
-        MANTLEROCK_SMALL(0.25F, 1 + 0.5F, id -> new Mantlerock(id, Material.ROCK)),
         MANTLEROCK(1.0F, 1 + 1F, id -> new Mantlerock(id, Material.ROCK)),
         MANTLEROCK_COMPACT(4.0F, 1 + 1.2F, id -> new Mantlerock(id, Material.ROCK)),
         //MANTLEROCK_VERYCOMPACT(16.0F, 16.0F, id -> new Mantlerock(id, Material.ROCK)),
         //CORESTONE_VERYSMALL(0.0F, 0.0F, id -> new Corerock(id, Material.ROCK)),
-        CORESTONE_SMALL(0.25F, 0.5F, id -> new Corerock(id, Material.ROCK)),
         CORESTONE(1.0F, 2 + 1F, id -> new Corerock(id, Material.ROCK)),
         CORESTONE_COMPACT(4.0F, 2 + 1.2F, id -> new Corerock(id, Material.ROCK));
         //CORESTONE_VERYCOMPACT(16.0F, 16.0F, id -> new Corerock(id, Material.ROCK));
@@ -230,39 +223,30 @@ public class ModBlocks {
     public static final CrustrockFurnace CRUSTROCK_FURNACE = _null();
     public static final CrustrockFurnace LIT_CRUSTROCK_FURNACE = _null();
 
-    public static final BlockBase ORE_SMALL_COPPER = _null();
     public static final BlockBase ORE_COPPER = _null();
     public static final BlockBase ORE_COMPACT_COPPER = _null();
 
-    public static final BlockBase ORE_SMALL_TIN = _null();
     public static final BlockBase ORE_TIN = _null();
     public static final BlockBase ORE_COMPACT_TIN = _null();
 
-    public static final Crustrock CRUSTROCK_SMALL_COPPER = _null();
     public static final Crustrock CRUSTROCK_COPPER = _null();
     public static final Crustrock CRUSTROCK_COMPACT_COPPER = _null();
 
-    public static final Crustrock CRUSTROCK_SMALL_TIN = _null();
     public static final Crustrock CRUSTROCK_TIN = _null();
     public static final Crustrock CRUSTROCK_COMPACT_TIN = _null();
 
-    public static final BlockBase ORE_SMALL_IRON = _null();
     public static final BlockBase ORE_IRON = _null();
     public static final BlockBase ORE_COMPACT_IRON = _null();
 
-    public static final Crustrock CRUSTROCK_SMALL_IRON = _null();
     public static final Crustrock CRUSTROCK_IRON = _null();
     public static final Crustrock CRUSTROCK_COMPACT_IRON = _null();
 
-    public static final Mantlerock MANTLEROCK_SMALL_IRON = _null();
     public static final Mantlerock MANTLEROCK_IRON = _null();
     public static final Mantlerock MANTLEROCK_COMPACT_IRON = _null();
 
-    public static final Mantlerock MANTLEROCK_SMALL_COPPER = _null();
     public static final Mantlerock MANTLEROCK_COPPER = _null();
     public static final Mantlerock MANTLEROCK_COMPACT_COPPER = _null();
 
-    public static final Mantlerock MANTLEROCK_SMALL_TIN = _null();
     public static final Mantlerock MANTLEROCK_TIN = _null();
     public static final Mantlerock MANTLEROCK_COMPACT_TIN = _null();
 
@@ -292,9 +276,6 @@ public class ModBlocks {
     public static final BlocksBase IRON_BLOCK = _null();
     public static final BlocksBase COPPER_BLOCK = _null();
     public static final BlocksBase TIN_BLOCK = _null();
-    public static final BlocksBase ZINC_BLOCK = _null();
-    public static final BlocksBase SILICON_BLOCK = _null();
-    public static final BlocksBase LEAD_BLOCK = _null();
     public static final BlocksBase ALUMINIUM_BLOCK = _null();
 
     public static final BlocksBase ONYX_SUPERCOMPACT = _null();
@@ -324,9 +305,6 @@ public class ModBlocks {
     public static final BlocksBase IRON_SUPERCOMPACT = _null();
     public static final BlocksBase COPPER_SUPERCOMPACT = _null();
     public static final BlocksBase TIN_SUPERCOMPACT = _null();
-    public static final BlocksBase ZINC_SUPERCOMPACT = _null();
-    public static final BlocksBase SILICON_SUPERCOMPACT = _null();
-    public static final BlocksBase LEAD_SUPERCOMPACT = _null();
     public static final BlocksBase ALUMINIUM_SUPERCOMPACT = _null();
     public static final BlocksBase COAL_SUPERCOMPACT = _null();
 
@@ -380,8 +358,8 @@ public class ModBlocks {
         for (ModBlocks.OreForm oreForm : ModBlocks.OreForm.values()) {
 
             for (ModBlocks.Ore ore : ModBlocks.Ore.values()) {
-                if (ore.type == OreType.METAL && (oreForm == OreForm.CORESTONE || /*oreForm == OreForm.CORESTONE_VERYSMALL || */ oreForm == OreForm.CORESTONE_SMALL
-                        || oreForm == OreForm.CORESTONE_COMPACT /* || oreForm == OreForm.CORESTONE_VERYCOMPACT */)) {
+                if (ore.type == OreType.METAL && (oreForm == OreForm.CORESTONE || /*oreForm == OreForm.CORESTONE_VERYSMALL || */
+                        oreForm == OreForm.CORESTONE_COMPACT /* || oreForm == OreForm.CORESTONE_VERYCOMPACT */)) {
                     continue;
                 }
                 String registryName = oreForm.name().toLowerCase(Locale.ROOT) + "_" + ore.name().toLowerCase(Locale.ROOT);
@@ -431,11 +409,8 @@ public class ModBlocks {
                 new OnyxLavaFluid("onyx_lava", ModFluids.ONYX_LAVA_FLUID, Material.LAVA),
                 new BlocksBase("sulfur_block", Material.ROCK).setResistance(1).setHardness(40F),
                 new BlocksBase("aluminium_block", Material.ROCK).setResistance(1).setHardness(10F),
-                new BlocksBase("zinc_block", Material.ROCK).setResistance(1).setHardness(60.0F),
-                new BlocksBase("lead_block", Material.ROCK).setResistance(1).setHardness(15.0F),
                 new BlocksBase("tin_block", Material.ROCK).setResistance(2).setHardness(50.0F),
                 new BlocksBase("copper_block", Material.ROCK).setResistance(2).setHardness(50.0F),
-                new BlocksBase("silicon_block", Material.ROCK).setResistance(1).setHardness(25.0F),
                 new BlocksBase("iron_block", Material.ROCK).setResistance(3).setHardness(75.0F),
                 new BlocksBase("steel_block", Material.ROCK).setResistance(4).setHardness(100.0F),
                 new BlocksBase("bronze_block", Material.ROCK).setResistance(4).setHardness(125.0F),
@@ -465,11 +440,8 @@ public class ModBlocks {
                 new BlocksBase("lapis_supercompact", Material.ROCK).setResistance(4).setHardness(224),
                 new BlocksBase("coal_supercompact", Material.ROCK).setResistance(1).setHardness(5.0F),
                 new BlocksBase("aluminium_supercompact", Material.ROCK).setResistance(1).setHardness(9.6F),
-                new BlocksBase("zinc_supercompact", Material.ROCK).setResistance(2).setHardness(108.0F),
-                new BlocksBase("lead_supercompact", Material.ROCK).setResistance(2).setHardness(32.0F),
                 new BlocksBase("tin_supercompact", Material.ROCK).setResistance(2).setHardness(72.0F),
                 new BlocksBase("copper_supercompact", Material.ROCK).setResistance(2).setHardness(72.0F),
-                new BlocksBase("silicon_supercompact", Material.ROCK).setResistance(2).setHardness(48.0F),
                 new BlocksBase("iron_supercompact", Material.ROCK).setResistance(5).setHardness(162.0F),
                 new BlocksBase("silver_supercompact", Material.ROCK).setResistance(5).setHardness(546),
                 new BlocksBase("gold_supercompact", Material.ROCK).setResistance(6).setHardness(820),
@@ -503,7 +475,7 @@ public class ModBlocks {
     public static void registerRenders() {
         for (Block block : rock) {
             if (block.getRegistryName().toString().equals("planetcore:crustrock")) {
-                for (int meta = 0; meta < 9; meta++) {
+                for (int meta = 0; meta < 3; meta++) {
                     String name = Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName();
                     ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), meta,
                             new ModelResourceLocation(name, "inventory"));
@@ -528,7 +500,7 @@ public class ModBlocks {
         }
 
         for (Block block : AllCrustBlocks) {
-            for (int meta = 0; meta < 9; meta++) {
+            for (int meta = 0; meta < 3; meta++) {
                 if (block.getRegistryName().toString().contains("crustrock_")) {
                     String name = block.getRegistryName().toString();
                     String removeRocktype = name.replace("crustrock_", "");

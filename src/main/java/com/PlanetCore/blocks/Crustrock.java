@@ -93,17 +93,11 @@ public class Crustrock extends BlockBase implements IMetaName
 	{
 		CRUSTROCK(0, "crustrock"),
 		CRUSTROCK1(1, "crustrock1"),
-		CRUSTROCK2(2, "crustrock2"),
-		CRUSTROCK3(3, "crustrock3"),
-		CRUSTROCK4(4, "crustrock4"),
-		CRUSTROCK5(5, "crustrock5"),
-		CRUSTROCK6(6, "crustrock6"),
-		CRUSTROCK7(7, "crustrock7"),
-		CRUSTROCK8(8, "crustrock8");
+		CRUSTROCK2(2, "crustrock2");
 
 
 
-		private static final Crustrock.EnumType[] META_LOOKUP = new Crustrock.EnumType[]{CRUSTROCK,CRUSTROCK1,CRUSTROCK2,CRUSTROCK3,CRUSTROCK4,CRUSTROCK5,CRUSTROCK6,CRUSTROCK7,CRUSTROCK8};
+		private static final Crustrock.EnumType[] META_LOOKUP = new Crustrock.EnumType[]{CRUSTROCK,CRUSTROCK1,CRUSTROCK2};
 		private final int meta;
 		private final String name;
 

@@ -55,6 +55,7 @@ public class PlayerTickEventHandler {
                 }
             }
 
+            //If close to lava, burn the player
             int x, y, z;
             x = event.player.getPosition().getX();
             y = event.player.getPosition().getY();

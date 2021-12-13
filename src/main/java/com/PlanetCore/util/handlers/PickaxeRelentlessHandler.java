@@ -45,38 +45,6 @@ public class PickaxeRelentlessHandler {
         EntityPlayer player = event.getEntityPlayer();
         ItemStack stack = player.getHeldItemMainhand();
 
-        //
-        if (!event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("pickaxe")) {
-            if (event.getState().getMaterial() == Material.ROCK) {
-                event.setNewSpeed(event.getOriginalSpeed() / 1.3F);
-            }
-        }
-
-        if (!event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("axe")) {
-            if (event.getState().getMaterial() == Material.WOOD) {
-                event.setNewSpeed(event.getOriginalSpeed() / 1.3F);
-            }
-        }
-
-        int broken_chance = new Random().nextInt(10000);
-        if (broken_chance == 1 && !event.getEntityPlayer().getHeldItemMainhand().getItem().getTranslationKey().contains("complete"))
-        {
-
-
-
-            stack.damageItem(stack.getMaxDamage()/5, player);
-            if (event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("pickaxe"))
-            event.getEntityPlayer().sendMessage(new TextComponentString("The wood on the pickaxe is getting weaker").setStyle(new Style().setColor(TextFormatting.RED)));
-            if (event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("hoe"))
-                event.getEntityPlayer().sendMessage(new TextComponentString("The wood on the hoe is getting weaker").setStyle(new Style().setColor(TextFormatting.RED)));
-            if (event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("sword"))
-                event.getEntityPlayer().sendMessage(new TextComponentString("The wood on the sword is getting weaker").setStyle(new Style().setColor(TextFormatting.RED)));
-            if (event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("shovel"))
-                event.getEntityPlayer().sendMessage(new TextComponentString("The wood on the shovel is getting weaker").setStyle(new Style().setColor(TextFormatting.RED)));
-            if (event.getEntityPlayer().getHeldItemMainhand().getDisplayName().contains("shovel"))
-                event.getEntityPlayer().sendMessage(new TextComponentString("The wood on the shovel is getting weaker").setStyle(new Style().setColor(TextFormatting.RED)));
-        }
-
 
 
         if (event.getState().getBlock() instanceof BlockBase) {
@@ -120,21 +88,5 @@ public class PickaxeRelentlessHandler {
             return base + enchLevel;
         }
         return 0;
-    }
-
-
-
-    @SubscribeEvent
-    public static void onBlockBreakEvent(BlockEvent.BreakEvent event) {
-        Item item = event.getPlayer().getHeldItemMainhand().getItem();
-        if (item == Items.WOODEN_PICKAXE)
-        {
-            item.setMaxDamage(3);
-        }
-        if (item == Items.STONE_PICKAXE)
-        {
-            item.setMaxDamage(18);
-        }
-
     }
 }

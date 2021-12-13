@@ -11,9 +11,9 @@ public class ToolMaterials {
     public static final Map<Item.ToolMaterial, Integer> relentlessMap = new HashMap<>();
 
     public static final Item.ToolMaterial WOODEN = createToolMaterial("wooden", 1, 5, 1.0F, 0.4F, 15, 1);
-    public static final Item.ToolMaterial STONE = createToolMaterial("stone", 1, 32, 1.5F, 0.8F, 15, 3);
-    public static final Item.ToolMaterial ALUMINIUM = createToolMaterial("alumiunium", 2, 50, 2.0F, 1.0F, 15, 3);
-    public static final Item.ToolMaterial COMPLETE_ALUMINIUM = createToolMaterial("complete_alumiunium", 2, 100, 2.0F, 1.0F, 15, 3);
+    public static final Item.ToolMaterial STONE = createToolMaterial("stone", 1, 32, 1.5F, 0.8F, 15, 2);
+    public static final Item.ToolMaterial ALUMINIUM = createToolMaterial("alumiunium", 2, 50, 2.5F, 1.0F, 15, 2);
+    public static final Item.ToolMaterial COMPLETE_ALUMINIUM = createToolMaterial("complete_alumiunium", 2, 100, 2.5F, 1.0F, 15, 2);
     public static final Item.ToolMaterial LEAD = createToolMaterial("lead", 2, 150, 3.0F, 1.4F, 5, 3);
     public static final Item.ToolMaterial COMPLETE_LEAD = createToolMaterial("complete_lead", 2, 300, 3.0F, 1.4F, 5, 3);
     public static final Item.ToolMaterial SILICON = createToolMaterial("silicon", 2, 150, 4.5F, 1.8F, 14, 3);

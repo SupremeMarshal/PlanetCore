@@ -124,7 +124,7 @@ public class HotLavaFluid extends BlockFluidClassic {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 
-		if (pos.getY() <= -3000 && Math.random() <= 0.00004) {
+		if (pos.getY() <= -2000 && Math.random() <= 0.00016) {
 			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState())
 				worldIn.setBlockState(pos.up(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
 			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())

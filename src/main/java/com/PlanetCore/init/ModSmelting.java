@@ -92,11 +92,8 @@ public class ModSmelting {
 
 		int random = new Random().nextInt(4) + 1;
 		GameRegistry.addSmelting(ModBlocks.ALUMINIUM_SUPERCOMPACT, new ItemStack(ModItems.ALUMINIUM_INGOT, 9), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.LEAD_SUPERCOMPACT, new ItemStack(ModItems.LEAD_INGOT, 9), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.SILICON_SUPERCOMPACT, new ItemStack(ModItems.SILICON_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.TIN_SUPERCOMPACT, new ItemStack(ModItems.TIN_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.COPPER_SUPERCOMPACT, new ItemStack(ModItems.COPPER_INGOT, 9), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.ZINC_SUPERCOMPACT, new ItemStack(ModItems.ZINC_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.IRON_SUPERCOMPACT, new ItemStack(ModItems.IRON_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.SULFUR_SUPERCOMPACT, new ItemStack(ModItems.SULFUR, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.REDSTONE_SUPERCOMPACT, new ItemStack(Blocks.REDSTONE_BLOCK, 1), 1.0F);
@@ -120,31 +117,25 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.ONYX_SUPERCOMPACT, new ItemStack(ModItems.ONYX, 9), 1.0F);
 
 		GameRegistry.addSmelting(ModItems.ALUMINIUM_ORE, new ItemStack(ModItems.ALUMINIUM_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.ALUMINIUM_SHARD, new ItemStack(ModItems.ALUMINIUM_NUGGET, 2), 1.0F);
-		GameRegistry.addSmelting(ModItems.SILICON_ORE, new ItemStack(ModItems.SILICON_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.SILICON_SHARD, new ItemStack(ModItems.SILICON_NUGGET, 2), 1.0F);
-		GameRegistry.addSmelting(ModItems.LEAD_ORE, new ItemStack(ModItems.LEAD_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.LEAD_SHARD, new ItemStack(ModItems.LEAD_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.ALUMINIUM_SHARD, new ItemStack(ModItems.ALUMINIUM_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.TIN_ORE, new ItemStack(ModItems.TIN_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.TIN_SHARD, new ItemStack(ModItems.TIN_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.TIN_SHARD, new ItemStack(ModItems.TIN_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.COPPER_ORE, new ItemStack(ModItems.COPPER_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.COPPER_SHARD, new ItemStack(ModItems.COPPER_NUGGET, 2), 1.0F);
-		GameRegistry.addSmelting(ModItems.ZINC_ORE, new ItemStack(ModItems.ZINC_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.ZINC_SHARD, new ItemStack(ModItems.ZINC_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.COPPER_SHARD, new ItemStack(ModItems.COPPER_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.IRON_ORE, new ItemStack(ModItems.IRON_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.IRON_SHARD, new ItemStack(ModItems.IRON_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.IRON_SHARD, new ItemStack(ModItems.IRON_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.SILVER_ORE, new ItemStack(ModItems.SILVER_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.SILVER_SHARD, new ItemStack(ModItems.SILVER_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.SILVER_SHARD, new ItemStack(ModItems.SILVER_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.GOLD_ORE, new ItemStack(ModItems.GOLD_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.GOLD_SHARD, new ItemStack(ModItems.GOLD_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.GOLD_SHARD, new ItemStack(ModItems.GOLD_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.PLATINUM_ORE, new ItemStack(ModItems.PLATINUM_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.PLATINUM_SHARD, new ItemStack(ModItems.PLATINUM_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.PLATINUM_SHARD, new ItemStack(ModItems.PLATINUM_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.TITANIUM_ORE, new ItemStack(ModItems.TITANIUM_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.TITANIUM_SHARD, new ItemStack(ModItems.TITANIUM_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.TITANIUM_SHARD, new ItemStack(ModItems.TITANIUM_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.URANIUM_ORE, new ItemStack(ModItems.URANIUM_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.URANIUM_SHARD, new ItemStack(ModItems.URANIUM_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.URANIUM_SHARD, new ItemStack(ModItems.URANIUM_NUGGET, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.TUNGSTEN_ORE, new ItemStack(ModItems.TUNGSTEN_INGOT, 1), 1.0F);
-		GameRegistry.addSmelting(ModItems.TUNGSTEN_SHARD, new ItemStack(ModItems.TUNGSTEN_NUGGET, 2), 1.0F);
+		GameRegistry.addSmelting(ModItems.TUNGSTEN_SHARD, new ItemStack(ModItems.TUNGSTEN_NUGGET, 1), 1.0F);
 
 
 

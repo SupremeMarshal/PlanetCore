@@ -62,39 +62,6 @@ public class ModItems {
 	public static final Item ALUMINIUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM, 2, EntityEquipmentSlot.LEGS);
 	public static final Item ALUMINIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM, 1, EntityEquipmentSlot.FEET);
 
-	//ZINC//
-	public static final ItemSword ZINC_SWORD = new ItemSword(ToolMaterials.ZINC);
-	public static final ItemSpade ZINC_SHOVEL = new ItemSpade(ToolMaterials.ZINC);
-	public static final ItemPickaxe ZINC_PICKAXE = new ItemPickaxeX(ToolMaterials.ZINC);
-	public static final ItemAxe ZINC_AXE = new ItemAxeX(ToolMaterials.ZINC);
-	public static final ItemHoe ZINC_HOE = new ItemHoe(ToolMaterials.ZINC);
-	public static final ItemSword COMPLETE_ZINC_SWORD = new ItemSword(ToolMaterials.COMPLETE_ZINC);
-	public static final ItemSpade COMPLETE_ZINC_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_ZINC);
-	public static final ItemPickaxe COMPLETE_ZINC_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_ZINC);
-	public static final ItemAxe COMPLETE_ZINC_AXE = new ItemAxeX(ToolMaterials.COMPLETE_ZINC);
-	public static final ItemHoe COMPLETE_ZINC_HOE = new ItemHoe(ToolMaterials.COMPLETE_ZINC);
-
-	public static final Item ZINC_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ZINC, 1, EntityEquipmentSlot.HEAD);
-	public static final Item ZINC_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ZINC, 1, EntityEquipmentSlot.CHEST);
-	public static final Item ZINC_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ZINC, 2, EntityEquipmentSlot.LEGS);
-	public static final Item ZINC_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ZINC, 1, EntityEquipmentSlot.FEET);
-
-	//LEAD//
-	public static final ItemSword LEAD_SWORD = new ItemSword(ToolMaterials.LEAD);
-	public static final ItemSpade LEAD_SHOVEL = new ItemSpade(ToolMaterials.LEAD);
-	public static final ItemPickaxe LEAD_PICKAXE = new ItemPickaxeX(ToolMaterials.LEAD);
-	public static final ItemAxe LEAD_AXE = new ItemAxeX(ToolMaterials.LEAD);
-	public static final ItemHoe LEAD_HOE = new ItemHoe(ToolMaterials.LEAD);
-	public static final ItemSword COMPLETE_LEAD_SWORD = new ItemSword(ToolMaterials.COMPLETE_LEAD);
-	public static final ItemSpade COMPLETE_LEAD_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_LEAD);
-	public static final ItemPickaxe COMPLETE_LEAD_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_LEAD);
-	public static final ItemAxe COMPLETE_LEAD_AXE = new ItemAxeX(ToolMaterials.COMPLETE_LEAD);
-	public static final ItemHoe COMPLETE_LEAD_HOE = new ItemHoe(ToolMaterials.COMPLETE_LEAD);
-
-	public static final Item LEAD_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_LEAD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item LEAD_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_LEAD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item LEAD_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_LEAD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item LEAD_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_LEAD, 1, EntityEquipmentSlot.FEET);
 
 	//TIN//
 	public static final ItemSword TIN_SWORD = new ItemSword(ToolMaterials.TIN);
@@ -113,22 +80,6 @@ public class ModItems {
 	public static final Item TIN_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TIN, 2, EntityEquipmentSlot.LEGS);
 	public static final Item TIN_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TIN, 1, EntityEquipmentSlot.FEET);
 
-	//SILICON//
-	public static final ItemSword SILICON_SWORD = new ItemSword(ToolMaterials.SILICON);
-	public static final ItemSpade SILICON_SHOVEL = new ItemSpade(ToolMaterials.SILICON);
-	public static final ItemPickaxe SILICON_PICKAXE = new ItemPickaxeX(ToolMaterials.SILICON);
-	public static final ItemAxe SILICON_AXE = new ItemAxeX(ToolMaterials.SILICON);
-	public static final ItemHoe SILICON_HOE = new ItemHoe(ToolMaterials.SILICON);
-	public static final ItemSword COMPLETE_SILICON_SWORD = new ItemSword(ToolMaterials.COMPLETE_SILICON);
-	public static final ItemSpade COMPLETE_SILICON_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_SILICON);
-	public static final ItemPickaxe COMPLETE_SILICON_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_SILICON);
-	public static final ItemAxe COMPLETE_SILICON_AXE = new ItemAxeX(ToolMaterials.COMPLETE_SILICON);
-	public static final ItemHoe COMPLETE_SILICON_HOE = new ItemHoe(ToolMaterials.COMPLETE_SILICON);
-
-	public static final Item SILICON_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILICON, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SILICON_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILICON, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SILICON_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILICON, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SILICON_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILICON, 1, EntityEquipmentSlot.FEET);
 
 	//COPPER//
 	public static final ItemSword COPPER_SWORD = new ItemSword(ToolMaterials.COPPER);
@@ -544,10 +495,7 @@ public class ModItems {
 
 	//ROD//
 	public static final Item ALUMINIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item LEAD_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item SILICON_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item COPPER_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item ZINC_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TIN_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item IRON_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item STEEL_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -577,10 +525,7 @@ public class ModItems {
 
 	//Ingot//
 	public static final Item ALUMINIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item LEAD_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item SILICON_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item COPPER_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item ZINC_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TIN_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item IRON_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item STEEL_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -597,10 +542,7 @@ public class ModItems {
 
 	//Ingot//
 	public static final Item ALUMINIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item LEAD_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item SILICON_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item COPPER_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item ZINC_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TIN_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item IRON_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SILVER_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -612,10 +554,7 @@ public class ModItems {
 
 	//Ingot//
 	public static final Item ALUMINIUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item LEAD_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item SILICON_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item COPPER_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item ZINC_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TIN_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item IRON_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SILVER_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -629,10 +568,7 @@ public class ModItems {
 
 	public static final Item COAL_BIT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ALUMINIUM_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item LEAD_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item SILICON_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item COPPER_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item ZINC_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TIN_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item IRON_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item STEEL_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -722,11 +658,8 @@ public class ModItems {
 			new PotionEffect(MobEffects.GLOWING, 12000, 0, false, false));
 
 	//SHIELDS
-	public static final Item ALUMINIUM_SHIELD = new ItemShield();
-	public static final Item LEAD_SHIELD = new ItemShield();
-	public static final Item SILICON_SHIELD = new ItemShield();
+	public static final Item ALUMINIUM_SHIELD = new AluminiumShield();
 	public static final Item COPPER_SHIELD = new ItemShield();
-	public static final Item ZINC_SHIELD = new ItemShield();
 	public static final Item TIN_SHIELD = new ItemShield();
 	public static final Item IRON_SHIELD = new IronShield();
 	public static final Item STEEL_SHIELD = new SteelShield();

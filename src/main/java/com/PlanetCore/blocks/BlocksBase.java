@@ -38,22 +38,14 @@ public class BlocksBase extends BlockBase {
 			drop = Items.DYE;
 		} else if (a.contains("coal")) {
 			drop = Items.COAL;
-		} else if (a.contains("coal")) {
-			drop = Items.COAL;
 		} else if (a.contains("sulfur")) {
 			drop = ModItems.SULFUR;
 		} else if (a.contains("aluminium")) {
 			drop = ModItems.ALUMINIUM_ORE;
-		} else if (a.contains("silicon")) {
-			drop = ModItems.SILICON_ORE;
-		} else if (a.contains("lead")) {
-			drop = ModItems.LEAD_ORE;
 		} else if (a.contains("tin")) {
 			drop = ModItems.TIN_ORE;
 		} else if (a.contains("copper")) {
 			drop = ModItems.COPPER_ORE;
-		} else if (a.contains("zinc")) {
-			drop = ModItems.ZINC_ORE;
 		} else if (a.contains("iron")) {
 			drop = ModItems.IRON_ORE;
 		} else if (a.contains("silver")) {
@@ -104,8 +96,8 @@ public class BlocksBase extends BlockBase {
 	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random) {
 		String a = this.getTranslationKey();
-		if (a.contains("sulfur") || a.contains("coal") || a.contains("aluminium") || a.contains("silicon") || a.contains("lead")
-				|| a.contains("tin") || a.contains("copper") || a.contains("zinc") || a.contains("iron")
+		if (a.contains("sulfur") || a.contains("coal") || a.contains("aluminium")
+				|| a.contains("tin") || a.contains("copper") || a.contains("iron")
 				|| a.contains("silver") || a.contains("gold") || a.contains("platinum") || a.contains("titanium") || a.contains("uranium") || a.contains("tungsten")
 				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
 				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
