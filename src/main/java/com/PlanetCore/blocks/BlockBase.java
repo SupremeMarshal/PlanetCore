@@ -91,9 +91,9 @@ public class BlockBase extends Block {
 	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
 	 * }
 	 */
-	private static final float [] crustHardnessByMeta = {5.0F, 10.0F, 20.0F};
-	private static final float [] mantleHardnessByMeta = {45.0F, 67.5F, 101.25F, 228, 341, 512, 768, 1153, 1729, 2593, 3890, 5835, 8753, 13129, 19694, 29541};
-	private static final float [] coreHardnessByMeta = {59083, 118166, 236332};
+	private static final float [] crustHardnessByMeta = {4.0F, 8.0F, 12.0F};
+	private static final float [] mantleHardnessByMeta = {20.0F, 40.0F, 80.0F, 160, 320, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000};
+	private static final float [] coreHardnessByMeta = {10000, 15000, 20000};
 
 
 
@@ -132,12 +132,12 @@ public class BlockBase extends Block {
 		else if (a.contains("sulfur")) { c = true; drop = ModItems.SULFUR; }
 		else if (a.contains("coal")) { c = true; drop = Items.COAL; }
 		else if (a.contains("aluminium")) { c = true; drop = ModItems.ALUMINIUM_ORE; }
-		else if (a.contains("tin")) { c = true; drop = ModItems.TIN_ORE; }
+		else if (a.contains("platinum")) { c = true; drop = ModItems.PLATINUM_ORE; }
 		else if (a.contains("copper")) { c = true; drop = ModItems.COPPER_ORE; }
 		else if (a.contains("iron")) { c = true; drop = ModItems.IRON_ORE; }
 		else if (a.contains("silver")) { c = true; drop = ModItems.SILVER_ORE; }
 		else if (a.contains("gold")) { c = true; drop = ModItems.GOLD_ORE; }
-		else if (a.contains("platinum")) { c = true; drop = ModItems.PLATINUM_ORE; }
+		else if (a.contains("tin")) { c = true; drop = ModItems.TIN_ORE; }
 		else if (a.contains("titanium")) { c = true; drop = ModItems.TITANIUM_ORE; }
 		else if (a.contains("uranium")) { c = true; drop = ModItems.URANIUM_ORE; }
 		else if (a.contains("tungsten")) { c = true; drop = ModItems.TUNGSTEN_ORE; }
@@ -212,11 +212,6 @@ public class BlockBase extends Block {
 		}
 	}
 
-	@Override
-	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
-		world.setBlockToAir(pos);
-		this.onExplosionDestroy(world, pos, explosion);
-	}
 
 	@Override
 	public int quantityDropped(Random random) {
@@ -270,14 +265,13 @@ public class BlockBase extends Block {
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 
 
-			if ((this == ModBlocks.MANTLEROCK) && pos.getY() < -1000 && (Math.random() <= ((pos.getY() +1000) / -100000.0F)))
+			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK) && pos.getY() < 0 && (Math.random() <= (pos.getY() / -2000.0F)))
 			{
 				for (EnumFacing side : EnumFacing.values())
 				{
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					float PressureLevel = (movedPos.getY()+1000) * -0.04F;
-					if (movedState.getMaterial() == Material.IRON) return;
+					float PressureLevel = (movedPos.getY()) * -0.5F;
 					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlockHardness(worldIn, movedPos) - 10F > PressureLevel)
 					{
 						continue;
