@@ -20,12 +20,12 @@ public class ModSmelting {
 	private static final String[] Item1 = {"INGOT", "SWORD", "AXE", "PICKAXE", "SPADE", "HOE",
 			"HELMET", "CHESTPLATE", "LEGGINGS", "BOOTS", "ROD"};
 	//"STEEL", "BRONZE", "TITANIUM_URANIUM", "TUNGSTEN_URANIUM", "TUNGSTEN_TITANIUM",
-	private static final String[] Material = {"SULFUR","ALUMINIUM", "ZINC", "LEAD", "TIN", "SILICON", "COPPER", "IRON", "SILVER",
-			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "REDSTONE", "TOPAZ", "JADE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
+	private static final String[] Material = {"SULFUR","ALUMINIUM", "TIN", "COPPER", "IRON", "SILVER",
+			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "REDSTONE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
 			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX"};
 
 	private static final String[] Rock = {"ORE", "CRUSTROCK", "MANTLEROCK", "CORESTONE"};
-	private static final String[] Size = {"SMALL", "", "COMPACT"};
+	private static final String[] Size = {"", "COMPACT"};
 	private static final int[] Amount = {2,1,3};
 
 
@@ -38,24 +38,15 @@ public class ModSmelting {
 		/**
 		 * NORMAL FURNACE RECIPES
 		 */
-		for (int size = 0; size < 3; size++) {
-			for (int material = 0; (material < 28); material++) {
+		for (int size = 0; size < 2; size++) {
+			for (int material = 0; (material < 23); material++) {
 
-				if (material < 14)
+				if (material < 11)
 				{
-					if (size < 1)
-					{
-						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_nugget";
-					}
-					else itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_ingot";
+					itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_ingot";
 				}
 				else
 				{
-					if (size < 1)
-					{
-						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_shard";
-					}
-					else
 					{
 						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT);
 						if (Material[material].contains("EMERALD") || Material[material].contains("REDSTONE"))
@@ -69,18 +60,18 @@ public class ModSmelting {
 
 				for (int rock = 0; rock < 4; rock++)
 				{
-					if (rock == 3 && material < 14)
+					if (rock == 3 && material < 11)
 					{
 						continue;
 					}
 
-					if (size == 1)
+					if (size == 0)
 					{
 						blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
 						block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
 						GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
 					}
-					if (size != 1)
+					if (size != 0)
 					{
 						blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Size[size].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
 						block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
