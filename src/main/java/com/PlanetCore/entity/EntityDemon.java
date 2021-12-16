@@ -1,6 +1,6 @@
 package com.PlanetCore.entity;
 
-import com.PlanetCore.entity.goals.DemonFireBallGoal;
+/*import com.PlanetCore.entity.goals.DemonFireBallGoal;
 import com.PlanetCore.util.handlers.LootTableHandler;
 
 
@@ -222,3 +222,5 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		return this.dataManager.get(ATTACK_TICK);
 	}
 }
+
+ */
