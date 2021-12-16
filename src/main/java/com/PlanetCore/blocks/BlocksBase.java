@@ -7,6 +7,7 @@ import com.PlanetCore.init.ModItems;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
@@ -23,6 +24,7 @@ public class BlocksBase extends BlockBase {
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
+		setResistance(1.0F);
 	}
 
 
@@ -42,8 +44,6 @@ public class BlocksBase extends BlockBase {
 			drop = ModItems.SULFUR;
 		} else if (a.contains("aluminium")) {
 			drop = ModItems.ALUMINIUM_ORE;
-		} else if (a.contains("tin")) {
-			drop = ModItems.TIN_ORE;
 		} else if (a.contains("copper")) {
 			drop = ModItems.COPPER_ORE;
 		} else if (a.contains("iron")) {
@@ -54,6 +54,8 @@ public class BlocksBase extends BlockBase {
 			drop = ModItems.GOLD_ORE;
 		} else if (a.contains("platinum")) {
 			drop = ModItems.PLATINUM_ORE;
+		} else if (a.contains("tin")) {
+			drop = ModItems.TIN_ORE;
 		} else if (a.contains("titanium")) {
 			drop = ModItems.TITANIUM_ORE;
 		} else if (a.contains("uranium")) {
@@ -110,12 +112,6 @@ public class BlocksBase extends BlockBase {
 				return 24 + new Random().nextInt(fortune * 12 + 12);
 		}
 		return 1;
-	}
-
-	@Override
-	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
-		world.setBlockToAir(pos);
-		this.onExplosionDestroy(world, pos, explosion);
 	}
 
 	@Override
