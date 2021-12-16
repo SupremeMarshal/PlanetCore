@@ -239,24 +239,12 @@ public class ModItems {
 	public static final Item URANIUM_LEGGINGS = new UraniumLegs(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 2, EntityEquipmentSlot.LEGS);
 	public static final Item URANIUM_BOOTS = new UraniumBoots(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.FEET);
 
-	//TOPAZ//
-	public static final ItemSword TOPAZ_SWORD = new ItemSword(ToolMaterials.TOPAZ);
-	public static final ItemSpade TOPAZ_SHOVEL = new ItemSpade(ToolMaterials.TOPAZ);
-	public static final ItemPickaxe TOPAZ_PICKAXE = new ItemPickaxeX(ToolMaterials.TOPAZ);
-	public static final ItemAxe TOPAZ_AXE = new ItemAxeX(ToolMaterials.TOPAZ);
-	public static final ItemHoe TOPAZ_HOE = new ItemHoe(ToolMaterials.TOPAZ);
 
 	public static final Item TOPAZ_HELMET = new TopazHelmet(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.HEAD);
 	public static final Item TOPAZ_CHESTPLATE = new TopazBody(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.CHEST);
 	public static final Item TOPAZ_LEGGINGS = new TopazLegs(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 2, EntityEquipmentSlot.LEGS);
 	public static final Item TOPAZ_BOOTS = new TopazBoots(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.FEET);
 
-	//JADE//
-	public static final ItemSword JADE_SWORD = new ItemSword(ToolMaterials.JADE);
-	public static final ItemSpade JADE_SHOVEL = new ItemSpade(ToolMaterials.JADE);
-	public static final ItemPickaxe JADE_PICKAXE = new ItemPickaxeX(ToolMaterials.JADE);
-	public static final ItemAxe JADE_AXE = new ItemAxeX(ToolMaterials.JADE);
-	public static final ItemHoe JADE_HOE = new ItemHoe(ToolMaterials.JADE);
 
 	public static final Item JADE_HELMET = new JadeHelmet(ArmorMaterials.ARMOR_MATERIAL_JADE, 1, EntityEquipmentSlot.HEAD);
 	public static final Item JADE_CHESTPLATE = new JadeBody(ArmorMaterials.ARMOR_MATERIAL_JADE, 1, EntityEquipmentSlot.CHEST);
