@@ -1,5 +1,5 @@
 package com.PlanetCore.entity.model;
-
+/*
 import com.PlanetCore.entity.EntityDemon;
 import com.PlanetCore.util.Reference;
 import net.minecraft.client.model.ModelBase;
@@ -32,3 +32,5 @@ public class ModelDemon extends AnimatedGeoModel<EntityDemon> {
         return new ResourceLocation(Reference.MOD_ID, "animations/demon.json");
     }
 }
+
+ */
