@@ -239,18 +239,6 @@ public class ModItems {
 	public static final Item URANIUM_LEGGINGS = new UraniumLegs(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 2, EntityEquipmentSlot.LEGS);
 	public static final Item URANIUM_BOOTS = new UraniumBoots(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.FEET);
 
-
-	public static final Item TOPAZ_HELMET = new TopazHelmet(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TOPAZ_CHESTPLATE = new TopazBody(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TOPAZ_LEGGINGS = new TopazLegs(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TOPAZ_BOOTS = new TopazBoots(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.FEET);
-
-
-	public static final Item JADE_HELMET = new JadeHelmet(ArmorMaterials.ARMOR_MATERIAL_JADE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item JADE_CHESTPLATE = new JadeBody(ArmorMaterials.ARMOR_MATERIAL_JADE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item JADE_LEGGINGS = new JadeLegs(ArmorMaterials.ARMOR_MATERIAL_JADE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item JADE_BOOTS = new JadeBoots(ArmorMaterials.ARMOR_MATERIAL_JADE, 1, EntityEquipmentSlot.FEET);
-
 	//TUNGSTEN//
 	public static final ItemSword TUNGSTEN_SWORD = new ItemSword(ToolMaterials.TUNGSTEN);
 	public static final ItemSpade TUNGSTEN_SHOVEL = new ItemSpade(ToolMaterials.TUNGSTEN);
@@ -457,8 +445,6 @@ public class ModItems {
 	public static final Item EMERALD_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SAPPHIRE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RUBY_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TOPAZ_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item JADE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item DIAMOND_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item OLIVINE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item WADSLEYITE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -497,8 +483,6 @@ public class ModItems {
 	public static final Item TITANIUM_URANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_URANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_TITANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TOPAZ_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item JADE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item EMERALD_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SAPPHIRE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RUBY_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -589,62 +573,6 @@ public class ModItems {
 			new PotionEffect(MobEffects.RESISTANCE, 6000, 1, false, false),
 			new PotionEffect(MobEffects.GLOWING, 3000, 0, false, false));
 
-	public static final Item TITANIUM_APPLE = new SixEffectFoodItem(15, 6.0F, false,
-			new PotionEffect(MobEffects.ABSORPTION, 12000, 8, false, false),
-			new PotionEffect(MobEffects.REGENERATION, 1200, 3, false, false),
-			new PotionEffect(MobEffects.STRENGTH, 6000, 1, false, false),
-			new PotionEffect(MobEffects.SPEED, 6000, 0, false, false),
-			new PotionEffect(MobEffects.JUMP_BOOST, 6000, 0, false, false),
-			new PotionEffect(MobEffects.GLOWING, 3000, 0, false, false));
-
-
-	public static final Item ENCHANTED_TITANIUM_APPLE = new EightEffectFoodItem(15, 6.0F, false,
-			new PotionEffect(MobEffects.ABSORPTION, 12000, 8, false, false),
-			new PotionEffect(MobEffects.REGENERATION, 1200, 3, false, false),
-			new PotionEffect(MobEffects.STRENGTH, 6000, 2, false, false),
-			new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 2, false, false),
-			new PotionEffect(MobEffects.RESISTANCE, 6000, 2, false, false),
-			new PotionEffect(MobEffects.SPEED, 6000, 1, false, false),
-			new PotionEffect(MobEffects.JUMP_BOOST, 6000, 1, false, false),
-			new PotionEffect(MobEffects.GLOWING, 6000, 0, false, false));
-
-	public static final Item TUNGSTEN_APPLE = new SixEffectFoodItem(20, 12.0F, false,
-			new PotionEffect(MobEffects.ABSORPTION, 12000, 12, false, false),
-			new PotionEffect(MobEffects.REGENERATION, 3000, 4, false, false),
-			new PotionEffect(MobEffects.HEALTH_BOOST, 12000, 12, false, false),
-			new PotionEffect(MobEffects.SPEED, 6000, 1, false, false),
-			new PotionEffect(MobEffects.JUMP_BOOST, 6000, 1, false, false),
-			new PotionEffect(MobEffects.GLOWING, 6000, 0, false, false));
-
-
-	public static final Item ENCHANTED_RUBY_APPLE = new EightEffectFoodItem(20, 12.0F, false,
-			new PotionEffect(MobEffects.ABSORPTION, 12000, 12, false, false),
-			new PotionEffect(MobEffects.REGENERATION, 3000, 4, false, false),
-			new PotionEffect(MobEffects.STRENGTH, 6000, 3, false, false),
-			new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 2, false, false),
-			new PotionEffect(MobEffects.RESISTANCE, 6000, 2, false, false),
-			new PotionEffect(MobEffects.SPEED, 6000, 2, false, false),
-			new PotionEffect(MobEffects.JUMP_BOOST, 6000, 2, false, false),
-			new PotionEffect(MobEffects.GLOWING, 6000, 0, false, false));
-
-	public static final Item DIAMOND_APPLE = new SixEffectFoodItem(20, 24.0F, false,
-			new PotionEffect(MobEffects.ABSORPTION, 24000, 16, false, false),
-			new PotionEffect(MobEffects.REGENERATION, 6000, 4, false, false),
-			new PotionEffect(MobEffects.SPEED, 6000, 2, false, false),
-			new PotionEffect(MobEffects.JUMP_BOOST, 6000, 2, false, false),
-			new PotionEffect(MobEffects.STRENGTH, 6000, 4, false, false),
-			new PotionEffect(MobEffects.GLOWING, 6000, 0, false, false));
-
-	public static final Item ENCHANTED_DIAMOND_APPLE = new EightEffectFoodItem(20, 24.0F, false,
-			new PotionEffect(MobEffects.ABSORPTION, 24000, 16, false, false),
-			new PotionEffect(MobEffects.REGENERATION, 12000, 4, false, false),
-			new PotionEffect(MobEffects.STRENGTH, 12000, 5, false, false),
-			new PotionEffect(MobEffects.FIRE_RESISTANCE, 12000, 2, false, false),
-			new PotionEffect(MobEffects.RESISTANCE, 12000, 2, false, false),
-			new PotionEffect(MobEffects.SPEED, 12000, 3, false, false),
-			new PotionEffect(MobEffects.JUMP_BOOST, 12000, 3, false, false),
-			new PotionEffect(MobEffects.GLOWING, 12000, 0, false, false));
-
 	//SHIELDS
 	public static final Item ALUMINIUM_SHIELD = new AluminiumShield();
 	public static final Item COPPER_SHIELD = new ItemShield();
@@ -661,8 +589,6 @@ public class ModItems {
 	public static final Item TITANIUM_URANIUM_SHIELD = new ItemShield();
 	public static final Item TUNGSTEN_URANIUM_SHIELD = new ItemShield();
 	public static final Item TUNGSTEN_TITANIUM_SHIELD = new ItemShield();
-	public static final Item TOPAZ_SHIELD = new ItemShield();
-	public static final Item JADE_SHIELD = new ItemShield();
 	public static final Item EMERALD_SHIELD = new EmeraldShield();
 	public static final Item SAPPHIRE_SHIELD = new SapphireShield();
 	public static final Item RUBY_SHIELD = new RubyShield();
@@ -671,6 +597,7 @@ public class ModItems {
 	public static final Item WADSLEYITE_SHIELD = new ItemShield();
 	public static final Item RINGWOODITE_SHIELD = new ItemShield();
 	public static final Item BRIGMANITE_SHIELD = new ItemShield();
+	public static final Item MAJORITE_SHIELD = new ItemShield();
 	public static final Item AMAZONITE_SHIELD = new ItemShield();
 	public static final Item ONYX_SHIELD = new OnyxShield();
 

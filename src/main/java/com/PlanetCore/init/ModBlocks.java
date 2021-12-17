@@ -38,38 +38,6 @@ import static com.PlanetCore.init.ModBlocks.OreType.METAL;
 public class ModBlocks {
 
 
-
-    /*TO DO
-    All size use same class as rocktype
-    is Ore_size enum needed?
-
-    public enum Ore_size {
-
-        VERYSMALL(0.25, 0.25),
-        SMALL(0.5, 0.5),
-        COMPACT(4, 1.5),
-        VERYCOMPACT(16.0, 2.0);
-
-        private final double baseHardness;
-        private final double baseResistance;
-
-        Ore_size(double baseHardness, double baseResistance) {
-            this.baseHardness = baseHardness;
-            this.baseResistance = baseResistance;
-        }
-
-        public double getBaseHardness() {
-            return baseHardness;
-        }
-
-        public double getBaseResistance() {
-            return baseResistance;
-        }
-    }
-
-     */
-
-
     public enum OreType {
         GEM,
         METAL
