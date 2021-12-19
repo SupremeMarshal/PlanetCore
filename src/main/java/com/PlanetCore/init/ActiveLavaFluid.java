@@ -66,25 +66,36 @@ public class ActiveLavaFluid extends BlockFluidClassic {
 		{
 			boolean flag = false;
 
-			for (EnumFacing enumfacing : EnumFacing.values())
-			{
-				if (enumfacing != EnumFacing.DOWN && worldIn.getBlockState(pos.offset(enumfacing)).getMaterial() == Material.WATER)
-				{
+			for (EnumFacing enumfacing : EnumFacing.values()) {
+
+				if (pos.getY() > -500 && enumfacing != EnumFacing.DOWN && worldIn.getBlockState(pos.offset(enumfacing)).getMaterial() == Material.WATER) {
 					flag = true;
 					break;
+				} else if (pos.getY() < -500 && worldIn.getBlockState(pos.offset(enumfacing)) == Blocks.WATER.getDefaultState()) {
+					worldIn.setBlockState(pos.offset(enumfacing), Blocks.AIR.getDefaultState());
+				} /*else if (worldIn.getBlockState(pos.offset(enumfacing)).getMaterial() == Material.IRON ||
+						(worldIn.getBlockState(pos.offset(enumfacing)).getMaterial() == Material.ROCK
+								&& worldIn.getBlockState(pos.offset(enumfacing)) != ModBlocks.MANTLEROCK
+								&& worldIn.getBlockState(pos.offset(enumfacing)) != ModBlocks.CORESTONE) ||
+						worldIn.getBlockState(pos.offset(enumfacing)).getMaterial() == Material.WOOD) {
+					worldIn.setBlockState(pos.offset(enumfacing), ModBlocks.HOT_LAVA_FLUID.getDefaultState());
 				}
+				*/
+
 			}
 
 			if (flag)
 			{
 				Integer integer = (Integer)state.getValue(LEVEL);
 
-				if (integer.intValue() == 0)
-				{
-					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
-					this.triggerMixEffects(worldIn, pos);
-					return true;
-				}
+					if (pos.getY() < -500) {
+						worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
+						this.triggerMixEffects(worldIn, pos);
+						return true;
+					}
+
+
+
 
 				if (integer.intValue() <= 4)
 				{
@@ -131,19 +142,50 @@ public class ActiveLavaFluid extends BlockFluidClassic {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 
-		if (pos.getY() <= 0 && Math.random() <= 0.15) {
-			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
-				worldIn.setBlockState(pos.up(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
-				worldIn.setBlockState(pos.down(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
-				worldIn.setBlockState(pos.north(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
-				worldIn.setBlockState(pos.south(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
-				worldIn.setBlockState(pos.west(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState() && Math.random() <= 0.1)
-				worldIn.setBlockState(pos.east(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
+		float chance = 0;
+		if (pos.getY()<= 0 && pos.getY() > -100) {
+			chance = 0.1F;
+		}
+		if (pos.getY()<= -100 && pos.getY() > -200) {
+			chance = 0.2F;
+		}
+		if (pos.getY()<= -200 && pos.getY() > -300) {
+			chance = 0.3F;
+		}
+		if (pos.getY()<= -300 && pos.getY() > -400) {
+			chance = 0.4F;
+		}
+		if (pos.getY()<= -400 && pos.getY() > -500) {
+			chance = 0.5F;
+		}
+		if (pos.getY()<= -500 && pos.getY() > -600) {
+			chance = 0.6F;
+		}
+		if (pos.getY()<= -600 && pos.getY() > -700) {
+			chance = 0.7F;
+		}
+		if (pos.getY()<= -700 && pos.getY() > -800) {
+			chance = 0.8F;
+		}
+		if (pos.getY()<= -800 && pos.getY() > -900) {
+			chance = 0.9F;
+		}
+		if (pos.getY()<= -900 && pos.getY() > -1000) {
+			chance = 1.0F;
+		}
+		if (pos.getY() <= 0 && pos.getY() > -1000) {
+			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState() && Math.random() <= chance)
+				worldIn.setBlockState(pos.up(), ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState() && Math.random() <= chance)
+				worldIn.setBlockState(pos.down(), ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState() && Math.random() <= chance)
+				worldIn.setBlockState(pos.north(), ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState() && Math.random() <= chance)
+				worldIn.setBlockState(pos.south(), ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState() && Math.random() <= chance)
+				worldIn.setBlockState(pos.west(), ModBlocks.HOT_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState() && Math.random() <= chance)
+				worldIn.setBlockState(pos.east(), ModBlocks.HOT_LAVA_FLUID.getDefaultState());
 		}
 		int quantaRemaining = quantaPerBlock - state.getValue(LEVEL);
 		int expQuanta = -101;
