@@ -51,12 +51,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 		return (mantleLightLevel[meta]);
 	}
 
-	// TODO: how to make this work?
-	// @Override
-	// void addItemBlock() {
-	// 	ModItems.ITEMS.add(new ItemBlockVariants(this).setRegistryName(this.getRegistryName()));
-	// }
-
 	@Override
 	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
 		for (Mantlerock.EnumType mantlerock$enumtype : Mantlerock.EnumType.values()) {
@@ -98,7 +92,8 @@ public class Mantlerock extends BlockBase implements IMetaName
 		MANTLEROCK5(5, "mantlerock5"),
 		MANTLEROCK6(6, "mantlerock6"),
 		MANTLEROCK7(7, "mantlerock7"),
-		MANTLEROCK8(8, "mantlerock8"),
+		MANTLEROCK8(8, "mantlerock8");
+		/*
 		LOWER_MANTLEROCK(9, "lower_mantlerock"),
 		LOWER_MANTLEROCK1(10, "lower_mantlerock1"),
 		LOWER_MANTLEROCK2(11, "lower_mantlerock2"),
@@ -107,8 +102,10 @@ public class Mantlerock extends BlockBase implements IMetaName
 		LOWER_MANTLEROCK5(14, "lower_mantlerock5"),
 		LOWER_MANTLEROCK6(15, "lower_mantlerock6");
 
+		 */
+
 		private static final 	Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[]{MANTLEROCK, MANTLEROCK1, MANTLEROCK2, MANTLEROCK3, MANTLEROCK4, MANTLEROCK5, MANTLEROCK6,
-		MANTLEROCK7, MANTLEROCK8, LOWER_MANTLEROCK, LOWER_MANTLEROCK1, LOWER_MANTLEROCK2, LOWER_MANTLEROCK3, LOWER_MANTLEROCK4, LOWER_MANTLEROCK5, LOWER_MANTLEROCK6};
+		MANTLEROCK7, MANTLEROCK8, /*LOWER_MANTLEROCK, LOWER_MANTLEROCK1, LOWER_MANTLEROCK2, LOWER_MANTLEROCK3, LOWER_MANTLEROCK4, LOWER_MANTLEROCK5, LOWER_MANTLEROCK6*/};
 		private final int meta;
 		private final String name;
 
@@ -156,82 +153,6 @@ public class Mantlerock extends BlockBase implements IMetaName
 	}
 
 
-
-	public void spawnLava(World worldIn, BlockPos pos, IBlockState state)
-	{
-		Random rand = new Random();
-		if (!worldIn.isRemote)
-		{
-			if (state.getBlock().getMetaFromState(state) == 5)
-			{
-				if (rand.nextInt(1000) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 6)
-			{
-				if (rand.nextInt(833) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 7)
-			{
-				if (rand.nextInt(694) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 8)
-			{
-				if (rand.nextInt(578) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 9)
-			{
-				if (rand.nextInt(482) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 10)
-			{
-				if (rand.nextInt(401) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 11)
-			{
-				if (rand.nextInt(334) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 12)
-			{
-				if (rand.nextInt(279) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 13)
-			{
-				if (rand.nextInt(232) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 14)
-			{
-				if (rand.nextInt(193) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 15)
-			{
-				if (rand.nextInt(161) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-				}
-			}
-
-		}
-	}
-
 	//Natural Gas Explosion event
 	//Upon destroying the block, it has a small chance to explode. The deeper the rock is, the more probability it has to explode with a larger explosion.
 	public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
@@ -241,146 +162,60 @@ public class Mantlerock extends BlockBase implements IMetaName
 		int Z = pos.getZ();
 		int Y = pos.getY();
 		if (!worldIn.isRemote) {
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 0) {
-				if (rand.nextInt(2000) == 0) {
+			if (pos.getY() <= -512 && pos.getY() > -576 && rand.nextInt(560) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 1) {
-				if (rand.nextInt(1666) == 0) {
+			if (pos.getY() <= -576 && pos.getY() > -640 && rand.nextInt(424) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 2) {
-				if (rand.nextInt(1388) == 0) {
+			if (pos.getY() <= -640 && pos.getY() > -704 && rand.nextInt(368) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(4) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 3) {
-				if (rand.nextInt(1157) == 0) {
+			if (pos.getY() <= -704 && pos.getY() > -768 && rand.nextInt(320) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 4) {
-				if (rand.nextInt(964) == 0) {
+			if (pos.getY() <= -768 && pos.getY() > -832 && rand.nextInt(278) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 5) {
-				if (rand.nextInt(803) == 0) {
+			if (pos.getY() <= -832 && pos.getY() > -896 && rand.nextInt(242) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 6) {
-				if (rand.nextInt(669) == 0) {
+			if (pos.getY() <= -896 && pos.getY() > -960 && rand.nextInt(210) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 7) {
-				if (rand.nextInt(558) == 0) {
+			if (pos.getY() <= -960 && pos.getY() > -1024 && rand.nextInt(182) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 8) {
-				if (rand.nextInt(465) == 0) {
+			if (pos.getY() <= -1024 && pos.getY() > -1088 && rand.nextInt(158) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 1, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 9) {
-				if (rand.nextInt(387) == 0) {
+			if (pos.getY() <= -1088 && pos.getY() > -1152 && rand.nextInt(138) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 2, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 10) {
-				if (rand.nextInt(323) == 0) {
+			if (pos.getY() <= -1152 && pos.getY() > -1216 && rand.nextInt(120) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 2, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 11) {
-				if (rand.nextInt(269) == 0) {
+			if (pos.getY() <= -1216 && pos.getY() > -1280 && rand.nextInt(102) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 3, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 12) {
-				if (rand.nextInt(224) == 0) {
+			if (pos.getY() <= -1280 && pos.getY() > -1344 && rand.nextInt(90) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 3, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 13) {
-				if (rand.nextInt(186) == 0) {
+			if (pos.getY() <= -1344 && pos.getY() > -1408 && rand.nextInt(78) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 4, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 14) {
-				if (rand.nextInt(155) == 0) {
+			if (pos.getY() <= -1408 && pos.getY() > -1472 && rand.nextInt(68) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
-				}
 			}
-			if (state == ModBlocks.MANTLEROCK && state.getBlock().getMetaFromState(state) == 15) {
-				if (rand.nextInt(129) == 0) {
+			if (pos.getY() <= -1472 && rand.nextInt(60) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 5, true);
-				}
 			}
 		}
 	}
-
-
-
-
-
-
-	/*
-	//Unstable block
-	public void unstableBlock(World worldIn, BlockPos pos, IBlockState state)
-	{
-		int x;
-		int y;
-		int z;
-
-		x = pos.getX();
-		y = pos.getY() -1;
-		z = pos.getZ();
-		Random rand = new Random();
-		BlockPos pos2 = new BlockPos(x,y,z);
-		IBlockState state2 = worldIn.getBlockState(pos2);
-		if (state2.getMaterial()!=Material.AIR)
-		{
-			//Block become stable
-		}
-		if (state2.getMaterial()==Material.AIR)
-		{
-			if (rand.nextInt(500)==0)
-			{
-				//Create falling boulder
-			}
-		}
-	}
-	 */
-
-
-	//Lava Decompression event
-	//Lava being spawned from removing the pressure
-	//This event can be stacked with earthquake.
-	//=(G26+1536)/(-12500)/64
-	//=(G152+9600)/(-12500)/64
 
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		super.onPlayerDestroy(worldIn, pos, state);
 		naturalGasExplosion(worldIn, pos, state);
-		spawnLava(worldIn, pos, state);
 	}
-
-	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-	{
-		super.updateTick(worldIn, pos, state, rand);
-
-		//unstableBlock(worldIn,pos,state);
-		//Only if the event has started
-		//lavaDecompression(worldIn,pos,state);
-	}
-
-
-
 }

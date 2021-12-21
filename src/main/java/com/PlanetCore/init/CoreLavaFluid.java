@@ -15,14 +15,18 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
@@ -36,9 +40,24 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 		setLightLevel(1);
 		setDensity(400);
-		setTickRate(8);
+		setTickRate(6);
 		setTickRandomly(true);
 		ModBlocks.BLOCKS.add(this);
+	}
+
+
+	public void vaporizeWater(World worldIn, BlockPos pos, IBlockState state)
+	{
+		if (this.material == Material.LAVA)
+		{
+			for (EnumFacing enumfacing : EnumFacing.values()) {
+
+				if (worldIn.getBlockState(pos.offset(enumfacing)) == Blocks.WATER.getDefaultState()) {
+					worldIn.setBlockState(pos.offset(enumfacing), Blocks.AIR.getDefaultState());
+				}
+
+			}
+		}
 	}
 
 
@@ -123,7 +142,6 @@ public class CoreLavaFluid extends BlockFluidClassic {
 					{
 						worldIn.setBlockToAir(new BlockPos(x, y, z));
 						//worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-						worldIn.createExplosion(null, X+x, Y+y, Z+z, 10, false);
 					}
 					if(state2.getBlock().getFlammability(worldIn, pos, null)>0 || state2.getMaterial()==Material.WOOD || state2.getMaterial()==Material.CLOTH || state2.getMaterial()==Material.PLANTS || state2.getMaterial()==Material.LEAVES)
 					{
@@ -143,14 +161,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		burnEntities(worldIn,X,Y,Z, 9);
 		Random rand = new Random();
 
-		if(pos.getY()>-12670 && pos.getY()<=-12480)
-		{
-			if(rand.nextInt(6000) == 0)
-			{
-				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-			}
-		}
-		else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == false)
+		if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == false)
 		{
 			if(rand.nextInt(120) == 0)
 			{
@@ -178,33 +189,10 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		thermalEffects(worldIn, pos, state);
 	}
 
-	@Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
-	{
-		super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
-		thermalEffects(worldIn, pos, state);
-		if(pos.getY()<=-12600 && pos.getY()>=-17950)
-		{
-			BlockPos pos2 = pos.up();
-			BlockPos pos3 = pos.down();
-			if(worldIn.getBlockState(pos2).getMaterial()==Material.AIR && worldIn.getBlockState(pos3).getBlock()==ModBlocks.CORE_LAVA_FLUID)
-			{
-				worldIn.setBlockState(pos2, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			}
-
-		}
-	}
-
 	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
 	{
-
 		if (entityIn instanceof EntityPlayerMP)
 		{
-			//EntityPlayerMP player = (EntityPlayerMP) entityIn;
-			//no protection = 10 damage each second (without the normal lava damage)
-			//Full Amazonite protect 100%
-
-			//no protection
 			entityIn.attackEntityFrom(DamageSource.GENERIC, 8.0F);
 		}
 	}
@@ -217,15 +205,26 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		super.updateTick(worldIn, pos, state, rand);
 		thermalEffects(worldIn,pos,state);
 		coreTemperature(worldIn,pos,state);
-		if(pos.getY()<=-12600 && pos.getY()>=-17950)
-		{
-			BlockPos pos2 = pos.up();
-			BlockPos pos3 = pos.down();
-			if(worldIn.getBlockState(pos2).getMaterial()==Material.AIR && worldIn.getBlockState(pos3).getBlock()==ModBlocks.CORE_LAVA_FLUID)
-			{
-				worldIn.setBlockState(pos2, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			}
-
+		vaporizeWater(worldIn, pos, state);
+		if (pos.getY() <= -1000) {
+			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+				worldIn.setBlockState(pos.up(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+				worldIn.setBlockState(pos.down(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+				worldIn.setBlockState(pos.north(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+				worldIn.setBlockState(pos.south(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+				worldIn.setBlockState(pos.west(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+				worldIn.setBlockState(pos.east(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 		}
 	}
 

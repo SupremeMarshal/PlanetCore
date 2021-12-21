@@ -31,7 +31,7 @@ public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
     @Override
     public void generate(World world, CubePrimer cubePrimer, CubePos cubePos) {
         if (this.builder == null) {
-            double scaleFactor = 1;
+            double scaleFactor = 20;
             // the scale for caves when they generate
             // smaller value = bigger caves
             double caveScale = scaleFactor * 1 / 96.0;
@@ -43,12 +43,12 @@ public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
             // value 1 and above means they won't generate
-            double caveSystemSizeFactor = -0.2;
+            double caveSystemSizeFactor = 0.0;
 
             // bigger values = less smooth transition on the edges of cave system
-            double transitionConstant1 = 25;
+            double transitionConstant1 = 5;
             // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
-            double transitionConstant2 = 0.05;
+            double transitionConstant2 = 1.0;
 
             // bigger value = finer detail for caves. Adding 1 = double the detail
             int caveOctaves = 8;
@@ -56,14 +56,14 @@ public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
             int placementOctaves = 8;
 
             // bigger values -> caves are more filled with air and less with stone
-            double caveFillConstant = -0.22;
+            double caveFillConstant = 0.44;
 
             // caves will begin to get smaller above this height
-            double yCutoff = -512;
+            double yCutoff = -100;
             // specifies how quickly they will get smaller as you go up
-            double yCutoffFactor1 = 0.002;
+            double yCutoffFactor1 = 0.004;
             // specifies how quickly cave systems become smaller as you go up
-            double yCutoffFactor2 = 0.002;
+            double yCutoffFactor2 = 0.004;
 
             IBuilder caveNoise = NoiseSource.perlin().frequency(caveScale).octaves(caveOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1024).create()
                     .add((x, y, z) -> y < yCutoff ? 0 : ((yCutoff - y) * yCutoffFactor1));

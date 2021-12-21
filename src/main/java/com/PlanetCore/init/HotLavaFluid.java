@@ -124,20 +124,12 @@ public class HotLavaFluid extends BlockFluidClassic {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 
-		if (pos.getY() <= -2000 && Math.random() <= 0.00016) {
-			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.up(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.down(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.north(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.south(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.west(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.east(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
+		if (pos.getY() <= -128 && Math.random() >= 0.001)
+		{
+			worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
 		}
+
+
 		int quantaRemaining = quantaPerBlock - state.getValue(LEVEL);
 		int expQuanta = -101;
 

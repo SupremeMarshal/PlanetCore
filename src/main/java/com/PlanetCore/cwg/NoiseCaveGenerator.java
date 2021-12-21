@@ -1,7 +1,4 @@
 package com.PlanetCore.cwg;
-
-import java.util.Map;
-
 import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
 import io.github.opencubicchunks.cubicchunks.api.world.ICube;
@@ -13,7 +10,6 @@ import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.builder.IBuild
 import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.builder.NoiseSource;
 import io.github.opencubicchunks.cubicchunks.cubicgen.preset.fixer.CustomGeneratorSettingsFixer;
 import io.github.opencubicchunks.cubicchunks.cubicgen.preset.fixer.PresetLoadError;
-
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -21,39 +17,43 @@ import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 
+import java.util.Map;
+
 public class NoiseCaveGenerator implements ICubicStructureGenerator {
     //V17
     private IBuilder builder;
     private IBlockState stoneBlock;
-
     public NoiseCaveGenerator() {
     }
-
     @Override
     public void generate(World world, CubePrimer cubePrimer, CubePos cubePos) {
         if (this.builder == null) {
-            double scaleFactor = 3.0;
+            double scaleFactor = 3;
+
             // the scale for caves when they generate
             // smaller value = bigger caves
             double caveScale = scaleFactor * 1 / 100.0;
             // the scale for placement
             // 2/placementScale should be roughly the average distance between cave systems
-            double placementScale = scaleFactor * 1 / 2048.0;
-
+            double placementScale = scaleFactor * 1 / 512.0;
             // bigger value = smaller cave systems
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
             // value 1 and above means they won't generate
-            double caveSystemSizeFactor = 0.35;
+            double caveSystemSizeFactor = 0.33;
+
 
             // bigger values = less smooth transition on the edges of cave system
             double transitionConstant1 = 40;
             // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
             double transitionConstant2 = 0.06;
 
+
             // bigger value = finer detail for caves. Adding 1 = double the detail
+
             int caveOctaves = 8;
             // bigger value = finer detail for placement. Adding 1 = double the detail
+
             int placementOctaves = 8;
 
             IBuilder caveNoise = NoiseSource.perlin().frequency(caveScale).octaves(caveOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1024).create();
@@ -65,7 +65,6 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
         int cubeX = cubePos.getX();
         int cubeY = cubePos.getY();
         int cubeZ = cubePos.getZ();
-
         BlockPos start = new BlockPos(cubeX * 4, cubeY * 4, cubeZ * 4);
         BlockPos end = start.add(4, 4, 4);
         builder.forEachScaled(start, end, new Vec3i(4, 4, 4), (x, y, z, gradX, gradY, gradZ, value) -> {
@@ -85,7 +84,6 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
             if (cubePrimer.getBlockState(x, y, z).getMaterial().isLiquid()) {
                 skip = true;
             }
-
             if (!skip) {
                 if (value > 0) {
                     cubePrimer.setBlockState(x, y, z, Blocks.AIR.getDefaultState());
@@ -100,7 +98,6 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
             }
         });
     }
-
     private IBlockState findStoneBlock(String generatorOptions, CubePos cubePos) {
         try {
             CustomGeneratorSettings settings = CustomGeneratorSettingsFixer.INSTANCE.fixPreset(generatorOptions);
@@ -109,7 +106,6 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
             throw new RuntimeException(err);
         }
     }
-
     private IBlockState findStoneBlock(CustomGeneratorSettings settings, CubePos cubePos) {
         for (Map.Entry<CustomGeneratorSettings.IntAABB, CustomGeneratorSettings> layer : settings.cubeAreas.map) {
             if (layer.getKey().contains(cubePos.getX(), cubePos.getY(), cubePos.getZ())) {

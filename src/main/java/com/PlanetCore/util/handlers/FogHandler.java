@@ -25,14 +25,17 @@ public class FogHandler {
         Entity p = event.getEntity();
         float Y = (float) p.posY;
         Block block = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock();
-        if (Y > 1) {
+        if (Y > 0) {
             event.setDensity(0.00003F);
         }
-        else if (Y < 0 && Y > -6000) {
-            event.setDensity(-0.00001F * Y);
+        else if (Y <= 0 && Y > -512) {
+            event.setDensity(-0.000117F * Y);
         }
-        else if (Y <= -6000) {
+        else if (Y <= -512 && Y > 1024) {
             event.setDensity(0.06F);
+        }
+        else if (Y <= -1024 && Y > 1536) {
+            event.setDensity(0.06F - (0.0015F * (Y + 1024)));
         }
         if (block instanceof BlockFluidBase) {
             if (block == Blocks.LAVA) {
@@ -72,37 +75,37 @@ public class FogHandler {
         }
         float Y = (float) event.getEntity().posY;
         if (Y < 0) {
-            if (Y < 0 && Y > -2000) {
+            if (Y < 0 && Y > -256) {
                 event.setRed(0.1F);
                 event.setGreen(0.2F);
                 event.setBlue(0.1F);
-            } else if (Y <= -2000 && Y > -4000) {
-                // RED STARTING 0.48F at -4000Y, 0.99F at -6850Y
-                event.setRed(0.1F -0.00045F * (Y + 2000));
+            } else if (Y <= -256 && Y > -512) {
+                // green to Red color
+                event.setRed(0.1F -0.003515625F * (Y + 256));
                 event.setGreen(0.2F);
-                event.setBlue(0.1F + (0.00005F * (Y + 2000)));
-            } else if (Y <= -4000 && Y > -6000) {
-                // RED STARTING 0.99F at -6850Y, 0.0F at
+                event.setBlue(0.1F + (0.000390625F * (Y + 256)));
+            } else if (Y <= -512 && Y > -768) {
+                // red to yellow color
                 event.setRed(1.0F);
-                event.setGreen(0.2F -0.0004F * (Y + 4000));
+                event.setGreen(0.2F -0.003125F * (Y + 512));
                 event.setBlue(0.0F);
-            } else if (Y <= -6000 && Y > -8000) {
-                // RED STARTING 0.99F at -6850Y, 0.0F at
-                event.setRed(0.5F + (0.00005F * (Y + 6000)));
-                event.setGreen(1.0F + (0.0004F * (Y + 6000)));
-                event.setBlue(1.0F);
+            } else if (Y <= -768 && Y > -1024) {
+                // yellow
+                event.setRed(1.0F);
+                event.setGreen(1.0F);
+                event.setBlue(0.0F);
             }
-            else if (Y <= -8000 && Y > -10000) {
-                // RED STARTING 0.99F at -6850Y, 0.0F at
-                event.setRed(0.4F + (0.0002F * (Y + 8000)));
-                event.setGreen(0.2F + (0.0001F * (Y + 8000)));
-                event.setBlue(1.0F + (0.00045F * (Y + 8000)));
+            else if (Y <= -1024 && Y > -1280) {
+                // yellow to white-blue
+                event.setRed(1.0F + (0.00078125F * (Y + 1024)));
+                event.setGreen(1.0F + (0.00078125F * (Y + 1024)));
+                event.setBlue(0.0F - (0.00390625F * (Y + 1024)));
             }
-            else if (Y <= -10000) {
-                // RED STARTING 0.99F at -6850Y, 0.0F at
-                event.setRed(0.0F);
-                event.setGreen(0.0F);
-                event.setBlue(0.1F);
+            else if (Y <= -1280 && Y > -1436) {
+                // white-blue to dark blue
+                event.setRed(0.8F + (0.0051282F * (Y + 1280)));
+                event.setGreen(0.8F + (0.0051282F * (Y + 1280)));
+                event.setBlue(1.0F + (0.0051282F * (Y + 1280)));
             }
         }
     }

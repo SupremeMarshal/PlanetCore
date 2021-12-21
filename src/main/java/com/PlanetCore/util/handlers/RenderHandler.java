@@ -76,6 +76,25 @@ public class RenderHandler
 				}
 			});
 
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.ACTIVE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:active_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.ACTIVE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:active_lava", "fluid");
+				}
+			});
+
 		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.CORE_LAVA_FLUID), new ItemMeshDefinition() {
 
 			@Override

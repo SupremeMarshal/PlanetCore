@@ -62,17 +62,6 @@ public class BlockBase extends Block {
 		setSoundType(SoundType.METAL);
 	}
 
-	/*
-	@Override
-	public Block setHardness(float hardness) {
-		int meta = getMetaFromState(getDefaultState());
-		IBlockState state = this.getDefaultState();
-		if (meta == 1 && state == ModBlocks.MANTLEROCK.getDefaultState()) { return super.setHardness(-1F); }
-		else {return super.setHardness(hardness);}
-	}
-
-	 */
-
 	@Override
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
 		ResourceLocation a = this.getRegistryName();
@@ -91,24 +80,9 @@ public class BlockBase extends Block {
 	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
 	 * }
 	 */
-	private static final float [] crustHardnessByMeta = {4.0F, 8.0F, 12.0F};
-	private static final float [] mantleHardnessByMeta = {20.0F, 40.0F, 80.0F, 160, 320, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000};
-	private static final float [] coreHardnessByMeta = {10000, 15000, 20000};
-
-
-
-	private static final String[] MaterialItem = {"ALUMINIUM", "TIN", "COPPER", "IRON", "SILVER",
-			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "TOPAZ", "JADE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
-			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX", "COAL", "SULFUR"};
-
-
-
-
-
-
-
-
-
+	private static final float [] crustHardnessByMeta = {3, 6, 9};
+	private static final float [] mantleHardnessByMeta = {12, 21, 36, 71, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000};
+	private static final float [] coreHardnessByMeta = {2500, 5000, 10000};
 
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
@@ -129,30 +103,31 @@ public class BlockBase extends Block {
 		Item drop = null;
 		if (a.contains("redstone")) { c = true;  drop = Items.REDSTONE; }
 		else if (a.contains("lapis")) { c = true; drop = Items.DYE; }
-		else if (a.contains("sulfur")) { c = true; drop = ModItems.SULFUR; }
+		//else if (a.contains("sulfur")) { c = true; drop = ModItems.SULFUR; }
 		else if (a.contains("coal")) { c = true; drop = Items.COAL; }
-		else if (a.contains("aluminium")) { c = true; drop = ModItems.ALUMINIUM_ORE; }
+		//else if (a.contains("aluminium")) { c = true; drop = ModItems.ALUMINIUM_ORE; }
 		else if (a.contains("platinum")) { c = true; drop = ModItems.PLATINUM_ORE; }
 		else if (a.contains("copper")) { c = true; drop = ModItems.COPPER_ORE; }
 		else if (a.contains("iron")) { c = true; drop = ModItems.IRON_ORE; }
 		else if (a.contains("silver")) { c = true; drop = ModItems.SILVER_ORE; }
 		else if (a.contains("gold")) { c = true; drop = ModItems.GOLD_ORE; }
 		else if (a.contains("tin")) { c = true; drop = ModItems.TIN_ORE; }
-		else if (a.contains("titanium")) { c = true; drop = ModItems.TITANIUM_ORE; }
-		else if (a.contains("uranium")) { c = true; drop = ModItems.URANIUM_ORE; }
-		else if (a.contains("tungsten")) { c = true; drop = ModItems.TUNGSTEN_ORE; }
+		//else if (a.contains("titanium")) { c = true; drop = ModItems.TITANIUM_ORE; }
+		//else if (a.contains("uranium")) { c = true; drop = ModItems.URANIUM_ORE; }
+		//else if (a.contains("tungsten")) { c = true; drop = ModItems.TUNGSTEN_ORE; }
 		else if (a.contains("emerald")) { c = true; drop = ModItems.EMERALD; }
 		else if (a.contains("sapphire")) { c = true; drop = ModItems.SAPPHIRE; }
 		else if (a.contains("ruby")) { c = true; drop = ModItems.RUBY; }
-		else if (a.contains("topaz")) { c = true; drop = ModItems.TOPAZ; }
-		else if (a.contains("jade")) { c = true; drop = ModItems.JADE; }
 		else if (a.contains("diamond")) { c = true; drop = ModItems.DIAMOND; }
+		/*
 		else if (a.contains("olivine")) { c = true; drop = ModItems.OLIVINE; }
 		else if (a.contains("wadsleyite")) { c = true; drop = ModItems.WADSLEYITE; }
 		else if (a.contains("ringwoodite")) { c = true; drop = ModItems.RINGWOODITE; }
 		else if (a.contains("brigmanite")) { c = true; drop = ModItems.BRIGMANITE; }
 		else if (a.contains("amazonite")) { c = true; drop = ModItems.AMAZONITE; }
 		else if (a.contains("majorite")) { c = true; drop = ModItems.MAJORITE; }
+
+		 */
 		else if (a.contains("onyx")) { c = true; drop = ModItems.ONYX; }
 		else { c = false;  }
 
@@ -177,14 +152,6 @@ public class BlockBase extends Block {
 		}
 		else return this.getMetaFromState(state);
 	}
-
-/*
-	@Override
-	public int damageDropped(IBlockState state) {
-		return super.damageDropped(state);
-	}
-
- */
 
 	@Override
 	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
@@ -261,125 +228,33 @@ public class BlockBase extends Block {
 	 */
 
 
+
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0) {
 
-
-			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK) && pos.getY() < 0 && (Math.random() <= (pos.getY() / -2000.0F)))
-			{
-				for (EnumFacing side : EnumFacing.values())
-				{
-					BlockPos movedPos = pos.offset(side);
-					IBlockState movedState = worldIn.getBlockState(movedPos);
-					float PressureLevel = (movedPos.getY()) * -0.5F;
-					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlockHardness(worldIn, movedPos) - 10F > PressureLevel)
-					{
-						continue;
-					}
-					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
-							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
-							.toArray(EnumFacing[]::new);
-					if (sides.length == 0)
-					{
-						continue;
-					}
-					worldIn.setBlockState(movedPos.offset(sides[rand.nextInt(sides.length)]), movedState);
-					worldIn.setBlockState(movedPos, worldIn.getBlockState(pos));
+				if (Math.random() >= pos.getY() * -0.0001) {
 					return;
 				}
-			}
-		}
-
-
-
-
-
-/**
-	@Override
-	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		float PressureLevel = pos.getY()*-0.05F;
-			if (pos.getY() < 0 && Math.random() <= (pos.getY() / -40000.0F) && !(this instanceof Corerock) && !(this instanceof BlocksBase)) {
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState.getBlock().getBlockHardness(state, worldIn, pos) < PressureLevel) {
+					if (movedState.getMaterial() == Material.IRON) return;
+					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState == Blocks.WATER) {
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
 							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
 							.toArray(EnumFacing[]::new);
-					if (sides.length == 0) continue;
+					if (sides.length == 0) {
+						continue;
+					}
 					worldIn.setBlockState(movedPos.offset(sides[rand.nextInt(sides.length)]), movedState);
 					worldIn.setBlockState(movedPos, worldIn.getBlockState(pos));
 					return;
 				}
 			}
 		}
-
- */
-
-
-
-
-
-
-
-	/*
-	The unstable effect cause the blocks to fall around you when destroying blocks.
-	I will change it to make it happen more often above a certain Y level and only decrease the further down you go.
-	 */
-	/*public static void unstable(World worldIn, BlockPos pos, IBlockState state) {
-		int x;
-		int y;
-		int z;
-		x = pos.getX();
-		y = pos.getY();
-		z = pos.getZ();
-		float counter = 0;
-		Random rand = new Random();
-		int rand2 = (rand.nextInt(2));
-		int rand4 = (rand.nextInt(4));
-		float chance = (float)Math.random();
-		Iterable<BlockPos> it = BlockPos.getAllInBox(x - 12, y - 12, z - 12, x + 12, y + 12, z + 12);
-		for (BlockPos pos1 : it) {
-			IBlockState state2 = worldIn.getBlockState(pos1);
-			if (state2.getMaterial() == Material.AIR) {
-				counter++;
-			}
-		}
-		float SuperChance = (pos.getY() / (-600000.0F / ((counter + 1F) / 64F)));
-		float SuperChance1 = ((-6000 - pos.getY()) / (-1800000.0F / ((counter + 1F) / 64F)));
-		if ((y <= 0 && y >= -1500 && Math.random() <= SuperChance) || (y <= -1500 && y >= -6000 && Math.random() <= SuperChance1))
-		{
-			for (BlockPos pos2 : it) {
-				IBlockState state2 = worldIn.getBlockState(pos2);
-				if (state2.getMaterial() == Material.AIR)
-				{
-					int x1 = pos2.getX();
-					int y1 = pos2.getY() + 1;
-					int z1 = pos2.getZ();
-					BlockPos pos3 = new BlockPos(x1, y1, z1);
-					IBlockState state3 = worldIn.getBlockState(pos3);
-					if (state3.getMaterial() == Material.ROCK && !worldIn.isRemote && Math.random() <= chance)
-					{
-						int x2 = pos3.getX();
-						int y2 = pos3.getY();
-						int z2 = pos3.getZ();
-						{
-							EntityFallingBlock entityfallingblock = new EntityFallingBlock(worldIn, x2 + 0.5, y2, z2 + 0.5,state3);
-							entityfallingblock.setHurtEntities(true);
-							worldIn.spawnEntity(entityfallingblock);
-						}
-					}
-				}
-			}
-		}
-	}
-	 */
-
-	private void unharvestable(World worldIn, BlockPos pos, EntityPlayer entity) {
-
-	}
 
 	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
 	{
@@ -391,8 +266,6 @@ public class BlockBase extends Block {
 	private void add(BlockPos pos, IBlockState state) {
 		
 	}
-
-
 
 	@Override
 	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
@@ -451,16 +324,6 @@ public class BlockBase extends Block {
 			}
 		}
 	}
-
-	@Override
-	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
-		//naturalGasExplosion(worldIn, pos, state);
-		//lavaDecompression(worldIn, pos, state);
-	}
-
-
-
-
 
 	protected BlockPattern getSnowmanPattern()
 	{

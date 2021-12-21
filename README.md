@@ -10,13 +10,11 @@ The deeper you dig, the more dangerous it get while you also find more precious 
 
 I got inspired by many games such as Motherload and terraria.
 
-I will add more description later.
-
 
 ## Dependencies 
 - [Open Cubic Chunks](https://www.curseforge.com/minecraft/mc-mods/opencubicchunks)
 - [Cubic World Gen](https://www.curseforge.com/minecraft/mc-mods/cubicworldgen)
-- [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib)
+- not a dependencie for now[GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib)
 
 ## Credits 
 - [SupremeMarshal](https://github.com/SupremeMarshal)

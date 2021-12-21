@@ -40,11 +40,13 @@ public class BlocksBase extends BlockBase {
 			drop = Items.DYE;
 		} else if (a.contains("coal")) {
 			drop = Items.COAL;
-		} else if (a.contains("sulfur")) {
+		}
+		/*else if (a.contains("sulfur")) {
 			drop = ModItems.SULFUR;
 		} else if (a.contains("aluminium")) {
 			drop = ModItems.ALUMINIUM_ORE;
-		} else if (a.contains("copper")) {
+		} */
+		else if (a.contains("copper")) {
 			drop = ModItems.COPPER_ORE;
 		} else if (a.contains("iron")) {
 			drop = ModItems.IRON_ORE;
@@ -56,25 +58,33 @@ public class BlocksBase extends BlockBase {
 			drop = ModItems.PLATINUM_ORE;
 		} else if (a.contains("tin")) {
 			drop = ModItems.TIN_ORE;
-		} else if (a.contains("titanium")) {
+		}
+		/*
+		else if (a.contains("titanium")) {
+
 			drop = ModItems.TITANIUM_ORE;
 		} else if (a.contains("uranium")) {
 			drop = ModItems.URANIUM_ORE;
 		} else if (a.contains("tungsten")) {
 			drop = ModItems.TUNGSTEN_ORE;
-		} else if (a.contains("emerald")) {
+		} */
+		else if (a.contains("emerald")) {
 			drop = Items.EMERALD;
 		} else if (a.contains("sapphire")) {
 			drop = ModItems.SAPPHIRE;
 		} else if (a.contains("ruby")) {
 			drop = ModItems.RUBY;
-		} else if (a.contains("topaz")) {
+		}
+		/* else if (a.contains("topaz")) {
 			drop = ModItems.TOPAZ;
 		} else if (a.contains("jade")) {
 			drop = ModItems.JADE;
-		} else if (a.contains("diamond")) {
+		} */
+		else if (a.contains("diamond")) {
+
 			drop = ModItems.DIAMOND;
-		} else if (a.contains("olivine")) {
+		}
+		/* else if (a.contains("olivine")) {
 			drop = ModItems.OLIVINE;
 		} else if (a.contains("wadsleyite")) {
 			drop = ModItems.WADSLEYITE;
@@ -82,11 +92,15 @@ public class BlocksBase extends BlockBase {
 			drop = ModItems.RINGWOODITE;
 		} else if (a.contains("brigmanite")) {
 			drop = ModItems.BRIGMANITE;
-		} else if (a.contains("amazonite")) {
+		} */
+		else if (a.contains("amazonite")) {
+
 			drop = ModItems.AMAZONITE;
-		} else if (a.contains("majorite")) {
-			drop = ModItems.MAJORITE;
-		} else if (a.contains("onyx")) {
+		}
+		//else if (a.contains("majorite")) {
+		//	drop = ModItems.MAJORITE;
+		//}
+		else if (a.contains("onyx")) {
 			drop = ModItems.ONYX;
 		}
 		else b = false;

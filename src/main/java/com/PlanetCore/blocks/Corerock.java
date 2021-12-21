@@ -143,95 +143,6 @@ public class Corerock extends BlockBase implements IMetaName {
 		return this.getDefaultState().withProperty(VARIANT, Corerock.EnumType.byMetadata(meta));
 	}
 
-
-
-
-	/*@Override
-	public Item getItemDropped(IBlockState state, Random random, int l)
-	{
-		Block block = this;
-
-		if (block == ModBlocks.CORESTONE_ONYX || block == ModBlocks.INNERCORESTONE_ONYX || block == ModBlocks.CENTERCORESTONE_ONYX)
-		{return new ItemStack(ModItems.ONYX, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_AMAZONITE || block == ModBlocks.INNERCORESTONE_AMAZONITE || block == ModBlocks.CENTERCORESTONE_AMAZONITE)
-		{return new ItemStack(ModItems.AMAZONITE, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_JADE || block == ModBlocks.INNERCORESTONE_JADE || block == ModBlocks.CENTERCORESTONE_JADE)
-		{return new ItemStack(ModItems.JADE, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_DIAMOND || block == ModBlocks.INNERCORESTONE_DIAMOND || block == ModBlocks.CENTERCORESTONE_DIAMOND)
-		{return new ItemStack(ModItems.DIAMOND, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_TOPAZ || block == ModBlocks.INNERCORESTONE_TOPAZ || block == ModBlocks.CENTERCORESTONE_TOPAZ)
-		{return new ItemStack(ModItems.TOPAZ, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_RUBY || block == ModBlocks.INNERCORESTONE_RUBY || block == ModBlocks.CENTERCORESTONE_RUBY)
-		{return new ItemStack(ModItems.RUBY, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_SAPPHIRE || block == ModBlocks.INNERCORESTONE_SAPPHIRE || block == ModBlocks.CENTERCORESTONE_SAPPHIRE)
-		{return new ItemStack(ModItems.SAPPHIRE, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_EMERALD || block == ModBlocks.INNERCORESTONE_EMERALD || block == ModBlocks.CENTERCORESTONE_EMERALD)
-		{return new ItemStack(Items.EMERALD, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_LAPIS || block == ModBlocks.INNERCORESTONE_LAPIS || block == ModBlocks.CENTERCORESTONE_LAPIS)
-		{return Items.DYE;}
-		else if (block == ModBlocks.CORESTONE_REDSTONE || block == ModBlocks.INNERCORESTONE_REDSTONE || block == ModBlocks.CENTERCORESTONE_REDSTONE)
-		{return new ItemStack(Items.REDSTONE, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_COAL || block == ModBlocks.INNERCORESTONE_COAL || block == ModBlocks.CENTERCORESTONE_COAL)
-		{return new ItemStack(Items.COAL, 1, 0).getItem();}
-		else if (block == ModBlocks.CORESTONE_SULFUR || block == ModBlocks.INNERCORESTONE_SULFUR || block == ModBlocks.CENTERCORESTONE_SULFUR)
-		{return new ItemStack(ModItems.SULFUR, 1, 0).getItem();}
-		else
-		{return new ItemStack(block, 1, 0).getItem();}
-	}
-
-
-
-	@Override
-	public int quantityDropped(Random random) {
-		Block block = this;
-
-		if (block == ModBlocks.CORESTONE_REDSTONE)
-		{
-			return 12 + random.nextInt(10);
-		}
-		else if (block == ModBlocks.INNERCORESTONE_REDSTONE)
-		{
-			return 15 + random.nextInt(12);
-		}
-		else if (block == ModBlocks.CENTERCORESTONE_REDSTONE)
-		{
-			return 18 + random.nextInt(14);
-		}
-		else if (block == ModBlocks.CORESTONE_COAL || block == ModBlocks.CORESTONE_SULFUR)
-		{
-			return 5;
-		}
-		else if (block == ModBlocks.INNERCORESTONE_COAL || block == ModBlocks.INNERCORESTONE_SULFUR)
-		{
-			return 7;
-		}
-		else if (block == ModBlocks.CENTERCORESTONE_COAL || block == ModBlocks.CENTERCORESTONE_SULFUR)
-		{
-			return 9;
-		}
-		else
-		{
-			return 1;
-		}
-
-	}
-
-
-
-	@Override
-	public int damageDropped(IBlockState state) {
-		Block block = this;
-		if (block == ModBlocks.CORESTONE_LAPIS || block == ModBlocks.INNERCORESTONE_LAPIS || block == ModBlocks.CENTERCORESTONE_LAPIS) {
-			return 4;
-		}
-		else
-		{
-			return getMetaFromState(state);
-		}
-	}
-
-*/
-
 	public static void burnEntities(World world, int x, int y, int z, int radius) {
 		float f = radius;
 		HashSet hashset = new HashSet();
@@ -352,24 +263,19 @@ public class Corerock extends BlockBase implements IMetaName {
 		{
 			if (state.getBlock().getMetaFromState(state) == 0)
 			{
-				if (rand.nextInt(150) == 0) {
-					if (rand.nextInt(2) == 0) {
-						worldIn.setBlockState(pos, Blocks.LAVA.getDefaultState());
-					}
-					else {
-						worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-					}
+				if (rand.nextInt(80) == 0) {
+					worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 1)
 			{
-				if (rand.nextInt(120) == 0) {
+				if (rand.nextInt(60) == 0) {
 					worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 2)
 			{
-				if (rand.nextInt(90) == 0) {
+				if (rand.nextInt(40) == 0) {
 					worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 				}
 			}
@@ -383,29 +289,19 @@ public class Corerock extends BlockBase implements IMetaName {
 		int Z = pos.getZ();
 		int Y = pos.getY();
 		if (!worldIn.isRemote) {
-			if (Y <= -5750 && Y > -6000) {
-				if (rand.nextInt(400) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 1, true);
+			if (state.getBlock().getMetaFromState(state) == 0) {
+				if (rand.nextInt(40) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
 				}
 			}
-			if (Y <= -6000 && Y > -7000) {
-				if (rand.nextInt(300) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(10) + 1, true);
+			if (state.getBlock().getMetaFromState(state) == 1) {
+				if (rand.nextInt(32) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
 				}
 			}
-			if (Y <= -7000 && Y > -8000) {
-				if (rand.nextInt(250) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(12) + 1, true);
-				}
-			}
-			if (Y <= -8000 && Y > -9000) {
-				if (rand.nextInt(200) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(14) + 1, true);
-				}
-			}
-			if (Y <= -9000) {
-				if (rand.nextInt(150) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(18) + 1, true);
+			if (state.getBlock().getMetaFromState(state) == 2) {
+				if (rand.nextInt(25) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
 				}
 			}
 		}
@@ -422,8 +318,6 @@ public class Corerock extends BlockBase implements IMetaName {
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		super.onPlayerDestroy(worldIn, pos, state);
-		//naturalGasExplosion(worldIn, pos, state);
-		//earthquake(worldIn, pos, state);
 		naturalGasExplosion(worldIn, pos, state);
 		spawnLava(worldIn, pos, state);
 	}

@@ -48,11 +48,7 @@ public class Crustrock extends BlockBase implements IMetaName
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random random, int l) {
-		int meta = this.getMetaFromState(state);
-		if (meta >= 3 && this == ModBlocks.CRUSTROCK)
-			return Item.getItemFromBlock(ModBlocks.CRUST_COBBLESTONE);
-		else if (meta < 3 && this == ModBlocks.CRUSTROCK)
-			return Item.getItemFromBlock(Blocks.COBBLESTONE);
+		if (this == ModBlocks.CRUSTROCK) return Item.getItemFromBlock(ModBlocks.CRUST_COBBLESTONE);
 		else return super.getItemDropped(state, random, l);
 	}
 
@@ -141,39 +137,4 @@ public class Crustrock extends BlockBase implements IMetaName
 	{
 		return Crustrock.EnumType.values()[stack.getItemDamage()].getName();
 	}
-
-
-
-	//Lava Decompression event
-	//Lava being spawned from removing the pressure
-	//This event can be stacked with earthquake.
-	//=(G26+1536)/(-12500)/64
-	//=(G152+9600)/(-12500)/64
-	public void lavaDecompression(World worldIn, BlockPos pos, IBlockState state) {
-		float chance = pos.getY()+1000/-3000/64F;
-		float chance1 = pos.getY()+9600/-3000/64F;
-		if (pos.getY() < -1000 && Math.random() <= chance && !worldIn.isRemote) {
-			worldIn.setBlockState(pos, Blocks.LAVA.getDefaultState());
-		}
-	}
-
-	@Override
-	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
-		//naturalGasExplosion(worldIn, pos, state);
-		//earthquake(worldIn, pos, state);
-		lavaDecompression(worldIn, pos, state);
-	}
-
-	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-	{
-		super.updateTick(worldIn, pos, state, rand);
-
-		//unstableBlock(worldIn,pos,state);
-		//Only if the event has started
-		//lavaDecompression(worldIn,pos,state);
-	}
-
-
-
 }

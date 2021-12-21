@@ -45,6 +45,7 @@ public class PlayerTickEventHandler {
     }
     */
 
+    /*
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (!event.player.getEntityWorld().isRemote) {
@@ -55,84 +56,10 @@ public class PlayerTickEventHandler {
                 }
             }
 
-            //If close to lava, burn the player
-            int x, y, z;
-            x = event.player.getPosition().getX();
-            y = event.player.getPosition().getY();
-            z = event.player.getPosition().getZ();
-            Iterable<BlockPos> it = BlockPos.getAllInBox(x - 3, y - 3, z - 3, x + 3, y + 3, z + 3);
             PotionEffect effect = event.player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
-            for (BlockPos pos : it) {
-                IBlockState state = event.player.world.getBlockState(pos);
-                if (state.getMaterial() == Material.LAVA) {
-
-                    if (event.player.world.getTotalWorldTime() % 1600 == 0) {
-
-                        if(!event.player.isImmuneToFire())
-                        {
-                            event.player.setFire(4);
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
-                        }
-                        if(effect != null && effect.getAmplifier() == 0) {
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
-                        }
-                        if(effect != null && effect.getAmplifier() == 1) {
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 0.5F);
-                        }
-                    }
-                }
-                if (state.getBlock() == ModBlocks.HOT_LAVA_FLUID) {
-                    if (event.player.world.getTotalWorldTime() % 800 == 0) {
-                        if(!event.player.isImmuneToFire())
-                        {
-                            event.player.setFire(6);
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
-                        }
-                        if(effect != null && effect.getAmplifier() == 0) {
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
-                        }
-                        if(effect != null && effect.getAmplifier() == 1) {
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 1.0F);
-                        }
-                    }
-                }
-                if (state.getBlock() == ModBlocks.CORE_LAVA_FLUID) {
-                    if (event.player.world.getTotalWorldTime() % 400 == 0) {
-                        if(!event.player.isImmuneToFire())
-                        {
-                            event.player.setFire(8);
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 8.0F);
-                        }
-                        if(effect != null && effect.getAmplifier() == 0) {
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
-                        }
-                        if(effect != null && effect.getAmplifier() == 1) {
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 2.0F);
-                        }
-                    }
-                }
-                if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) {
-                    if (event.player.world.getTotalWorldTime() % 200 == 0) {
-                        if(!event.player.isImmuneToFire())
-                        {
-                            event.player.setFire(8);
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 12.0F);
-                        }
-                        if(effect != null && effect.getAmplifier() == 0) {
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 8.0F);
-                        }
-                        if(effect != null && effect.getAmplifier() == 1) {
-                            event.player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
-                        }
-                    }
-                }
-            }
-
-            /*
-             */
 
 
-            if (event.player.posY > -1500 && event.player.posY < -1000) {
+            if (event.player.posY > -200 && event.player.posY < -100) {
                 if (event.player.world.getTotalWorldTime() % 1000 == 0) {
 
                     if (!event.player.isImmuneToFire()) {
@@ -141,7 +68,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -2000 && event.player.posY < -1501) {
+            if (event.player.posY > -300 && event.player.posY < -201) {
                 if (event.player.world.getTotalWorldTime() % 833 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(4);
@@ -152,7 +79,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -2500 && event.player.posY < -2001) {
+            if (event.player.posY > -400 && event.player.posY < -301) {
                 if (event.player.world.getTotalWorldTime() % 694 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -166,7 +93,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -3000 && event.player.posY < -2501) {
+            if (event.player.posY > -500 && event.player.posY < -401) {
                 if (event.player.world.getTotalWorldTime() % 578 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -180,7 +107,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -3500 && event.player.posY < -3001) {
+            if (event.player.posY > -600 && event.player.posY < -501) {
                 if (event.player.world.getTotalWorldTime() % 482 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -194,7 +121,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -4000 && event.player.posY < -3501) {
+            if (event.player.posY > -700 && event.player.posY < -601) {
                 if (event.player.world.getTotalWorldTime() % 401 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -208,7 +135,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -4500 && event.player.posY < -4001) {
+            if (event.player.posY > -800 && event.player.posY < -701) {
                 if (event.player.world.getTotalWorldTime() % 334 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -222,7 +149,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -5000 && event.player.posY < -4501) {
+            if (event.player.posY > -900 && event.player.posY < -801) {
                 if (event.player.world.getTotalWorldTime() % 239 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -236,7 +163,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -5500 && event.player.posY < -5001) {
+            if (event.player.posY > -1000 && event.player.posY < -901) {
                 if (event.player.world.getTotalWorldTime() % 170 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -250,7 +177,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -6000 && event.player.posY < -5501) {
+            if (event.player.posY > -1100 && event.player.posY < -1001) {
                 if (event.player.world.getTotalWorldTime() % 122 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -264,7 +191,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -7000 && event.player.posY < -6001) {
+            if (event.player.posY > -1200 && event.player.posY < -1101) {
                 if (event.player.world.getTotalWorldTime() % 100 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -278,7 +205,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -8000 && event.player.posY < -7001) {
+            if (event.player.posY > -1300 && event.player.posY < -1201) {
                 if (event.player.world.getTotalWorldTime() % 90 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(4);
@@ -292,7 +219,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -8000 && event.player.posY < -7001) {
+            if (event.player.posY > -1400 && event.player.posY < -1301) {
                 if (event.player.world.getTotalWorldTime() % 80 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -306,7 +233,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -9000 && event.player.posY < -8001) {
+            if (event.player.posY > -1500 && event.player.posY < -1401) {
                 if (event.player.world.getTotalWorldTime() % 70 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -320,7 +247,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -10000 && event.player.posY < -9001) {
+            if (event.player.posY > -1600 && event.player.posY < -1501) {
                 if (event.player.world.getTotalWorldTime() % 60 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -334,7 +261,7 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (event.player.posY > -100000 && event.player.posY < -10001) {
+            if (event.player.posY > -100000 && event.player.posY < -1601) {
                 if (event.player.world.getTotalWorldTime() % 50 == 0) {
                     if (!event.player.isImmuneToFire()) {
                         event.player.setFire(5);
@@ -373,6 +300,8 @@ public class PlayerTickEventHandler {
             }
         }
     }
+
+     */
 
 
 }
