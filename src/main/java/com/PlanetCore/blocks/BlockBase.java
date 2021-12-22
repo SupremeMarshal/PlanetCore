@@ -53,8 +53,12 @@ public class BlockBase extends Block {
 		}
 	};
 
+
+
+
 	public BlockBase(String name, Material material) {
 		super(material);
+
 		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
@@ -80,144 +84,12 @@ public class BlockBase extends Block {
 	 *    return (in != 0) ? (recursive(in-1) + 3 * in) : 3;
 	 * }
 	 */
-	private static final float [] crustHardnessByMeta = {3, 6, 9};
-	private static final float [] mantleHardnessByMeta = {12, 21, 36, 71, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000};
-	private static final float [] coreHardnessByMeta = {2500, 5000, 10000};
-
-	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		String a = this.getTranslationKey();
-		int meta = getMetaFromState(blockState);
-		float hardness = super.getBlockHardness(blockState, worldIn, pos);
-		if (a.contains("ore")) hardness = hardness + 1.5F;
-		if (a.contains("crustrock")) hardness = hardness + crustHardnessByMeta[meta];
-		if (a.contains("mantlerock")) hardness = hardness + mantleHardnessByMeta[meta];
-		if (a.contains("corestone")) hardness = hardness + coreHardnessByMeta[meta];
-		return hardness;
-	}
-
-	@Override
-	public Item getItemDropped(IBlockState state, Random random, int l) {
-		String a = this.getTranslationKey();
-		Boolean c;
-		Item drop = null;
-		if (a.contains("redstone")) { c = true;  drop = Items.REDSTONE; }
-		else if (a.contains("lapis")) { c = true; drop = Items.DYE; }
-		//else if (a.contains("sulfur")) { c = true; drop = ModItems.SULFUR; }
-		else if (a.contains("coal")) { c = true; drop = Items.COAL; }
-		//else if (a.contains("aluminium")) { c = true; drop = ModItems.ALUMINIUM_ORE; }
-		else if (a.contains("platinum")) { c = true; drop = ModItems.PLATINUM_ORE; }
-		else if (a.contains("copper")) { c = true; drop = ModItems.COPPER_ORE; }
-		else if (a.contains("iron")) { c = true; drop = ModItems.IRON_ORE; }
-		else if (a.contains("silver")) { c = true; drop = ModItems.SILVER_ORE; }
-		else if (a.contains("gold")) { c = true; drop = ModItems.GOLD_ORE; }
-		else if (a.contains("tin")) { c = true; drop = ModItems.TIN_ORE; }
-		//else if (a.contains("titanium")) { c = true; drop = ModItems.TITANIUM_ORE; }
-		//else if (a.contains("uranium")) { c = true; drop = ModItems.URANIUM_ORE; }
-		//else if (a.contains("tungsten")) { c = true; drop = ModItems.TUNGSTEN_ORE; }
-		else if (a.contains("emerald")) { c = true; drop = ModItems.EMERALD; }
-		else if (a.contains("sapphire")) { c = true; drop = ModItems.SAPPHIRE; }
-		else if (a.contains("ruby")) { c = true; drop = ModItems.RUBY; }
-		else if (a.contains("diamond")) { c = true; drop = ModItems.DIAMOND; }
-		/*
-		else if (a.contains("olivine")) { c = true; drop = ModItems.OLIVINE; }
-		else if (a.contains("wadsleyite")) { c = true; drop = ModItems.WADSLEYITE; }
-		else if (a.contains("ringwoodite")) { c = true; drop = ModItems.RINGWOODITE; }
-		else if (a.contains("brigmanite")) { c = true; drop = ModItems.BRIGMANITE; }
-		else if (a.contains("amazonite")) { c = true; drop = ModItems.AMAZONITE; }
-		else if (a.contains("majorite")) { c = true; drop = ModItems.MAJORITE; }
-
-		 */
-		else if (a.contains("onyx")) { c = true; drop = ModItems.ONYX; }
-		else { c = false;  }
-
-		if (!c) { return Item.getItemFromBlock(this); }
-		else { return new ItemStack(drop, 1, 0).getItem(); }
-	}
-
-
-	@Override
-	public int damageDropped(IBlockState state) {
-		String a = this.getTranslationKey();
-		if (a.contains("lapis")) {
-			return EnumDyeColor.BLUE.getDyeDamage();
-		}
-		else if (this == ModBlocks.CRUSTROCK || a.contains("lapis") || a.contains("redstone") || a.contains("sulfur") || a.contains("coal") || a.contains("aluminium") 
-				|| a.contains("tin") || a.contains("copper") || a.contains("iron")
-				|| a.contains("silver") || a.contains("gold") || a.contains("platinum") || a.contains("titanium") || a.contains("uranium") || a.contains("tungsten")
-				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
-				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
-				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx")) {
-			return 0;
-		}
-		else return this.getMetaFromState(state);
-	}
-
-	@Override
-	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
-		String a = this.getTranslationKey();
-		Random rand = world instanceof World ? ((World)world).rand : new Random();
-		if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
-			int i = 0;
-			if (a.contains("sulfur") || a.contains("coal")) {
-				i = MathHelper.getInt(rand, 0, 2);
-			} else if (a.contains("lapis")) {
-				i = MathHelper.getInt(rand, 1, 3);
-			} else if (a.contains("topaz") || a.contains("jade") || a.contains("emerald")) {
-				i = MathHelper.getInt(rand, 2, 4);
-			} else if (a.contains("ruby") || a.contains("sapphire") || a.contains("diamond")) {
-				i = MathHelper.getInt(rand, 3, 7);
-			} else if (a.contains("olivine") || a.contains("wadsleyite") || a.contains("ringwoodite") || a.contains("brigmanite")) {
-				i = MathHelper.getInt(rand, 5, 9);
-			} else if (a.contains("majorite") || a.contains("amazonite") || a.contains("onyx")) {
-				i = MathHelper.getInt(rand, 7, 12);
-			}
-
-			return i;
-		} else {
-			return 0;
-		}
-	}
-
 
 	@Override
 	public int quantityDropped(Random random) {
 		String a = this.getTranslationKey();
 		return 1;
 	}
-
-	@Override
-	public int quantityDroppedWithBonus(int fortune, Random random) {
-		String a = this.getTranslationKey();
-		if (a.contains("sulfur") || a.contains("coal") || a.contains("aluminium")
-				|| a.contains("tin") || a.contains("copper") || a.contains("iron")
-				|| a.contains("silver") || a.contains("gold") || a.contains("platinum") || a.contains("titanium") || a.contains("uranium") || a.contains("tungsten")
-				|| a.contains("emerald") || a.contains("sapphire") || a.contains("ruby") || a.contains("topaz")
-				|| a.contains("jade") || a.contains("diamond") || a.contains("olivine") || a.contains("wadsleyite")
-				|| a.contains("ringwoodite") || a.contains("brigmanite") || a.contains("amazonite") || a.contains("majorite") || a.contains("onyx"))
-		{
-			if (a.contains("compact")) {
-				return 3 + random.nextInt(fortune * 3 + 1);
-			}
-			else return 1 + random.nextInt(fortune + 1);
-		}
-		else if (a.contains("redstone") || a.contains("lapis"))
-		{
-
-			if (a.contains("compact")) {
-				return 8 + new Random().nextInt(fortune * 4 + 4);
-			}
-			else if (a.contains("ore_redstone") || a.contains("crustrock_redstone") || a.contains("mantlerock_redstone")
-					|| a.contains("ore_lapis") || a.contains("crustrock_lapis") || a.contains("mantlerock_lapis"))
-			{
-				return 4 + new Random().nextInt(fortune * 2 + 2);
-			}
-		}
-		return 1;
-	}
-
-
-
 
 	/**
 	 * cause the terrain to close on itself, creating a pressure effect inside the planet.
@@ -233,7 +105,64 @@ public class BlockBase extends Block {
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0) {
 
-				if (Math.random() >= pos.getY() * -0.0001) {
+				if (pos.getY() <= 0 && pos.getY() > -64 && Math.random() >= 0.0031) {
+					return;
+				}
+				if (pos.getY() <= -64 && pos.getY() > -128 && Math.random() >= 0.0042) {
+					return;
+				}
+				if (pos.getY() <= -128 && pos.getY() > -192 && Math.random() >= 0.0056) {
+					return;
+				}
+				if (pos.getY() <= -192 && pos.getY() > -256 && Math.random() >= 0.0075) {
+					return;
+				}
+				if (pos.getY() <= -256 && pos.getY() > -320 && Math.random() >= 0.01) {
+					return;
+				}
+				if (pos.getY() <= -320 && pos.getY() > -384 && Math.random() >= 0.01336) {
+					return;
+				}
+				if (pos.getY() <= -384 && pos.getY() > -448 && Math.random() >= 0.01781) {
+					return;
+				}
+				if (pos.getY() <= -448 && pos.getY() > -512 && Math.random() >= 0.02375) {
+					return;
+				}
+				if (pos.getY() <= -512 && pos.getY() > -576 && Math.random() >= 0.03167) {
+					return;
+				}
+				if (pos.getY() <= -576 && pos.getY() > -640 && Math.random() >= 0.04223) {
+					return;
+				}
+				if (pos.getY() <= -640 && pos.getY() > -704 && Math.random() >= 0.05631) {
+					return;
+				}
+				if (pos.getY() <= -704 && pos.getY() > -768 && Math.random() >= 0.075) {
+					return;
+				}
+				if (pos.getY() <= -768 && pos.getY() > -832 && Math.random() >= 0.1) {
+					return;
+				}
+				if (pos.getY() <= -768 && pos.getY() > -832 && Math.random() >= 0.1334) {
+					return;
+				}
+				if (pos.getY() <= -832 && pos.getY() > -896 && Math.random() >= 0.1779) {
+					return;
+				}
+				if (pos.getY() <= -896 && pos.getY() > -960 && Math.random() >= 0.2373) {
+					return;
+				}
+				if (pos.getY() <= -960 && pos.getY() > -1024 && Math.random() >= 0.3164) {
+					return;
+				}
+				if (pos.getY() <= -1024 && pos.getY() > -1088 && Math.random() >= 0.4218) {
+					return;
+				}
+				if (pos.getY() <= -1088 && pos.getY() > -1152 && Math.random() >= 0.5625) {
+					return;
+				}
+				if (pos.getY() <= -1152 && pos.getY() > -1216 && Math.random() >= 0.75) {
 					return;
 				}
 				for (EnumFacing side : EnumFacing.values()) {

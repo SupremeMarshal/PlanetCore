@@ -1,16 +1,11 @@
 package com.PlanetCore.init;
 
-
-import com.PlanetCore.blocks.Corerock;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -23,8 +18,6 @@ import net.minecraftforge.fluids.Fluid;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.Random;
-
 
 public class OnyxLavaFluid extends BlockFluidClassic {
 

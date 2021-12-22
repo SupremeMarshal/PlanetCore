@@ -33,13 +33,11 @@ public class Crustrock extends BlockBase implements IMetaName
 {
 
 
-
 	public static final PropertyEnum<Crustrock.EnumType> VARIANT = PropertyEnum.create("variant", Crustrock.EnumType.class);
 
 	public Crustrock(String name, Material material)
 	{
 		super(name, material);
-
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);

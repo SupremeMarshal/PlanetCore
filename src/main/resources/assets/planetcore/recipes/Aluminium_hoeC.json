@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:aluminium_ingot"
+            "item": "planetcore:aluminum_ingot"
         },
         "B":
         {
-            "item": "planetcore:aluminium_rod"
+            "item": "planetcore:aluminum_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:complete_aluminium_hoe",
+        "item": "planetcore:complete_aluminum_hoe",
         "count": 1
     }
 }

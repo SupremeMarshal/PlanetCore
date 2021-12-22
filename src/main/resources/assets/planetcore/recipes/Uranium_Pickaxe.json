@@ -12,7 +12,7 @@
     {
         "A":
         {
-            "item": "planetcore:uranium_ingot"
+            "item": "planetcore:uranum_ingot"
         },
         "B":
         {
@@ -22,7 +22,7 @@
     
     "result":
     {
-        "item": "planetcore:uranium_pickaxe",
+        "item": "planetcore:uranum_pickaxe",
         "count": 1
     }
 }

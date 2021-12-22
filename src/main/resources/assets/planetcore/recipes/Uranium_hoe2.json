@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:uranium_ingot"
+            "item": "planetcore:uranum_ingot"
         },
         "B":
         {
-            "item": "planetcore:uranium_rod"
+            "item": "planetcore:uranum_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:uranium_hoe",
+        "item": "planetcore:uranum_hoe",
         "count": 1
     }
 }

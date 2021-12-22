@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "B ",
+        "B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:tungsten_titanum_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:tungsten_titanum_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:tungsten_titanum_hoe",
+        "count": 1
+    }
+}

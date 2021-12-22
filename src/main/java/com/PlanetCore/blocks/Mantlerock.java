@@ -92,8 +92,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 		MANTLEROCK5(5, "mantlerock5"),
 		MANTLEROCK6(6, "mantlerock6"),
 		MANTLEROCK7(7, "mantlerock7"),
-		MANTLEROCK8(8, "mantlerock8");
-		/*
+		MANTLEROCK8(8, "mantlerock8"),
 		LOWER_MANTLEROCK(9, "lower_mantlerock"),
 		LOWER_MANTLEROCK1(10, "lower_mantlerock1"),
 		LOWER_MANTLEROCK2(11, "lower_mantlerock2"),
@@ -102,10 +101,9 @@ public class Mantlerock extends BlockBase implements IMetaName
 		LOWER_MANTLEROCK5(14, "lower_mantlerock5"),
 		LOWER_MANTLEROCK6(15, "lower_mantlerock6");
 
-		 */
 
 		private static final 	Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[]{MANTLEROCK, MANTLEROCK1, MANTLEROCK2, MANTLEROCK3, MANTLEROCK4, MANTLEROCK5, MANTLEROCK6,
-		MANTLEROCK7, MANTLEROCK8, /*LOWER_MANTLEROCK, LOWER_MANTLEROCK1, LOWER_MANTLEROCK2, LOWER_MANTLEROCK3, LOWER_MANTLEROCK4, LOWER_MANTLEROCK5, LOWER_MANTLEROCK6*/};
+		MANTLEROCK7, MANTLEROCK8, LOWER_MANTLEROCK, LOWER_MANTLEROCK1, LOWER_MANTLEROCK2, LOWER_MANTLEROCK3, LOWER_MANTLEROCK4, LOWER_MANTLEROCK5, LOWER_MANTLEROCK6};
 		private final int meta;
 		private final String name;
 

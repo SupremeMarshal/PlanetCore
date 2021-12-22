@@ -1,0 +1,18 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "planetcore:titanum_uranum_block"
+    }
+
+    ],
+
+    "result": 
+    {
+        "item": "planetcore:titanum_uranum_ingot",
+        "count": 9
+    }
+}

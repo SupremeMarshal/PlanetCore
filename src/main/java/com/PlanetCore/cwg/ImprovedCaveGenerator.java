@@ -124,18 +124,18 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
     public enum CaveType {
 
         CAVE0(Blocks.STONE,1.0, -30.0,128,10000,-10000, 10000, 64, 64),
-        CAVE1(Block.getBlockFromName("planetcore:coal_supercompact"),0.01, -2.0,16,10000,-10000, 10000, 64, 64),
-        //CAVE2(Block.getBlockFromName("planetcore:aluminium_supercompact"),0.07, -2.5,16,10000,-10000, 10000, 64, 64),
-        CAVE3(Block.getBlockFromName("planetcore:tin_supercompact"),0.03, -3.0,16,10000, -10000, 10000, 64, 64),
-        CAVE4(Block.getBlockFromName("planetcore:copper_supercompact"),0.03, -3.0,16,10000,-10000, 10000, 64, 64),
+        CAVE1(ModBlocks.COAL_SUPERCOMPACT,0.01, -2.0,16,10000,-10000, 10000, 64, 64),
+        //CAVE2(Block.getBlockFromName("planetcore:aluminum_supercompact"),0.07, -2.5,16,10000,-10000, 10000, 64, 64),
+        CAVE3(ModBlocks.TIN_SUPERCOMPACT,0.03, -3.0,16,10000, -10000, 10000, 64, 64),
+        CAVE4(ModBlocks.COPPER_SUPERCOMPACT,0.03, -3.0,16,10000,-10000, 10000, 64, 64),
         CAVE5(Block.getBlockFromName("planetcore:iron_supercompact"),0.05, -3.0,16,10000,-10000, 10000, 64, 64),
         CAVE6(Block.getBlockFromName("planetcore:redstone_supercompact"),0.02, -4.0,16,10000, -10000, 10000, 64, 64),
         CAVE7(Block.getBlockFromName("planetcore:silver_supercompact"),0.02, -5.0,16,10000, -10000, 10000, 64, 64),
         CAVE8(Block.getBlockFromName("planetcore:gold_supercompact"),0.01, -6.0,16,10000,-10000, 10000, 64, 64),
         CAVE9(Block.getBlockFromName("planetcore:platinum_supercompact"),0.01, -8.0,16,10000,-10000, 10000, 64, 64),
         /*
-        CAVE10(Block.getBlockFromName("planetcore:titanium_supercompact"),0.01, -10.0,16,10000, -10000, 10000, 64, 64),
-        CAVE11(Block.getBlockFromName("planetcore:uranium_supercompact"),0.01, -12.0,16,10000, -10000, 10000, 64, 64),
+        CAVE10(Block.getBlockFromName("planetcore:titanum_supercompact"),0.01, -10.0,16,10000, -10000, 10000, 64, 64),
+        CAVE11(Block.getBlockFromName("planetcore:uranum_supercompact"),0.01, -12.0,16,10000, -10000, 10000, 64, 64),
         CAVE12(Block.getBlockFromName("planetcore:tungsten_supercompact"),0.01, -14.0,16,10000, -10000, 10000, 64, 64),
 
          */

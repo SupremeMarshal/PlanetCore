@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        " B ",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:tungsten_uranum_ingot"
+        },
+        "B":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:tungsten_uranum_pickaxe",
+        "count": 1
+    }
+}

@@ -11,13 +11,13 @@
     {
         "A":
         {
-            "item": "planetcore:uranium_ingot"
+            "item": "planetcore:uranum_ingot"
         }
     },
     
     "result":
     {
-        "item": "planetcore:uranium_rod",
+        "item": "planetcore:uranum_rod",
         "count": 1
     }
 }

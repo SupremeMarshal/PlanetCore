@@ -12,7 +12,7 @@
     {
         "A":
         {
-            "item": "planetcore:titanium_ingot"
+            "item": "planetcore:titanum_ingot"
         },
         "B":
         {
@@ -22,7 +22,7 @@
     
     "result":
     {
-        "item": "planetcore:titanium_shovel",
+        "item": "planetcore:titanum_shovel",
         "count": 1
     }
 }

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "AB",
+        " B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:titanum_uranum_ingot"
+        },
+        "B":
+        {
+            "item": "planetcore:titanum_uranum_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:titanum_uranum_axe",
+        "count": 1
+    }
+}

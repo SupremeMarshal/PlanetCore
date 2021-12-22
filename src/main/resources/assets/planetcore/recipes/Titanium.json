@@ -5,14 +5,14 @@
     [
 
     {
-      "item": "planetcore:titanium_block"
+      "item": "planetcore:titanum_block"
     }
 
     ],
 
     "result": 
     {
-        "item": "planetcore:titanium_ingot",
+        "item": "planetcore:titanum_ingot",
         "count": 9
     }
 }
