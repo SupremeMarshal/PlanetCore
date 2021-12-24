@@ -11,13 +11,13 @@
     {
         "A":
         {
-            "item": "planetcore:aluminum_ingot"
+            "item": "planetcore:aluminium_ingot"
         }
     },
     
     "result":
     {
-        "item": "planetcore:aluminum_rod",
+        "item": "planetcore:aluminium_rod",
         "count": 1
     }
 }

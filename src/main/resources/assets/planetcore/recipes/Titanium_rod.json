@@ -11,13 +11,13 @@
     {
         "A":
         {
-            "item": "planetcore:titanum_ingot"
+            "item": "planetcore:titanium_ingot"
         }
     },
     
     "result":
     {
-        "item": "planetcore:titanum_rod",
+        "item": "planetcore:titanium_rod",
         "count": 1
     }
 }

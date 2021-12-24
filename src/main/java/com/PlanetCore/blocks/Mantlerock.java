@@ -15,6 +15,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
@@ -32,8 +33,10 @@ public class Mantlerock extends BlockBase implements IMetaName
 {
 
 
-
+	private static final float [] mantleHardnessByMeta = {24, 33, 47, 65, 92, 129, 193, 290, 435, 653, 979, 1469, 2204, 3306, 4959, 7438};
+	public static final int [] mantleLightLevel = {0, 0, 0, 0, 0, 1, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15};
 	public static final PropertyEnum<Mantlerock.EnumType> VARIANT = PropertyEnum.<Mantlerock.EnumType>create("variant",Mantlerock.EnumType.class);
+
 
 	public Mantlerock(String name, Material material)
 	{
@@ -43,7 +46,17 @@ public class Mantlerock extends BlockBase implements IMetaName
 		setTickRandomly(true);
 	}
 
-	public static final int [] mantleLightLevel = {0, 0, 0, 0, 0, 1, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15};
+	@Override
+	public int damageDropped(IBlockState state) {
+		int meta = getMetaFromState(state);
+		return meta;
+	}
+
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		int meta = getMetaFromState(blockState);
+		return mantleHardnessByMeta[meta];
+	}
 
 	@Override
 	public int getLightValue(IBlockState state) {

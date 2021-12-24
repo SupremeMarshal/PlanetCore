@@ -105,64 +105,11 @@ public class BlockBase extends Block {
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0) {
 
-				if (pos.getY() <= 0 && pos.getY() > -64 && Math.random() >= 0.0031) {
+
+				if (pos.getY() < 0 && pos.getY() >= -1024 && Math.random() >= pos.getY() * -0.000048828125) {
 					return;
 				}
-				if (pos.getY() <= -64 && pos.getY() > -128 && Math.random() >= 0.0042) {
-					return;
-				}
-				if (pos.getY() <= -128 && pos.getY() > -192 && Math.random() >= 0.0056) {
-					return;
-				}
-				if (pos.getY() <= -192 && pos.getY() > -256 && Math.random() >= 0.0075) {
-					return;
-				}
-				if (pos.getY() <= -256 && pos.getY() > -320 && Math.random() >= 0.01) {
-					return;
-				}
-				if (pos.getY() <= -320 && pos.getY() > -384 && Math.random() >= 0.01336) {
-					return;
-				}
-				if (pos.getY() <= -384 && pos.getY() > -448 && Math.random() >= 0.01781) {
-					return;
-				}
-				if (pos.getY() <= -448 && pos.getY() > -512 && Math.random() >= 0.02375) {
-					return;
-				}
-				if (pos.getY() <= -512 && pos.getY() > -576 && Math.random() >= 0.03167) {
-					return;
-				}
-				if (pos.getY() <= -576 && pos.getY() > -640 && Math.random() >= 0.04223) {
-					return;
-				}
-				if (pos.getY() <= -640 && pos.getY() > -704 && Math.random() >= 0.05631) {
-					return;
-				}
-				if (pos.getY() <= -704 && pos.getY() > -768 && Math.random() >= 0.075) {
-					return;
-				}
-				if (pos.getY() <= -768 && pos.getY() > -832 && Math.random() >= 0.1) {
-					return;
-				}
-				if (pos.getY() <= -768 && pos.getY() > -832 && Math.random() >= 0.1334) {
-					return;
-				}
-				if (pos.getY() <= -832 && pos.getY() > -896 && Math.random() >= 0.1779) {
-					return;
-				}
-				if (pos.getY() <= -896 && pos.getY() > -960 && Math.random() >= 0.2373) {
-					return;
-				}
-				if (pos.getY() <= -960 && pos.getY() > -1024 && Math.random() >= 0.3164) {
-					return;
-				}
-				if (pos.getY() <= -1024 && pos.getY() > -1088 && Math.random() >= 0.4218) {
-					return;
-				}
-				if (pos.getY() <= -1088 && pos.getY() > -1152 && Math.random() >= 0.5625) {
-					return;
-				}
-				if (pos.getY() <= -1152 && pos.getY() > -1216 && Math.random() >= 0.75) {
+				if (pos.getY() < -1024 && Math.random() >= (pos.getY()-1024) * -0.0002 + 0.05) {
 					return;
 				}
 				for (EnumFacing side : EnumFacing.values()) {

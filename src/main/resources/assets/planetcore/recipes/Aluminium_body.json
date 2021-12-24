@@ -12,13 +12,13 @@
     {
         "A":
         {
-            "item": "planetcore:aluminum_ingot"
+            "item": "planetcore:aluminium_ingot"
         }
     },
     
     "result":
     {
-        "item": "planetcore:aluminum_chestplate",
+        "item": "planetcore:aluminium_chestplate",
         "count": 1
     }
 }

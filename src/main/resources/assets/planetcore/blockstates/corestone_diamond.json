@@ -1,1 +1,8 @@
-{"variants":{"variant=corestone":{"model":"planetcore:corestone_diamond"},"variant=innercorestone":{"model":"planetcore:innercorestone_diamond"},"variant=centercorestone":{"model":"planetcore:centercorestone_diamond"}}}
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_diamond"},
+  "variant=corestone1":{"model":"planetcore:corestone1_diamond"},
+  "variant=corestone2":{"model":"planetcore:corestone2_diamond"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_diamond"},
+  "variant=innercorestone1":{"model":"planetcore:innercorestone1_diamond"},
+  "variant=innercorestone2":{"model":"planetcore:innercorestone2_diamond"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_diamond"}}}

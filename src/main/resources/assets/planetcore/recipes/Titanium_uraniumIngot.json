@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:titanium_uranium_nugget"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:titanium_uranium_ingot",
+        "count": 1
+    }
+}

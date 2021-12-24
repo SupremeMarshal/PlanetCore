@@ -1,1 +1,8 @@
-{"variants":{"variant=corestone":{"model":"planetcore:corestone_small_redstone"},"variant=innercorestone":{"model":"planetcore:innercorestone_small_redstone"},"variant=centercorestone":{"model":"planetcore:centercorestone_small_redstone"}}}
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_small_redstone"},
+  "variant=corestone1":{"model":"planetcore:corestone1_small_redstone"},
+  "variant=corestone2":{"model":"planetcore:corestone2_small_redstone"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_small_redstone"},
+  "variant=innercorestone1":{"model":"planetcore:innercorestone1_small_redstone"},
+  "variant=innercorestone2":{"model":"planetcore:innercorestone2_small_redstone"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_small_redstone"}}}

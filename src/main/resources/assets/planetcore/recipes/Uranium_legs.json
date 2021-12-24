@@ -12,13 +12,13 @@
     {
         "A":
         {
-            "item": "planetcore:uranum_ingot"
+            "item": "planetcore:uranium_ingot"
         }
     },
     
     "result":
     {
-        "item": "planetcore:uranum_leggings",
+        "item": "planetcore:uranium_leggings",
         "count": 1
     }
 }

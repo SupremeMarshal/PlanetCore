@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "variant=crustrock": {
+      "model": "planetcore:crustrock_aluminium"
+    },
+    "variant=crustrock1": {
+      "model": "planetcore:crustrock1_aluminium"
+    },
+    "variant=crustrock2": {
+      "model": "planetcore:crustrock2_aluminium"
+    }
+  }
+}

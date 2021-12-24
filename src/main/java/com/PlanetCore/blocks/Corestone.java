@@ -38,18 +38,31 @@ import java.util.Random;
 
 public class Corestone extends BlockBase implements IMetaName {
 
+	private static final float [] coreHardnessByMeta = {11158, 16737, 25105, 37658, 60000, 90000, 300000};
 	public static final PropertyEnum<Corestone.EnumType> VARIANT = PropertyEnum.create("variant", Corestone.EnumType.class);
 
 	public Corestone(String name, Material material) {
 		super(name, material);
 
 		setSoundType(SoundType.METAL);
-		setHardness(100.0F);
-		setResistance(2.0F);
 		setHarvestLevel("pickaxe", 3);
 		setLightLevel(1.0F);
 		setTickRandomly(true);
 
+	}
+
+	@Override
+	public int damageDropped(IBlockState state) {
+		if (this == ModBlocks.CORESTONE) {
+			return getMetaFromState(state);
+		}
+		else return 0;
+	}
+
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		int meta = getMetaFromState(blockState);
+		return coreHardnessByMeta[meta];
 	}
 	
 	@Override
@@ -89,10 +102,14 @@ public class Corestone extends BlockBase implements IMetaName {
 	public enum EnumType implements IStringSerializable
 	{
 		CORE(0, "corestone"),
-		INNERCORE(1, "innercorestone"),
-		CENTERCORE(2, "centercorestone");
+		CORE1(1, "corestone1"),
+		CORE2(2, "corestone2"),
+		INNERCORE(3, "innercorestone"),
+		INNERCORE1(4, "innercorestone1"),
+		INNERCORE2(5, "innercorestone2"),
+		CENTERCORE(6, "centercorestone");
 
-		private static final Corestone.EnumType[] META_LOOKUP = new Corestone.EnumType[]{CORE,INNERCORE,CENTERCORE};
+		private static final Corestone.EnumType[] META_LOOKUP = new Corestone.EnumType[]{CORE, CORE1, CORE2, INNERCORE, INNERCORE1, INNERCORE2, CENTERCORE};
 		private final int meta;
 		private final String name;
 
@@ -288,7 +305,7 @@ public class Corestone extends BlockBase implements IMetaName {
 		int X = pos.getX();
 		int Z = pos.getZ();
 		int Y = pos.getY();
-		if (!worldIn.isRemote) {
+		if (!worldIn.isRemote && Y < -3000) {
 			if (state.getBlock().getMetaFromState(state) == 0) {
 				if (rand.nextInt(40) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);

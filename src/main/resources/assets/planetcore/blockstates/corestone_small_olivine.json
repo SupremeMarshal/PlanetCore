@@ -1,1 +1,8 @@
-{"variants":{"variant=corestone":{"model":"planetcore:corestone_small_olivine"},"variant=innercorestone":{"model":"planetcore:innercorestone_small_olivine"},"variant=centercorestone":{"model":"planetcore:centercorestone_small_olivine"}}}
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_small_olivine"},
+  "variant=corestone1":{"model":"planetcore:corestone1_small_olivine"},
+  "variant=corestone2":{"model":"planetcore:corestone2_small_olivine"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_small_olivine"},
+  "variant=innercorestone1":{"model":"planetcore:innercorestone1_small_olivine"},
+  "variant=innercorestone2":{"model":"planetcore:innercorestone2_small_olivine"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_small_olivine"}}}

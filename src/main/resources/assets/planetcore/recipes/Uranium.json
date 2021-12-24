@@ -5,14 +5,14 @@
     [
 
     {
-      "item": "planetcore:uranum_block"
+      "item": "planetcore:uranium_block"
     }
 
     ],
 
     "result": 
     {
-        "item": "planetcore:uranum_ingot",
+        "item": "planetcore:uranium_ingot",
         "count": 9
     }
 }

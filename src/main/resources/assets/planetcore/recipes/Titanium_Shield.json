@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:titanum_rod"
+            "item": "planetcore:titanium_rod"
         },
         "B":
         {
-            "item": "planetcore:titanum_block"
+            "item": "planetcore:titanium_block"
         }
     },
     
     "result":
     {
-        "item": "planetcore:titanum_shield",
+        "item": "planetcore:titanium_shield",
         "count": 1
     }
 }

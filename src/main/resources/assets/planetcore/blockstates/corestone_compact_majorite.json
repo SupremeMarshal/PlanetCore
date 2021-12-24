@@ -1,1 +1,8 @@
-{"variants":{"variant=corestone":{"model":"planetcore:corestone_compact_majorite"},"variant=innercorestone":{"model":"planetcore:innercorestone_compact_majorite"},"variant=centercorestone":{"model":"planetcore:centercorestone_compact_majorite"}}}
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_compact_majorite"},
+  "variant=corestone1":{"model":"planetcore:corestone1_compact_majorite"},
+  "variant=corestone2":{"model":"planetcore:corestone2_compact_majorite"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_compact_majorite"},
+  "variant=innercorestone1":{"model":"planetcore:innercorestone1_compact_majorite"},
+  "variant=innercorestone2":{"model":"planetcore:innercorestone2_compact_majorite"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_compact_majorite"}}}

@@ -40,7 +40,7 @@ public class PickaxeRelentlessHandler {
     public static void onBreakEvent(PlayerEvent.BreakSpeed event) {
         int RelentlessLevel = EnchantmentHelper.getMaxEnchantmentLevel(Relentless, event.getEntityPlayer());
         float breaktime;
-        double Relentless = 0;
+        float Relentless = 0;
 
         EntityPlayer player = event.getEntityPlayer();
         ItemStack stack = player.getHeldItemMainhand();
@@ -52,7 +52,7 @@ public class PickaxeRelentlessHandler {
                     Relentless = getRelentless(stack);
 
                     if (RelentlessLevel > 0) {
-                        Relentless = Relentless * (1 + (RelentlessLevel / 4D));
+                        Relentless = Relentless * (1 + (RelentlessLevel / 4F));
                     }
                 }
 
@@ -68,23 +68,23 @@ public class PickaxeRelentlessHandler {
                     event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return;
                 }
-                // I want to play the sound effect here and make it work in server (so client side)? without kicking player out
+
 
             }
 
-            if (breaktime > 0.01F && breaktime <= 0.1F) {
+            if (breaktime > 0.001F && breaktime <= 0.1F) {
                 event.setNewSpeed(event.getOriginalSpeed() / (0.1F / breaktime));
 
             }
         }
     }
 
-    public static int getRelentless(ItemStack stack) {
+    public static float getRelentless(ItemStack stack) {
         Item item = stack.getItem();
         if (item instanceof ItemPickaxe) {
             Item.ToolMaterial toolMaterial = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemPickaxe)item,"field_77862_b");
-            int base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,0);
-            int enchLevel = EnchantmentHelper.getEnchantmentLevel(Relentless,stack);
+            float base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,0F);
+            float enchLevel = EnchantmentHelper.getEnchantmentLevel(Relentless,stack);
             return base + enchLevel;
         }
         return 0;

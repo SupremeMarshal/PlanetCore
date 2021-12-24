@@ -57,22 +57,402 @@ public class RenderHandler
 	
 	public static void registerCustomMeshesAndStates()
 		{
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.HOT_LAVA_FLUID), new ItemMeshDefinition() {
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.IRON_LAVA_FLUID), new ItemMeshDefinition() {
 
 				@Override
 				public ModelResourceLocation getModelLocation(ItemStack stack) {
 
-					return new ModelResourceLocation("planetcore:hot_lava", "fluid");
+					return new ModelResourceLocation("planetcore:iron_lava", "fluid");
 
 				}
 			});
 
-			ModelLoader.setCustomStateMapper(ModBlocks.HOT_LAVA_FLUID, new StateMapperBase() {
+			ModelLoader.setCustomStateMapper(ModBlocks.IRON_LAVA_FLUID, new StateMapperBase() {
 
 				@Override
 				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
 
-					return new ModelResourceLocation("planetcore:hot_lava", "fluid");
+					return new ModelResourceLocation("planetcore:iron_lava", "fluid");
+				}
+			});
+
+			/** aluminium lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.ALUMINIUM_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:aluminium_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.ALUMINIUM_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:aluminium_lava", "fluid");
+				}
+			});
+
+			/** tin lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.TIN_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:tin_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.TIN_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:tin_lava", "fluid");
+				}
+			});
+
+			/** copper lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.COPPER_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:copper_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.COPPER_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:copper_lava", "fluid");
+				}
+			});
+
+			/** silver lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SILVER_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:silver_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.SILVER_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:silver_lava", "fluid");
+				}
+			});
+
+			/** gold lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.GOLD_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:gold_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.GOLD_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:gold_lava", "fluid");
+				}
+			});
+
+			/** platinum lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.PLATINUM_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:platinum_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.PLATINUM_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:platinum_lava", "fluid");
+				}
+			});
+
+			/** titanium lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.TITANIUM_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:titanium_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.TITANIUM_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:titanium_lava", "fluid");
+				}
+			});
+
+			/** uranium lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.URANIUM_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:uranium_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.URANIUM_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:uranium_lava", "fluid");
+				}
+			});
+
+			/** tungsten lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.TUNGSTEN_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:tungsten_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.TUNGSTEN_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:tungsten_lava", "fluid");
+				}
+			});
+
+			/** emerald lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.EMERALD_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:emerald_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.EMERALD_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:emerald_lava", "fluid");
+				}
+			});
+
+			/** ruby lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.RUBY_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:ruby_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.RUBY_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:ruby_lava", "fluid");
+				}
+			});
+
+			/** sapphire lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SAPPHIRE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:sapphire_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.SAPPHIRE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:sapphire_lava", "fluid");
+				}
+			});
+
+			/** diamond lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.DIAMOND_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:diamond_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.DIAMOND_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:diamond_lava", "fluid");
+				}
+			});
+
+			/** olivine lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.OLIVINE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:olivine_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.OLIVINE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:olivine_lava", "fluid");
+				}
+			});
+
+			/** wadsleyite lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.WADSLEYITE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:wadsleyite_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.WADSLEYITE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:wadsleyite_lava", "fluid");
+				}
+			});
+
+			/** ringwoodite lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.RINGWOODITE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:ringwoodite_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.RINGWOODITE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:ringwoodite_lava", "fluid");
+				}
+			});
+
+			/** brigmanite lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.BRIGMANITE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:brigmanite_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.BRIGMANITE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:brigmanite_lava", "fluid");
+				}
+			});
+
+			/** majorite lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.MAJORITE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:majorite_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.MAJORITE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:majorite_lava", "fluid");
+				}
+			});
+
+			/** amazonite lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.AMAZONITE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:amazonite_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.AMAZONITE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:amazonite_lava", "fluid");
 				}
 			});
 
@@ -113,6 +493,25 @@ public class RenderHandler
 				return new ModelResourceLocation("planetcore:core_lava", "fluid");
 			}
 		});
+
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.CENTERCORE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:centercore_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.CENTERCORE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:centercore_lava", "fluid");
+				}
+			});
 
 
 			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SULFURIC_ACID_FLUID), new ItemMeshDefinition() {

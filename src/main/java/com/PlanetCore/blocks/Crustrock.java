@@ -32,7 +32,7 @@ import java.util.Random;
 public class Crustrock extends BlockBase implements IMetaName
 {
 
-
+	private static final float [] crustHardnessByMeta = {3, 6, 12};
 	public static final PropertyEnum<Crustrock.EnumType> VARIANT = PropertyEnum.create("variant", Crustrock.EnumType.class);
 
 	public Crustrock(String name, Material material)
@@ -42,6 +42,12 @@ public class Crustrock extends BlockBase implements IMetaName
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 
+	}
+
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		int meta = getMetaFromState(blockState);
+		return crustHardnessByMeta[meta];
 	}
 
 	@Override

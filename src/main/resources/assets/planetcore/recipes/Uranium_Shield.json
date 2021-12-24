@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:uranum_rod"
+            "item": "planetcore:uranium_rod"
         },
         "B":
         {
-            "item": "planetcore:uranum_block"
+            "item": "planetcore:uranium_block"
         }
     },
     
     "result":
     {
-        "item": "planetcore:uranum_shield",
+        "item": "planetcore:uranium_shield",
         "count": 1
     }
 }

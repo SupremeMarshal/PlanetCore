@@ -7,7 +7,7 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class ArmorMaterials {
     //ARMOR MATERIAL (name, textureName, durability, reductionAmounts, enchantability, soundOnEquip, toughness)
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ALUMINUM = EnumHelper.addArmorMaterial("armor_material_aluminum", Reference.MOD_ID + ":aluminum", 5,
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ALUMINIUM = EnumHelper.addArmorMaterial("armor_material_aluminium", Reference.MOD_ID + ":aluminium", 5,
         new int[] {1, 3, 2, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
     public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TIN = EnumHelper.addArmorMaterial("armor_material_tin", Reference.MOD_ID + ":tin", 20,
         new int[] {2, 4, 3, 2}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
@@ -25,17 +25,17 @@ public class ArmorMaterials {
         new int[] {4, 7, 6, 4}, 14, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 3.0F);
     public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_PLATINUM = EnumHelper.addArmorMaterial("armor_material_platinum", Reference.MOD_ID + ":platinum", 55,
         new int[] {5, 7, 6, 4}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 3.5F);
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TITANUM = EnumHelper.addArmorMaterial("armor_material_titanum", Reference.MOD_ID + ":titanum", 70,
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TITANIUM = EnumHelper.addArmorMaterial("armor_material_titanium", Reference.MOD_ID + ":titanium", 70,
         new int[] {5, 7, 6, 5}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 4.0F);
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_URANUM = EnumHelper.addArmorMaterial("armor_material_uranum", Reference.MOD_ID + ":uranum", 10,
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_URANIUM = EnumHelper.addArmorMaterial("armor_material_uranium", Reference.MOD_ID + ":uranium", 10,
         new int[] {5, 7, 6, 5}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 4.5F);
     public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TUNGSTEN = EnumHelper.addArmorMaterial("armor_material_tungsten", Reference.MOD_ID + ":tungsten", 90,
         new int[] {5, 7, 6, 5}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 5.0F);
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TITANUM_URANUM = EnumHelper.addArmorMaterial("armor_material_titanum_uranum", Reference.MOD_ID + ":titanum_uranum", 80,
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TITANIUM_URANIUM = EnumHelper.addArmorMaterial("armor_material_titanium_uranium", Reference.MOD_ID + ":titanium_uranium", 80,
         new int[] {5, 7, 6, 5}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 6.5F);
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TUNGSTEN_URANUM = EnumHelper.addArmorMaterial("armor_material_tungsten_uranum", Reference.MOD_ID + ":tungsten_uranum", 100,
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TUNGSTEN_URANIUM = EnumHelper.addArmorMaterial("armor_material_tungsten_uranium", Reference.MOD_ID + ":tungsten_uranium", 100,
         new int[] {5, 7, 6, 5}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 7.0F);
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TUNGSTEN_TITANUM = EnumHelper.addArmorMaterial("armor_material_tungsten_titanum", Reference.MOD_ID + ":tungsten_titanum", 160,
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_TUNGSTEN_TITANIUM = EnumHelper.addArmorMaterial("armor_material_tungsten_titanium", Reference.MOD_ID + ":tungsten_titanium", 160,
         new int[] {5, 7, 6, 5}, 12, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 7.5F);
     public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_EMERALD = EnumHelper.addArmorMaterial("armor_material_emerald", Reference.MOD_ID + ":emerald", 80,
         new int[] {5, 7, 6, 5}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 7.0F);

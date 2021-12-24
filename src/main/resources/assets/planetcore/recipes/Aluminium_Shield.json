@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:aluminum_rod"
+            "item": "planetcore:aluminium_rod"
         },
         "B":
         {
-            "item": "planetcore:aluminum_block"
+            "item": "planetcore:aluminium_block"
         }
     },
     
     "result":
     {
-        "item": "planetcore:aluminum_shield",
+        "item": "planetcore:aluminium_shield",
         "count": 1
     }
 }

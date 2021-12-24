@@ -28,19 +28,19 @@ public class FogHandler {
         if (Y > 0) {
             event.setDensity(0.00003F);
         }
-        else if (Y <= 0 && Y > -512) {
-            event.setDensity(-0.000117F * Y);
+        else if (Y <= 0 && Y > -1024) {
+            event.setDensity(-0.0000585F * Y);
         }
-        else if (Y <= -512 && Y > 1024) {
+        else if (Y <= -1024 && Y > -4032) {
             event.setDensity(0.06F);
         }
-        else if (Y <= -1024 && Y > 1536) {
-            event.setDensity(0.06F - (0.0015F * (Y + 1024)));
+        else if (Y <= -4032 && Y > -6080) {
+            event.setDensity(0.06F - (0.0000585F * (Y + 4032)));
         }
         if (block instanceof BlockFluidBase) {
             if (block == Blocks.LAVA) {
                 event.setDensity(0.5F);
-            } else if (block == ModBlocks.HOT_LAVA_FLUID) {
+            } else if (block == ModBlocks.IRON_LAVA_FLUID) {
                 event.setDensity(0.3F);
             } else if (block == ModBlocks.CORE_LAVA_FLUID) {
                 event.setDensity(0.75F);
@@ -60,7 +60,7 @@ public class FogHandler {
             event.setRed(1.0F);
             event.setGreen(0.75F);
             event.setBlue(0.25F);
-        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == ModBlocks.HOT_LAVA_FLUID) {
+        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == ModBlocks.IRON_LAVA_FLUID) {
             event.setRed(1.0F);
             event.setGreen(0.85F);
             event.setBlue(0.0F);
@@ -75,37 +75,37 @@ public class FogHandler {
         }
         float Y = (float) event.getEntity().posY;
         if (Y < 0) {
-            if (Y < 0 && Y > -256) {
+            if (Y < 0 && Y > -1024) {
                 event.setRed(0.1F);
                 event.setGreen(0.2F);
                 event.setBlue(0.1F);
-            } else if (Y <= -256 && Y > -512) {
+            } else if (Y <= -1024 && Y > -2048) {
                 // green to Red color
-                event.setRed(0.1F -0.003515625F * (Y + 256));
+                event.setRed(0.1F -0.00087890625F * (Y + 1024));
                 event.setGreen(0.2F);
-                event.setBlue(0.1F + (0.000390625F * (Y + 256)));
-            } else if (Y <= -512 && Y > -768) {
+                event.setBlue(0.1F + (0.00009765625F * (Y + 1024)));
+            } else if (Y <= -2048 && Y > -4096) {
                 // red to yellow color
                 event.setRed(1.0F);
-                event.setGreen(0.2F -0.003125F * (Y + 512));
+                event.setGreen(0.2F -0.000390625F * (Y + 2048));
                 event.setBlue(0.0F);
-            } else if (Y <= -768 && Y > -1024) {
-                // yellow
-                event.setRed(1.0F);
-                event.setGreen(1.0F);
-                event.setBlue(0.0F);
-            }
-            else if (Y <= -1024 && Y > -1280) {
+            } else if (Y <= -4096 && Y > -5120) {
                 // yellow to white-blue
-                event.setRed(1.0F + (0.00078125F * (Y + 1024)));
-                event.setGreen(1.0F + (0.00078125F * (Y + 1024)));
-                event.setBlue(0.0F - (0.00390625F * (Y + 1024)));
+                event.setRed(1.0F + (0.0001953125F * (Y + 4096)));
+                event.setGreen(1.0F + (0.0001953125F * (Y + 4096)));
+                event.setBlue(0.0F - (0.0009765625F * (Y + 4096)));
             }
-            else if (Y <= -1280 && Y > -1436) {
+            else if (Y <= -5120 && Y > -6144) {
                 // white-blue to dark blue
-                event.setRed(0.8F + (0.0051282F * (Y + 1280)));
-                event.setGreen(0.8F + (0.0051282F * (Y + 1280)));
-                event.setBlue(1.0F + (0.0051282F * (Y + 1280)));
+                event.setRed(0.8F + (0.00078125F * (Y + 5120)));
+                event.setGreen(0.8F + (0.00078125F * (Y + 5120)));
+                event.setBlue(1.0F + (0.00068359375F * (Y + 5120)));
+            }
+            else if (Y <= -6144) {
+                // dark blue
+                event.setRed(0F);
+                event.setGreen(0F);
+                event.setBlue(0.3F);
             }
         }
     }

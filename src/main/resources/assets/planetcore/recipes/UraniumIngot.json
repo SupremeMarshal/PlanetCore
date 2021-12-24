@@ -12,13 +12,13 @@
     {
         "R":
         {
-            "item": "planetcore:uranum_nugget"
+            "item": "planetcore:uranium_nugget"
         }
     },
     
     "result":
     {
-        "item": "planetcore:uranum_ingot",
+        "item": "planetcore:uranium_ingot",
         "count": 1
     }
 }

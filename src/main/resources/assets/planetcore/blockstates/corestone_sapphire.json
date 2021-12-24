@@ -1,1 +1,8 @@
-{"variants":{"variant=corestone":{"model":"planetcore:corestone_sapphire"},"variant=innercorestone":{"model":"planetcore:innercorestone_sapphire"},"variant=centercorestone":{"model":"planetcore:centercorestone_sapphire"}}}
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_sapphire"},
+  "variant=corestone1":{"model":"planetcore:corestone1_sapphire"},
+  "variant=corestone2":{"model":"planetcore:corestone2_sapphire"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_sapphire"},
+  "variant=innercorestone1":{"model":"planetcore:innercorestone1_sapphire"},
+  "variant=innercorestone2":{"model":"planetcore:innercorestone2_sapphire"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_sapphire"}}}

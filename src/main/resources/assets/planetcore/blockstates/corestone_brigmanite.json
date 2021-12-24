@@ -1,1 +1,8 @@
-{"variants":{"variant=corestone":{"model":"planetcore:corestone_brigmanite"},"variant=innercorestone":{"model":"planetcore:innercorestone_brigmanite"},"variant=centercorestone":{"model":"planetcore:centercorestone_brigmanite"}}}
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_brigmanite"},
+  "variant=corestone1":{"model":"planetcore:corestone1_brigmanite"},
+  "variant=corestone2":{"model":"planetcore:corestone2_brigmanite"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_brigmanite"},
+  "variant=innercorestone1":{"model":"planetcore:innercorestone1_brigmanite"},
+  "variant=innercorestone2":{"model":"planetcore:innercorestone2_brigmanite"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_brigmanite"}}}

@@ -5,14 +5,14 @@
     [
 
     {
-      "item": "planetcore:aluminum_block"
+      "item": "planetcore:aluminium_block"
     }
 
     ],
 
     "result": 
     {
-        "item": "planetcore:aluminum_ingot",
+        "item": "planetcore:aluminium_ingot",
         "count": 9
     }
 }

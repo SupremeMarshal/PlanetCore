@@ -12,13 +12,13 @@
     {
         "R":
         {
-            "item": "planetcore:aluminum_nugget"
+            "item": "planetcore:aluminium_nugget"
         }
     },
     
     "result":
     {
-        "item": "planetcore:aluminum_ingot",
+        "item": "planetcore:aluminium_ingot",
         "count": 1
     }
 }

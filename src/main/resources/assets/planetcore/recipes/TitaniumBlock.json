@@ -12,13 +12,13 @@
     {
         "R":
         {
-            "item": "planetcore:titanum_ingot"
+            "item": "planetcore:titanium_ingot"
         }
     },
     
     "result":
     {
-        "item": "planetcore:titanum_block",
+        "item": "planetcore:titanium_block",
         "count": 1
     }
 }

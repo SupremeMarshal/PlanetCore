@@ -12,13 +12,13 @@
     {
         "A":
         {
-            "item": "planetcore:titanum_ingot"
+            "item": "planetcore:titanium_ingot"
         }
     },
     
     "result":
     {
-        "item": "planetcore:titanum_chestplate",
+        "item": "planetcore:titanium_chestplate",
         "count": 1
     }
 }
