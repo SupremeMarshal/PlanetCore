@@ -2,6 +2,7 @@ package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -25,29 +26,23 @@ public class FogHandler {
         Entity p = event.getEntity();
         float Y = (float) p.posY;
         Block block = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock();
-        if (Y > 0) {
+        Material material = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getMaterial();
+        if (material == Material.LAVA) {
+            event.setDensity(1.5F);
+        }
+        else if (block == Blocks.WATER || block == Blocks.FLOWING_WATER || block == Blocks.WATERLILY) {
+            event.setDensity(0.2F);
+        }
+        else if (Y > 0) {
             event.setDensity(0.00003F);
         }
         else if (Y <= 0 && Y > -1024) {
             event.setDensity(-0.0000585F * Y);
         }
-        else if (Y <= -1024 && Y > -4032) {
+        else if (Y <= -1024) {
             event.setDensity(0.06F);
         }
-        else if (Y <= -4032 && Y > -6080) {
-            event.setDensity(0.06F - (0.0000585F * (Y + 4032)));
-        }
-        if (block instanceof BlockFluidBase) {
-            if (block == Blocks.LAVA) {
-                event.setDensity(0.5F);
-            } else if (block == ModBlocks.IRON_LAVA_FLUID) {
-                event.setDensity(0.3F);
-            } else if (block == ModBlocks.CORE_LAVA_FLUID) {
-                event.setDensity(0.75F);
-            } else if (block == Blocks.WATERLILY) {
-                event.setDensity(0.1F);
-            }
-        }
+
 
     }
 
@@ -56,56 +51,59 @@ public class FogHandler {
     @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
     public void onEvent(EntityViewRenderEvent.FogColors event) {
         Entity p = event.getEntity();
-        if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == Blocks.LAVA) {
-            event.setRed(1.0F);
-            event.setGreen(0.75F);
-            event.setBlue(0.25F);
-        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == ModBlocks.IRON_LAVA_FLUID) {
-            event.setRed(1.0F);
-            event.setGreen(0.85F);
-            event.setBlue(0.0F);
-        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == ModBlocks.CORE_LAVA_FLUID) {
-            event.setRed(0.6F);
-            event.setGreen(1.0F);
-            event.setBlue(1.0F);
-        } else if (p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock() == Blocks.WATERLILY) {
-            event.setRed(0.1F);
-            event.setGreen(0.15F);
-            event.setBlue(0.80F);
-        }
         float Y = (float) event.getEntity().posY;
+        Block block = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock();
         if (Y < 0) {
-            if (Y < 0 && Y > -1024) {
+            if (block == Blocks.LAVA || block == Blocks.FLOWING_LAVA) {
+                event.setRed(1.0F);
+                event.setGreen(0.75F);
+                event.setBlue(0.25F);
+            } else if (block == ModBlocks.IRON_LAVA_FLUID) {
+                event.setRed(1.0F);
+                event.setGreen(0.85F);
+                event.setBlue(0.0F);
+            } else if (block == ModBlocks.CORE_LAVA_FLUID) {
+                event.setRed(0.6F);
+                event.setGreen(1.0F);
+                event.setBlue(1.0F);
+            } else if (block == ModBlocks.ONYX_LAVA_FLUID) {
+                event.setRed(0.0F);
+                event.setGreen(0.0F);
+                event.setBlue(0.3F);
+            } else if (block == Blocks.WATER || block == Blocks.WATERLILY || block == Blocks.FLOWING_WATER) {
+                event.setRed(0.1F);
+                event.setGreen(0.15F);
+                event.setBlue(0.80F);
+            } else if (Y < 0 && Y > -1024) {
                 event.setRed(0.1F);
                 event.setGreen(0.2F);
                 event.setBlue(0.1F);
             } else if (Y <= -1024 && Y > -2048) {
-                // green to Red color
+                // green to purple color
                 event.setRed(0.1F -0.00087890625F * (Y + 1024));
-                event.setGreen(0.2F);
-                event.setBlue(0.1F + (0.00009765625F * (Y + 1024)));
-            } else if (Y <= -2048 && Y > -4096) {
+                event.setGreen(0.2F +0.0001953125F * (Y + 1024));
+                event.setBlue(0.1F - (0.000390625F * (Y + 1024)));
+            } else if (Y <= -2048 && Y > -3072) {
+                // purple to red color
+                event.setRed(1.0F);
+                event.setGreen(0.0F);
+                event.setBlue(0.5F + (0.00048828125F * (Y + 2048)));
+            } else if (Y <= -3072 && Y > -4096) {
                 // red to yellow color
                 event.setRed(1.0F);
-                event.setGreen(0.2F -0.000390625F * (Y + 2048));
+                event.setGreen(0.0F -0.0009765625F * (Y + 3072));
                 event.setBlue(0.0F);
             } else if (Y <= -4096 && Y > -5120) {
                 // yellow to white-blue
-                event.setRed(1.0F + (0.0001953125F * (Y + 4096)));
-                event.setGreen(1.0F + (0.0001953125F * (Y + 4096)));
+                event.setRed(1.0F + (0.000390625F * (Y + 4096)));
+                event.setGreen(1.0F + (0.000390625F * (Y + 4096)));
                 event.setBlue(0.0F - (0.0009765625F * (Y + 4096)));
             }
-            else if (Y <= -5120 && Y > -6144) {
-                // white-blue to dark blue
-                event.setRed(0.8F + (0.00078125F * (Y + 5120)));
-                event.setGreen(0.8F + (0.00078125F * (Y + 5120)));
-                event.setBlue(1.0F + (0.00068359375F * (Y + 5120)));
-            }
-            else if (Y <= -6144) {
-                // dark blue
-                event.setRed(0F);
-                event.setGreen(0F);
-                event.setBlue(0.3F);
+            else if (Y <= -5120) {
+                // white-blue
+                event.setRed(0.6F);
+                event.setGreen(0.6F);
+                event.setBlue(1.0F);
             }
         }
     }
