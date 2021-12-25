@@ -32,15 +32,15 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
 
             // the scale for caves when they generate
             // smaller value = bigger caves
-            double caveScale = scaleFactor * 1 / 100.0;
+            double caveScale = scaleFactor * 1 / 50.0;
             // the scale for placement
             // 2/placementScale should be roughly the average distance between cave systems
-            double placementScale = scaleFactor * 1 / 512.0;
+            double placementScale = scaleFactor * 1 / 1024.0;
             // bigger value = smaller cave systems
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
             // value 1 and above means they won't generate
-            double caveSystemSizeFactor = 0.33;
+            double caveSystemSizeFactor = 0.30;
 
 
             // bigger values = less smooth transition on the edges of cave system
