@@ -40,7 +40,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 		setLightLevel(1);
 		setDensity(400);
-		setTickRate(6);
+		setTickRate(30);
 		setTickRandomly(true);
 		ModBlocks.BLOCKS.add(this);
 	}
@@ -199,6 +199,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 
 
+	/*
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
@@ -206,27 +207,32 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		thermalEffects(worldIn,pos,state);
 		coreTemperature(worldIn,pos,state);
 		vaporizeWater(worldIn, pos, state);
+		float chance = 0.2F;
 		if (pos.getY() <= -1000) {
-			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState()
-					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+			if ((worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()) && Math.random() <= chance)
 				worldIn.setBlockState(pos.up(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState()
-					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+			if ((worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()) && Math.random() <= chance)
 				worldIn.setBlockState(pos.down(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState()
-					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+			if ((worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()) && Math.random() <= chance)
 				worldIn.setBlockState(pos.north(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState()
-					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+			if ((worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()) && Math.random() <= chance)
 				worldIn.setBlockState(pos.south(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState()
-					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+			if ((worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()) && Math.random() <= chance)
 				worldIn.setBlockState(pos.west(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if (worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState()
-					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
+			if ((worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState()
+					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()) && Math.random() <= chance)
 				worldIn.setBlockState(pos.east(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 		}
 	}
+
+	 */
+
+
 
 
 
