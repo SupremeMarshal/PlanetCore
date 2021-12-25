@@ -6,6 +6,7 @@ import static net.minecraft.util.math.MathHelper.cos;
 import static net.minecraft.util.math.MathHelper.floor;
 import static net.minecraft.util.math.MathHelper.sin;
 
+import com.PlanetCore.init.ModBlocks;
 import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.worldgen.CubePrimer;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
@@ -35,28 +36,28 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
      * <p>
      * Multiply by 16 and divide by 8: 16 cubes in vanilla chunks, only one in 8 cubes has structures generated
      */
-    private static final int RAVINE_RARITY = 50 * 16 / (2 * 2 * 2);
+    private static final int RAVINE_RARITY = 40 * 16 / (2 * 2 * 2);
 
     /**
      * Add this value to lava height (Y below which lava exists)
      * <p>
      * Positive value to increase amount of lava, negative to decrease.
      */
-    private static final double LAVA_HEIGHT_OFFSET = -10;
+    private static final double LAVA_HEIGHT_OFFSET = -4000;
 
     /**
      * Add Y value multiplied by this to lava height
      * <p>
      * Negative value will generate more lava in ravines that are deeper
      */
-    private static final double CAVE_MAX_LAVA_HEIGHT = -4000;
+    private static final double LAVA_HEIGHT_Y_FACTOR = -0.05;
 
-    private static final double VERT_SIZE_FACTOR = 3.0;
+    private static final double VERT_SIZE_FACTOR = 3.5;
 
     /**
      * Value added to the size of the cave (radius)
      */
-    private static final double RAVINE_SIZE_ADD = 2.2D;
+    private static final double RAVINE_SIZE_ADD = 2.3D;
 
     private static final double MIN_RAND_SIZE_FACTOR = 0.75;
     private static final double MAX_RAND_SIZE_FACTOR = 1.00;
@@ -145,7 +146,13 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
         int startWalkedDistance = 0;
         int maxWalkedDistance = 0;//choose value automatically
 
-        int lavaHeight = (int) (maxCubeY/16/CAVE_MAX_LAVA_HEIGHT);
+        int lavaHeight = -1000;
+        if (startY < -250) {
+            lavaHeight = (int) (startY -
+                    (baseRavineSize + RAVINE_SIZE_ADD) * VERT_SIZE_FACTOR) + rand.nextInt((int) (-1 * startY) / 20);
+        }
+
+        //-110 - ( 2.6) * 5 + -4000
 
         this.generateNode(cube, rand.nextLong(), generatedCubePos, startX, startY, startZ,
                 baseRavineSize, vertDirectionAngle, horizDirectionAngle,
@@ -326,7 +333,7 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
                         continue;
                     }
                     if (localToBlock(generatedCubeY, localY) < lavaHeight) {
-                        cube.setBlockState(localX, localY, localZ, Blocks.FLOWING_LAVA.getDefaultState());
+                        cube.setBlockState(localX, localY, localZ, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
                     } else {
                         cube.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
                     }
