@@ -101,32 +101,7 @@ public class EntityGhoul extends EntityMob
 	
 	@Override
 	public int getMaxSpawnedInChunk() {
-		if (posY <= -500 && posY >= -800) {
-			return 6;
-		}
-		if (posY < -800 && posY >= -1000) {
-			return 9;
-		}
-		if (posY < -1000 && posY >= -1200) {
-			return 12;
-		}
-		if (posY < -1200 && posY >= -1400) {
-			return 15;
-		}
-		if (posY < -1400 && posY >= -1600) {
-			return 18;
-		}
-		if (posY < -1600 && posY >= -1800) {
-			return 21;
-		}
-		if (posY < -1800 && posY >= -2000) {
-			return 24;
-		}
-		if (posY < -2000) {
-			return 27;
-		} else {
-			return 3;
-		}
+		return 3;
 	}
 	
 }

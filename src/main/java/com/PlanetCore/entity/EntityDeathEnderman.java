@@ -100,32 +100,7 @@ public class EntityDeathEnderman extends EntityEnderman
 	
 	@Override
 	public int getMaxSpawnedInChunk() {
-		if (posY <= -600 && posY >= -800) {
-			return 3;
-		}
-		if (posY < -800 && posY >= -1000) {
-			return 4;
-		}
-		if (posY < -1000 && posY >= -1200) {
-			return 6;
-		}
-		if (posY < -1200 && posY >= -1400) {
-			return 8;
-		}
-		if (posY < -1400 && posY >= -1600) {
-			return 12;
-		}
-		if (posY < -1600 && posY >= -1800) {
-			return 16;
-		}
-		if (posY < -1800 && posY >= -2000) {
-			return 20;
-		}
-		if (posY < -2000) {
-			return 25;
-		} else {
-			return 1;
-		}
+		return 1;
 	}
 	
 	

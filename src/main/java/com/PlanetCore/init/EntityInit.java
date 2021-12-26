@@ -32,9 +32,10 @@ public class EntityInit
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
 		Biome[] spawnBiomes = allbiomes(Biome.REGISTRY);
 		//EntityRegistry.addSpawn(EntityDemon.class, 15, 2, 20, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityGhoul.class, 20, 3, 27, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityHellHound.class, 20, 4, 25, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityDeathEnderman.class, 20, 4, 25, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityGhoul.class, 10, 1, 5, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityHellHound.class, 10, 1, 5, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityDeathEnderman.class, 1, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityHotBlaze.class, 10, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
 	}
 
 	private static Biome[] allbiomes(net.minecraft.util.registry.RegistryNamespaced<ResourceLocation, Biome> in)
