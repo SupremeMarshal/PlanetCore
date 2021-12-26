@@ -1,24 +1,24 @@
 package com.PlanetCore.entity;
 
-import com.PlanetCore.Main;
-import net.minecraft.entity.EntityLiving;
+import com.PlanetCore.util.handlers.LootTableHandler;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.monster.EntityBlaze;
-import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.projectile.EntityDragonFireball;
+import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.entity.projectile.EntitySmallFireball;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
+import javax.swing.text.LayoutQueue;
 import java.util.Random;
 
 public class EntityHotBlaze extends EntityBlaze {
@@ -33,10 +33,10 @@ public class EntityHotBlaze extends EntityBlaze {
     @Override
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(8.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(64.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(32.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(100.0D);
         this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(3.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(16.0D);
     }
 
     @Override
@@ -45,17 +45,21 @@ public class EntityHotBlaze extends EntityBlaze {
         this.tasks.addTask(4, new EntityHotBlaze.AIFireballAttack(this));
         // this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
         // this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D, 0.0F));
-        this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+        this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 32.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));
-        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
+        this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, true));
+        this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
     }
 
     @Override
     public void onLivingUpdate()
     {
         super.onLivingUpdate();
-        System.out.println(this.motionX + " " + this.motionY + " " + this.motionZ);
+    }
+
+    @Override
+    protected boolean canDespawn() {
+        return false;
     }
 
     protected boolean hasAttackTarget(){
@@ -114,8 +118,6 @@ public class EntityHotBlaze extends EntityBlaze {
          */
         public void startExecuting()
         {
-            System.out.println("random fly start");
-
             Random random = this.parentEntity.getRNG();
 
             double d0 = this.parentEntity.posX + (double)((random.nextFloat() - 0.5F) * 64.0F);
@@ -147,7 +149,7 @@ public class EntityHotBlaze extends EntityBlaze {
         public AIFireballAttack(EntityBlaze blazeIn)
         {
             this.blaze = blazeIn;
-            this.setMutexBits(3);
+            this.setMutexBits(9);
         }
 
         /**
@@ -228,9 +230,10 @@ public class EntityHotBlaze extends EntityBlaze {
 
                         for (int i = 0; i < 1; ++i)
                         {
-                            EntitySmallFireball entitysmallfireball = new EntitySmallFireball(this.blaze.world, this.blaze, d1 + this.blaze.getRNG().nextGaussian() * (double)f, d2, d3 + this.blaze.getRNG().nextGaussian() * (double)f);
-                            entitysmallfireball.posY = this.blaze.posY + (double)(this.blaze.height / 2.0F) + 0.5D;
-                            this.blaze.world.spawnEntity(entitysmallfireball);
+                            EntityHotLargeFireball entityhotlargefireball = new EntityHotLargeFireball(this.blaze.world, this.blaze, d1 + this.blaze.getRNG().nextGaussian() * (double)f, d2, d3 + this.blaze.getRNG().nextGaussian() * (double)f);
+                            //
+                            entityhotlargefireball.posY = this.blaze.posY + (double)(this.blaze.height / 2.0F) + 0.5D;
+                            this.blaze.world.spawnEntity(entityhotlargefireball);
                         }
                     }
                 }
@@ -318,4 +321,24 @@ public class EntityHotBlaze extends EntityBlaze {
             return true;
         }
     }
+
+    @Override
+    protected ResourceLocation getLootTable() {
+        return LootTableHandler.HOT_BLAZE;
+    }
+
+    @Override
+    public boolean getCanSpawnHere() {
+        if (posY < -2024) {
+            return super.getCanSpawnHere();
+        }
+        else return false;
+    }
+
+    @Override
+    public int getMaxSpawnedInChunk() {
+        return 1;
+    }
+
+
 }
