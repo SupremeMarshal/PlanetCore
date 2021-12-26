@@ -124,7 +124,7 @@ public class IronLavaFluid extends BlockFluidClassic {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 
-		if (pos.getY() <= -128 && Math.random() <= 0.00001)
+		if (pos.getY() <= -128 && Math.random() <= 0.000002)
 		{
 			worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
 		}
