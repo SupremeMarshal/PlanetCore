@@ -52,7 +52,7 @@ public class PickaxeRelentlessHandler {
                     Relentless = getRelentless(stack);
 
                     if (RelentlessLevel > 0) {
-                        Relentless = Relentless * (1 + (RelentlessLevel / 4F));
+                        Relentless = Relentless + (RelentlessLevel / 2F);
                     }
                 }
 
