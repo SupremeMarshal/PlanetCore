@@ -20,36 +20,36 @@ import net.minecraft.world.biome.Biome;
 
 import java.util.Map;
 
-public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
+public class NoiseCaveGenerator3 implements ICubicStructureGenerator {
     //V17
     private IBuilder builder;
     private IBlockState stoneBlock;
 
-    public NoiseCaveGenerator2() {
+    public NoiseCaveGenerator3() {
     }
 
     @Override
     public void generate(World world, CubePrimer cubePrimer, CubePos cubePos) {
         if (this.builder == null) {
-            double scaleFactor = 2;
+            double scaleFactor = 3;
 
             // the scale for caves when they generate
             // smaller value = bigger caves
-            double caveScale = scaleFactor * 1 / 50.0;
+            double caveScale = 0.01;
             // the scale for placement
             // 2/placementScale should be roughly the average distance between cave systems
-            double placementScale = scaleFactor * 1 / 1024.0;
+            double placementScale = scaleFactor * 1 / 512.0;
             // bigger value = smaller cave systems
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
             // value 1 and above means they won't generate
-            double caveSystemSizeFactor = 0.30;
+            double caveSystemSizeFactor = 0;
 
 
             // bigger values = less smooth transition on the edges of cave system
             double transitionConstant1 = 40;
             // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
-            double transitionConstant2 = 0.10;
+            double transitionConstant2 = 0.26;
 
             // bigger value = finer detail for caves. Adding 1 = double the detail
             int caveOctaves = 8;
