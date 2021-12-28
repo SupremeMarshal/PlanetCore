@@ -12,18 +12,18 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 
-public class ContainerCrustrockFurnace extends Container
+public class ContainerTungstenTitaniumFurnace extends Container
 {
     private final IInventory tileFurnace;
     private int cookTime, totalCookTime, burnTime, currentBurnTime;
 
-    public ContainerCrustrockFurnace(InventoryPlayer playerInventory, IInventory furnaceInventory)
+    public ContainerTungstenTitaniumFurnace(InventoryPlayer playerInventory, IInventory furnaceInventory)
     {
         this.tileFurnace = furnaceInventory;
 
         this.addSlotToContainer(new Slot(furnaceInventory, 0, 25, 11));
         this.addSlotToContainer(new Slot(furnaceInventory, 1, 68, 11));
-        this.addSlotToContainer(new SlotCrustrockFurnaceFuel(furnaceInventory, 2, 46, 45));
+        this.addSlotToContainer(new SlotTungstenTitaniumFurnaceFuel(furnaceInventory, 2, 10, 45));
         this.addSlotToContainer(new SlotFurnaceOutput(playerInventory.player, furnaceInventory, 3, 106, 27));
 
         for(int y = 0; y < 3; y++)
@@ -68,6 +68,7 @@ public class ContainerCrustrockFurnace extends Container
         this.tileFurnace.setField(id, data);
     }
 
+
     @Override
     public boolean canInteractWith(EntityPlayer playerIn)
     {
@@ -102,7 +103,7 @@ public class ContainerCrustrockFurnace extends Container
                         return ItemStack.EMPTY;
                     }
                 }
-                else if (TileEntityFurnace.isItemFuel(itemstack1))
+                else if (TileEntityTungstenTitaniumFurnace.isItemFuel(itemstack1))
                 {
                     if (!this.mergeItemStack(itemstack1, 1, 2, false))
                     {

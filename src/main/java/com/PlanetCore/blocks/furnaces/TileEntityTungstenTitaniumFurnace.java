@@ -5,7 +5,6 @@ import com.PlanetCore.init.ModFluids;
 import com.PlanetCore.init.ModItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
@@ -16,18 +15,21 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.tileentity.TileEntityLockable;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.datafix.FixTypes;
 import net.minecraft.util.datafix.walkers.ItemStackDataLists;
 import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
+import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class TileEntityCrustrockFurnace extends TileEntityLockable implements ITickable, IInventory {
+public class TileEntityTungstenTitaniumFurnace extends TileEntityLockable implements ITickable, IInventory {
 
 
     /** The ItemStacks that hold the items currently being used in the furnace */
@@ -110,7 +112,7 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
 
     public String getName()
     {
-        return this.hasCustomName() ? this.furnaceCustomName : "container.crustrock_furnace";
+        return this.hasCustomName() ? this.furnaceCustomName : "container.tungsten_titanium_furnace";
     }
 
 
@@ -137,7 +139,7 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
         this.furnaceBurnTime = compound.getInteger("BurnTime");
         this.cookTime = compound.getInteger("CookTime");
         this.totalCookTime = compound.getInteger("CookTimeTotal");
-        this.currentItemBurnTime = getItemBurnTime(this.furnaceItemStacks.get(1));
+        this.currentItemBurnTime = getItemBurnTime(this.furnaceItemStacks.get(2));
 
         if (compound.hasKey("CustomName", 8))
         {
@@ -182,18 +184,17 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
     {
         return inventory.getField(0) > 0;
     }
-
     /**
      * Like the old updateEntity(), except more generic.
      */
     public void update() {
-        Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK));
+        Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK));
 
         boolean flag = this.isBurning();
         boolean flag1 = false;
         if (this.isBurning()) {
             --this.furnaceBurnTime;
-            if (steel_ingot) this.totalCookTime = 1000;
+            if (tungsten_uranium_ingot) this.totalCookTime = 1000;
         }
 
         if (!world.isRemote) {
@@ -235,10 +236,11 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
                         }
                         if (this.canSmelt()) {
                             if (result.isEmpty()) {
-                                furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_INGOT, 3));
+                                furnaceItemStacks.set(3, new ItemStack(ModItems.TUNGSTEN_URANIUM_INGOT, 3));
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
-                            } else {
+                            }
+                            else {
                                 this.furnaceItemStacks.get(3).grow(3);
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
@@ -253,7 +255,7 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
             }
             if (flag != this.isBurning()) {
                 flag1 = true;
-                CrustrockFurnace.setState(this.isBurning(), this.world, this.pos);
+                TungstenTitaniumFurnace.setState(this.isBurning(), this.world, this.pos);
             }
         }
         if (flag1) {
@@ -272,15 +274,15 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
     private boolean canSmelt()
     {
         ItemStack[] inputs = new ItemStack[]{this.furnaceItemStacks.get(0), this.furnaceItemStacks.get(1)};
-        Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK));
-        
-        Boolean canSmelt = (steel_ingot);
+        Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK));
+
+        Boolean canSmelt = (tungsten_uranium_ingot);
 
         if (canSmelt && this.furnaceItemStacks.get(3).getCount() <= 64)
         {
-            if (!furnaceItemStacks.get(3).isEmpty() && (steel_ingot) && furnaceItemStacks.get(3).getItem() != ModItems.STEEL_INGOT) return false;
-            else if ((steel_ingot) && inputs[0].getCount() < 1) return false;
-            else if ((steel_ingot) && inputs[1].getCount() < 1) return false;
+            if (!furnaceItemStacks.get(3).isEmpty() && (tungsten_uranium_ingot) && furnaceItemStacks.get(3).getItem() != ModItems.TUNGSTEN_URANIUM_INGOT) return false;
+            else if ((tungsten_uranium_ingot) && inputs[0].getCount() < 1) return false;
+            else if ((tungsten_uranium_ingot) && inputs[1].getCount() < 1) return false;
             else return true;
         }
         else return false;
@@ -298,11 +300,8 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
         }
         else
         {
-            int burnTime = net.minecraftforge.event.ForgeEventFactory.getItemBurnTime(stack);
-            if (burnTime >= 0) return burnTime;
             Item item = stack.getItem();
-
-            if (item == FluidUtil.getFilledBucket(new FluidStack(ModFluids.IRON_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem())
+            if (item == FluidUtil.getFilledBucket(new FluidStack(ModFluids.TUNGSTEN_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem())
             {
                 return 5000;
             }
@@ -357,19 +356,26 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
         }
         else
         {
-            ItemStack itemstack = this.furnaceItemStacks.get(1);
-            return isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack) && itemstack.getItem() != Items.BUCKET;
+            return isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack);
         }
+    }
+
+    /**
+     * Returns true if automation can insert the given item in the given slot from the given side.
+     */
+    public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
+    {
+        return this.isItemValidForSlot(index, itemStackIn);
     }
 
     public String getGuiID()
     {
-        return "planetcore:crustrock_furnace";
+        return "planetcore:tungsten_titanium_furnace";
     }
 
     public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn)
     {
-        return new ContainerCrustrockFurnace(playerInventory, this);
+        return new ContainerTungstenTitaniumFurnace(playerInventory, this);
     }
 
     public int getField(int id)

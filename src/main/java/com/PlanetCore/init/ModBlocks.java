@@ -2,7 +2,7 @@ package com.PlanetCore.init;
 
 
 import com.PlanetCore.blocks.*;
-import com.PlanetCore.blocks.furnaces.CrustrockFurnace;
+import com.PlanetCore.blocks.furnaces.*;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -101,6 +101,18 @@ public class ModBlocks {
 
     public static final CrustrockFurnace CRUSTROCK_FURNACE = _null();
     public static final CrustrockFurnace LIT_CRUSTROCK_FURNACE = _null();
+
+    public static final SteelFurnace STEEL_FURNACE = _null();
+    public static final SteelFurnace LIT_STEEL_FURNACE = _null();
+
+    public static final TitaniumFurnace TITANIUM_FURNACE = _null();
+    public static final TitaniumFurnace LIT_TITANIUM_FURNACE = _null();
+
+    public static final TungstenFurnace TUNGSTEN_FURNACE = _null();
+    public static final TungstenFurnace LIT_TUNGSTEN_FURNACE = _null();
+
+    public static final TungstenTitaniumFurnace TUNGSTEN_TITANIUM_FURNACE = _null();
+    public static final TungstenTitaniumFurnace LIT_TUNGSTEN_TITANIUM_FURNACE = _null();
 
     public static final BlockAirNoPressure AIR_NO_PRESSURE = _null();
 
@@ -367,10 +379,18 @@ public class ModBlocks {
 
         registry.registerAll(
 
-                new BlockAirNoPressure("air_no_pressure"),
+                new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
                 new BlockBase("crust_cobblestone", Material.ROCK).setHardness(5.0F).setResistance(1),
-                new CrustrockFurnace("crustrock_furnace", false).setHardness(5.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
-                new CrustrockFurnace("lit_crustrock_furnace", true).setHardness(5.0F).setResistance(500).setLightLevel(0.975F).setResistance(1),
+                new CrustrockFurnace("crustrock_furnace", false).setHardness(2.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
+                new CrustrockFurnace("lit_crustrock_furnace", true).setHardness(2.0F).setResistance(5).setLightLevel(0.975F).setResistance(1),
+                new SteelFurnace("steel_furnace", false).setHardness(5.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
+                new SteelFurnace("lit_steel_furnace", true).setHardness(5.0F).setResistance(5).setLightLevel(0.975F).setResistance(1),
+                new TitaniumFurnace("titanium_furnace", false).setHardness(96.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
+                new TitaniumFurnace("lit_titanium_furnace", true).setHardness(96.0F).setResistance(10).setLightLevel(0.975F).setResistance(1),
+                new TungstenFurnace("tungsten_furnace", false).setHardness(96.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
+                new TungstenFurnace("lit_tungsten_furnace", true).setHardness(96.0F).setResistance(10).setLightLevel(0.975F).setResistance(1),
+                new TungstenTitaniumFurnace("tungsten_titanium_furnace", false).setHardness(96.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
+                new TungstenTitaniumFurnace("lit_tungsten_titanium_furnace", true).setHardness(96.0F).setResistance(10).setLightLevel(0.975F).setResistance(1),
                 new SulfuricAcidFluid("sulfuric_acid", ModFluids.SULFURIC_ACID_FLUID, Material.WATER),
                 new IronLavaFluid("iron_lava", ModFluids.IRON_LAVA_FLUID, Material.LAVA).setDensity(500),
                 new MetalLavaFluid("aluminium_lava", ModFluids.ALUMINIUM_LAVA_FLUID, Material.LAVA).setDensity(200),

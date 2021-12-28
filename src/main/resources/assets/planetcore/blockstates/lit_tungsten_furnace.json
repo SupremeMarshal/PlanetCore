@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "planetcore:lit_tungsten_furnace" },
+    "facing=south": { "model": "planetcore:lit_tungsten_furnace", "y": 180 },
+    "facing=west":  { "model": "planetcore:lit_tungsten_furnace", "y": 270 },
+    "facing=east":  { "model": "planetcore:lit_tungsten_furnace", "y": 90 }
+  }
+}

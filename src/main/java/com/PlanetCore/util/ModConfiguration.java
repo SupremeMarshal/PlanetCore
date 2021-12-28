@@ -19,7 +19,12 @@ public class ModConfiguration
 	public static int ENTITY_FALLING_BLOCK_ID = 205;
 	public static int ENTITY_DEATH_ENDERMAN_ID = 206;
 	public static int ENTITY_HOT_BLASE_ID = 207;
-	public static int GUI_CRUSTROCK_FURNACE_ID = 1;
+	public static int GUI_CRUSTROCK_FURNACE_ID = 5;
+	public static int GUI_STEEL_FURNACE_ID = 6;
+	public static int GUI_TITANIUM_FURNACE_ID = 7;
+	public static int GUI_TUNGSTEN_FURNACE_ID = 8;
+	public static int GUI_TUNGSTEN_TITANIUM_FURNACE_ID = 9;
+
 
 	public static void init(File file)
 	{
@@ -39,6 +44,10 @@ public class ModConfiguration
 		category = "GUI IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the GUI's to ensure that they don't clash with other mod's ids");
 		GUI_CRUSTROCK_FURNACE_ID = config.getInt("GUI_CRUSTROCK_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Crustrock Furnace (Non-Electric)");
+		GUI_STEEL_FURNACE_ID = config.getInt("GUI_STEEL_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Steel Furnace (Non-Electric)");
+		GUI_TITANIUM_FURNACE_ID = config.getInt("GUI_TITANIUM_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Titanium Furnace (Non-Electric)");
+		GUI_TUNGSTEN_FURNACE_ID = config.getInt("GUI_TUNGSTEN_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Tungsten Furnace (Non-Electric)");
+		GUI_TUNGSTEN_TITANIUM_FURNACE_ID = config.getInt("GUI_TUNGSTEN_TITANIUM_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Tungsten Titanium Furnace (Non-Electric)");
 	}
 	
 	public static void registerConfig(FMLPreInitializationEvent event)

@@ -28,15 +28,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Random;
 
-public class CrustrockFurnace extends BlockContainer
+public class TungstenTitaniumFurnace extends BlockContainer
 {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
     private final boolean isBurning;
     private static boolean keepInventory;
 
-    public CrustrockFurnace(String name, boolean isBurning)
+    public TungstenTitaniumFurnace(String name, boolean isBurning)
     {
-        super(Material.ROCK);
+        super(Material.IRON);
         setTranslationKey(name);
         setRegistryName(name);
         setSoundType(SoundType.STONE);
@@ -48,13 +48,13 @@ public class CrustrockFurnace extends BlockContainer
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return Item.getItemFromBlock(ModBlocks.CRUSTROCK_FURNACE);
+        return Item.getItemFromBlock(ModBlocks.TUNGSTEN_TITANIUM_FURNACE);
     }
 
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
     {
-        return new ItemStack(ModBlocks.CRUSTROCK_FURNACE);
+        return new ItemStack(ModBlocks.TUNGSTEN_TITANIUM_FURNACE);
     }
 
     @Override
@@ -62,7 +62,7 @@ public class CrustrockFurnace extends BlockContainer
     {
         if(!worldIn.isRemote)
         {
-            playerIn.openGui(Main.instance, Reference.GUI_CRUSTROCK_FURNACE, worldIn, pos.getX(), pos.getY(), pos.getZ());
+            playerIn.openGui(Main.instance, Reference.GUI_TUNGSTEN_TITANIUM_FURNACE, worldIn, pos.getX(), pos.getY(), pos.getZ());
         }
 
         return true;
@@ -112,13 +112,13 @@ public class CrustrockFurnace extends BlockContainer
 
         if (active)
         {
-            worldIn.setBlockState(pos, ModBlocks.LIT_CRUSTROCK_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, ModBlocks.LIT_CRUSTROCK_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, ModBlocks.LIT_TUNGSTEN_TITANIUM_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, ModBlocks.LIT_TUNGSTEN_TITANIUM_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
         else
         {
-            worldIn.setBlockState(pos, ModBlocks.CRUSTROCK_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, ModBlocks.CRUSTROCK_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, ModBlocks.TUNGSTEN_TITANIUM_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, ModBlocks.TUNGSTEN_TITANIUM_FURNACE.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
 
         keepInventory = false;
@@ -198,7 +198,7 @@ public class CrustrockFurnace extends BlockContainer
     @Override
     public TileEntity createTileEntity(World world, IBlockState state)
     {
-        return new TileEntityCrustrockFurnace();
+        return new TileEntityTungstenTitaniumFurnace();
     }
 
 
@@ -226,9 +226,9 @@ public class CrustrockFurnace extends BlockContainer
         {
             TileEntity tileentity = worldIn.getTileEntity(pos);
 
-            if (tileentity instanceof TileEntityCrustrockFurnace)
+            if (tileentity instanceof TileEntityTungstenTitaniumFurnace)
             {
-                InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityCrustrockFurnace)tileentity);
+                InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityTungstenTitaniumFurnace)tileentity);
                 worldIn.updateComparatorOutputLevel(pos, this);
             }
         }
@@ -279,7 +279,7 @@ public class CrustrockFurnace extends BlockContainer
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
-        return new TileEntityCrustrockFurnace();
+        return new TileEntityTungstenTitaniumFurnace();
     }
 
 }
