@@ -1,5 +1,6 @@
 package com.PlanetCore.cwg;
 
+import com.PlanetCore.init.ModBlocks;
 import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
 import io.github.opencubicchunks.cubicchunks.api.world.ICube;
@@ -101,7 +102,7 @@ public class NoiseCaveGenerator3 implements ICubicStructureGenerator {
 
             if (!skip) {
                 if (value > 0) {
-                    cubePrimer.setBlockState(x, y, z, Blocks.AIR.getDefaultState());
+                    cubePrimer.setBlockState(x, y, z, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
                 } else {
                     if (value + gradY > 0) {
                         Biome biome = world.getBiomeProvider().getBiome(new BlockPos(blockX, blockY, blockZ));

@@ -581,7 +581,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                     if (shouldCarveBlock(distX, distY, distZ)) {
                         // No lava generation, infinite depth. Lava will be generated differently (or not generated)
                         if(REPLACE_WITH_AIR) {
-                            cube.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
+                            cube.setBlockState(localX, localY, localZ, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
                         }
                         else{
                             cube.setBlockState(localX, localY, localZ, CAVE_MATERIAL.getDefaultState());

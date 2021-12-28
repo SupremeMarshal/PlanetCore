@@ -102,6 +102,8 @@ public class ModBlocks {
     public static final CrustrockFurnace CRUSTROCK_FURNACE = _null();
     public static final CrustrockFurnace LIT_CRUSTROCK_FURNACE = _null();
 
+    public static final BlockAirNoPressure AIR_NO_PRESSURE = _null();
+
     public static final Crustrock CRUSTROCK = _null();
     public static final Mantlerock MANTLEROCK = _null();
     public static final Corestone CORESTONE = _null();
@@ -365,6 +367,7 @@ public class ModBlocks {
 
         registry.registerAll(
 
+                new BlockAirNoPressure("air_no_pressure"),
                 new BlockBase("crust_cobblestone", Material.ROCK).setHardness(5.0F).setResistance(1),
                 new CrustrockFurnace("crustrock_furnace", false).setHardness(5.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
                 new CrustrockFurnace("lit_crustrock_furnace", true).setHardness(5.0F).setResistance(500).setLightLevel(0.975F).setResistance(1),
