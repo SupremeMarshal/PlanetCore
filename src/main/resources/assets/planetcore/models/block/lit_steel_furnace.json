@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "planetcore:blocks/steel_furnace_top",
+    "front": "planetcore:blocks/steel_furnace_front_on",
+    "side": "planetcore:blocks/steel_furnace_side"
+  }
+}

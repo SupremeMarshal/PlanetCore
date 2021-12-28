@@ -6,15 +6,15 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 
-public class GuiCrustrockFurnace extends GuiContainer
+public class GuiSteelFurnace extends GuiContainer
 {
-    private static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":textures/gui/crustrock_furnace.png");
+    private static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MOD_ID + ":textures/gui/steel_furnace.png");
     private final InventoryPlayer player;
-    private final TileEntityCrustrockFurnace tileentity;
+    private final TileEntitySteelFurnace tileentity;
 
-    public GuiCrustrockFurnace(InventoryPlayer player, TileEntityCrustrockFurnace tileentity)
+    public GuiSteelFurnace(InventoryPlayer player, TileEntitySteelFurnace tileentity)
     {
-        super(new ContainerCrustrockFurnace(player, tileentity));
+        super(new ContainerSteelFurnace(player, tileentity));
         this.player = player;
         this.tileentity = tileentity;
     }
@@ -22,8 +22,8 @@ public class GuiCrustrockFurnace extends GuiContainer
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
     {
-        String tileName = "Crustrock Furnace";
-        this.fontRenderer.drawString(tileName, 47, 2, 4210752);
+        String tileName = "Steel Furnace";
+        this.fontRenderer.drawString(tileName, 50, 2, 4210752);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class GuiCrustrockFurnace extends GuiContainer
         this.mc.getTextureManager().bindTexture(TEXTURES);
         this.drawTexturedModalRect(this.guiLeft, this.guiTop, 0, 0, this.xSize, this.ySize);
 
-        if(TileEntityCrustrockFurnace.isBurning(tileentity))
+        if(TileEntitySteelFurnace.isBurning(tileentity))
         {
             int k = this.getBurnLeftScaled(13);
             //fire texture

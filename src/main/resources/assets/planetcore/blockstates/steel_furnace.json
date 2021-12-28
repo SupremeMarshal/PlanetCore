@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "planetcore:steel_furnace" },
+    "facing=south": { "model": "planetcore:steel_furnace", "y": 180 },
+    "facing=west":  { "model": "planetcore:steel_furnace", "y": 270 },
+    "facing=east":  { "model": "planetcore:steel_furnace", "y": 90 }
+  }
+}
