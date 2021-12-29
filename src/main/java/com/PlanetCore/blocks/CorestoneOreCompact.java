@@ -16,7 +16,7 @@ public class CorestoneOreCompact extends Corestone implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
-    private static final float [] coreHardnessByMeta = {2500, 5000, 10000};
+    private static final float [] coreHardnessByMeta = {11158, 16737, 25105, 37658, 56488, 84732, 127098};
 
     public CorestoneOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
     {
