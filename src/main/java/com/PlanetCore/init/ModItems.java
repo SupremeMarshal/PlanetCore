@@ -166,10 +166,10 @@ public class ModItems {
 	public static final ItemAxe COMPLETE_SILVER_AXE = new ItemAxeX(ToolMaterials.COMPLETE_SILVER);
 	public static final ItemHoe COMPLETE_SILVER_HOE = new ItemHoe(ToolMaterials.COMPLETE_SILVER);
 
-	public static final Item SILVER_HELMET = new SilverHelmet(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SILVER_CHESTPLATE = new SilverBody(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SILVER_LEGGINGS = new SilverLegs(ArmorMaterials.ARMOR_MATERIAL_SILVER, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SILVER_BOOTS = new SilverBoots(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.FEET);
+	public static final Item SILVER_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.HEAD);
+	public static final Item SILVER_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.CHEST);
+	public static final Item SILVER_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILVER, 2, EntityEquipmentSlot.LEGS);
+	public static final Item SILVER_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.FEET);
 
 	//GOLD//
 	public static final ItemSword GOLD_SWORD = new ItemSword(ToolMaterials.GOLD);
@@ -183,10 +183,10 @@ public class ModItems {
 	public static final ItemAxe COMPLETE_GOLD_AXE = new ItemAxeX(ToolMaterials.COMPLETE_GOLD);
 	public static final ItemHoe COMPLETE_GOLD_HOE = new ItemHoe(ToolMaterials.COMPLETE_GOLD);
 
-	public static final Item GOLD_HELMET = new GoldHelmet(ArmorMaterials.ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item GOLD_CHESTPLATE = new GoldBody(ArmorMaterials.ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item GOLD_LEGGINGS = new GoldLegs(ArmorMaterials.ARMOR_MATERIAL_GOLD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item GOLD_BOOTS = new GoldBoots(ArmorMaterials.ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.FEET);
+	public static final Item GOLD_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.HEAD);
+	public static final Item GOLD_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.CHEST);
+	public static final Item GOLD_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_GOLD, 2, EntityEquipmentSlot.LEGS);
+	public static final Item GOLD_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_GOLD, 1, EntityEquipmentSlot.FEET);
 
 	//PLATINUM//
 	public static final ItemSword PLATINUM_SWORD = new ItemSword(ToolMaterials.PLATINUM);
@@ -200,10 +200,10 @@ public class ModItems {
 	public static final ItemAxe COMPLETE_PLATINUM_AXE = new ItemAxeX(ToolMaterials.COMPLETE_PLATINUM);
 	public static final ItemHoe COMPLETE_PLATINUM_HOE = new ItemHoe(ToolMaterials.COMPLETE_PLATINUM);
 
-	public static final Item PLATINUM_HELMET = new PlatinumHelmet(ArmorMaterials.ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.HEAD);
-	public static final Item PLATINUM_CHESTPLATE = new PlatinumBody(ArmorMaterials.ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.CHEST);
-	public static final Item PLATINUM_LEGGINGS = new PlatinumLegs(ArmorMaterials.ARMOR_MATERIAL_PLATINUM, 2, EntityEquipmentSlot.LEGS);
-	public static final Item PLATINUM_BOOTS = new PlatinumBoots(ArmorMaterials.ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.FEET);
+	public static final Item PLATINUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.HEAD);
+	public static final Item PLATINUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.CHEST);
+	public static final Item PLATINUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_PLATINUM, 2, EntityEquipmentSlot.LEGS);
+	public static final Item PLATINUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_PLATINUM, 1, EntityEquipmentSlot.FEET);
 
 	//TITANIUM//
 	public static final ItemSword TITANIUM_SWORD = new ItemSword(ToolMaterials.TITANIUM);
@@ -217,10 +217,10 @@ public class ModItems {
 	public static final ItemAxe COMPLETE_TITANIUM_AXE = new ItemAxeX(ToolMaterials.COMPLETE_TITANIUM);
 	public static final ItemHoe COMPLETE_TITANIUM_HOE = new ItemHoe(ToolMaterials.COMPLETE_TITANIUM);
 
-	public static final Item TITANIUM_HELMET = new TitaniumHelmet(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TITANIUM_CHESTPLATE = new TitaniumBody(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TITANIUM_LEGGINGS = new TitaniumHelmet(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TITANIUM_BOOTS = new TitaniumBoots(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.FEET);
+	public static final Item TITANIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.HEAD);
+	public static final Item TITANIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.CHEST);
+	public static final Item TITANIUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 2, EntityEquipmentSlot.LEGS);
+	public static final Item TITANIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.FEET);
 
 	//URANIUM//
 	public static final ItemSword URANIUM_SWORD = new ItemSword(ToolMaterials.URANIUM);
@@ -234,10 +234,10 @@ public class ModItems {
 	public static final ItemAxe COMPLETE_URANIUM_AXE = new ItemAxeX(ToolMaterials.COMPLETE_URANIUM);
 	public static final ItemHoe COMPLETE_URANIUM_HOE = new ItemHoe(ToolMaterials.COMPLETE_URANIUM);
 
-	public static final Item URANIUM_HELMET = new UraniumHelmet(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.HEAD);
-	public static final Item URANIUM_CHESTPLATE = new UraniumBody(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.CHEST);
-	public static final Item URANIUM_LEGGINGS = new UraniumLegs(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 2, EntityEquipmentSlot.LEGS);
-	public static final Item URANIUM_BOOTS = new UraniumBoots(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.FEET);
+	public static final Item URANIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.HEAD);
+	public static final Item URANIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.CHEST);
+	public static final Item URANIUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 2, EntityEquipmentSlot.LEGS);
+	public static final Item URANIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.FEET);
 
 	//TUNGSTEN//
 	public static final ItemSword TUNGSTEN_SWORD = new ItemSword(ToolMaterials.TUNGSTEN);
@@ -251,10 +251,10 @@ public class ModItems {
 	public static final ItemAxe COMPLETE_TUNGSTEN_AXE = new ItemAxeX(ToolMaterials.COMPLETE_TUNGSTEN);
 	public static final ItemHoe COMPLETE_TUNGSTEN_HOE = new ItemHoe(ToolMaterials.COMPLETE_TUNGSTEN);
 
-	public static final Item TUNGSTEN_HELMET = new TungstenHelmet(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TUNGSTEN_CHESTPLATE = new TungstenBody(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TUNGSTEN_LEGGINGS = new TungstenLegs(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TUNGSTEN_BOOTS = new TungstenBoots(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.FEET);
+	public static final Item TUNGSTEN_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.HEAD);
+	public static final Item TUNGSTEN_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.CHEST);
+	public static final Item TUNGSTEN_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 2, EntityEquipmentSlot.LEGS);
+	public static final Item TUNGSTEN_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.FEET);
 
 	//TITANIUM_URANIUM//
 	public static final ItemSword TITANIUM_URANIUM_SWORD = new ItemSword(ToolMaterials.TITANIUM_URANIUM);
@@ -268,10 +268,10 @@ public class ModItems {
 	public static final ItemAxe COMPLETE_TITANIUM_URANIUM_AXE = new ItemAxeX(ToolMaterials.COMPLETE_TITANIUM_URANIUM);
 	public static final ItemHoe COMPLETE_TITANIUM_URANIUM_HOE = new ItemHoe(ToolMaterials.COMPLETE_TITANIUM_URANIUM);
 
-	public static final Item TITANIUM_URANIUM_HELMET = new Titanium_UraniumHelmet(ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TITANIUM_URANIUM_CHESTPLATE = new Titanium_UraniumBody(ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TITANIUM_URANIUM_LEGGINGS = new Titanium_UraniumLegs(ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TITANIUM_URANIUM_BOOTS = new Titanium_UraniumBoots(ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM, 1, EntityEquipmentSlot.FEET);
+	public static final Item TITANIUM_URANIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM, 1, EntityEquipmentSlot.HEAD);
+	public static final Item TITANIUM_URANIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM, 1, EntityEquipmentSlot.CHEST);
+	public static final Item TITANIUM_URANIUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM, 2, EntityEquipmentSlot.LEGS);
+	public static final Item TITANIUM_URANIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM, 1, EntityEquipmentSlot.FEET);
 
 	//TUNGSTEN_URANIUM//
 	public static final ItemSword TUNGSTEN_URANIUM_SWORD = new ItemSword(ToolMaterials.TUNGSTEN_URANIUM);
@@ -285,10 +285,10 @@ public class ModItems {
 	public static final ItemAxe COMPLETE_TUNGSTEN_URANIUM_AXE = new ItemAxeX(ToolMaterials.COMPLETE_TUNGSTEN_URANIUM);
 	public static final ItemHoe COMPLETE_TUNGSTEN_URANIUM_HOE = new ItemHoe(ToolMaterials.COMPLETE_TUNGSTEN_URANIUM);
 
-	public static final Item TUNGSTEN_URANIUM_HELMET = new Tungsten_UraniumHelmet(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TUNGSTEN_URANIUM_CHESTPLATE = new Tungsten_UraniumBody(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TUNGSTEN_URANIUM_LEGGINGS = new Tungsten_UraniumLegs(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TUNGSTEN_URANIUM_BOOTS = new Tungsten_UraniumBoots(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM, 1, EntityEquipmentSlot.FEET);
+	public static final Item TUNGSTEN_URANIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM, 1, EntityEquipmentSlot.HEAD);
+	public static final Item TUNGSTEN_URANIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM, 1, EntityEquipmentSlot.CHEST);
+	public static final Item TUNGSTEN_URANIUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM, 2, EntityEquipmentSlot.LEGS);
+	public static final Item TUNGSTEN_URANIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM, 1, EntityEquipmentSlot.FEET);
 
 	//TUNGSTEN_TITANIUM//
 	public static final ItemSword TUNGSTEN_TITANIUM_SWORD = new ItemSword(ToolMaterials.TUNGSTEN_TITANIUM);
@@ -298,10 +298,10 @@ public class ModItems {
 	public static final ItemAxe TUNGSTEN_TITANIUM_AXE = new ItemAxeX(ToolMaterials.TUNGSTEN_TITANIUM);
 	public static final ItemHoe TUNGSTEN_TITANIUM_HOE = new ItemHoe(ToolMaterials.TUNGSTEN_TITANIUM);
 
-	public static final Item TUNGSTEN_TITANIUM_HELMET = new Tungsten_TitaniumHelmet(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TUNGSTEN_TITANIUM_CHESTPLATE = new Tungsten_TitaniumBody(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TUNGSTEN_TITANIUM_LEGGINGS = new Tungsten_TitaniumLegs(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TUNGSTEN_TITANIUM_BOOTS = new Tungsten_TitaniumBoots(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.FEET);
+	public static final Item TUNGSTEN_TITANIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.HEAD);
+	public static final Item TUNGSTEN_TITANIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.CHEST);
+	public static final Item TUNGSTEN_TITANIUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 2, EntityEquipmentSlot.LEGS);
+	public static final Item TUNGSTEN_TITANIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.FEET);
 
 	//EMERALD//
 	public static final ItemSword EMERALD_SWORD = new ItemSword(ToolMaterials.EMERALD);
@@ -310,10 +310,10 @@ public class ModItems {
 	public static final ItemAxe EMERALD_AXE = new ItemAxeX(ToolMaterials.EMERALD);
 	public static final ItemHoe EMERALD_HOE = new ItemHoe(ToolMaterials.EMERALD);
 
-	public static final Item EMERALD_HELMET = new EmeraldHelmet(ArmorMaterials.ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
-	public static final Item EMERALD_CHESTPLATE = new EmeraldBody(ArmorMaterials.ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
-	public static final Item EMERALD_LEGGINGS = new EmeraldLegs(ArmorMaterials.ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
-	public static final Item EMERALD_BOOTS = new EmeraldBoots(ArmorMaterials.ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
+	public static final Item EMERALD_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.HEAD);
+	public static final Item EMERALD_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.CHEST);
+	public static final Item EMERALD_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_EMERALD, 2, EntityEquipmentSlot.LEGS);
+	public static final Item EMERALD_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_EMERALD, 1, EntityEquipmentSlot.FEET);
 
 	//RUBY//
 	public static final ItemSword RUBY_SWORD = new ItemSword(ToolMaterials.RUBY);
@@ -322,10 +322,10 @@ public class ModItems {
 	public static final ItemAxe RUBY_AXE = new ItemAxeX(ToolMaterials.RUBY);
 	public static final ItemHoe RUBY_HOE = new ItemHoe(ToolMaterials.RUBY);
 
-	public static final Item RUBY_HELMET = new RubyHelmet(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.HEAD);
-	public static final Item RUBY_CHESTPLATE = new RubyBody(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.CHEST);
-	public static final Item RUBY_LEGGINGS = new RubyLegs(ArmorMaterials.ARMOR_MATERIAL_RUBY, 2, EntityEquipmentSlot.LEGS);
-	public static final Item RUBY_BOOTS = new RubyBoots(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.FEET);
+	public static final Item RUBY_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.HEAD);
+	public static final Item RUBY_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.CHEST);
+	public static final Item RUBY_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RUBY, 2, EntityEquipmentSlot.LEGS);
+	public static final Item RUBY_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.FEET);
 
 	//SAPPHIRE//
 	public static final ItemSword SAPPHIRE_SWORD = new ItemSword(ToolMaterials.SAPPHIRE);
@@ -334,10 +334,10 @@ public class ModItems {
 	public static final ItemAxe SAPPHIRE_AXE = new ItemAxeX(ToolMaterials.SAPPHIRE);
 	public static final ItemHoe SAPPHIRE_HOE = new ItemHoe(ToolMaterials.SAPPHIRE);
 
-	public static final Item SAPPHIRE_HELMET = new SapphirHelmet(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item SAPPHIRE_CHESTPLATE = new SapphirBody(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item SAPPHIRE_LEGGINGS = new SapphirLegs(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item SAPPHIRE_BOOTS = new SapphirBoots(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.FEET);
+	public static final Item SAPPHIRE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item SAPPHIRE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item SAPPHIRE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item SAPPHIRE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.FEET);
 
 	//DIAMOND//
 	public static final ItemSword DIAMOND_SWORD = new ItemSword(ToolMaterials.DIAMOND);
@@ -346,10 +346,10 @@ public class ModItems {
 	public static final ItemAxe DIAMOND_AXE = new ItemAxeX(ToolMaterials.DIAMOND);
 	public static final ItemHoe DIAMOND_HOE = new ItemHoe(ToolMaterials.DIAMOND);
 
-	public static final Item DIAMOND_HELMET = new DiamondHelmet(ArmorMaterials.ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.HEAD);
-	public static final Item DIAMOND_CHESTPLATE = new DiamondBody(ArmorMaterials.ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.CHEST);
-	public static final Item DIAMOND_LEGGINGS = new DiamondLegs(ArmorMaterials.ARMOR_MATERIAL_DIAMOND, 2, EntityEquipmentSlot.LEGS);
-	public static final Item DIAMOND_BOOTS = new DiamondBoots(ArmorMaterials.ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.FEET);
+	public static final Item DIAMOND_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.HEAD);
+	public static final Item DIAMOND_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.CHEST);
+	public static final Item DIAMOND_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_DIAMOND, 2, EntityEquipmentSlot.LEGS);
+	public static final Item DIAMOND_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_DIAMOND, 1, EntityEquipmentSlot.FEET);
 
 	//OLIVINE//
 	public static final ItemSword OLIVINE_SWORD = new ItemSword(ToolMaterials.OLIVINE);
@@ -358,10 +358,10 @@ public class ModItems {
 	public static final ItemAxe OLIVINE_AXE = new ItemAxeX(ToolMaterials.OLIVINE);
 	public static final ItemHoe OLIVINE_HOE = new ItemHoe(ToolMaterials.OLIVINE);
 
-	public static final Item OLIVINE_HELMET = new OlivineHelmet(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item OLIVINE_CHESTPLATE = new OlivineBody(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item OLIVINE_LEGGINGS = new OlivineLegs(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item OLIVINE_BOOTS = new OlivineBoots(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.FEET);
+	public static final Item OLIVINE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item OLIVINE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item OLIVINE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item OLIVINE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.FEET);
 
 	//WADSLEYITE//
 	public static final ItemSword WADSLEYITE_SWORD = new ItemSword(ToolMaterials.WADSLEYITE);
@@ -370,10 +370,10 @@ public class ModItems {
 	public static final ItemAxe WADSLEYITE_AXE = new ItemAxeX(ToolMaterials.WADSLEYITE);
 	public static final ItemHoe WADSLEYITE_HOE = new ItemHoe(ToolMaterials.WADSLEYITE);
 
-	public static final Item WADSLEYITE_HELMET = new WadsleyiteHelmet(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item WADSLEYITE_CHESTPLATE = new WadsleyiteBody(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item WADSLEYITE_LEGGINGS = new WadsleyiteLegs(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item WADSLEYITE_BOOTS = new WadsleyiteBoots(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.FEET);
+	public static final Item WADSLEYITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item WADSLEYITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item WADSLEYITE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item WADSLEYITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.FEET);
 
 	//RINGWOODITE//
 	public static final ItemSword RINGWOODITE_SWORD = new ItemSword(ToolMaterials.RINGWOODITE);
@@ -382,10 +382,10 @@ public class ModItems {
 	public static final ItemAxe RINGWOODITE_AXE = new ItemAxeX(ToolMaterials.RINGWOODITE);
 	public static final ItemHoe RINGWOODITE_HOE = new ItemHoe(ToolMaterials.RINGWOODITE);
 
-	public static final Item RINGWOODITE_HELMET = new RingwooditeHelmet(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item RINGWOODITE_CHESTPLATE = new RingwooditeBody(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item RINGWOODITE_LEGGINGS = new RingwooditeLegs(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item RINGWOODITE_BOOTS = new RingwooditeBoots(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.FEET);
+	public static final Item RINGWOODITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item RINGWOODITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item RINGWOODITE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item RINGWOODITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.FEET);
 
 	//BRIGMANITE//
 	public static final ItemSword BRIGMANITE_SWORD = new ItemSword(ToolMaterials.BRIGMANITE);
@@ -394,10 +394,10 @@ public class ModItems {
 	public static final ItemAxe BRIGMANITE_AXE = new ItemAxeX(ToolMaterials.BRIGMANITE);
 	public static final ItemHoe BRIGMANITE_HOE = new ItemHoe(ToolMaterials.BRIGMANITE);
 
-	public static final Item BRIGMANITE_HELMET = new SapphirHelmet(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item BRIGMANITE_CHESTPLATE = new SapphirBody(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item BRIGMANITE_LEGGINGS = new SapphirLegs(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item BRIGMANITE_BOOTS = new SapphirBoots(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.FEET);
+	public static final Item BRIGMANITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item BRIGMANITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item BRIGMANITE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item BRIGMANITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.FEET);
 
 	//MAJORITE//
 	public static final ItemSword MAJORITE_SWORD = new ItemSword(ToolMaterials.MAJORITE);
@@ -406,10 +406,10 @@ public class ModItems {
 	public static final ItemAxe MAJORITE_AXE = new ItemAxeX(ToolMaterials.MAJORITE);
 	public static final ItemHoe MAJORITE_HOE = new ItemHoe(ToolMaterials.MAJORITE);
 
-	public static final Item MAJORITE_HELMET = new SapphirHelmet(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item MAJORITE_CHESTPLATE = new SapphirBody(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item MAJORITE_LEGGINGS = new SapphirLegs(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item MAJORITE_BOOTS = new SapphirBoots(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.FEET);
+	public static final Item MAJORITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item MAJORITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item MAJORITE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item MAJORITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.FEET);
 
 	//AMAZONITE//
 	public static final ItemSword AMAZONITE_SWORD = new ItemSword(ToolMaterials.AMAZONITE);
@@ -418,10 +418,10 @@ public class ModItems {
 	public static final ItemAxe AMAZONITE_AXE = new ItemAxeX(ToolMaterials.AMAZONITE);
 	public static final ItemHoe AMAZONITE_HOE = new ItemHoe(ToolMaterials.AMAZONITE);
 
-	public static final Item AMAZONITE_HELMET = new AmazoniteHelmet(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item AMAZONITE_CHESTPLATE = new AmazoniteBody(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item AMAZONITE_LEGGINGS = new AmazoniteLegs(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item AMAZONITE_BOOTS = new AmazoniteBoots(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.FEET);
+	public static final Item AMAZONITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.HEAD);
+	public static final Item AMAZONITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.CHEST);
+	public static final Item AMAZONITE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 2, EntityEquipmentSlot.LEGS);
+	public static final Item AMAZONITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.FEET);
 
 	//ONYX//
 	public static final ItemSword ONYX_SWORD = new ItemSword(ToolMaterials.ONYX);
@@ -430,10 +430,10 @@ public class ModItems {
 	public static final ItemAxe ONYX_AXE = new ItemAxeX(ToolMaterials.ONYX);
 	public static final ItemHoe ONYX_HOE = new ItemHoe(ToolMaterials.ONYX);
 
-	public static final Item ONYX_HELMET = new OnyxHelmet(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.HEAD);
-	public static final Item ONYX_CHESTPLATE = new OnyxBody(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.CHEST);
-	public static final Item ONYX_LEGGINGS = new OnyxLegs(ArmorMaterials.ARMOR_MATERIAL_ONYX, 2, EntityEquipmentSlot.LEGS);
-	public static final Item ONYX_BOOTS = new OnyxBoots(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.FEET);
+	public static final Item ONYX_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.HEAD);
+	public static final Item ONYX_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.CHEST);
+	public static final Item ONYX_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 2, EntityEquipmentSlot.LEGS);
+	public static final Item ONYX_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.FEET);
 
 
 	//DEMON//CORE//

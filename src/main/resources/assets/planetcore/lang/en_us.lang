@@ -48,27 +48,27 @@ item.stone_pickaxe.name=Stone pickaxe
 item.stone_axe.name=Stone axe
 item.stone_hoe.name=Stone hoe
 
-item.bronze_sword.name=Bronze sword
-item.bronze_shovel.name=Bronze shovel
-item.bronze_pickaxe.name=Bronze pickaxe
-item.bronze_axe.name=Bronze axe
-item.bronze_hoe.name=Bronze hoe
+item.aluminium_sword.name=Aluminium sword
+item.aluminium_shovel.name=Aluminium shovel
+item.aluminium_pickaxe.name=Aluminium pickaxe
+item.aluminium_axe.name=Aluminium axe
+item.aluminium_hoe.name=Aluminium hoe
 
-item.bronze_helmet.name=Bronze helmet
-item.bronze_helmet.tooltip.0=When equipped:
-item.bronze_helmet.tooltip.1=§9+1 Armor
+item.aluminium_helmet.name=Aluminium helmet
+item.aluminium_helmet.tooltip.0=When equipped:
+item.aluminium_helmet.tooltip.1=§9+1 Armor
 
-item.bronze_chestplate.name=Bronze chestplate
-item.bronze_chestplate.tooltip.0=When equipped:
-item.bronze_chestplate.tooltip.1=§9+3 Armor
+item.aluminium_chestplate.name=Aluminium chestplate
+item.aluminium_chestplate.tooltip.0=When equipped:
+item.aluminium_chestplate.tooltip.1=§9+3 Armor
 
-item.bronze_leggings.name=Bronze leggings
-item.bronze_leggings.tooltip.0=When equipped:
-item.bronze_leggings.tooltip.1=§9+2 Armor
+item.aluminium_leggings.name=Aluminium leggings
+item.aluminium_leggings.tooltip.0=When equipped:
+item.aluminium_leggings.tooltip.1=§9+2 Armor
 
-item.bronze_boots.name=Bronze boots
-item.bronze_boots.tooltip.0=When equipped:
-item.bronze_boots.tooltip.1=§9+1 Armor
+item.aluminium_boots.name=Aluminium boots
+item.aluminium_boots.tooltip.0=When equipped:
+item.aluminium_boots.tooltip.1=§9+1 Armor
 
 item.iron_sword.name=Iron sword
 item.iron_shovel.name=Iron shovel
@@ -92,6 +92,57 @@ item.iron_boots.name=Iron boots
 item.iron_boots.tooltip.0=When equipped:
 item.iron_boots.tooltip.1=§9+2 Armor
 
+item.tin_sword.name=Tin sword
+item.tin_shovel.name=Tin shovel
+item.tin_pickaxe.name=Tin pickaxe
+item.tin_axe.name=Tin axe
+item.tin_hoe.name=Tin hoe
+
+item.tin_helmet.name=Tin helmet
+item.tin_helmet.tooltip.0=When equipped:
+item.tin_helmet.tooltip.1=§9+2 Armor
+item.tin_helmet.tooltip.2=§9+1 Toughness
+
+item.tin_chestplate.name=Tin chestplate
+item.tin_chestplate.tooltip.0=When equipped:
+item.tin_chestplate.tooltip.1=§9+4 Armor
+item.tin_chestplate.tooltip.2=§9+1 Toughness
+
+item.tin_leggings.name=Tin leggings
+item.tin_leggings.tooltip.0=When equipped:
+item.tin_leggings.tooltip.1=§9+3 Armor
+item.tin_leggings.tooltip.2=§9+1 Toughness
+
+item.tin_boots.name=Tin boots
+item.tin_boots.tooltip.0=When equipped:
+item.tin_boots.tooltip.1=§9+2 Armor
+item.tin_boots.tooltip.2=§9+1 Toughness
+
+item.copper_sword.name=Copper sword
+item.copper_shovel.name=Copper shovel
+item.copper_pickaxe.name=Copper pickaxe
+item.copper_axe.name=Copper axe
+item.copper_hoe.name=Copper hoe
+
+item.copper_helmet.name=Copper helmet
+item.copper_helmet.tooltip.0=When equipped:
+item.copper_helmet.tooltip.1=§9+2 Armor
+item.cooper_helmet.tooltip.2=§9+1 Toughness
+
+item.copper_chestplate.name=Copper chestplate
+item.copper_chestplate.tooltip.0=When equipped:
+item.copper_chestplate.tooltip.1=§9+4 Armor
+item.cooper_chestplate.tooltip.2=§9+1 Toughness
+
+item.copper_leggings.name=Copper leggings
+item.copper_leggings.tooltip.0=When equipped:
+item.copper_leggings.tooltip.1=§9+3 Armor
+item.cooper_leggings.tooltip.2=§9+1 Toughness
+
+item.copper_boots.name=Copper boots
+item.copper_boots.tooltip.0=When equipped:
+item.copper_boots.tooltip.1=§9+2 Armor
+item.cooper_boots.tooltip.2=§9+1 Toughness
 
 item.steel_sword.name=Steel sword
 item.steel_shovel.name=Steel shovel
@@ -102,18 +153,48 @@ item.steel_hoe.name=Steel hoe
 item.steel_helmet.name=Steel helmet
 item.steel_helmet.tooltip.0=When equipped:
 item.steel_helmet.tooltip.1=§9+3 Armor
+item.steel_helmet.tooltip.2=§9+1 Toughness
 
 item.steel_chestplate.name=Steel chestplate
 item.steel_chestplate.tooltip.0=When equipped:
 item.steel_chestplate.tooltip.1=§9+5 Armor
+item.steel_chestplate.tooltip.2=§9+1 Toughness
 
 item.steel_leggings.name=Steel leggings
 item.steel_leggings.tooltip.0=When equipped:
 item.steel_leggings.tooltip.1=§9+4 Armor
+item.steel_leggings.tooltip.2=§9+1 Toughness
 
 item.steel_boots.name=Steel boots
 item.steel_boots.tooltip.0=When equipped:
 item.steel_boots.tooltip.1=§9+3 Armor
+item.steel_boots.tooltip.2=§9+1 Toughness
+
+item.bronze_sword.name=Bronze sword
+item.bronze_shovel.name=Bronze shovel
+item.bronze_pickaxe.name=Bronze pickaxe
+item.bronze_axe.name=Bronze axe
+item.bronze_hoe.name=Bronze hoe
+
+item.bronze_helmet.name=Bronze helmet
+item.bronze_helmet.tooltip.0=When equipped:
+item.bronze_helmet.tooltip.1=§9+4 Armor
+item.bronze_helmet.tooltip.2=§9+2 Toughness
+
+item.bronze_chestplate.name=Bronze chestplate
+item.bronze_chestplate.tooltip.0=When equipped:
+item.bronze_chestplate.tooltip.1=§9+6 Armor
+item.bronze_chestplate.tooltip.2=§9+2 Toughness
+
+item.bronze_leggings.name=Bronze leggings
+item.bronze_leggings.tooltip.0=When equipped:
+item.bronze_leggings.tooltip.1=§9+5 Armor
+item.bronze_leggings.tooltip.2=§9+2 Toughness
+
+item.bronze_boots.name=Bronze boots
+item.bronze_boots.tooltip.0=When equipped:
+item.bronze_boots.tooltip.1=§9+3 Armor
+item.bronze_boots.tooltip.2=§9+2 Toughness
 
 item.silver_sword.name=Silver sword
 item.silver_shovel.name=Silver shovel
@@ -141,7 +222,7 @@ item.silver_leggings.tooltip.3=§a+0.5 Max health
 
 item.silver_boots.name=Silver boots
 item.silver_boots.tooltip.0=When equipped:
-item.silver_boots.tooltip.1=§9+3 Armor
+item.silver_boots.tooltip.1=§9+4 Armor
 item.silver_boots.tooltip.2=§9+2.5 Toughness
 item.silver_boots.tooltip.3=§a+0.5 Max health
 
@@ -245,55 +326,25 @@ item.uranium_helmet.name=uranium helmet
 item.uranium_helmet.tooltip.0=When equipped:
 item.uranium_helmet.tooltip.1=§9+5 Armor
 item.uranium_helmet.tooltip.2=§9+4.5 Toughness
-item.uranium_helmet.tooltip.3=§a+4.5 Max health
+item.uranium_helmet.tooltip.3=§a+2.5 Max health
 
 item.uranium_chestplate.name=uranium chestplate
 item.uranium_chestplate.tooltip.0=When equipped:
 item.uranium_chestplate.tooltip.1=§9+7 Armor
 item.uranium_chestplate.tooltip.2=§9+4.5 Toughness
-item.uranium_chestplate.tooltip.3=§a+4.5 Max health
+item.uranium_chestplate.tooltip.3=§a+2.5 Max health
 
 item.uranium_leggings.name=uranium leggings
 item.uranium_leggings.tooltip.0=When equipped:
 item.uranium_leggings.tooltip.1=§9+6 Armor
 item.uranium_leggings.tooltip.2=§9+4.5 Toughness
-item.uranium_leggings.tooltip.3=§a+4.5 Max health
+item.uranium_leggings.tooltip.3=§a+2.5 Max health
 
 item.uranium_boots.name=uranium boots
 item.uranium_boots.tooltip.0=When equipped:
 item.uranium_boots.tooltip.1=§9+5 Armor
 item.uranium_boots.tooltip.2=§9+4.5 Toughness
-item.uranium_boots.tooltip.3=§a+4.5 Max health
-
-item.tungsten_sword.name=Tungsten sword
-item.tungsten_shovel.name=Tungsten shovel
-item.tungsten_pickaxe.name=Tungsten pickaxe
-item.tungsten_axe.name=Tungsten axe
-item.tungsten_hoe.name=Tungsten hoe
-
-item.tungsten_helmet.name=Tungsten helmet
-item.tungsten_helmet.tooltip.0=When equipped:
-item.tungsten_helmet.tooltip.1=§9+5 Armor
-item.tungsten_helmet.tooltip.2=§9+5 Toughness
-item.tungsten_helmet.tooltip.3=§a+2.5 Max health
-
-item.tungsten_chestplate.name=Tungsten chestplate
-item.tungsten_chestplate.tooltip.0=When equipped:
-item.tungsten_chestplate.tooltip.1=§9+7 Armor
-item.tungsten_chestplate.tooltip.2=§9+5 Toughness
-item.tungsten_chestplate.tooltip.3=§a+2.5 Max health
-
-item.tungsten_leggings.name=Tungsten leggings
-item.tungsten_leggings.tooltip.0=When equipped:
-item.tungsten_leggings.tooltip.1=§9+6 Armor
-item.tungsten_leggings.tooltip.2=§9+5 Toughness
-item.tungsten_leggings.tooltip.3=§a+2.5 Max health
-
-item.tungsten_boots.name=Tungsten boots
-item.tungsten_boots.tooltip.0=When equipped:
-item.tungsten_boots.tooltip.1=§9+5 Armor
-item.tungsten_boots.tooltip.2=§9+5 Toughness
-item.tungsten_boots.tooltip.3=§a+2.5 Max health
+item.uranium_boots.tooltip.3=§a+2.5 Max health
 
 item.titanium_uranium_sword.name=titanium-uranium sword
 item.titanium_uranium_shovel.name=titanium-uranium shovel
@@ -304,56 +355,56 @@ item.titanium_uranium_hoe.name=titanium-uranium hoe
 item.titanium_uranium_helmet.name=titanium-uranium helmet
 item.titanium_uranium_helmet.tooltip.0=When equipped:
 item.titanium_uranium_helmet.tooltip.1=§9+5 Armor
-item.titanium_uranium_helmet.tooltip.2=§9+6.5 Toughness
-item.titanium_uranium_helmet.tooltip.3=§a+5 Max health
+item.titanium_uranium_helmet.tooltip.2=§9+5 Toughness
+item.titanium_uranium_helmet.tooltip.3=§a+3 Max health
 
 item.titanium_uranium_chestplate.name=titanium-uranium chestplate
 item.titanium_uranium_chestplate.tooltip.0=When equipped:
 item.titanium_uranium_chestplate.tooltip.1=§9+7 Armor
-item.titanium_uranium_chestplate.tooltip.2=§9+6.5 Toughness
-item.titanium_uranium_chestplate.tooltip.3=§a+5 Max health
+item.titanium_uranium_chestplate.tooltip.2=§9+5 Toughness
+item.titanium_uranium_chestplate.tooltip.3=§a+3 Max health
 
 item.titanium_uranium_leggings.name=titanium-uranium leggings
 item.titanium_uranium_leggings.tooltip.0=When equipped:
 item.titanium_uranium_leggings.tooltip.1=§9+6 Armor
-item.titanium_uranium_leggings.tooltip.2=§9+6.5 Toughness
-item.titanium_uranium_leggings.tooltip.3=§a+5 Max health
+item.titanium_uranium_leggings.tooltip.2=§9+5 Toughness
+item.titanium_uranium_leggings.tooltip.3=§a+3 Max health
 
 item.titanium_uranium_boots.name=titanium-uranium boots
 item.titanium_uranium_boots.tooltip.0=When equipped:
 item.titanium_uranium_boots.tooltip.1=§9+5 Armor
-item.titanium_uranium_boots.tooltip.2=§9+6.5 Toughness
-item.titanium_uranium_boots.tooltip.3=§a+5 Max health
+item.titanium_uranium_boots.tooltip.2=§9+5 Toughness
+item.titanium_uranium_boots.tooltip.3=§a+3 Max health
 
-item.tungsten_uranium_sword.name=Tungsten-uranium sword
-item.tungsten_uranium_shovel.name=Tungsten-uranium shovel
-item.tungsten_uranium_pickaxe.name=Tungsten-uranium pickaxe
-item.tungsten_uranium_axe.name=Tungsten-uranium axe
-item.tungsten_uranium_hoe.name=Tungsten-uranium hoe
+item.tungsten_sword.name=Tungsten sword
+item.tungsten_shovel.name=Tungsten shovel
+item.tungsten_pickaxe.name=Tungsten pickaxe
+item.tungsten_axe.name=Tungsten axe
+item.tungsten_hoe.name=Tungsten hoe
 
-item.tungsten_uranium_helmet.name=Tungsten-uranium helmet
-item.tungsten_uranium_helmet.tooltip.0=When equipped:
-item.tungsten_uranium_helmet.tooltip.1=§9+5 Armor
-item.tungsten_uranium_helmet.tooltip.2=§9+7 Toughness
-item.tungsten_uranium_helmet.tooltip.3=§a+5.5 Max health
+item.tungsten_helmet.name=Tungsten helmet
+item.tungsten_helmet.tooltip.0=When equipped:
+item.tungsten_helmet.tooltip.1=§9+5 Armor
+item.tungsten_helmet.tooltip.2=§9+6 Toughness
+item.tungsten_helmet.tooltip.3=§a+3.5 Max health
 
-item.tungsten_uranium_chestplate.name=Tungsten-uranium chestplate
-item.tungsten_uranium_chestplate.tooltip.0=When equipped:
-item.tungsten_uranium_chestplate.tooltip.1=§9+7 Armor
-item.tungsten_uranium_chestplate.tooltip.2=§9+7 Toughness
-item.tungsten_uranium_chestplate.tooltip.3=§a+5.5 Max health
+item.tungsten_chestplate.name=Tungsten chestplate
+item.tungsten_chestplate.tooltip.0=When equipped:
+item.tungsten_chestplate.tooltip.1=§9+7 Armor
+item.tungsten_chestplate.tooltip.2=§9+6 Toughness
+item.tungsten_chestplate.tooltip.3=§a+3.5 Max health
 
-item.tungsten_uranium_leggings.name=Tungsten-uranium leggings
-item.tungsten_uranium_leggings.tooltip.0=When equipped:
-item.tungsten_uranium_leggings.tooltip.1=§9+6 Armor
-item.tungsten_uranium_leggings.tooltip.2=§9+7 Toughness
-item.tungsten_uranium_leggings.tooltip.3=§a+5.5 Max health
+item.tungsten_leggings.name=Tungsten leggings
+item.tungsten_leggings.tooltip.0=When equipped:
+item.tungsten_leggings.tooltip.1=§9+6 Armor
+item.tungsten_leggings.tooltip.2=§9+6 Toughness
+item.tungsten_leggings.tooltip.3=§a+3.5 Max health
 
-item.tungsten_uranium_boots.name=Tungsten-uranium boots
-item.tungsten_uranium_boots.tooltip.0=When equipped:
-item.tungsten_uranium_boots.tooltip.1=§9+5 Armor
-item.tungsten_uranium_boots.tooltip.2=§9+7 Toughness
-item.tungsten_uranium_boots.tooltip.3=§a+5.5 Max health
+item.tungsten_boots.name=Tungsten boots
+item.tungsten_boots.tooltip.0=When equipped:
+item.tungsten_boots.tooltip.1=§9+5 Armor
+item.tungsten_boots.tooltip.2=§9+6 Toughness
+item.tungsten_boots.tooltip.3=§a+3.5 Max health
 
 item.tungsten_titanium_sword.name=Tungsten-titanium sword
 item.tungsten_titanium_shovel.name=Tungsten-titanium shovel
@@ -364,86 +415,56 @@ item.tungsten_titanium_hoe.name=Tungsten-titanium hoe
 item.tungsten_titanium_helmet.name=Tungsten-titanium helmet
 item.tungsten_titanium_helmet.tooltip.0=When equipped:
 item.tungsten_titanium_helmet.tooltip.1=§9+5 Armor
-item.tungsten_titanium_helmet.tooltip.2=§9+7.5 Toughness
-item.tungsten_titanium_helmet.tooltip.3=§a+5 Max health
+item.tungsten_titanium_helmet.tooltip.2=§9+7 Toughness
+item.tungsten_titanium_helmet.tooltip.3=§a+4 Max health
 
 item.tungsten_titanium_chestplate.name=Tungsten-titanium chestplate
 item.tungsten_titanium_chestplate.tooltip.0=When equipped:
 item.tungsten_titanium_chestplate.tooltip.1=§9+7 Armor
-item.tungsten_titanium_chestplate.tooltip.2=§9+7.5 Toughness
-item.tungsten_titanium_chestplate.tooltip.3=§a+5 Max health
+item.tungsten_titanium_chestplate.tooltip.2=§9+7 Toughness
+item.tungsten_titanium_chestplate.tooltip.3=§a+4 Max health
 
 item.tungsten_titanium_leggings.name=Tungsten-titanium leggings
 item.tungsten_titanium_leggings.tooltip.0=When equipped:
 item.tungsten_titanium_leggings.tooltip.1=§9+6 Armor
-item.tungsten_titanium_leggings.tooltip.2=§9+7.5 Toughness
-item.tungsten_titanium_leggings.tooltip.3=§a+5 Max health
+item.tungsten_titanium_leggings.tooltip.2=§9+7 Toughness
+item.tungsten_titanium_leggings.tooltip.3=§a+4 Max health
 
 item.tungsten_titanium_boots.name=Tungsten-titanium boots
 item.tungsten_titanium_boots.tooltip.0=When equipped:
 item.tungsten_titanium_boots.tooltip.1=§9+5 Armor
-item.tungsten_titanium_boots.tooltip.2=§9+7.5 Toughness
-item.tungsten_titanium_boots.tooltip.3=§a+5 Max health
+item.tungsten_titanium_boots.tooltip.2=§9+7 Toughness
+item.tungsten_titanium_boots.tooltip.3=§a+4 Max health
 
-item.topaz_sword.name=Topaz sword
-item.topaz_shovel.name=Topaz shovel
-item.topaz_pickaxe.name=Topaz pickaxe
-item.topaz_axe.name=Topaz axe
-item.topaz_hoe.name=Topaz hoe
+item.tungsten_uranium_sword.name=Tungsten-uranium sword
+item.tungsten_uranium_shovel.name=Tungsten-uranium shovel
+item.tungsten_uranium_pickaxe.name=Tungsten-uranium pickaxe
+item.tungsten_uranium_axe.name=Tungsten-uranium axe
+item.tungsten_uranium_hoe.name=Tungsten-uranium hoe
 
-item.topaz_helmet.name=Topaz helmet
-item.topaz_helmet.tooltip.0=When equipped:
-item.topaz_helmet.tooltip.1=§9+5 Armor
-item.topaz_helmet.tooltip.2=§9+4 Toughness
-item.topaz_helmet.tooltip.3=§a+3 Max health
+item.tungsten_uranium_helmet.name=Tungsten-uranium helmet
+item.tungsten_uranium_helmet.tooltip.0=When equipped:
+item.tungsten_uranium_helmet.tooltip.1=§9+5 Armor
+item.tungsten_uranium_helmet.tooltip.2=§9+8 Toughness
+item.tungsten_uranium_helmet.tooltip.3=§a+4.5 Max health
 
-item.topaz_chestplate.name=Topaz chestplate
-item.topaz_chestplate.tooltip.0=When equipped:
-item.topaz_chestplate.tooltip.1=§9+7 Armor
-item.topaz_chestplate.tooltip.2=§9+4 Toughness
-item.topaz_chestplate.tooltip.3=§a+3 Max health
+item.tungsten_uranium_chestplate.name=Tungsten-uranium chestplate
+item.tungsten_uranium_chestplate.tooltip.0=When equipped:
+item.tungsten_uranium_chestplate.tooltip.1=§9+7 Armor
+item.tungsten_uranium_chestplate.tooltip.2=§9+8 Toughness
+item.tungsten_uranium_chestplate.tooltip.3=§a+4.5 Max health
 
-item.topaz_leggings.name=Topaz leggings
-item.topaz_leggings.tooltip.0=When equipped:
-item.topaz_leggings.tooltip.1=§9+6 Armor
-item.topaz_leggings.tooltip.2=§9+4 Toughness
-item.topaz_leggings.tooltip.3=§a+3 Max health
+item.tungsten_uranium_leggings.name=Tungsten-uranium leggings
+item.tungsten_uranium_leggings.tooltip.0=When equipped:
+item.tungsten_uranium_leggings.tooltip.1=§9+6 Armor
+item.tungsten_uranium_leggings.tooltip.2=§9+8 Toughness
+item.tungsten_uranium_leggings.tooltip.3=§a+4.5 Max health
 
-item.topaz_boots.name=Topaz boots
-item.topaz_boots.tooltip.0=When equipped:
-item.topaz_boots.tooltip.1=§9+5 Armor
-item.topaz_boots.tooltip.2=§9+4 Toughness
-item.topaz_boots.tooltip.3=§a+3 Max health
-
-item.jade_sword.name=Jade sword
-item.jade_shovel.name=Jade shovel
-item.jade_pickaxe.name=Jade pickaxe
-item.jade_axe.name=Jade axe
-item.jade_hoe.name=Jade hoe
-
-item.jade_helmet.name=Jade helmet
-item.jade_helmet.tooltip.0=When equipped:
-item.jade_helmet.tooltip.1=§9+5 Armor
-item.jade_helmet.tooltip.2=§9+4 Toughness
-item.jade_helmet.tooltip.3=§a+4 Max health
-
-item.jade_chestplate.name=Jade chestplate
-item.jade_chestplate.tooltip.0=When equipped:
-item.jade_chestplate.tooltip.1=§9+7 Armor
-item.jade_chestplate.tooltip.2=§9+4 Toughness
-item.jade_chestplate.tooltip.3=§a+4 Max health
-
-item.jade_leggings.name=Jade leggings
-item.jade_leggings.tooltip.0=When equipped:
-item.jade_leggings.tooltip.1=§9+6 Armor
-item.jade_leggings.tooltip.2=§9+4 Toughness
-item.jade_leggings.tooltip.3=§a+4 Max health
-
-item.jade_boots.name=Jade boots
-item.jade_boots.tooltip.0=When equipped:
-item.jade_boots.tooltip.1=§9+5 Armor
-item.jade_boots.tooltip.2=§9+4 Toughness
-item.jade_boots.tooltip.3=§a+4 Max health
+item.tungsten_uranium_boots.name=Tungsten-uranium boots
+item.tungsten_uranium_boots.tooltip.0=When equipped:
+item.tungsten_uranium_boots.tooltip.1=§9+5 Armor
+item.tungsten_uranium_boots.tooltip.2=§9+8 Toughness
+item.tungsten_uranium_boots.tooltip.3=§a+4.5 Max health
 
 item.emerald_sword.name=Emerald sword
 item.emerald_shovel.name=Emerald shovel
@@ -454,60 +475,30 @@ item.emerald_hoe.name=Emerald hoe
 item.emerald_helmet.name=Emerald helmet
 item.emerald_helmet.tooltip.0=When equipped:
 item.emerald_helmet.tooltip.1=§9+5 Armor
-item.emerald_helmet.tooltip.2=§9+7 Toughness
+item.emerald_helmet.tooltip.2=§9+10 Toughness
 item.emerald_helmet.tooltip.3=§a+5 Max health
+item.emerald_helmet.tooltip.4=§a+2%% Knockback resistance
 
 item.emerald_chestplate.name=Emerald chestplate
 item.emerald_chestplate.tooltip.0=When equipped:
 item.emerald_chestplate.tooltip.1=§9+7 Armor
-item.emerald_chestplate.tooltip.2=§9+7 Toughness
+item.emerald_chestplate.tooltip.2=§9+10 Toughness
 item.emerald_chestplate.tooltip.3=§a+5 Max health
+item.emerald_chestplate.tooltip.4=§a+2%% Knockback resistance
 
 item.emerald_leggings.name=Emerald leggings
 item.emerald_leggings.tooltip.0=When equipped:
 item.emerald_leggings.tooltip.1=§9+6 Armor
-item.emerald_leggings.tooltip.2=§9+7 Toughness
+item.emerald_leggings.tooltip.2=§9+10 Toughness
 item.emerald_leggings.tooltip.3=§a+5 Max health
+item.emerald_leggings.tooltip.4=§a+2%% Knockback resistance
 
 item.emerald_boots.name=Emerald boots
 item.emerald_boots.tooltip.0=When equipped:
 item.emerald_boots.tooltip.1=§9+5 Armor
-item.emerald_boots.tooltip.2=§9+7 Armor toughness
+item.emerald_boots.tooltip.2=§9+10 Armor toughness
 item.emerald_boots.tooltip.3=§a+5 Max health
-
-item.sapphire_sword.name=§aSapphire sword
-item.sapphire_shovel.name=§aSapphire shovel
-item.sapphire_pickaxe.name=§aSapphire pickaxe
-item.sapphire_axe.name=§aSapphire axe
-item.sapphire_hoe.name=§aSapphire hoe
-
-item.sapphire_helmet.name=§aSapphire helmet
-item.sapphire_helmet.tooltip.0=When equipped:
-item.sapphire_helmet.tooltip.1=§9+5 Armor
-item.sapphire_helmet.tooltip.2=§9+9 Armor toughness
-item.sapphire_helmet.tooltip.3=§a+7 Max health
-item.sapphire_helmet.tooltip.4=§a+2.5%% Knockback resistance
-
-item.sapphire_chestplate.name=§aSapphire chestplate
-item.sapphire_chestplate.tooltip.0=When equipped:
-item.sapphire_chestplate.tooltip.1=§9+7 Armor
-item.sapphire_chestplate.tooltip.2=§9+9 Armor toughness
-item.sapphire_chestplate.tooltip.3=§a+7 Max health
-item.sapphire_chestplate.tooltip.4=§a+2.5%% Knockback resistance
-
-item.sapphire_leggings.name=§aSapphire leggings
-item.sapphire_leggings.tooltip.0=When equipped:
-item.sapphire_leggings.tooltip.1=§9+6 Armor
-item.sapphire_leggings.tooltip.2=§9+9 Armor toughness
-item.sapphire_leggings.tooltip.3=§a+7 Max health
-item.sapphire_leggings.tooltip.4=§a+2.5%% Knockback resistance
-
-item.sapphire_boots.name=§aSapphire boots
-item.sapphire_boots.tooltip.0=When equipped:
-item.sapphire_boots.tooltip.1=§9+5 Armor
-item.sapphire_boots.tooltip.2=§9+9 Armor toughness
-item.sapphire_boots.tooltip.3=§a+7 Max health
-item.sapphire_boots.tooltip.4=§a+2.5%% Knockback resistance
+item.emerald_boots.tooltip.4=§a+2%% Knockback resistance
 
 item.ruby_sword.name=§aRuby sword
 item.ruby_shovel.name=§bRuby shovel
@@ -518,30 +509,64 @@ item.ruby_hoe.name=§bRuby hoe
 item.ruby_helmet.name=§aRuby helmet
 item.ruby_helmet.tooltip.0=When equipped:
 item.ruby_helmet.tooltip.1=§9+5 Armor
-item.ruby_helmet.tooltip.2=§9+8 Armor toughness
+item.ruby_helmet.tooltip.2=§9+12 Armor toughness
 item.ruby_helmet.tooltip.3=§a+6 Max health
-item.ruby_helmet.tooltip.4=§a+5%% Knockback resistance
+item.ruby_helmet.tooltip.4=§a+4%% Knockback resistance
 
 item.ruby_chestplate.name=§aRuby chestplate
 item.ruby_chestplate.tooltip.0=When equipped:
 item.ruby_chestplate.tooltip.1=§9+7 Armor
-item.ruby_chestplate.tooltip.2=§9+8 Armor toughness
+item.ruby_chestplate.tooltip.2=§9+12 Armor toughness
 item.ruby_chestplate.tooltip.3=§a+6 Max health
-item.ruby_chestplate.tooltip.4=§a+5%% Knockback resistance
+item.ruby_chestplate.tooltip.4=§a+4%% Knockback resistance
 
 item.ruby_leggings.name=§aRuby leggings
 item.ruby_leggings.tooltip.0=When equipped:
 item.ruby_leggings.tooltip.1=§9+6 Armor
-item.ruby_leggings.tooltip.2=§9+8 Armor toughness
+item.ruby_leggings.tooltip.2=§9+12 Armor toughness
 item.ruby_leggings.tooltip.3=§a+6 Max health
-item.ruby_leggings.tooltip.4=§a+5%% Knockback resistance
+item.ruby_leggings.tooltip.4=§a+4%% Knockback resistance
 
 item.ruby_boots.name=§aRuby boots
 item.ruby_boots.tooltip.0=When equipped:
 item.ruby_boots.tooltip.1=§9+5 Armor
-item.ruby_boots.tooltip.2=§9+8 Armor toughness
+item.ruby_boots.tooltip.2=§9+12 Armor toughness
 item.ruby_boots.tooltip.3=§a+6 Max health
-item.ruby_boots.tooltip.4=§a+5%% Knockback resistance
+item.ruby_boots.tooltip.4=§a+4%% Knockback resistance
+
+item.sapphire_sword.name=§aSapphire sword
+item.sapphire_shovel.name=§aSapphire shovel
+item.sapphire_pickaxe.name=§aSapphire pickaxe
+item.sapphire_axe.name=§aSapphire axe
+item.sapphire_hoe.name=§aSapphire hoe
+
+item.sapphire_helmet.name=§aSapphire helmet
+item.sapphire_helmet.tooltip.0=When equipped:
+item.sapphire_helmet.tooltip.1=§9+5 Armor
+item.sapphire_helmet.tooltip.2=§9+14 Armor toughness
+item.sapphire_helmet.tooltip.3=§a+7 Max health
+item.sapphire_helmet.tooltip.4=§a+6%% Knockback resistance
+
+item.sapphire_chestplate.name=§aSapphire chestplate
+item.sapphire_chestplate.tooltip.0=When equipped:
+item.sapphire_chestplate.tooltip.1=§9+7 Armor
+item.sapphire_chestplate.tooltip.2=§9+14 Armor toughness
+item.sapphire_chestplate.tooltip.3=§a+7 Max health
+item.sapphire_chestplate.tooltip.4=§a+6%% Knockback resistance
+
+item.sapphire_leggings.name=§aSapphire leggings
+item.sapphire_leggings.tooltip.0=When equipped:
+item.sapphire_leggings.tooltip.1=§9+6 Armor
+item.sapphire_leggings.tooltip.2=§9+14 Armor toughness
+item.sapphire_leggings.tooltip.3=§a+7 Max health
+item.sapphire_leggings.tooltip.4=§a+6%% Knockback resistance
+
+item.sapphire_boots.name=§aSapphire boots
+item.sapphire_boots.tooltip.0=When equipped:
+item.sapphire_boots.tooltip.1=§9+5 Armor
+item.sapphire_boots.tooltip.2=§9+14 Armor toughness
+item.sapphire_boots.tooltip.3=§a+7 Max health
+item.sapphire_boots.tooltip.4=§a+6%% Knockback resistance
 
 item.diamond_sword.name=§dDiamond sword
 item.diamond_shovel.name=§dDiamond shovel
@@ -552,42 +577,30 @@ item.diamond_hoe.name=§dDiamond hoe
 item.diamond_helmet.name=§dDiamond helmet
 item.diamond_helmet.tooltip.0=When equipped:
 item.diamond_helmet.tooltip.1=§9+6 Armor
-item.diamond_helmet.tooltip.2=§9+10 Armor toughness
-item.diamond_helmet.tooltip.3=§9+8 Max health
-item.diamond_helmet.tooltip.4=§9+7.5%% Knockback resistance
-item.diamond_helmet.tooltip.5=§a+1.2 Health regen per minute
-item.diamond_helmet.tooltip.6=When full armor is equipped:
-item.diamond_helmet.tooltip.7=§6Resistance I
+item.diamond_helmet.tooltip.2=§9+16 Armor toughness
+item.diamond_helmet.tooltip.3=§a+8 Max health
+item.diamond_helmet.tooltip.4=§a+8%% Knockback resistance
 
 item.diamond_chestplate.name=§dDiamond chestplate
 item.diamond_chestplate.tooltip.0=When equipped:
 item.diamond_chestplate.tooltip.1=§9+9 Armor
-item.diamond_chestplate.tooltip.2=§9+10 Armor toughness
-item.diamond_chestplate.tooltip.3=§9+8 Max health
-item.diamond_chestplate.tooltip.4=§9+7.5%% Knockback resistance
-item.diamond_chestplate.tooltip.5=§a+3.2 Health regen per minute
-item.diamond_chestplate.tooltip.6=When full armor is equipped:
-item.diamond_chestplate.tooltip.7=§6Resistance I
+item.diamond_chestplate.tooltip.2=§9+16 Armor toughness
+item.diamond_chestplate.tooltip.3=§a+8 Max health
+item.diamond_chestplate.tooltip.4=§a+8%% Knockback resistance
 
 item.diamond_leggings.name=§dDiamond leggings
 item.diamond_leggings.tooltip.0=When equipped:
 item.diamond_leggings.tooltip.1=§9+8 Armor
-item.diamond_leggings.tooltip.2=§9+10 Armor toughness
-item.diamond_leggings.tooltip.3=§9+8 Max health
-item.diamond_leggings.tooltip.4=§9+7.5%% Knockback resistance
-item.diamond_leggings.tooltip.5=§a+2.4 Health regen per minute
-item.diamond_leggings.tooltip.6=When full armor is equipped:
-item.diamond_leggings.tooltip.7=§6Resistance I
+item.diamond_leggings.tooltip.2=§9+16 Armor toughness
+item.diamond_leggings.tooltip.3=§a+8 Max health
+item.diamond_leggings.tooltip.4=§a+8%% Knockback resistance
 
 item.diamond_boots.name=§dDiamond boots
 item.diamond_boots.tooltip.0=When equipped:
 item.diamond_boots.tooltip.1=§9+6 Armor
-item.diamond_boots.tooltip.2=§9+10 Armor toughness
-item.diamond_boots.tooltip.3=§9+8 Max health
-item.diamond_boots.tooltip.4=§9+7.5%% Knockback resistance
-item.diamond_boots.tooltip.5=§a+1.2 Health regen per minute
-item.diamond_boots.tooltip.6=When full armor is equipped:
-item.diamond_boots.tooltip.7=§6Resistance I
+item.diamond_boots.tooltip.2=§9+16 Armor toughness
+item.diamond_boots.tooltip.3=§a+8 Max health
+item.diamond_boots.tooltip.4=§a+8%% Knockback resistance
 
 item.olivine_sword.name=§dOlivine sword
 item.olivine_shovel.name=§dOlivine shovel
@@ -598,42 +611,30 @@ item.olivine_hoe.name=§dOlivine hoe
 item.olivine_helmet.name=§dOlivine helmet
 item.olivine_helmet.tooltip.0=When equipped:
 item.olivine_helmet.tooltip.1=§9+6 Armor
-item.olivine_helmet.tooltip.2=§9+11 Armor toughness
-item.olivine_helmet.tooltip.3=§9+9 Max health
-item.olivine_helmet.tooltip.4=§9+7.5%% Knockback resistance
-item.olivine_helmet.tooltip.5=§a+1.2 Health regen per minute
-item.olivine_helmet.tooltip.6=When full armor is equipped:
-item.olivine_helmet.tooltip.7=§6Resistance I
+item.olivine_helmet.tooltip.2=§9+18 Armor toughness
+item.olivine_helmet.tooltip.3=§a+10 Max health
+item.olivine_helmet.tooltip.4=§a+10%% Knockback resistance
 
 item.olivine_chestplate.name=§dOlivine chestplate
 item.olivine_chestplate.tooltip.0=When equipped:
 item.olivine_chestplate.tooltip.1=§9+9 Armor
-item.olivine_chestplate.tooltip.2=§9+11 Armor toughness
-item.olivine_chestplate.tooltip.3=§9+9 Max health
-item.olivine_chestplate.tooltip.4=§9+7.5%% Knockback resistance
-item.olivine_chestplate.tooltip.5=§a+3.2 Health regen per minute
-item.olivine_chestplate.tooltip.6=When full armor is equipped:
-item.olivine_chestplate.tooltip.7=§6Resistance I
+item.olivine_chestplate.tooltip.2=§9+18 Armor toughness
+item.olivine_chestplate.tooltip.3=§a+10 Max health
+item.olivine_chestplate.tooltip.4=§a+10%% Knockback resistance
 
 item.olivine_leggings.name=§dOlivine leggings
 item.olivine_leggings.tooltip.0=When equipped:
 item.olivine_leggings.tooltip.1=§9+8 Armor
-item.olivine_leggings.tooltip.2=§9+11 Armor toughness
-item.olivine_leggings.tooltip.3=§9+9 Max health
-item.olivine_leggings.tooltip.4=§9+7.5%% Knockback resistance
-item.olivine_leggings.tooltip.5=§a+2.4 Health regen per minute
-item.olivine_leggings.tooltip.6=When full armor is equipped:
-item.olivine_leggings.tooltip.7=§6Resistance I
+item.olivine_leggings.tooltip.2=§9+18 Armor toughness
+item.olivine_leggings.tooltip.3=§a+10 Max health
+item.olivine_leggings.tooltip.4=§a+10%% Knockback resistance
 
 item.olivine_boots.name=§dOlivine boots
 item.olivine_boots.tooltip.0=When equipped:
 item.olivine_boots.tooltip.1=§9+6 Armor
-item.olivine_boots.tooltip.2=§9+11 Armor toughness
-item.olivine_boots.tooltip.3=§9+9 Max health
-item.olivine_boots.tooltip.4=§9+7.5%% Knockback resistance
-item.olivine_boots.tooltip.5=§a+1.2 Health regen per minute
-item.olivine_boots.tooltip.6=When full armor is equipped:
-item.olivine_boots.tooltip.7=§6Resistance I
+item.olivine_boots.tooltip.2=§9+18 Armor toughness
+item.olivine_boots.tooltip.3=§a+10 Max health
+item.olivine_boots.tooltip.4=§a+10%% Knockback resistance
 
 item.wadsleyite_sword.name=§dWadsleyite sword
 item.wadsleyite_shovel.name=§dWadsleyite shovel
@@ -644,42 +645,30 @@ item.wadsleyite_hoe.name=§dWadsleyite hoe
 item.wadsleyite_helmet.name=§dWadsleyite helmet
 item.wadsleyite_helmet.tooltip.0=When equipped:
 item.wadsleyite_helmet.tooltip.1=§9+6 Armor
-item.wadsleyite_helmet.tooltip.2=§9+12 Armor toughness
-item.wadsleyite_helmet.tooltip.3=§9+10 Max health
-item.wadsleyite_helmet.tooltip.4=§9+7.5%% Knockback resistance
-item.wadsleyite_helmet.tooltip.5=§a+1.2 Health regen per minute
-item.wadsleyite_helmet.tooltip.6=When full armor is equipped:
-item.wadsleyite_helmet.tooltip.7=§6Resistance I
+item.wadsleyite_helmet.tooltip.2=§9+20 Armor toughness
+item.wadsleyite_helmet.tooltip.3=§a+12 Max health
+item.wadsleyite_helmet.tooltip.4=§a+12%% Knockback resistance
 
 item.wadsleyite_chestplate.name=§dWadsleyite chestplate
 item.wadsleyite_chestplate.tooltip.0=When equipped:
 item.wadsleyite_chestplate.tooltip.1=§9+9 Armor
-item.wadsleyite_chestplate.tooltip.2=§9+12 Armor toughness
-item.wadsleyite_chestplate.tooltip.3=§9+10 Max health
-item.wadsleyite_chestplate.tooltip.4=§9+7.5%% Knockback resistance
-item.wadsleyite_chestplate.tooltip.5=§a+3.2 Health regen per minute
-item.wadsleyite_chestplate.tooltip.6=When full armor is equipped:
-item.wadsleyite_chestplate.tooltip.7=§6Resistance I
+item.wadsleyite_chestplate.tooltip.2=§9+20 Armor toughness
+item.wadsleyite_chestplate.tooltip.3=§a+12 Max health
+item.wadsleyite_chestplate.tooltip.4=§a+12% Knockback resistance
 
 item.wadsleyite_leggings.name=§dWadsleyite leggings
 item.wadsleyite_leggings.tooltip.0=When equipped:
 item.wadsleyite_leggings.tooltip.1=§9+8 Armor
-item.wadsleyite_leggings.tooltip.2=§9+12 Armor toughness
-item.wadsleyite_leggings.tooltip.3=§9+10 Max health
-item.wadsleyite_leggings.tooltip.4=§9+7.5%% Knockback resistance
-item.wadsleyite_leggings.tooltip.5=§a+2.4 Health regen per minute
-item.wadsleyite_leggings.tooltip.6=When full armor is equipped:
-item.wadsleyite_leggings.tooltip.7=§6Resistance I
+item.wadsleyite_leggings.tooltip.2=§9+20 Armor toughness
+item.wadsleyite_leggings.tooltip.3=§a+12 Max health
+item.wadsleyite_leggings.tooltip.4=§a+12%% Knockback resistance
 
 item.wadsleyite_boots.name=§dWadsleyite boots
 item.wadsleyite_boots.tooltip.0=When equipped:
 item.wadsleyite_boots.tooltip.1=§9+6 Armor
-item.wadsleyite_boots.tooltip.2=§9+12 Armor toughness
-item.wadsleyite_boots.tooltip.3=§9+10 Max health
-item.wadsleyite_boots.tooltip.4=§9+7.5%% Knockback resistance
-item.wadsleyite_boots.tooltip.5=§a+1.2 Health regen per minute
-item.wadsleyite_boots.tooltip.6=When full armor is equipped:
-item.wadsleyite_boots.tooltip.7=§6Resistance I
+item.wadsleyite_boots.tooltip.2=§9+20 Armor toughness
+item.wadsleyite_boots.tooltip.3=§a+12 Max health
+item.wadsleyite_boots.tooltip.4=§a+12%% Knockback resistance
 
 item.ringwoodite_sword.name=§dRingwoodite sword
 item.ringwoodite_shovel.name=§dRingwoodite shovel
@@ -690,42 +679,30 @@ item.ringwoodite_hoe.name=§dRingwoodite hoe
 item.ringwoodite_helmet.name=§dRingwoodite helmet
 item.ringwoodite_helmet.tooltip.0=When equipped:
 item.ringwoodite_helmet.tooltip.1=§9+6 Armor
-item.ringwoodite_helmet.tooltip.2=§9+13 Armor toughness
-item.ringwoodite_helmet.tooltip.3=§9+11 Max health
-item.ringwoodite_helmet.tooltip.4=§9+7.5%% Knockback resistance
-item.ringwoodite_helmet.tooltip.5=§a+1.2 Health regen per minute
-item.ringwoodite_helmet.tooltip.6=When full armor is equipped:
-item.ringwoodite_helmet.tooltip.7=§6Resistance I
+item.ringwoodite_helmet.tooltip.2=§9+22 Armor toughness
+item.ringwoodite_helmet.tooltip.3=§a+14 Max health
+item.ringwoodite_helmet.tooltip.4=§a+14%% Knockback resistance
 
 item.ringwoodite_chestplate.name=§dRingwoodite chestplate
 item.ringwoodite_chestplate.tooltip.0=When equipped:
 item.ringwoodite_chestplate.tooltip.1=§9+9 Armor
-item.ringwoodite_chestplate.tooltip.2=§9+13 Armor toughness
-item.ringwoodite_chestplate.tooltip.3=§9+11 Max health
-item.ringwoodite_chestplate.tooltip.4=§9+7.5%% Knockback resistance
-item.ringwoodite_chestplate.tooltip.5=§a+3.2 Health regen per minute
-item.ringwoodite_chestplate.tooltip.6=When full armor is equipped:
-item.ringwoodite_chestplate.tooltip.7=§6Resistance I
+item.ringwoodite_chestplate.tooltip.2=§9+22 Armor toughness
+item.ringwoodite_chestplate.tooltip.3=§a+14 Max health
+item.ringwoodite_chestplate.tooltip.4=§a+14%% Knockback resistance
 
 item.ringwoodite_leggings.name=§dRingwoodite leggings
 item.ringwoodite_leggings.tooltip.0=When equipped:
 item.ringwoodite_leggings.tooltip.1=§9+8 Armor
-item.ringwoodite_leggings.tooltip.2=§9+13 Armor toughness
-item.ringwoodite_leggings.tooltip.3=§9+11 Max health
-item.ringwoodite_leggings.tooltip.4=§9+7.5%% Knockback resistance
-item.ringwoodite_leggings.tooltip.5=§a+2.4 Health regen per minute
-item.ringwoodite_leggings.tooltip.6=When full armor is equipped:
-item.ringwoodite_leggings.tooltip.7=§6Resistance I
+item.ringwoodite_leggings.tooltip.2=§9+22 Armor toughness
+item.ringwoodite_leggings.tooltip.3=§a+14 Max health
+item.ringwoodite_leggings.tooltip.4=§a+14%% Knockback resistance
 
 item.ringwoodite_boots.name=§dRingwoodite boots
 item.ringwoodite_boots.tooltip.0=When equipped:
 item.ringwoodite_boots.tooltip.1=§9+6 Armor
-item.ringwoodite_boots.tooltip.2=§9+13 Armor toughness
-item.ringwoodite_boots.tooltip.3=§9+11 Max health
-item.ringwoodite_boots.tooltip.4=§9+7.5%% Knockback resistance
-item.ringwoodite_boots.tooltip.5=§a+1.2 Health regen per minute
-item.ringwoodite_boots.tooltip.6=When full armor is equipped:
-item.ringwoodite_boots.tooltip.7=§6Resistance I
+item.ringwoodite_boots.tooltip.2=§9+22 Armor toughness
+item.ringwoodite_boots.tooltip.3=§a+14 Max health
+item.ringwoodite_boots.tooltip.4=§a+14%% Knockback resistance
 
 item.brigmanite_sword.name=§dBrigmanite sword
 item.brigmanite_shovel.name=§dBrigmanite shovel
@@ -736,42 +713,30 @@ item.brigmanite_hoe.name=§dBrigmanite hoe
 item.brigmanite_helmet.name=§dBrigmanite helmet
 item.brigmanite_helmet.tooltip.0=When equipped:
 item.brigmanite_helmet.tooltip.1=§9+6 Armor
-item.brigmanite_helmet.tooltip.2=§9+14 Armor toughness
-item.brigmanite_helmet.tooltip.3=§9+12 Max health
-item.brigmanite_helmet.tooltip.4=§9+7.5%% Knockback resistance
-item.brigmanite_helmet.tooltip.5=§a+1.2 Health regen per minute
-item.brigmanite_helmet.tooltip.6=When full armor is equipped:
-item.brigmanite_helmet.tooltip.7=§6Resistance I
+item.brigmanite_helmet.tooltip.2=§9+24 Armor toughness
+item.brigmanite_helmet.tooltip.3=§a+16 Max health
+item.brigmanite_helmet.tooltip.4=§a+16%% Knockback resistance
 
 item.brigmanite_chestplate.name=§dBrigmanite chestplate
 item.brigmanite_chestplate.tooltip.0=When equipped:
 item.brigmanite_chestplate.tooltip.1=§9+9 Armor
-item.brigmanite_chestplate.tooltip.2=§9+14 Armor toughness
-item.brigmanite_chestplate.tooltip.3=§9+12 Max health
-item.brigmanite_chestplate.tooltip.4=§9+7.5%% Knockback resistance
-item.brigmanite_chestplate.tooltip.5=§a+3.2 Health regen per minute
-item.brigmanite_chestplate.tooltip.6=When full armor is equipped:
-item.brigmanite_chestplate.tooltip.7=§6Resistance I
+item.brigmanite_chestplate.tooltip.2=§9+24 Armor toughness
+item.brigmanite_chestplate.tooltip.3=§a+16 Max health
+item.brigmanite_chestplate.tooltip.4=§a+16%% Knockback resistance
 
 item.brigmanite_leggings.name=§dBrigmanite leggings
 item.brigmanite_leggings.tooltip.0=When equipped:
 item.brigmanite_leggings.tooltip.1=§9+8 Armor
-item.brigmanite_leggings.tooltip.2=§9+14 Armor toughness
-item.brigmanite_leggings.tooltip.3=§9+12 Max health
-item.brigmanite_leggings.tooltip.4=§9+7.5%% Knockback resistance
-item.brigmanite_leggings.tooltip.5=§a+2.4 Health regen per minute
-item.brigmanite_leggings.tooltip.6=When full armor is equipped:
-item.brigmanite_leggings.tooltip.7=§6Resistance I
+item.brigmanite_leggings.tooltip.2=§9+24 Armor toughness
+item.brigmanite_leggings.tooltip.3=§a+16 Max health
+item.brigmanite_leggings.tooltip.4=§a+16%% Knockback resistance
 
 item.brigmanite_boots.name=§dBrigmanite boots
 item.brigmanite_boots.tooltip.0=When equipped:
 item.brigmanite_boots.tooltip.1=§9+6 Armor
-item.brigmanite_boots.tooltip.2=§9+14 Armor toughness
-item.brigmanite_boots.tooltip.3=§9+12 Max health
-item.brigmanite_boots.tooltip.4=§9+7.5%% Knockback resistance
-item.brigmanite_boots.tooltip.5=§a+1.2 Health regen per minute
-item.brigmanite_boots.tooltip.6=When full armor is equipped:
-item.brigmanite_boots.tooltip.7=§6Resistance I
+item.brigmanite_boots.tooltip.2=§9+24 Armor toughness
+item.brigmanite_boots.tooltip.3=§9+16 Max health
+item.brigmanite_boots.tooltip.4=§9+16%% Knockback resistance
 
 item.majorite_sword.name=§dMajorite sword
 item.majorite_shovel.name=§dMajorite shovel
@@ -782,42 +747,30 @@ item.majorite_hoe.name=§dMajorite hoe
 item.majorite_helmet.name=§dMajorite helmet
 item.majorite_helmet.tooltip.0=When equipped:
 item.majorite_helmet.tooltip.1=§9+6 Armor
-item.majorite_helmet.tooltip.2=§9+15 Armor toughness
-item.majorite_helmet.tooltip.3=§9+13 Max health
-item.majorite_helmet.tooltip.4=§9+7.5%% Knockback resistance
-item.majorite_helmet.tooltip.5=§a+1.2 Health regen per minute
-item.majorite_helmet.tooltip.6=When full armor is equipped:
-item.majorite_helmet.tooltip.7=§6Resistance I
+item.majorite_helmet.tooltip.2=§9+26 Armor toughness
+item.majorite_helmet.tooltip.3=§a+18 Max health
+item.majorite_helmet.tooltip.4=§a+18%% Knockback resistance
 
 item.majorite_chestplate.name=§dMajorite chestplate
 item.majorite_chestplate.tooltip.0=When equipped:
 item.majorite_chestplate.tooltip.1=§9+9 Armor
-item.majorite_chestplate.tooltip.2=§9+15 Armor toughness
-item.majorite_chestplate.tooltip.3=§9+13 Max health
-item.majorite_chestplate.tooltip.4=§9+7.5%% Knockback resistance
-item.majorite_chestplate.tooltip.5=§a+3.2 Health regen per minute
-item.majorite_chestplate.tooltip.6=When full armor is equipped:
-item.majorite_chestplate.tooltip.7=§6Resistance I
+item.majorite_chestplate.tooltip.2=§9+26 Armor toughness
+item.majorite_chestplate.tooltip.3=§a+18 Max health
+item.majorite_chestplate.tooltip.4=§a+20%% Knockback resistance
 
 item.majorite_leggings.name=§dMajorite leggings
 item.majorite_leggings.tooltip.0=When equipped:
 item.majorite_leggings.tooltip.1=§9+8 Armor
-item.majorite_leggings.tooltip.2=§9+15 Armor toughness
-item.majorite_leggings.tooltip.3=§9+13 Max health
-item.majorite_leggings.tooltip.4=§9+7.5%% Knockback resistance
-item.majorite_leggings.tooltip.5=§a+2.4 Health regen per minute
-item.majorite_leggings.tooltip.6=When full armor is equipped:
-item.majorite_leggings.tooltip.7=§6Resistance I
+item.majorite_leggings.tooltip.2=§9+26 Armor toughness
+item.majorite_leggings.tooltip.3=§a+18 Max health
+item.majorite_leggings.tooltip.4=§a+18%% Knockback resistance
 
 item.majorite_boots.name=§dMajorite boots
 item.majorite_boots.tooltip.0=When equipped:
 item.majorite_boots.tooltip.1=§9+6 Armor
-item.majorite_boots.tooltip.2=§9+15 Armor toughness
-item.majorite_boots.tooltip.3=§9+13 Max health
-item.majorite_boots.tooltip.4=§9+7.5%% Knockback resistance
-item.majorite_boots.tooltip.5=§a+1.2 Health regen per minute
-item.majorite_boots.tooltip.6=When full armor is equipped:
-item.majorite_boots.tooltip.7=§6Resistance I
+item.majorite_boots.tooltip.2=§9+26 Armor toughness
+item.majorite_boots.tooltip.3=§a+18 Max health
+item.majorite_boots.tooltip.4=§a+18%% Knockback resistance
 
 item.amazonite_sword.name=§6Amazonite sword
 item.amazonite_shovel.name=§6Amazonite shovel
@@ -827,52 +780,32 @@ item.amazonite_hoe.name=§6Amazonite hoe
 
 item.amazonite_helmet.name=§6Amazonite helmet
 item.amazonite_helmet.tooltip.0=When equipped:
-item.amazonite_helmet.tooltip.1=§9+6 Armor
-item.amazonite_helmet.tooltip.2=§9+18 Armor toughness
-item.amazonite_helmet.tooltip.3=§9+16 Max health
-item.amazonite_helmet.tooltip.4=§9+10%% Knockback resistance
-item.amazonite_helmet.tooltip.5=§a+1.8 Health regen per minute
-item.amazonite_helmet.tooltip.6=§6Resistance I
-item.amazonite_helmet.tooltip.7=When full amazonite armor is equipped:
-item.amazonite_helmet.tooltip.8=§6Fire Resistance I
-item.amazonite_helmet.tooltip.9=§6Strength I
+item.amazonite_helmet.tooltip.1=§9+7 Armor
+item.amazonite_helmet.tooltip.2=§9+28 Armor toughness
+item.amazonite_helmet.tooltip.3=§a+20 Max health
+item.amazonite_helmet.tooltip.4=§a+20%% Knockback resistance
 
 
 item.amazonite_chestplate.name=§6Amazonite chestplate
 item.amazonite_chestplate.tooltip.0=When equipped:
-item.amazonite_chestplate.tooltip.1=§9+12 Armor
-item.amazonite_chestplate.tooltip.2=§9+18 Armor toughness
-item.amazonite_chestplate.tooltip.3=§9+16 Max health
-item.amazonite_chestplate.tooltip.4=§9+10%% Knockback resistance
-item.amazonite_chestplate.tooltip.5=§a+4.8 Health regen per minute
-item.amazonite_chestplate.tooltip.6=§6Resistance I
-item.amazonite_chestplate.tooltip.7=When full amazonite armor is equipped:
-item.amazonite_chestplate.tooltip.8=§6Fire Resistance I
-item.amazonite_chestplate.tooltip.9=§6Strength I
+item.amazonite_chestplate.tooltip.1=§9+10 Armor
+item.amazonite_chestplate.tooltip.2=§9+28 Armor toughness
+item.amazonite_chestplate.tooltip.3=§a+20 Max health
+item.amazonite_chestplate.tooltip.4=§a+20%% Knockback resistance
 
 item.amazonite_leggings.name=§6Amazonite leggings
 item.amazonite_leggings.tooltip.0=When equipped:
 item.amazonite_leggings.tooltip.1=§9+9 Armor
-item.amazonite_leggings.tooltip.2=§9+18 Armor toughness
-item.amazonite_leggings.tooltip.3=§9+16 Max health
-item.amazonite_leggings.tooltip.4=§9+10%% Knockback resistance
-item.amazonite_leggings.tooltip.5=§a+3.6 Health regen per minute
-item.amazonite_leggings.tooltip.6=§6Resistance I
-item.amazonite_leggings.tooltip.7=When full amazonite armor is equipped:
-item.amazonite_leggings.tooltip.8=§6Fire Resistance I
-item.amazonite_leggings.tooltip.9=§6Strength I
+item.amazonite_leggings.tooltip.2=§9+28 Armor toughness
+item.amazonite_leggings.tooltip.3=§a+20 Max health
+item.amazonite_leggings.tooltip.4=§a+20%% Knockback resistance
 
 item.amazonite_boots.name=§6Amazonite boots
 item.amazonite_boots.tooltip.0=When equipped:
-item.amazonite_boots.tooltip.1=§9+6 Armor
-item.amazonite_boots.tooltip.2=§9+18 Armor toughness
-item.amazonite_boots.tooltip.3=§9+16 Max health
-item.amazonite_boots.tooltip.4=§9+10%% Knockback resistance
-item.amazonite_boots.tooltip.5=§a+1.8 Health regen per minute
-item.amazonite_boots.tooltip.6=§6Resistance I
-item.amazonite_boots.tooltip.7=When full amazonite armor is equipped:
-item.amazonite_boots.tooltip.8=§6Fire Resistance I
-item.amazonite_boots.tooltip.9=§6Strength I
+item.amazonite_boots.tooltip.1=§9+7 Armor
+item.amazonite_boots.tooltip.2=§9+28 Armor toughness
+item.amazonite_boots.tooltip.3=§a+20 Max health
+item.amazonite_boots.tooltip.4=§a+20%% Knockback resistance
 
 item.onyx_sword.name=§6Onyx sword
 item.onyx_shovel.name=§6Onyx shovel
@@ -883,61 +816,30 @@ item.onyx_hoe.name=§6Onyx hoe
 item.onyx_helmet.name=§6Onyx helmet
 item.onyx_helmet.tooltip.0=When equipped:
 item.onyx_helmet.tooltip.1=§9+7 Armor
-item.onyx_helmet.tooltip.2=§9+20 Armor toughness
-item.onyx_helmet.tooltip.3=§9+20 Max health
-item.onyx_helmet.tooltip.4=§9+15%% Knockback resistance
-item.onyx_helmet.tooltip.5=§a+3 Health regen per minute
-item.onyx_helmet.tooltip.6=§6Resistance I
-item.onyx_helmet.tooltip.7=§6Fire Resistance I
-item.onyx_helmet.tooltip.8=When full amazonite armor is equipped:
-item.onyx_helmet.tooltip.9=§6Resistance II
-item.onyx_helmet.tooltip.10=§6Strength II
-item.onyx_helmet.tooltip.11=§6Speed II
+item.onyx_helmet.tooltip.2=§9+30 Armor toughness
+item.onyx_helmet.tooltip.3=§a+25 Max health
+item.onyx_helmet.tooltip.4=§a+25%% Knockback resistance
 
 item.onyx_chestplate.name=§6Onyx chestplate
 item.onyx_chestplate.tooltip.0=When equipped:
-item.onyx_chestplate.tooltip.1=§9+14 Armor
-item.onyx_chestplate.tooltip.2=§9+20 Armor toughness
-item.onyx_chestplate.tooltip.3=§9+20 Max health
-item.onyx_chestplate.tooltip.4=§9+15%% Knockback resistance
-item.onyx_chestplate.tooltip.5=§a+8 Health regen per minute
-item.onyx_chestplate.tooltip.6=§6Resistance I
-item.onyx_chestplate.tooltip.7=§6Strength I
-item.onyx_chestplate.tooltip.8=§6Fire Resistance I
-item.onyx_chestplate.tooltip.9=When full onyx armor is equipped:
-item.onyx_chestplate.tooltip.10=§6Resistance II
-item.onyx_chestplate.tooltip.11=§6Strength II
-item.onyx_chestplate.tooltip.12=§6Speed II
+item.onyx_chestplate.tooltip.1=§9+10 Armor
+item.onyx_chestplate.tooltip.2=§9+30 Armor toughness
+item.onyx_chestplate.tooltip.3=§a+25 Max health
+item.onyx_chestplate.tooltip.4=§a+25%% Knockback resistance
 
 item.onyx_leggings.name=§6Onyx leggings
 item.onyx_leggings.tooltip.0=When equipped:
-item.onyx_leggings.tooltip.1=§9+10 Armor
-item.onyx_leggings.tooltip.2=§9+20 Armor toughness
-item.onyx_leggings.tooltip.3=§9+20 Max health
-item.onyx_leggings.tooltip.4=§9+15%% Knockback resistance
-item.onyx_leggings.tooltip.5=§a+6 Health regen per minute
-item.onyx_leggings.tooltip.6=§6Resistance I
-item.onyx_leggings.tooltip.7=§6Strength I
-item.onyx_leggings.tooltip.8=§6Fire Resistance I
-item.onyx_leggings.tooltip.9=When full amazonite armor is equipped:
-item.onyx_leggings.tooltip.10=§6Resistance II
-item.onyx_leggings.tooltip.11=§6Strength II
-item.onyx_leggings.tooltip.12=§6Speed II
+item.onyx_leggings.tooltip.1=§9+9 Armor
+item.onyx_leggings.tooltip.2=§9+30 Armor toughness
+item.onyx_leggings.tooltip.3=§a+25 Max health
+item.onyx_leggings.tooltip.4=§a+25%% Knockback resistance
 
 item.onyx_boots.name=§6Onyx boots
 item.onyx_boots.tooltip.0=When equipped:
 item.onyx_boots.tooltip.1=§9+7 Armor
-item.onyx_boots.tooltip.2=§9+20 Armor toughness
-item.onyx_boots.tooltip.3=§9+20 Max health
-item.onyx_boots.tooltip.4=§9+15%% Knockback resistance
-item.onyx_boots.tooltip.5=§a+3 Health regen per minute
-item.onyx_boots.tooltip.6=§6Resistance I
-item.onyx_boots.tooltip.7=§6Speed I
-item.onyx_boots.tooltip.8=§6Fire Resistance I
-item.onyx_boots.tooltip.9=When full amazonite armor is equipped:
-item.onyx_boots.tooltip.10=§6Resistance II
-item.onyx_boots.tooltip.11=§6Strength II
-item.onyx_boots.tooltip.12=§6Speed II
+item.onyx_boots.tooltip.2=§9+30 Armor toughness
+item.onyx_boots.tooltip.3=§a+25 Max health
+item.onyx_boots.tooltip.4=§a+25%% Knockback resistance
 
 //Items
 item.iron_ingot.name=Iron ingot
