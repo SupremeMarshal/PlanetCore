@@ -6,7 +6,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
 
 public class LootTableHandler {
-	
+
+	public static final ResourceLocation HOT_BLAZE = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "hot_blaze"));
 	public static final ResourceLocation DEMON = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "demon"));
 	public static final ResourceLocation BLACK_DEMON = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "black_demon"));
 	public static final ResourceLocation HELLHOUND = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "hellhound"));
