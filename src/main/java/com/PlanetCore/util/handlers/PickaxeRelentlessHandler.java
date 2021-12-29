@@ -64,7 +64,7 @@ public class PickaxeRelentlessHandler {
             //Determine if the block is undestructible.
             if (breaktime > Relentless) {
                 event.setCanceled(true);
-                if (event.getEntityPlayer().world.getTotalWorldTime() % 6 == 1) {
+                if (event.getEntityPlayer().getHeldItemMainhand().getItem() instanceof ItemPickaxe && event.getEntityPlayer().world.getTotalWorldTime() % 6 == 1) {
                     event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return;
                 }
