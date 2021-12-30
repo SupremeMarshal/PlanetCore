@@ -123,10 +123,19 @@ public class IronLavaFluid extends BlockFluidClassic {
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-
-		if (pos.getY() <= -128 && Math.random() <= 0.000002)
-		{
-			worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
+		if (pos.getY() <= 0) {
+			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState())
+				worldIn.setBlockState(pos.up(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.down()) == ModBlocks.AIR_NO_PRESSURE.getDefaultState() || worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+				worldIn.setBlockState(pos.down(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.down()) == ModBlocks.AIR_NO_PRESSURE.getDefaultState() || worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+				worldIn.setBlockState(pos.north(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.down()) == ModBlocks.AIR_NO_PRESSURE.getDefaultState() || worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+				worldIn.setBlockState(pos.south(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.down()) == ModBlocks.AIR_NO_PRESSURE.getDefaultState() || worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+				worldIn.setBlockState(pos.west(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+			if (worldIn.getBlockState(pos.down()) == ModBlocks.AIR_NO_PRESSURE.getDefaultState() || worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+				worldIn.setBlockState(pos.east(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
 		}
 
 
