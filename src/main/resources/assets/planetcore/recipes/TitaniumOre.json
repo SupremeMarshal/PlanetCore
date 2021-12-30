@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:titanium_shard"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:titanium_ore",
+        "count": 1
+    }
+}

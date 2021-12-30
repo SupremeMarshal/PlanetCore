@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:uranium_shard"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:uranium_ore",
+        "count": 1
+    }
+}
