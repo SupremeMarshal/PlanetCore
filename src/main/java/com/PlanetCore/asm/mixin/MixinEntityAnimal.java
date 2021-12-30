@@ -15,7 +15,8 @@ public class MixinEntityAnimal {
                     target = "Lnet/minecraft/entity/passive/EntityAnimal;world:Lnet/minecraft/world/World;",
                     ordinal = 0
             ),
-            locals = LocalCapture.CAPTURE_FAILHARD
+            locals = LocalCapture.CAPTURE_FAILHARD,
+            cancellable = true
     )
     private void minimumSpawnHeight(CallbackInfoReturnable<Boolean> cir, int x, int y, int z) {
         if(y < 0) {
