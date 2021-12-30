@@ -236,27 +236,13 @@ public class Corestone extends BlockBase implements IMetaName {
 		return 15728880;
 	}
 
-	private void particleEffects(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
-	{
-		int X = pos.getX();
-		int Y = pos.getY();
-		int Z = pos.getZ();
-		if((worldIn.isRaining() && this == ModBlocks.CORESTONE)) {
 
-			worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, X, Y+1, Z, 0, 0, 0);
-		}
-	}
 
 	@Override
 	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
 	{
 		super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
 		//thermalEffects(worldIn, pos, state);
-	}
-
-	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-	{
 		BlockPos blockpos = pos.up();
 		IBlockState iblockstate = worldIn.getBlockState(blockpos);
 
@@ -267,34 +253,6 @@ public class Corestone extends BlockBase implements IMetaName {
 			if (worldIn instanceof WorldServer)
 			{
 				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
-			}
-		}
-
-		
-	}
-
-	public void spawnLava(World worldIn, BlockPos pos, IBlockState state)
-	{
-		Random rand = new Random();
-		if (!worldIn.isRemote)
-		{
-			if (state.getBlock().getMetaFromState(state) == 0)
-			{
-				if (rand.nextInt(80) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 1)
-			{
-				if (rand.nextInt(60) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 2)
-			{
-				if (rand.nextInt(40) == 0) {
-					worldIn.setBlockState(pos, ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-				}
 			}
 		}
 	}
@@ -324,19 +282,11 @@ public class Corestone extends BlockBase implements IMetaName {
 		}
 	}
 
-	@SideOnly(Side.CLIENT)
-	@Override
-	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-		worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
-		particleEffects(stateIn, worldIn, pos, rand);
-	}
-
 
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		super.onPlayerDestroy(worldIn, pos, state);
 		naturalGasExplosion(worldIn, pos, state);
-		spawnLava(worldIn, pos, state);
 	}
 
 

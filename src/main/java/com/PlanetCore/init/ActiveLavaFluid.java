@@ -137,6 +137,7 @@ public class ActiveLavaFluid extends BlockFluidClassic {
 	{
 
 
+
 		float chance = 0.2F;
 		if (pos.getY() <= 0) {
 			if (worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState() && Math.random() <= chance)
@@ -152,6 +153,8 @@ public class ActiveLavaFluid extends BlockFluidClassic {
 			if (worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState() && Math.random() <= chance)
 				worldIn.setBlockState(pos.east(), ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
 		}
+
+
 
 
 		int quantaRemaining = quantaPerBlock - state.getValue(LEVEL);

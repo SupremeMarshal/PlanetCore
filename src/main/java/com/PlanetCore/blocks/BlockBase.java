@@ -87,9 +87,9 @@ public class BlockBase extends Block {
 
 	@Override
 	public int quantityDropped(Random random) {
-		String a = this.getTranslationKey();
 		return 1;
 	}
+
 
 	/**
 	 * cause the terrain to close on itself, creating a pressure effect inside the planet.
@@ -101,22 +101,41 @@ public class BlockBase extends Block {
 
 
 
+
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0) {
 
 
-				if (pos.getY() < 0 && pos.getY() >= -1024 && Math.random() >= pos.getY() * -0.000048828125) {
+				/**
+				 * The pressure effect occur more and more exponentially. Every 1024 Y level, the pressure effect's growth by Y level is doubled.
+				 * At -6500Y, the chance is at 37% making the pressure happen extremely frequently.
+				 * Goodluck mining at these levels.
+				 */
+				if (pos.getY() < 0 && pos.getY() >= -1024 && Math.random() >= pos.getY() * -0.0000048828125) {
 					return;
 				}
-				if (pos.getY() < -1024 && Math.random() >= (pos.getY()-1024) * -0.0002 + 0.05) {
+				if (pos.getY() < -1024 && pos.getY() >= -2048 && Math.random() >= (pos.getY() + 1024) * -0.000009765625 + 0.005 ) {
 					return;
 				}
+				if (pos.getY() < -2048 && pos.getY() >= -3072 && Math.random() >= (pos.getY() + 2048) * -0.00001953125 + 0.015 ) {
+					return;
+				}
+				if (pos.getY() < -3072 && pos.getY() >= -4096 && Math.random() >= (pos.getY() + 3072) * -0.0000390625 + 0.035 ) {
+					return;
+				}
+				if (pos.getY() < -4096 && pos.getY() >= -5120 && Math.random() >= (pos.getY() + 4096) * -0.000078125 + 0.075 ) {
+					return;
+				}
+				if (pos.getY() < -5120 && Math.random() >= (pos.getY() + 5120) * -0.00015625 + 0.155 ) {
+					return;
+				}
+
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
-					if (movedState.getMaterial() == Material.IRON) return;
-					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState == Blocks.WATER) {
+					if (movedState.getMaterial() == Material.IRON || movedState.getBlock() == ModBlocks.AIR_NO_PRESSURE) return;
+					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState == Blocks.WATER || movedState == Blocks.FLOWING_WATER) {
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
@@ -131,6 +150,7 @@ public class BlockBase extends Block {
 				}
 			}
 		}
+
 
 	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
 	{

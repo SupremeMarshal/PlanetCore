@@ -58,7 +58,7 @@ public class FogHandler {
                 event.setRed(1.0F);
                 event.setGreen(0.75F);
                 event.setBlue(0.25F);
-            } else if (block == ModBlocks.IRON_LAVA_FLUID) {
+            } else if (block == ModBlocks.IRON_LAVA_FLUID || block == ModBlocks.ACTIVE_LAVA_FLUID) {
                 event.setRed(1.0F);
                 event.setGreen(0.85F);
                 event.setBlue(0.0F);

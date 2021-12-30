@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 
 public class RavineGeneratorProxy implements ICubicStructureGenerator {
     protected ICubicStructureGenerator ravines;
-    protected ICubicStructureGenerator giantRavines;
+    protected ICubicStructureGenerator ImprovedRavines;
 
     @Override
     public void generate(World world, CubePrimer cubePrimer, CubePos cubePos) {

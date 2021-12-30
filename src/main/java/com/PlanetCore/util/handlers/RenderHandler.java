@@ -53,6 +53,8 @@ public class RenderHandler
 		});
 
 		RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
+
+
 	}
 	
 	public static void registerCustomMeshesAndStates()
@@ -62,7 +64,7 @@ public class RenderHandler
 				@Override
 				public ModelResourceLocation getModelLocation(ItemStack stack) {
 
-					return new ModelResourceLocation("planetcore:iron_lava", "fluid");
+					return new ModelResourceLocation("planetcore:amazonite_lava", "fluid");
 
 				}
 			});
