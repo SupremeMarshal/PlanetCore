@@ -25,6 +25,7 @@ public class EntityInit
 		registerEntity("hellhound", EntityHellHound.class, ModConfiguration.ENTITY_HELLHOUND_ID, 50, 666666, 000000);
 		registerEntity("death_enderman", EntityDeathEnderman.class, ModConfiguration.ENTITY_DEATH_ENDERMAN_ID, 50, 666666, 000000);
 		registerEntity("hot_blaze", EntityHotBlaze.class, ModConfiguration.ENTITY_HOT_BLASE_ID, 50, 999999, 000000);
+		registerEntity("core_blaze", EntityCoreBlaze.class, ModConfiguration.ENTITY_CORE_BLASE_ID, 50, 999999, 999999);
 	}
 
 	private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int color1, int color2)
@@ -35,7 +36,8 @@ public class EntityInit
 		EntityRegistry.addSpawn(EntityGhoul.class, 10, 1, 5, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityHellHound.class, 10, 1, 5, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityDeathEnderman.class, 1, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityHotBlaze.class, 10, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityHotBlaze.class, 20, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityCoreBlaze.class, 20, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
 	}
 
 	private static Biome[] allbiomes(net.minecraft.util.registry.RegistryNamespaced<ResourceLocation, Biome> in)
