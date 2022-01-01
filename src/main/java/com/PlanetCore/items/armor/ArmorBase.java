@@ -31,6 +31,8 @@ import java.util.UUID;
 public class ArmorBase extends ItemArmor {
 
 
+
+
     public ArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
         setCreativeTab(CreativeTabs.COMBAT);
@@ -110,6 +112,22 @@ public class ArmorBase extends ItemArmor {
             health = 25.0F;
             knockback = 0.25F;
         }
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II) {
+            health = 30.0F;
+            knockback = 0.25F;
+        }
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III) {
+            health = 40.0F;
+            knockback = 0.25F;
+        }
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV) {
+            health = 50.0F;
+            knockback = 0.25F;
+        }
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
+            health = 60.0F;
+            knockback = 0.25F;
+        }
 
 
         String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
@@ -138,79 +156,16 @@ public class ArmorBase extends ItemArmor {
         return mods;
     }
 
-
     @Override
-    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack)
-    {
+    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
         Item head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem();
         Item chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem();
         Item legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem();
         Item boots = player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem();
-        Item headS = ModItems.ONYX_HELMET;
-        Item chestS = ModItems.ONYX_CHESTPLATE;
-        Item legsS = ModItems.ONYX_LEGGINGS;
-        Item bootsS = ModItems.ONYX_BOOTS;
-        Item headA = ModItems.AMAZONITE_HELMET;
-        Item chestA = ModItems.AMAZONITE_CHESTPLATE;
-        Item legsA = ModItems.AMAZONITE_LEGGINGS;
-        Item bootsA = ModItems.AMAZONITE_BOOTS;
-        Item headB = ModItems.MAJORITE_HELMET;
-        Item chestB = ModItems.MAJORITE_CHESTPLATE;
-        Item legsB = ModItems.MAJORITE_LEGGINGS;
-        Item bootsB = ModItems.MAJORITE_BOOTS;
-        Item headC = ModItems.BRIGMANITE_HELMET;
-        Item chestC = ModItems.BRIGMANITE_CHESTPLATE;
-        Item legsC = ModItems.BRIGMANITE_LEGGINGS;
-        Item bootsC = ModItems.BRIGMANITE_BOOTS;
-        Item headD = ModItems.RINGWOODITE_HELMET;
-        Item chestD = ModItems.RINGWOODITE_CHESTPLATE;
-        Item legsD = ModItems.RINGWOODITE_LEGGINGS;
-        Item bootsD = ModItems.RINGWOODITE_BOOTS;
-        Item headE = ModItems.WADSLEYITE_HELMET;
-        Item chestE = ModItems.WADSLEYITE_CHESTPLATE;
-        Item legsE = ModItems.WADSLEYITE_LEGGINGS;
-        Item bootsE = ModItems.WADSLEYITE_BOOTS;
-        Item headF = ModItems.OLIVINE_HELMET;
-        Item chestF = ModItems.OLIVINE_CHESTPLATE;
-        Item legsF = ModItems.OLIVINE_LEGGINGS;
-        Item bootsF = ModItems.OLIVINE_BOOTS;
-        Item headG = ModItems.DIAMOND_HELMET;
-        Item chestG = ModItems.DIAMOND_CHESTPLATE;
-        Item legsG = ModItems.DIAMOND_LEGGINGS;
-        Item bootsG = ModItems.DIAMOND_BOOTS;
-        Item headH = ModItems.SAPPHIRE_HELMET;
-        Item chestH = ModItems.SAPPHIRE_CHESTPLATE;
-        Item legsH = ModItems.SAPPHIRE_LEGGINGS;
-        Item bootsH = ModItems.SAPPHIRE_BOOTS;
-        Item headI = ModItems.RUBY_HELMET;
-        Item chestI = ModItems.RUBY_CHESTPLATE;
-        Item legsI = ModItems.RUBY_LEGGINGS;
-        Item bootsI = ModItems.RUBY_BOOTS;
-        Item headJ = ModItems.EMERALD_HELMET;
-        Item chestJ = ModItems.EMERALD_CHESTPLATE;
-        Item legsJ = ModItems.EMERALD_LEGGINGS;
-        Item bootsJ = ModItems.EMERALD_BOOTS;
-        if ((head == headS || head == headA || head == headB || head == headC || head == headD || head == headE || head == headF || head == headG || head == headH || head == headI || head == headJ)
-                && (chest == chestS || chest == chestA || chest == chestB || chest == chestC || chest == chestD || chest == chestE || chest == chestF || chest == chestG || chest == chestH || chest == chestI || chest == chestJ)
-                && (legs == legsS || legs == legsA || legs == legsB || legs == legsC || legs == legsD || legs == legsE || legs == legsF || legs == legsG || legs == legsH || legs == legsI || legs == legsJ)
-                && (boots == bootsS || boots == bootsA || boots == bootsB || boots == bootsC || boots == bootsD || boots == bootsE || boots == bootsF || boots == bootsG || boots == bootsH || boots == bootsI || boots == bootsJ))
-        {
-            player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 0, 0));
-        }
-        if ((head == headS || head == headA || head == headB || head == headC || head == headD || head == headE || head == headF)
-                && (chest == chestS || chest == chestA || chest == chestB || chest == chestC || chest == chestD || chest == chestE || chest == chestF)
-                && (legs == legsS || legs == legsA || legs == legsB || legs == legsC || legs == legsD || legs == legsE || legs == legsF)
-                && (boots == bootsS || boots == bootsA || boots == bootsB || boots == bootsC || boots == bootsD || boots == bootsE || boots == bootsF))
-        {
-            player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 0, 1));
-        }
-        if ((head == headS || head == headA) && (chest == chestS || chest == chestA) && (legs == legsS || legs == legsA) && (boots == bootsS || boots == bootsA))
-        {
-            player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 0, 2));
-        }
-        if (head == headS && chest == chestS && legs == legsS && boots == bootsS)
-        {
-            player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 0, 3));
+
+        List<PotionEffect> effects = ItemSetPieces.getSetBonus(head, chest, legs, boots);
+        for (PotionEffect effect : effects) {
+            player.addPotionEffect(effect);
         }
     }
 
@@ -264,7 +219,7 @@ public class ArmorBase extends ItemArmor {
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_EMERALD || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE
                 || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_DIAMOND || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) {
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
@@ -272,6 +227,21 @@ public class ArmorBase extends ItemArmor {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
+            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
+        }
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.7"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.8"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.9"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.10"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.11"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
     }
