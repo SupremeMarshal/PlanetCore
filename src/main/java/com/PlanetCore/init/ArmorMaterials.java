@@ -59,4 +59,12 @@ public class ArmorMaterials {
             new int[]{7, 10, 9, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 28.0F);
     public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ONYX = EnumHelper.addArmorMaterial("armor_material_onyx", Reference.MOD_ID + ":onyx", 300,
             new int[]{7, 10, 9, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 30.0F);
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ONYX_II = EnumHelper.addArmorMaterial("armor_material_onyx_ii", Reference.MOD_ID + ":onyx_ii", 300,
+            new int[]{7, 10, 9, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 35.0F);
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ONYX_III = EnumHelper.addArmorMaterial("armor_material_onyx_iii", Reference.MOD_ID + ":onyx_iii", 300,
+            new int[]{7, 10, 9, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 40.0F);
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ONYX_IV = EnumHelper.addArmorMaterial("armor_material_onyx_iv", Reference.MOD_ID + ":onyx_iv", 300,
+            new int[]{7, 10, 9, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 45.0F);
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ONYX_V = EnumHelper.addArmorMaterial("armor_material_onyx_v", Reference.MOD_ID + ":onyx_v", 300,
+            new int[]{7, 10, 9, 7}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 50.0F);
 }

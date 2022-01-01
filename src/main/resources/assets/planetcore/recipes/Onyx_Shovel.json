@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:onyx"
+        },
+        "B":
+        {
+            "item": "planetcore:onyx_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:olivine_shovel",
+        "count": 1
+    }
+}

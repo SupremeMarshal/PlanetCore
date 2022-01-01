@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+        "AAA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:onyx"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:onyx_chestplate",
+        "count": 1
+    }
+}
