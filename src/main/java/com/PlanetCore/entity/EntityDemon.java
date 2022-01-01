@@ -1,6 +1,6 @@
 package com.PlanetCore.entity;
 
-/*import com.PlanetCore.entity.goals.DemonFireBallGoal;
+import com.PlanetCore.entity.goals.DemonFireBallGoal;
 import com.PlanetCore.util.handlers.LootTableHandler;
 
 
@@ -57,10 +57,10 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	@Override
 	public void onLivingUpdate() {
 		super.onLivingUpdate();
-		if (this.getAttackTick() > 0){
+		if (this.getAttackTick() > 1){
 			this.dataManager.set(ATTACK_TICK, this.getAttackTick() - 1);
 		}
-		if (this.getFireballTick() > 0){
+		if (this.getFireballTick() > 1){
 			this.dataManager.set(FIREBALL_TICK, this.getFireballTick() - 1);
 		}
 	}
@@ -222,5 +222,3 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		return this.dataManager.get(ATTACK_TICK);
 	}
 }
-
- */

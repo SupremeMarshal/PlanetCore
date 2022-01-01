@@ -1,5 +1,5 @@
 package com.PlanetCore.entity.goals;
-/*
+
 import com.PlanetCore.entity.EntityDemon;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
@@ -47,4 +47,4 @@ public class DemonFireBallGoal extends EntityAIBase {
     }
 }
 
- */
+

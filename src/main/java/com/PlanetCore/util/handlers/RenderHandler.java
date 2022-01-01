@@ -22,7 +22,7 @@ public class RenderHandler
 		public static void registerEntityRenders()
 		{
 		//Demon
-			/*
+
 		RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new IRenderFactory<EntityDemon>()
 		{
 
@@ -32,7 +32,7 @@ public class RenderHandler
 			}
 		});
 
-			 */
+
 		//Ghoul
 		RenderingRegistry.registerEntityRenderingHandler(EntityGhoul.class, new IRenderFactory<EntityGhoul>()
 		{
@@ -52,6 +52,7 @@ public class RenderHandler
 			}
 		});
 
+			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
 

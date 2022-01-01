@@ -1,5 +1,5 @@
 package com.PlanetCore.entity.render;
-/*
+
 import com.PlanetCore.entity.EntityDemon;
 import com.PlanetCore.entity.model.ModelDemon;
 import com.PlanetCore.util.Reference;
@@ -14,5 +14,3 @@ public class RenderDemon extends GeoEntityRenderer<EntityDemon>{
 		super(renderManager, new ModelDemon());
 	}
 }
-
- */

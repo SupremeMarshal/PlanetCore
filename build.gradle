@@ -46,12 +46,12 @@ repositories {
         name = "JitPack"
         url = "https://jitpack.io/"
     }
-    /*
+
     maven {
-        url = "https://repo.repsy.io/mvn/gandiber/geckolib"
+        url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
     }
 
-     */
+
 }
 
 dependencies {
@@ -61,7 +61,7 @@ dependencies {
     deobfProvided ("com.github.OpenCubicChunks:CubicWorldGen:27de56d2f792513873584b2f8fd9f3082fb259ec") {
         transitive = false
     }
-    //deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.0-beta.7')
+    deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.0-beta.7')
 }
 
 processResources {
