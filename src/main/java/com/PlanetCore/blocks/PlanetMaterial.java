@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 public enum PlanetMaterial {
+    PAINITE(ModItems.PAINITE),
     ONYX(ModItems.ONYX),
     AMAZONITE(ModItems.AMAZONITE),
     MAJORITE(ModItems.MAJORITE),
@@ -30,6 +31,7 @@ public enum PlanetMaterial {
     LAPIS(Items.DYE),
     REDSTONE(Items.REDSTONE),
     SULFUR(ModItems.SULFUR),
+    PAINITE_SMALL(ModItems.PAINITE_SHARD),
     ONYX_SMALL(ModItems.ONYX_SHARD),
     AMAZONITE_SMALL(ModItems.AMAZONITE_SHARD),
     MAJORITE_SMALL(ModItems.MAJORITE_SHARD),

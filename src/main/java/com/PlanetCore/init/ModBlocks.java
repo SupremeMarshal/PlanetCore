@@ -120,6 +120,10 @@ public class ModBlocks {
     public static final Mantlerock MANTLEROCK = _null();
     public static final Corestone CORESTONE = _null();
 
+    public static final Painite CENTERCORESTONE_SMALL_PAINITE = _null();
+    public static final Painite CENTERCORESTONE_PAINITE = _null();
+    public static final Painite CENTERCORESTONE_COMPACT_PAINITE = _null();
+
     public static final OreBase ORE_ALUMINIUM = _null();
     public static final OreBase ORE_IRON = _null();
     public static final OreBase ORE_TIN = _null();
@@ -307,8 +311,8 @@ public class ModBlocks {
     public static final BlockBase DIAMOND_BLOCK = _null();
     public static final BlockBase SAPPHIRE_BLOCK = _null();
     public static final BlockBase RUBY_BLOCK = _null();
-    public static final BlockBase TUNGSTEN_titanium_BLOCK = _null();
-    public static final BlockBase TUNGSTEN_uranium_BLOCK = _null();
+    public static final BlockBase TUNGSTEN_TITANIUM_BLOCK = _null();
+    public static final BlockBase TUNGSTEN_URANIUM_BLOCK = _null();
     public static final BlockBase TUNGSTEN_BLOCK = _null();
     public static final BlockBase TITANIUM_URANIUM_BLOCK = _null();
     public static final BlockBase TITANIUM_BLOCK = _null();
@@ -326,6 +330,7 @@ public class ModBlocks {
     public static final BlockBase TIN_BLOCK = _null();
     public static final BlockBase ALUMINIUM_BLOCK = _null();
 
+    public static final BlocksBase PAINITE_SUPERCOMPACT = _null();
     public static final BlocksBase ONYX_SUPERCOMPACT = _null();
     public static final BlocksBase AMAZONITE_SUPERCOMPACT = _null();
     public static final BlocksBase MAJORITE_SUPERCOMPACT = _null();
@@ -468,6 +473,7 @@ public class ModBlocks {
                 new BlocksBase("majorite_supercompact", Material.ROCK, PlanetMaterial.MAJORITE).setHardness(768000).setResistance(20),
                 new BlocksBase("amazonite_supercompact", Material.ROCK, PlanetMaterial.AMAZONITE).setHardness(1120000).setResistance(25),
                 new BlocksBase("onyx_supercompact", Material.ROCK, PlanetMaterial.ONYX).setHardness(1600000).setResistance(30),
+                new BlocksBase("painite_supercompact", Material.ROCK, PlanetMaterial.ONYX).setHardness(3200000).setResistance(30),
                 new BlockBase("limestone", Material.ROCK).setResistance(1),
                 new Crustrock("crustrock", Material.ROCK).setResistance(1),
                 new Mantlerock("mantlerock", Material.ROCK).setResistance(1),
@@ -646,7 +652,11 @@ public class ModBlocks {
                 new CorestoneOreCompact("corestone_compact_brigmanite", Material.ROCK, PlanetMaterial.BRIGMANITE, PlanetHardness.BRIGMANITE).setResistance(10),
                 new CorestoneOreCompact("corestone_compact_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE).setResistance(10),
                 new CorestoneOreCompact("corestone_compact_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX).setResistance(10)
+                new CorestoneOreCompact("corestone_compact_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX).setResistance(10),
+
+                new Painite("centercorestone_small_painite", Material.ROCK, PlanetMaterial.PAINITE_SMALL, PlanetHardness.PAINITE).setResistance(20),
+                new Painite("centercorestone_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE).setResistance(20),
+                new Painite("centercorestone_compact_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE).setResistance(20)
         );
     }
 

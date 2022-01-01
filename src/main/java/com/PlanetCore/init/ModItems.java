@@ -435,6 +435,54 @@ public class ModItems {
 	public static final Item ONYX_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 2, EntityEquipmentSlot.LEGS);
 	public static final Item ONYX_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.FEET);
 
+	//ONYX II//
+	public static final ItemSword ONYX_II_SWORD = new ItemSword(ToolMaterials.ONYX_II);
+	public static final ItemSpade ONYX_II_SHOVEL = new ItemSpade(ToolMaterials.ONYX_II);
+	public static final ItemPickaxe ONYX_II_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_II);
+	public static final ItemAxe ONYX_II_AXE = new ItemAxeX(ToolMaterials.ONYX_II);
+	public static final ItemHoe ONYX_II_HOE = new ItemHoe(ToolMaterials.ONYX_II);
+
+	public static final Item ONYX_II_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_II, 1, EntityEquipmentSlot.HEAD);
+	public static final Item ONYX_II_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_II, 1, EntityEquipmentSlot.CHEST);
+	public static final Item ONYX_II_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_II, 2, EntityEquipmentSlot.LEGS);
+	public static final Item ONYX_II_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_II, 1, EntityEquipmentSlot.FEET);
+
+	//ONYX III//
+	public static final ItemSword ONYX_III_SWORD = new ItemSword(ToolMaterials.ONYX_III);
+	public static final ItemSpade ONYX_III_SHOVEL = new ItemSpade(ToolMaterials.ONYX_III);
+	public static final ItemPickaxe ONYX_III_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_III);
+	public static final ItemAxe ONYX_III_AXE = new ItemAxeX(ToolMaterials.ONYX_III);
+	public static final ItemHoe ONYX_III_HOE = new ItemHoe(ToolMaterials.ONYX_III);
+
+	public static final Item ONYX_III_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_III, 1, EntityEquipmentSlot.HEAD);
+	public static final Item ONYX_III_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_III, 1, EntityEquipmentSlot.CHEST);
+	public static final Item ONYX_III_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_III, 2, EntityEquipmentSlot.LEGS);
+	public static final Item ONYX_III_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_III, 1, EntityEquipmentSlot.FEET);
+
+	//ONYX IV//
+	public static final ItemSword ONYX_IV_SWORD = new ItemSword(ToolMaterials.ONYX_IV);
+	public static final ItemSpade ONYX_IV_SHOVEL = new ItemSpade(ToolMaterials.ONYX_IV);
+	public static final ItemPickaxe ONYX_IV_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_IV);
+	public static final ItemAxe ONYX_IV_AXE = new ItemAxeX(ToolMaterials.ONYX_IV);
+	public static final ItemHoe ONYX_IV_HOE = new ItemHoe(ToolMaterials.ONYX_IV);
+
+	public static final Item ONYX_IV_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_IV, 1, EntityEquipmentSlot.HEAD);
+	public static final Item ONYX_IV_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_IV, 1, EntityEquipmentSlot.CHEST);
+	public static final Item ONYX_IV_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_IV, 2, EntityEquipmentSlot.LEGS);
+	public static final Item ONYX_IV_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_IV, 1, EntityEquipmentSlot.FEET);
+
+	//ONYX V//
+	public static final ItemSword ONYX_V_SWORD = new ItemSword(ToolMaterials.ONYX_V);
+	public static final ItemSpade ONYX_V_SHOVEL = new ItemSpade(ToolMaterials.ONYX_V);
+	public static final ItemPickaxe ONYX_V_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_V);
+	public static final ItemAxe ONYX_V_AXE = new ItemAxeX(ToolMaterials.ONYX_V);
+	public static final ItemHoe ONYX_V_HOE = new ItemHoe(ToolMaterials.ONYX_V);
+
+	public static final Item ONYX_V_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 1, EntityEquipmentSlot.HEAD);
+	public static final Item ONYX_V_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 1, EntityEquipmentSlot.CHEST);
+	public static final Item ONYX_V_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 2, EntityEquipmentSlot.LEGS);
+	public static final Item ONYX_V_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 1, EntityEquipmentSlot.FEET);
+
 
 	//DEMON//CORE//
 
@@ -453,6 +501,7 @@ public class ModItems {
 	public static final Item MAJORITE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item AMAZONITE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item PAINITE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	public static final Item SAPPHIRE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item EMERALD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -467,6 +516,7 @@ public class ModItems {
 	public static final Item MAJORITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item AMAZONITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item PAINITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//ROD//
 	public static final Item ALUMINIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -525,7 +575,7 @@ public class ModItems {
 	public static final Item URANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
-	//Ingot//
+	//metal shard//
 	public static final Item ALUMINIUM_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item COPPER_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TIN_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -600,6 +650,10 @@ public class ModItems {
 	public static final Item MAJORITE_SHIELD = new ItemShield();
 	public static final Item AMAZONITE_SHIELD = new ItemShield();
 	public static final Item ONYX_SHIELD = new OnyxShield();
+	public static final Item ONYX_II_SHIELD = new OnyxShield();
+	public static final Item ONYX_III_SHIELD = new OnyxShield();
+	public static final Item ONYX_IV_SHIELD = new OnyxShield();
+	public static final Item ONYX_V_SHIELD = new OnyxShield();
 
 	public static List<Item> getItems() {
 		if (ITEMS.isEmpty()) {

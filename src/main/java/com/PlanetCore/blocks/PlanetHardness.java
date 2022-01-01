@@ -1,6 +1,7 @@
 package com.PlanetCore.blocks;
 
 public enum PlanetHardness {
+    PAINITE(100000),
     ONYX(25000),
     AMAZONITE(10000),
     MAJORITE(5000),
