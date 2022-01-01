@@ -32,6 +32,7 @@ import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -213,9 +214,6 @@ public class Corestone extends BlockBase implements IMetaName {
 		radius = (int) f;
 	}
 
-
-
-
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
 	{
 		Block block = this;
@@ -242,17 +240,13 @@ public class Corestone extends BlockBase implements IMetaName {
 	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
 	{
 		super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
-		//thermalEffects(worldIn, pos, state);
-		BlockPos blockpos = pos.up();
-		IBlockState iblockstate = worldIn.getBlockState(blockpos);
-
-		if (iblockstate.getBlock() == Blocks.WATER || iblockstate.getBlock() == Blocks.FLOWING_WATER)
-		{
-			worldIn.setBlockToAir(blockpos);
-			worldIn.playSound(null, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (worldIn.rand.nextFloat() - worldIn.rand.nextFloat()) * 0.8F);
-			if (worldIn instanceof WorldServer)
-			{
-				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
+		for (EnumFacing side : EnumFacing.values()) {
+			if (worldIn.getBlockState(pos.offset(side)).getBlock() == Blocks.WATER || worldIn.getBlockState(pos.offset(side)).getBlock() == Blocks.FLOWING_WATER || worldIn.getBlockState(pos.offset(side)).getBlock() == Blocks.WATERLILY) {
+				worldIn.setBlockToAir(pos.offset(side));
+				worldIn.playSound(null, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (worldIn.rand.nextFloat() - worldIn.rand.nextFloat()) * 0.8F);
+				if (worldIn instanceof WorldServer) {
+					((WorldServer) worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double) pos.offset(side).getX() + 0.5D, (double) pos.offset(side).getY() + 0.25D, (double) pos.offset(side).getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
+				}
 			}
 		}
 	}
@@ -263,20 +257,40 @@ public class Corestone extends BlockBase implements IMetaName {
 		int X = pos.getX();
 		int Z = pos.getZ();
 		int Y = pos.getY();
-		if (!worldIn.isRemote && Y < -3000) {
+		if (!worldIn.isRemote && Y < -4000) {
 			if (state.getBlock().getMetaFromState(state) == 0) {
-				if (rand.nextInt(40) == 0) {
+				if (rand.nextInt(100) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 1) {
-				if (rand.nextInt(32) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
+				if (rand.nextInt(100) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 5, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 2) {
-				if (rand.nextInt(25) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
+				if (rand.nextInt(100) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 6, true);
+				}
+			}
+			if (state.getBlock().getMetaFromState(state) == 3) {
+				if (rand.nextInt(100) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 7, true);
+				}
+			}
+			if (state.getBlock().getMetaFromState(state) == 4) {
+				if (rand.nextInt(100) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 8, true);
+				}
+			}
+			if (state.getBlock().getMetaFromState(state) == 5) {
+				if (rand.nextInt(100) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 9, true);
+				}
+			}
+			if (state.getBlock().getMetaFromState(state) == 6) {
+				if (rand.nextInt(100) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 10, true);
 				}
 			}
 		}

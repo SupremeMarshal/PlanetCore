@@ -291,7 +291,7 @@ public class EntityHotBlaze extends EntityBlaze {
                         if (this.parentEntity.hasAttackTarget()) {
                             this.action = EntityMoveHelper.Action.WAIT;
                         } else {
-                            this.parentEntity.motionY += 0.3;
+                            this.parentEntity.motionY += 0.03;
                         }
                     }
                 }
@@ -329,10 +329,15 @@ public class EntityHotBlaze extends EntityBlaze {
 
     @Override
     public boolean getCanSpawnHere() {
-        if (posY < -2024) {
-            return super.getCanSpawnHere();
+        if (posY < -2024 && posY >= -5000) {
+            return true;
         }
         else return false;
+    }
+
+    @Override
+    protected boolean isValidLightLevel() {
+        return true;
     }
 
     @Override

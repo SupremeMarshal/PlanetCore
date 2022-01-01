@@ -40,7 +40,7 @@ public class FogHandler {
             event.setDensity(-0.00002197265625F * Y);
         }
         else if (Y <= -4096) {
-            event.setDensity(0.09F);
+            event.setDensity(0.01F);
         }
 
 

@@ -54,4 +54,9 @@ public class CorestoneOreCompact extends Corestone implements IMetaName {
         }
         else return 0;
     }
+
+    @Override
+    public int quantityDroppedWithBonus(int fortune, Random random) {
+        return 3 + random.nextInt(fortune * 3 + 1);
+    }
 }

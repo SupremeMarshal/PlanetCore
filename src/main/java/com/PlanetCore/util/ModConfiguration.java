@@ -16,9 +16,9 @@ public class ModConfiguration
 	// public static int ENTITY_BLACKDEMON_ID = 202;
 	public static int ENTITY_GHOUL_ID = 203;
 	public static int ENTITY_HELLHOUND_ID = 204;
-	public static int ENTITY_FALLING_BLOCK_ID = 205;
 	public static int ENTITY_DEATH_ENDERMAN_ID = 206;
 	public static int ENTITY_HOT_BLASE_ID = 207;
+	public static int ENTITY_CORE_BLASE_ID = 208;
 	public static int GUI_CRUSTROCK_FURNACE_ID = 5;
 	public static int GUI_STEEL_FURNACE_ID = 6;
 	public static int GUI_TITANIUM_FURNACE_ID = 7;
@@ -39,7 +39,6 @@ public class ModConfiguration
 		ENTITY_GHOUL_ID = config.getInt("ENTITY_GHOUL_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_HELLHOUND_ID = config.getInt("ENTITY_HELLHOUND_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_DEATH_ENDERMAN_ID = config.getInt("ENTITY_DEATH_ENDERMAN_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
-		ENTITY_FALLING_BLOCK_ID = config.getInt("ENTITY_FALLING_BLOCK_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 
 		category = "GUI IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the GUI's to ensure that they don't clash with other mod's ids");
