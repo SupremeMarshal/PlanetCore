@@ -14,7 +14,7 @@ public class EntitySpawnEvent {
     @SubscribeEvent
     public void onCheckSpawnClient(LivingSpawnEvent.CheckSpawn cs)
     {
-        if (cs.getEntity().posY < 0 && (!cs.getEntity().isCreatureType(EnumCreatureType.MONSTER, true) || !cs.getEntity().isCreatureType(EnumCreatureType.MONSTER, false)))
+        if (cs.getEntity().posY < 0 && cs.getEntity().isCreatureType(EnumCreatureType.CREATURE, true))
             cs.setResult(Event.Result.DENY);
         else
             cs.setResult(Event.Result.DEFAULT);

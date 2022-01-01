@@ -44,6 +44,10 @@ public class DemonFireBallGoal extends EntityAIBase {
             fireball.posY = this.owner.posY + (double)(this.owner.height / 2.0F) + 0.5D;
             this.owner.world.spawnEntity(fireball);
         }
+        if (this.owner.getFireballTick() == 6)
+        {
+            this.owner.stopFireballAnim();
+        }
     }
 }
 
