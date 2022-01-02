@@ -58,7 +58,6 @@ public class ArmorBase extends ItemArmor {
         Multimap<String, AttributeModifier> mods = super.getAttributeModifiers(slot, stack);
 
         float health = 0;
-        float knockback = 0;
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) health = 0.5F;
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_GOLD) health = 1.0F;
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_PLATINUM) health = 1.5F;
@@ -70,63 +69,63 @@ public class ArmorBase extends ItemArmor {
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM) health = 4.5F;
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_EMERALD) {
             health = 5.0F;
-            knockback = 0.02F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) {
             health = 6.0F;
-            knockback = 0.04F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) {
             health = 7.0F;
-            knockback = 0.06F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_DIAMOND) {
             health = 8.0F;
-            knockback = 0.08F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE) {
             health = 10.0F;
-            knockback = 0.1F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE) {
             health = 12.0F;
-            knockback = 0.12F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE) {
             health = 14.0F;
-            knockback = 0.14F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE) {
             health = 16.0F;
-            knockback = 0.16F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE) {
             health = 18.0F;
-            knockback = 0.2F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
             health = 20.0F;
-            knockback = 0.2F;
+
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) {
             health = 25.0F;
-            knockback = 0.25F;
+            
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II) {
             health = 30.0F;
-            knockback = 0.25F;
+            
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III) {
             health = 40.0F;
-            knockback = 0.25F;
+            
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV) {
             health = 50.0F;
-            knockback = 0.25F;
+            
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
             health = 60.0F;
-            knockback = 0.25F;
+            
         }
 
 
@@ -136,22 +135,18 @@ public class ArmorBase extends ItemArmor {
         if (slot == EntityEquipmentSlot.HEAD) {
 
             mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_HELM_UUID, "MAX_HEALTH_HELM_UUID", health, 0));
-            mods.put(knockback_resistance, new AttributeModifier(KNOCKBACK_RESISTANCE_HELM_UUID, "KNOCKBACK_RESISTANCE_HELM_UUID", knockback, 0));
         }
         if (slot == EntityEquipmentSlot.CHEST) {
 
             mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BODY_UUID, "MAX_HEALTH_BODY_UUID", health, 0));
-            mods.put(knockback_resistance, new AttributeModifier(KNOCKBACK_RESISTANCE_BODY_UUID, "KNOCKBACK_RESISTANCE_BODY_UUID", knockback, 0));
         }
         if (slot == EntityEquipmentSlot.LEGS) {
 
             mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_LEGS_UUID, "MAX_HEALTH_LEGS_UUID", health, 0));
-            mods.put(knockback_resistance, new AttributeModifier(KNOCKBACK_RESISTANCE_LEGS_UUID, "KNOCKBACK_RESISTANCE_LEGS_UUID", knockback, 0));
         }
         if (slot == EntityEquipmentSlot.FEET) {
 
             mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BOOTS_UUID, "MAX_HEALTH_BOOTS_UUID", health, 0));
-            mods.put(knockback_resistance, new AttributeModifier(KNOCKBACK_RESISTANCE_BOOTS_UUID, "KNOCKBACK_RESISTANCE_BOOTS_UUID", knockback, 0));
         }
         return mods;
     }
@@ -226,10 +221,31 @@ public class ArmorBase extends ItemArmor {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
+            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
+        }
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) {
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.7"));
+            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.8"));
+            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
+        }
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
@@ -240,8 +256,6 @@ public class ArmorBase extends ItemArmor {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.7"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.8"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.9"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.10"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.11"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
     }
