@@ -4,9 +4,6 @@ import com.PlanetCore.entity.goals.DemonAttackMeleeAi;
 import com.PlanetCore.entity.goals.DemonFireBallGoal;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.handlers.LootTableHandler;
-
-
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMob;
@@ -19,6 +16,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.pathfinding.NodeProcessor;
+import net.minecraft.pathfinding.PathNavigate;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
@@ -39,9 +39,9 @@ import java.util.Random;
 public class EntityDemon extends EntityMob implements IAnimatable {
 	public EntityDemon(World worldIn)   {
 		super(worldIn);
-		setSize(2f, 3f);
+		setSize(2f, 4f);
 		this.isImmuneToFire = true;
-		//this.setNoGravity(true);
+		this.moveHelper = new EntityDemon.GhastMoveHelper(this);
 	}
 
 	private static final DataParameter<Integer> TEXTURE = EntityDataManager.<Integer>createKey(EntityDemon.class, DataSerializers.VARINT);
@@ -61,12 +61,26 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		}
 	}
 
+	@Override
+	public void fall(float distance, float damageMultiplier)
+	{
+	}
+
+	@Override
+	public boolean isImmuneToExplosions() {
+		return true;
+	}
 
 	@Override
 	public void onLivingUpdate() {
 		super.onLivingUpdate();
-		int random = rand.nextInt(40);
-		if (random == 40) this.jump();
+		if (!this.onGround && this.motionY < 0.0D)
+		{
+			this.motionY *= 0.8D;
+		}
+		int random = rand.nextInt(500);
+		if (random == 1) { this.jump(); this.setNoGravity(true); }
+		if (random == 0) { this.setNoGravity(false); }
 		if (this.onGround) this.dataManager.set(FLY_TICK, 0);
 		if (!this.onGround) this.dataManager.set(FLY_TICK, 1);
 		if (this.getAttackTick() > 0){
@@ -79,14 +93,15 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 
 	protected void initEntityAI () {
 		this.tasks.addTask(5, new EntityDemon.AIRandomFly(this));
+		this.tasks.addTask(3, new DemonAttackMeleeAi(this, 1.0, true));
 		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityPlayerMP.class, false, false));
 		this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, true));
-		this.tasks.addTask(3, new DemonAttackMeleeAi(this, 1.0, true));
 		this.tasks.addTask(4, new EntityAIWatchClosest(this, EntityPlayerMP.class, (float) 12));
-		this.tasks.addTask(5, new EntityAIWander(this, 0.6));
 		this.tasks.addTask(6, new EntityAILookIdle(this));
 		this.tasks.addTask(7, new EntityAISwimming(this));
 		this.tasks.addTask(3, new DemonFireBallGoal(this));
+		this.tasks.addTask(5, new EntityAIWander(this, 0.6));
+		this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D, 0.0F));
 	}
 	
 	@Override
@@ -158,19 +173,19 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	@Override
 	public int getMaxSpawnedInChunk() {
 		if (posY < -1024 && posY >= -2048) {
-			return 1;
+			return 2;
 		}
 		else if (posY < -2048 && posY >= -3072) {
-			return 4;
+			return 5;
 		}
 		else if (posY < -3072 && posY >= -4096) {
-			return 8;
+			return 9;
 		}
 		else if (posY < -4096 && posY >= -5120) {
-			return 4;
+			return 5;
 		}
 		else if (posY < -5120 && posY >= -6144) {
-			return 1;
+			return 2;
 		}
 		else return 0;
 	}
@@ -184,12 +199,13 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(64D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(120D);
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(5.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(80.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(12D);
-		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 8));
+		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
 	}
 
 
@@ -279,8 +295,8 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		 * Returns whether the EntityAIBase should begin execution.
 		 */
 		public boolean shouldExecute(){
-			if (this.parentEntity.hasAttackTarget()) return false;
-			if (this.parentEntity.getRNG().nextInt(30) == 0) return true;
+			if (this.parentEntity.hasAttackTarget() && this.parentEntity.onGround) return false;
+			if (this.parentEntity.getRNG().nextInt(30) == 0 && !this.parentEntity.onGround) return true;
 
 			EntityMoveHelper entitymovehelper = this.parentEntity.getMoveHelper();
 
@@ -321,7 +337,6 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 			for (int i=0;i<16;i++){
 				BlockPos go = new BlockPos(d0, d1, d2);
 				if (this.parentEntity.world.getBlockState(go).getBlock() == Blocks.AIR || this.parentEntity.world.getBlockState(go).getBlock() == ModBlocks.AIR_NO_PRESSURE){
-					System.out.println("found air");
 					break;
 				}
 
@@ -339,5 +354,133 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		if (!living) return false;
 		boolean notCreative = !(this.getAttackTarget() instanceof EntityPlayer) || !((EntityPlayer)this.getAttackTarget()).isCreative();
 		return living && notCreative;
+	}
+
+	static class GhastMoveHelper extends EntityMoveHelper
+	{
+		private final EntityDemon parentEntity;
+		private int courseChangeCooldown;
+
+		public GhastMoveHelper(EntityDemon ghast)
+		{
+			super(ghast);
+			this.parentEntity = ghast;
+		}
+
+		public void onUpdateMoveHelper() {
+			if (this.parentEntity.onGround) {
+				if (this.action == EntityMoveHelper.Action.STRAFE) {
+					float f = (float) this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue();
+					float f1 = (float) this.speed * f;
+					float f2 = this.moveForward;
+					float f3 = this.moveStrafe;
+					float f4 = MathHelper.sqrt(f2 * f2 + f3 * f3);
+
+					if (f4 < 1.0F) {
+						f4 = 1.0F;
+					}
+
+					f4 = f1 / f4;
+					f2 = f2 * f4;
+					f3 = f3 * f4;
+					float f5 = MathHelper.sin(this.entity.rotationYaw * 0.017453292F);
+					float f6 = MathHelper.cos(this.entity.rotationYaw * 0.017453292F);
+					float f7 = f2 * f6 - f3 * f5;
+					float f8 = f3 * f6 + f2 * f5;
+					PathNavigate pathnavigate = this.entity.getNavigator();
+
+					if (pathnavigate != null) {
+						NodeProcessor nodeprocessor = pathnavigate.getNodeProcessor();
+
+						if (nodeprocessor != null && nodeprocessor.getPathNodeType(this.entity.world, MathHelper.floor(this.entity.posX + (double) f7), MathHelper.floor(this.entity.posY), MathHelper.floor(this.entity.posZ + (double) f8)) != PathNodeType.WALKABLE) {
+							this.moveForward = 1.0F;
+							this.moveStrafe = 0.0F;
+							f1 = f;
+						}
+					}
+
+					this.entity.setAIMoveSpeed(f1);
+					this.entity.setMoveForward(this.moveForward);
+					this.entity.setMoveStrafing(this.moveStrafe);
+					this.action = EntityMoveHelper.Action.WAIT;
+				} else if (this.action == EntityMoveHelper.Action.MOVE_TO) {
+					this.action = EntityMoveHelper.Action.WAIT;
+					double d0 = this.posX - this.entity.posX;
+					double d1 = this.posZ - this.entity.posZ;
+					double d2 = this.posY - this.entity.posY;
+					double d3 = d0 * d0 + d2 * d2 + d1 * d1;
+
+					if (d3 < 2.500000277905201E-7D) {
+						this.entity.setMoveForward(0.0F);
+						return;
+					}
+
+					float f9 = (float) (MathHelper.atan2(d1, d0) * (180D / Math.PI)) - 90.0F;
+					this.entity.rotationYaw = this.limitAngle(this.entity.rotationYaw, f9, 90.0F);
+					this.entity.setAIMoveSpeed((float) (this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
+
+					if (d2 > (double) this.entity.stepHeight && d0 * d0 + d1 * d1 < (double) Math.max(1.0F, this.entity.width)) {
+						this.entity.getJumpHelper().setJumping();
+						this.action = EntityMoveHelper.Action.JUMPING;
+					}
+				} else if (this.action == EntityMoveHelper.Action.JUMPING) {
+					this.entity.setAIMoveSpeed((float) (this.speed * this.entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue()));
+
+					if (this.entity.onGround) {
+						this.action = EntityMoveHelper.Action.WAIT;
+					}
+				} else {
+					this.entity.setMoveForward(0.0F);
+				}
+			}
+			if (!this.parentEntity.onGround) {
+				if (this.action == EntityMoveHelper.Action.MOVE_TO) {
+					double d0 = this.posX - this.parentEntity.posX;
+					double d1 = this.posY - this.parentEntity.posY;
+					double d2 = this.posZ - this.parentEntity.posZ;
+					double d3 = d0 * d0 + d1 * d1 + d2 * d2;
+
+					if (this.courseChangeCooldown-- <= 0) {
+						this.courseChangeCooldown += this.parentEntity.getRNG().nextInt(5) + 2;
+						d3 = (double) MathHelper.sqrt(d3);
+
+						if (this.isNotColliding(this.posX, this.posY, this.posZ, d3)) {
+							this.parentEntity.motionX += d0 / d3 * 0.1D;
+							this.parentEntity.motionY += d1 / d3 * 0.1D;
+							this.parentEntity.motionZ += d2 / d3 * 0.1D;
+						} else {
+							if (this.parentEntity.hasAttackTarget()) {
+								this.action = EntityMoveHelper.Action.WAIT;
+							} else {
+								this.parentEntity.motionY += 0.03;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/**
+		 * Checks if entity bounding box is not colliding with terrain
+		 */
+		private boolean isNotColliding(double x, double y, double z, double p_179926_7_)
+		{
+			double d0 = (x - this.parentEntity.posX) / p_179926_7_;
+			double d1 = (y - this.parentEntity.posY) / p_179926_7_;
+			double d2 = (z - this.parentEntity.posZ) / p_179926_7_;
+			AxisAlignedBB axisalignedbb = this.parentEntity.getEntityBoundingBox();
+
+			for (int i = 1; (double)i < p_179926_7_; ++i)
+			{
+				axisalignedbb = axisalignedbb.offset(d0, d1, d2);
+
+				if (!this.parentEntity.world.getCollisionBoxes(this.parentEntity, axisalignedbb).isEmpty())
+				{
+					return false;
+				}
+			}
+
+			return true;
+		}
 	}
 }
