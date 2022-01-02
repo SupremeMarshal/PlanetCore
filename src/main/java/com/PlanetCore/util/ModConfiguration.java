@@ -19,7 +19,8 @@ public class ModConfiguration
 	public static int ENTITY_DEATH_ENDERMAN_ID = 206;
 	public static int ENTITY_HOT_BLASE_ID = 207;
 	public static int ENTITY_CORE_BLASE_ID = 208;
-	public static int ENTITY_FLYING_DEMON_ID = 209;
+	public static int ENTITY_CORE_DEMON_ID = 209;
+	public static int ENTITY_EMERALD_ARROW_ID = 210;
 	public static int GUI_CRUSTROCK_FURNACE_ID = 5;
 	public static int GUI_STEEL_FURNACE_ID = 6;
 	public static int GUI_TITANIUM_FURNACE_ID = 7;
@@ -36,10 +37,11 @@ public class ModConfiguration
 		category = "Entity IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the entities to ensure that they don't clash with other mod's ids");
 		ENTITY_DEMON_ID = config.getInt("ENTITY_DEMON_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
-		// ENTITY_BLACKDEMON_ID = config.getInt("ENTITY_BLACKDEMON_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_CORE_DEMON_ID = config.getInt("ENTITY_CORE_DEMON_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_GHOUL_ID = config.getInt("ENTITY_GHOUL_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_HELLHOUND_ID = config.getInt("ENTITY_HELLHOUND_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_DEATH_ENDERMAN_ID = config.getInt("ENTITY_DEATH_ENDERMAN_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_EMERALD_ARROW_ID = config.getInt("ENTITY_EMERALD_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 
 		category = "GUI IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the GUI's to ensure that they don't clash with other mod's ids");

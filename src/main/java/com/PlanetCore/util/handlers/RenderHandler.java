@@ -4,6 +4,8 @@ import com.PlanetCore.entity.*;
 import com.PlanetCore.entity.render.*;
 import com.PlanetCore.init.ModBlocks;
 
+import com.PlanetCore.items.arrows.EntityEmeraldArrow;
+import com.PlanetCore.items.arrows.RenderEmeraldArrow;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -15,46 +17,61 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import org.lwjgl.opengl.GL11;
 
 public class RenderHandler
 	{
 
-		public static void registerEntityRenders()
-		{
-		//Demon
-		RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new IRenderFactory<EntityDemon>() {
+		public static void registerEntityRenders() {
+			//Demon
+			RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new IRenderFactory<EntityDemon>() {
 
-			@Override
-			public Render<? super EntityDemon> createRenderFor(RenderManager manager) {
-				return new RenderDemon(manager);
-			}
-		});
+				@Override
+				public Render<? super EntityDemon> createRenderFor(RenderManager manager) {
+					return new RenderDemon(manager);
+				}
+			});
 
-		//Ghoul
-		RenderingRegistry.registerEntityRenderingHandler(EntityGhoul.class, new IRenderFactory<EntityGhoul>()
-		{
-		
-		@Override
-		public Render<? super EntityGhoul> createRenderFor(RenderManager manager) {
-			return new RenderGhoul(manager);
-			}
-		});
-		//HellHound
-		RenderingRegistry.registerEntityRenderingHandler(EntityHellHound.class, new IRenderFactory<EntityHellHound>()
-		{
-				
-		@Override
-		public Render<? super EntityHellHound> createRenderFor(RenderManager manager) {
-			return new RenderHellHound(manager);
-			}
-		});
+			//Core Demon
+			RenderingRegistry.registerEntityRenderingHandler(EntityCoreDemon.class, new IRenderFactory<EntityCoreDemon>() {
+				@Override
+				public Render<? super EntityCoreDemon> createRenderFor(RenderManager manager) {
+					return new RenderCoreDemon(manager);
+				}
+			});
 
+			//Ghoul
+			RenderingRegistry.registerEntityRenderingHandler(EntityGhoul.class, new IRenderFactory<EntityGhoul>() {
+
+				@Override
+				public Render<? super EntityGhoul> createRenderFor(RenderManager manager) {
+					return new RenderGhoul(manager);
+				}
+			});
+			//HellHound
+			RenderingRegistry.registerEntityRenderingHandler(EntityHellHound.class, new IRenderFactory<EntityHellHound>() {
+
+				@Override
+				public Render<? super EntityHellHound> createRenderFor(RenderManager manager) {
+					return new RenderHellHound(manager);
+				}
+			});
+
+			//Death Enderman
+			RenderingRegistry.registerEntityRenderingHandler(EntityDeathEnderman.class, new IRenderFactory<EntityDeathEnderman>() {
+
+				@Override
+				public Render<? super EntityDeathEnderman> createRenderFor(RenderManager manager) {
+					return new RenderDeathEnderman(manager);
+				}
+			});
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
-		RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
-		RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityEmeraldArrow.class, manager -> new RenderEmeraldArrow(manager));
 
 
-	}
+		}
 	
 	public static void registerCustomMeshesAndStates()
 		{

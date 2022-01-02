@@ -4,6 +4,8 @@ import com.PlanetCore.items.ShinyItem;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.armor.*;
+import com.PlanetCore.items.arrows.EmeraldArrow;
+import com.PlanetCore.items.bows.EmeraldBow;
 import com.PlanetCore.items.food.SixEffectFoodItem;
 import com.PlanetCore.items.food.EightEffectFoodItem;
 import com.PlanetCore.items.food.ThreeEffectFoodItem;
@@ -604,6 +606,10 @@ public class ModItems {
 	public static final Item TITANIUM_URANIUM_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_URANIUM_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_TITANIUM_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+
+	//Bows
+	public static final Item EMERALD_BOW = new EmeraldBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item EMERALD_ARROW = new EmeraldArrow().setCreativeTab(CreativeTabs.COMBAT);
 
 	public static final Item DEMON_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item DEMON_STAR_CHARGED = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);
