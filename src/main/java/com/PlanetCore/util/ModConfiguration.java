@@ -19,6 +19,7 @@ public class ModConfiguration
 	public static int ENTITY_DEATH_ENDERMAN_ID = 206;
 	public static int ENTITY_HOT_BLASE_ID = 207;
 	public static int ENTITY_CORE_BLASE_ID = 208;
+	public static int ENTITY_FLYING_DEMON_ID = 209;
 	public static int GUI_CRUSTROCK_FURNACE_ID = 5;
 	public static int GUI_STEEL_FURNACE_ID = 6;
 	public static int GUI_TITANIUM_FURNACE_ID = 7;

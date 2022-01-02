@@ -19,7 +19,7 @@ public class EntityInit
 
 	public static void registerEntities()
 	{
-		registerEntity("demon", EntityDemon.class, ModConfiguration.ENTITY_DEMON_ID, 50, 11437146, 000000);
+		registerEntity("flying_demon", EntityDemon.class, ModConfiguration.ENTITY_FLYING_DEMON_ID, 50, 11437146, 000000);
 		//registerEntity("blackdemon", EntityDemon.class, ModConfiguration.ENTITY_BLACKDEMON_ID, 50, 999999, 000000);
 		registerEntity("ghoul", EntityGhoul.class, ModConfiguration.ENTITY_GHOUL_ID, 50, 888888, 222222);
 		registerEntity("hellhound", EntityHellHound.class, ModConfiguration.ENTITY_HELLHOUND_ID, 50, 666666, 000000);

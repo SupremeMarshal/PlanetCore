@@ -22,16 +22,13 @@ public class RenderHandler
 		public static void registerEntityRenders()
 		{
 		//Demon
-
-		RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new IRenderFactory<EntityDemon>()
-		{
+		RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new IRenderFactory<EntityDemon>() {
 
 			@Override
 			public Render<? super EntityDemon> createRenderFor(RenderManager manager) {
 				return new RenderDemon(manager);
 			}
 		});
-
 
 		//Ghoul
 		RenderingRegistry.registerEntityRenderingHandler(EntityGhoul.class, new IRenderFactory<EntityGhoul>()

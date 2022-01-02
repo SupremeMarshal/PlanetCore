@@ -1,17 +1,15 @@
 package com.PlanetCore.entity.goals;
 
 import com.PlanetCore.entity.EntityDemon;
-import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.pathfinding.Path;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 
-    public class DemonAttackMeleeAi extends EntityAIBase {
+public class DemonAttackMeleeAi extends EntityAIBase {
 
         /**
          * An amount of decrementing ticks that allows the entity to attack once the tick reaches 0.
