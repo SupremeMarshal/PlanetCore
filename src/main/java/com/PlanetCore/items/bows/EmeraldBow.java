@@ -1,55 +1,34 @@
 package com.PlanetCore.items.bows;
 
 import com.PlanetCore.init.ModItems;
-import com.PlanetCore.items.arrows.EmeraldArrow;
 import com.PlanetCore.items.arrows.EntityEmeraldArrow;
-import io.github.opencubicchunks.cubicchunks.cubicgen.blue.endless.jankson.annotation.Nullable;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.IItemPropertyGetter;
+import net.minecraft.item.ItemArrow;
 import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.stats.StatList;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EmeraldBow extends ItemBow {
-    public EmeraldBow() {
-        this.maxStackSize = 1;
-        this.setMaxDamage(768);
-        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
-        {
-            @SideOnly(Side.CLIENT)
-            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
-            {
-                if (entityIn == null)
-                {
-                    return 0.0F;
-                }
-                else
-                {
-                    return entityIn.getActiveItemStack().getItem() != ModItems.EMERALD_BOW ? 0.0F : (float)(stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 20.0F;
-                }
-            }
-        });
-        this.addPropertyOverride(new ResourceLocation("pulling"), new IItemPropertyGetter()
-        {
-            @SideOnly(Side.CLIENT)
-            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
-            {
-                return entityIn != null && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
-            }
-        });
+import java.util.List;
+
+public class EmeraldBow extends ItemBow
+{
+    public EmeraldBow()
+    {
+        setMaxDamage(800);
+        setMaxStackSize(1);
+
     }
 
     @Override
@@ -57,6 +36,17 @@ public class EmeraldBow extends ItemBow {
     {
         return 10;
     }
+
+    @Override
+    protected boolean isArrow(ItemStack stack)
+    {
+        if(stack.getItem() == ModItems.EMERALD_ARROW || stack.getItem() == Items.ARROW)
+        {
+            return true;
+        }
+        return false;
+    }
+
 
     @Override
     public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBase entityLiving, int timeLeft)
@@ -75,21 +65,26 @@ public class EmeraldBow extends ItemBow {
             {
                 if (itemstack.isEmpty())
                 {
-                    itemstack = new ItemStack(ModItems.EMERALD_ARROW);
+                    itemstack = new ItemStack(Items.ARROW);
                 }
 
                 float f = getArrowVelocity(i);
 
                 if ((double)f >= 0.1D)
                 {
-                    boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof EmeraldArrow && ((EmeraldArrow) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
+                    boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemArrow && ((ItemArrow) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
 
                     if (!worldIn.isRemote)
                     {
-                        EmeraldArrow emeraldarrow = (EmeraldArrow)(itemstack.getItem() instanceof EmeraldArrow ? itemstack.getItem() : ModItems.EMERALD_ARROW);
-                        EntityEmeraldArrow entityarrow = emeraldarrow.createArrow(worldIn, itemstack, entityplayer);
-                        entityarrow = this.customizeEmeraldArrow(entityarrow);
+                        ItemArrow itemarrow = (ItemArrow)(itemstack.getItem() instanceof ItemArrow ? itemstack.getItem() : Items.ARROW);
+                        EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
+                        entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
+
+
+                        if (itemstack .getItem() == ModItems.EMERALD_ARROW) {
+                            entityarrow.setDamage(entityarrow.getDamage() + 100000);
+                        }
 
                         if (f == 1.0F)
                         {
@@ -119,7 +114,7 @@ public class EmeraldBow extends ItemBow {
 
                         if (flag1 || entityplayer.capabilities.isCreativeMode && (itemstack.getItem() == Items.SPECTRAL_ARROW || itemstack.getItem() == Items.TIPPED_ARROW))
                         {
-                            entityarrow.pickupStatus = EntityEmeraldArrow.PickupStatus.CREATIVE_ONLY;
+                            entityarrow.pickupStatus = EntityArrow.PickupStatus.CREATIVE_ONLY;
                         }
 
                         worldIn.spawnEntity(entityarrow);
@@ -143,14 +138,24 @@ public class EmeraldBow extends ItemBow {
         }
     }
 
-    public EntityEmeraldArrow customizeEmeraldArrow(EntityEmeraldArrow arrow)
-    {
-        return arrow;
-    }
 
+    @SideOnly(Side.CLIENT)
     @Override
-    protected boolean isArrow(ItemStack stack)
-    {
-        return stack.getItem() instanceof EmeraldArrow;
+    public void addInformation(ItemStack stack, @javax.annotation.Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+
+        if (!stack.hasTagCompound()) {
+
+            stack.setTagCompound(new NBTTagCompound());
+
+        }
+
+        if (!stack.getTagCompound().hasKey("HideFlags")) {
+
+            // hides normal info
+
+            stack.getTagCompound().setInteger("HideFlags", 2);
+
+        }
+        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
     }
 }

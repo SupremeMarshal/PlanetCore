@@ -1113,6 +1113,13 @@ item.onyx_v_boots.tooltip.7=§6+Strength V
 item.onyx_v_boots.tooltip.8=§6+Speed V
 item.onyx_v_boots.tooltip.9=§6+Regeneration III
 
+item.emerald_arrow.name=Emerald arrow
+item.emerald_arrow.tooltip.0=Damage: 2.5
+item.emerald_arrow.tooltip.1=Can be used on emerald bow tier or higher.
+
+item.emerald_bow.name=Emerald bow
+item.emerald_bow.tooltip.0=Can use emerald arrows and below.
+
 //Items
 item.iron_ingot.name=Iron ingot
 item.steel_ingot.name=Steel ingot
