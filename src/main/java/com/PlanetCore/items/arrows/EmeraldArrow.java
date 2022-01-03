@@ -22,9 +22,9 @@ public class EmeraldArrow extends ItemArrow
     }
 
     @Override
-    public EntityArrow createArrow(World worldIn, ItemStack stack, EntityLivingBase shooter)
-    {
-        EntityEmeraldArrow entityEmeraldArrow = new EntityEmeraldArrow(worldIn, shooter);
+    public EntityArrow createArrow(World worldIn, ItemStack stack, EntityLivingBase shooter) {
+
+            EntityEmeraldArrow entityEmeraldArrow = new EntityEmeraldArrow(worldIn, shooter);
         return entityEmeraldArrow;
     }
 
@@ -32,19 +32,6 @@ public class EmeraldArrow extends ItemArrow
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 
-        if (!stack.hasTagCompound()) {
-
-            stack.setTagCompound(new NBTTagCompound());
-
-        }
-
-        if (!stack.getTagCompound().hasKey("HideFlags")) {
-
-            // hides normal info
-
-            stack.getTagCompound().setInteger("HideFlags", 2);
-
-        }
         tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
     }
 }

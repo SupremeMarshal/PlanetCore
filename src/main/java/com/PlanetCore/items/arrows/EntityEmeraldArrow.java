@@ -4,7 +4,9 @@ import java.util.Random;
 
 import com.PlanetCore.init.ModItems;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
@@ -34,9 +36,5 @@ public class EntityEmeraldArrow extends EntityArrow
         return new ItemStack(ModItems.EMERALD_ARROW);
     }
 
-    @Override
-    protected void arrowHit(EntityLivingBase living)
-    {
-        super.arrowHit(living);
-    }
+
 }
