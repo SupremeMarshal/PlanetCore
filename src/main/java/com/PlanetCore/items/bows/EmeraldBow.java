@@ -1,8 +1,10 @@
 package com.PlanetCore.items.bows;
 
 import com.PlanetCore.init.ModItems;
+import com.PlanetCore.items.arrows.DiamondArrow;
 import com.PlanetCore.items.arrows.EmeraldArrow;
-import com.PlanetCore.items.arrows.EntityEmeraldArrow;
+import com.PlanetCore.items.arrows.RubyArrow;
+import com.PlanetCore.items.arrows.SapphireArrow;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
@@ -11,24 +13,43 @@ import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.ItemArrow;
-import net.minecraft.item.ItemBow;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.stats.StatList;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class EmeraldBow extends ItemBow
 {
+    private Item arrow;
+    private int damage;
     public EmeraldBow()
     {
         this.maxStackSize = 1;
-        this.setMaxDamage(768);
-
+        this.setMaxDamage(480);
+        this.addPropertyOverride(new ResourceLocation("pulling"), new IItemPropertyGetter()
+        {
+            @SideOnly(Side.CLIENT)
+            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
+            {
+                return entityIn != null && arrow == Items.ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
+            }
+        });
+        this.addPropertyOverride(new ResourceLocation("pulling_emerald"), new IItemPropertyGetter()
+        {
+            @SideOnly(Side.CLIENT)
+            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
+            {
+                return entityIn != null && arrow == ModItems.EMERALD_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
+            }
+        });
     }
 
     @Override
@@ -40,13 +61,18 @@ public class EmeraldBow extends ItemBow
     @Override
     protected boolean isArrow(ItemStack stack)
     {
-        if(stack.getItem() == ModItems.EMERALD_ARROW || stack.getItem() == Items.ARROW)
+        if(stack.getItem() instanceof ItemArrow || stack.getItem() == ModItems.EMERALD_ARROW)
         {
             return true;
         }
         return false;
     }
 
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+        arrow = this.findAmmo(playerIn).getItem();
+        return super.onItemRightClick(worldIn, playerIn, handIn);
+    }
 
     @Override
     public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityLivingBase entityLiving, int timeLeft)
@@ -56,6 +82,9 @@ public class EmeraldBow extends ItemBow
             EntityPlayer entityplayer = (EntityPlayer)entityLiving;
             boolean flag = entityplayer.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, stack) > 0;
             ItemStack itemstack = this.findAmmo(entityplayer);
+
+
+
 
             int i = this.getMaxItemUseDuration(stack) - timeLeft;
             i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(stack, worldIn, entityplayer, i, !itemstack.isEmpty() || flag);
@@ -67,6 +96,10 @@ public class EmeraldBow extends ItemBow
                 {
                     itemstack = new ItemStack(Items.ARROW);
                 }
+                if (!itemstack.isEmpty() && EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, stack) > 0 && itemstack.getItem() != Items.ARROW)
+                {
+                    itemstack.shrink(-1);
+                }
 
                 float f = getArrowVelocity(i);
 
@@ -76,13 +109,20 @@ public class EmeraldBow extends ItemBow
 
 
                     if (!worldIn.isRemote) {
-                        EmeraldArrow itemarrow = (EmeraldArrow) (itemstack.getItem() instanceof EmeraldArrow ? itemstack.getItem() : ModItems.EMERALD_ARROW);
-                        EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
-                        entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-
-                        if (itemstack.getItem() == ModItems.EMERALD_ARROW) {
-                            entityarrow.setDamage(entityarrow.getDamage() + 1);
+                        EntityArrow entityarrow = null;
+                        Item itemarrow = (itemstack.getItem() instanceof Item ? itemstack.getItem() : Items.ARROW);
+                        if (itemstack.getItem() instanceof ItemArrow) {
+                            entityarrow = ((ItemArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
+                            damage = 2;
                         }
+                        if (itemstack.getItem() == ModItems.EMERALD_ARROW) {
+                            entityarrow = ((EmeraldArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
+                            damage = 3;
+                        }
+
+                        entityarrow = this.customizeArrow(entityarrow);
+                        entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
+                        entityarrow.setDamage(damage);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -91,7 +131,7 @@ public class EmeraldBow extends ItemBow
                         int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
 
                         if (j > 0) {
-                            entityarrow.setDamage(entityarrow.getDamage() + (double) j * 0.5D + 0.5D);
+                            entityarrow.setDamage(damage + (double) j * 0.5D + 0.5D);
                         }
 
                         int k = EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, stack);
@@ -106,9 +146,6 @@ public class EmeraldBow extends ItemBow
 
                         stack.damageItem(1, entityplayer);
 
-                        if (flag1 || entityplayer.capabilities.isCreativeMode && (itemstack.getItem() == Items.SPECTRAL_ARROW || itemstack.getItem() == Items.TIPPED_ARROW)) {
-                            entityarrow.pickupStatus = EntityEmeraldArrow.PickupStatus.CREATIVE_ONLY;
-                        }
                         worldIn.spawnEntity(entityarrow);
                     }
 
@@ -137,7 +174,8 @@ public class EmeraldBow extends ItemBow
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void addInformation(ItemStack stack, @javax.annotation.Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to emerald tier arrows."));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment give infinite normal arrows."));
     }
 }

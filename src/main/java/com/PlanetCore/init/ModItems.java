@@ -4,8 +4,8 @@ import com.PlanetCore.items.ShinyItem;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.armor.*;
-import com.PlanetCore.items.arrows.EmeraldArrow;
-import com.PlanetCore.items.bows.EmeraldBow;
+import com.PlanetCore.items.arrows.*;
+import com.PlanetCore.items.bows.*;
 import com.PlanetCore.items.food.SixEffectFoodItem;
 import com.PlanetCore.items.food.EightEffectFoodItem;
 import com.PlanetCore.items.food.ThreeEffectFoodItem;
@@ -609,7 +609,44 @@ public class ModItems {
 
 	//Bows
 	public static final Item EMERALD_BOW = new EmeraldBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item RUBY_BOW = new RubyBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item SAPPHIRE_BOW = new SapphireBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item DIAMOND_BOW = new DiamondBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item OLIVINE_BOW = new OlivineBow().setCreativeTab(CreativeTabs.COMBAT);
+	/*
+	public static final Item WADSLEYITE_BOW = new WadsleyiteBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item RINGWOODITE_BOW = new RingwooditeBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item BRIGMANITE_BOW = new BrigmaniteBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item MAJORITE_BOW = new MajoriteBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item AMAZONITE_BOW = new AmazoniteBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_BOW = new OnyxBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_II_BOW = new OnyxIIBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_III_BOW = new OnyxIIIBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_IV_BOW = new OnyxIVBow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_V_BOW = new OnyxVBow().setCreativeTab(CreativeTabs.COMBAT);
+
+	 */
+
+
+	//Arrows
 	public static final Item EMERALD_ARROW = new EmeraldArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item RUBY_ARROW = new RubyArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item SAPPHIRE_ARROW = new SapphireArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item DIAMOND_ARROW = new DiamondArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item OLIVINE_ARROW = new OlivineArrow().setCreativeTab(CreativeTabs.COMBAT);
+	/*
+	public static final Item WADSLEYITE_ARROW = new WadsleyiteArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item RINGWOODITE_ARROW = new RingwooditeArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item BRIGMANITE_ARROW = new BrigmaniteArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item MAJORITE_ARROW = new MajoriteArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item AMAZONITE_ARROW = new AmazoniteArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_ARROW = new OnyxArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_II_ARROW = new OnyxIIArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_III_ARROW = new OnyxIIIArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_IV_ARROW = new OnyxIVArrow().setCreativeTab(CreativeTabs.COMBAT);
+	public static final Item ONYX_V_ARROW = new OnyxVArrow().setCreativeTab(CreativeTabs.COMBAT);
+
+	 */
 
 	public static final Item DEMON_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item DEMON_STAR_CHARGED = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);

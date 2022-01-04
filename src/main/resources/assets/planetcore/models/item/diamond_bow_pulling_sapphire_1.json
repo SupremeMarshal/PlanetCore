@@ -1,0 +1,7 @@
+{
+  "parent": "item/bow",
+  "textures":
+  {
+    "layer0": "planetcore:items/diamond_bow_pulling_sapphire_1"
+  }
+}

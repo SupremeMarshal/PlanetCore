@@ -2,6 +2,6 @@
   "parent": "item/bow",
   "textures":
   {
-    "layer0": "planetcore:items/emerald_bow_2"
+    "layer0": "planetcore:items/emerald_bow_pulling_2"
   }
 }

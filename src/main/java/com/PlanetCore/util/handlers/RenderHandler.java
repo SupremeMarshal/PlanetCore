@@ -4,8 +4,7 @@ import com.PlanetCore.entity.*;
 import com.PlanetCore.entity.render.*;
 import com.PlanetCore.init.ModBlocks;
 
-import com.PlanetCore.items.arrows.EntityEmeraldArrow;
-import com.PlanetCore.items.arrows.RenderEmeraldArrow;
+import com.PlanetCore.items.arrows.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemMeshDefinition;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -69,6 +68,23 @@ public class RenderHandler
 			RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityEmeraldArrow.class, manager -> new RenderEmeraldArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityRubyArrow.class, manager -> new RenderRubyArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntitySapphireArrow.class, manager -> new RenderSapphireArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityDiamondArrow.class, manager -> new RenderDiamondArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOlivineArrow.class, manager -> new RenderOlivineArrow(manager));
+			/*
+			RenderingRegistry.registerEntityRenderingHandler(EntityWadsleyiteArrow.class, manager -> new RenderWadsleyiteArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityRingwooditeArrow.class, manager -> new RenderRingwooditeArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityBrigmaniteArrow.class, manager -> new RenderBrigmaniteArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityMajoriteArrow.class, manager -> new RenderMajoriteArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityAmazoniteArrow.class, manager -> new RenderAmazoniteArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrow.class, manager -> new RenderOnyxArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxIIArrow.class, manager -> new RenderOnyxIIArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxIIIArrow.class, manager -> new RenderOnyxIIIArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxIVArrow.class, manager -> new RenderOnyxIVArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxVArrow.class, manager -> new RenderOnyxVArrow(manager));
+
+			 */
 
 
 		}

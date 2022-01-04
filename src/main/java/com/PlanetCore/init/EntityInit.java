@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 import com.PlanetCore.Main;
 import com.PlanetCore.entity.*;
-import com.PlanetCore.items.arrows.EntityEmeraldArrow;
+import com.PlanetCore.items.arrows.*;
 import com.PlanetCore.util.ModConfiguration;
 import com.PlanetCore.util.Reference;
 
@@ -29,6 +29,23 @@ public class EntityInit
 		registerEntity("hot_blaze", EntityHotBlaze.class, ModConfiguration.ENTITY_HOT_BLASE_ID, 50, 999999, 000000);
 		registerEntity("core_blaze", EntityCoreBlaze.class, ModConfiguration.ENTITY_CORE_BLASE_ID, 50, 999999, 999999);
 		registerArrow("emerald_arrow", EntityEmeraldArrow.class, ModConfiguration.ENTITY_EMERALD_ARROW_ID);
+		registerArrow("ruby_arrow", EntityRubyArrow.class, ModConfiguration.ENTITY_RUBY_ARROW_ID);
+		registerArrow("sapphire_arrow", EntitySapphireArrow.class, ModConfiguration.ENTITY_SAPPHIRE_ARROW_ID);
+		registerArrow("diamond_arrow", EntityDiamondArrow.class, ModConfiguration.ENTITY_DIAMOND_ARROW_ID);
+		registerArrow("olivine_arrow", EntityOlivineArrow.class, ModConfiguration.ENTITY_OLIVINE_ARROW_ID);
+		/*
+		registerArrow("wadsleyite_arrow", EntityWadsleyiteArrow.class, ModConfiguration.ENTITY_WADSLEYITE_ARROW_ID);
+		registerArrow("ringwoodite_arrow", EntityRingwooditeArrow.class, ModConfiguration.ENTITY_RINGWOODITE_ARROW_ID);
+		registerArrow("brigmanite_arrow", EntityBrigmaniteArrow.class, ModConfiguration.ENTITY_BRIGMANITE_ARROW_ID);
+		registerArrow("majorite_arrow", EntityMajoriteArrow.class, ModConfiguration.ENTITY_MAJORITE_ARROW_ID);
+		registerArrow("amazonite_arrow", EntityAmazoniteArrow.class, ModConfiguration.ENTITY_AMAZONITE_ARROW_ID);
+		registerArrow("onyx_arrow", EntityOnyxArrow.class, ModConfiguration.ENTITY_ONYX_ARROW_ID);
+		registerArrow("onyx_ii_arrow", EntityOnyxIIArrow.class, ModConfiguration.ENTITY_ONYX_II_ARROW_ID);
+		registerArrow("onyx_iii_arrow", EntityOnyxIIIArrow.class, ModConfiguration.ENTITY_ONYX_III_ARROW_ID);
+		registerArrow("onyx_iv_arrow", EntityOnyxIVArrow.class, ModConfiguration.ENTITY_ONYX_IV_ARROW_ID);
+		registerArrow("onyx_v_arrow", EntityOnyxVArrow.class, ModConfiguration.ENTITY_ONYX_V_ARROW_ID);
+
+		 */
 	}
 
 	private static void registerEntity(String name, Class<? extends Entity> entity, int id, int range, int color1, int color2)

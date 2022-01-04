@@ -15,23 +15,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class EmeraldArrow extends ItemArrow
+public class EmeraldArrow extends Item
 {
     public EmeraldArrow()
     {
     }
 
-    @Override
     public EntityArrow createArrow(World worldIn, ItemStack stack, EntityLivingBase shooter) {
 
-            EntityEmeraldArrow entityEmeraldArrow = new EntityEmeraldArrow(worldIn, shooter);
-        return entityEmeraldArrow;
+        EntityEmeraldArrow entityArrow = new EntityEmeraldArrow(worldIn, shooter);
+        return entityArrow;
     }
 
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 
-        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 3"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Can be used by Emerald tier bow or higher"));
     }
 }

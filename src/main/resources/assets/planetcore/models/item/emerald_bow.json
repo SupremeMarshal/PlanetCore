@@ -45,6 +45,26 @@
         "pull": 0.9
       },
       "model": "planetcore:item/emerald_bow_pulling_2"
+    },
+    {
+      "predicate": {
+        "pulling_emerald": 1
+      },
+      "model": "planetcore:item/emerald_bow_pulling_emerald_0"
+    },
+    {
+      "predicate": {
+        "pulling_emerald": 1,
+        "pull": 0.65
+      },
+      "model": "planetcore:item/emerald_bow_pulling_emerald_1"
+    },
+    {
+      "predicate": {
+        "pulling_emerald": 1,
+        "pull": 0.9
+      },
+      "model": "planetcore:item/emerald_bow_pulling_emerald_2"
     }
   ]
 }

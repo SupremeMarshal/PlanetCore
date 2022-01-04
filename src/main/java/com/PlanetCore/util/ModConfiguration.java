@@ -21,6 +21,21 @@ public class ModConfiguration
 	public static int ENTITY_CORE_BLASE_ID = 208;
 	public static int ENTITY_CORE_DEMON_ID = 209;
 	public static int ENTITY_EMERALD_ARROW_ID = 210;
+	public static int ENTITY_RUBY_ARROW_ID = 211;
+	public static int ENTITY_SAPPHIRE_ARROW_ID = 212;
+	public static int ENTITY_DIAMOND_ARROW_ID = 213;
+	public static int ENTITY_OLIVINE_ARROW_ID = 214;
+	public static int ENTITY_WADSLEYITE_ARROW_ID = 215;
+	public static int ENTITY_RINGWOODITE_ARROW_ID = 216;
+	public static int ENTITY_BRIGMANITE_ARROW_ID = 217;
+	public static int ENTITY_MAJORITE_ARROW_ID = 218;
+	public static int ENTITY_AMAZONITE_ARROW_ID = 219;
+	public static int ENTITY_ONYX_ARROW_ID = 220;
+	public static int ENTITY_ONYX_II_ARROW_ID = 221;
+	public static int ENTITY_ONYX_III_ARROW_ID = 222;
+	public static int ENTITY_ONYX_IV_ARROW_ID = 223;
+	public static int ENTITY_ONYX_V_ARROW_ID = 224;
+
 	public static int GUI_CRUSTROCK_FURNACE_ID = 5;
 	public static int GUI_STEEL_FURNACE_ID = 6;
 	public static int GUI_TITANIUM_FURNACE_ID = 7;
@@ -42,6 +57,20 @@ public class ModConfiguration
 		ENTITY_HELLHOUND_ID = config.getInt("ENTITY_HELLHOUND_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_DEATH_ENDERMAN_ID = config.getInt("ENTITY_DEATH_ENDERMAN_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_EMERALD_ARROW_ID = config.getInt("ENTITY_EMERALD_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_RUBY_ARROW_ID = config.getInt("ENTITY_RUBY_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_SAPPHIRE_ARROW_ID = config.getInt("ENTITY_SAPPHIRE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_DIAMOND_ARROW_ID = config.getInt("ENTITY_DIAMOND_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_OLIVINE_ARROW_ID = config.getInt("ENTITY_OLIVINE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_WADSLEYITE_ARROW_ID = config.getInt("ENTITY_WADSLEYITE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_RINGWOODITE_ARROW_ID = config.getInt("ENTITY_RINGWOODITE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_BRIGMANITE_ARROW_ID = config.getInt("ENTITY_BRIGMANITE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_MAJORITE_ARROW_ID = config.getInt("ENTITY_MAJORITE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_AMAZONITE_ARROW_ID = config.getInt("ENTITY_AMAZONITE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_ARROW_ID = config.getInt("ENTITY_ONYX_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_II_ARROW_ID = config.getInt("ENTITY_ONYX_II_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_III_ARROW_ID = config.getInt("ENTITY_ONYX_III_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_IV_ARROW_ID = config.getInt("ENTITY_ONYX_IV_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_V_ARROW_ID = config.getInt("ENTITY_ONYX_V_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 
 		category = "GUI IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the GUI's to ensure that they don't clash with other mod's ids");
