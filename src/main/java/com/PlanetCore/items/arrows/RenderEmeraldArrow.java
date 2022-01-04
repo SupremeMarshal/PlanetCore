@@ -24,6 +24,7 @@ public class RenderEmeraldArrow<T extends EntityEmeraldArrow> extends Render<T> 
         return new ResourceLocation(Reference.MOD_ID + ":textures/entity/arrows/emerald_arrow.png");
     }
 
+    @Override
     public void doRender(T entity, double x, double y, double z, float entityYaw, float partialTicks)
     {
         this.bindEntityTexture(entity);

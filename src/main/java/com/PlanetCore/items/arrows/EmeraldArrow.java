@@ -32,6 +32,6 @@ public class EmeraldArrow extends Item
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 
         tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 3"));
-        tooltip.add(net.minecraft.client.resources.I18n.format("Can be used by Emerald tier bow or higher"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Can be used by emerald tier bow or higher"));
     }
 }

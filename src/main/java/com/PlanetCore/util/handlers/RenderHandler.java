@@ -72,19 +72,16 @@ public class RenderHandler
 			RenderingRegistry.registerEntityRenderingHandler(EntitySapphireArrow.class, manager -> new RenderSapphireArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityDiamondArrow.class, manager -> new RenderDiamondArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityOlivineArrow.class, manager -> new RenderOlivineArrow(manager));
-			/*
 			RenderingRegistry.registerEntityRenderingHandler(EntityWadsleyiteArrow.class, manager -> new RenderWadsleyiteArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityRingwooditeArrow.class, manager -> new RenderRingwooditeArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityBrigmaniteArrow.class, manager -> new RenderBrigmaniteArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityMajoriteArrow.class, manager -> new RenderMajoriteArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityAmazoniteArrow.class, manager -> new RenderAmazoniteArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrow.class, manager -> new RenderOnyxArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxIIArrow.class, manager -> new RenderOnyxIIArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxIIIArrow.class, manager -> new RenderOnyxIIIArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxIVArrow.class, manager -> new RenderOnyxIVArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxVArrow.class, manager -> new RenderOnyxVArrow(manager));
-
-			 */
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrowII.class, manager -> new RenderOnyxArrowII(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrowIII.class, manager -> new RenderOnyxArrowIII(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrowIV.class, manager -> new RenderOnyxArrowIV(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrowV.class, manager -> new RenderOnyxArrowV(manager));
 
 
 		}

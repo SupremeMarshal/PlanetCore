@@ -177,5 +177,6 @@ public class EmeraldBow extends ItemBow
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to emerald tier arrows."));
         tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment give infinite normal arrows."));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }

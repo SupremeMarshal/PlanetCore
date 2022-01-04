@@ -164,12 +164,12 @@ public class OlivineBow extends ItemBow
                         }
                         if (itemstack.getItem() == ModItems.OLIVINE_ARROW) {
                             entityarrow = ((OlivineArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 8;
+                            damage = 7;
                         }
 
                         entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                        entityarrow.setDamage(damage);
+                        entityarrow.setDamage(damage + 1);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -178,7 +178,7 @@ public class OlivineBow extends ItemBow
                         int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
 
                         if (j > 0) {
-                            entityarrow.setDamage(damage + (double) j * 0.5D + 0.5D);
+                            entityarrow.setDamage(damage + (double) j * 0.5D + 1.5D);
                         }
 
                         int k = EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, stack);
@@ -223,6 +223,8 @@ public class OlivineBow extends ItemBow
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to olivine tier arrows."));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Increased damage: +1"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment give infinite normal arrows."));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }

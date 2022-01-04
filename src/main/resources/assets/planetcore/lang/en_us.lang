@@ -1114,11 +1114,36 @@ item.onyx_v_boots.tooltip.8=§6+Speed V
 item.onyx_v_boots.tooltip.9=§6+Regeneration III
 
 item.emerald_arrow.name=Emerald arrow
-item.emerald_arrow.tooltip.0=Damage: 2.5
-item.emerald_arrow.tooltip.1=Can be used on emerald bow tier or higher.
+item.ruby_arrow.name=Ruby arrow
+item.sapphire_arrow.name=Sapphire arrow
+item.diamond_arrow.name=Diamond arrow
+item.olivine_arrow.name=Olivine arrow
+item.wadsleyite_arrow.name=Wadsleyite arrow
+item.ringwoodite_arrow.name=Ringwoodite arrow
+item.brigmanite_arrow.name=Brigmanite arrow
+item.majorite_arrow.name=Majorite arrow
+item.amazonite_arrow.name=Amazonite arrow
+item.onyx_arrow.name=Onyx arrow
+item.onyx_arrow_ii.name=Onyx arrow II
+item.onyx_arrow_iii.name=Onyx arrow III
+item.onyx_arrow_iv.name=Onyx arrow IV
+item.onyx_arrow_v.name=Onyx arrow V
 
 item.emerald_bow.name=Emerald bow
-item.emerald_bow.tooltip.0=Can use emerald arrows and below.
+item.ruby_bow.name=Ruby bow
+item.sapphire_bow.name=Sapphire bow
+item.diamond_bow.name=Diamond bow
+item.olivine_bow.name=Olivine bow
+item.wadsleyite_bow.name=Wadsleyite bow
+item.ringwoodite_bow.name=Ringwoodite bow
+item.brigmanite_bow.name=Brigmanite bow
+item.majorite_bow.name=Majorite bow
+item.amazonite_bow.name=Amazonite bow
+item.onyx_bow.name=Onyx bow
+item.onyx_bow_ii.name=Onyx bow II
+item.onyx_bow_iii.name=Onyx bow III
+item.onyx_bow_iv.name=Onyx bow IV
+item.onyx_bow_v.name=Onyx bow V
 
 //Items
 item.iron_ingot.name=Iron ingot

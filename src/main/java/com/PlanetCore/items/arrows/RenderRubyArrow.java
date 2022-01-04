@@ -22,6 +22,7 @@ public class RenderRubyArrow<T extends EntityRubyArrow> extends Render<T> {
         return new ResourceLocation(Reference.MOD_ID + ":textures/entity/arrows/ruby_arrow.png");
     }
 
+    @Override
     public void doRender(T entity, double x, double y, double z, float entityYaw, float partialTicks)
     {
         this.bindEntityTexture(entity);

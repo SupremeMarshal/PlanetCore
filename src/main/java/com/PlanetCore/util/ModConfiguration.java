@@ -31,10 +31,10 @@ public class ModConfiguration
 	public static int ENTITY_MAJORITE_ARROW_ID = 218;
 	public static int ENTITY_AMAZONITE_ARROW_ID = 219;
 	public static int ENTITY_ONYX_ARROW_ID = 220;
-	public static int ENTITY_ONYX_II_ARROW_ID = 221;
-	public static int ENTITY_ONYX_III_ARROW_ID = 222;
-	public static int ENTITY_ONYX_IV_ARROW_ID = 223;
-	public static int ENTITY_ONYX_V_ARROW_ID = 224;
+	public static int ENTITY_ONYX_ARROW_II_ID = 221;
+	public static int ENTITY_ONYX_ARROW_III_ID = 222;
+	public static int ENTITY_ONYX_ARROW_IV_ID = 223;
+	public static int ENTITY_ONYX_ARROW_V_ID = 224;
 
 	public static int GUI_CRUSTROCK_FURNACE_ID = 5;
 	public static int GUI_STEEL_FURNACE_ID = 6;
@@ -67,10 +67,10 @@ public class ModConfiguration
 		ENTITY_MAJORITE_ARROW_ID = config.getInt("ENTITY_MAJORITE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_AMAZONITE_ARROW_ID = config.getInt("ENTITY_AMAZONITE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_ONYX_ARROW_ID = config.getInt("ENTITY_ONYX_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
-		ENTITY_ONYX_II_ARROW_ID = config.getInt("ENTITY_ONYX_II_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
-		ENTITY_ONYX_III_ARROW_ID = config.getInt("ENTITY_ONYX_III_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
-		ENTITY_ONYX_IV_ARROW_ID = config.getInt("ENTITY_ONYX_IV_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
-		ENTITY_ONYX_V_ARROW_ID = config.getInt("ENTITY_ONYX_V_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_ARROW_II_ID = config.getInt("ENTITY_ONYX_ARROW_II_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_ARROW_III_ID = config.getInt("ENTITY_ONYX_ARROW_III_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_ARROW_IV_ID = config.getInt("ENTITY_ONYX_ARROW_IV_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_ONYX_ARROW_V_ID = config.getInt("ENTITY_ONYX_ARROW_V_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 
 		category = "GUI IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the GUI's to ensure that they don't clash with other mod's ids");

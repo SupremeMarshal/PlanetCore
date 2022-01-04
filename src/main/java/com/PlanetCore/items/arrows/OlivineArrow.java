@@ -29,7 +29,7 @@ public class OlivineArrow extends Item
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 
-        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 8"));
-        tooltip.add(net.minecraft.client.resources.I18n.format("Can be used by Olivine tier bow or higher"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 7"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Can be used by olivine tier bow or higher"));
     }
 }
