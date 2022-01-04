@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures":
+  {
+    "layer0": "planetcore:items/onyx_arrow_iv"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "item/bow",
+  "textures":
+  {
+    "layer0": "planetcore:items/onyx_bow_v_pulling_amazonite_1"
+  }
+}
