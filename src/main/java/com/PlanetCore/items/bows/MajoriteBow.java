@@ -150,7 +150,7 @@ public class MajoriteBow extends ItemBow
         if (entityLiving instanceof EntityPlayer)
         {
             EntityPlayer entityplayer = (EntityPlayer)entityLiving;
-            boolean flag = entityplayer.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, stack) > 0;
+            boolean flag = entityplayer.capabilities.isCreativeMode;
             ItemStack itemstack = this.findAmmo(entityplayer);
 
             int i = this.getMaxItemUseDuration(stack) - timeLeft;
@@ -172,8 +172,6 @@ public class MajoriteBow extends ItemBow
 
                 if ((double)f >= 0.1D)
                 {
-                    boolean flag1 = entityplayer.capabilities.isCreativeMode || (itemstack.getItem() instanceof ItemArrow && ((ItemArrow) itemstack.getItem()).isInfinite(itemstack, stack, entityplayer));
-
 
                     if (!worldIn.isRemote) {
                         EntityArrow entityarrow = null;
@@ -253,7 +251,7 @@ public class MajoriteBow extends ItemBow
 
                     worldIn.playSound((EntityPlayer)null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
 
-                    if (!flag1 && !entityplayer.capabilities.isCreativeMode)
+                    if (!entityplayer.capabilities.isCreativeMode)
                     {
                         itemstack.shrink(1);
 
@@ -276,7 +274,7 @@ public class MajoriteBow extends ItemBow
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to majorite tier arrows."));
         tooltip.add(net.minecraft.client.resources.I18n.format("Increased damage: +6"));
-        tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment give infinite normal arrows."));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment don't work with this bow."));
         tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }
