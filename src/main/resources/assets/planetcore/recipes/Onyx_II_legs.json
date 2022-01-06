@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BBB",
+        "BAB",
+        "BBB"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:onyx_leggings"
+        },
+        "B":
+        {
+            "item": "planetcore:painite"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:onyx_ii_leggings",
+        "count": 1
+    }
+}

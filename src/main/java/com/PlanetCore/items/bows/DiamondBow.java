@@ -74,6 +74,12 @@ public class DiamondBow extends ItemBow
     }
 
     @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    {
+        return repair.getItem() == ModItems.DIAMOND || super.getIsRepairable(toRepair, repair);
+    }
+
+    @Override
     public int getItemEnchantability()
     {
         return 10;

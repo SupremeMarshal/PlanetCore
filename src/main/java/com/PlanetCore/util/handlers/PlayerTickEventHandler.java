@@ -3,12 +3,14 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.Main;
 import com.PlanetCore.entity.EntityHotBlaze;
 import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.init.ModItems;
 import com.PlanetCore.init.ModPotions;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -48,6 +50,11 @@ public class PlayerTickEventHandler {
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if (event.player.getHeldItem(EnumHand.OFF_HAND).getItem() == ModItems.ONYX_V_SHIELD)
+        {
+            event.player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 0, 4));
+            event.player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 0, 3));
+        }
         if (!event.player.getEntityWorld().isRemote) {
             //Heal player based on food level. Heal from 0% to 100% in 600 seconds at max food lvl. Heal fully in 3 hours if food level is 1. At 0 food, player stop healing.
             if (event.player.getFoodStats().getFoodLevel() >= 1) {
@@ -55,6 +62,8 @@ public class PlayerTickEventHandler {
                     event.player.heal(event.player.getMaxHealth() / (12000 / event.player.getFoodStats().getFoodLevel()));
                 }
             }
+
+
 
             PotionEffect effect = event.player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 

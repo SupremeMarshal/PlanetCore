@@ -114,6 +114,12 @@ public class MajoriteBow extends ItemBow
     }
 
     @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    {
+        return repair.getItem() == ModItems.MAJORITE || super.getIsRepairable(toRepair, repair);
+    }
+
+    @Override
     public int getItemEnchantability()
     {
         return 10;

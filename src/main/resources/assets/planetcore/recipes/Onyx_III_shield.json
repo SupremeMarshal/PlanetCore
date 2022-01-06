@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_ii_shield"
+    },
+    {
+      "item": "planetcore:onyx_ii_shield"
+    },
+    {
+      "item": "planetcore:onyx_ii_shield"
+    },
+    {
+      "item": "planetcore:onyx_ii_shield"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_iii_shield",
+    "count": 1
+  }
+}

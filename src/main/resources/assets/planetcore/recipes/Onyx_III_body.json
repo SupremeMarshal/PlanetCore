@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_ii_chestplate"
+    },
+    {
+      "item": "planetcore:onyx_ii_chestplate"
+    },
+    {
+      "item": "planetcore:onyx_ii_chestplate"
+    },
+    {
+      "item": "planetcore:onyx_ii_chestplate"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_iii_chestplate",
+    "count": 1
+  }
+}

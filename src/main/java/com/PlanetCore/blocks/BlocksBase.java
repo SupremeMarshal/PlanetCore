@@ -22,12 +22,19 @@ import java.util.Random;
 
 public class BlocksBase extends BlockBase {
 	public final PlanetMaterial planetMaterial;
-	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial) {
+	public final PlanetHardness planetHardness;
+	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness) {
 		super(name, material);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 		this.planetMaterial = planetMaterial;
+		this.planetHardness = planetHardness;
+	}
+
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		return planetHardness.hardness * 16;
 	}
 
 	@Override

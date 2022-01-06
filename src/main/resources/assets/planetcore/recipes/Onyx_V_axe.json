@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_iv_axe"
+    },
+    {
+      "item": "planetcore:onyx_iv_axe"
+    },
+    {
+      "item": "planetcore:onyx_iv_axe"
+    },
+    {
+      "item": "planetcore:onyx_iv_axe"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_v_axe",
+    "count": 1
+  }
+}

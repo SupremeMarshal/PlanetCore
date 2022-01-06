@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_ii_sword"
+    },
+    {
+      "item": "planetcore:onyx_ii_sword"
+    },
+    {
+      "item": "planetcore:onyx_ii_sword"
+    },
+    {
+      "item": "planetcore:onyx_ii_sword"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_iii_sword",
+    "count": 1
+  }
+}

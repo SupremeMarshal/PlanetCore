@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_bow_iv"
+    },
+    {
+      "item": "planetcore:onyx_bow_iv"
+    },
+    {
+      "item": "planetcore:onyx_bow_iv"
+    },
+    {
+      "item": "planetcore:onyx_bow_iv"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_bow_v",
+    "count": 1
+  }
+}

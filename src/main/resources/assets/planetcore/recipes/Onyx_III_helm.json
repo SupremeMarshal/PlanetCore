@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_ii_helmet"
+    },
+    {
+      "item": "planetcore:onyx_ii_helmet"
+    },
+    {
+      "item": "planetcore:onyx_ii_helmet"
+    },
+    {
+      "item": "planetcore:onyx_ii_helmet"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_iii_helmet",
+    "count": 1
+  }
+}

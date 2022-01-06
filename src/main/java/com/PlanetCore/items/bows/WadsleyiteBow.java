@@ -90,6 +90,12 @@ public class WadsleyiteBow extends ItemBow
     }
 
     @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    {
+        return repair.getItem() == ModItems.WADSLEYITE || super.getIsRepairable(toRepair, repair);
+    }
+
+    @Override
     public int getItemEnchantability()
     {
         return 10;

@@ -98,6 +98,12 @@ public class RingwooditeBow extends ItemBow
     }
 
     @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    {
+        return repair.getItem() == ModItems.RINGWOODITE || super.getIsRepairable(toRepair, repair);
+    }
+
+    @Override
     public int getItemEnchantability()
     {
         return 10;

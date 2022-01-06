@@ -138,6 +138,12 @@ public class OnyxBowII extends ItemBow
     }
 
     @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    {
+        return repair.getItem() == ModItems.PAINITE || super.getIsRepairable(toRepair, repair);
+    }
+
+    @Override
     public int getItemEnchantability()
     {
         return 10;
@@ -253,7 +259,7 @@ public class OnyxBowII extends ItemBow
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW_II) {
                             entityarrow = ((OnyxArrowII) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 18;
+                            damage = 20;
                         }
 
                         entityarrow = this.customizeArrow(entityarrow);

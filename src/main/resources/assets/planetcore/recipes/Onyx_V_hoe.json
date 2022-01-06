@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_iv_hoe"
+    },
+    {
+      "item": "planetcore:onyx_iv_hoe"
+    },
+    {
+      "item": "planetcore:onyx_iv_hoe"
+    },
+    {
+      "item": "planetcore:onyx_iv_hoe"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_v_hoe",
+    "count": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_ii_boots"
+    },
+    {
+      "item": "planetcore:onyx_ii_boots"
+    },
+    {
+      "item": "planetcore:onyx_ii_boots"
+    },
+    {
+      "item": "planetcore:onyx_ii_boots"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_iii_boots",
+    "count": 1
+  }
+}

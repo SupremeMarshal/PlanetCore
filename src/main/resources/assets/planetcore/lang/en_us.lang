@@ -3944,15 +3944,10 @@ tile.corestone_compact_silicon_centercorestone.name=Centercorestone compact Sili
 tile.corestone_compact_lead_centercorestone.name=Centercorestone compact Lead
 tile.corestone_compact_copper_centercorestone.name=Centercorestone compact Copper
 tile.corestone_compact_tin_centercorestone.name=Centercorestone compact Tin
-tile.corestone_compact_azurite_centercorestone.name=Centercorestone compact Azurite
 tile.corestone_compact_onyx_centercorestone.name=Centercorestone compact Onyx
-tile.corestone_compact_amethyst_centercorestone.name=Centercorestone compact Amethyst
 tile.corestone_compact_amazonite_centercorestone.name=Centercorestone compact Amazonite
-tile.corestone_compact_jade_centercorestone.name=Centercorestone compact Jade
 tile.corestone_compact_diamond_centercorestone.name=Centercorestone compact Diamond
-tile.corestone_compact_topaz_centercorestone.name=Centercorestone compact Topaz
 tile.corestone_compact_ruby_centercorestone.name=Centercorestone compact Ruby
-tile.corestone_compact_flaming_topaz_centercorestone.name=Centercorestone compact Flaming Topaz
 tile.corestone_compact_sapphire_centercorestone.name=Centercorestone compact Sapphire
 tile.corestone_compact_emerald_centercorestone.name=Centercorestone compact Emerald
 tile.corestone_compact_lapis_centercorestone.name=Centercorestone compact Lapis Lazuli
@@ -3963,6 +3958,22 @@ tile.corestone_compact_iron_centercorestone.name=Centercorestone compact Iron
 tile.corestone_compact_coal_centercorestone.name=Centercorestone compact Coal
 tile.corestone_compact_redstone_centercorestone.name=Centercorestone compact Redstone
 tile.corestone_compact_sulfur_centercorestone.name=Centercorestone compact Sulfur
+
+tile.centercorestone_compact_painite.name=Centercorestone compact Painite
+tile.centercorestone_small_painite.name=Centercorestone small Painite
+tile.centercorestone_painite.name=Centercorestone Painite
+
+tile.onyx_gravel.name=Onyx gravel
+tile.amazonite_gravel.name=Amazonite gravel
+tile.diamond_gravel.name=Diamond gravel
+tile.ruby_gravel.name=Ruby gravel
+tile.sapphire_gravel.name=Sapphire gravel
+tile.emerald_gravel.name=Emerald gravel
+tile.majorite_gravel.name=Majorite gravel
+tile.brigmanite_gravel.name=Brigmanite gravel
+tile.ringwoodite_gravel.name=Ringwoodite gravel
+tile.wadsleyite_gravel.name=Wadsleyite gravel
+tile.olivine_gravel.name=Olivine gravel
 
 tile.crust_cobblestone.name=Crust cobblestone
 
@@ -4283,6 +4294,19 @@ item.amazonite_shard.name=Amazonite shard
 item.onyx_shard.name=Onyx shard
 item.painite_shard.name=Painite shard
 
+//Bladed gem
+item.bladed_emerald.name=Bladed Emerald
+item.bladed_ruby.name=Bladed Ruby
+item.bladed_sapphire.name=Bladed Sapphire
+item.bladed_diamond.name=Bladed Diamond
+item.bladed_olivine.name=Bladed Olivine
+item.bladed_wadsleyite.name=Bladed Wadsleyite
+item.bladed_ringwoodite.name=Bladed Ringwoodite
+item.bladed_brigmanite.name=Bladed Brigmanite
+item.bladed_majorite.name=Bladed Majorite
+item.bladed_amazonite.name=Bladed Amazonite
+item.bladed_onyx.name=Bladed Onyx
+
 
 //Ingot
 
@@ -4341,77 +4365,146 @@ item.ringwoodite_rod.name=Ringwoodite rod
 item.brigmanite_rod.name=Brigmanite rod
 item.majorite_rod.name=Majorite rod
 
+//Shield
 
-//shield
-item.aluminium_shield.name=Aluminium shield
-item.silicon_shield.name=Silicon shield
-item.zinc_shield.name=Zinc shield
-item.tin_shield.name=Tin shield
-item.copper_shield.name=Copper shield
-item.bronze_shield.name=Bronze shield
-item.titanium_shield.name=titanium shield
-item.uranium_shield.name=uranium shield
-item.tungsten_shield.name=Tungsten shield
-item.titanium_uranium_shield.name=titanium uranium alloy shield
-item.tungsten_uranium_shield.name=Tungsten uranium alloy shield
-item.tungsten_titanium_shield.name=Tungsten titanium alloy shield
-item.emerald_shield.name=Emerald shield
-item.olivine_shield.name=Olivine shield
-item.wadsleyite_shield.name=Wadsleyite shield
-item.ringwoodite_shield.name=Ringwoodite shield
-item.brigmanite_shield.name=Brigmanite shield
-item.majorite_shield.name=Majorite shield
+item.aluminium_shield.tooltip.0=When holding the shield:
+item.aluminium_shield.tooltip.1=§a+3%% Knockback Resistance
 
-
-item.iron_shield.name=Iron shield
 item.iron_shield.tooltip.0=When holding the shield:
-item.iron_shield.tooltip.1=§9+5%% Knockback Resistance
+item.iron_shield.tooltip.1=§a+5%% Knockback Resistance
 
-item.steel_shield.name=Steel shield
+item.tin_shield.tooltip.0=When holding the shield:
+item.tin_shield.tooltip.1=§a+5%% Knockback Resistance
+
+item.copper_shield.tooltip.0=When holding the shield:
+item.copper_shield.tooltip.1=§a+5%% Knockback Resistance
+
 item.steel_shield.tooltip.0=When holding the shield:
-item.steel_shield.tooltip.1=§9+10%% Knockback Resistance
+item.steel_shield.tooltip.1=§a+0.5 Health
+item.steel_shield.tooltip.1=§a+6%% Knockback Resistance
 
-item.silver_shield.name=Silver shield
+item.bronze_shield.tooltip.0=When holding the shield:
+item.bronze_shield.tooltip.1=§a+1 Health
+item.bronze_shield.tooltip.1=§a+7%% Knockback Resistance
+
 item.silver_shield.tooltip.0=When holding the shield:
-item.silver_shield.tooltip.1=§9+4 Health
-item.silver_shield.tooltip.2=§9+20%% Knockback Resistance
+item.silver_shield.tooltip.1=§a+2 Health
+item.silver_shield.tooltip.2=§a+8%% Knockback Resistance
 
-item.gold_shield.name=Gold shield
 item.gold_shield.tooltip.0=When holding the shield:
-item.gold_shield.tooltip.1=§9+4 Health
-item.gold_shield.tooltip.2=§9+30%% Knockback Resistance
+item.gold_shield.tooltip.1=§a+4 Health
+item.gold_shield.tooltip.2=§a+9%% Knockback Resistance
 
-item.platinum_shield.name=Platinum shield
 item.platinum_shield.tooltip.0=When holding the shield:
-item.platinum_shield.tooltip.1=§9+8 Health
-item.platinum_shield.tooltip.2=§9+40%% Knockback Resistance
+item.platinum_shield.tooltip.1=§a+6 Health
+item.platinum_shield.tooltip.2=§a+10%% Knockback Resistance
 
-item.sapphire_shield.name=Sapphire shield
-item.sapphire_shield.tooltip.0=When holding the shield:
-item.sapphire_shield.tooltip.1=§9+12 Health
-item.sapphire_shield.tooltip.2=§9+50%% Knockback Resistance
-item.sapphire_shield.tooltip.3=+Resistance I
+item.titanium_shield.tooltip.0=When holding the shield:
+item.titanium_shield.tooltip.1=§a+8 Health
+item.titanium_shield.tooltip.2=§a+11%% Knockback Resistance
 
-item.ruby_shield.name=Ruby shield
+item.uranium_shield.tooltip.0=When holding the shield:
+item.uranium_shield.tooltip.1=§a+10 Health
+item.uranium_shield.tooltip.2=§a+12%% Knockback Resistance
+
+item.titanium_uranium_shield.tooltip.0=When holding the shield:
+item.titanium_uranium_shield.tooltip.1=§a+12 Health
+item.titanium_uranium_shield.tooltip.2=§a+13%% Knockback Resistance
+
+item.tungsten_shield.tooltip.0=When holding the shield:
+item.tungsten_shield.tooltip.1=§a+14 Health
+item.tungsten_shield.tooltip.2=§a+14%% Knockback Resistance
+
+item.tungsten_titanium_shield.tooltip.0=When holding the shield:
+item.tungsten_titanium_shield.tooltip.1=§a+16 Health
+item.tungsten_titanium_shield.tooltip.2=§a+15%% Knockback Resistance
+
+item.tungsten_uranium_shield.tooltip.0=When holding the shield:
+item.tungsten_uranium_shield.tooltip.1=§a+18 Health
+item.tungsten_uranium_shield.tooltip.2=§a+16%% Knockback Resistance
+
+item.emerald_shield.tooltip.0=When holding the shield:
+item.emerald_shield.tooltip.1=§a+20 Health
+item.emerald_shield.tooltip.2=§a+18%% Knockback Resistance
+item.emerald_shield.tooltip.3=§6+Resistance
+
 item.ruby_shield.tooltip.0=When holding the shield:
-item.ruby_shield.tooltip.1=§9+16 Health
-item.ruby_shield.tooltip.2=§9+60%% Knockback Resistance
-item.ruby_shield.tooltip.3=§9+Resistance I
+item.ruby_shield.tooltip.1=§a+24 Health
+item.ruby_shield.tooltip.2=§a+20%% Knockback Resistance
+item.ruby_shield.tooltip.3=§6+Resistance
 
-item.diamond_shield.name=Diamond shield
+item.sapphire_shield.tooltip.0=When holding the shield:
+item.sapphire_shield.tooltip.1=§a+28 Health
+item.sapphire_shield.tooltip.2=§a+22%% Knockback Resistance
+item.sapphire_shield.tooltip.3=§6+Resistance
+
 item.diamond_shield.tooltip.0=When holding the shield:
-item.diamond_shield.tooltip.1=§9+20 Health
-item.diamond_shield.tooltip.2=§9+70%% Knockback Resistance
-item.diamond_shield.tooltip.3=§9+Resistance I
+item.diamond_shield.tooltip.1=§a+32 Health
+item.diamond_shield.tooltip.2=§a+24%% Knockback Resistance
+item.diamond_shield.tooltip.3=§6+Resistance
 
-item.amazonite_shield.name=Amazonite shield
+item.olivine_shield.tooltip.0=When holding the shield:
+item.olivine_shield.tooltip.1=§a+40 Health
+item.olivine_shield.tooltip.2=§a+26%% Knockback Resistance
+item.olivine_shield.tooltip.3=§6+Resistance II
+item.olivine_shield.tooltip.4=§6+Regeneration
+
+item.wadsleyite_shield.tooltip.0=When holding the shield:
+item.wadsleyite_shield.tooltip.1=§a+48 Health
+item.wadsleyite_shield.tooltip.2=§a+28%% Knockback Resistance
+item.wadsleyite_shield.tooltip.3=§6+Resistance II
+item.wadsleyite_shield.tooltip.4=§6+Regeneration
+
+item.ringwoodite_shield.tooltip.0=When holding the shield:
+item.ringwoodite_shield.tooltip.1=§a+56 Health
+item.ringwoodite_shield.tooltip.2=§a+30%% Knockback Resistance
+item.ringwoodite_shield.tooltip.3=§6+Resistance II
+item.ringwoodite_shield.tooltip.4=§6+Regeneration
+
+item.brigmanite_shield.tooltip.0=When holding the shield:
+item.brigmanite_shield.tooltip.1=§a+64 Health
+item.brigmanite_shield.tooltip.2=§a+32%% Knockback Resistance
+item.brigmanite_shield.tooltip.3=§6+Resistance II
+item.brigmanite_shield.tooltip.4=§6+Regeneration
+
+item.majorite_shield.tooltip.0=When holding the shield:
+item.majorite_shield.tooltip.1=§a+72 Health
+item.majorite_shield.tooltip.2=§a+34%% Knockback Resistance
+item.majorite_shield.tooltip.3=§6+Resistance III
+item.majorite_shield.tooltip.4=§6+Regeneration
+
 item.amazonite_shield.tooltip.0=When holding the shield:
-item.amazonite_shield.tooltip.1=§9+30 Health
-item.amazonite_shield.tooltip.2=§9+80%% Knockback Resistance
-item.amazonite_shield.tooltip.3=§9+Resistance II
+item.amazonite_shield.tooltip.1=§a+80 Health
+item.amazonite_shield.tooltip.2=§a+36%% Knockback Resistance
+item.amazonite_shield.tooltip.3=§6+Resistance III
+item.amazonite_shield.tooltip.4=§6+Regeneration
 
-item.onyx_shield.name=Onyx shield
 item.onyx_shield.tooltip.0=When holding the shield:
-item.onyx_shield.tooltip.1=§9+40 Health
-item.onyx_shield.tooltip.2=§9+100%% Knockback Resistance
-item.onyx_shield.tooltip.3=§9+Resistance II
+item.onyx_shield.tooltip.1=§a+100 Health
+item.onyx_shield.tooltip.2=§a+38%% Knockback Resistance
+item.onyx_shield.tooltip.3=§6+Resistance III
+item.onyx_shield.tooltip.4=§6+Regeneration
+
+item.onyx_ii_shield.tooltip.0=When holding the shield:
+item.onyx_ii_shield.tooltip.1=§a+120 Health
+item.onyx_ii_shield.tooltip.2=§a+40%% Knockback Resistance
+item.onyx_ii_shield.tooltip.3=§6+Resistance III
+item.onyx_ii_shield.tooltip.4=§6+Regeneration II
+
+item.onyx_iii_shield.tooltip.0=When holding the shield:
+item.onyx_iii_shield.tooltip.1=§a+160 Health
+item.onyx_iii_shield.tooltip.2=§a+42%% Knockback Resistance
+item.onyx_iii_shield.tooltip.3=§6+Resistance IV
+item.onyx_iii_shield.tooltip.4=§6+Regeneration III
+
+item.onyx_iv_shield.tooltip.0=When holding the shield:
+item.onyx_iv_shield.tooltip.1=§a+200 Health
+item.onyx_iv_shield.tooltip.2=§a+44%% Knockback Resistance
+item.onyx_iv_shield.tooltip.3=§6+Resistance IV
+item.onyx_iv_shield.tooltip.4=§6+Regeneration IV
+
+item.onyx_v_shield.tooltip.0=When holding the shield:
+item.onyx_v_shield.tooltip.1=§a+240 Health
+item.onyx_v_shield.tooltip.2=§a+46%% Knockback Resistance
+item.onyx_v_shield.tooltip.3=§6+Resistance IV
+item.onyx_v_shield.tooltip.4=§6+Regeneration V

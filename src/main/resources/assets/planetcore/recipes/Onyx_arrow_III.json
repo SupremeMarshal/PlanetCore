@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_arrow_ii"
+    },
+    {
+      "item": "planetcore:onyx_arrow_ii"
+    },
+    {
+      "item": "planetcore:onyx_arrow_ii"
+    },
+    {
+      "item": "planetcore:onyx_arrow_ii"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_arrow_iii",
+    "count": 1
+  }
+}

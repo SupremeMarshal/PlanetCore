@@ -1,13 +1,13 @@
 package com.PlanetCore.init;
 
-import com.PlanetCore.items.ShinyItem;
+import com.PlanetCore.items.ItemSpadeX;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
+import com.PlanetCore.items.ShinyItem;
 import com.PlanetCore.items.armor.*;
 import com.PlanetCore.items.arrows.*;
 import com.PlanetCore.items.bows.*;
 import com.PlanetCore.items.food.SixEffectFoodItem;
-import com.PlanetCore.items.food.EightEffectFoodItem;
 import com.PlanetCore.items.food.ThreeEffectFoodItem;
 import com.PlanetCore.items.shields.*;
 import net.minecraft.creativetab.CreativeTabs;
@@ -192,7 +192,7 @@ public class ModItems {
 
 	//PLATINUM//
 	public static final ItemSword PLATINUM_SWORD = new ItemSword(ToolMaterials.PLATINUM);
-	public static final ItemSpade PLATINUM_SHOVEL = new ItemSpade(ToolMaterials.PLATINUM);
+	public static final ItemSpade PLATINUM_SHOVEL = new ItemSpadeX(ToolMaterials.PLATINUM);
 	public static final ItemPickaxe PLATINUM_PICKAXE = new ItemPickaxeX(ToolMaterials.PLATINUM);
 	public static final ItemAxe PLATINUM_AXE = new ItemAxeX(ToolMaterials.PLATINUM);
 	public static final ItemHoe PLATINUM_HOE = new ItemHoe(ToolMaterials.PLATINUM);
@@ -209,7 +209,7 @@ public class ModItems {
 
 	//TITANIUM//
 	public static final ItemSword TITANIUM_SWORD = new ItemSword(ToolMaterials.TITANIUM);
-	public static final ItemSpade TITANIUM_SHOVEL = new ItemSpade(ToolMaterials.TITANIUM);
+	public static final ItemSpade TITANIUM_SHOVEL = new ItemSpadeX(ToolMaterials.TITANIUM);
 	public static final ItemPickaxe TITANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.TITANIUM);
 	public static final ItemAxe TITANIUM_AXE = new ItemAxeX(ToolMaterials.TITANIUM);
 	public static final ItemHoe TITANIUM_HOE = new ItemHoe(ToolMaterials.TITANIUM);
@@ -226,7 +226,7 @@ public class ModItems {
 
 	//URANIUM//
 	public static final ItemSword URANIUM_SWORD = new ItemSword(ToolMaterials.URANIUM);
-	public static final ItemSpade URANIUM_SHOVEL = new ItemSpade(ToolMaterials.URANIUM);
+	public static final ItemSpade URANIUM_SHOVEL = new ItemSpadeX(ToolMaterials.URANIUM);
 	public static final ItemPickaxe URANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.URANIUM);
 	public static final ItemAxe URANIUM_AXE = new ItemAxeX(ToolMaterials.URANIUM);
 	public static final ItemHoe URANIUM_HOE = new ItemHoe(ToolMaterials.URANIUM);
@@ -243,7 +243,7 @@ public class ModItems {
 
 	//TUNGSTEN//
 	public static final ItemSword TUNGSTEN_SWORD = new ItemSword(ToolMaterials.TUNGSTEN);
-	public static final ItemSpade TUNGSTEN_SHOVEL = new ItemSpade(ToolMaterials.TUNGSTEN);
+	public static final ItemSpade TUNGSTEN_SHOVEL = new ItemSpadeX(ToolMaterials.TUNGSTEN);
 	public static final ItemPickaxe TUNGSTEN_PICKAXE = new ItemPickaxeX(ToolMaterials.TUNGSTEN);
 	public static final ItemAxe TUNGSTEN_AXE = new ItemAxeX(ToolMaterials.TUNGSTEN);
 	public static final ItemHoe TUNGSTEN_HOE = new ItemHoe(ToolMaterials.TUNGSTEN);
@@ -260,7 +260,7 @@ public class ModItems {
 
 	//TITANIUM_URANIUM//
 	public static final ItemSword TITANIUM_URANIUM_SWORD = new ItemSword(ToolMaterials.TITANIUM_URANIUM);
-	public static final ItemSpade TITANIUM_URANIUM_SHOVEL = new ItemSpade(ToolMaterials.TITANIUM_URANIUM);
+	public static final ItemSpade TITANIUM_URANIUM_SHOVEL = new ItemSpadeX(ToolMaterials.TITANIUM_URANIUM);
 	public static final ItemPickaxe TITANIUM_URANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.TITANIUM_URANIUM);
 	public static final ItemAxe TITANIUM_URANIUM_AXE = new ItemAxeX(ToolMaterials.TITANIUM_URANIUM);
 	public static final ItemHoe TITANIUM_URANIUM_HOE = new ItemHoe(ToolMaterials.TITANIUM_URANIUM);
@@ -277,7 +277,7 @@ public class ModItems {
 
 	//TUNGSTEN_URANIUM//
 	public static final ItemSword TUNGSTEN_URANIUM_SWORD = new ItemSword(ToolMaterials.TUNGSTEN_URANIUM);
-	public static final ItemSpade TUNGSTEN_URANIUM_SHOVEL = new ItemSpade(ToolMaterials.TUNGSTEN_URANIUM);
+	public static final ItemSpade TUNGSTEN_URANIUM_SHOVEL = new ItemSpadeX(ToolMaterials.TUNGSTEN_URANIUM);
 	public static final ItemPickaxe TUNGSTEN_URANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.TUNGSTEN_URANIUM);
 	public static final ItemAxe TUNGSTEN_URANIUM_AXE = new ItemAxeX(ToolMaterials.TUNGSTEN_URANIUM);
 	public static final ItemHoe TUNGSTEN_URANIUM_HOE = new ItemHoe(ToolMaterials.TUNGSTEN_URANIUM);
@@ -294,7 +294,7 @@ public class ModItems {
 
 	//TUNGSTEN_TITANIUM//
 	public static final ItemSword TUNGSTEN_TITANIUM_SWORD = new ItemSword(ToolMaterials.TUNGSTEN_TITANIUM);
-	public static final ItemSpade TUNGSTEN_TITANIUM_SHOVEL = new ItemSpade(ToolMaterials.TUNGSTEN_TITANIUM);
+	public static final ItemSpade TUNGSTEN_TITANIUM_SHOVEL = new ItemSpadeX(ToolMaterials.TUNGSTEN_TITANIUM);
 	public static final ItemPickaxe TUNGSTEN_TITANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.TUNGSTEN_TITANIUM);
 	public static final ItemPickaxe COMPLETE_TUNGSTEN_TITANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_TUNGSTEN_TITANIUM);
 	public static final ItemAxe TUNGSTEN_TITANIUM_AXE = new ItemAxeX(ToolMaterials.TUNGSTEN_TITANIUM);
@@ -307,7 +307,7 @@ public class ModItems {
 
 	//EMERALD//
 	public static final ItemSword EMERALD_SWORD = new ItemSword(ToolMaterials.EMERALD);
-	public static final ItemSpade EMERALD_SHOVEL = new ItemSpade(ToolMaterials.EMERALD);
+	public static final ItemSpade EMERALD_SHOVEL = new ItemSpadeX(ToolMaterials.EMERALD);
 	public static final ItemPickaxe EMERALD_PICKAXE = new ItemPickaxeX(ToolMaterials.EMERALD);
 	public static final ItemAxe EMERALD_AXE = new ItemAxeX(ToolMaterials.EMERALD);
 	public static final ItemHoe EMERALD_HOE = new ItemHoe(ToolMaterials.EMERALD);
@@ -319,7 +319,7 @@ public class ModItems {
 
 	//RUBY//
 	public static final ItemSword RUBY_SWORD = new ItemSword(ToolMaterials.RUBY);
-	public static final ItemSpade RUBY_SHOVEL = new ItemSpade(ToolMaterials.RUBY);
+	public static final ItemSpade RUBY_SHOVEL = new ItemSpadeX(ToolMaterials.RUBY);
 	public static final ItemPickaxe RUBY_PICKAXE = new ItemPickaxeX(ToolMaterials.RUBY);
 	public static final ItemAxe RUBY_AXE = new ItemAxeX(ToolMaterials.RUBY);
 	public static final ItemHoe RUBY_HOE = new ItemHoe(ToolMaterials.RUBY);
@@ -331,7 +331,7 @@ public class ModItems {
 
 	//SAPPHIRE//
 	public static final ItemSword SAPPHIRE_SWORD = new ItemSword(ToolMaterials.SAPPHIRE);
-	public static final ItemSpade SAPPHIRE_SHOVEL = new ItemSpade(ToolMaterials.SAPPHIRE);
+	public static final ItemSpade SAPPHIRE_SHOVEL = new ItemSpadeX(ToolMaterials.SAPPHIRE);
 	public static final ItemPickaxe SAPPHIRE_PICKAXE = new ItemPickaxeX(ToolMaterials.SAPPHIRE);
 	public static final ItemAxe SAPPHIRE_AXE = new ItemAxeX(ToolMaterials.SAPPHIRE);
 	public static final ItemHoe SAPPHIRE_HOE = new ItemHoe(ToolMaterials.SAPPHIRE);
@@ -343,7 +343,7 @@ public class ModItems {
 
 	//DIAMOND//
 	public static final ItemSword DIAMOND_SWORD = new ItemSword(ToolMaterials.DIAMOND);
-	public static final ItemSpade DIAMOND_SHOVEL = new ItemSpade(ToolMaterials.DIAMOND);
+	public static final ItemSpade DIAMOND_SHOVEL = new ItemSpadeX(ToolMaterials.DIAMOND);
 	public static final ItemPickaxe DIAMOND_PICKAXE = new ItemPickaxeX(ToolMaterials.DIAMOND);
 	public static final ItemAxe DIAMOND_AXE = new ItemAxeX(ToolMaterials.DIAMOND);
 	public static final ItemHoe DIAMOND_HOE = new ItemHoe(ToolMaterials.DIAMOND);
@@ -355,7 +355,7 @@ public class ModItems {
 
 	//OLIVINE//
 	public static final ItemSword OLIVINE_SWORD = new ItemSword(ToolMaterials.OLIVINE);
-	public static final ItemSpade OLIVINE_SHOVEL = new ItemSpade(ToolMaterials.OLIVINE);
+	public static final ItemSpade OLIVINE_SHOVEL = new ItemSpadeX(ToolMaterials.OLIVINE);
 	public static final ItemPickaxe OLIVINE_PICKAXE = new ItemPickaxeX(ToolMaterials.OLIVINE);
 	public static final ItemAxe OLIVINE_AXE = new ItemAxeX(ToolMaterials.OLIVINE);
 	public static final ItemHoe OLIVINE_HOE = new ItemHoe(ToolMaterials.OLIVINE);
@@ -367,7 +367,7 @@ public class ModItems {
 
 	//WADSLEYITE//
 	public static final ItemSword WADSLEYITE_SWORD = new ItemSword(ToolMaterials.WADSLEYITE);
-	public static final ItemSpade WADSLEYITE_SHOVEL = new ItemSpade(ToolMaterials.WADSLEYITE);
+	public static final ItemSpade WADSLEYITE_SHOVEL = new ItemSpadeX(ToolMaterials.WADSLEYITE);
 	public static final ItemPickaxe WADSLEYITE_PICKAXE = new ItemPickaxeX(ToolMaterials.WADSLEYITE);
 	public static final ItemAxe WADSLEYITE_AXE = new ItemAxeX(ToolMaterials.WADSLEYITE);
 	public static final ItemHoe WADSLEYITE_HOE = new ItemHoe(ToolMaterials.WADSLEYITE);
@@ -379,7 +379,7 @@ public class ModItems {
 
 	//RINGWOODITE//
 	public static final ItemSword RINGWOODITE_SWORD = new ItemSword(ToolMaterials.RINGWOODITE);
-	public static final ItemSpade RINGWOODITE_SHOVEL = new ItemSpade(ToolMaterials.RINGWOODITE);
+	public static final ItemSpade RINGWOODITE_SHOVEL = new ItemSpadeX(ToolMaterials.RINGWOODITE);
 	public static final ItemPickaxe RINGWOODITE_PICKAXE = new ItemPickaxeX(ToolMaterials.RINGWOODITE);
 	public static final ItemAxe RINGWOODITE_AXE = new ItemAxeX(ToolMaterials.RINGWOODITE);
 	public static final ItemHoe RINGWOODITE_HOE = new ItemHoe(ToolMaterials.RINGWOODITE);
@@ -391,7 +391,7 @@ public class ModItems {
 
 	//BRIGMANITE//
 	public static final ItemSword BRIGMANITE_SWORD = new ItemSword(ToolMaterials.BRIGMANITE);
-	public static final ItemSpade BRIGMANITE_SHOVEL = new ItemSpade(ToolMaterials.BRIGMANITE);
+	public static final ItemSpade BRIGMANITE_SHOVEL = new ItemSpadeX(ToolMaterials.BRIGMANITE);
 	public static final ItemPickaxe BRIGMANITE_PICKAXE = new ItemPickaxeX(ToolMaterials.BRIGMANITE);
 	public static final ItemAxe BRIGMANITE_AXE = new ItemAxeX(ToolMaterials.BRIGMANITE);
 	public static final ItemHoe BRIGMANITE_HOE = new ItemHoe(ToolMaterials.BRIGMANITE);
@@ -403,7 +403,7 @@ public class ModItems {
 
 	//MAJORITE//
 	public static final ItemSword MAJORITE_SWORD = new ItemSword(ToolMaterials.MAJORITE);
-	public static final ItemSpade MAJORITE_SHOVEL = new ItemSpade(ToolMaterials.MAJORITE);
+	public static final ItemSpade MAJORITE_SHOVEL = new ItemSpadeX(ToolMaterials.MAJORITE);
 	public static final ItemPickaxe MAJORITE_PICKAXE = new ItemPickaxeX(ToolMaterials.MAJORITE);
 	public static final ItemAxe MAJORITE_AXE = new ItemAxeX(ToolMaterials.MAJORITE);
 	public static final ItemHoe MAJORITE_HOE = new ItemHoe(ToolMaterials.MAJORITE);
@@ -415,7 +415,7 @@ public class ModItems {
 
 	//AMAZONITE//
 	public static final ItemSword AMAZONITE_SWORD = new ItemSword(ToolMaterials.AMAZONITE);
-	public static final ItemSpade AMAZONITE_SHOVEL = new ItemSpade(ToolMaterials.AMAZONITE);
+	public static final ItemSpade AMAZONITE_SHOVEL = new ItemSpadeX(ToolMaterials.AMAZONITE);
 	public static final ItemPickaxe AMAZONITE_PICKAXE = new ItemPickaxeX(ToolMaterials.AMAZONITE);
 	public static final ItemAxe AMAZONITE_AXE = new ItemAxeX(ToolMaterials.AMAZONITE);
 	public static final ItemHoe AMAZONITE_HOE = new ItemHoe(ToolMaterials.AMAZONITE);
@@ -427,7 +427,7 @@ public class ModItems {
 
 	//ONYX//
 	public static final ItemSword ONYX_SWORD = new ItemSword(ToolMaterials.ONYX);
-	public static final ItemSpade ONYX_SHOVEL = new ItemSpade(ToolMaterials.ONYX);
+	public static final ItemSpade ONYX_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX);
 	public static final ItemPickaxe ONYX_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX);
 	public static final ItemAxe ONYX_AXE = new ItemAxeX(ToolMaterials.ONYX);
 	public static final ItemHoe ONYX_HOE = new ItemHoe(ToolMaterials.ONYX);
@@ -439,7 +439,7 @@ public class ModItems {
 
 	//ONYX II//
 	public static final ItemSword ONYX_II_SWORD = new ItemSword(ToolMaterials.ONYX_II);
-	public static final ItemSpade ONYX_II_SHOVEL = new ItemSpade(ToolMaterials.ONYX_II);
+	public static final ItemSpade ONYX_II_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_II);
 	public static final ItemPickaxe ONYX_II_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_II);
 	public static final ItemAxe ONYX_II_AXE = new ItemAxeX(ToolMaterials.ONYX_II);
 	public static final ItemHoe ONYX_II_HOE = new ItemHoe(ToolMaterials.ONYX_II);
@@ -451,7 +451,7 @@ public class ModItems {
 
 	//ONYX III//
 	public static final ItemSword ONYX_III_SWORD = new ItemSword(ToolMaterials.ONYX_III);
-	public static final ItemSpade ONYX_III_SHOVEL = new ItemSpade(ToolMaterials.ONYX_III);
+	public static final ItemSpade ONYX_III_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_III);
 	public static final ItemPickaxe ONYX_III_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_III);
 	public static final ItemAxe ONYX_III_AXE = new ItemAxeX(ToolMaterials.ONYX_III);
 	public static final ItemHoe ONYX_III_HOE = new ItemHoe(ToolMaterials.ONYX_III);
@@ -463,7 +463,7 @@ public class ModItems {
 
 	//ONYX IV//
 	public static final ItemSword ONYX_IV_SWORD = new ItemSword(ToolMaterials.ONYX_IV);
-	public static final ItemSpade ONYX_IV_SHOVEL = new ItemSpade(ToolMaterials.ONYX_IV);
+	public static final ItemSpade ONYX_IV_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_IV);
 	public static final ItemPickaxe ONYX_IV_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_IV);
 	public static final ItemAxe ONYX_IV_AXE = new ItemAxeX(ToolMaterials.ONYX_IV);
 	public static final ItemHoe ONYX_IV_HOE = new ItemHoe(ToolMaterials.ONYX_IV);
@@ -475,7 +475,7 @@ public class ModItems {
 
 	//ONYX V//
 	public static final ItemSword ONYX_V_SWORD = new ItemSword(ToolMaterials.ONYX_V);
-	public static final ItemSpade ONYX_V_SHOVEL = new ItemSpade(ToolMaterials.ONYX_V);
+	public static final ItemSpade ONYX_V_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_V);
 	public static final ItemPickaxe ONYX_V_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_V);
 	public static final ItemAxe ONYX_V_AXE = new ItemAxeX(ToolMaterials.ONYX_V);
 	public static final ItemHoe ONYX_V_HOE = new ItemHoe(ToolMaterials.ONYX_V);
@@ -508,8 +508,6 @@ public class ModItems {
 	public static final Item SAPPHIRE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item EMERALD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RUBY = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TOPAZ = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item JADE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item DIAMOND = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item OLIVINE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item WADSLEYITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -519,6 +517,18 @@ public class ModItems {
 	public static final Item AMAZONITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item PAINITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+
+	public static final Item BLADED_SAPPHIRE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_EMERALD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_RUBY = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_DIAMOND = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_OLIVINE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_WADSLEYITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_RINGWOODITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_BRIGMANITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_MAJORITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_AMAZONITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BLADED_ONYX = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//ROD//
 	public static final Item ALUMINIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -544,9 +554,9 @@ public class ModItems {
 	public static final Item WADSLEYITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RINGWOODITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item BRIGMANITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item MAJORITE_ROD = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item AMAZONITE_ROD = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item ONYX_ROD = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item MAJORITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item AMAZONITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item ONYX_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//Ingot//
 	public static final Item ALUMINIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -662,36 +672,36 @@ public class ModItems {
 			new PotionEffect(MobEffects.GLOWING, 3000, 0, false, false));
 
 	//SHIELDS
-	//public static final Item ALUMINIUM_SHIELD = new AluminiumShield();
-	public static final Item COPPER_SHIELD = new ItemShield();
-	public static final Item TIN_SHIELD = new ItemShield();
-	public static final Item IRON_SHIELD = new IronShield();
-	public static final Item STEEL_SHIELD = new SteelShield();
-	public static final Item BRONZE_SHIELD = new ItemShield();
-	public static final Item SILVER_SHIELD = new SilverShield();
-	public static final Item GOLD_SHIELD = new GoldShield();
-	public static final Item PLATINUM_SHIELD = new PlatinumShield();
-	public static final Item TITANIUM_SHIELD = new ItemShield();
-	public static final Item URANIUM_SHIELD = new ItemShield();
-	public static final Item TUNGSTEN_SHIELD = new ItemShield();
-	public static final Item TITANIUM_URANIUM_SHIELD = new ItemShield();
-	public static final Item TUNGSTEN_URANIUM_SHIELD = new ItemShield();
-	public static final Item TUNGSTEN_TITANIUM_SHIELD = new ItemShield();
-	public static final Item EMERALD_SHIELD = new EmeraldShield();
-	public static final Item SAPPHIRE_SHIELD = new SapphireShield();
-	public static final Item RUBY_SHIELD = new RubyShield();
-	public static final Item DIAMOND_SHIELD = new DiamondShield();
-	public static final Item OLIVINE_SHIELD = new ItemShield();
-	public static final Item WADSLEYITE_SHIELD = new ItemShield();
-	public static final Item RINGWOODITE_SHIELD = new ItemShield();
-	public static final Item BRIGMANITE_SHIELD = new ItemShield();
-	public static final Item MAJORITE_SHIELD = new ItemShield();
-	public static final Item AMAZONITE_SHIELD = new ItemShield();
-	public static final Item ONYX_SHIELD = new OnyxShield();
-	public static final Item ONYX_II_SHIELD = new OnyxShield();
-	public static final Item ONYX_III_SHIELD = new OnyxShield();
-	public static final Item ONYX_IV_SHIELD = new OnyxShield();
-	public static final Item ONYX_V_SHIELD = new OnyxShield();
+	public static final Item ALUMINIUM_SHIELD = new Shield(ShieldMaterial.ALUMINIUM);
+	public static final Item COPPER_SHIELD = new Shield(ShieldMaterial.COPPER);
+	public static final Item TIN_SHIELD = new Shield(ShieldMaterial.TIN);
+	public static final Item IRON_SHIELD = new Shield(ShieldMaterial.IRON);
+	public static final Item STEEL_SHIELD = new Shield(ShieldMaterial.STEEL);
+	public static final Item BRONZE_SHIELD = new Shield(ShieldMaterial.BRONZE);
+	public static final Item SILVER_SHIELD = new Shield(ShieldMaterial.SILVER);
+	public static final Item GOLD_SHIELD = new Shield(ShieldMaterial.GOLD);
+	public static final Item PLATINUM_SHIELD = new Shield(ShieldMaterial.PLATINUM);
+	public static final Item TITANIUM_SHIELD = new Shield(ShieldMaterial.TITANIUM);
+	public static final Item URANIUM_SHIELD = new Shield(ShieldMaterial.URANIUM);
+	public static final Item TUNGSTEN_SHIELD = new Shield(ShieldMaterial.TUNGSTEN);
+	public static final Item TITANIUM_URANIUM_SHIELD = new Shield(ShieldMaterial.TITANIUM_URANIUM);
+	public static final Item TUNGSTEN_URANIUM_SHIELD = new Shield(ShieldMaterial.TUNGSTEN_URANIUM);
+	public static final Item TUNGSTEN_TITANIUM_SHIELD = new Shield(ShieldMaterial.TUNGSTEN_TITANIUM);
+	public static final Item EMERALD_SHIELD = new Shield(ShieldMaterial.EMERALD);
+	public static final Item SAPPHIRE_SHIELD = new Shield(ShieldMaterial.SAPPHIRE);
+	public static final Item RUBY_SHIELD = new Shield(ShieldMaterial.RUBY);
+	public static final Item DIAMOND_SHIELD = new Shield(ShieldMaterial.DIAMOND);
+	public static final Item OLIVINE_SHIELD = new Shield(ShieldMaterial.OLIVINE);
+	public static final Item WADSLEYITE_SHIELD = new Shield(ShieldMaterial.WADSLEYITE);
+	public static final Item RINGWOODITE_SHIELD = new Shield(ShieldMaterial.RINGWOODITE);
+	public static final Item BRIGMANITE_SHIELD = new Shield(ShieldMaterial.BRIGMANITE);
+	public static final Item MAJORITE_SHIELD = new Shield(ShieldMaterial.MAJORITE);
+	public static final Item AMAZONITE_SHIELD = new Shield(ShieldMaterial.AMAZONITE);
+	public static final Item ONYX_SHIELD = new Shield(ShieldMaterial.ONYX);
+	public static final Item ONYX_II_SHIELD = new Shield(ShieldMaterial.ONYXII);
+	public static final Item ONYX_III_SHIELD = new Shield(ShieldMaterial.ONYXIII);
+	public static final Item ONYX_IV_SHIELD = new Shield(ShieldMaterial.ONYXIV);
+	public static final Item ONYX_V_SHIELD = new Shield(ShieldMaterial.ONYXV);
 
 	public static List<Item> getItems() {
 		if (ITEMS.isEmpty()) {

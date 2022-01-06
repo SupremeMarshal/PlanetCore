@@ -1,5 +1,6 @@
 package com.PlanetCore.items.bows;
 
+import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
 import com.PlanetCore.items.arrows.*;
 import net.minecraft.client.util.ITooltipFlag;
@@ -145,6 +146,12 @@ public class AmazoniteBow extends ItemBow
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    {
+        return repair.getItem() == ModItems.AMAZONITE || super.getIsRepairable(toRepair, repair);
     }
 
     @Override

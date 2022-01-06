@@ -2,6 +2,6 @@
   "parent": "item/bow",
   "textures":
   {
-    "layer0": "planetcore:items/wadsleyite_bow_pulling_ruby_0"
+    "layer0": "planetcore:items/ringwoodite_bow_pulling_ruby_0"
   }
 }

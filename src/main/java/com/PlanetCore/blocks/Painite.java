@@ -42,6 +42,9 @@ public class Painite extends BlockBase {
 
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+        if (this == ModBlocks.CENTERCORESTONE_COMPACT_PAINITE) return (planetHardness.hardness * 4) + 127098;
+        if (this == ModBlocks.CENTERCORESTONE_PAINITE) return (planetHardness.hardness) + 127098;
+        if (this == ModBlocks.CENTERCORESTONE_SMALL_PAINITE) return (planetHardness.hardness / 2) + 127098;
         return (planetHardness.hardness * 4) + 127098;
     }
 

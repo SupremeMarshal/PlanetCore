@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_ii_shovel"
+    },
+    {
+      "item": "planetcore:onyx_ii_shovel"
+    },
+    {
+      "item": "planetcore:onyx_ii_shovel"
+    },
+    {
+      "item": "planetcore:onyx_ii_shovel"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_iii_shovel",
+    "count": 1
+  }
+}

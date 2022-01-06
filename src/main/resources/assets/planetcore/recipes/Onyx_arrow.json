@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "C"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:bladed_onyx"
+        },
+        "B":
+        {
+            "item": "planetcore:onyx_rod"
+        },
+        "C":
+        {
+            "item": "minecraft:feather"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:onyx_arrow",
+        "count": 4
+    }
+}

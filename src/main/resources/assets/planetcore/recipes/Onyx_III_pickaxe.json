@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+
+    {
+      "item": "planetcore:onyx_ii_pickaxe"
+    },
+    {
+      "item": "planetcore:onyx_ii_pickaxe"
+    },
+    {
+      "item": "planetcore:onyx_ii_pickaxe"
+    },
+    {
+      "item": "planetcore:onyx_ii_pickaxe"
+    }
+  ],
+
+  "result":
+  {
+    "item": "planetcore:onyx_iii_pickaxe",
+    "count": 1
+  }
+}

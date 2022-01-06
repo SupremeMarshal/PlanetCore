@@ -162,6 +162,12 @@ public class OnyxBowV extends ItemBow
     }
 
     @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    {
+        return repair.getItem() == ModItems.PAINITE || super.getIsRepairable(toRepair, repair);
+    }
+
+    @Override
     public int getItemEnchantability()
     {
         return 10;
@@ -276,19 +282,19 @@ public class OnyxBowV extends ItemBow
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW_II) {
                             entityarrow = ((OnyxArrowII) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 18;
+                            damage = 20;
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW_III) {
                             entityarrow = ((OnyxArrowIII) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 20;
+                            damage = 24;
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW_IV) {
                             entityarrow = ((OnyxArrowIV) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 22;
+                            damage = 28;
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW_V) {
                             entityarrow = ((OnyxArrowV) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 24;
+                            damage = 32;
                         }
 
                         entityarrow = this.customizeArrow(entityarrow);
