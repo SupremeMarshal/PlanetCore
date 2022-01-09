@@ -37,10 +37,10 @@ public class FogHandler {
             event.setDensity(0.00003F);
         }
         else if (Y <= 0 && Y > -4096) {
-            event.setDensity(-0.000029296875F * Y);
+            event.setDensity(-0.00002197265625F * Y);
         }
         else if (Y <= -4096) {
-            event.setDensity(0.12F);
+            event.setDensity(0.09F);
         }
 
 
@@ -156,15 +156,15 @@ public class FogHandler {
             }
             else if (Y <= -4608 && Y > -6080) {
                 // white-blue to dark-blue
-                event.setRed(0.6F + 0.000611413F * (Y + 4608));
-                event.setGreen(0.6F + 0.000611413F * (Y + 4608));
-                event.setBlue(1.0F - 0.000203804F * (Y + 4608));
+                event.setRed(0.6F + 0.000407608695652173F * (Y + 4608));
+                event.setGreen(0.6F + 0.000407608695652173F * (Y + 4608));
+                event.setBlue(1.0F + 0.000203804F * (Y + 4608));
             }
             else if (Y <= -6080) {
                 // dark-blue
-                event.setRed(0.1F);
-                event.setGreen(0.1F);
-                event.setBlue(0.3F);
+                event.setRed(0.0F);
+                event.setGreen(0.0F);
+                event.setBlue(0.7F);
             }
         }
     }
