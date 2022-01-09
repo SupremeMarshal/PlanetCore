@@ -21,13 +21,18 @@ public class EntityInit
 
 	public static void registerEntities()
 	{
+		registerEntity("corefireball", EntityCoreFireball.class, ModConfiguration.ENTITY_COREFIREBALL_ID, 50, 11437146, 000000);
+		registerEntity("corelargefireball", EntityCoreLargeFireball.class, ModConfiguration.ENTITY_CORELARGEFIREBALL_ID, 50, 11437146, 000000);
+		registerEntity("onyxfireball", EntityOnyxFireball.class, ModConfiguration.ENTITY_ONYX_FIREBALL_ID, 50, 11437146, 000000);
 		registerEntity("demon", EntityDemon.class, ModConfiguration.ENTITY_DEMON_ID, 50, 11437146, 000000);
 		registerEntity("core_demon", EntityCoreDemon.class, ModConfiguration.ENTITY_CORE_DEMON_ID, 50, 11437146, 000000);
+		registerEntity("onyx_demon", EntityOnyxDemon.class, ModConfiguration.ENTITY_ONYX_DEMON_ID, 50, 11437146, 000000);
 		registerEntity("ghoul", EntityGhoul.class, ModConfiguration.ENTITY_GHOUL_ID, 50, 888888, 222222);
 		registerEntity("hellhound", EntityHellHound.class, ModConfiguration.ENTITY_HELLHOUND_ID, 50, 666666, 000000);
 		registerEntity("death_enderman", EntityDeathEnderman.class, ModConfiguration.ENTITY_DEATH_ENDERMAN_ID, 50, 666666, 000000);
 		registerEntity("hot_blaze", EntityHotBlaze.class, ModConfiguration.ENTITY_HOT_BLASE_ID, 50, 999999, 000000);
 		registerEntity("core_blaze", EntityCoreBlaze.class, ModConfiguration.ENTITY_CORE_BLASE_ID, 50, 999999, 999999);
+		registerEntity("hot_magmacube", EntityHotMagmaCube.class, ModConfiguration.ENTITY_HOT_MAGMACUBE_ID, 50, 11437146, 000000);
 		registerArrow("emerald_arrow", EntityEmeraldArrow.class, ModConfiguration.ENTITY_EMERALD_ARROW_ID);
 		registerArrow("ruby_arrow", EntityRubyArrow.class, ModConfiguration.ENTITY_RUBY_ARROW_ID);
 		registerArrow("sapphire_arrow", EntitySapphireArrow.class, ModConfiguration.ENTITY_SAPPHIRE_ARROW_ID);
@@ -49,13 +54,14 @@ public class EntityInit
 	{
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
 		Biome[] spawnBiomes = allbiomes(Biome.REGISTRY);
-		EntityRegistry.addSpawn(EntityDemon.class, 15, 2, 20, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityCoreDemon.class, 15, 2, 20, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityGhoul.class, 10, 1, 5, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityHellHound.class, 10, 1, 5, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityDeathEnderman.class, 1, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityHotBlaze.class, 20, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityCoreBlaze.class, 20, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityDemon.class, 6, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityCoreDemon.class, 6, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityGhoul.class, 10, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityHellHound.class, 9, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityDeathEnderman.class, 5, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityHotBlaze.class, 5, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityCoreBlaze.class, 5, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityHotMagmaCube.class, 15, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
 
 	}
 
