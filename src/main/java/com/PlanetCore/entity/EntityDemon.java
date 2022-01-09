@@ -6,6 +6,7 @@ import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.handlers.LootTableHandler;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
+import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -39,7 +40,7 @@ import java.util.Random;
 public class EntityDemon extends EntityMob implements IAnimatable {
 	public EntityDemon(World worldIn)   {
 		super(worldIn);
-		setSize(2f, 4f);
+		setSize(1.5f, 3.5f);
 		this.isImmuneToFire = true;
 		this.moveHelper = new EntityDemon.GhastMoveHelper(this);
 	}
@@ -89,6 +90,9 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		if (this.getFireballTick() > 0){
 			this.dataManager.set(FIREBALL_TICK, this.getFireballTick() - 1);
 		}
+		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 0, 5));
+		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 0, 3));
+		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 3));
 	}
 
 	protected void initEntityAI () {
@@ -154,7 +158,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	@Override
 	public boolean getCanSpawnHere() {
 		if (posY < -1024 && posY >= -6144) {
-			return super.getCanSpawnHere();
+			return true;
 		} else {
 			return false;
 		}
@@ -172,22 +176,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public int getMaxSpawnedInChunk() {
-		if (posY < -1024 && posY >= -2048) {
-			return 2;
-		}
-		else if (posY < -2048 && posY >= -3072) {
-			return 5;
-		}
-		else if (posY < -3072 && posY >= -4096) {
-			return 9;
-		}
-		else if (posY < -4096 && posY >= -5120) {
-			return 5;
-		}
-		else if (posY < -5120 && posY >= -6144) {
-			return 2;
-		}
-		else return 0;
+		return 1;
 	}
 	
 	
@@ -199,13 +188,14 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(64D);
+		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(32D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(120D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(150D);
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(5.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(80.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(12D);
 		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
+		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999999, 3));
 	}
 
 
@@ -295,7 +285,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		 * Returns whether the EntityAIBase should begin execution.
 		 */
 		public boolean shouldExecute(){
-			if (this.parentEntity.hasAttackTarget() && this.parentEntity.onGround) return false;
+			if (this.parentEntity.hasAttackTarget() || this.parentEntity.onGround) return false;
 			if (this.parentEntity.getRNG().nextInt(30) == 0 && !this.parentEntity.onGround) return true;
 
 			EntityMoveHelper entitymovehelper = this.parentEntity.getMoveHelper();
