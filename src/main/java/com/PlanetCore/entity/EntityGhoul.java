@@ -14,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class EntityGhoul extends EntityMob
@@ -92,13 +93,14 @@ public class EntityGhoul extends EntityMob
 	
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -300) {
-			return super.getCanSpawnHere();
+		if (posY <= -256) {
+			return true;
 		} else {
 			return false;
 		}
 	}
-	
+
+
 	@Override
 	public int getMaxSpawnedInChunk() {
 		return 3;
