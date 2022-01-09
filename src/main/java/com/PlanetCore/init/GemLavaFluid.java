@@ -5,21 +5,28 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
+import java.util.List;
 import java.util.Random;
 
 
@@ -43,12 +50,46 @@ public class GemLavaFluid extends BlockFluidClassic {
 	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
 	{
 
-		if (entityIn instanceof EntityPlayerMP)
+		if (entityIn instanceof EntityLivingBase)
 		{
-			entityIn.setFire(10);
-			entityIn.attackEntityFrom(DamageSource.LAVA, 8.0F);
-			entityIn.attackEntityFrom(DamageSource.GENERIC, 2.0F);
+			PotionEffect effect = ((EntityLivingBase) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+			float damage = 0;
+			if (state.getBlock() == ModBlocks.EMERALD_LAVA_FLUID) damage = 4;
+			else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 8;
+			else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 16;
+			else if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 32;
+			else if (state.getBlock() == ModBlocks.OLIVINE_LAVA_FLUID) damage = 48;
+			else if (state.getBlock() == ModBlocks.WADSLEYITE_LAVA_FLUID) damage = 64;
+			else if (state.getBlock() == ModBlocks.RINGWOODITE_LAVA_FLUID) damage = 80;
+			else if (state.getBlock() == ModBlocks.BRIGMANITE_LAVA_FLUID) damage = 96;
+			else if (state.getBlock() == ModBlocks.MAJORITE_LAVA_FLUID) damage = 128;
+			else if (state.getBlock() == ModBlocks.AMAZONITE_LAVA_FLUID) damage = 192;
+			else if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) damage = 256;
+			if (effect == null) {
+				entityIn.attackEntityFrom(DamageSource.LAVA, damage * 4);
+				entityIn.setFire(10);
+			}
+			else if (effect != null && effect.getAmplifier() == 0) {
+				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			}
+			else if (effect != null && effect.getAmplifier() == 1) {
+				damage = damage / 4;
+				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			}
+			else if (effect != null && effect.getAmplifier() == 2) {
+				damage = damage / 16;
+				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			}
+			else if (effect != null && effect.getAmplifier() == 3) {
+				damage = damage / 64;
+				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			}
+			else if (effect != null && effect.getAmplifier() == 4) {
+				damage = damage / 256;
+				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			}
 		}
+		super.onEntityCollision(worldIn, pos, state, entityIn);
 	}
 
 	public boolean checkForMixing(World worldIn, BlockPos pos, IBlockState state)
@@ -88,15 +129,68 @@ public class GemLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() <= 4)
 				{
-					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.EMERALD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.EMERALD_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.RUBY_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.RUBY_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.SAPPHIRE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SAPPHIRE_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.DIAMOND_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.OLIVINE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.OLIVINE_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.WADSLEYITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.WADSLEYITE_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.RINGWOODITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.RINGWOODITE_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.BRIGMANITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.BRIGMANITE_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.MAJORITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.MAJORITE_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.AMAZONITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.AMAZONITE_SUPERCOMPACT.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}
 			}
 		}
-
 		return false;
 	}
+
+
+	public static void burnEntities(World world, int x, int y, int z, int radius, IBlockState state) {
+
+		AxisAlignedBB bb = new AxisAlignedBB(x + 4, y + 4, z + 4, x - 4, y - 4, z - 4);
+		List list = world.getEntitiesWithinAABB(EntityLiving.class, bb);
+
+		for (int i = 0; i < list.size(); ++i) {
+			Entity entity = (Entity) list.get(i);
+
+			{
+				PotionEffect effect = ((EntityLiving) entity).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+				float damage = 0;
+				if (state.getBlock() == ModBlocks.EMERALD_LAVA_FLUID) damage = 4;
+				else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 8;
+				else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 16;
+				else if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 32;
+				else if (state.getBlock() == ModBlocks.OLIVINE_LAVA_FLUID) damage = 48;
+				else if (state.getBlock() == ModBlocks.WADSLEYITE_LAVA_FLUID) damage = 64;
+				else if (state.getBlock() == ModBlocks.RINGWOODITE_LAVA_FLUID) damage = 80;
+				else if (state.getBlock() == ModBlocks.BRIGMANITE_LAVA_FLUID) damage = 96;
+				else if (state.getBlock() == ModBlocks.MAJORITE_LAVA_FLUID) damage = 128;
+				else if (state.getBlock() == ModBlocks.AMAZONITE_LAVA_FLUID) damage = 192;
+				else if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) damage = 256;
+				if (effect == null) {
+					entity.attackEntityFrom(DamageSource.ON_FIRE, damage);
+					entity.setFire(10);
+				} else if (effect != null && effect.getAmplifier() == 0) {
+					damage = damage / 4;
+					if (damage >= 1) entity.attackEntityFrom(DamageSource.GENERIC, damage);
+				} else if (effect != null && effect.getAmplifier() == 1) {
+					damage = damage / 16;
+					if (damage >= 1) entity.attackEntityFrom(DamageSource.GENERIC, damage);
+				} else if (effect != null && effect.getAmplifier() == 2) {
+					damage = damage / 64;
+					if (damage >= 1) entity.attackEntityFrom(DamageSource.GENERIC, damage);
+				} else if (effect != null && effect.getAmplifier() == 3) {
+					damage = damage / 256;
+					if (damage >= 1) entity.attackEntityFrom(DamageSource.GENERIC, damage);
+				}
+			}
+		}
+	}
+
+
 
 	protected void triggerMixEffects(World worldIn, BlockPos pos)
 	{
@@ -130,174 +224,10 @@ public class GemLavaFluid extends BlockFluidClassic {
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-
-		if (pos.getY() <= -128 && Math.random() >= 0.001)
-		{
-			worldIn.setBlockState(pos, ModBlocks.ACTIVE_LAVA_FLUID.getDefaultState());
-		}
-
-
-		int quantaRemaining = quantaPerBlock - state.getValue(LEVEL);
-		int expQuanta = -101;
-
-		// check adjacent block levels if non-source
-		if (quantaRemaining < quantaPerBlock)
-		{
-			int adjacentSourceBlocks = 0;
-
-			if (ForgeEventFactory.canCreateFluidSource(worldIn, pos, state, canCreateSources))
-			{
-				for (EnumFacing side : EnumFacing.Plane.HORIZONTAL)
-				{
-					if (isSourceBlock(worldIn, pos.offset(side))) adjacentSourceBlocks++;
-				}
-			}
-
-			// new source block
-			if (adjacentSourceBlocks >= 2 && (worldIn.getBlockState(pos.up(densityDir)).getMaterial().isSolid() || isSourceBlock(worldIn, pos.up(densityDir))))
-			{
-				expQuanta = quantaPerBlock;
-			}
-			// unobstructed flow from 'above'
-			else if (worldIn.getBlockState(pos.down(densityDir)).getBlock() == this
-					|| hasDownhillFlow(worldIn, pos, EnumFacing.EAST)
-					|| hasDownhillFlow(worldIn, pos, EnumFacing.WEST)
-					|| hasDownhillFlow(worldIn, pos, EnumFacing.NORTH)
-					|| hasDownhillFlow(worldIn, pos, EnumFacing.SOUTH))
-			{
-				expQuanta = quantaPerBlock - 1;
-			}
-			else
-			{
-				int maxQuanta = -100;
-				for (EnumFacing side : EnumFacing.Plane.HORIZONTAL)
-				{
-					maxQuanta = getLargerQuanta(worldIn, pos.offset(side), maxQuanta);
-				}
-				expQuanta = maxQuanta - 1;
-			}
-
-			// decay calculation
-			if (expQuanta != quantaRemaining)
-			{
-				quantaRemaining = expQuanta;
-
-				if (expQuanta <= 0)
-				{
-					worldIn.setBlockToAir(pos);
-				}
-				else
-				{
-					worldIn.setBlockState(pos, state.withProperty(LEVEL, quantaPerBlock - expQuanta), 2);
-					worldIn.scheduleUpdate(pos, this, tickRate);
-					worldIn.notifyNeighborsOfStateChange(pos, this, false);
-				}
-			}
-		}
-
-		// Flow vertically if possible
-		if (canDisplace(worldIn, pos.up(densityDir)))
-		{
-			flowIntoBlock(worldIn, pos.up(densityDir), 1);
-			return;
-		}
-
-		// Flow outward if possible
-		int flowMeta = quantaPerBlock - quantaRemaining + 1;
-		if (flowMeta >= quantaPerBlock)
-		{
-			return;
-		}
-
-		if (isSourceBlock(worldIn, pos) || !isFlowingVertically(worldIn, pos))
-		{
-			if (worldIn.getBlockState(pos.down(densityDir)).getBlock() == this)
-			{
-				flowMeta = 1;
-			}
-			boolean flowTo[] = getOptimalFlowDirections(worldIn, pos);
-			for (int i = 0; i < 4; i++)
-			{
-				if (flowTo[i]) flowIntoBlock(worldIn, pos.offset(SIDES.get(i)), flowMeta);
-			}
-		}
-
-		//Cause fire around lava
-		if (this.material == Material.LAVA)
-		{
-			if (worldIn.getGameRules().getBoolean("doFireTick"))
-			{
-				int i = rand.nextInt(3);
-
-				if (i > 0)
-				{
-					BlockPos blockpos = pos;
-
-					for (int j = 0; j < i; ++j)
-					{
-						blockpos = blockpos.add(rand.nextInt(3) - 1, 1, rand.nextInt(3) - 1);
-
-						if (blockpos.getY() >= 0 && blockpos.getY() < worldIn.getHeight() && !worldIn.isBlockLoaded(blockpos))
-						{
-							return;
-						}
-
-						IBlockState block = worldIn.getBlockState(blockpos);
-
-						if (block.getBlock().isAir(block, worldIn, blockpos))
-						{
-							if (this.isSurroundingBlockFlammable(worldIn, blockpos))
-							{
-								worldIn.setBlockState(blockpos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, blockpos, pos, Blocks.FIRE.getDefaultState()));
-								return;
-							}
-						}
-						else if (block.getMaterial().blocksMovement())
-						{
-							return;
-						}
-					}
-				}
-				else
-				{
-					for (int k = 0; k < 3; ++k)
-					{
-						BlockPos blockpos1 = pos.add(rand.nextInt(3) - 1, 0, rand.nextInt(3) - 1);
-
-						if (blockpos1.getY() >= 0 && blockpos1.getY() < 256 && !worldIn.isBlockLoaded(blockpos1))
-						{
-							return;
-						}
-
-						if (worldIn.isAirBlock(blockpos1.up()) && this.getCanBlockBurn(worldIn, blockpos1))
-						{
-							worldIn.setBlockState(blockpos1.up(), ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, blockpos1.up(), pos, Blocks.FIRE.getDefaultState()));
-						}
-					}
-				}
-			}
-		}
+		super.updateTick(worldIn, pos, state, rand);
+		int X = pos.getX();
+		int Y = pos.getY();
+		int Z = pos.getZ();
+		burnEntities(worldIn,X,Y,Z, 6, state);
 	}
-
-	protected boolean isSurroundingBlockFlammable(World worldIn, BlockPos pos)
-	{
-		for (EnumFacing enumfacing : EnumFacing.values())
-		{
-			if (this.getCanBlockBurn(worldIn, pos.offset(enumfacing)))
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-
-	private boolean getCanBlockBurn(World worldIn, BlockPos pos)
-	{
-		return pos.getY() >= 0 && pos.getY() < 256 && !worldIn.isBlockLoaded(pos) ? false : worldIn.getBlockState(pos).getMaterial().getCanBurn();
-	}
-
-
-
 }

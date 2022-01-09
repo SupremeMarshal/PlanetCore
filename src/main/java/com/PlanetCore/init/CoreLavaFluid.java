@@ -9,9 +9,12 @@ import com.PlanetCore.blocks.Corestone;
 
 import com.google.gson.internal.bind.JsonTreeReader;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
@@ -30,6 +33,8 @@ import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
+import javax.annotation.Nullable;
+
 
 public class CoreLavaFluid extends BlockFluidClassic {
 
@@ -44,6 +49,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		setTickRandomly(true);
 		ModBlocks.BLOCKS.add(this);
 	}
+
 
 
 	public void vaporizeWater(World worldIn, BlockPos pos, IBlockState state)
@@ -61,121 +67,58 @@ public class CoreLavaFluid extends BlockFluidClassic {
 	}
 
 
+
+
 	public static void burnEntities(World world, int x, int y, int z, int radius) {
 
-		float f = radius;
-		HashSet hashset = new HashSet();
-		int i;
-		int j;
-		int k;
-		double d5;
-		double d6;
-		double d7;
-		double wat = radius/** 2 */
-				;
-		boolean isOccupied = false;
+		AxisAlignedBB bb = new AxisAlignedBB(x + 4, y + 4, z + 4, x - 4, y - 4, z - 4);
+		List list = world.getEntitiesWithinAABB(EntityLiving.class, bb);
 
-		// bombStartStrength *= 2.0F;
-		i = MathHelper.floor(x - wat - 1.0D);
-		j = MathHelper.floor(x + wat + 1.0D);
-		k = MathHelper.floor(y - wat - 1.0D);
-		int i2 = MathHelper.floor(y + wat + 1.0D);
-		int l = MathHelper.floor(z - wat - 1.0D);
-		int j2 = MathHelper.floor(z + wat + 1.0D);
-		AxisAlignedBB bb = new AxisAlignedBB(i,k,l,j,i2,j2);
-		List list = world.getEntitiesWithinAABBExcludingEntity(null, bb);
-		Vec3d vec3 = new Vec3d(x, y, z);
-
-		for (int i1 = 0; i1 < list.size(); ++i1) {
-			Entity entity = (Entity) list.get(i1);
-			double d4 = entity.getDistance(x, y, z) / radius;
-
-			if (d4 <= 1.0D) {
-				d5 = entity.posX - x;
-				d6 = entity.posY + entity.getEyeHeight() - y;
-				d7 = entity.posZ - z;
-				BlockPos pos1 = new BlockPos(x,y,z);
-				BlockPos pos2 = new BlockPos(entity.posX,entity.posY + entity.getEyeHeight(),entity.posZ);
-				double d9 = MathHelper.sqrt(d5 * d5 + d6 * d6 + d7 * d7);
-
-				if (d9 < wat) {
-					d5 /= d9;
-					d6 /= d9;
-					d7 /= d9;
-					double d11 = (1.0D - d4);// * d10;
-					if (!(entity instanceof EntityPlayerMP) || (entity instanceof EntityPlayerMP
-							&& !((EntityPlayerMP) entity).isCreative())) {
-						entity.attackEntityFrom(DamageSource.ON_FIRE, 6);
-						entity.setFire(10);
-					}
+		for (int i = 0; i < list.size(); ++i) {
+			Entity entity = (Entity) list.get(i);
+			{
+				PotionEffect effect = ((EntityLiving) entity).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+				if (effect == null) {
+					entity.attackEntityFrom(DamageSource.ON_FIRE, 32);
+					entity.setFire(10);
 				}
-			}
-		}
-		radius = (int) f;
-	}
-
-
-
-	public void thermalEffects(World worldIn, BlockPos pos, IBlockState state)
-	{
-		int X = pos.getX();
-		int Y = pos.getY();
-		int Z = pos.getZ();
-		Random rand = new Random();
-
-		for(int x = -2; x < 3; x++) {
-			for(int y = -2; y < 3; y++) {
-				for(int z = -2; z < 3; z++) {
-					IBlockState state2 = worldIn.getBlockState(pos.add(x, y, z));
-					Block block = state2.getBlock();
-					if(state2.getMaterial()==Material.ROCK || state2.getMaterial()==Material.GROUND || state2.getMaterial()==Material.GRASS
-							&& !(block instanceof Corestone) && block!=Blocks.BEDROCK /*&& block!=ModBlocks.COLD_CORESTONE*/)
-					{
-						worldIn.setBlockState(new BlockPos(x, y, z), Blocks.LAVA.getDefaultState());
-					}
-
-					if(state2.getMaterial()==Material.SNOW)
-					{
-						worldIn.setBlockToAir(new BlockPos(x, y, z));
-					}
-					if(state2.getMaterial()==Material.WATER || state2.getMaterial()==Material.ICE || state2.getMaterial()==Material.CRAFTED_SNOW)
-					{
-						worldIn.setBlockToAir(new BlockPos(x, y, z));
-						//worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
-					}
-					if(state2.getBlock().getFlammability(worldIn, pos, null)>0 || state2.getMaterial()==Material.WOOD || state2.getMaterial()==Material.CLOTH || state2.getMaterial()==Material.PLANTS || state2.getMaterial()==Material.LEAVES)
-					{
-						worldIn.setBlockState(new BlockPos(x, y, z), Blocks.FIRE.getDefaultState());
-					}
+				if (effect != null && effect.getAmplifier() == 0) {
+					entity.attackEntityFrom(DamageSource.GENERIC, 8);
+				}
+				if (effect != null && effect.getAmplifier() == 1) {
+					entity.attackEntityFrom(DamageSource.GENERIC, 2);
 				}
 			}
 		}
 	}
+
+
+
+
 
 	public void coreTemperature(World worldIn, BlockPos pos,IBlockState state)
 	{
-
 		int X = pos.getX();
 		int Y = pos.getY();
 		int Z = pos.getZ();
 		burnEntities(worldIn,X,Y,Z, 9);
 		Random rand = new Random();
 
-		if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == false)
+		if(worldIn.canSeeSky(pos) == true && worldIn.isRaining() == false)
 		{
 			if(rand.nextInt(120) == 0)
 			{
 				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 			}
 		}
-		else if(worldIn.canBlockSeeSky(pos) == true && worldIn.isRaining() == true)
+		else if(worldIn.canSeeSky(pos) == true && worldIn.isRaining() == true)
 		{
 			if(rand.nextInt(20) == 0)
 			{
 				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 			}
 		}
-		else if(worldIn.canBlockSeeSky(pos) == false && pos.getY() > -1000)
+		else if(worldIn.canSeeSky(pos) == false && pos.getY() > -1000)
 			if(rand.nextInt(240) == 0)
 			{
 				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
@@ -186,48 +129,60 @@ public class CoreLavaFluid extends BlockFluidClassic {
 	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
 	{
 		super.onBlockAdded(worldIn, pos, state);
-		thermalEffects(worldIn, pos, state);
+		//thermalEffects(worldIn, pos, state);
 	}
 
+	@Override
 	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
 	{
-		if (entityIn instanceof EntityPlayerMP)
-		{
-			entityIn.attackEntityFrom(DamageSource.GENERIC, 8.0F);
+		if (entityIn instanceof EntityLivingBase) {
+			PotionEffect effect = ((EntityLivingBase) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+			if (effect == null) {
+				entityIn.attackEntityFrom(DamageSource.ON_FIRE, 32);
+				entityIn.setFire(10);
+			}
+			if (effect != null && effect.getAmplifier() == 0) {
+				entityIn.attackEntityFrom(DamageSource.GENERIC, 8);
+			}
+			if (effect != null && effect.getAmplifier() == 1) {
+				entityIn.attackEntityFrom(DamageSource.GENERIC, 2);
+			}
 		}
+		super.onEntityCollision(worldIn, pos, state, entityIn);
 	}
 
 
-
-	
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 		super.updateTick(worldIn, pos, state, rand);
-		thermalEffects(worldIn,pos,state);
+		//thermalEffects(worldIn,pos,state);
 		coreTemperature(worldIn,pos,state);
 		vaporizeWater(worldIn, pos, state);
-		if (pos.getY() <= -5000) {
-			if ((worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState()
+		float chance = -0.0001220703125F * (pos.getY() + 5000) + 0.3F;
+		if (pos.getY() <= -4800) {
+			if ((Math.random() < chance && worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()))
 				worldIn.setBlockState(pos.up(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if ((worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState()
+			if ((Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()))
 				worldIn.setBlockState(pos.down(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if ((worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState()
+			if ((Math.random() < chance && worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()))
 				worldIn.setBlockState(pos.north(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if ((worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState()
+			if ((Math.random() < chance && worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()))
 				worldIn.setBlockState(pos.south(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if ((worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState()
+			if ((Math.random() < chance && worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()))
 				worldIn.setBlockState(pos.west(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
-			if ((worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState()
+			if ((Math.random() < chance && worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState()))
 				worldIn.setBlockState(pos.east(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 		}
 	}
+
+
 
 	 
 
