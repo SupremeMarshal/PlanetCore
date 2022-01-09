@@ -299,7 +299,7 @@ public class OnyxBowV extends ItemBow
 
                         entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                        entityarrow.setDamage(damage + 18);
+                        entityarrow.setDamage(damage + 22);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -308,7 +308,7 @@ public class OnyxBowV extends ItemBow
                         int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
 
                         if (j > 0) {
-                            entityarrow.setDamage(damage + (double) j * 0.5D + 18.5D);
+                            entityarrow.setDamage(damage + (double) j * 0.5D + 22.5D);
                         }
 
                         int k = EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, stack);
@@ -353,8 +353,8 @@ public class OnyxBowV extends ItemBow
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to onyx V tier arrows."));
-        tooltip.add(net.minecraft.client.resources.I18n.format("Increased damage: +18"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment don't work with this bow."));
+        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }

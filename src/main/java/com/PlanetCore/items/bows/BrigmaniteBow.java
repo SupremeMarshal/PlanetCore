@@ -160,10 +160,6 @@ public class BrigmaniteBow extends ItemBow
                 {
                     itemstack = new ItemStack(Items.ARROW);
                 }
-                if (!itemstack.isEmpty() && EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, stack) > 0 && itemstack.getItem() != Items.ARROW)
-                {
-                    itemstack.shrink(-1);
-                }
 
                 float f = getArrowVelocity(i);
 
@@ -212,7 +208,7 @@ public class BrigmaniteBow extends ItemBow
 
                         entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                        entityarrow.setDamage(damage + 4);
+                        entityarrow.setDamage(damage + 8);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -221,7 +217,7 @@ public class BrigmaniteBow extends ItemBow
                         int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
 
                         if (j > 0) {
-                            entityarrow.setDamage(damage + (double) j * 0.5D + 4.5D);
+                            entityarrow.setDamage(damage + (double) j * 0.5D + 8.5D);
                         }
 
                         int k = EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, stack);
@@ -266,8 +262,8 @@ public class BrigmaniteBow extends ItemBow
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to brigmanite tier arrows."));
-        tooltip.add(net.minecraft.client.resources.I18n.format("Increased damage: +4"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment don't work with this bow."));
+        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }
