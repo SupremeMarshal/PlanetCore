@@ -19,8 +19,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-//import software.bernie.geckolib3.GeckoLib;
-
 
 import java.io.File;
 
@@ -29,9 +27,8 @@ import java.io.File;
 public class Main {
     public Main()
     {
+        //what is this for? it give lot of error and it change nothing to the mod.
         //GeckoLib.initialize();
-
-
     }
     
 

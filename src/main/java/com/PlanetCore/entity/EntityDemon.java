@@ -90,9 +90,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		if (this.getFireballTick() > 0){
 			this.dataManager.set(FIREBALL_TICK, this.getFireballTick() - 1);
 		}
-		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 0, 5));
-		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 0, 3));
-		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 3));
+
 	}
 
 	protected void initEntityAI () {
@@ -188,7 +186,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(32D);
+		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(16D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(150D);
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(5.0D);
@@ -196,6 +194,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(12D);
 		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
 		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999999, 3));
+		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 999999999, 3));
 	}
 
 
