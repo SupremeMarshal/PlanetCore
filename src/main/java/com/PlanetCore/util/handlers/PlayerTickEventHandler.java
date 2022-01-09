@@ -48,13 +48,11 @@ public class PlayerTickEventHandler {
     */
 
 
+
+
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if (event.player.getHeldItem(EnumHand.OFF_HAND).getItem() == ModItems.ONYX_V_SHIELD)
-        {
-            event.player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 0, 4));
-            event.player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 0, 3));
-        }
+
         if (!event.player.getEntityWorld().isRemote) {
             //Heal player based on food level. Heal from 0% to 100% in 600 seconds at max food lvl. Heal fully in 3 hours if food level is 1. At 0 food, player stop healing.
             if (event.player.getFoodStats().getFoodLevel() >= 1) {
@@ -65,13 +63,15 @@ public class PlayerTickEventHandler {
 
 
 
+
+
             PotionEffect effect = event.player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 
             float Y = (float) event.player.posY;
 
-            
+
             if (Y < -256 && Y >= -1024) {
-                if (event.player.world.getTotalWorldTime() % 200 == 0) {
+                if (event.player.world.getTotalWorldTime() % 600 == 0) {
 
                     if (effect == null) {
                         event.player.setFire(4);
@@ -80,7 +80,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -1024 && Y >= -2048) {
-                if (event.player.world.getTotalWorldTime() % 166 == 0) {
+                if (event.player.world.getTotalWorldTime() % 600 == 0) {
                     if (effect == null) {
                         event.player.setFire(4);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -0.0078125F * (Y + 1024) + 4);
@@ -91,7 +91,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -2048 && Y >= -3072) {
-                if (event.player.world.getTotalWorldTime() % 138 == 0) {
+                if (event.player.world.getTotalWorldTime() % 600 == 0) {
                     if (effect == null) {
                         event.player.setFire(5);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -0.015625F * (Y + 2048) + 12);
@@ -105,7 +105,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -3072 && Y >= -4096) {
-                if (event.player.world.getTotalWorldTime() % 115 == 0) {
+                if (event.player.world.getTotalWorldTime() % 600 == 0) {
                     if (effect == null) {
                         event.player.setFire(5);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -0.03125F * (Y + 3072) + 28);
@@ -119,7 +119,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -4096 && Y >= -5120) {
-                if (event.player.world.getTotalWorldTime() % 96 == 0) {
+                if (event.player.world.getTotalWorldTime() % 600 == 0) {
                     if (effect == null) {
                         event.player.setFire(5);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -0.0625F * (Y + 4096) + 60);
@@ -136,7 +136,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -5120 && Y >= -6144) {
-                if (event.player.world.getTotalWorldTime() % 80 == 0) {
+                if (event.player.world.getTotalWorldTime() % 500 == 0) {
                     if (effect == null) {
                         event.player.setFire(5);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -0.125F * (Y + 5120) + 124);
@@ -153,7 +153,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -6144 && Y >= -7168) {
-                if (event.player.world.getTotalWorldTime() % 66 == 0) {
+                if (event.player.world.getTotalWorldTime() % 400 == 0) {
                     if (effect == null) {
                         event.player.setFire(5);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -0.25F * (Y + 6144) + 252);
@@ -173,7 +173,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -7168 && Y >= -8192) {
-                if (event.player.world.getTotalWorldTime() % 55 == 0) {
+                if (event.player.world.getTotalWorldTime() % 300 == 0) {
                     if (effect == null) {
                         event.player.setFire(5);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -0.5F * (Y + 7168) + 508);
@@ -193,7 +193,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -8192 && Y >= -9216) {
-                if (event.player.world.getTotalWorldTime() % 46 == 0) {
+                if (event.player.world.getTotalWorldTime() % 200 == 0) {
                     if (effect == null) {
                         event.player.setFire(5);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -1F * (Y + 8192) + 1020);
@@ -216,7 +216,7 @@ public class PlayerTickEventHandler {
                 }
             }
             if (Y < -8192) {
-                if (event.player.world.getTotalWorldTime() % 38 == 0) {
+                if (event.player.world.getTotalWorldTime() % 150 == 0) {
                     if (effect == null) {
                         event.player.setFire(5);
                         event.player.attackEntityFrom(DamageSource.GENERIC, -2F * (Y + 8192) + 2044);
