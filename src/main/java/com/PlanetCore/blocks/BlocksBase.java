@@ -34,7 +34,7 @@ public class BlocksBase extends BlockBase {
 
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		return planetHardness.hardness * 16;
+		return planetHardness.hardness * 64;
 	}
 
 	@Override
