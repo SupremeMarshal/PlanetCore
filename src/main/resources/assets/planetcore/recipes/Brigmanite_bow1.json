@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " AB",
+        "A B",
+        " AB"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:brigmanite_rod"
+        },
+        "B":
+        {
+            "item": "minecraft:string"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:brigmanite_bow",
+        "count": 1
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "C"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:bladed_emerald"
+        },
+        "B":
+        {
+            "item": "planetcore:emerald_rod"
+        },
+        "C":
+        {
+            "item": "minecraft:feather"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:emerald_arrow",
+        "count": 4
+    }
+}

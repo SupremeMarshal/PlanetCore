@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BA ",
+        "B A",
+        "BA "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:wadsleyite_rod"
+        },
+        "B":
+        {
+            "item": "minecraft:string"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:wadsleyite_bow",
+        "count": 1
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " AB",
+        "A B",
+        " AB"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:ruby_rod"
+        },
+        "B":
+        {
+            "item": "minecraft:string"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:ruby_bow",
+        "count": 1
+    }
+}

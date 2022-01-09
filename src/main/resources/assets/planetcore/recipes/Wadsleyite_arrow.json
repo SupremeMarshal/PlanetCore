@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "C"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:bladed_wadsleyite"
+        },
+        "B":
+        {
+            "item": "planetcore:wadsleyite_rod"
+        },
+        "C":
+        {
+            "item": "minecraft:feather"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:wadsleyite_arrow",
+        "count": 4
+    }
+}

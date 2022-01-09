@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " AB",
+        "A B",
+        " AB"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:majorite_rod"
+        },
+        "B":
+        {
+            "item": "minecraft:string"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:majorite_bow",
+        "count": 1
+    }
+}

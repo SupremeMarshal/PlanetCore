@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "C"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:bladed_majorite"
+        },
+        "B":
+        {
+            "item": "planetcore:majorite_rod"
+        },
+        "C":
+        {
+            "item": "minecraft:feather"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:majorite_arrow",
+        "count": 4
+    }
+}

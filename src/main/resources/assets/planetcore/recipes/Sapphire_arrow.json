@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "B",
+        "C"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:bladed_sapphire"
+        },
+        "B":
+        {
+            "item": "planetcore:sapphire_rod"
+        },
+        "C":
+        {
+            "item": "minecraft:feather"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:sapphire_arrow",
+        "count": 4
+    }
+}
