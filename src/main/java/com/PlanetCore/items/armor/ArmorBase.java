@@ -74,10 +74,13 @@ public class ArmorBase extends ItemArmor {
         return super.getIsRepairable(toRepair, repair);
     }
 
+
     public static final UUID MAX_HEALTH_HELM_UUID = UUID.fromString("de2d6ce5-561c-47e6-a9d1-219b6a1fac02");
     public static final UUID MAX_HEALTH_BODY_UUID = UUID.fromString("f32661c4-8f25-4404-a3d3-6627735bf883");
     public static final UUID MAX_HEALTH_LEGS_UUID = UUID.fromString("ec5baf86-1084-44e6-b8f6-2477f3c18140");
     public static final UUID MAX_HEALTH_BOOTS_UUID = UUID.fromString("a9fb9d05-55c3-4647-b29e-3eeedeedcd29");
+
+
 
     public static final UUID KNOCKBACK_RESISTANCE_HELM_UUID = UUID.fromString("6c764957-a79a-4eb9-96e4-77ca2cec60c4");
     public static final UUID KNOCKBACK_RESISTANCE_BODY_UUID = UUID.fromString("e7a6a399-db3f-4535-afb2-f8c5a45f543d");
@@ -85,6 +88,8 @@ public class ArmorBase extends ItemArmor {
     public static final UUID KNOCKBACK_RESISTANCE_BOOTS_UUID = UUID.fromString("fca00d5f-0943-4b9f-ad4b-c0c7aed66d1c");
 
     private static final Map<IAttribute, AttributeModifier> modMap = new HashMap<>();
+
+
 
 
     public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot,
@@ -165,6 +170,7 @@ public class ArmorBase extends ItemArmor {
         }
 
 
+
         String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
         String knockback_resistance = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
@@ -185,7 +191,11 @@ public class ArmorBase extends ItemArmor {
             mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BOOTS_UUID, "MAX_HEALTH_BOOTS_UUID", health, 0));
         }
         return mods;
+
+
     }
+
+
 
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
@@ -249,8 +259,7 @@ public class ArmorBase extends ItemArmor {
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_EMERALD || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_DIAMOND || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_DIAMOND) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
@@ -259,7 +268,8 @@ public class ArmorBase extends ItemArmor {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));

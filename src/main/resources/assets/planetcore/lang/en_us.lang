@@ -23,6 +23,54 @@ splash_potion.effect.long_fire_resistance_III=Long Splash fire resistance III
 lingering_potion.effect.long_fire_resistance_III=Long Lingering fire resistance III
 tipped_arrow.effect.long_fire_resistance_III=Long Arrow of fire resistance III
 
+effect.haste=Haste
+potion.effect.haste=Haste
+splash_potion.effect.haste=Splash haste
+lingering_potion.effect.haste=Lingering haste
+tipped_arrow.effect.haste=Arrow of haste
+
+effect.haste_II=Haste II
+potion.effect.haste_II=Haste II
+splash_potion.effect.haste_II=Splash haste II
+lingering_potion.effect.haste_II=Lingering haste II
+tipped_arrow.effect.haste_II=Arrow of haste II
+
+effect.haste_III=Haste III
+potion.effect.haste_III=Haste III
+splash_potion.effect.haste_III=Splash haste III
+lingering_potion.effect.haste_III=Lingering haste III
+tipped_arrow.effect.haste_III=Arrow of haste III
+
+effect.haste_IV=Haste IV
+potion.effect.haste_IV=Haste IV
+splash_potion.effect.haste_IV=Splash haste IV
+lingering_potion.effect.haste_IV=Lingering haste IV
+tipped_arrow.effect.haste_IV=Arrow of haste IV
+
+effect.long_haste=Long haste
+potion.effect.long_haste=Long haste
+splash_potion.effect.long_haste=Splash long haste
+lingering_potion.effect.long_haste=Lingering long haste
+tipped_arrow.effect.long_haste=Arrow of long haste
+
+effect.long_haste_II=Long haste II
+potion.effect.long_haste_II=Long haste II
+splash_potion.effect.long_haste_II=Splash long haste II
+lingering_potion.effect.long_haste_II=Lingering long haste II
+tipped_arrow.effect.long_haste_II=Arrow of long haste II
+
+effect.long_haste_III=Long haste III
+potion.effect.long_haste_III=Long haste III
+splash_potion.effect.long_haste_III=Splash long haste III
+lingering_potion.effect.long_haste_III=Lingering long haste III
+tipped_arrow.effect.long_haste_III=Arrow of long haste III
+
+effect.long_haste_IV=Long haste IV
+potion.effect.long_haste_IV=Long haste IV
+splash_potion.effect.long_haste_IV=Splash long haste IV
+lingering_potion.effect.long_haste_IV=Lingering long haste IV
+tipped_arrow.effect.long_haste_IV=Arrow of long haste IV
+
 
 //ENCHANTMENTS
 
@@ -627,6 +675,7 @@ item.olivine_helmet.tooltip.2=§9+18 Armor toughness
 item.olivine_helmet.tooltip.3=§a+10 Max health
 item.olivine_helmet.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.olivine_helmet.tooltip.5=§6+Resistance II
+item.olivine_helmet.tooltip.6=§6+Regeneration
 
 item.olivine_chestplate.name=Olivine chestplate
 item.olivine_chestplate.tooltip.0=When equipped:
@@ -635,6 +684,7 @@ item.olivine_chestplate.tooltip.2=§9+18 Armor toughness
 item.olivine_chestplate.tooltip.3=§a+10 Max health
 item.olivine_chestplate.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.olivine_chestplate.tooltip.5=§6+Resistance II
+item.olivine_chestplate.tooltip.6=§6+Regeneration
 
 item.olivine_leggings.name=Olivine leggings
 item.olivine_leggings.tooltip.0=When equipped:
@@ -643,6 +693,8 @@ item.olivine_leggings.tooltip.2=§9+18 Armor toughness
 item.olivine_leggings.tooltip.3=§a+10 Max health
 item.olivine_leggings.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.olivine_leggings.tooltip.5=§6+Resistance II
+item.olivine_leggings.tooltip.6=§6+Regeneration
+
 
 item.olivine_boots.name=Olivine boots
 item.olivine_boots.tooltip.0=When equipped:
@@ -651,6 +703,7 @@ item.olivine_boots.tooltip.2=§9+18 Armor toughness
 item.olivine_boots.tooltip.3=§a+10 Max health
 item.olivine_boots.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.olivine_boots.tooltip.5=§6+Resistance II
+item.olivine_boots.tooltip.6=§6+Regeneration
 
 item.wadsleyite_sword.name=Wadsleyite sword
 item.wadsleyite_shovel.name=Wadsleyite shovel
@@ -665,6 +718,7 @@ item.wadsleyite_helmet.tooltip.2=§9+20 Armor toughness
 item.wadsleyite_helmet.tooltip.3=§a+12 Max health
 item.wadsleyite_helmet.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.wadsleyite_helmet.tooltip.5=§6+Resistance II
+item.wadsleyite_helmet.tooltip.6=§6+Regeneration
 
 item.wadsleyite_chestplate.name=Wadsleyite chestplate
 item.wadsleyite_chestplate.tooltip.0=When equipped:
@@ -673,6 +727,7 @@ item.wadsleyite_chestplate.tooltip.2=§9+20 Armor toughness
 item.wadsleyite_chestplate.tooltip.3=§a+12 Max health
 item.wadsleyite_chestplate.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.wadsleyite_chestplate.tooltip.5=§6+Resistance II
+item.wadsleyite_chestplate.tooltip.6=§6+Regeneration
 
 item.wadsleyite_leggings.name=Wadsleyite leggings
 item.wadsleyite_leggings.tooltip.0=When equipped:
@@ -681,6 +736,7 @@ item.wadsleyite_leggings.tooltip.2=§9+20 Armor toughness
 item.wadsleyite_leggings.tooltip.3=§a+12 Max health
 item.wadsleyite_leggings.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.wadsleyite_leggings.tooltip.5=§6+Resistance II
+item.wadsleyite_leggings.tooltip.6=§6+Regeneration
 
 item.wadsleyite_boots.name=Wadsleyite boots
 item.wadsleyite_boots.tooltip.0=When equipped:
@@ -689,6 +745,7 @@ item.wadsleyite_boots.tooltip.2=§9+20 Armor toughness
 item.wadsleyite_boots.tooltip.3=§a+12 Max health
 item.wadsleyite_boots.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.wadsleyite_boots.tooltip.5=§6+Resistance II
+item.wadsleyite_boots.tooltip.6=§6+Regeneration
 
 item.ringwoodite_sword.name=Ringwoodite sword
 item.ringwoodite_shovel.name=Ringwoodite shovel
@@ -703,6 +760,7 @@ item.ringwoodite_helmet.tooltip.2=§9+22 Armor toughness
 item.ringwoodite_helmet.tooltip.3=§a+14 Max health
 item.ringwoodite_helmet.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.ringwoodite_helmet.tooltip.5=§6+Resistance II
+item.ringwoodite_helmet.tooltip.6=§6+Regeneration
 
 item.ringwoodite_chestplate.name=Ringwoodite chestplate
 item.ringwoodite_chestplate.tooltip.0=When equipped:
@@ -711,6 +769,7 @@ item.ringwoodite_chestplate.tooltip.2=§9+22 Armor toughness
 item.ringwoodite_chestplate.tooltip.3=§a+14 Max health
 item.ringwoodite_chestplate.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.ringwoodite_chestplate.tooltip.5=§6+Resistance II
+item.ringwoodite_chestplate.tooltip.6=§6+Regeneration
 
 item.ringwoodite_leggings.name=Ringwoodite leggings
 item.ringwoodite_leggings.tooltip.0=When equipped:
@@ -719,6 +778,7 @@ item.ringwoodite_leggings.tooltip.2=§9+22 Armor toughness
 item.ringwoodite_leggings.tooltip.3=§a+14 Max health
 item.ringwoodite_leggings.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.ringwoodite_leggings.tooltip.5=§6+Resistance II
+item.ringwoodite_leggings.tooltip.6=§6+Regeneration
 
 item.ringwoodite_boots.name=Ringwoodite boots
 item.ringwoodite_boots.tooltip.0=When equipped:
@@ -727,6 +787,7 @@ item.ringwoodite_boots.tooltip.2=§9+22 Armor toughness
 item.ringwoodite_boots.tooltip.3=§a+14 Max health
 item.ringwoodite_boots.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.ringwoodite_boots.tooltip.5=§6+Resistance II
+item.ringwoodite_boots.tooltip.6=§6+Regeneration
 
 item.brigmanite_sword.name=Brigmanite sword
 item.brigmanite_shovel.name=Brigmanite shovel
@@ -741,6 +802,7 @@ item.brigmanite_helmet.tooltip.2=§9+24 Armor toughness
 item.brigmanite_helmet.tooltip.3=§a+16 Max health
 item.brigmanite_helmet.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.brigmanite_helmet.tooltip.5=§6+Resistance II
+item.brigmanite_helmet.tooltip.6=§6+Regeneration
 
 item.brigmanite_chestplate.name=Brigmanite chestplate
 item.brigmanite_chestplate.tooltip.0=When equipped:
@@ -749,6 +811,7 @@ item.brigmanite_chestplate.tooltip.2=§9+24 Armor toughness
 item.brigmanite_chestplate.tooltip.3=§a+16 Max health
 item.brigmanite_chestplate.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.brigmanite_chestplate.tooltip.5=§6+Resistance II
+item.brigmanite_chestplate.tooltip.6=§6+Regeneration
 
 item.brigmanite_leggings.name=Brigmanite leggings
 item.brigmanite_leggings.tooltip.0=When equipped:
@@ -757,6 +820,7 @@ item.brigmanite_leggings.tooltip.2=§9+24 Armor toughness
 item.brigmanite_leggings.tooltip.3=§a+16 Max health
 item.brigmanite_leggings.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.brigmanite_leggings.tooltip.5=§6+Resistance II
+item.brigmanite_leggings.tooltip.6=§6+Regeneration
 
 item.brigmanite_boots.name=Brigmanite boots
 item.brigmanite_boots.tooltip.0=When equipped:
@@ -765,6 +829,7 @@ item.brigmanite_boots.tooltip.2=§9+24 Armor toughness
 item.brigmanite_boots.tooltip.3=§9+16 Max health
 item.brigmanite_boots.tooltip.4=When full Olivine tier or above is equipped (can be mixed):
 item.brigmanite_boots.tooltip.5=§6+Resistance II
+item.brigmanite_boots.tooltip.6=§6+Regeneration
 
 item.majorite_sword.name=Majorite sword
 item.majorite_shovel.name=§dMajorite shovel
@@ -779,6 +844,7 @@ item.majorite_helmet.tooltip.2=§9+26 Armor toughness
 item.majorite_helmet.tooltip.3=§a+18 Max health
 item.majorite_helmet.tooltip.4=When full Majorite tier or above is equipped (can be mixed):
 item.majorite_helmet.tooltip.5=§6+Resistance III
+item.majorite_helmet.tooltip.6=§6+Regeneration
 
 item.majorite_chestplate.name=Majorite chestplate
 item.majorite_chestplate.tooltip.0=When equipped:
@@ -787,6 +853,7 @@ item.majorite_chestplate.tooltip.2=§9+26 Armor toughness
 item.majorite_chestplate.tooltip.3=§a+18 Max health
 item.majorite_chestplate.tooltip.4=When full Majorite tier or above is equipped (can be mixed):
 item.majorite_chestplate.tooltip.5=§6+Resistance III
+item.majorite_chestplate.tooltip.6=§6+Regeneration
 
 item.majorite_leggings.name=Majorite leggings
 item.majorite_leggings.tooltip.0=When equipped:
@@ -795,6 +862,7 @@ item.majorite_leggings.tooltip.2=§9+26 Armor toughness
 item.majorite_leggings.tooltip.3=§a+18 Max health
 item.majorite_leggings.tooltip.4=When full Majorite tier or above is equipped (can be mixed):
 item.majorite_leggings.tooltip.5=§6+Resistance III
+item.majorite_leggings.tooltip.6=§6+Regeneration
 
 item.majorite_boots.name=Majorite boots
 item.majorite_boots.tooltip.0=When equipped:
@@ -803,6 +871,7 @@ item.majorite_boots.tooltip.2=§9+26 Armor toughness
 item.majorite_boots.tooltip.3=§a+18 Max health
 item.majorite_boots.tooltip.4=When full Majorite tier or above is equipped (can be mixed):
 item.majorite_boots.tooltip.5=§6+Resistance III
+item.majorite_boots.tooltip.6=§6+Regeneration
 
 item.amazonite_sword.name=Amazonite sword
 item.amazonite_shovel.name=Amazonite shovel
@@ -817,7 +886,7 @@ item.amazonite_helmet.tooltip.2=§9+28 Armor toughness
 item.amazonite_helmet.tooltip.3=§a+20 Max health
 item.amazonite_helmet.tooltip.4=When full Amazonite tier or above is equipped (can be mixed):
 item.amazonite_helmet.tooltip.5=§6+Resistance III
-item.amazonite_helmet.tooltip.6=§6+Regeneration
+item.amazonite_helmet.tooltip.6=§6+Regeneration II
 
 
 item.amazonite_chestplate.name=Amazonite chestplate
@@ -827,7 +896,7 @@ item.amazonite_chestplate.tooltip.2=§9+28 Armor toughness
 item.amazonite_chestplate.tooltip.3=§a+20 Max health
 item.amazonite_chestplate.tooltip.4=When full Amazonite tier or above is equipped (can be mixed):
 item.amazonite_chestplate.tooltip.5=§6+Resistance III
-item.amazonite_chestplate.tooltip.6=§6+Regeneration
+item.amazonite_chestplate.tooltip.6=§6+Regeneration II
 
 item.amazonite_leggings.name=Amazonite leggings
 item.amazonite_leggings.tooltip.0=When equipped:
@@ -836,7 +905,7 @@ item.amazonite_leggings.tooltip.2=§9+28 Armor toughness
 item.amazonite_leggings.tooltip.3=§a+20 Max health
 item.amazonite_leggings.tooltip.4=When full Amazonite tier or above is equipped (can be mixed):
 item.amazonite_leggings.tooltip.5=§6+Resistance III
-item.amazonite_leggings.tooltip.6=§6+Regeneration
+item.amazonite_leggings.tooltip.6=§6+Regeneration II
 
 item.amazonite_boots.name=Amazonite boots
 item.amazonite_boots.tooltip.0=When equipped:
@@ -845,7 +914,7 @@ item.amazonite_boots.tooltip.2=§9+28 Armor toughness
 item.amazonite_boots.tooltip.3=§a+20 Max health
 item.amazonite_boots.tooltip.4=When full Amazonite tier or above is equipped (can be mixed):
 item.amazonite_boots.tooltip.5=§6+Resistance III
-item.amazonite_boots.tooltip.6=§6+Regeneration
+item.amazonite_boots.tooltip.6=§6+Regeneration II
 
 item.onyx_sword.name=Onyx sword
 item.onyx_shovel.name=Onyx shovel
@@ -862,7 +931,7 @@ item.onyx_helmet.tooltip.4=When full Onyx tier or above is equipped (can be mixe
 item.onyx_helmet.tooltip.5=§6+Resistance III
 item.onyx_helmet.tooltip.6=§6+Strength
 item.onyx_helmet.tooltip.7=§6+Speed
-item.onyx_helmet.tooltip.8=§6+Regeneration
+item.onyx_helmet.tooltip.8=§6+Regeneration II
 
 item.onyx_chestplate.name=Onyx chestplate
 item.onyx_chestplate.tooltip.0=When equipped:
@@ -873,7 +942,7 @@ item.onyx_chestplate.tooltip.4=When full Onyx tier or better is equipped:
 item.onyx_chestplate.tooltip.5=§6+Resistance III
 item.onyx_chestplate.tooltip.6=§6+Strength
 item.onyx_chestplate.tooltip.7=§6+Speed
-item.onyx_chestplate.tooltip.8=§6+Regeneration
+item.onyx_chestplate.tooltip.8=§6+Regeneration II
 
 item.onyx_leggings.name=Onyx leggings
 item.onyx_leggings.tooltip.0=When equipped:
@@ -884,7 +953,7 @@ item.onyx_leggings.tooltip.4=When full Onyx tier or better is equipped:
 item.onyx_leggings.tooltip.5=§6+Resistance III
 item.onyx_leggings.tooltip.6=§6+Strength
 item.onyx_leggings.tooltip.7=§6+Speed
-item.onyx_leggings.tooltip.8=§6+Regeneration
+item.onyx_leggings.tooltip.8=§6+Regeneration II
 
 item.onyx_boots.name=Onyx boots
 item.onyx_boots.tooltip.0=When equipped:
@@ -895,7 +964,7 @@ item.onyx_boots.tooltip.4=When full Onyx tier or better is equipped:
 item.onyx_boots.tooltip.5=§6+Resistance III
 item.onyx_boots.tooltip.6=§6+Strength
 item.onyx_boots.tooltip.7=§6+Speed
-item.onyx_boots.tooltip.8=§6+Regeneration
+item.onyx_boots.tooltip.8=§6+Regeneration II
 
 item.onyx_ii_sword.name=Onyx sword II
 item.onyx_ii_shovel.name=Onyx shovel II
@@ -967,7 +1036,7 @@ item.onyx_iii_helmet.tooltip.5=§6+Resistance III
 item.onyx_iii_helmet.tooltip.6=§6+Fire Resistance III
 item.onyx_iii_helmet.tooltip.7=§6+Strength III
 item.onyx_iii_helmet.tooltip.8=§6+Speed III
-item.onyx_iii_helmet.tooltip.9=§6+Regeneration II
+item.onyx_iii_helmet.tooltip.9=§6+Regeneration III
 
 item.onyx_iii_chestplate.name=Onyx chestplate III
 item.onyx_iii_chestplate.tooltip.0=When equipped:
@@ -979,7 +1048,7 @@ item.onyx_iii_chestplate.tooltip.5=§6+Resistance III
 item.onyx_iii_chestplate.tooltip.6=§6+Fire Resistance III
 item.onyx_iii_chestplate.tooltip.7=§6+Strength III
 item.onyx_iii_chestplate.tooltip.8=§6+Speed III
-item.onyx_iii_chestplate.tooltip.9=§6+Regeneration II
+item.onyx_iii_chestplate.tooltip.9=§6+Regeneration III
 
 item.onyx_iii_leggings.name=Onyx leggings III
 item.onyx_iii_leggings.tooltip.0=When equipped:
@@ -991,7 +1060,7 @@ item.onyx_iii_leggings.tooltip.5=§6+Resistance III
 item.onyx_iii_leggings.tooltip.6=§6+Fire Resistance III
 item.onyx_iii_leggings.tooltip.7=§6+Strength III
 item.onyx_iii_leggings.tooltip.8=§6+Speed III
-item.onyx_iii_leggings.tooltip.9=§6+Regeneration II
+item.onyx_iii_leggings.tooltip.9=§6+Regeneration III
 
 item.onyx_iii_boots.name=Onyx boots III
 item.onyx_iii_boots.tooltip.0=When equipped:
@@ -1003,7 +1072,7 @@ item.onyx_iii_boots.tooltip.5=§6+Resistance III
 item.onyx_iii_boots.tooltip.6=§6+Fire Resistance III
 item.onyx_iii_boots.tooltip.7=§6+Strength III
 item.onyx_iii_boots.tooltip.8=§6+Speed III
-item.onyx_iii_boots.tooltip.9=§6+Regeneration II
+item.onyx_iii_boots.tooltip.9=§6+Regeneration III
 
 item.onyx_iv_sword.name=Onyx sword IV
 item.onyx_iv_shovel.name=Onyx shovel IV
@@ -1021,7 +1090,7 @@ item.onyx_iv_helmet.tooltip.5=§6+Resistance III
 item.onyx_iv_helmet.tooltip.6=§6+Fire Resistance IV
 item.onyx_iv_helmet.tooltip.7=§6+Strength IV
 item.onyx_iv_helmet.tooltip.8=§6+Speed IV
-item.onyx_iv_helmet.tooltip.9=§6+Regeneration II
+item.onyx_iv_helmet.tooltip.9=§6+Regeneration IV
 
 item.onyx_iv_chestplate.name=Onyx chestplate IV
 item.onyx_iv_chestplate.tooltip.0=When equipped:
@@ -1033,7 +1102,7 @@ item.onyx_iv_chestplate.tooltip.5=§6+Resistance III
 item.onyx_iv_chestplate.tooltip.6=§6+Fire Resistance IV
 item.onyx_iv_chestplate.tooltip.7=§6+Strength IV
 item.onyx_iv_chestplate.tooltip.8=§6+Speed IV
-item.onyx_iv_chestplate.tooltip.9=§6+Regeneration II
+item.onyx_iv_chestplate.tooltip.9=§6+Regeneration IV
 
 item.onyx_iv_leggings.name=Onyx leggings IV
 item.onyx_iv_leggings.tooltip.0=When equipped:
@@ -1045,7 +1114,7 @@ item.onyx_iv_leggings.tooltip.5=§6+Resistance III
 item.onyx_iv_leggings.tooltip.6=§6+Fire Resistance IV
 item.onyx_iv_leggings.tooltip.7=§6+Strength IV
 item.onyx_iv_leggings.tooltip.8=§6+Speed IV
-item.onyx_iv_leggings.tooltip.9=§6+Regeneration II
+item.onyx_iv_leggings.tooltip.9=§6+Regeneration IV
 
 item.onyx_iv_boots.name=Onyx boots IV
 item.onyx_iv_boots.tooltip.0=When equipped:
@@ -1057,7 +1126,7 @@ item.onyx_iv_boots.tooltip.5=§6+Resistance III
 item.onyx_iv_boots.tooltip.6=§6+Fire Resistance IV
 item.onyx_iv_boots.tooltip.7=§6+Strength IV
 item.onyx_iv_boots.tooltip.8=§6+Speed IV
-item.onyx_iv_boots.tooltip.9=§6+Regeneration II
+item.onyx_iv_boots.tooltip.9=§6+Regeneration IV
 
 item.onyx_v_sword.name=Onyx sword V
 item.onyx_v_shovel.name=Onyx shovel V
@@ -1075,7 +1144,7 @@ item.onyx_v_helmet.tooltip.5=§6+Resistance IV
 item.onyx_v_helmet.tooltip.6=§6+Fire Resistance V
 item.onyx_v_helmet.tooltip.7=§6+Strength V
 item.onyx_v_helmet.tooltip.8=§6+Speed V
-item.onyx_v_helmet.tooltip.9=§6+Regeneration III
+item.onyx_v_helmet.tooltip.9=§6+Regeneration V
 
 item.onyx_v_chestplate.name=Onyx chestplate V
 item.onyx_v_chestplate.tooltip.0=When equipped:
@@ -1087,7 +1156,7 @@ item.onyx_v_chestplate.tooltip.5=§6+Resistance IV
 item.onyx_v_chestplate.tooltip.6=§6+Fire Resistance V
 item.onyx_v_chestplate.tooltip.7=§6+Strength V
 item.onyx_v_chestplate.tooltip.8=§6+Speed V
-item.onyx_v_chestplate.tooltip.9=§6+Regeneration III
+item.onyx_v_chestplate.tooltip.9=§6+Regeneration V
 
 item.onyx_v_leggings.name=Onyx leggings V
 item.onyx_v_leggings.tooltip.0=When equipped:
@@ -1099,7 +1168,7 @@ item.onyx_v_leggings.tooltip.5=§6+Resistance IV
 item.onyx_v_leggings.tooltip.6=§6+Fire Resistance V
 item.onyx_v_leggings.tooltip.7=§6+Strength V
 item.onyx_v_leggings.tooltip.8=§6+Speed V
-item.onyx_v_leggings.tooltip.9=§6+Regeneration III
+item.onyx_v_leggings.tooltip.9=§6+Regeneration V
 
 item.onyx_v_boots.name=Onyx boots V
 item.onyx_v_boots.tooltip.0=When equipped:
@@ -1111,7 +1180,7 @@ item.onyx_v_boots.tooltip.5=§6+Resistance IV
 item.onyx_v_boots.tooltip.6=§6+Fire Resistance V
 item.onyx_v_boots.tooltip.7=§6+Strength V
 item.onyx_v_boots.tooltip.8=§6+Speed V
-item.onyx_v_boots.tooltip.9=§6+Regeneration III
+item.onyx_v_boots.tooltip.9=§6+Regeneration V
 
 item.emerald_arrow.name=Emerald arrow
 item.ruby_arrow.name=Ruby arrow
@@ -1130,20 +1199,35 @@ item.onyx_arrow_iv.name=Onyx arrow IV
 item.onyx_arrow_v.name=Onyx arrow V
 
 item.emerald_bow.name=Emerald bow
+item.emerald_bow.tooltip.0=§c+1 Damage
 item.ruby_bow.name=Ruby bow
+item.ruby_bow.tooltip.0=§c+2 Damage
 item.sapphire_bow.name=Sapphire bow
+item.sapphire_bow.tooltip.0=§c+3 Damage
 item.diamond_bow.name=Diamond bow
+item.diamond_bow.tooltip.0=§c+4 Damage
 item.olivine_bow.name=Olivine bow
+item.olivine_bow.tooltip.0=§c+5 Damage
 item.wadsleyite_bow.name=Wadsleyite bow
+item.wadsleyite_bow.tooltip.0=§c+6 Damage
 item.ringwoodite_bow.name=Ringwoodite bow
+item.ringwoodite_bow.tooltip.0=§c+7 Damage
 item.brigmanite_bow.name=Brigmanite bow
+item.brigmanite_bow.tooltip.0=§c+8 Damage
 item.majorite_bow.name=Majorite bow
+item.majorite_bow.tooltip.0=§c+10 Damage
 item.amazonite_bow.name=Amazonite bow
+item.amazonite_bow.tooltip.0=§c+12 Damage
 item.onyx_bow.name=Onyx bow
+item.onyx_bow.tooltip.0=§c+14 Damage
 item.onyx_bow_ii.name=Onyx bow II
+item.onyx_bow_ii.tooltip.0=§c+16 Damage
 item.onyx_bow_iii.name=Onyx bow III
+item.onyx_bow_iii.tooltip.0=§c+18 Damage
 item.onyx_bow_iv.name=Onyx bow IV
+item.onyx_bow_iv.tooltip.0=§c+20 Damage
 item.onyx_bow_v.name=Onyx bow V
+item.onyx_bow_v.tooltip.0=§c+22 Damage
 
 //Items
 item.iron_ingot.name=Iron ingot
@@ -4231,6 +4315,8 @@ item.core_sword.name=Core sword
 
 entity.demon.name=Demon
 entity.blackdemon.name=Black demon
+entity.core_demon.name=Core demon
+entity.onyx_demon.name=Onyx demon
 entity.ghoul.name=Ghoul
 entity.hellhound.name=Hellhound
 entity.hot_blaze.name=Hot Blaze
@@ -4381,11 +4467,11 @@ item.copper_shield.tooltip.1=§a+5%% Knockback Resistance
 
 item.steel_shield.tooltip.0=When holding the shield:
 item.steel_shield.tooltip.1=§a+0.5 Health
-item.steel_shield.tooltip.1=§a+6%% Knockback Resistance
+item.steel_shield.tooltip.2=§a+6%% Knockback Resistance
 
 item.bronze_shield.tooltip.0=When holding the shield:
 item.bronze_shield.tooltip.1=§a+1 Health
-item.bronze_shield.tooltip.1=§a+7%% Knockback Resistance
+item.bronze_shield.tooltip.2=§a+7%% Knockback Resistance
 
 item.silver_shield.tooltip.0=When holding the shield:
 item.silver_shield.tooltip.1=§a+2 Health
