@@ -46,7 +46,7 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 
 	public EntityOnyxDemon(World worldIn)   {
 		super(worldIn);
-		setSize(2.5f, 5f);
+		setSize(2.8f, 8f);
 		this.isImmuneToFire = true;
 		this.moveHelper = new EntityOnyxDemon.GhastMoveHelper(this);
 	}
@@ -127,9 +127,6 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 		if (this.getFireballTick() > 0){
 			this.dataManager.set(FIREBALL_TICK, this.getFireballTick() - 1);
 		}
-		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 0, 5));
-		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 0, 5));
-		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 5));
 	}
 
 	protected void initEntityAI () {
@@ -225,12 +222,16 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(64D);
+		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(16D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.5D);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(4000D);
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(20.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(0.3D);
 		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(112D);
+		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
+		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999999, 5));
+		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 999999999, 5));
+
 	}
 
 
