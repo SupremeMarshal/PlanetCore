@@ -1,5 +1,6 @@
 package com.PlanetCore.entity;
 
+import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.handlers.LootTableHandler;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -12,6 +13,8 @@ import net.minecraft.entity.projectile.EntityDragonFireball;
 import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.entity.projectile.EntitySmallFireball;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -25,8 +28,8 @@ public class EntityHotBlaze extends EntityBlaze {
     public EntityHotBlaze(World worldIn) {
         super(worldIn);
 
-        this.setSize(2, 4);
-        this.moveHelper = new EntityHotBlaze.GhastMoveHelper(this);
+        this.setSize(1, 2);
+        this.moveHelper = new EntityHotBlaze.BlazeMoveHelper(this);
         this.setNoGravity(true);
     }
 
@@ -54,6 +57,7 @@ public class EntityHotBlaze extends EntityBlaze {
     @Override
     public void onLivingUpdate()
     {
+        this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 2));
         super.onLivingUpdate();
     }
 
@@ -125,8 +129,7 @@ public class EntityHotBlaze extends EntityBlaze {
             double d2 = this.parentEntity.posZ + (double)((random.nextFloat() - 0.5F) * 64.0F);
             for (int i=0;i<16;i++){
                 BlockPos go = new BlockPos(d0, d1, d2);
-                if (this.parentEntity.world.getBlockState(go).getBlock() == Blocks.AIR){
-                    System.out.println("found air");
+                if (this.parentEntity.world.getBlockState(go).getBlock() == Blocks.AIR || this.parentEntity.world.getBlockState(go).getBlock() == ModBlocks.AIR_NO_PRESSURE){
                     break;
                 }
 
@@ -146,7 +149,7 @@ public class EntityHotBlaze extends EntityBlaze {
         private int attackStep;
         private int attackTime;
 
-        public AIFireballAttack(EntityBlaze blazeIn)
+        public AIFireballAttack(EntityHotBlaze blazeIn)
         {
             this.blaze = blazeIn;
             this.setMutexBits(9);
@@ -212,7 +215,7 @@ public class EntityHotBlaze extends EntityBlaze {
                         this.attackTime = 60;
                         this.blaze.setOnFire(true);
                     }
-                    else if (this.attackStep <= 4)
+                    else if (this.attackStep <= 6)
                     {
                         this.attackTime = 6;
                     }
@@ -230,10 +233,10 @@ public class EntityHotBlaze extends EntityBlaze {
 
                         for (int i = 0; i < 1; ++i)
                         {
-                            EntityHotLargeFireball entityhotlargefireball = new EntityHotLargeFireball(this.blaze.world, this.blaze, d1 + this.blaze.getRNG().nextGaussian() * (double)f, d2, d3 + this.blaze.getRNG().nextGaussian() * (double)f);
+                            EntityHotFireball entityhotfireball = new EntityHotFireball(this.blaze.world, this.blaze, d1 + this.blaze.getRNG().nextGaussian() * (double)f, d2, d3 + this.blaze.getRNG().nextGaussian() * (double)f);
                             //
-                            entityhotlargefireball.posY = this.blaze.posY + (double)(this.blaze.height / 2.0F) + 0.5D;
-                            this.blaze.world.spawnEntity(entityhotlargefireball);
+                            entityhotfireball.posY = this.blaze.posY + (double)(this.blaze.height / 2.0F) + 0.5D;
+                            this.blaze.world.spawnEntity(entityhotfireball);
                         }
                     }
                 }
@@ -256,12 +259,12 @@ public class EntityHotBlaze extends EntityBlaze {
         }
     }
 
-    static class GhastMoveHelper extends EntityMoveHelper
+    static class BlazeMoveHelper extends EntityMoveHelper
     {
         private final EntityHotBlaze parentEntity;
         private int courseChangeCooldown;
 
-        public GhastMoveHelper(EntityHotBlaze ghast)
+        public BlazeMoveHelper(EntityHotBlaze ghast)
         {
             super(ghast);
             this.parentEntity = ghast;
@@ -290,8 +293,10 @@ public class EntityHotBlaze extends EntityBlaze {
                     else {
                         if (this.parentEntity.hasAttackTarget()) {
                             this.action = EntityMoveHelper.Action.WAIT;
-                        } else {
-                            this.parentEntity.motionY += 0.03;
+                        }
+                        else
+                        {
+                            this.parentEntity.motionY -= 0.01;
                         }
                     }
                 }
