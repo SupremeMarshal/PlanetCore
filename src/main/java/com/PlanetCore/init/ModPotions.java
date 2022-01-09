@@ -16,16 +16,28 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class ModPotions {
-    public static final PotionType FIRE_RESISTANCE_II_POTION = new PotionType("fire_resistance_II", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 9600, 1)}).setRegistryName("fire_resistance_II");
-    public static final PotionType LONG_FIRE_RESISTANCE_II_POTION = new PotionType("long_fire_resistance_II", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 20*60*30, 1)}).setRegistryName("long_fire_resistance_II");
-    public static final PotionType FIRE_RESISTANCE_III_POTION = new PotionType("fire_resistance_III", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 9600, 2)}).setRegistryName("fire_resistance_III");
-    public static final PotionType LONG_FIRE_RESISTANCE_III_POTION = new PotionType("long_fire_resistance_III", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 20*60*30, 2)}).setRegistryName("long_fire_resistance_III");
+    public static final PotionType FIRE_RESISTANCE_II_POTION = new PotionType("fire_resistance_II", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 3600, 1)}).setRegistryName("fire_resistance_II");
+    public static final PotionType LONG_FIRE_RESISTANCE_II_POTION = new PotionType("long_fire_resistance_II", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 20*60*8, 1)}).setRegistryName("long_fire_resistance_II");
+    public static final PotionType FIRE_RESISTANCE_III_POTION = new PotionType("fire_resistance_III", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 3600, 2)}).setRegistryName("fire_resistance_III");
+    public static final PotionType LONG_FIRE_RESISTANCE_III_POTION = new PotionType("long_fire_resistance_III", new PotionEffect[] { new PotionEffect(MobEffects.FIRE_RESISTANCE, 20*60*8, 2)}).setRegistryName("long_fire_resistance_III");
+    public static final PotionType HASTE_POTION = new PotionType("haste", new PotionEffect[] { new PotionEffect(MobEffects.HASTE, 3600, 0)}).setRegistryName("haste");
+    public static final PotionType LONG_HASTE_POTION = new PotionType("long_haste", new PotionEffect[] { new PotionEffect(MobEffects.HASTE, 9600, 0)}).setRegistryName("long_haste");
+    public static final PotionType HASTE_II_POTION = new PotionType("haste_II", new PotionEffect[] { new PotionEffect(MobEffects.HASTE, 3600, 1)}).setRegistryName("haste_II");
+    public static final PotionType LONG_HASTE_II_POTION = new PotionType("long_haste_II", new PotionEffect[] { new PotionEffect(MobEffects.HASTE, 9600, 1)}).setRegistryName("long_haste_II");
+    public static final PotionType HASTE_III_POTION = new PotionType("haste_III", new PotionEffect[] { new PotionEffect(MobEffects.HASTE, 3600, 2)}).setRegistryName("haste_III");
+    public static final PotionType LONG_HASTE_III_POTION = new PotionType("long_haste_III", new PotionEffect[] { new PotionEffect(MobEffects.HASTE, 9600, 2)}).setRegistryName("long_haste_III");
 
     public static void registerPotions(){
         ForgeRegistries.POTION_TYPES.register(FIRE_RESISTANCE_II_POTION);
         ForgeRegistries.POTION_TYPES.register(LONG_FIRE_RESISTANCE_II_POTION);
         ForgeRegistries.POTION_TYPES.register(FIRE_RESISTANCE_III_POTION);
         ForgeRegistries.POTION_TYPES.register(LONG_FIRE_RESISTANCE_III_POTION);
+        ForgeRegistries.POTION_TYPES.register(HASTE_POTION);
+        ForgeRegistries.POTION_TYPES.register(LONG_HASTE_POTION);
+        ForgeRegistries.POTION_TYPES.register(HASTE_II_POTION);
+        ForgeRegistries.POTION_TYPES.register(LONG_HASTE_II_POTION);
+        ForgeRegistries.POTION_TYPES.register(HASTE_III_POTION);
+        ForgeRegistries.POTION_TYPES.register(LONG_HASTE_III_POTION);
 
         // short n -> short n+1
         PotionHelper.addMix(PotionTypes.FIRE_RESISTANCE, ModItems.HOT_MAGMA_CREAM, FIRE_RESISTANCE_II_POTION);
@@ -38,5 +50,17 @@ public class ModPotions {
         // short n -> long n
         PotionHelper.addMix(FIRE_RESISTANCE_II_POTION, Items.REDSTONE, LONG_FIRE_RESISTANCE_II_POTION);
         PotionHelper.addMix(FIRE_RESISTANCE_III_POTION, Items.REDSTONE, LONG_FIRE_RESISTANCE_III_POTION);
+
+        PotionHelper.addMix(PotionTypes.WATER, ModItems.DEMON_STAR, HASTE_POTION);
+        PotionHelper.addMix(HASTE_POTION, Items.REDSTONE, LONG_HASTE_POTION);
+        PotionHelper.addMix(HASTE_POTION, ModItems.DEMON_STAR_CHARGED, HASTE_II_POTION);
+        PotionHelper.addMix(LONG_HASTE_POTION, ModItems.DEMON_STAR_CHARGED, LONG_HASTE_II_POTION);
+        PotionHelper.addMix(HASTE_II_POTION, Items.REDSTONE, LONG_HASTE_II_POTION);
+
+        PotionHelper.addMix(HASTE_II_POTION, ModItems.CORE_STAR, HASTE_III_POTION);
+        PotionHelper.addMix(LONG_HASTE_II_POTION, ModItems.CORE_STAR, LONG_HASTE_III_POTION);
+        PotionHelper.addMix(HASTE_III_POTION, Items.REDSTONE, LONG_HASTE_III_POTION);
+
+
     }
 }
