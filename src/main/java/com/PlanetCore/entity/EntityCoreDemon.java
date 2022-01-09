@@ -6,6 +6,7 @@ import com.PlanetCore.entity.goals.DemonAttackMeleeAi;
 import com.PlanetCore.entity.goals.DemonFireBallGoal;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.handlers.LootTableHandler;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityEnderman;
@@ -28,6 +29,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.BossInfo;
+import net.minecraft.world.BossInfoServer;
 import net.minecraft.world.World;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -40,9 +43,11 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.Random;
 
 public class EntityCoreDemon extends EntityMob implements IAnimatable {
+	private final BossInfoServer bossInfo = (BossInfoServer)(new BossInfoServer(this.getDisplayName(), BossInfo.Color.WHITE, BossInfo.Overlay.PROGRESS)).setDarkenSky(true);
+
 	public EntityCoreDemon(World worldIn)   {
 		super(worldIn);
-		setSize(4f, 8f);
+		setSize(2f, 4f);
 		this.isImmuneToFire = true;
 		this.moveHelper = new EntityCoreDemon.GhastMoveHelper(this);
 	}
@@ -70,6 +75,37 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 	}
 
 	@Override
+	public boolean isNonBoss() {
+		return false;
+	}
+
+	@Override
+	protected void updateAITasks()
+	{
+		this.bossInfo.setPercent(this.getHealth() / this.getMaxHealth());
+	}
+
+	/**
+	 * Add the given player to the list of players tracking this entity. For instance, a player may track a boss in
+	 * order to view its associated boss bar.
+	 */
+	public void addTrackingPlayer(EntityPlayerMP player)
+	{
+		super.addTrackingPlayer(player);
+		this.bossInfo.addPlayer(player);
+	}
+
+	/**
+	 * Removes the given player from the list of players tracking this entity. See {@link Entity#addTrackingPlayer} for
+	 * more information on tracking.
+	 */
+	public void removeTrackingPlayer(EntityPlayerMP player)
+	{
+		super.removeTrackingPlayer(player);
+		this.bossInfo.removePlayer(player);
+	}
+
+	@Override
 	public boolean isImmuneToExplosions() {
 		return true;
 	}
@@ -92,18 +128,21 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 		if (this.getFireballTick() > 0){
 			this.dataManager.set(FIREBALL_TICK, this.getFireballTick() - 1);
 		}
+		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 0, 5));
+		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 0, 3));
+		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 3));
 	}
 
 	protected void initEntityAI () {
 		this.tasks.addTask(5, new EntityCoreDemon.AIRandomFly(this));
 		this.tasks.addTask(3, new CoreDemonAttackMeleeAi(this, 1.0, true));
-		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityPlayerMP.class, false, false));
-		this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, true));
-		this.tasks.addTask(4, new EntityAIWatchClosest(this, EntityPlayerMP.class, (float) 12));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayerMP.class, false, false));
+		this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
+		this.tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayerMP.class, (float) 12));
 		this.tasks.addTask(6, new EntityAILookIdle(this));
 		this.tasks.addTask(7, new EntityAISwimming(this));
 		this.tasks.addTask(3, new CoreDemonFireBallGoal(this));
-		this.tasks.addTask(5, new EntityAIWander(this, 0.6));
+		this.tasks.addTask(4, new EntityAIWander(this, 0.6));
 		this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D, 0.0F));
 	}
 	
@@ -156,7 +195,7 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY < -5120) {
+		if (posY < -4800) {
 			return true;
 		} else {
 			return false;
@@ -175,22 +214,7 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public int getMaxSpawnedInChunk() {
-		if (posY < -5120 && posY >= -6144) {
-			return 2;
-		}
-		else if (posY < -6144 && posY >= -7168) {
-			return 5;
-		}
-		else if (posY < -7168 && posY >= -8192) {
-			return 8;
-		}
-		else if (posY < -8192 && posY >= -9216) {
-			return 11;
-		}
-		else if (posY < -9216) {
-			return 14;
-		}
-		else return 0;
+		return 1;
 	}
 	
 	
@@ -202,13 +226,12 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(64D);
+		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(32D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1200D);
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(20.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(0.3D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(42D);
-		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(56D);
 	}
 
 
@@ -298,7 +321,7 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 		 * Returns whether the EntityAIBase should begin execution.
 		 */
 		public boolean shouldExecute(){
-			if (this.parentEntity.hasAttackTarget() && this.parentEntity.onGround) return false;
+			if (this.parentEntity.hasAttackTarget() || this.parentEntity.onGround) return false;
 			if (this.parentEntity.getRNG().nextInt(30) == 0 && !this.parentEntity.onGround) return true;
 
 			EntityMoveHelper entitymovehelper = this.parentEntity.getMoveHelper();
