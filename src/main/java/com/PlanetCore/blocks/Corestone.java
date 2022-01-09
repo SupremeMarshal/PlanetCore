@@ -20,10 +20,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import net.minecraft.world.IBlockAccess;
@@ -216,16 +218,57 @@ public class Corestone extends BlockBase implements IMetaName {
 
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
 	{
-		Block block = this;
+		/*
 		if (!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn))
 		{
-			if (block == ModBlocks.CORESTONE)
-			{
 				entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 20.0F);
-			}
 		}
 
+		 */
+
 		super.onEntityWalk(worldIn, pos, entityIn);
+	}
+
+	protected static final AxisAlignedBB COLLISION_AABB = new AxisAlignedBB(0.0125D, 0.0D, 0.0125D, 0.9875D, 0.9375D, 0.9875D);
+
+	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
+	{
+		return COLLISION_AABB;
+	}
+
+
+	@Override
+	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+		if (entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn))
+		{
+			PotionEffect effect = ((EntityLivingBase) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+			float damage = 0;
+			if (state.getBlock().getMetaFromState(state) == 0) damage = 4;
+			else if (state.getBlock().getMetaFromState(state) == 1) damage = 8;
+			else if (state.getBlock().getMetaFromState(state) == 2) damage = 12;
+			else if (state.getBlock().getMetaFromState(state) == 3) damage = 16;
+			else if (state.getBlock().getMetaFromState(state) == 4) damage = 32;
+			else if (state.getBlock().getMetaFromState(state) == 5) damage = 64;
+			else if (state.getBlock().getMetaFromState(state) == 6) damage = 128;
+			if (effect == null) {
+				entityIn.attackEntityFrom(DamageSource.LAVA, damage);
+				entityIn.setFire(10);
+			}
+			else if (effect != null && effect.getAmplifier() == 0) {
+				damage = damage / 4;
+				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			}
+			else if (effect != null && effect.getAmplifier() == 1) {
+				damage = damage / 16;
+				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			}
+			else if (effect != null && effect.getAmplifier() == 2) {
+				damage = damage / 64;
+				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			}
+		}
+		//entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
+		super.onEntityCollision(worldIn, pos, state, entityIn);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -236,20 +279,6 @@ public class Corestone extends BlockBase implements IMetaName {
 
 
 
-	@Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
-	{
-		super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
-		for (EnumFacing side : EnumFacing.values()) {
-			if (worldIn.getBlockState(pos.offset(side)).getBlock() == Blocks.WATER || worldIn.getBlockState(pos.offset(side)).getBlock() == Blocks.FLOWING_WATER || worldIn.getBlockState(pos.offset(side)).getBlock() == Blocks.WATERLILY) {
-				worldIn.setBlockToAir(pos.offset(side));
-				worldIn.playSound(null, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (worldIn.rand.nextFloat() - worldIn.rand.nextFloat()) * 0.8F);
-				if (worldIn instanceof WorldServer) {
-					((WorldServer) worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double) pos.offset(side).getX() + 0.5D, (double) pos.offset(side).getY() + 0.25D, (double) pos.offset(side).getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
-				}
-			}
-		}
-	}
 
 	public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
 	{
@@ -259,37 +288,37 @@ public class Corestone extends BlockBase implements IMetaName {
 		int Y = pos.getY();
 		if (!worldIn.isRemote && Y < -4000) {
 			if (state.getBlock().getMetaFromState(state) == 0) {
-				if (rand.nextInt(100) == 0) {
+				if (rand.nextInt(130) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 1) {
-				if (rand.nextInt(100) == 0) {
+				if (rand.nextInt(130) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 5, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 2) {
-				if (rand.nextInt(100) == 0) {
+				if (rand.nextInt(130) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 6, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 3) {
-				if (rand.nextInt(100) == 0) {
+				if (rand.nextInt(130) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 7, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 4) {
-				if (rand.nextInt(100) == 0) {
+				if (rand.nextInt(130) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 8, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 5) {
-				if (rand.nextInt(100) == 0) {
+				if (rand.nextInt(130) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 9, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 6) {
-				if (rand.nextInt(100) == 0) {
+				if (rand.nextInt(130) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 10, true);
 				}
 			}
