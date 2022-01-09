@@ -7,7 +7,7 @@
                 {
                     "condition": "random_chance_with_looting",
                     "chance": 0.04,
-                    "looting_multiplier": 0.01
+                    "looting_multiplier": 1.2
                 }
             ],
             "entries": [
