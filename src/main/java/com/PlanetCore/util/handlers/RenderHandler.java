@@ -16,7 +16,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import org.lwjgl.opengl.GL11;
 
 public class RenderHandler
 	{
@@ -36,6 +35,14 @@ public class RenderHandler
 				@Override
 				public Render<? super EntityCoreDemon> createRenderFor(RenderManager manager) {
 					return new RenderCoreDemon(manager);
+				}
+			});
+
+			//Onyx Demon
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxDemon.class, new IRenderFactory<EntityOnyxDemon>() {
+				@Override
+				public Render<? super EntityOnyxDemon> createRenderFor(RenderManager manager) {
+					return new RenderOnyxDemon(manager);
 				}
 			});
 
@@ -64,6 +71,7 @@ public class RenderHandler
 					return new RenderDeathEnderman(manager);
 				}
 			});
+			RenderingRegistry.registerEntityRenderingHandler(EntityHotMagmaCube.class, manager -> new RenderHotMagmaCube(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
@@ -82,6 +90,8 @@ public class RenderHandler
 			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrowIII.class, manager -> new RenderOnyxArrowIII(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrowIV.class, manager -> new RenderOnyxArrowIV(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrowV.class, manager -> new RenderOnyxArrowV(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityCoreLargeFireball.class, manager -> new RenderCoreLargeFireball(manager, 1));
+			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxFireball.class, manager -> new RenderOnyxFireball(manager, 1));
 
 
 		}
@@ -524,25 +534,6 @@ public class RenderHandler
 				return new ModelResourceLocation("planetcore:core_lava", "fluid");
 			}
 		});
-
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.CENTERCORE_LAVA_FLUID), new ItemMeshDefinition() {
-
-				@Override
-				public ModelResourceLocation getModelLocation(ItemStack stack) {
-
-					return new ModelResourceLocation("planetcore:centercore_lava", "fluid");
-
-				}
-			});
-
-			ModelLoader.setCustomStateMapper(ModBlocks.CENTERCORE_LAVA_FLUID, new StateMapperBase() {
-
-				@Override
-				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-
-					return new ModelResourceLocation("planetcore:centercore_lava", "fluid");
-				}
-			});
 
 
 			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SULFURIC_ACID_FLUID), new ItemMeshDefinition() {

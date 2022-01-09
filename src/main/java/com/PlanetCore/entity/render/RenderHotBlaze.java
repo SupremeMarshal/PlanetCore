@@ -29,7 +29,7 @@ public class RenderHotBlaze extends RenderLiving<EntityHotBlaze> {
     @Override
     public float prepareScale(EntityHotBlaze entitylivingbaseIn, float partialTicks) {
         GlStateManager.enableRescaleNormal();
-        GlStateManager.scale(-2.0F, -2.0F, 2.0F);
+        GlStateManager.scale(-1.0F, -1.0F, 1.0F);
         this.preRenderCallback(entitylivingbaseIn, partialTicks);
         GlStateManager.translate(0.0F, -1.7F, 0.0F);
         return 0.0625F * 1.5F;
