@@ -101,8 +101,8 @@ public class EntityHellHound extends EntityMob
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -400) {
-			return super.getCanSpawnHere();
+		if (posY <= -512) {
+			return true;
 		} else {
 			return false;
 		}
