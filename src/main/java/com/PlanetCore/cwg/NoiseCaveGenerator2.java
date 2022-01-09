@@ -44,13 +44,13 @@ public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
             // value 1 and above means they won't generate
-            double caveSystemSizeFactor = 0.30;
+            double caveSystemSizeFactor = 0.24;
 
 
             // bigger values = less smooth transition on the edges of cave system
             double transitionConstant1 = 40;
             // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
-            double transitionConstant2 = 0.10;
+            double transitionConstant2 = 0.07;
 
             // bigger value = finer detail for caves. Adding 1 = double the detail
             int caveOctaves = 8;
