@@ -76,7 +76,7 @@ public class EntityHotMagmaCube extends EntityMagmaCube
 	
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -1024) {
+		if (posY <= -1024 && posY > -4800) {
 			return true;
 		} else {
 			return false;

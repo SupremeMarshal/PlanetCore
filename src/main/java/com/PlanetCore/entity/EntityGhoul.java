@@ -93,7 +93,7 @@ public class EntityGhoul extends EntityMob
 	
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -256) {
+		if (posY <= -256 && posY > -4800) {
 			return true;
 		} else {
 			return false;
