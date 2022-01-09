@@ -8,6 +8,8 @@ import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -20,8 +22,8 @@ public class EntityCoreBlaze extends EntityBlaze {
     public EntityCoreBlaze(World worldIn) {
         super(worldIn);
 
-        this.setSize(2, 4);
-        this.moveHelper = new EntityCoreBlaze.GhastMoveHelper(this);
+        this.setSize(1.2F, 2.4F);
+        this.moveHelper = new EntityCoreBlaze.BlazeMoveHelper(this);
         this.setNoGravity(true);
     }
 
@@ -49,6 +51,7 @@ public class EntityCoreBlaze extends EntityBlaze {
     @Override
     public void onLivingUpdate()
     {
+        this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 3));
         super.onLivingUpdate();
     }
 
@@ -141,7 +144,7 @@ public class EntityCoreBlaze extends EntityBlaze {
         private int attackStep;
         private int attackTime;
 
-        public AIFireballAttack(EntityBlaze blazeIn)
+        public AIFireballAttack(EntityCoreBlaze blazeIn)
         {
             this.blaze = blazeIn;
             this.setMutexBits(9);
@@ -225,10 +228,10 @@ public class EntityCoreBlaze extends EntityBlaze {
 
                         for (int i = 0; i < 1; ++i)
                         {
-                            EntityCoreLargeFireball entitycorelargefireball = new EntityCoreLargeFireball(this.blaze.world, this.blaze, d1 + this.blaze.getRNG().nextGaussian() * (double)f, d2, d3 + this.blaze.getRNG().nextGaussian() * (double)f);
+                            EntityCoreFireball entitycorefireball = new EntityCoreFireball(this.blaze.world, this.blaze, d1 + this.blaze.getRNG().nextGaussian() * (double)f, d2, d3 + this.blaze.getRNG().nextGaussian() * (double)f);
                             //
-                            entitycorelargefireball.posY = this.blaze.posY + (double)(this.blaze.height / 2.0F) + 0.5D;
-                            this.blaze.world.spawnEntity(entitycorelargefireball);
+                            entitycorefireball.posY = this.blaze.posY + (double)(this.blaze.height / 2.0F) + 0.5D;
+                            this.blaze.world.spawnEntity(entitycorefireball);
                         }
                     }
                 }
@@ -251,12 +254,12 @@ public class EntityCoreBlaze extends EntityBlaze {
         }
     }
 
-    static class GhastMoveHelper extends EntityMoveHelper
+    static class BlazeMoveHelper extends EntityMoveHelper
     {
         private final EntityCoreBlaze parentEntity;
         private int courseChangeCooldown;
 
-        public GhastMoveHelper(EntityCoreBlaze ghast)
+        public BlazeMoveHelper(EntityCoreBlaze ghast)
         {
             super(ghast);
             this.parentEntity = ghast;
