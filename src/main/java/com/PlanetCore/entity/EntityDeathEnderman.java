@@ -91,8 +91,8 @@ public class EntityDeathEnderman extends EntityEnderman
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -400) {
-			return super.getCanSpawnHere();
+		if (posY <= -2048) {
+			return true;
 		} else {
 			return false;
 		}
