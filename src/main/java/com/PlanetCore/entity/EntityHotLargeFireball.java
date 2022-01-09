@@ -9,6 +9,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import static net.minecraft.util.DamageSource.GENERIC;
+
 public class EntityHotLargeFireball extends net.minecraft.entity.projectile.EntityLargeFireball {
     public EntityHotLargeFireball(World worldIn) {
         super(worldIn);
@@ -32,12 +34,12 @@ public class EntityHotLargeFireball extends net.minecraft.entity.projectile.Enti
         {
             if (result.entityHit != null)
             {
-                result.entityHit.attackEntityFrom(DamageSource.causeFireballDamage(this, this.shootingEntity), 12.0F);
+                result.entityHit.attackEntityFrom(GENERIC, 12.0F);
                 this.applyEnchantments(this.shootingEntity, result.entityHit);
             }
 
             boolean flag = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this.shootingEntity);
-            this.world.newExplosion((Entity)null, this.posX, this.posY, this.posZ, (float)3, flag, flag);
+            this.world.newExplosion((Entity)null, this.posX, this.posY, this.posZ, (float)5, flag, flag);
             this.setDead();
         }
     }
