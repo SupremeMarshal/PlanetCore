@@ -28,7 +28,7 @@ public class OreBase extends BlockBase {
 
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-        return planetHardness.hardness;
+        return planetHardness.hardness + 1.5F;
     }
 
     @Override
