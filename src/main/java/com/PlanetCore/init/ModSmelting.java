@@ -17,8 +17,8 @@ import java.util.Random;
 
 public class ModSmelting {
 
-	private static final String[] Material = {"SULFUR","aluminium", "TIN", "COPPER", "IRON", "SILVER",
-			"GOLD", "PLATINUM", "titanium", "uranium", "TUNGSTEN", "REDSTONE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
+	private static final String[] Material = {"SULFUR","ALUMINIUM", "TIN", "COPPER", "IRON", "SILVER",
+			"GOLD", "PLATINUM", "TITANIUM", "URANIUM", "TUNGSTEN", "REDSTONE", "EMERALD", "RUBY", "SAPPHIRE", "DIAMOND", "OLIVINE",
 			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX"};
 
 	private static final String[] Rock = {"ORE", "CRUSTROCK", "MANTLEROCK", "CORESTONE"};
@@ -30,62 +30,64 @@ public class ModSmelting {
 	{
 		String blockname;
 		String itemname;
+		String itemname1;
 		Block block;
 		Item item;
+		Item item1;
 		/**
 		 * NORMAL FURNACE RECIPES
 		 */
 
-/*
+
 		for (int size = 0; size < 3; size++) {
 			for (int material = 0; (material < 23); material++) {
-				if (material < 12)
-				{
-					if (size < 1)
-					{
+				if (material < 12) {
+					if (size < 1) {
 						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_nugget";
-					}
-					else itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_ingot";
-				}
-				else
-				{
-					if (size < 1)
-					{
+					} else itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_ingot";
+				} else {
+					if (size < 1) {
 						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_shard";
-					}
-					else
-					{
+					} else {
 						itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT);
-						if (Material[material].contains("EMERALD") || Material[material].contains("REDSTONE"))
-						{
+						if (Material[material].contains("EMERALD") || Material[material].contains("REDSTONE")) {
 							itemname = "minecraft:" + Material[material].toLowerCase(Locale.ROOT);
 						}
 					}
 				}
 				item = Item.getByNameOrId(itemname);
-				for (int rock = 0; rock < 4; rock++)
-				{
-					if (rock == 3 && material < 12)
-					{
+				for (int rock = 0; rock < 4; rock++) {
+					if (rock == 3 && material < 12) {
 						continue;
 					}
-					if (size == 1)
-					{
-						blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
-						block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
-						GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
-					}
-					if (size != 1)
-					{
-						blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Size[size].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
-						block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
-						GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
+
+					if (size == 1) {
+						if (material < 7) {
+							blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
+							block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
+							GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
+							itemname1 = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_ore";
+							item1 = Item.getByNameOrId(itemname1);
+							GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
+							GameRegistry.addSmelting(item1, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
+
+						}
+						if (size != 1) {
+
+							blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Size[size].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
+							block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
+							itemname1 = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_ore";
+							item1 = Item.getByNameOrId(itemname1);
+							GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
+							GameRegistry.addSmelting(item1, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
+						}
 					}
 				}
 			}
 		}
 
- */
+
+
 
 
 
