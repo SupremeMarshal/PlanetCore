@@ -10,12 +10,12 @@ public class ToolMaterials {
 
     public static final Map<Item.ToolMaterial, Float> relentlessMap = new HashMap<>();
 
-    public static final Item.ToolMaterial WOODEN = createToolMaterial("wooden", 1, 5, 1.5F, 0.4F, 15, 2);
-    public static final Item.ToolMaterial STONE = createToolMaterial("stone", 1, 32, 2.0F, 0.8F, 15, 2);
-    public static final Item.ToolMaterial ALUMINIUM = createToolMaterial("aluminium", 2, 50, 3.0F, 1.0F, 15, 2);
-    public static final Item.ToolMaterial COMPLETE_ALUMINIUM = createToolMaterial("complete_aluminium", 2, 100, 3.0F, 1.0F, 15, 2);
-    public static final Item.ToolMaterial IRON = createToolMaterial("iron", 2, 250, 4.0F, 2.0F, 22, 2);
-    public static final Item.ToolMaterial COMPLETE_IRON = createToolMaterial("complete_iron", 2, 500, 4.0F, 2.0F, 22, 2);
+    public static final Item.ToolMaterial WOODEN = createToolMaterial("wooden", 1, 59, 1.5F, 0.4F, 15, 2);
+    public static final Item.ToolMaterial STONE = createToolMaterial("stone", 1, 131, 2.0F, 0.8F, 15, 2);
+    public static final Item.ToolMaterial ALUMINIUM = createToolMaterial("aluminium", 2, 196, 3.0F, 1.0F, 15, 2);
+    public static final Item.ToolMaterial COMPLETE_ALUMINIUM = createToolMaterial("complete_aluminium", 2, 393, 3.0F, 1.0F, 15, 2);
+    public static final Item.ToolMaterial IRON = createToolMaterial("iron", 2, 300, 4.0F, 2.0F, 22, 2);
+    public static final Item.ToolMaterial COMPLETE_IRON = createToolMaterial("complete_iron", 2, 600, 4.0F, 2.0F, 22, 2);
     public static final Item.ToolMaterial STEEL = createToolMaterial("steel", 2, 500, 4.0F, 2.5F, 22, 2.5F);
     public static final Item.ToolMaterial COMPLETE_STEEL = createToolMaterial("complete_steel", 2, 1000, 4.0F, 2.5F, 22, 2.5F);
     public static final Item.ToolMaterial COPPER = createToolMaterial("copper", 2, 200, 5.0F, 2.8F, 10, 2.0F);
