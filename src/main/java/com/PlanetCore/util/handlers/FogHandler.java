@@ -125,7 +125,7 @@ public class FogHandler {
                 event.setBlue(0.1647F - 0.000367578125F * (Y + 1024));
             } else if (Y <= -1536 && Y > -2048) {
                 // blue-green to purple
-                event.setRed(0.08235F - 0.000367578125F * (Y + 1536));
+                event.setRed(0.08235F - 0.00032919921875F * (Y + 1536));
                 event.setGreen(0.25882F + 0.00036F * (Y + 1536));
                 event.setBlue(0.3529F + 0.000023046875F * (Y + 1536));
             } else if (Y <= -2048 && Y > -2560) {
