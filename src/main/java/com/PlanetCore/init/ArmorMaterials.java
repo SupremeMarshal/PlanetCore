@@ -7,7 +7,7 @@ import net.minecraftforge.common.util.EnumHelper;
 
 public class ArmorMaterials {
     //ARMOR MATERIAL (name, textureName, durability, reductionAmounts, enchantability, soundOnEquip, toughness)
-    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ALUMINIUM = EnumHelper.addArmorMaterial("armor_material_aluminium", Reference.MOD_ID + ":aluminium", 5,
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ALUMINIUM = EnumHelper.addArmorMaterial("armor_material_aluminium", Reference.MOD_ID + ":aluminium", 12,
             new int[]{1, 3, 2, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
     public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_IRON = EnumHelper.addArmorMaterial("armor_material_iron", Reference.MOD_ID + ":iron", 15,
             new int[]{2, 4, 3, 2}, 20, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
