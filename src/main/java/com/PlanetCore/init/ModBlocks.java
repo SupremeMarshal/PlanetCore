@@ -398,7 +398,7 @@ public class ModBlocks {
         registry.registerAll(
 
                 new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
-                new BlockBase("crust_cobblestone", Material.ROCK).setHardness(5.0F).setResistance(1),
+                new BlockBase("crust_cobblestone", Material.ROCK).setHardness(2.0F).setResistance(1),
                 new CrustrockFurnace("crustrock_furnace", false).setHardness(2.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
                 new CrustrockFurnace("lit_crustrock_furnace", true).setHardness(2.0F).setResistance(5).setLightLevel(0.975F).setResistance(1),
                 new SteelFurnace("steel_furnace", false).setHardness(5.0F).setCreativeTab(CreativeTabs.DECORATIONS).setResistance(1),
