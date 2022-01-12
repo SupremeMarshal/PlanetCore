@@ -30,6 +30,14 @@ public class OreCompactBase extends BlockBase {
     }
 
     @Override
+    public int damageDropped(IBlockState state) {
+        if (this == ModBlocks.ORE_COMPACT_LAPIS) {
+            return EnumDyeColor.BLUE.getDyeDamage();
+        }
+        else return 0;
+    }
+
+    @Override
     public Item getItemDropped(IBlockState state, Random random, int i) {
         return this.planetMaterial.droppedItem;
     }

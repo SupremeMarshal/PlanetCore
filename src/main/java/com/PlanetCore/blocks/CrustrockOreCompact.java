@@ -39,6 +39,14 @@ public class CrustrockOreCompact extends Crustrock implements IMetaName {
 
 
     @Override
+    public int damageDropped(IBlockState state) {
+        if (this == ModBlocks.CRUSTROCK_COMPACT_LAPIS) {
+            return EnumDyeColor.BLUE.getDyeDamage();
+        }
+        else return 0;
+    }
+
+    @Override
     public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
