@@ -302,7 +302,7 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
             if (burnTime >= 0) return burnTime;
             Item item = stack.getItem();
 
-            if (item == FluidUtil.getFilledBucket(new FluidStack(ModFluids.IRON_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem())
+            if (item == Items.LAVA_BUCKET)
             {
                 return 5000;
             }
@@ -372,6 +372,7 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
         return new ContainerCrustrockFurnace(playerInventory, this);
     }
 
+    @Override
     public int getField(int id)
     {
         switch (id)
