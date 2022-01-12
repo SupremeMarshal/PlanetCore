@@ -45,6 +45,16 @@ public class RemovingVanillaRecipes {
         removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_boots"), Reference.MOD_ID);
         removeRecipe(modRegistry, new ResourceLocation("minecraft:gold_block"), Reference.MOD_ID);
         removeRecipe(modRegistry, new ResourceLocation("minecraft:gold_nugget"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_sword"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_pickaxe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_axe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_shovel"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_hoe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_helmet"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_chestplate"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_leggings"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_boots"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:diamond_block"), Reference.MOD_ID);
     }
 
     public static void removeRecipe(IForgeRegistryModifiable modRegistry, ResourceLocation recipe, String modID)
