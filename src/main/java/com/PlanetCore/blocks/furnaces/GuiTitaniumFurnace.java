@@ -48,7 +48,7 @@ public class GuiTitaniumFurnace extends GuiContainer
     private int getBurnLeftScaled(int pixels)
     {
         int i = this.tileentity.getField(1);
-        if(i == 0) i = 200;
+        if(i == 0) i = 5000;
         return this.tileentity.getField(0) * pixels / i;
     }
 
