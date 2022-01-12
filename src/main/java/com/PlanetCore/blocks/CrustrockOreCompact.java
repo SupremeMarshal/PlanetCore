@@ -59,4 +59,13 @@ public class CrustrockOreCompact extends Crustrock implements IMetaName {
         }
         else return 0;
     }
+
+    @Override
+    public int quantityDroppedWithBonus(int fortune, Random random) {
+        if (this == ModBlocks.CRUSTROCK_COMPACT_REDSTONE || this == ModBlocks.CRUSTROCK_COMPACT_LAPIS)
+        {
+            return 12 + new Random().nextInt(fortune * 6 + 6);
+        }
+        else return 3 + random.nextInt(fortune * 3 + 1);
+    }
 }
