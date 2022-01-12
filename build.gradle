@@ -13,7 +13,7 @@ plugins {
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.0.7"
+version = "1.0.8"
 group = "com.PlanetCore.planetcore" 
 archivesBaseName = "planetcore"
 
@@ -61,7 +61,7 @@ dependencies {
     deobfProvided ("com.github.OpenCubicChunks:CubicWorldGen:27de56d2f792513873584b2f8fd9f3082fb259ec") {
         transitive = false
     }
-    deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.0-beta.7')
+    deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.14')
 }
 
 processResources {
