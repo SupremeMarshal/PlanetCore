@@ -6,6 +6,7 @@ import com.PlanetCore.init.ToolMaterials;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
@@ -62,7 +63,7 @@ public class PickaxeRelentlessHandler {
 
 
             //Determine if the block is undestructible.
-            if (breaktime > Relentless) {
+            if (breaktime > Relentless && event.getState().getBlock() != Blocks.OBSIDIAN) {
                 event.setCanceled(true);
                 if (event.getEntityPlayer().getHeldItemMainhand().getItem() instanceof ItemPickaxe && event.getEntityPlayer().world.getTotalWorldTime() % 6 == 1) {
                     event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.BLOCKS, 1.0F, 1.0F);
