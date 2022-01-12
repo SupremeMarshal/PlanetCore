@@ -37,13 +37,6 @@ public class MantlerockOreSmall extends Mantlerock implements IMetaName {
         return this.planetMaterial.droppedItem;
     }
 
-    @Override
-    public int damageDropped(IBlockState state) {
-        if (this == ModBlocks.MANTLEROCK_SMALL_LAPIS) {
-            return EnumDyeColor.BLUE.getDyeDamage();
-        }
-        else return 0;
-    }
 
     @Override
     public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {

@@ -35,14 +35,6 @@ public class OreSmallBase extends BlockBase {
     }
 
     @Override
-    public int damageDropped(IBlockState state) {
-        if (this == ModBlocks.ORE_SMALL_LAPIS) {
-            return EnumDyeColor.BLUE.getDyeDamage();
-        }
-        else return 0;
-    }
-
-    @Override
     public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
