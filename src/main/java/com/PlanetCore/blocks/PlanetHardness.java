@@ -23,7 +23,7 @@ public enum PlanetHardness {
     TIN(3),
     IRON(2),
     ALUMINIUM(1),
-    COAL(0),
+    COAL(0.5F),
     LAPIS(5),
     REDSTONE(5),
     SULFUR(1);
