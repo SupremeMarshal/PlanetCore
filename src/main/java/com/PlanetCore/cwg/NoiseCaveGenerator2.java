@@ -44,7 +44,7 @@ public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
             // value 1 and above means they won't generate
-            double caveSystemSizeFactor = 0.24;
+            double caveSystemSizeFactor = 0.27;
 
 
             // bigger values = less smooth transition on the edges of cave system
