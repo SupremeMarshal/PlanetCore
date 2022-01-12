@@ -23,6 +23,11 @@ public class RemovingVanillaRecipes {
         removeRecipe(modRegistry, new ResourceLocation("minecraft:wooden_axe"), Reference.MOD_ID);
         removeRecipe(modRegistry, new ResourceLocation("minecraft:wooden_shovel"), Reference.MOD_ID);
         removeRecipe(modRegistry, new ResourceLocation("minecraft:wooden_hoe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_sword"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_pickaxe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_axe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_shovel"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_hoe"), Reference.MOD_ID);
     }
 
     public static void removeRecipe(IForgeRegistryModifiable modRegistry, ResourceLocation recipe, String modID)
