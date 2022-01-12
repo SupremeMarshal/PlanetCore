@@ -28,6 +28,21 @@ public class RemovingVanillaRecipes {
         removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_axe"), Reference.MOD_ID);
         removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_shovel"), Reference.MOD_ID);
         removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_hoe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_helmet"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_chestplate"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_leggings"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_boots"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:iron_block"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_sword"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_pickaxe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_axe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_shovel"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_hoe"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_helmet"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_chestplate"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_leggings"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:golden_boots"), Reference.MOD_ID);
+        removeRecipe(modRegistry, new ResourceLocation("minecraft:gold_block"), Reference.MOD_ID);
     }
 
     public static void removeRecipe(IForgeRegistryModifiable modRegistry, ResourceLocation recipe, String modID)
