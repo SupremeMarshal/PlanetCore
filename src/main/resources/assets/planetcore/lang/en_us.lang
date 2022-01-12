@@ -83,18 +83,24 @@ generator.PlanetCore=PlanetCore
 item.wooden_sword.name=Wooden sword
 item.wooden_shovel.name=Wooden shovel
 item.wooden_pickaxe.name=Wooden pickaxe
+item.wooden_pickaxe.tooltip.0=Tier: 0
+item.wooden_pickaxe.tooltip.1=Can break stone
 item.wooden_axe.name=Wooden axe
 item.wooden_hoe.name=Wooden hoe
 
 item.stone_sword.name=Stone sword
 item.stone_shovel.name=Stone shovel
 item.stone_pickaxe.name=Stone pickaxe
+item.stone_pickaxe.tooltip.0=Tier: 0
+item.stone_pickaxe.tooltip.1=Can break stone
 item.stone_axe.name=Stone axe
 item.stone_hoe.name=Stone hoe
 
 item.aluminium_sword.name=Aluminium sword
 item.aluminium_shovel.name=Aluminium shovel
 item.aluminium_pickaxe.name=Aluminium pickaxe
+item.aluminium_pickaxe.tooltip.0=Tier: 1
+item.aluminium_pickaxe.tooltip.1=Can break crustrock
 item.aluminium_axe.name=Aluminium axe
 item.aluminium_hoe.name=Aluminium hoe
 
@@ -117,6 +123,8 @@ item.aluminium_boots.tooltip.1=§9+1 Armor
 item.iron_sword.name=Iron sword
 item.iron_shovel.name=Iron shovel
 item.iron_pickaxe.name=Iron pickaxe
+item.iron_pickaxe.tooltip.0=Tier: 1
+item.iron_pickaxe.tooltip.1=Can break crustrock
 item.iron_axe.name=Iron axe
 item.iron_hoe.name=Iron hoe
 
@@ -139,6 +147,8 @@ item.iron_boots.tooltip.1=§9+2 Armor
 item.tin_sword.name=Tin sword
 item.tin_shovel.name=Tin shovel
 item.tin_pickaxe.name=Tin pickaxe
+item.tin_pickaxe.tooltip.0=Tier: 1
+item.tin_pickaxe.tooltip.1=Can break crustrock
 item.tin_axe.name=Tin axe
 item.tin_hoe.name=Tin hoe
 
@@ -165,6 +175,8 @@ item.tin_boots.tooltip.2=§9+1 Toughness
 item.copper_sword.name=Copper sword
 item.copper_shovel.name=Copper shovel
 item.copper_pickaxe.name=Copper pickaxe
+item.copper_pickaxe.tooltip.0=Tier: 2
+item.copper_pickaxe.tooltip.1=Can break crustrock1
 item.copper_axe.name=Copper axe
 item.copper_hoe.name=Copper hoe
 
@@ -191,6 +203,8 @@ item.cooper_boots.tooltip.2=§9+1 Toughness
 item.steel_sword.name=Steel sword
 item.steel_shovel.name=Steel shovel
 item.steel_pickaxe.name=Steel pickaxe
+item.steel_pickaxe.tooltip.0=Tier: 2
+item.steel_pickaxe.tooltip.1=Can break crustrock1
 item.steel_axe.name=Steel axe
 item.steel_hoe.name=Steel hoe
 
@@ -217,6 +231,8 @@ item.steel_boots.tooltip.2=§9+1 Toughness
 item.bronze_sword.name=Bronze sword
 item.bronze_shovel.name=Bronze shovel
 item.bronze_pickaxe.name=Bronze pickaxe
+item.bronze_pickaxe.tooltip.0=Tier: 3
+item.bronze_pickaxe.tooltip.1=Can break crustrock2
 item.bronze_axe.name=Bronze axe
 item.bronze_hoe.name=Bronze hoe
 
@@ -243,6 +259,8 @@ item.bronze_boots.tooltip.2=§9+2 Toughness
 item.silver_sword.name=Silver sword
 item.silver_shovel.name=Silver shovel
 item.silver_pickaxe.name=Silver pickaxe
+item.silver_pickaxe.tooltip.0=Tier: 4
+item.silver_pickaxe.tooltip.1=Can break mantlerock
 item.silver_axe.name=Silver axe
 item.silver_hoe.name=Silver hoe
 
@@ -273,6 +291,8 @@ item.silver_boots.tooltip.3=§a+0.5 Max health
 item.gold_sword.name=Gold sword
 item.gold_shovel.name=Gold shovel
 item.gold_pickaxe.name=Gold pickaxe
+item.gold_pickaxe.tooltip.0=Tier: 5
+item.gold_pickaxe.tooltip.1=Can break mantlerock1
 item.gold_axe.name=Gold axe
 item.gold_hoe.name=Gold hoe
 
@@ -303,6 +323,8 @@ item.gold_boots.tooltip.3=§a+1 Max health
 item.platinum_sword.name=Platinum sword
 item.platinum_shovel.name=Platinum shovel
 item.platinum_pickaxe.name=Platinum pickaxe
+item.platinum_pickaxe.tooltip.0=Tier: 6
+item.platinum_pickaxe.tooltip.1=Can break mantlerock2
 item.platinum_axe.name=Platinum axe
 item.platinum_hoe.name=Platinum hoe
 
@@ -333,6 +355,8 @@ item.platinum_boots.tooltip.3=§a+1.5 Max health
 item.titanium_sword.name=Titanium sword
 item.titanium_shovel.name=Titanium shovel
 item.titanium_pickaxe.name=Titanium pickaxe
+item.titanium_pickaxe.tooltip.0=Tier: 7
+item.titanium_pickaxe.tooltip.1=Can break mantlerock3
 item.titanium_axe.name=Titanium axe
 item.titanium_hoe.name=Titanium hoe
 
@@ -363,6 +387,8 @@ item.titanium_boots.tooltip.3=§a+2 Max health
 item.uranium_sword.name=uranium sword
 item.uranium_shovel.name=uranium shovel
 item.uranium_pickaxe.name=uranium pickaxe
+item.uranium_pickaxe.tooltip.0=Tier: 8
+item.uranium_pickaxe.tooltip.1=Can break mantlerock4
 item.uranium_axe.name=uranium axe
 item.uranium_hoe.name=uranium hoe
 
@@ -393,6 +419,8 @@ item.uranium_boots.tooltip.3=§a+2.5 Max health
 item.titanium_uranium_sword.name=titanium-uranium sword
 item.titanium_uranium_shovel.name=titanium-uranium shovel
 item.titanium_uranium_pickaxe.name=titanium-uranium pickaxe
+item.titanium_uranium_pickaxe.tooltip.0=Tier: 9
+item.titanium_uranium_pickaxe.tooltip.1=Can break mantlerock6
 item.titanium_uranium_axe.name=titanium-uranium axe
 item.titanium_uranium_hoe.name=titanium-uranium hoe
 
@@ -423,6 +451,8 @@ item.titanium_uranium_boots.tooltip.3=§a+3 Max health
 item.tungsten_sword.name=Tungsten sword
 item.tungsten_shovel.name=Tungsten shovel
 item.tungsten_pickaxe.name=Tungsten pickaxe
+item.tungsten_pickaxe.tooltip.0=Tier: 10
+item.tungsten_pickaxe.tooltip.1=Can break mantlerock7
 item.tungsten_axe.name=Tungsten axe
 item.tungsten_hoe.name=Tungsten hoe
 
@@ -453,6 +483,8 @@ item.tungsten_boots.tooltip.3=§a+3.5 Max health
 item.tungsten_titanium_sword.name=Tungsten-titanium sword
 item.tungsten_titanium_shovel.name=Tungsten-titanium shovel
 item.tungsten_titanium_pickaxe.name=Tungsten-titanium pickaxe
+item.tungsten_titanium_pickaxe.tooltip.0=Tier: 11
+item.tungsten_titanium_pickaxe.tooltip.1=Can break mantlerock8
 item.tungsten_titanium_axe.name=Tungsten-titanium axe
 item.tungsten_titanium_hoe.name=Tungsten-titanium hoe
 
@@ -483,6 +515,8 @@ item.tungsten_titanium_boots.tooltip.3=§a+4 Max health
 item.tungsten_uranium_sword.name=Tungsten-uranium sword
 item.tungsten_uranium_shovel.name=Tungsten-uranium shovel
 item.tungsten_uranium_pickaxe.name=Tungsten-uranium pickaxe
+item.tungsten_uranium_pickaxe.tooltip.0=Tier: 12
+item.tungsten_uranium_pickaxe.tooltip.1=Can break lower_mantlerock1
 item.tungsten_uranium_axe.name=Tungsten-uranium axe
 item.tungsten_uranium_hoe.name=Tungsten-uranium hoe
 
@@ -513,6 +547,8 @@ item.tungsten_uranium_boots.tooltip.3=§a+4.5 Max health
 item.emerald_sword.name=Emerald sword
 item.emerald_shovel.name=Emerald shovel
 item.emerald_pickaxe.name=Emerald pickaxe
+item.emerald_pickaxe.tooltip.0=Tier: 13
+item.emerald_pickaxe.tooltip.1=Can break lower_mantlerock2
 item.emerald_axe.name=Emerald axe
 item.emerald_hoe.name=Emerald hoe
 
@@ -549,10 +585,12 @@ item.emerald_boots.tooltip.4=When full Emerald tier or above is equipped (can be
 item.emerald_boots.tooltip.5=§6+Resistance
 
 item.ruby_sword.name=Ruby sword
-item.ruby_shovel.name=§bRuby shovel
-item.ruby_pickaxe.name=§bRuby pickaxe
-item.ruby_axe.name=§bRuby axe
-item.ruby_hoe.name=§bRuby hoe
+item.ruby_shovel.name=Ruby shovel
+item.ruby_pickaxe.name=Ruby pickaxe
+item.ruby_pickaxe.tooltip.0=Tier: 14
+item.ruby_pickaxe.tooltip.1=Can break lower_mantlerock4
+item.ruby_axe.name=Ruby axe
+item.ruby_hoe.name=Ruby hoe
 
 item.ruby_helmet.name=Ruby helmet
 item.ruby_helmet.tooltip.0=When equipped:
@@ -589,6 +627,8 @@ item.ruby_boots.tooltip.5=§6+Resistance
 item.sapphire_sword.name=Sapphire sword
 item.sapphire_shovel.name=Sapphire shovel
 item.sapphire_pickaxe.name=Sapphire pickaxe
+item.sapphire_pickaxe.tooltip.0=Tier: 15
+item.sapphire_pickaxe.tooltip.1=Can break lower_mantlerock5
 item.sapphire_axe.name=Sapphire axe
 item.sapphire_hoe.name=Sapphire hoe
 
@@ -627,6 +667,8 @@ item.sapphire_boots.tooltip.5=§6+Resistance
 item.diamond_sword.name=Diamond sword
 item.diamond_shovel.name=Diamond shovel
 item.diamond_pickaxe.name=Diamond pickaxe
+item.diamond_pickaxe.tooltip.0=Tier: 16
+item.diamond_pickaxe.tooltip.1=Can break lower_mantlerock6
 item.diamond_axe.name=Diamond axe
 item.diamond_hoe.name=Diamond hoe
 
@@ -665,6 +707,8 @@ item.diamond_boots.tooltip.5=§6+Resistance
 item.olivine_sword.name=Olivine sword
 item.olivine_shovel.name=Olivine shovel
 item.olivine_pickaxe.name=Olivine pickaxe
+item.olivine_pickaxe.tooltip.0=Tier: 17
+item.olivine_pickaxe.tooltip.1=Can break corestone1
 item.olivine_axe.name=Olivine axe
 item.olivine_hoe.name=Olivine hoe
 
@@ -708,6 +752,8 @@ item.olivine_boots.tooltip.6=§6+Regeneration
 item.wadsleyite_sword.name=Wadsleyite sword
 item.wadsleyite_shovel.name=Wadsleyite shovel
 item.wadsleyite_pickaxe.name=Wadsleyite pickaxe
+item.wadsleyite_pickaxe.tooltip.0=Tier: 18
+item.wadsleyite_pickaxe.tooltip.1=Can break corestone1
 item.wadsleyite_axe.name=Wadsleyite axe
 item.wadsleyite_hoe.name=Wadsleyite hoe
 
@@ -750,6 +796,8 @@ item.wadsleyite_boots.tooltip.6=§6+Regeneration
 item.ringwoodite_sword.name=Ringwoodite sword
 item.ringwoodite_shovel.name=Ringwoodite shovel
 item.ringwoodite_pickaxe.name=Ringwoodite pickaxe
+item.ringwoodite_pickaxe.tooltip.0=Tier: 19
+item.ringwoodite_pickaxe.tooltip.1=Can break corestone2
 item.ringwoodite_axe.name=Ringwoodite axe
 item.ringwoodite_hoe.name=Ringwoodite hoe
 
@@ -792,6 +840,8 @@ item.ringwoodite_boots.tooltip.6=§6+Regeneration
 item.brigmanite_sword.name=Brigmanite sword
 item.brigmanite_shovel.name=Brigmanite shovel
 item.brigmanite_pickaxe.name=Brigmanite pickaxe
+item.brigmanite_pickaxe.tooltip.0=Tier: 20
+item.brigmanite_pickaxe.tooltip.1=Can break innercorestone
 item.brigmanite_axe.name=Brigmanite axe
 item.brigmanite_hoe.name=Brigmanite hoe
 
@@ -834,6 +884,8 @@ item.brigmanite_boots.tooltip.6=§6+Regeneration
 item.majorite_sword.name=Majorite sword
 item.majorite_shovel.name=§dMajorite shovel
 item.majorite_pickaxe.name=§dMajorite pickaxe
+item.majorite_pickaxe.tooltip.0=Tier: 21
+item.majorite_pickaxe.tooltip.1=Can break innercorestone1
 item.majorite_axe.name=§dMajorite axe
 item.majorite_hoe.name=§dMajorite hoe
 
@@ -876,6 +928,8 @@ item.majorite_boots.tooltip.6=§6+Regeneration
 item.amazonite_sword.name=Amazonite sword
 item.amazonite_shovel.name=Amazonite shovel
 item.amazonite_pickaxe.name=Amazonite pickaxe
+item.amazonite_pickaxe.tooltip.0=Tier: 22
+item.amazonite_pickaxe.tooltip.1=Can break innercorestone2
 item.amazonite_axe.name=Amazonite axe
 item.amazonite_hoe.name=Amazonite hoe
 
@@ -919,6 +973,8 @@ item.amazonite_boots.tooltip.6=§6+Regeneration II
 item.onyx_sword.name=Onyx sword
 item.onyx_shovel.name=Onyx shovel
 item.onyx_pickaxe.name=Onyx pickaxe
+item.onyx_pickaxe.tooltip.0=Tier: 23
+item.onyx_pickaxe.tooltip.1=Can break centercorestone
 item.onyx_axe.name=Onyx axe
 item.onyx_hoe.name=Onyx hoe
 
@@ -969,6 +1025,8 @@ item.onyx_boots.tooltip.8=§6+Regeneration II
 item.onyx_ii_sword.name=Onyx sword II
 item.onyx_ii_shovel.name=Onyx shovel II
 item.onyx_ii_pickaxe.name=Onyx pickaxe II
+item.onyx_ii_pickaxe.tooltip.0=Tier: 24
+item.onyx_ii_pickaxe.tooltip.1=Can break centercorestone
 item.onyx_ii_axe.name=Onyx axe II
 item.onyx_ii_hoe.name=Onyx hoe II
 
@@ -1023,6 +1081,8 @@ item.onyx_ii_boots.tooltip.9=§6+Regeneration II
 item.onyx_iii_sword.name=Onyx sword III
 item.onyx_iii_shovel.name=Onyx shovel III
 item.onyx_iii_pickaxe.name=Onyx pickaxe III
+item.onyx_iii_pickaxe.tooltip.0=Tier: 25
+item.onyx_iii_pickaxe.tooltip.1=Can break centercorestone
 item.onyx_iii_axe.name=Onyx axe III
 item.onyx_iii_hoe.name=Onyx hoe III
 
@@ -1077,6 +1137,8 @@ item.onyx_iii_boots.tooltip.9=§6+Regeneration III
 item.onyx_iv_sword.name=Onyx sword IV
 item.onyx_iv_shovel.name=Onyx shovel IV
 item.onyx_iv_pickaxe.name=Onyx pickaxe IV
+item.onyx_iv_pickaxe.tooltip.0=Tier: 26
+item.onyx_iv_pickaxe.tooltip.1=Can break centercorestone
 item.onyx_iv_axe.name=Onyx axe IV
 item.onyx_iv_hoe.name=Onyx hoe IV
 
@@ -1131,6 +1193,8 @@ item.onyx_iv_boots.tooltip.9=§6+Regeneration IV
 item.onyx_v_sword.name=Onyx sword V
 item.onyx_v_shovel.name=Onyx shovel V
 item.onyx_v_pickaxe.name=Onyx pickaxe V
+item.onyx_v_pickaxe.tooltip.0=Tier: 27
+item.onyx_v_pickaxe.tooltip.1=Can break centercorestone
 item.onyx_v_axe.name=Onyx axe V
 item.onyx_v_hoe.name=Onyx hoe V
 
