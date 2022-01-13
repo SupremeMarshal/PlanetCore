@@ -1,8 +1,6 @@
 package com.PlanetCore.entity.render;
 
-import com.PlanetCore.entity.EntityCoreDemon;
 import com.PlanetCore.entity.EntityOnyxDemon;
-import com.PlanetCore.entity.model.ModelCoreDemon;
 import com.PlanetCore.entity.model.ModelOnyxDemon;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderManager;

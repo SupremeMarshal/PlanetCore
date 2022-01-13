@@ -54,7 +54,7 @@ public class EntityInit
 	{
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
 		Biome[] spawnBiomes = allbiomes(Biome.REGISTRY);
-		EntityRegistry.addSpawn(EntityDemon.class, 6, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityDemon.class, 7, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityCoreDemon.class, 2, 1, 1, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityOnyxDemon.class, 1, 1, 1, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityGhoul.class, 10, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
@@ -62,7 +62,7 @@ public class EntityInit
 		EntityRegistry.addSpawn(EntityDeathEnderman.class, 5, 1, 1, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityHotBlaze.class, 5, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityCoreBlaze.class, 5, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityHotMagmaCube.class, 15, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityHotMagmaCube.class, 10, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
 
 	}
 
