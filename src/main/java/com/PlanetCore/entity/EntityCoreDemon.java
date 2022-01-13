@@ -47,7 +47,7 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 
 	public EntityCoreDemon(World worldIn)   {
 		super(worldIn);
-		setSize(2f, 6f);
+		setSize(2.3f, 6f);
 		this.isImmuneToFire = true;
 		this.moveHelper = new EntityCoreDemon.GhastMoveHelper(this);
 	}

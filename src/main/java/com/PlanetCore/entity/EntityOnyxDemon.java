@@ -46,7 +46,7 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 
 	public EntityOnyxDemon(World worldIn)   {
 		super(worldIn);
-		setSize(2.8f, 8f);
+		setSize(3.5f, 8f);
 		this.isImmuneToFire = true;
 		this.moveHelper = new EntityOnyxDemon.GhastMoveHelper(this);
 	}
