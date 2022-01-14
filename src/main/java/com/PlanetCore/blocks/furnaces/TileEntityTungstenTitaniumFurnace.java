@@ -188,13 +188,13 @@ public class TileEntityTungstenTitaniumFurnace extends TileEntityLockable implem
      * Like the old updateEntity(), except more generic.
      */
     public void update() {
-        Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK));
+        Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == FluidUtil.getFilledBucket(new FluidStack(ModFluids.URANIUM_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem() && this.furnaceItemStacks.get(1).getItem() == FluidUtil.getFilledBucket(new FluidStack(ModFluids.TUNGSTEN_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem()) || (this.furnaceItemStacks.get(0).getItem() == FluidUtil.getFilledBucket(new FluidStack(ModFluids.TUNGSTEN_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem() && this.furnaceItemStacks.get(1).getItem() == FluidUtil.getFilledBucket(new FluidStack(ModFluids.URANIUM_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem());
 
         boolean flag = this.isBurning();
         boolean flag1 = false;
         if (this.isBurning()) {
             --this.furnaceBurnTime;
-            if (tungsten_uranium_ingot) this.totalCookTime = 1000;
+            if (tungsten_uranium_ingot) this.totalCookTime = 300;
         }
 
         if (!world.isRemote) {
@@ -236,12 +236,12 @@ public class TileEntityTungstenTitaniumFurnace extends TileEntityLockable implem
                         }
                         if (this.canSmelt()) {
                             if (result.isEmpty()) {
-                                furnaceItemStacks.set(3, new ItemStack(ModItems.TUNGSTEN_URANIUM_INGOT, 3));
+                                furnaceItemStacks.set(3, new ItemStack(ModItems.TUNGSTEN_URANIUM_INGOT, 1));
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
                             }
                             else {
-                                this.furnaceItemStacks.get(3).grow(3);
+                                this.furnaceItemStacks.get(3).grow(1);
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
                             }
@@ -274,7 +274,7 @@ public class TileEntityTungstenTitaniumFurnace extends TileEntityLockable implem
     private boolean canSmelt()
     {
         ItemStack[] inputs = new ItemStack[]{this.furnaceItemStacks.get(0), this.furnaceItemStacks.get(1)};
-        Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK));
+        Boolean tungsten_uranium_ingot = (this.furnaceItemStacks.get(0).getItem() == FluidUtil.getFilledBucket(new FluidStack(ModFluids.URANIUM_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem() && this.furnaceItemStacks.get(1).getItem() == FluidUtil.getFilledBucket(new FluidStack(ModFluids.TUNGSTEN_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem()) || (this.furnaceItemStacks.get(0).getItem() == FluidUtil.getFilledBucket(new FluidStack(ModFluids.TUNGSTEN_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem() && this.furnaceItemStacks.get(1).getItem() == FluidUtil.getFilledBucket(new FluidStack(ModFluids.URANIUM_LAVA_FLUID, Fluid.BUCKET_VOLUME)).getItem());
 
         Boolean canSmelt = (tungsten_uranium_ingot);
 

@@ -187,13 +187,13 @@ public class TileEntitySteelFurnace extends TileEntityLockable implements ITicka
      * Like the old updateEntity(), except more generic.
      */
     public void update() {
-        Boolean bronze_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TIN_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.COPPER_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.COPPER_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TIN_BLOCK));
+        Boolean bronze_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TIN_ORE && this.furnaceItemStacks.get(1).getItem() == ModItems.COPPER_ORE) || (this.furnaceItemStacks.get(0).getItem() == ModItems.COPPER_ORE && this.furnaceItemStacks.get(1).getItem() == ModItems.TIN_ORE);
 
         boolean flag = this.isBurning();
         boolean flag1 = false;
         if (this.isBurning()) {
             --this.furnaceBurnTime;
-            if (bronze_ingot) this.totalCookTime = 1000;
+            if (bronze_ingot) this.totalCookTime = 300;
         }
 
         if (!world.isRemote) {
@@ -235,11 +235,11 @@ public class TileEntitySteelFurnace extends TileEntityLockable implements ITicka
                         }
                         if (this.canSmelt()) {
                             if (result.isEmpty()) {
-                                furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_INGOT, 3));
+                                furnaceItemStacks.set(3, new ItemStack(ModItems.BRONZE_INGOT, 1));
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
                             } else {
-                                this.furnaceItemStacks.get(3).grow(3);
+                                this.furnaceItemStacks.get(3).grow(1);
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
                             }
@@ -271,7 +271,7 @@ public class TileEntitySteelFurnace extends TileEntityLockable implements ITicka
     private boolean canSmelt()
     {
         ItemStack[] inputs = new ItemStack[]{this.furnaceItemStacks.get(0), this.furnaceItemStacks.get(1)};
-        Boolean bronze_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TIN_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.COPPER_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.COPPER_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TIN_BLOCK));
+        Boolean bronze_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TIN_ORE && this.furnaceItemStacks.get(1).getItem() == ModItems.COPPER_ORE) || (this.furnaceItemStacks.get(0).getItem() == ModItems.COPPER_ORE && this.furnaceItemStacks.get(1).getItem() == ModItems.TIN_ORE);
         
         Boolean canSmelt = (bronze_ingot);
 

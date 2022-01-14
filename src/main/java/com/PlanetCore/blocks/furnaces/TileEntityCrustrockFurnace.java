@@ -187,13 +187,13 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
      * Like the old updateEntity(), except more generic.
      */
     public void update() {
-        Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK));
+        Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_ORE && this.furnaceItemStacks.get(1).getItem() == Items.COAL) || (this.furnaceItemStacks.get(0).getItem() == Items.COAL && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_ORE);
 
         boolean flag = this.isBurning();
         boolean flag1 = false;
         if (this.isBurning()) {
             --this.furnaceBurnTime;
-            if (steel_ingot) this.totalCookTime = 1000;
+            if (steel_ingot) this.totalCookTime = 300;
         }
 
         if (!world.isRemote) {
@@ -235,11 +235,11 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
                         }
                         if (this.canSmelt()) {
                             if (result.isEmpty()) {
-                                furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_INGOT, 3));
+                                furnaceItemStacks.set(3, new ItemStack(ModItems.STEEL_INGOT, 1));
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
                             } else {
-                                this.furnaceItemStacks.get(3).grow(3);
+                                this.furnaceItemStacks.get(3).grow(1);
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
                             }
@@ -272,7 +272,7 @@ public class TileEntityCrustrockFurnace extends TileEntityLockable implements IT
     private boolean canSmelt()
     {
         ItemStack[] inputs = new ItemStack[]{this.furnaceItemStacks.get(0), this.furnaceItemStacks.get(1)};
-        Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(Blocks.COAL_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK));
+        Boolean steel_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.IRON_ORE && this.furnaceItemStacks.get(1).getItem() == Items.COAL) || (this.furnaceItemStacks.get(0).getItem() == Items.COAL && this.furnaceItemStacks.get(1).getItem() == ModItems.IRON_ORE);
         
         Boolean canSmelt = (steel_ingot);
 

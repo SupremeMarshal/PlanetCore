@@ -185,13 +185,13 @@ public class TileEntityTungstenFurnace extends TileEntityLockable implements ITi
      * Like the old updateEntity(), except more generic.
      */
     public void update() {
-        Boolean tungsten_titanium_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TITANIUM_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TITANIUM_BLOCK));
+        Boolean tungsten_titanium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TITANIUM_ORE && this.furnaceItemStacks.get(1).getItem() == ModItems.TUNGSTEN_ORE) || (this.furnaceItemStacks.get(0).getItem() == ModItems.TUNGSTEN_ORE && this.furnaceItemStacks.get(1).getItem() == ModItems.TITANIUM_ORE);
 
         boolean flag = this.isBurning();
         boolean flag1 = false;
         if (this.isBurning()) {
             --this.furnaceBurnTime;
-            if (tungsten_titanium_ingot) this.totalCookTime = 1000;
+            if (tungsten_titanium_ingot) this.totalCookTime = 300;
         }
 
         if (!world.isRemote) {
@@ -233,11 +233,11 @@ public class TileEntityTungstenFurnace extends TileEntityLockable implements ITi
                         }
                         if (this.canSmelt()) {
                             if (result.isEmpty()) {
-                                furnaceItemStacks.set(3, new ItemStack(ModItems.TUNGSTEN_TITANIUM_INGOT, 3));
+                                furnaceItemStacks.set(3, new ItemStack(ModItems.TUNGSTEN_TITANIUM_INGOT, 1));
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
                             } else {
-                                this.furnaceItemStacks.get(3).grow(3);
+                                this.furnaceItemStacks.get(3).grow(1);
                                 inputs[1].shrink(1);
                                 inputs[0].shrink(1);
                             }
@@ -269,7 +269,7 @@ public class TileEntityTungstenFurnace extends TileEntityLockable implements ITi
     private boolean canSmelt()
     {
         ItemStack[] inputs = new ItemStack[]{this.furnaceItemStacks.get(0), this.furnaceItemStacks.get(1)};
-        Boolean tungsten_titanium_ingot = (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TITANIUM_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK)) || (this.furnaceItemStacks.get(0).getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK) && this.furnaceItemStacks.get(1).getItem() == Item.getItemFromBlock(ModBlocks.TITANIUM_BLOCK));
+        Boolean tungsten_titanium_ingot = (this.furnaceItemStacks.get(0).getItem() == ModItems.TITANIUM_ORE && this.furnaceItemStacks.get(1).getItem() == ModItems.TUNGSTEN_ORE) || (this.furnaceItemStacks.get(0).getItem() == ModItems.TUNGSTEN_ORE && this.furnaceItemStacks.get(1).getItem() == ModItems.TITANIUM_ORE);
 
         Boolean canSmelt = (tungsten_titanium_ingot);
 
