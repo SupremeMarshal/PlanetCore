@@ -55,7 +55,7 @@ public class IronLavaFluid extends BlockFluidClassic {
 
 	public boolean checkForMixing(World worldIn, BlockPos pos, IBlockState state)
 	{
-		if (this.material == Material.LAVA)
+		if (this.material == Material.LAVA && this.canCreateSources)
 		{
 			boolean flag = false;
 
