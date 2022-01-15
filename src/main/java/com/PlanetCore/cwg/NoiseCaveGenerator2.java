@@ -61,7 +61,7 @@ public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
             double caveFillConstant = 0.0;
 
             // caves will begin to get smaller above this height
-            double yCutoff = -256;
+            double yCutoff = -32;
             // specifies how quickly they will get smaller as you go up
             double yCutoffFactor1 = 0.004;
             // specifies how quickly cave systems become smaller as you go up
