@@ -16,8 +16,7 @@
         },
         "B":
         {
-            "type": "forge:ore_dict",
-            "ore": "blockOnyx"
+            "item": "planetcore:onyx_block"
         }
     },
     

@@ -16,8 +16,7 @@
         },
         "B":
         {
-            "type": "forge:ore_dict",
-            "ore": "blockRuby"
+            "item": "planetcore:ruby_block"
         }
     },
     

@@ -16,8 +16,7 @@
         },
         "B":
         {
-            "type": "forge:ore_dict",
-            "ore": "blockSapphire"
+            "item": "planetcore:sapphire_block"
         }
     },
     

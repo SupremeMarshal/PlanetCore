@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:amazonite_rod"
+            "item": "planetcore:ringwoodite_rod"
         },
         "B":
         {
-            "item": "planetcore:amazonite_block"
+            "item": "planetcore:ringwoodite_block"
         }
     },
     
     "result":
     {
-        "item": "planetcore:amazonite_shield",
+        "item": "planetcore:ringwoodite_shield",
         "count": 1
     }
 }

@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:amazonite_rod"
+            "item": "planetcore:emerald_rod"
         },
         "B":
         {
-            "item": "planetcore:amazonite_block"
+            "item": "planetcore:emerald_block"
         }
     },
     
     "result":
     {
-        "item": "planetcore:amazonite_shield",
+        "item": "planetcore:diamond_shield",
         "count": 1
     }
 }

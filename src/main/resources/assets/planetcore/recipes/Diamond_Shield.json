@@ -16,8 +16,7 @@
         },
         "B":
         {
-            "type": "forge:ore_dict",
-            "ore": "blockDiamond"
+            "item": "planetcore:diamond_block"
         }
     },
     
