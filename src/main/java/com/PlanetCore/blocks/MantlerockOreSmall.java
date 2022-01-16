@@ -17,7 +17,6 @@ public class MantlerockOreSmall extends Mantlerock implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
-    private static final float [] mantleHardnessByMeta = {24, 33, 47, 65, 92, 129, 193, 290, 435, 653, 979, 1469, 2204, 3306, 4959, 7438};
 
     public MantlerockOreSmall(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
     {
@@ -29,7 +28,7 @@ public class MantlerockOreSmall extends Mantlerock implements IMetaName {
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
         int meta = getMetaFromState(blockState);
-        return (planetHardness.hardness / 2) + mantleHardnessByMeta[meta];
+        return (planetHardness.hardness / 2);
     }
 
     @Override

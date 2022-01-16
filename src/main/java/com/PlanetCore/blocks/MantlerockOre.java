@@ -17,7 +17,6 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
-    private static final float [] mantleHardnessByMeta = {24, 33, 47, 65, 92, 129, 193, 290, 435, 653, 979, 1469, 2204, 3306, 4959, 7438};
 
     public MantlerockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
     {
@@ -28,8 +27,7 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
 
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-        int meta = getMetaFromState(blockState);
-        return planetHardness.hardness + mantleHardnessByMeta[meta];
+        return planetHardness.hardness;
     }
 
     @Override

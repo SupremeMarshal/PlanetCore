@@ -24,9 +24,9 @@ public enum PlanetHardness {
     IRON(2),
     ALUMINIUM(1),
     COAL(0.5F),
-    LAPIS(5),
-    REDSTONE(5),
-    SULFUR(1);
+    LAPIS(3),
+    REDSTONE(3),
+    SULFUR(2);
 
     public final float hardness;
 

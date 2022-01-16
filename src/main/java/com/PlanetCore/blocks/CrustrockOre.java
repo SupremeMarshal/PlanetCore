@@ -16,7 +16,6 @@ import java.util.Random;
 public class CrustrockOre extends Crustrock implements IMetaName
 {
 
-	private static final float [] crustHardnessByMeta = {3, 6, 12};
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
 
@@ -29,8 +28,7 @@ public class CrustrockOre extends Crustrock implements IMetaName
 
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		int meta = getMetaFromState(blockState);
-		return planetHardness.hardness + crustHardnessByMeta[meta];
+		return planetHardness.hardness + 1;
 	}
 
 	@Override
