@@ -4420,7 +4420,25 @@ item.enchanted_platinum_apple.name=Enchanted platinum apple
 
 item.hot_blaze_powder.name=Hot Blaze Powder
 
-fluid.iron_lava=Hot lava
+fluid.aluminium_lava=Aluminium lava
+fluid.iron_lava=Iron lava
+fluid.tin_lava=Tin lava
+fluid.copper_lava=Copper lava
+fluid.silver_lava=Silver lava
+fluid.gold_lava=Gold lava
+fluid.platinum_lava=Platinum lava
+fluid.titanium_lava=Titanium lava
+fluid.uranium_lava=Uranium lava
+fluid.tungsten_lava=Tungsten lava
+fluid.emerald_lava=Emerald lava
+fluid.ruby_lava=Ruby lava
+fluid.sapphire_lava=Sapphire lava
+fluid.diamond_lava=Diamond lava
+fluid.olivine_lava=Olivine lava
+fluid.wadsleyite_lava=Wadsleyite lava
+fluid.ringwoodite_lava=Ringwoodite lava
+fluid.brigmanite_lava=Brigmanite lava
+fluid.amazonite_lava=Amazonite lava
 fluid.core_lava=Core lava
 fluid.sulfuric_acid=Sulfuric acid
 fluid.onyx_lava=Onyx lava
