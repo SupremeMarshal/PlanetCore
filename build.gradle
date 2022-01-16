@@ -13,7 +13,7 @@ plugins {
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.0.12"
+version = "1.0.13"
 group = "com.PlanetCore.planetcore" 
 archivesBaseName = "planetcore"
 
