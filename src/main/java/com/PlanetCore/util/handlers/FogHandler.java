@@ -36,10 +36,10 @@ public class FogHandler {
         else if (Y > 0) {
             event.setDensity(0.00003F);
         }
-        else if (Y <= 0 && Y > -4096) {
-            event.setDensity(-0.00002197265625F * Y);
+        else if (Y <= 0 && Y > -2048) {
+            event.setDensity(-0.0000439453125F * Y);
         }
-        else if (Y <= -4096) {
+        else if (Y <= -2048) {
             event.setDensity(0.09F);
         }
 
@@ -58,7 +58,7 @@ public class FogHandler {
                 event.setRed(1.0F);
                 event.setGreen(0.75F);
                 event.setBlue(0.25F);
-            } else if (block == ModBlocks.IRON_LAVA_FLUID || block == ModBlocks.ACTIVE_LAVA_FLUID) {
+            } else if (block == ModBlocks.IRON_LAVA_FLUID) {
                 event.setRed(1.0F);
                 event.setGreen(0.85F);
                 event.setBlue(0.0F);
@@ -114,53 +114,53 @@ public class FogHandler {
 
                  */
                 //black to green
-            } else if (Y < 0 && Y > -1024) {
+            } else if (Y < 0 && Y > -512) {
                 event.setRed(0.0F);
-                event.setGreen(0.0F - 0.00042119140625F * Y);
-                event.setBlue(0.0F - 0.00016083984375F * Y);
-            } else if (Y <= -1024 && Y > -1536) {
+                event.setGreen(0.0F - 0.0008423828125F * Y);
+                event.setBlue(0.0F - 0.0003216796875F * Y);
+            } else if (Y <= -512 && Y > -768) {
                 // green to blue-green
-                event.setRed(0.0F - 0.00016083984375F * (Y + 1024));
-                event.setGreen(0.4313F + 0.000336875F * (Y + 1024));
-                event.setBlue(0.1647F - 0.000367578125F * (Y + 1024));
-            } else if (Y <= -1536 && Y > -2048) {
+                event.setRed(0.0F - 0.0003216796875F * (Y + 512));
+                event.setGreen(0.4313F + 0.000336875F * 2 * (Y + 512));
+                event.setBlue(0.1647F - 0.000367578125F * 2 * (Y + 512));
+            } else if (Y <= -768 && Y > -1024) {
                 // blue-green to purple
-                event.setRed(0.08235F - 0.00032919921875F * (Y + 1536));
-                event.setGreen(0.25882F + 0.00036F * (Y + 1536));
-                event.setBlue(0.3529F + 0.000023046875F * (Y + 1536));
-            } else if (Y <= -2048 && Y > -2560) {
+                event.setRed(0.08235F - 0.00032919921875F * 2 * (Y + 768));
+                event.setGreen(0.25882F + 0.00036F * 2 * (Y + 768));
+                event.setBlue(0.3529F + 0.000023046875F * 2 * (Y + 768));
+            } else if (Y <= -1024 && Y > -1280) {
                 // purple to dark purple
-                event.setRed(0.2509F + 0.0001072265625F * (Y + 2048));
-                event.setGreen(0.0745F + 0.0000153125F * (Y + 2048));
-                event.setBlue(0.3411F + 0.0004517578125F * (Y + 2048));
-            } else if (Y <= -2560 && Y > -3072) {
+                event.setRed(0.2509F + 0.0001072265625F * 2 * (Y + 1024));
+                event.setGreen(0.0745F + 0.0000153125F * 2 * (Y + 1024));
+                event.setBlue(0.3411F + 0.0004517578125F * 2 * (Y + 1024));
+            } else if (Y <= -1280 && Y > -1536) {
                 // dark purple to dark red
-                event.setRed(0.196F - 0.00012265625F * (Y + 2560));
-                event.setGreen(0.06666F + 0.000007734375F * (Y + 2560));
-                event.setBlue(0.1098F + 0.000214453125F * (Y + 2560));
-            } else if (Y <= -3072 && Y > -3584) {
+                event.setRed(0.196F - 0.00012265625F * 2 * (Y + 1280));
+                event.setGreen(0.06666F + 0.000007734375F * 2 * (Y + 1280));
+                event.setBlue(0.1098F + 0.000214453125F * 2 * (Y + 1280));
+            } else if (Y <= -1536 && Y > -1792) {
                 // dark red to red
-                event.setRed(0.2588F - 0.0007658203125F * (Y + 3072));
-                event.setGreen(0.0627F + 0.0000076171875F * (Y + 3072));
+                event.setRed(0.2588F - 0.0007658203125F * 2 * (Y + 1536));
+                event.setGreen(0.0627F + 0.0000076171875F * 2 * (Y + 1536));
                 event.setBlue(0.0F);
-            } else if (Y <= -3584 && Y > -4096) {
+            } else if (Y <= -1792 && Y > -2048) {
                 // red to yellow
-                event.setRed(0.6509F - 0.0006818359375F * (Y + 3584));
-                event.setGreen(0.0588F - 0.00183828125F * (Y + 3584));
+                event.setRed(0.6509F - 0.0006818359375F * 2 * (Y + 1792));
+                event.setGreen(0.0588F - 0.00183828125F * 2 * (Y + 1792));
                 event.setBlue(0.0F);
-            } else if (Y <= -4096 && Y > -4608) {
+            } else if (Y <= -2048 && Y > -2304) {
                 // yellow to white-blue
-                event.setRed(1.0F + 0.00078125F * (Y + 4096));
-                event.setGreen(1.0F + 0.00078125F * (Y + 4096));
-                event.setBlue(0.0F - 0.001953125F * (Y + 4096));
+                event.setRed(1.0F + 0.00078125F * 2 * (Y + 2048));
+                event.setGreen(1.0F + 0.00078125F * 2 * (Y + 2048));
+                event.setBlue(0.0F - 0.001953125F * 2 * (Y + 2048));
             }
-            else if (Y <= -4608 && Y > -6080) {
+            else if (Y <= -2304 && Y > -3040) {
                 // white-blue to dark-blue
-                event.setRed(0.6F + 0.000407608695652173F * (Y + 4608));
-                event.setGreen(0.6F + 0.000407608695652173F * (Y + 4608));
-                event.setBlue(1.0F + 0.000203804F * (Y + 4608));
+                event.setRed(0.6F + 0.000407608695652173F * 2 * (Y + 2304));
+                event.setGreen(0.6F + 0.000407608695652173F * 2 * (Y + 2304));
+                event.setBlue(1.0F + 0.000203804F * 2 * (Y + 2304));
             }
-            else if (Y <= -6080) {
+            else if (Y <= -3040) {
                 // dark-blue
                 event.setRed(0.0F);
                 event.setGreen(0.0F);

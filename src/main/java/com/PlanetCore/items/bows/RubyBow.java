@@ -39,12 +39,28 @@ public class RubyBow extends ItemBow
                 return entityIn != null && arrow == Items.ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
             }
         });
-        this.addPropertyOverride(new ResourceLocation("pulling_emerald"), new IItemPropertyGetter()
+        this.addPropertyOverride(new ResourceLocation("pulling_diamond"), new IItemPropertyGetter()
         {
             @SideOnly(Side.CLIENT)
             public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
             {
-                return entityIn != null && arrow == ModItems.EMERALD_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
+                return entityIn != null && arrow == ModItems.DIAMOND_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
+            }
+        });
+        this.addPropertyOverride(new ResourceLocation("pulling_topaz"), new IItemPropertyGetter()
+        {
+            @SideOnly(Side.CLIENT)
+            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
+            {
+                return entityIn != null && arrow == ModItems.TOPAZ_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
+            }
+        });
+        this.addPropertyOverride(new ResourceLocation("pulling_jade"), new IItemPropertyGetter()
+        {
+            @SideOnly(Side.CLIENT)
+            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
+            {
+                return entityIn != null && arrow == ModItems.JADE_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
             }
         });
         this.addPropertyOverride(new ResourceLocation("pulling_ruby"), new IItemPropertyGetter()
@@ -72,7 +88,7 @@ public class RubyBow extends ItemBow
     @Override
     protected boolean isArrow(ItemStack stack)
     {
-        if(stack.getItem() instanceof ItemArrow || stack.getItem() == ModItems.EMERALD_ARROW || stack.getItem() == ModItems.RUBY_ARROW)
+        if(stack.getItem() instanceof ItemArrow || stack.getItem() == ModItems.DIAMOND_ARROW || stack.getItem() == ModItems.TOPAZ_ARROW || stack.getItem() == ModItems.JADE_ARROW || stack.getItem() == ModItems.RUBY_ARROW)
         {
             return true;
         }
@@ -120,17 +136,25 @@ public class RubyBow extends ItemBow
                             entityarrow = ((ItemArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
                             damage = 2;
                         }
-                        if (itemstack.getItem() == ModItems.EMERALD_ARROW) {
-                            entityarrow = ((EmeraldArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
+                        if (itemstack.getItem() == ModItems.DIAMOND_ARROW) {
+                            entityarrow = ((DiamondArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
                             damage = 3;
+                        }
+                        if (itemstack.getItem() == ModItems.TOPAZ_ARROW) {
+                            entityarrow = ((TopazArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
+                            damage = 4;
+                        }
+                        if (itemstack.getItem() == ModItems.JADE_ARROW) {
+                            entityarrow = ((JadeArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
+                            damage = 5;
                         }
                         if (itemstack.getItem() == ModItems.RUBY_ARROW) {
                             entityarrow = ((RubyArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 4;
+                            damage = 6;
                         }
                         entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                        entityarrow.setDamage(damage + 2);
+                        entityarrow.setDamage(damage + 4);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -139,7 +163,7 @@ public class RubyBow extends ItemBow
                         int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
 
                         if (j > 0) {
-                            entityarrow.setDamage(damage + (double) j * 0.5D + 2.5D);
+                            entityarrow.setDamage(damage + (double) j * 0.5D + 4.5D);
                         }
 
                         int k = EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, stack);

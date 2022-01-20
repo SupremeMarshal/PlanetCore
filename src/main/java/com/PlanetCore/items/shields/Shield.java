@@ -77,14 +77,12 @@ public class Shield extends ItemShield {
         if (shieldMaterial == ShieldMaterial.BRONZE) return repair.getItem() == Item.getItemFromBlock(ModBlocks.BRONZE_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.SILVER) return repair.getItem() == Item.getItemFromBlock(ModBlocks.SILVER_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.GOLD) return repair.getItem() == Item.getItemFromBlock(ModBlocks.GOLD_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.PLATINUM) return repair.getItem() == Item.getItemFromBlock(ModBlocks.PLATINUM_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.TITANIUM) return repair.getItem() == Item.getItemFromBlock(ModBlocks.TITANIUM_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.URANIUM) return repair.getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.TITANIUM_URANIUM) return repair.getItem() == Item.getItemFromBlock(ModBlocks.TITANIUM_URANIUM_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.TUNGSTEN) return repair.getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.TUNGSTEN_TITANIUM) return repair.getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_TITANIUM_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.TUNGSTEN_URANIUM) return repair.getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_URANIUM_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.EMERALD) return repair.getItem() == Item.getItemFromBlock(ModBlocks.EMERALD_BLOCK) || super.getIsRepairable(toRepair, repair);
+        if (shieldMaterial == ShieldMaterial.TOPAZ) return repair.getItem() == Item.getItemFromBlock(ModBlocks.TOPAZ_BLOCK) || super.getIsRepairable(toRepair, repair);
+        if (shieldMaterial == ShieldMaterial.JADE) return repair.getItem() == Item.getItemFromBlock(ModBlocks.JADE_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.RUBY) return repair.getItem() == Item.getItemFromBlock(ModBlocks.RUBY_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.SAPPHIRE) return repair.getItem() == Item.getItemFromBlock(ModBlocks.SAPPHIRE_BLOCK) || super.getIsRepairable(toRepair, repair);
         if (shieldMaterial == ShieldMaterial.DIAMOND) return repair.getItem() == Item.getItemFromBlock(ModBlocks.DIAMOND_BLOCK) || super.getIsRepairable(toRepair, repair);
@@ -121,14 +119,11 @@ public class Shield extends ItemShield {
         if (shieldMaterial == ShieldMaterial.BRONZE) return ("Bronze shield");
         if (shieldMaterial == ShieldMaterial.SILVER) return ("Silver shield");
         if (shieldMaterial == ShieldMaterial.GOLD) return ("Gold shield");
-        if (shieldMaterial == ShieldMaterial.PLATINUM) return ("Platinum shield");
         if (shieldMaterial == ShieldMaterial.TITANIUM) return ("Titanium shield");
         if (shieldMaterial == ShieldMaterial.URANIUM) return ("Uranium shield");
-        if (shieldMaterial == ShieldMaterial.TITANIUM_URANIUM) return ("Titanium Uranium shield");
         if (shieldMaterial == ShieldMaterial.TUNGSTEN) return ("Tungsten shield");
         if (shieldMaterial == ShieldMaterial.TUNGSTEN_TITANIUM) return ("Tungsten Titanium shield");
-        if (shieldMaterial == ShieldMaterial.TUNGSTEN_URANIUM) return ("Tungsten Uranium shield");
-        if (shieldMaterial == ShieldMaterial.EMERALD) return ("Emerald shield");
+        if (shieldMaterial == ShieldMaterial.JADE) return ("Jade shield");
         if (shieldMaterial == ShieldMaterial.RUBY) return ("Ruby shield");
         if (shieldMaterial == ShieldMaterial.SAPPHIRE) return ("Sapphire shield");
         if (shieldMaterial == ShieldMaterial.DIAMOND) return ("Diamond shield");
@@ -157,18 +152,18 @@ public class Shield extends ItemShield {
             // hides normal info
             stack.getTagCompound().setInteger("HideFlags", 2);
         }
-        if (shieldMaterial == ShieldMaterial.ALUMINIUM || shieldMaterial == ShieldMaterial.IRON || shieldMaterial == ShieldMaterial.TIN || shieldMaterial == ShieldMaterial.COPPER) {
+        if (shieldMaterial == ShieldMaterial.ALUMINIUM || shieldMaterial == ShieldMaterial.IRON || shieldMaterial == ShieldMaterial.TIN || shieldMaterial == ShieldMaterial.COPPER
+    || shieldMaterial == ShieldMaterial.STEEL || shieldMaterial == ShieldMaterial.BRONZE || shieldMaterial == ShieldMaterial.SILVER || shieldMaterial == ShieldMaterial.GOLD || shieldMaterial == ShieldMaterial.DIAMOND) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        } else if (shieldMaterial == ShieldMaterial.STEEL || shieldMaterial == ShieldMaterial.BRONZE || shieldMaterial == ShieldMaterial.SILVER || shieldMaterial == ShieldMaterial.GOLD
-                || shieldMaterial == ShieldMaterial.PLATINUM || shieldMaterial == ShieldMaterial.TITANIUM || shieldMaterial == ShieldMaterial.URANIUM || shieldMaterial == ShieldMaterial.TITANIUM_URANIUM
-                || shieldMaterial == ShieldMaterial.TUNGSTEN || shieldMaterial == ShieldMaterial.TUNGSTEN_TITANIUM || shieldMaterial == ShieldMaterial.TUNGSTEN_URANIUM) {
+        } else if (shieldMaterial == ShieldMaterial.TITANIUM || shieldMaterial == ShieldMaterial.URANIUM
+                || shieldMaterial == ShieldMaterial.TUNGSTEN || shieldMaterial == ShieldMaterial.TUNGSTEN_TITANIUM) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        } else if (shieldMaterial == ShieldMaterial.EMERALD || shieldMaterial == ShieldMaterial.RUBY || shieldMaterial == ShieldMaterial.SAPPHIRE || shieldMaterial == ShieldMaterial.DIAMOND) {
+        } else if (shieldMaterial == ShieldMaterial.TOPAZ || shieldMaterial == ShieldMaterial.JADE || shieldMaterial == ShieldMaterial.RUBY || shieldMaterial == ShieldMaterial.SAPPHIRE) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
@@ -207,123 +202,98 @@ public class Shield extends ItemShield {
             knockback = 0.05F;
         }
         if (shieldMaterial == ShieldMaterial.STEEL) {
-            health = 0.5F;
             knockback = 0.06F;
         }
         if (shieldMaterial == ShieldMaterial.BRONZE) {
-            health = 1.0F;
             knockback = 0.07F;
         }
         if (shieldMaterial == ShieldMaterial.SILVER) {
-            health = 2.0F;
             knockback = 0.08F;
         }
         if (shieldMaterial == ShieldMaterial.GOLD) {
-            health = 4.0F;
             knockback = 0.09F;
         }
-        if (shieldMaterial == ShieldMaterial.PLATINUM) {
-            health = 6.0F;
+        if (shieldMaterial == ShieldMaterial.DIAMOND) {
             knockback = 0.1F;
         }
         if (shieldMaterial == ShieldMaterial.TITANIUM) {
-            health = 8.0F;
+            health = 1.0F;
             knockback = 0.11F;
         }
         if (shieldMaterial == ShieldMaterial.URANIUM) {
-            health = 10.0F;
+            health = 1.0F;
             knockback = 0.12F;
         }
-        if (shieldMaterial == ShieldMaterial.TITANIUM_URANIUM) {
-            health = 12.0F;
-            knockback = 0.13F;
-        }
         if (shieldMaterial == ShieldMaterial.TUNGSTEN) {
-            health = 14.0F;
+            health = 2.0F;
             knockback = 0.14F;
         }
         if (shieldMaterial == ShieldMaterial.TUNGSTEN_TITANIUM) {
-            health = 16.0F;
+            health = 3.0F;
             knockback = 0.15F;
         }
-        if (shieldMaterial == ShieldMaterial.TUNGSTEN_URANIUM) {
-            health = 18.0F;
-            knockback = 0.16F;
+        if (shieldMaterial == ShieldMaterial.TOPAZ) {
+            health = 1.0F;
+            knockback = 0.2F;
         }
-        if (shieldMaterial == ShieldMaterial.EMERALD) {
-            health = 20.0F;
-            knockback = 0.18F;
-
+        if (shieldMaterial == ShieldMaterial.JADE) {
+            health = 2.0F;
+            knockback = 0.2F;
         }
         if (shieldMaterial == ShieldMaterial.RUBY) {
-            health = 24.0F;
+            health = 4.0F;
             knockback = 0.2F;
-
         }
         if (shieldMaterial == ShieldMaterial.SAPPHIRE) {
-            health = 28.0F;
+            health = 5.0F;
             knockback = 0.22F;
-
-        }
-        if (shieldMaterial == ShieldMaterial.DIAMOND) {
-            health = 32.0F;
-            knockback = 0.24F;
-
         }
         if (shieldMaterial == ShieldMaterial.OLIVINE) {
-            health = 40.0F;
+            health = 6.0F;
             knockback = 0.26F;
-
         }
         if (shieldMaterial == ShieldMaterial.WADSLEYITE) {
-            health = 48.0F;
+            health = 7.0F;
             knockback = 0.28F;
-
         }
         if (shieldMaterial == ShieldMaterial.RINGWOODITE) {
-            health = 56.0F;
+            health = 8.0F;
             knockback = 0.3F;
-
         }
         if (shieldMaterial == ShieldMaterial.BRIGMANITE) {
-            health = 64.0F;
+            health = 9.0F;
             knockback = 0.32F;
-
         }
         if (shieldMaterial == ShieldMaterial.MAJORITE) {
-            health = 72.0F;
+            health = 10.0F;
             knockback = 0.34F;
-
         }
         if (shieldMaterial == ShieldMaterial.AMAZONITE) {
-            health = 80.0F;
+            health = 11.0F;
             knockback = 0.36F;
-
         }
         if (shieldMaterial == ShieldMaterial.ONYX) {
-            health = 100.0F;
+            health = 12.0F;
             knockback = 0.38F;
 
         }
         if (shieldMaterial == ShieldMaterial.ONYXII) {
-            health = 120.0F;
+            health = 13.0F;
             knockback = 0.4F;
 
         }
         if (shieldMaterial == ShieldMaterial.ONYXIII) {
-            health = 160.0F;
+            health = 14.0F;
             knockback = 0.42F;
 
         }
         if (shieldMaterial == ShieldMaterial.ONYXIV) {
-            health = 200.0F;
+            health = 15.0F;
             knockback = 0.44F;
-
         }
         if (shieldMaterial == ShieldMaterial.ONYXV) {
-            health = 240.0F;
+            health = 16.0F;
             knockback = 0.46F;
-
         }
 
 

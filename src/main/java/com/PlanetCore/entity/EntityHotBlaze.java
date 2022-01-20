@@ -334,7 +334,7 @@ public class EntityHotBlaze extends EntityBlaze {
 
     @Override
     public boolean getCanSpawnHere() {
-        if (posY < -2024 && posY >= -5000) {
+        if (posY < -256 && posY >= -1792) {
             return true;
         }
         else return false;

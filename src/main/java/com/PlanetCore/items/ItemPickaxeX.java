@@ -18,12 +18,7 @@ import java.util.List;
 public class ItemPickaxeX extends ItemPickaxe {
     public ItemPickaxeX(ToolMaterial material) {
         super(material);
-    }
-
-    @SideOnly(Side.CLIENT)
-    @Override
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
+        this.attackDamage = material.getAttackDamage() * 0.7F;
+        this.attackSpeed = -1F;
     }
 }

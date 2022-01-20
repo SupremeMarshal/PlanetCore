@@ -29,7 +29,7 @@ public class Main {
     public Main()
     {
         //what is this for? it give lot of error and it change nothing to the mod.
-        GeckoLib.initialize();
+        //GeckoLib.initialize();
     }
     
 

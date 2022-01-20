@@ -112,22 +112,22 @@ public class BlockBase extends Block {
 				 * At -6500Y, the chance is at 37% making the pressure happen extremely frequently.
 				 * Goodluck mining at these levels.
 				 */
-				if (pos.getY() < 0 && pos.getY() >= -1024 && Math.random() >= pos.getY() * -0.0000048828125) {
+				if (pos.getY() < 0 && pos.getY() >= -512 && Math.random() >= pos.getY() * -0.000009765625) {
 					return;
 				}
-				if (pos.getY() < -1024 && pos.getY() >= -2048 && Math.random() >= (pos.getY() + 1024) * -0.000009765625 + 0.005 ) {
+				if (pos.getY() < -512 && pos.getY() >= -1024 && Math.random() >= (pos.getY() + 512) * -0.000009765625 + 0.005 ) {
 					return;
 				}
-				if (pos.getY() < -2048 && pos.getY() >= -3072 && Math.random() >= (pos.getY() + 2048) * -0.00001953125 + 0.015 ) {
+				if (pos.getY() < -1024 && pos.getY() >= -1536 && Math.random() >= (pos.getY() + 1024) * -0.0000390625 + 0.015 ) {
 					return;
 				}
-				if (pos.getY() < -3072 && pos.getY() >= -4096 && Math.random() >= (pos.getY() + 3072) * -0.0000390625 + 0.035 ) {
+				if (pos.getY() < -1536 && pos.getY() >= -2048 && Math.random() >= (pos.getY() + 1536) * -0.000078125 + 0.035 ) {
 					return;
 				}
-				if (pos.getY() < -4096 && pos.getY() >= -5120 && Math.random() >= (pos.getY() + 4096) * -0.000078125 + 0.075 ) {
+				if (pos.getY() < -2048 && pos.getY() >= -2560 && Math.random() >= (pos.getY() + 2048) * -0.00015625 + 0.075 ) {
 					return;
 				}
-				if (pos.getY() < -5120 && Math.random() >= (pos.getY() + 5120) * -0.00015625 + 0.155 ) {
+				if (pos.getY() < -2560 && Math.random() >= (pos.getY() + 2560) * -0.0003125 + 0.155 ) {
 					return;
 				}
 

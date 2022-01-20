@@ -17,6 +17,7 @@ public class MantlerockOreCompact extends Mantlerock implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    private static final float [] mantleHardnessByMeta = {60, 70, 100, 150, 200, 250};
 
     public MantlerockOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
     {
@@ -27,6 +28,11 @@ public class MantlerockOreCompact extends Mantlerock implements IMetaName {
 
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+        int meta = getMetaFromState(blockState);
+        if (planetHardness.hardness * 4 < mantleHardnessByMeta[meta])
+        {
+            return mantleHardnessByMeta[meta];
+        }
         return planetHardness.hardness * 4;
     }
 
@@ -53,7 +59,7 @@ public class MantlerockOreCompact extends Mantlerock implements IMetaName {
                 i = MathHelper.getInt(rand, 3, 6);
             } else if (this == ModBlocks.MANTLEROCK_COMPACT_LAPIS) {
                 i = MathHelper.getInt(rand, 3, 9);
-            } else if (this == ModBlocks.MANTLEROCK_COMPACT_EMERALD) {
+            } else if (this == ModBlocks.MANTLEROCK_COMPACT_JADE) {
                 i = MathHelper.getInt(rand, 6, 12);
             } else if (this == ModBlocks.MANTLEROCK_COMPACT_RUBY || this == ModBlocks.MANTLEROCK_COMPACT_SAPPHIRE || this == ModBlocks.MANTLEROCK_COMPACT_DIAMOND) {
                 i = MathHelper.getInt(rand, 9, 18);

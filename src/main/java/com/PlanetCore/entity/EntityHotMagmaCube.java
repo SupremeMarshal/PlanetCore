@@ -1,5 +1,6 @@
 package com.PlanetCore.entity;
 
+import com.PlanetCore.util.handlers.LootTableHandler;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMagmaCube;
@@ -24,6 +25,11 @@ public class EntityHotMagmaCube extends EntityMagmaCube
 	@Override
 	public void fall(float distance, float damageMultiplier)
 	{
+	}
+
+	@Override
+	protected ResourceLocation getLootTable() {
+		return LootTableHandler.HOT_MAGMACUBE;
 	}
 
 	@Override
@@ -76,7 +82,7 @@ public class EntityHotMagmaCube extends EntityMagmaCube
 	
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -1024 && posY > -4800) {
+		if (posY <= -256 && posY > -1792) {
 			return true;
 		} else {
 			return false;

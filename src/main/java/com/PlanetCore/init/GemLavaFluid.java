@@ -54,10 +54,11 @@ public class GemLavaFluid extends BlockFluidClassic {
 		{
 			PotionEffect effect = ((EntityLivingBase) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 			float damage = 0;
-			if (state.getBlock() == ModBlocks.EMERALD_LAVA_FLUID) damage = 4;
-			else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 8;
-			else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 16;
-			else if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 32;
+			if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 4;
+			else if (state.getBlock() == ModBlocks.TOPAZ_LAVA_FLUID) damage = 8;
+			else if (state.getBlock() == ModBlocks.JADE_LAVA_FLUID) damage = 12;
+			else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 16;
+			else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 32;
 			else if (state.getBlock() == ModBlocks.OLIVINE_LAVA_FLUID) damage = 48;
 			else if (state.getBlock() == ModBlocks.WADSLEYITE_LAVA_FLUID) damage = 64;
 			else if (state.getBlock() == ModBlocks.RINGWOODITE_LAVA_FLUID) damage = 80;
@@ -113,10 +114,11 @@ public class GemLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() == 0)
 				{
-					if (this == ModBlocks.EMERALD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.EMERALD_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.DIAMOND_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.TOPAZ_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TOPAZ_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.JADE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.JADE_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.RUBY_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.RUBY_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.SAPPHIRE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SAPPHIRE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.DIAMOND_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.OLIVINE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.OLIVINE_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.WADSLEYITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.WADSLEYITE_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.RINGWOODITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.RINGWOODITE_SUPERCOMPACT.getDefaultState()));
@@ -129,10 +131,11 @@ public class GemLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() <= 4)
 				{
-					if (this == ModBlocks.EMERALD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.EMERALD_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.DIAMOND_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.TOPAZ_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TOPAZ_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.JADE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.JADE_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.RUBY_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.RUBY_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.SAPPHIRE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SAPPHIRE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.DIAMOND_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.OLIVINE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.OLIVINE_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.WADSLEYITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.WADSLEYITE_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.RINGWOODITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.RINGWOODITE_SUPERCOMPACT.getDefaultState()));
@@ -150,7 +153,7 @@ public class GemLavaFluid extends BlockFluidClassic {
 
 	public static void burnEntities(World world, int x, int y, int z, int radius, IBlockState state) {
 
-		AxisAlignedBB bb = new AxisAlignedBB(x + 4, y + 4, z + 4, x - 4, y - 4, z - 4);
+		AxisAlignedBB bb = new AxisAlignedBB(x + 5, y + 5, z + 5, x - 5, y - 5, z - 5);
 		List list = world.getEntitiesWithinAABB(EntityLiving.class, bb);
 
 		for (int i = 0; i < list.size(); ++i) {
@@ -159,10 +162,11 @@ public class GemLavaFluid extends BlockFluidClassic {
 			{
 				PotionEffect effect = ((EntityLiving) entity).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 				float damage = 0;
-				if (state.getBlock() == ModBlocks.EMERALD_LAVA_FLUID) damage = 4;
-				else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 8;
-				else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 16;
-				else if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 32;
+				if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 4;
+				else if (state.getBlock() == ModBlocks.TOPAZ_LAVA_FLUID) damage = 8;
+				else if (state.getBlock() == ModBlocks.JADE_LAVA_FLUID) damage = 12;
+				else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 16;
+				else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 32;
 				else if (state.getBlock() == ModBlocks.OLIVINE_LAVA_FLUID) damage = 48;
 				else if (state.getBlock() == ModBlocks.WADSLEYITE_LAVA_FLUID) damage = 64;
 				else if (state.getBlock() == ModBlocks.RINGWOODITE_LAVA_FLUID) damage = 80;

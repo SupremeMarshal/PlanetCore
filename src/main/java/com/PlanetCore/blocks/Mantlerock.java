@@ -33,8 +33,8 @@ public class Mantlerock extends BlockBase implements IMetaName
 {
 
 
-	private static final float [] mantleHardnessByMeta = {24, 33, 47, 65, 92, 129, 193, 290, 435, 653, 979, 1469, 2204, 3306, 4959, 7438};
-	public static final int [] mantleLightLevel = {0, 0, 0, 0, 0, 1, 2, 4, 6, 8, 10, 11, 12, 13, 14, 15};
+	private static final float [] mantleHardnessByMeta = {60, 70, 100, 150, 200, 250};
+	public static final int [] mantleLightLevel = {0, 0, 9, 11, 13, 15};
 	public static final PropertyEnum<Mantlerock.EnumType> VARIANT = PropertyEnum.<Mantlerock.EnumType>create("variant",Mantlerock.EnumType.class);
 
 
@@ -100,23 +100,12 @@ public class Mantlerock extends BlockBase implements IMetaName
 		MANTLEROCK(0, "mantlerock"),
 		MANTLEROCK1(1, "mantlerock1"),
 		MANTLEROCK2(2, "mantlerock2"),
-		MANTLEROCK3(3, "mantlerock3"),
-		MANTLEROCK4(4, "mantlerock4"),
-		MANTLEROCK5(5, "mantlerock5"),
-		MANTLEROCK6(6, "mantlerock6"),
-		MANTLEROCK7(7, "mantlerock7"),
-		MANTLEROCK8(8, "mantlerock8"),
-		LOWER_MANTLEROCK(9, "lower_mantlerock"),
-		LOWER_MANTLEROCK1(10, "lower_mantlerock1"),
-		LOWER_MANTLEROCK2(11, "lower_mantlerock2"),
-		LOWER_MANTLEROCK3(12, "lower_mantlerock3"),
-		LOWER_MANTLEROCK4(13, "lower_mantlerock4"),
-		LOWER_MANTLEROCK5(14, "lower_mantlerock5"),
-		LOWER_MANTLEROCK6(15, "lower_mantlerock6");
+		LOWER_MANTLEROCK(3, "lower_mantlerock"),
+		LOWER_MANTLEROCK1(4, "lower_mantlerock1"),
+		LOWER_MANTLEROCK2(5, "lower_mantlerock2");
 
 
-		private static final 	Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[]{MANTLEROCK, MANTLEROCK1, MANTLEROCK2, MANTLEROCK3, MANTLEROCK4, MANTLEROCK5, MANTLEROCK6,
-		MANTLEROCK7, MANTLEROCK8, LOWER_MANTLEROCK, LOWER_MANTLEROCK1, LOWER_MANTLEROCK2, LOWER_MANTLEROCK3, LOWER_MANTLEROCK4, LOWER_MANTLEROCK5, LOWER_MANTLEROCK6};
+		private static final 	Mantlerock.EnumType[] META_LOOKUP = new Mantlerock.EnumType[]{MANTLEROCK, MANTLEROCK1, MANTLEROCK2, LOWER_MANTLEROCK, LOWER_MANTLEROCK1, LOWER_MANTLEROCK2};
 		private final int meta;
 		private final String name;
 
@@ -160,6 +149,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 	@Override
 	public String getSpecialName(ItemStack stack)
 	{
+		if (stack.getItemDamage() > 6) return null;
 		return Mantlerock.EnumType.values()[stack.getItemDamage()].getName();
 	}
 
@@ -172,54 +162,28 @@ public class Mantlerock extends BlockBase implements IMetaName
 		int X = pos.getX();
 		int Z = pos.getZ();
 		int Y = pos.getY();
+		int meta = getMetaFromState(state);
 		if (!worldIn.isRemote) {
-			if (pos.getY() <= -1024 && pos.getY() > -1280 && rand.nextInt(2000) == 0) {
+			if (meta == 0 && rand.nextInt(2000) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
 			}
-			if (pos.getY() <= -1280 && pos.getY() > -1536 && rand.nextInt(1666) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
+			if (meta == 1 && rand.nextInt(1333) == 0) {
+				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
 			}
-			if (pos.getY() <= -1536 && pos.getY() > -1792 && rand.nextInt(1388) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(4) + 1, true);
+			if (meta == 2 && rand.nextInt(888) == 0) {
+				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(4) + 1, true);
 			}
-			if (pos.getY() <= -1792 && pos.getY() > -2048 && rand.nextInt(1157) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
+			if (meta == 3 && rand.nextInt(592) == 0) {
+				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 			}
-			if (pos.getY() <= -2048 && pos.getY() > -2304 && rand.nextInt(964) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 1, true);
+			if (meta == 4 && rand.nextInt(395) == 0) {
+				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 1, true);
 			}
-			if (pos.getY() <= -2304 && pos.getY() > -2560 && rand.nextInt(803) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 1, true);
+			if (meta == 5 && rand.nextInt(263) == 0 && pos.getY() >= -1686) {
+				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 1, true);
 			}
-			if (pos.getY() <= -2560 && pos.getY() > -2816 && rand.nextInt(669) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 1, true);
-			}
-			if (pos.getY() <= -2816 && pos.getY() > -3072 && rand.nextInt(558) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 1, true);
-			}
-			if (pos.getY() <= -3072 && pos.getY() > -3328 && rand.nextInt(465) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 1, true);
-			}
-			if (pos.getY() <= -3328 && pos.getY() > -3584 && rand.nextInt(387) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 2, true);
-			}
-			if (pos.getY() <= -3584 && pos.getY() > -3840 && rand.nextInt(323) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 2, true);
-			}
-			if (pos.getY() <= -3840 && pos.getY() > -4096 && rand.nextInt(269) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 3, true);
-			}
-			if (pos.getY() <= -4096 && pos.getY() > -4608 && rand.nextInt(250) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 3, true);
-			}
-			if (pos.getY() <= -4608 && pos.getY() > -5120 && rand.nextInt(250) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 4, true);
-			}
-			if (pos.getY() <= -5120 && pos.getY() > -5632 && rand.nextInt(250) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
-			}
-			if (pos.getY() <= -5632 && rand.nextInt(250) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 5, true);
+			if (pos.getY() < -1686 && rand.nextInt(64) == 0) {
+				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(8) + 1, true);
 			}
 		}
 	}

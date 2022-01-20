@@ -1,7 +1,0 @@
-{
-  "parent": "item/bow",
-  "textures":
-  {
-    "layer0": "planetcore:items/diamond_bow_pulling_emerald_1"
-  }
-}

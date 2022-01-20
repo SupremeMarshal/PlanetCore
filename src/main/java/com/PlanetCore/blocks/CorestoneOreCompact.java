@@ -16,7 +16,7 @@ public class CorestoneOreCompact extends Corestone implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
-    private static final float [] coreHardnessByMeta = {11158, 16737, 25105, 37658, 56488, 84732, 127098};
+    private static final float [] coreHardnessByMeta = {360, 460, 560, 770, 1000, 1250, 1500};
 
     public CorestoneOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
     {
@@ -28,7 +28,11 @@ public class CorestoneOreCompact extends Corestone implements IMetaName {
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
         int meta = getMetaFromState(blockState);
-        return (planetHardness.hardness * 4) + coreHardnessByMeta[meta];
+        if (planetHardness.hardness * 4 < coreHardnessByMeta[meta])
+        {
+            return coreHardnessByMeta[meta];
+        }
+        return planetHardness.hardness * 4;
     }
 
     @Override
@@ -41,9 +45,7 @@ public class CorestoneOreCompact extends Corestone implements IMetaName {
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
             int i = 0;
-            if (this == ModBlocks.CORESTONE_COMPACT_EMERALD) {
-                i = MathHelper.getInt(rand, 6, 12);
-            } else if (this == ModBlocks.CORESTONE_COMPACT_RUBY || this == ModBlocks.CORESTONE_COMPACT_SAPPHIRE || this == ModBlocks.CORESTONE_COMPACT_DIAMOND) {
+            if (this == ModBlocks.CORESTONE_COMPACT_RUBY || this == ModBlocks.CORESTONE_COMPACT_SAPPHIRE || this == ModBlocks.CORESTONE_COMPACT_DIAMOND) {
                 i = MathHelper.getInt(rand, 9, 18);
             } else if (this == ModBlocks.CORESTONE_COMPACT_OLIVINE || this == ModBlocks.CORESTONE_COMPACT_WADSLEYITE || this == ModBlocks.CORESTONE_COMPACT_RINGWOODITE || this == ModBlocks.CORESTONE_COMPACT_BRIGMANITE || this == ModBlocks.CORESTONE_COMPACT_MAJORITE) {
                 i = MathHelper.getInt(rand, 18, 36);

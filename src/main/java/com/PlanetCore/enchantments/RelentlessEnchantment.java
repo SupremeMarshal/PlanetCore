@@ -37,7 +37,7 @@ public class RelentlessEnchantment extends Enchantment
 
     {
 
-        return 20 * enchantmentLevel;
+        return 20;
 
     }
 
@@ -61,7 +61,7 @@ public class RelentlessEnchantment extends Enchantment
 
     {
 
-        return 3;
+        return 1;
 
     }
 

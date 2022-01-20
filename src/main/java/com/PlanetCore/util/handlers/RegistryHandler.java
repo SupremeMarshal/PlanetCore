@@ -113,19 +113,15 @@ public class RegistryHandler {
 
         NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 
-        OreDictionary.registerOre("ingotIron", new ItemStack(ModItems.IRON_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotGold", new ItemStack(ModItems.GOLD_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.STEEL_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotAluminium", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotAluminum", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotCopper", new ItemStack(ModItems.COPPER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotTin", new ItemStack(ModItems.TIN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSilver", new ItemStack(ModItems.SILVER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotPlatinum", new ItemStack(ModItems.PLATINUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("gemSapphire", new ItemStack(ModItems.SAPPHIRE, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("gemRuby", new ItemStack(ModItems.RUBY, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("gemDiamond", new ItemStack(ModItems.DIAMOND, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("gemAmazonite", new ItemStack(ModItems.AMAZONITE, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemSulfur", new ItemStack(ModItems.SULFUR, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotBronze", new ItemStack(ModItems.BRONZE_INGOT, 1, OreDictionary.WILDCARD_VALUE));
@@ -138,24 +134,12 @@ public class RegistryHandler {
 
     public static void posInitRegistries(FMLPostInitializationEvent event) {
 
-        //ToolItem field protected final float efficiency;
-        Items.WOODEN_PICKAXE.setHarvestLevel("pickaxe", 2);
-        Items.STONE_PICKAXE.setHarvestLevel("pickaxe", 2);
-        Items.IRON_PICKAXE.setHarvestLevel("pickaxe", 2);
-
-        FurnaceRecipes.instance().getSmeltingList().remove(
-                new ItemStack(Items.IRON_HORSE_ARMOR, 1, 32767),
-                new ItemStack(Items.IRON_NUGGET));
-        FurnaceRecipes.instance().getSmeltingList().put(
-                new ItemStack(Items.IRON_HORSE_ARMOR, 1, 32767),
-                new ItemStack(ModItems.IRON_NUGGET));
-
         ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
                         ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.EMERALD_HELMET, ModItems.SAPPHIRE_HELMET, ModItems.DIAMOND_HELMET, ModItems.OLIVINE_HELMET, ModItems.WADSLEYITE_HELMET, ModItems.RINGWOODITE_HELMET, ModItems.BRIGMANITE_HELMET, ModItems.MAJORITE_HELMET, ModItems.AMAZONITE_HELMET, ModItems.ONYX_HELMET, ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.EMERALD_CHESTPLATE, ModItems.SAPPHIRE_CHESTPLATE, ModItems.DIAMOND_CHESTPLATE, ModItems.OLIVINE_CHESTPLATE, ModItems.WADSLEYITE_CHESTPLATE, ModItems.RINGWOODITE_CHESTPLATE, ModItems.BRIGMANITE_CHESTPLATE, ModItems.MAJORITE_CHESTPLATE, ModItems.AMAZONITE_CHESTPLATE, ModItems.ONYX_CHESTPLATE, ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.EMERALD_LEGGINGS, ModItems.SAPPHIRE_LEGGINGS, ModItems.DIAMOND_LEGGINGS, ModItems.OLIVINE_LEGGINGS, ModItems.WADSLEYITE_LEGGINGS, ModItems.RINGWOODITE_LEGGINGS, ModItems.BRIGMANITE_LEGGINGS, ModItems.MAJORITE_LEGGINGS, ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.EMERALD_BOOTS, ModItems.SAPPHIRE_BOOTS, ModItems.DIAMOND_BOOTS, ModItems.OLIVINE_BOOTS, ModItems.WADSLEYITE_BOOTS, ModItems.RINGWOODITE_BOOTS, ModItems.BRIGMANITE_BOOTS, ModItems.MAJORITE_BOOTS, ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
+                                new Item[] {ModItems.JADE_HELMET, ModItems.SAPPHIRE_HELMET, ModItems.OLIVINE_HELMET, ModItems.WADSLEYITE_HELMET, ModItems.RINGWOODITE_HELMET, ModItems.BRIGMANITE_HELMET, ModItems.MAJORITE_HELMET, ModItems.AMAZONITE_HELMET, ModItems.ONYX_HELMET, ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
+                                new Item[] {ModItems.JADE_CHESTPLATE, ModItems.SAPPHIRE_CHESTPLATE, ModItems.OLIVINE_CHESTPLATE, ModItems.WADSLEYITE_CHESTPLATE, ModItems.RINGWOODITE_CHESTPLATE, ModItems.BRIGMANITE_CHESTPLATE, ModItems.MAJORITE_CHESTPLATE, ModItems.AMAZONITE_CHESTPLATE, ModItems.ONYX_CHESTPLATE, ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
+                                new Item[] {ModItems.JADE_LEGGINGS, ModItems.SAPPHIRE_LEGGINGS, ModItems.OLIVINE_LEGGINGS, ModItems.WADSLEYITE_LEGGINGS, ModItems.RINGWOODITE_LEGGINGS, ModItems.BRIGMANITE_LEGGINGS, ModItems.MAJORITE_LEGGINGS, ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
+                                new Item[] {ModItems.JADE_BOOTS, ModItems.SAPPHIRE_BOOTS, ModItems.OLIVINE_BOOTS, ModItems.WADSLEYITE_BOOTS, ModItems.RINGWOODITE_BOOTS, ModItems.BRIGMANITE_BOOTS, ModItems.MAJORITE_BOOTS, ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
                         new PotionEffect(MobEffects.RESISTANCE, 0, 0)
                 )

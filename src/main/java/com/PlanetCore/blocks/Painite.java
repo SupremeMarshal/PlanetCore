@@ -9,13 +9,16 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -77,18 +80,38 @@ public class Painite extends BlockBase {
         else return 1 + random.nextInt(fortune + 1);
     }
 
-    public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
+    protected static final AxisAlignedBB COLLISION_AABB = new AxisAlignedBB(0.0125D, 0.0D, 0.0125D, 0.9875D, 0.9375D, 0.9875D);
+
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
     {
-        Block block = this;
-        if (!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn))
+        return COLLISION_AABB;
+    }
+
+    @Override
+    public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+        if (entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn))
         {
-            if (block == ModBlocks.CORESTONE)
-            {
-                entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 20.0F);
+            PotionEffect effect = ((EntityLivingBase) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+            float damage = 128;
+            if (effect == null) {
+                entityIn.attackEntityFrom(DamageSource.LAVA, damage);
+                entityIn.setFire(10);
+            }
+            else if (effect != null && effect.getAmplifier() == 0) {
+                damage = damage / 4;
+                if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+            }
+            else if (effect != null && effect.getAmplifier() == 1) {
+                damage = damage / 16;
+                if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+            }
+            else if (effect != null && effect.getAmplifier() == 2) {
+                damage = damage / 64;
+                if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
             }
         }
-
-        super.onEntityWalk(worldIn, pos, entityIn);
+        //entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
+        super.onEntityCollision(worldIn, pos, state, entityIn);
     }
 
     @Override
@@ -111,8 +134,8 @@ public class Painite extends BlockBase {
         int X = pos.getX();
         int Z = pos.getZ();
         int Y = pos.getY();
-        if (!worldIn.isRemote && Y < -5000 && rand.nextInt(25) == 0) {
-                worldIn.createExplosion(null, X, Y, Z, rand.nextInt(15) + 4, true);
+        if (!worldIn.isRemote && Y < -1700 && rand.nextInt(320) == 0) {
+                worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 10, true);
         }
     }
 

@@ -75,10 +75,11 @@ public class RenderHandler
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityEmeraldArrow.class, manager -> new RenderEmeraldArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityDiamondArrow.class, manager -> new RenderDiamondArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityTopazArrow.class, manager -> new RenderTopazArrow(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityJadeArrow.class, manager -> new RenderJadeArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityRubyArrow.class, manager -> new RenderRubyArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntitySapphireArrow.class, manager -> new RenderSapphireArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityDiamondArrow.class, manager -> new RenderDiamondArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityOlivineArrow.class, manager -> new RenderOlivineArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityWadsleyiteArrow.class, manager -> new RenderWadsleyiteArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityRingwooditeArrow.class, manager -> new RenderRingwooditeArrow(manager));
@@ -218,22 +219,22 @@ public class RenderHandler
 			});
 
 			/** platinum lava */
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.PLATINUM_LAVA_FLUID), new ItemMeshDefinition() {
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.DIAMOND_LAVA_FLUID), new ItemMeshDefinition() {
 
 				@Override
 				public ModelResourceLocation getModelLocation(ItemStack stack) {
 
-					return new ModelResourceLocation("planetcore:platinum_lava", "fluid");
+					return new ModelResourceLocation("planetcore:diamond_lava", "fluid");
 
 				}
 			});
 
-			ModelLoader.setCustomStateMapper(ModBlocks.PLATINUM_LAVA_FLUID, new StateMapperBase() {
+			ModelLoader.setCustomStateMapper(ModBlocks.DIAMOND_LAVA_FLUID, new StateMapperBase() {
 
 				@Override
 				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
 
-					return new ModelResourceLocation("planetcore:platinum_lava", "fluid");
+					return new ModelResourceLocation("planetcore:diamond_lava", "fluid");
 				}
 			});
 
@@ -297,23 +298,43 @@ public class RenderHandler
 				}
 			});
 
-			/** emerald lava */
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.EMERALD_LAVA_FLUID), new ItemMeshDefinition() {
+			/** topaz lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.TOPAZ_LAVA_FLUID), new ItemMeshDefinition() {
 
 				@Override
 				public ModelResourceLocation getModelLocation(ItemStack stack) {
 
-					return new ModelResourceLocation("planetcore:emerald_lava", "fluid");
+					return new ModelResourceLocation("planetcore:topaz_lava", "fluid");
 
 				}
 			});
 
-			ModelLoader.setCustomStateMapper(ModBlocks.EMERALD_LAVA_FLUID, new StateMapperBase() {
+			ModelLoader.setCustomStateMapper(ModBlocks.TOPAZ_LAVA_FLUID, new StateMapperBase() {
 
 				@Override
 				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
 
-					return new ModelResourceLocation("planetcore:emerald_lava", "fluid");
+					return new ModelResourceLocation("planetcore:topaz_lava", "fluid");
+				}
+			});
+
+			/** jade lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.JADE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:jade_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.JADE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:jade_lava", "fluid");
 				}
 			});
 
@@ -354,26 +375,6 @@ public class RenderHandler
 				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
 
 					return new ModelResourceLocation("planetcore:sapphire_lava", "fluid");
-				}
-			});
-
-			/** diamond lava */
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.DIAMOND_LAVA_FLUID), new ItemMeshDefinition() {
-
-				@Override
-				public ModelResourceLocation getModelLocation(ItemStack stack) {
-
-					return new ModelResourceLocation("planetcore:diamond_lava", "fluid");
-
-				}
-			});
-
-			ModelLoader.setCustomStateMapper(ModBlocks.DIAMOND_LAVA_FLUID, new StateMapperBase() {
-
-				@Override
-				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-
-					return new ModelResourceLocation("planetcore:diamond_lava", "fluid");
 				}
 			});
 
@@ -497,24 +498,6 @@ public class RenderHandler
 				}
 			});
 
-			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.ACTIVE_LAVA_FLUID), new ItemMeshDefinition() {
-
-				@Override
-				public ModelResourceLocation getModelLocation(ItemStack stack) {
-
-					return new ModelResourceLocation("planetcore:active_lava", "fluid");
-
-				}
-			});
-
-			ModelLoader.setCustomStateMapper(ModBlocks.ACTIVE_LAVA_FLUID, new StateMapperBase() {
-
-				@Override
-				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
-
-					return new ModelResourceLocation("planetcore:active_lava", "fluid");
-				}
-			});
 
 		ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.CORE_LAVA_FLUID), new ItemMeshDefinition() {
 

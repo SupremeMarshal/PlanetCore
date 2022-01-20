@@ -1,7 +1,0 @@
-{
-  "parent": "item/bow",
-  "textures":
-  {
-    "layer0": "planetcore:items/onyx_bow_ii_pulling_emerald_2"
-  }
-}

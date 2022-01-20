@@ -48,66 +48,6 @@
     },
     {
       "predicate": {
-        "pulling_emerald": 1
-      },
-      "model": "planetcore:item/diamond_bow_pulling_emerald_0"
-    },
-    {
-      "predicate": {
-        "pulling_emerald": 1,
-        "pull": 0.65
-      },
-      "model": "planetcore:item/diamond_bow_pulling_emerald_1"
-    },
-    {
-      "predicate": {
-        "pulling_emerald": 1,
-        "pull": 0.9
-      },
-      "model": "planetcore:item/diamond_bow_pulling_emerald_2"
-    },
-    {
-      "predicate": {
-        "pulling_ruby": 1
-      },
-      "model": "planetcore:item/diamond_bow_pulling_ruby_0"
-    },
-    {
-      "predicate": {
-        "pulling_ruby": 1,
-        "pull": 0.65
-      },
-      "model": "planetcore:item/diamond_bow_pulling_ruby_1"
-    },
-    {
-      "predicate": {
-        "pulling_ruby": 1,
-        "pull": 0.9
-      },
-      "model": "planetcore:item/diamond_bow_pulling_ruby_2"
-    },
-    {
-      "predicate": {
-        "pulling_sapphire": 1
-      },
-      "model": "planetcore:item/diamond_bow_pulling_sapphire_0"
-    },
-    {
-      "predicate": {
-        "pulling_sapphire": 1,
-        "pull": 0.65
-      },
-      "model": "planetcore:item/diamond_bow_pulling_sapphire_1"
-    },
-    {
-      "predicate": {
-        "pulling_sapphire": 1,
-        "pull": 0.9
-      },
-      "model": "planetcore:item/diamond_bow_pulling_sapphire_2"
-    },
-    {
-      "predicate": {
         "pulling_diamond": 1
       },
       "model": "planetcore:item/diamond_bow_pulling_diamond_0"

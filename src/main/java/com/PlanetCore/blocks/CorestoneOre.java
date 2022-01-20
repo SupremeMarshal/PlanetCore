@@ -18,7 +18,7 @@ public class CorestoneOre extends Corestone implements IMetaName
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
-    private static final float [] coreHardnessByMeta = {11158, 16737, 25105, 37658, 56488, 84732, 127098};
+    private static final float [] coreHardnessByMeta = {360, 460, 560, 770, 1000, 1250, 1500};
 
     public CorestoneOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
     {
@@ -30,7 +30,11 @@ public class CorestoneOre extends Corestone implements IMetaName
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
         int meta = getMetaFromState(blockState);
-        return planetHardness.hardness + coreHardnessByMeta[meta];
+        if (planetHardness.hardness < coreHardnessByMeta[meta])
+        {
+            return coreHardnessByMeta[meta];
+        }
+        return planetHardness.hardness;
     }
 
     @Override
@@ -43,9 +47,7 @@ public class CorestoneOre extends Corestone implements IMetaName
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
             int i = 0;
-            if (this == ModBlocks.CORESTONE_EMERALD) {
-                i = MathHelper.getInt(rand, 2, 4);
-            } else if (this == ModBlocks.CORESTONE_RUBY || this == ModBlocks.CORESTONE_SAPPHIRE || this == ModBlocks.CORESTONE_DIAMOND) {
+            if (this == ModBlocks.CORESTONE_RUBY || this == ModBlocks.CORESTONE_SAPPHIRE || this == ModBlocks.CORESTONE_DIAMOND) {
                 i = MathHelper.getInt(rand, 3, 6);
             } else if (this == ModBlocks.CORESTONE_OLIVINE || this == ModBlocks.CORESTONE_WADSLEYITE || this == ModBlocks.CORESTONE_RINGWOODITE || this == ModBlocks.CORESTONE_BRIGMANITE || this == ModBlocks.CORESTONE_MAJORITE) {
                 i = MathHelper.getInt(rand, 6, 12);

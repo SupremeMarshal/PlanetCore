@@ -6,6 +6,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
@@ -22,7 +23,7 @@ public class GemsGravel extends BlockGravel {
         setRegistryName(name);
         setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         ModBlocks.BLOCKS.add(this);
-        setSoundType(SoundType.METAL);
+        setSoundType(SoundType.GROUND);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
     }
@@ -35,7 +36,7 @@ public class GemsGravel extends BlockGravel {
             fortune = 3;
         }
 
-        return rand.nextInt(10 - fortune * 3) == 0 ? planetMaterial.droppedItem : null;
+        return rand.nextInt(10 - fortune * 3) == 0 ? planetMaterial.droppedItem : Item.getItemFromBlock(Blocks.GRAVEL);
     }
 
     @Override

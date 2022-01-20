@@ -28,7 +28,7 @@ public class WadsleyiteArrow extends Item
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 
-        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 8"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 9"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Can be used by wadsleyite tier bow or higher"));
     }
 }

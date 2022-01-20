@@ -322,12 +322,12 @@ public class EntityCoreBlaze extends EntityBlaze {
 
     @Override
     protected ResourceLocation getLootTable() {
-        return LootTableHandler.HOT_BLAZE;
+        return LootTableHandler.CORE_BLAZE;
     }
 
     @Override
     public boolean getCanSpawnHere() {
-        if (posY < -5000) {
+        if (posY < -1792) {
             return true;
         }
         else return false;

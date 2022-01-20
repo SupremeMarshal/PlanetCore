@@ -165,7 +165,7 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 	
 	@Override
 	protected ResourceLocation getLootTable() {
-	return LootTableHandler.DEMON;
+	return LootTableHandler.ONYX_DEMON;
 	}
 	
 	@Override
@@ -191,7 +191,7 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY < -7000) {
+		if (posY < -3072) {
 			return true;
 		} else {
 			return false;

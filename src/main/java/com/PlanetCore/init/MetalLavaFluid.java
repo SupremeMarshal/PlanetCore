@@ -75,7 +75,6 @@ public class MetalLavaFluid extends BlockFluidClassic {
 					if (this == ModBlocks.COPPER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.COPPER_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.SILVER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SILVER_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.GOLD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.GOLD_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.PLATINUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.PLATINUM_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.TITANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TITANIUM_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.URANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.URANIUM_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.TUNGSTEN_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TUNGSTEN_SUPERCOMPACT.getDefaultState()));
@@ -91,7 +90,6 @@ public class MetalLavaFluid extends BlockFluidClassic {
 					if (this == ModBlocks.COPPER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.COPPER_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.SILVER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SILVER_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.GOLD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.GOLD_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.PLATINUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.PLATINUM_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.TITANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TITANIUM_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.URANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.URANIUM_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.TUNGSTEN_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TUNGSTEN_SUPERCOMPACT.getDefaultState()));

@@ -17,6 +17,7 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    private static final float [] mantleHardnessByMeta = {60, 70, 100, 150, 200, 250};
 
     public MantlerockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
     {
@@ -27,6 +28,11 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
 
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+        int meta = getMetaFromState(blockState);
+        if (planetHardness.hardness < mantleHardnessByMeta[meta])
+        {
+            return mantleHardnessByMeta[meta];
+        }
         return planetHardness.hardness;
     }
 
@@ -52,7 +58,7 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
                 i = MathHelper.getInt(rand, 1, 2);
             } else if (this == ModBlocks.MANTLEROCK_LAPIS) {
                 i = MathHelper.getInt(rand, 1, 3);
-            } else if (this == ModBlocks.MANTLEROCK_EMERALD) {
+            } else if (this == ModBlocks.MANTLEROCK_JADE) {
                 i = MathHelper.getInt(rand, 2, 4);
             } else if (this == ModBlocks.MANTLEROCK_RUBY || this == ModBlocks.MANTLEROCK_SAPPHIRE || this == ModBlocks.MANTLEROCK_DIAMOND) {
                 i = MathHelper.getInt(rand, 3, 6);

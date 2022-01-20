@@ -166,7 +166,7 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 	
 	@Override
 	protected ResourceLocation getLootTable() {
-	return LootTableHandler.DEMON;
+	return LootTableHandler.CORE_DEMON;
 	}
 	
 	@Override
@@ -192,7 +192,7 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY < -4800) {
+		if (posY < -1792) {
 			return true;
 		} else {
 			return false;

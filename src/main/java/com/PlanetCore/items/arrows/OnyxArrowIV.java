@@ -28,7 +28,7 @@ public class OnyxArrowIV extends Item
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 
-        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 28"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 18"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Can be used by onyx IV tier bow or higher"));
     }
 }

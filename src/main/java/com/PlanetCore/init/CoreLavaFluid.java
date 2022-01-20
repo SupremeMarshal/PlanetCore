@@ -71,7 +71,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 
 	public static void burnEntities(World world, int x, int y, int z, int radius) {
 
-		AxisAlignedBB bb = new AxisAlignedBB(x + 4, y + 4, z + 4, x - 4, y - 4, z - 4);
+		AxisAlignedBB bb = new AxisAlignedBB(x + 5, y + 5, z + 5, x - 5, y - 5, z - 5);
 		List list = world.getEntitiesWithinAABB(EntityLiving.class, bb);
 
 		for (int i = 0; i < list.size(); ++i) {

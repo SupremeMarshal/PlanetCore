@@ -39,12 +39,28 @@ public class OnyxBowII extends ItemBow
                 return entityIn != null && arrow == Items.ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
             }
         });
-        this.addPropertyOverride(new ResourceLocation("pulling_emerald"), new IItemPropertyGetter()
+        this.addPropertyOverride(new ResourceLocation("pulling_diamond"), new IItemPropertyGetter()
         {
             @SideOnly(Side.CLIENT)
             public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
             {
-                return entityIn != null && arrow == ModItems.EMERALD_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
+                return entityIn != null && arrow == ModItems.DIAMOND_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
+            }
+        });
+        this.addPropertyOverride(new ResourceLocation("pulling_topaz"), new IItemPropertyGetter()
+        {
+            @SideOnly(Side.CLIENT)
+            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
+            {
+                return entityIn != null && arrow == ModItems.TOPAZ_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
+            }
+        });
+        this.addPropertyOverride(new ResourceLocation("pulling_jade"), new IItemPropertyGetter()
+        {
+            @SideOnly(Side.CLIENT)
+            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
+            {
+                return entityIn != null && arrow == ModItems.JADE_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
             }
         });
         this.addPropertyOverride(new ResourceLocation("pulling_ruby"), new IItemPropertyGetter()
@@ -61,14 +77,6 @@ public class OnyxBowII extends ItemBow
             public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
             {
                 return entityIn != null && arrow == ModItems.SAPPHIRE_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
-            }
-        });
-        this.addPropertyOverride(new ResourceLocation("pulling_diamond"), new IItemPropertyGetter()
-        {
-            @SideOnly(Side.CLIENT)
-            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
-            {
-                return entityIn != null && arrow == ModItems.DIAMOND_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
             }
         });
         this.addPropertyOverride(new ResourceLocation("pulling_olivine"), new IItemPropertyGetter()
@@ -153,10 +161,11 @@ public class OnyxBowII extends ItemBow
     protected boolean isArrow(ItemStack stack)
     {
         if(stack.getItem() instanceof ItemArrow
-                || stack.getItem() == ModItems.EMERALD_ARROW
+                || stack.getItem() == ModItems.DIAMOND_ARROW
+                || stack.getItem() == ModItems.TOPAZ_ARROW
+                || stack.getItem() == ModItems.JADE_ARROW
                 || stack.getItem() == ModItems.RUBY_ARROW
                 || stack.getItem() == ModItems.SAPPHIRE_ARROW
-                || stack.getItem() == ModItems.DIAMOND_ARROW
                 || stack.getItem() == ModItems.OLIVINE_ARROW
                 || stack.getItem() == ModItems.WADSLEYITE_ARROW
                 || stack.getItem() == ModItems.RINGWOODITE_ARROW
@@ -213,37 +222,41 @@ public class OnyxBowII extends ItemBow
                             entityarrow = ((ItemArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
                             damage = 2;
                         }
-                        if (itemstack.getItem() == ModItems.EMERALD_ARROW) {
-                            entityarrow = ((EmeraldArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
+                        if (itemstack.getItem() == ModItems.DIAMOND_ARROW) {
+                            entityarrow = ((DiamondArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
                             damage = 3;
+                        }
+                        if (itemstack.getItem() == ModItems.TOPAZ_ARROW) {
+                            entityarrow = ((TopazArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
+                            damage = 4;
+                        }
+                        if (itemstack.getItem() == ModItems.JADE_ARROW) {
+                            entityarrow = ((JadeArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
+                            damage = 5;
                         }
                         if (itemstack.getItem() == ModItems.RUBY_ARROW) {
                             entityarrow = ((RubyArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 4;
+                            damage = 6;
                         }
                         if (itemstack.getItem() == ModItems.SAPPHIRE_ARROW) {
                             entityarrow = ((SapphireArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 5;
-                        }
-                        if (itemstack.getItem() == ModItems.DIAMOND_ARROW) {
-                            entityarrow = ((DiamondArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 6;
+                            damage = 7;
                         }
                         if (itemstack.getItem() == ModItems.OLIVINE_ARROW) {
                             entityarrow = ((OlivineArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 7;
+                            damage = 8;
                         }
                         if (itemstack.getItem() == ModItems.WADSLEYITE_ARROW) {
                             entityarrow = ((WadsleyiteArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 8;
+                            damage = 9;
                         }
                         if (itemstack.getItem() == ModItems.RINGWOODITE_ARROW) {
                             entityarrow = ((RingwooditeArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 9;
+                            damage = 10;
                         }
                         if (itemstack.getItem() == ModItems.BRIGMANITE_ARROW) {
                             entityarrow = ((BrigmaniteArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 10;
+                            damage = 11;
                         }
                         if (itemstack.getItem() == ModItems.MAJORITE_ARROW) {
                             entityarrow = ((MajoriteArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
@@ -251,20 +264,20 @@ public class OnyxBowII extends ItemBow
                         }
                         if (itemstack.getItem() == ModItems.AMAZONITE_ARROW) {
                             entityarrow = ((AmazoniteArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 14;
+                            damage = 13;
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW) {
                             entityarrow = ((OnyxArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 16;
+                            damage = 14;
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW_II) {
                             entityarrow = ((OnyxArrowII) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 20;
+                            damage = 15;
                         }
 
                         entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                        entityarrow.setDamage(damage + 16);
+                        entityarrow.setDamage(damage + 13);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -273,7 +286,7 @@ public class OnyxBowII extends ItemBow
                         int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
 
                         if (j > 0) {
-                            entityarrow.setDamage(damage + (double) j * 0.5D + 16.5D);
+                            entityarrow.setDamage(damage + (double) j * 0.5D + 13.5D);
                         }
 
                         int k = EnchantmentHelper.getEnchantmentLevel(Enchantments.PUNCH, stack);

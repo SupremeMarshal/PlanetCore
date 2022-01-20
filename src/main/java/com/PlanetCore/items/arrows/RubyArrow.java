@@ -29,7 +29,7 @@ public class RubyArrow extends Item
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 
-        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 4"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("Damage: 6"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Can be used by ruby tier bow or higher"));
     }
 }

@@ -10,6 +10,7 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -42,24 +43,18 @@ public class ArmorBase extends ItemArmor {
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM) return repair.getItem() == ModItems.ALUMINIUM_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_IRON) return repair.getItem() == ModItems.IRON_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_STEEL) return repair.getItem() == ModItems.STEEL_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TIN) return repair.getItem() == ModItems.TIN_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_COPPER) return repair.getItem() == ModItems.COPPER_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRONZE) return repair.getItem() == ModItems.BRONZE_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) return repair.getItem() == ModItems.SILVER_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_GOLD) return repair.getItem() == ModItems.GOLD_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_PLATINUM) return repair.getItem() == ModItems.PLATINUM_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM) return repair.getItem() == ModItems.TITANIUM_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM) return repair.getItem() == ModItems.URANIUM_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) return repair.getItem() == ModItems.TUNGSTEN_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM) return repair.getItem() == ModItems.TITANIUM_URANIUM_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM) return repair.getItem() == ModItems.TUNGSTEN_URANIUM_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM) return repair.getItem() == ModItems.TUNGSTEN_TITANIUM_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_EMERALD) return repair.getItem() == ModItems.EMERALD || super.getIsRepairable(toRepair, repair);
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_JADE) return repair.getItem() == ModItems.JADE || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) return repair.getItem() == ModItems.RUBY || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) return repair.getItem() == ModItems.SAPPHIRE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_DIAMOND) return repair.getItem() == ModItems.DIAMOND || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE) return repair.getItem() == ModItems.OLIVINE || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE) return repair.getItem() == ModItems.WADSLEYITE || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE) return repair.getItem() == ModItems.RINGWOODITE || super.getIsRepairable(toRepair, repair);
@@ -99,75 +94,25 @@ public class ArmorBase extends ItemArmor {
         Multimap<String, AttributeModifier> mods = super.getAttributeModifiers(slot, stack);
 
         float health = 0;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) health = 0.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_GOLD) health = 1.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_PLATINUM) health = 1.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM) health = 2.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM) health = 2.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM) health = 3.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) health = 3.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM) health = 4.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM) health = 4.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_EMERALD) {
-            health = 5.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) {
-            health = 6.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) {
-            health = 7.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_DIAMOND) {
-            health = 8.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE) {
-            health = 10.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE) {
-            health = 12.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE) {
-            health = 14.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE) {
-            health = 16.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE) {
-            health = 18.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
-            health = 20.0F;
-
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) {
-            health = 25.0F;
-            
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II) {
-            health = 30.0F;
-            
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III) {
-            health = 40.0F;
-            
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV) {
-            health = 50.0F;
-            
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
-            health = 60.0F;
-            
-        }
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM) health = 0.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM) health = 0.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) health = 1.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM) health = 1.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TOPAZ) health = 0.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_JADE) health = 1.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) health = 2.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) health = 2.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE) health = 3.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE) health = 3.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE) health = 4.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE) health = 4.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE) health = 5.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) health = 6.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) health = 7.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II) health = 8.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III) health = 9.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV) health = 10.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) health = 11.0F;
 
 
 
@@ -238,28 +183,23 @@ public class ArmorBase extends ItemArmor {
          * tooltip 5 = When full armor of this tier or above is equipped:
          * tooltip 6 = +Resistance
          */
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_IRON) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_STEEL
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TIN || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_COPPER
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRONZE
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_STEEL || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TIN || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_COPPER || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRONZE) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_GOLD || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_PLATINUM
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM_URANIUM
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_URANIUM) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_EMERALD || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_DIAMOND) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TOPAZ || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_JADE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));

@@ -18,6 +18,7 @@ public class CrustrockOre extends Crustrock implements IMetaName
 
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
+	private static final float [] crustHardnessByMeta = {9, 14, 22};
 
 	public CrustrockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
 	{
@@ -28,7 +29,12 @@ public class CrustrockOre extends Crustrock implements IMetaName
 
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		return planetHardness.hardness + 1;
+		int meta = getMetaFromState(blockState);
+		if (planetHardness.hardness < crustHardnessByMeta[meta])
+		{
+			return crustHardnessByMeta[meta];
+		}
+		return planetHardness.hardness;
 	}
 
 	@Override

@@ -1,8 +1,10 @@
 package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.blocks.BlockBase;
+import com.PlanetCore.blocks.GemsGravel;
 import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.init.ToolMaterials;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,6 +25,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.awt.*;
 import java.util.Random;
 
 import static com.PlanetCore.init.EnchantmentInit.Relentless;
@@ -48,28 +51,41 @@ public class PickaxeRelentlessHandler {
 
 
 
-        if (event.getState().getBlock() instanceof BlockBase) {
-                if (event.getEntityPlayer().getHeldItemMainhand().getItem() instanceof ItemPickaxe) {
-                    Relentless = getRelentless(stack);
+        if (event.getState().getBlock() instanceof Block) {
 
-                    if (RelentlessLevel > 0) {
-                        Relentless = Relentless + (RelentlessLevel / 2F);
-                    }
+            Boolean flag = true;
+                if (player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("pickaxe")) {
+                    Relentless = getRelentless(stack);
+                }
+                else
+                {
+                    Relentless = 3;
                 }
 
-            if (Relentless < 1) {Relentless = 1; }
-            breaktime = (event.getState().getBlockHardness(event.getEntityPlayer().world, event.getPos()) * 1.5F) / event.getOriginalSpeed();
+                if ((player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("pickaxe")) && event.getState().getBlock() instanceof GemsGravel)
+                {
+                    Relentless = 0;
+                    flag = false;
+                }
 
+
+
+            if (Relentless < 1 && flag) {Relentless = 1; }
+            breaktime = (event.getState().getBlockHardness(player.world, event.getPos()) * 1.5F) / event.getOriginalSpeed();
 
 
             //Determine if the block is undestructible.
             if (breaktime > Relentless && event.getState().getBlock() != Blocks.OBSIDIAN) {
                 event.setCanceled(true);
-                if (event.getEntityPlayer().getHeldItemMainhand().getItem() instanceof ItemPickaxe && event.getEntityPlayer().world.getTotalWorldTime() % 6 == 1) {
-                    event.getEntityPlayer().world.playSound(event.getEntityPlayer(), event.getEntityPlayer().getPosition(), sound[new Random().nextInt(20)], SoundCategory.BLOCKS, 1.0F, 1.0F);
+                if ((player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("pickaxe")) && player.world.getTotalWorldTime() % 6 == 1) {
+                    player.world.playSound(event.getEntityPlayer(), player.getPosition(), sound[new Random().nextInt(20)], SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return;
                 }
-
+                else if (player.getEntityWorld().isRemote && player.world.getTotalWorldTime() % 140 == 1)
+                {
+                    player.sendMessage(new TextComponentString("Block is indestructible!"));
+                    return;
+                }
 
             }
 
@@ -77,16 +93,23 @@ public class PickaxeRelentlessHandler {
                 event.setNewSpeed(event.getOriginalSpeed() / (0.1F / breaktime));
 
             }
+
+
         }
+
     }
+
 
     public static float getRelentless(ItemStack stack) {
         Item item = stack.getItem();
-        if (item instanceof ItemPickaxe) {
+        if (item instanceof ItemPickaxe || stack.getDisplayName().contains("pickaxe")) {
             Item.ToolMaterial toolMaterial = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemPickaxe)item,"field_77862_b");
-            float base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,0F);
+            float base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,3.0F);
+            if (stack.getItem() == Items.IRON_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,1.5F);
+            if (stack.getItem() == Items.GOLDEN_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,1.1F);
+            if (stack.getItem() == Items.DIAMOND_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,2.5F);
             float enchLevel = EnchantmentHelper.getEnchantmentLevel(Relentless,stack);
-            return base + enchLevel;
+            return base + (enchLevel / 2);
         }
         return 0;
     }

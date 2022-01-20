@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        " B ",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:jade"
+        },
+        "B":
+        {
+            "item": "planetcore:jade_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:jade_pickaxe",
+        "count": 1
+    }
+}

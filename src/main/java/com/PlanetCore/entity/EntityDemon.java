@@ -155,7 +155,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY < -1024 && posY >= -6144) {
+		if (posY < -256 && posY >= -1792) {
 			return true;
 		} else {
 			return false;

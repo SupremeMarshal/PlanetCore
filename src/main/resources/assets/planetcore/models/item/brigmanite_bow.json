@@ -48,23 +48,43 @@
     },
     {
       "predicate": {
-        "pulling_emerald": 1
+        "pulling_topaz": 1
       },
-      "model": "planetcore:item/brigmanite_bow_pulling_emerald_0"
+      "model": "planetcore:item/brigmanite_bow_pulling_topaz_0"
     },
     {
       "predicate": {
-        "pulling_emerald": 1,
+        "pulling_topaz": 1,
         "pull": 0.65
       },
-      "model": "planetcore:item/brigmanite_bow_pulling_emerald_1"
+      "model": "planetcore:item/brigmanite_bow_pulling_topaz_1"
     },
     {
       "predicate": {
-        "pulling_emerald": 1,
+        "pulling_topaz": 1,
         "pull": 0.9
       },
-      "model": "planetcore:item/brigmanite_bow_pulling_emerald_2"
+      "model": "planetcore:item/brigmanite_bow_pulling_topaz_2"
+    },
+    {
+      "predicate": {
+        "pulling_jade": 1
+      },
+      "model": "planetcore:item/brigmanite_bow_pulling_jade_0"
+    },
+    {
+      "predicate": {
+        "pulling_jade": 1,
+        "pull": 0.65
+      },
+      "model": "planetcore:item/brigmanite_bow_pulling_jade_1"
+    },
+    {
+      "predicate": {
+        "pulling_jade": 1,
+        "pull": 0.9
+      },
+      "model": "planetcore:item/brigmanite_bow_pulling_jade_2"
     },
     {
       "predicate": {

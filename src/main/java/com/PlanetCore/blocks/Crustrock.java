@@ -32,7 +32,7 @@ import java.util.Random;
 public class Crustrock extends BlockBase implements IMetaName
 {
 
-	private static final float [] crustHardnessByMeta = {3, 6, 12};
+	private static final float [] crustHardnessByMeta = {9, 14, 22};
 	public static final PropertyEnum<Crustrock.EnumType> VARIANT = PropertyEnum.create("variant", Crustrock.EnumType.class);
 
 	public Crustrock(String name, Material material)
