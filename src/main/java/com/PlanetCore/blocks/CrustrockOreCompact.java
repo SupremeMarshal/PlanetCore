@@ -29,11 +29,11 @@ public class CrustrockOreCompact extends Crustrock implements IMetaName {
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
         int meta = getMetaFromState(blockState);
-        if (planetHardness.hardness * 4 < crustHardnessByMeta[meta])
+        if (planetHardness.hardness < crustHardnessByMeta[meta])
         {
             return crustHardnessByMeta[meta];
         }
-        return planetHardness.hardness * 4;
+        return planetHardness.hardness;
     }
 
     @Override

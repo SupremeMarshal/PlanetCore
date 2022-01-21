@@ -29,11 +29,11 @@ public class MantlerockOreCompact extends Mantlerock implements IMetaName {
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
         int meta = getMetaFromState(blockState);
-        if (planetHardness.hardness * 4 < mantleHardnessByMeta[meta])
+        if (planetHardness.hardness < mantleHardnessByMeta[meta])
         {
             return mantleHardnessByMeta[meta];
         }
-        return planetHardness.hardness * 4;
+        return planetHardness.hardness;
     }
 
     @Override

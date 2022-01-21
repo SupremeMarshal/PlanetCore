@@ -34,14 +34,7 @@ public class BlocksBase extends BlockBase {
 
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		if (planetMaterial == PlanetMaterial.JADE || planetMaterial == PlanetMaterial.RUBY || planetMaterial == PlanetMaterial.SAPPHIRE
-		|| planetMaterial == PlanetMaterial.DIAMOND || planetMaterial == PlanetMaterial.OLIVINE || planetMaterial == PlanetMaterial.WADSLEYITE
-				|| planetMaterial == PlanetMaterial.RINGWOODITE || planetMaterial == PlanetMaterial.BRIGMANITE || planetMaterial == PlanetMaterial.MAJORITE
-				|| planetMaterial == PlanetMaterial.ONYX || planetMaterial == PlanetMaterial.PAINITE)
-		{
-			return planetHardness.hardness * 256;
-		}
-		else return planetHardness.hardness * 64;
+		return planetHardness.hardness * 64;
 	}
 
 	@Override

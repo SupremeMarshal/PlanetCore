@@ -28,11 +28,11 @@ public class CorestoneOreCompact extends Corestone implements IMetaName {
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
         int meta = getMetaFromState(blockState);
-        if (planetHardness.hardness * 4 < coreHardnessByMeta[meta])
+        if (planetHardness.hardness < coreHardnessByMeta[meta])
         {
             return coreHardnessByMeta[meta];
         }
-        return planetHardness.hardness * 4;
+        return planetHardness.hardness;
     }
 
     @Override

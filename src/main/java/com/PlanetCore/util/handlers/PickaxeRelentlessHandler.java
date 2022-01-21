@@ -51,7 +51,7 @@ public class PickaxeRelentlessHandler {
 
 
 
-        if (event.getState().getBlock() instanceof Block) {
+        if (event.getState().getBlock() instanceof BlockBase) {
 
             Boolean flag = true;
                 if (player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("pickaxe")) {
