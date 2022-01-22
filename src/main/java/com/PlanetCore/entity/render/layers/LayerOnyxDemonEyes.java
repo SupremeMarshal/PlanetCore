@@ -5,6 +5,7 @@ import java.awt.Color;
 import com.PlanetCore.util.EmissiveUtil;
 import com.PlanetCore.util.Reference;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -26,9 +27,8 @@ public class LayerOnyxDemonEyes<T extends EntityLiving & IAnimatable> extends Ge
     public void render(T entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, Color renderColor) {
 
         EmissiveUtil.preEmissiveTextureRendering();
-
         this.geoRendererInstance.bindTexture(new ResourceLocation(Reference.MOD_ID + ":textures/entity/onyx_demon_eyes.png"));
-
+        GlStateManager.scale(0.33333F, 0.33333F, 0.33333F);
         this.geoRendererInstance.render(
                 this.getEntityModel().getModel(new ResourceLocation(Reference.MOD_ID, "geo/demon.geo.json")),
                 entitylivingbaseIn,
