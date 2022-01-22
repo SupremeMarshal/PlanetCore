@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:diamond_rod"
+        },
+        "B":
+        {
+            "item": "minecraft:diamond_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:diamond_shield",
+        "count": 1
+    }
+}

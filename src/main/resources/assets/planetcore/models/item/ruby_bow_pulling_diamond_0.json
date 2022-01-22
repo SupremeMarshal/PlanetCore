@@ -1,0 +1,7 @@
+{
+  "parent": "item/bow",
+  "textures":
+  {
+    "layer0": "planetcore:items/ruby_bow_pulling_diamond_0"
+  }
+}

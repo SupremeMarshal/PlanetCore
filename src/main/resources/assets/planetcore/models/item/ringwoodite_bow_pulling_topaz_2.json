@@ -1,0 +1,7 @@
+{
+  "parent": "item/bow",
+  "textures":
+  {
+    "layer0": "planetcore:items/ringwoodite_bow_pulling_topaz_2"
+  }
+}

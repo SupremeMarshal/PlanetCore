@@ -1,0 +1,7 @@
+{
+  "parent": "item/bow",
+  "textures":
+  {
+    "layer0": "planetcore:items/onyx_bow_iii_pulling_topaz_0"
+  }
+}

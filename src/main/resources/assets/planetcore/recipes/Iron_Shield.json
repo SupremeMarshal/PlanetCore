@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BAB",
+        "BBB",
+        " B "
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:iron_rod"
+        },
+        "B":
+        {
+            "item": "minecraft:iron_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:iron_shield",
+        "count": 1
+    }
+}
