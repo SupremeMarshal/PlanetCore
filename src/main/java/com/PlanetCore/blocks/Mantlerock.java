@@ -47,6 +47,21 @@ public class Mantlerock extends BlockBase implements IMetaName
 	}
 
 	@Override
+	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
+	{
+		int meta = getMetaFromState(worldIn.getBlockState(pos));
+		if (meta > 1 && !entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn))
+		{
+			if (meta == 2) entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
+			if (meta == 3) entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 2.0F);
+			if (meta == 4) entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 3.0F);
+			if (meta == 5) entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 4.0F);
+		}
+
+		super.onEntityWalk(worldIn, pos, entityIn);
+	}
+
+	@Override
 	public int damageDropped(IBlockState state) {
 		int meta = getMetaFromState(state);
 		return meta;
