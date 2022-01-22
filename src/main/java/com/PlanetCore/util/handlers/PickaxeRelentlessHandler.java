@@ -3,6 +3,7 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.blocks.BlockBase;
 import com.PlanetCore.blocks.GemsGravel;
 import com.PlanetCore.init.EnchantmentInit;
+import com.PlanetCore.init.ModItems;
 import com.PlanetCore.init.ToolMaterials;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -53,31 +54,35 @@ public class PickaxeRelentlessHandler {
 
         if (event.getState().getBlock() instanceof BlockBase) {
 
-            Boolean flag = true;
-                if (player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("pickaxe")) {
+                if (player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("ickaxe")) {
                     Relentless = getRelentless(stack);
                 }
                 else
                 {
-                    Relentless = 3;
+                    Relentless = 2;
                 }
 
-                if ((player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("pickaxe")) && event.getState().getBlock() instanceof GemsGravel)
+                if ((player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("ickaxe")) && event.getState().getBlock() instanceof GemsGravel)
                 {
                     Relentless = 0;
-                    flag = false;
+                }
+
+                if (player.getHeldItemMainhand().isEmpty())
+                {
+                    Relentless = 100000000;
+                    event.setNewSpeed(event.getState().getBlockHardness(player.world, event.getPos())/2);
                 }
 
 
-
-            if (Relentless < 1 && flag) {Relentless = 1; }
+            if (Relentless < 1)
+            {Relentless = 1; }
             breaktime = (event.getState().getBlockHardness(player.world, event.getPos()) * 1.5F) / event.getOriginalSpeed();
 
 
             //Determine if the block is undestructible.
             if (breaktime > Relentless && event.getState().getBlock() != Blocks.OBSIDIAN) {
                 event.setCanceled(true);
-                if ((player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("pickaxe")) && player.world.getTotalWorldTime() % 6 == 1) {
+                if ((player.getHeldItemMainhand().getItem() instanceof ItemPickaxe || player.getHeldItemMainhand().getDisplayName().contains("ickaxe")) && player.world.getTotalWorldTime() % 6 == 1) {
                     player.world.playSound(event.getEntityPlayer(), player.getPosition(), sound[new Random().nextInt(20)], SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return;
                 }
@@ -102,15 +107,15 @@ public class PickaxeRelentlessHandler {
 
     public static float getRelentless(ItemStack stack) {
         Item item = stack.getItem();
-        if (item instanceof ItemPickaxe || stack.getDisplayName().contains("pickaxe")) {
-            Item.ToolMaterial toolMaterial = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemPickaxe)item,"field_77862_b");
-            float base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,3.0F);
+        if (item instanceof ItemTool) {
+            Item.ToolMaterial toolMaterial = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemTool)item,"field_77862_b");
+            float base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,2.0F);
             if (stack.getItem() == Items.IRON_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,1.5F);
             if (stack.getItem() == Items.GOLDEN_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,1.1F);
             if (stack.getItem() == Items.DIAMOND_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,2.5F);
             float enchLevel = EnchantmentHelper.getEnchantmentLevel(Relentless,stack);
             return base + (enchLevel / 2);
         }
-        return 0;
+        return 2;
     }
 }
