@@ -117,6 +117,7 @@ public class RegistryHandler {
         OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.STEEL_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotAluminum", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotAluminium", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotCopper", new ItemStack(ModItems.COPPER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotTin", new ItemStack(ModItems.TIN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSilver", new ItemStack(ModItems.SILVER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
@@ -214,7 +215,7 @@ public class RegistryHandler {
                         new PotionEffect(MobEffects.RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.STRENGTH, 0, 2),
-                        new PotionEffect(MobEffects.SPEED, 0, 2),
+                        new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 2)
                 )
         );
@@ -228,7 +229,7 @@ public class RegistryHandler {
                         new PotionEffect(MobEffects.RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 3),
                         new PotionEffect(MobEffects.STRENGTH, 0, 3),
-                        new PotionEffect(MobEffects.SPEED, 0, 3),
+                        new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 3)
                 )
         );
@@ -242,7 +243,7 @@ public class RegistryHandler {
                         new PotionEffect(MobEffects.RESISTANCE, 0, 3),
                         new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 4),
                         new PotionEffect(MobEffects.STRENGTH, 0, 4),
-                        new PotionEffect(MobEffects.SPEED, 0, 4),
+                        new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 4)
 
                 )
