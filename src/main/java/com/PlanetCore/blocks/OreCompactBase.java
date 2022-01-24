@@ -16,12 +16,14 @@ public class OreCompactBase extends BlockBase {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetExp planetExp;
 
-    public OreCompactBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
+    public OreCompactBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
     {
         super(name, material);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetExp = planetExp;
     }
 
     @Override
@@ -47,12 +49,7 @@ public class OreCompactBase extends BlockBase {
     public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
-            int i = 0;
-            if (this == ModBlocks.ORE_COMPACT_SULFUR || this == ModBlocks.ORE_COMPACT_COAL) {
-                i = MathHelper.getInt(rand, 2, 4);
-            } else if (this == ModBlocks.ORE_COMPACT_LAPIS) {
-                i = MathHelper.getInt(rand, 2, 6);
-            }
+            int i = MathHelper.getInt(rand, (int) planetExp.exp, (int) planetExp.exp * 2);
             return i;
         }
         else return 0;

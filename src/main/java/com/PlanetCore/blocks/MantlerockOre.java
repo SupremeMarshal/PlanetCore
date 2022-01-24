@@ -17,13 +17,15 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetExp planetExp;
     private static final float [] mantleHardnessByMeta = {60, 70, 100, 150, 200, 250};
 
-    public MantlerockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
+    public MantlerockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
     {
         super(name, material);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetExp = planetExp;
     }
 
     @Override
@@ -34,6 +36,11 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
             return mantleHardnessByMeta[meta];
         }
         return planetHardness.hardness;
+    }
+
+    @Override
+    public int getHarvestLevel(IBlockState state) {
+        return super.getHarvestLevel(state);
     }
 
     @Override
@@ -53,20 +60,7 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
     public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
-            int i = 0;
-            if (this == ModBlocks.MANTLEROCK_SULFUR || this == ModBlocks.MANTLEROCK_COAL) {
-                i = MathHelper.getInt(rand, 1, 2);
-            } else if (this == ModBlocks.MANTLEROCK_LAPIS) {
-                i = MathHelper.getInt(rand, 1, 3);
-            } else if (this == ModBlocks.MANTLEROCK_JADE) {
-                i = MathHelper.getInt(rand, 2, 4);
-            } else if (this == ModBlocks.MANTLEROCK_RUBY || this == ModBlocks.MANTLEROCK_SAPPHIRE || this == ModBlocks.MANTLEROCK_DIAMOND) {
-                i = MathHelper.getInt(rand, 3, 6);
-            } else if (this == ModBlocks.MANTLEROCK_OLIVINE || this == ModBlocks.MANTLEROCK_WADSLEYITE || this == ModBlocks.MANTLEROCK_RINGWOODITE || this == ModBlocks.MANTLEROCK_BRIGMANITE || this == ModBlocks.MANTLEROCK_MAJORITE) {
-                i = MathHelper.getInt(rand, 6, 12);
-            } else if (this == ModBlocks.MANTLEROCK_AMAZONITE) {
-                i = MathHelper.getInt(rand, 12, 24);
-            }
+            int i = MathHelper.getInt(rand, (int) planetExp.exp, (int) planetExp.exp * 2);
             return i;
         }
         else return 0;

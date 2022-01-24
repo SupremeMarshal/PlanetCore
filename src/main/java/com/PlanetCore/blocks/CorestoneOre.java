@@ -18,13 +18,15 @@ public class CorestoneOre extends Corestone implements IMetaName
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetExp planetExp;
     private static final float [] coreHardnessByMeta = {360, 460, 560, 770, 1000, 1250, 1500};
 
-    public CorestoneOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
+    public CorestoneOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
     {
         super(name, material);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetExp = planetExp;
     }
 
     @Override
@@ -46,14 +48,7 @@ public class CorestoneOre extends Corestone implements IMetaName
     public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
-            int i = 0;
-            if (this == ModBlocks.CORESTONE_RUBY || this == ModBlocks.CORESTONE_SAPPHIRE || this == ModBlocks.CORESTONE_DIAMOND) {
-                i = MathHelper.getInt(rand, 3, 6);
-            } else if (this == ModBlocks.CORESTONE_OLIVINE || this == ModBlocks.CORESTONE_WADSLEYITE || this == ModBlocks.CORESTONE_RINGWOODITE || this == ModBlocks.CORESTONE_BRIGMANITE || this == ModBlocks.CORESTONE_MAJORITE) {
-                i = MathHelper.getInt(rand, 6, 12);
-            } else if (this == ModBlocks.CORESTONE_AMAZONITE || this == ModBlocks.CORESTONE_ONYX) {
-                i = MathHelper.getInt(rand, 12, 24);
-            }
+            int i = MathHelper.getInt(rand, (int) planetExp.exp, (int) planetExp.exp * 2);
             return i;
         }
         else return 0;

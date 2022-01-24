@@ -17,13 +17,15 @@ public class MantlerockOreCompact extends Mantlerock implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetExp planetExp;
     private static final float [] mantleHardnessByMeta = {60, 70, 100, 150, 200, 250};
 
-    public MantlerockOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
+    public MantlerockOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
     {
         super(name, material);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetExp = planetExp;
     }
 
     @Override
@@ -54,20 +56,7 @@ public class MantlerockOreCompact extends Mantlerock implements IMetaName {
     public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
-            int i = 0;
-            if (this == ModBlocks.MANTLEROCK_COMPACT_SULFUR || this == ModBlocks.MANTLEROCK_COMPACT_COAL) {
-                i = MathHelper.getInt(rand, 3, 6);
-            } else if (this == ModBlocks.MANTLEROCK_COMPACT_LAPIS) {
-                i = MathHelper.getInt(rand, 3, 9);
-            } else if (this == ModBlocks.MANTLEROCK_COMPACT_JADE) {
-                i = MathHelper.getInt(rand, 6, 12);
-            } else if (this == ModBlocks.MANTLEROCK_COMPACT_RUBY || this == ModBlocks.MANTLEROCK_COMPACT_SAPPHIRE || this == ModBlocks.MANTLEROCK_COMPACT_DIAMOND) {
-                i = MathHelper.getInt(rand, 9, 18);
-            } else if (this == ModBlocks.MANTLEROCK_COMPACT_OLIVINE || this == ModBlocks.MANTLEROCK_COMPACT_WADSLEYITE || this == ModBlocks.MANTLEROCK_COMPACT_RINGWOODITE || this == ModBlocks.MANTLEROCK_COMPACT_BRIGMANITE || this == ModBlocks.MANTLEROCK_COMPACT_MAJORITE) {
-                i = MathHelper.getInt(rand, 18, 36);
-            } else if (this == ModBlocks.MANTLEROCK_COMPACT_AMAZONITE) {
-                i = MathHelper.getInt(rand, 36, 72);
-            }
+            int i = MathHelper.getInt(rand, (int) planetExp.exp, (int) planetExp.exp * 2);
             return i;
         }
         else return 0;

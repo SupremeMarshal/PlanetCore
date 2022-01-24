@@ -17,13 +17,15 @@ public class CrustrockOreCompact extends Crustrock implements IMetaName {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetExp planetExp;
     private static final float [] crustHardnessByMeta = {9, 14, 22};
 
-    public CrustrockOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness)
+    public CrustrockOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
     {
         super(name, material);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetExp = planetExp;
     }
 
     @Override
@@ -54,12 +56,7 @@ public class CrustrockOreCompact extends Crustrock implements IMetaName {
     public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
         Random rand = world instanceof World ? ((World)world).rand : new Random();
         if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
-            int i = 0;
-            if (this == ModBlocks.CRUSTROCK_COMPACT_SULFUR || this == ModBlocks.CRUSTROCK_COMPACT_COAL) {
-                i = MathHelper.getInt(rand, 2, 4);
-            } else if (this == ModBlocks.CRUSTROCK_COMPACT_LAPIS) {
-                i = MathHelper.getInt(rand, 2, 6);
-            }
+            int i = MathHelper.getInt(rand, (int) planetExp.exp, (int) planetExp.exp * 2);
             return i;
         }
         else return 0;
