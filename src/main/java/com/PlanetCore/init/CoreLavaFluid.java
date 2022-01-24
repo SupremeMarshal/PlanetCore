@@ -47,6 +47,7 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		setDensity(400);
 		setTickRate(8);
 		setTickRandomly(true);
+		this.setDefaultState(this.blockState.getBaseState().withProperty(LEVEL, Integer.valueOf(0)));
 		ModBlocks.BLOCKS.add(this);
 	}
 
@@ -65,8 +66,6 @@ public class CoreLavaFluid extends BlockFluidClassic {
 			}
 		}
 	}
-
-
 
 
 	public static void burnEntities(World world, int x, int y, int z, int radius) {
@@ -123,13 +122,6 @@ public class CoreLavaFluid extends BlockFluidClassic {
 			{
 				worldIn.setBlockState(pos, ModBlocks.CORESTONE.getDefaultState());
 			}
-	}
-
-	@Override
-	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
-	{
-		super.onBlockAdded(worldIn, pos, state);
-		//thermalEffects(worldIn, pos, state);
 	}
 
 	@Override
