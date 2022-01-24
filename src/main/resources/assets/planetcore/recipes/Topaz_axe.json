@@ -16,13 +16,13 @@
         },
         "B":
         {
-            "item": "planetcore:jade_rod"
+            "item": "planetcore:topaz_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:copper_axe",
+        "item": "planetcore:topaz_axe",
         "count": 1
     }
 }
