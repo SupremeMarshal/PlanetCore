@@ -85,14 +85,7 @@ public class MetalLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() <= 4)
 				{
-					if (this == ModBlocks.ALUMINIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.ALUMINIUM_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.TIN_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TIN_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.COPPER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.COPPER_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.SILVER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SILVER_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.GOLD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.GOLD_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.TITANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TITANIUM_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.URANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.URANIUM_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.TUNGSTEN_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TUNGSTEN_SUPERCOMPACT.getDefaultState()));
+					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, Blocks.OBSIDIAN.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}
@@ -122,6 +115,17 @@ public class MetalLavaFluid extends BlockFluidClassic {
 		{
 			worldIn.scheduleUpdate(pos, this, tickRate);
 		}
+		this.checkForMixing(worldIn, pos, state);
+	}
+
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+	{
+		if (!this.checkForMixing(worldIn, pos, state))
+		{
+			worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
+		}
+		this.checkForMixing(worldIn, pos, state);
 	}
 
 	@Override
@@ -134,146 +138,7 @@ public class MetalLavaFluid extends BlockFluidClassic {
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
-
-		int quantaRemaining = quantaPerBlock - state.getValue(LEVEL);
-		int expQuanta = -101;
-
-		// check adjacent block levels if non-source
-		if (quantaRemaining < quantaPerBlock)
-		{
-			int adjacentSourceBlocks = 0;
-
-			if (ForgeEventFactory.canCreateFluidSource(worldIn, pos, state, canCreateSources))
-			{
-				for (EnumFacing side : EnumFacing.Plane.HORIZONTAL)
-				{
-					if (isSourceBlock(worldIn, pos.offset(side))) adjacentSourceBlocks++;
-				}
-			}
-
-			// new source block
-			if (adjacentSourceBlocks >= 2 && (worldIn.getBlockState(pos.up(densityDir)).getMaterial().isSolid() || isSourceBlock(worldIn, pos.up(densityDir))))
-			{
-				expQuanta = quantaPerBlock;
-			}
-			// unobstructed flow from 'above'
-			else if (worldIn.getBlockState(pos.down(densityDir)).getBlock() == this
-					|| hasDownhillFlow(worldIn, pos, EnumFacing.EAST)
-					|| hasDownhillFlow(worldIn, pos, EnumFacing.WEST)
-					|| hasDownhillFlow(worldIn, pos, EnumFacing.NORTH)
-					|| hasDownhillFlow(worldIn, pos, EnumFacing.SOUTH))
-			{
-				expQuanta = quantaPerBlock - 1;
-			}
-			else
-			{
-				int maxQuanta = -100;
-				for (EnumFacing side : EnumFacing.Plane.HORIZONTAL)
-				{
-					maxQuanta = getLargerQuanta(worldIn, pos.offset(side), maxQuanta);
-				}
-				expQuanta = maxQuanta - 1;
-			}
-
-			// decay calculation
-			if (expQuanta != quantaRemaining)
-			{
-				quantaRemaining = expQuanta;
-
-				if (expQuanta <= 0)
-				{
-					worldIn.setBlockToAir(pos);
-				}
-				else
-				{
-					worldIn.setBlockState(pos, state.withProperty(LEVEL, quantaPerBlock - expQuanta), 2);
-					worldIn.scheduleUpdate(pos, this, tickRate);
-					worldIn.notifyNeighborsOfStateChange(pos, this, false);
-				}
-			}
-		}
-
-		// Flow vertically if possible
-		if (canDisplace(worldIn, pos.up(densityDir)))
-		{
-			flowIntoBlock(worldIn, pos.up(densityDir), 1);
-			return;
-		}
-
-		// Flow outward if possible
-		int flowMeta = quantaPerBlock - quantaRemaining + 1;
-		if (flowMeta >= quantaPerBlock)
-		{
-			return;
-		}
-
-		if (isSourceBlock(worldIn, pos) || !isFlowingVertically(worldIn, pos))
-		{
-			if (worldIn.getBlockState(pos.down(densityDir)).getBlock() == this)
-			{
-				flowMeta = 1;
-			}
-			boolean flowTo[] = getOptimalFlowDirections(worldIn, pos);
-			for (int i = 0; i < 4; i++)
-			{
-				if (flowTo[i]) flowIntoBlock(worldIn, pos.offset(SIDES.get(i)), flowMeta);
-			}
-		}
-
-		//Cause fire around lava
-		if (this.material == Material.LAVA)
-		{
-			if (worldIn.getGameRules().getBoolean("doFireTick"))
-			{
-				int i = rand.nextInt(3);
-
-				if (i > 0)
-				{
-					BlockPos blockpos = pos;
-
-					for (int j = 0; j < i; ++j)
-					{
-						blockpos = blockpos.add(rand.nextInt(3) - 1, 1, rand.nextInt(3) - 1);
-
-						if (blockpos.getY() >= 0 && blockpos.getY() < worldIn.getHeight() && !worldIn.isBlockLoaded(blockpos))
-						{
-							return;
-						}
-
-						IBlockState block = worldIn.getBlockState(blockpos);
-
-						if (block.getBlock().isAir(block, worldIn, blockpos))
-						{
-							if (this.isSurroundingBlockFlammable(worldIn, blockpos))
-							{
-								worldIn.setBlockState(blockpos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, blockpos, pos, Blocks.FIRE.getDefaultState()));
-								return;
-							}
-						}
-						else if (block.getMaterial().blocksMovement())
-						{
-							return;
-						}
-					}
-				}
-				else
-				{
-					for (int k = 0; k < 3; ++k)
-					{
-						BlockPos blockpos1 = pos.add(rand.nextInt(3) - 1, 0, rand.nextInt(3) - 1);
-
-						if (blockpos1.getY() >= 0 && blockpos1.getY() < 256 && !worldIn.isBlockLoaded(blockpos1))
-						{
-							return;
-						}
-
-						if (worldIn.isAirBlock(blockpos1.up()) && this.getCanBlockBurn(worldIn, blockpos1))
-						{
-							worldIn.setBlockState(blockpos1.up(), ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, blockpos1.up(), pos, Blocks.FIRE.getDefaultState()));
-						}
-					}
-				}
-			}
-		}
+		super.updateTick(worldIn, pos, state, rand);
+		this.checkForMixing(worldIn, pos, state);
 	}
 }

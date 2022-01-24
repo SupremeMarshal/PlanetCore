@@ -37,7 +37,6 @@ public class GemLavaFluid extends BlockFluidClassic {
 		super(fluid, material);
 		setTranslationKey(name);
 		setRegistryName(name);
-		setDensity(1000);
 		setLightLevel(1);
 		setTickRate(30);
 		ModBlocks.BLOCKS.add(this);
@@ -95,7 +94,7 @@ public class GemLavaFluid extends BlockFluidClassic {
 
 	public boolean checkForMixing(World worldIn, BlockPos pos, IBlockState state)
 	{
-		if (this.material == Material.LAVA && this.canCreateSources)
+		if (this.material == Material.LAVA)
 		{
 			boolean flag = false;
 
@@ -131,17 +130,7 @@ public class GemLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() <= 4)
 				{
-					if (this == ModBlocks.DIAMOND_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.TOPAZ_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TOPAZ_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.JADE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.JADE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.RUBY_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.RUBY_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.SAPPHIRE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SAPPHIRE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.OLIVINE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.OLIVINE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.WADSLEYITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.WADSLEYITE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.RINGWOODITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.RINGWOODITE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.BRIGMANITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.BRIGMANITE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.MAJORITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.MAJORITE_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.AMAZONITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.AMAZONITE_SUPERCOMPACT.getDefaultState()));
+					worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, Blocks.OBSIDIAN.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}
@@ -216,6 +205,17 @@ public class GemLavaFluid extends BlockFluidClassic {
 		{
 			worldIn.scheduleUpdate(pos, this, tickRate);
 		}
+		this.checkForMixing(worldIn, pos, state);
+	}
+
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
+	{
+		if (!this.checkForMixing(worldIn, pos, state))
+		{
+			worldIn.scheduleUpdate(pos, this, this.tickRate(worldIn));
+		}
+		this.checkForMixing(worldIn, pos, state);
 	}
 
 	@Override
@@ -233,5 +233,6 @@ public class GemLavaFluid extends BlockFluidClassic {
 		int Y = pos.getY();
 		int Z = pos.getZ();
 		burnEntities(worldIn,X,Y,Z, 6, state);
+		this.checkForMixing(worldIn, pos, state);
 	}
 }
