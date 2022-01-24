@@ -2,6 +2,12 @@
 enchantment.relentless=Relentless
 
 //POTIONS
+effect.very_long_fire_resistance=Very Long Fire resistance
+potion.effect.very_long_fire_resistance=Very Long Fire resistance
+splash_potion.effect.very_long_fire_resistance=Very Long Splash fire resistance
+lingering_potion.effect.very_long_fire_resistance=Very Long Lingering fire resistance
+tipped_arrow.effect.very_long_fire_resistance=Very Long Arrow of fire resistance
+
 effect.fire_resistance_II=Fire resistance II
 potion.effect.fire_resistance_II=Fire resistance II
 splash_potion.effect.fire_resistance_II=Splash fire resistance II
@@ -14,6 +20,12 @@ splash_potion.effect.long_fire_resistance_II=Long Splash fire resistance II
 lingering_potion.effect.long_fire_resistance_II=Long Lingering fire resistance II
 tipped_arrow.effect.long_fire_resistance_II=Long Arrow of fire resistance II
 
+effect.very_long_fire_resistance_II=Very Long Fire resistance II
+potion.effect.very_long_fire_resistance_II=Very Long Fire resistance II
+splash_potion.effect.very_long_fire_resistance_II=Very Long Splash fire resistance II
+lingering_potion.effect.very_long_fire_resistance_II=Very Long Lingering fire resistance II
+tipped_arrow.effect.very_long_fire_resistance_II=Very Long Arrow of fire resistance II
+
 effect.fire_resistance_III=Fire resistance III
 potion.effect.fire_resistance_III=Fire resistance III
 splash_potion.effect.fire_resistance_III=Splash fire resistance III
@@ -25,6 +37,12 @@ potion.effect.long_fire_resistance_III=Long Fire resistance III
 splash_potion.effect.long_fire_resistance_III=Long Splash fire resistance III
 lingering_potion.effect.long_fire_resistance_III=Long Lingering fire resistance III
 tipped_arrow.effect.long_fire_resistance_III=Long Arrow of fire resistance III
+
+effect.very_long_fire_resistance_III=Very Long Fire resistance III
+potion.effect.very_long_fire_resistance_III=Very Long Fire resistance III
+splash_potion.effect.very_long_fire_resistance_III=Very Long Splash fire resistance III
+lingering_potion.effect.very_long_fire_resistance_III=Very Long Lingering fire resistance III
+tipped_arrow.effect.very_long_fire_resistance_III=Very Long Arrow of fire resistance III
 
 effect.haste=Haste
 potion.effect.haste=Haste
@@ -996,7 +1014,7 @@ item.onyx_iii_helmet.tooltip.4=When full Onyx III tier or better is equipped:
 item.onyx_iii_helmet.tooltip.5=§6+Resistance III
 item.onyx_iii_helmet.tooltip.6=§6+Fire Resistance III
 item.onyx_iii_helmet.tooltip.7=§6+Strength III
-item.onyx_iii_helmet.tooltip.8=§6+Speed III
+item.onyx_iii_helmet.tooltip.8=§6+Speed II
 item.onyx_iii_helmet.tooltip.9=§6+Regeneration III
 
 item.onyx_iii_chestplate.name=Onyx chestplate III
@@ -1008,7 +1026,7 @@ item.onyx_iii_chestplate.tooltip.4=When full Onyx III tier or better is equipped
 item.onyx_iii_chestplate.tooltip.5=§6+Resistance III
 item.onyx_iii_chestplate.tooltip.6=§6+Fire Resistance III
 item.onyx_iii_chestplate.tooltip.7=§6+Strength III
-item.onyx_iii_chestplate.tooltip.8=§6+Speed III
+item.onyx_iii_chestplate.tooltip.8=§6+Speed II
 item.onyx_iii_chestplate.tooltip.9=§6+Regeneration III
 
 item.onyx_iii_leggings.name=Onyx leggings III
@@ -1020,7 +1038,7 @@ item.onyx_iii_leggings.tooltip.4=When full Onyx III tier or better is equipped:
 item.onyx_iii_leggings.tooltip.5=§6+Resistance III
 item.onyx_iii_leggings.tooltip.6=§6+Fire Resistance III
 item.onyx_iii_leggings.tooltip.7=§6+Strength III
-item.onyx_iii_leggings.tooltip.8=§6+Speed III
+item.onyx_iii_leggings.tooltip.8=§6+Speed II
 item.onyx_iii_leggings.tooltip.9=§6+Regeneration III
 
 item.onyx_iii_boots.name=Onyx boots III
@@ -1032,7 +1050,7 @@ item.onyx_iii_boots.tooltip.4=When full Onyx III tier or better is equipped:
 item.onyx_iii_boots.tooltip.5=§6+Resistance III
 item.onyx_iii_boots.tooltip.6=§6+Fire Resistance III
 item.onyx_iii_boots.tooltip.7=§6+Strength III
-item.onyx_iii_boots.tooltip.8=§6+Speed III
+item.onyx_iii_boots.tooltip.8=§6+Speed II
 item.onyx_iii_boots.tooltip.9=§6+Regeneration III
 
 item.onyx_iv_sword.name=Onyx sword IV
@@ -1052,7 +1070,7 @@ item.onyx_iv_helmet.tooltip.4=When full Onyx IV tier or better is equipped:
 item.onyx_iv_helmet.tooltip.5=§6+Resistance III
 item.onyx_iv_helmet.tooltip.6=§6+Fire Resistance IV
 item.onyx_iv_helmet.tooltip.7=§6+Strength IV
-item.onyx_iv_helmet.tooltip.8=§6+Speed IV
+item.onyx_iv_helmet.tooltip.8=§6+Speed II
 item.onyx_iv_helmet.tooltip.9=§6+Regeneration IV
 
 item.onyx_iv_chestplate.name=Onyx chestplate IV
@@ -1064,7 +1082,7 @@ item.onyx_iv_chestplate.tooltip.4=When full Onyx IV tier or better is equipped:
 item.onyx_iv_chestplate.tooltip.5=§6+Resistance III
 item.onyx_iv_chestplate.tooltip.6=§6+Fire Resistance IV
 item.onyx_iv_chestplate.tooltip.7=§6+Strength IV
-item.onyx_iv_chestplate.tooltip.8=§6+Speed IV
+item.onyx_iv_chestplate.tooltip.8=§6+Speed II
 item.onyx_iv_chestplate.tooltip.9=§6+Regeneration IV
 
 item.onyx_iv_leggings.name=Onyx leggings IV
@@ -1076,7 +1094,7 @@ item.onyx_iv_leggings.tooltip.4=When full Onyx IV tier or better is equipped:
 item.onyx_iv_leggings.tooltip.5=§6+Resistance III
 item.onyx_iv_leggings.tooltip.6=§6+Fire Resistance IV
 item.onyx_iv_leggings.tooltip.7=§6+Strength IV
-item.onyx_iv_leggings.tooltip.8=§6+Speed IV
+item.onyx_iv_leggings.tooltip.8=§6+Speed II
 item.onyx_iv_leggings.tooltip.9=§6+Regeneration IV
 
 item.onyx_iv_boots.name=Onyx boots IV
@@ -1088,7 +1106,7 @@ item.onyx_iv_boots.tooltip.4=When full Onyx IV tier or better is equipped:
 item.onyx_iv_boots.tooltip.5=§6+Resistance III
 item.onyx_iv_boots.tooltip.6=§6+Fire Resistance IV
 item.onyx_iv_boots.tooltip.7=§6+Strength IV
-item.onyx_iv_boots.tooltip.8=§6+Speed IV
+item.onyx_iv_boots.tooltip.8=§6+Speed II
 item.onyx_iv_boots.tooltip.9=§6+Regeneration IV
 
 item.onyx_v_sword.name=Onyx sword V
@@ -1108,7 +1126,7 @@ item.onyx_v_helmet.tooltip.4=When full Onyx V is equipped:
 item.onyx_v_helmet.tooltip.5=§6+Resistance IV
 item.onyx_v_helmet.tooltip.6=§6+Fire Resistance V
 item.onyx_v_helmet.tooltip.7=§6+Strength V
-item.onyx_v_helmet.tooltip.8=§6+Speed V
+item.onyx_v_helmet.tooltip.8=§6+Speed II
 item.onyx_v_helmet.tooltip.9=§6+Regeneration V
 
 item.onyx_v_chestplate.name=Onyx chestplate V
@@ -1120,7 +1138,7 @@ item.onyx_v_chestplate.tooltip.4=When full Onyx V is equipped:
 item.onyx_v_chestplate.tooltip.5=§6+Resistance IV
 item.onyx_v_chestplate.tooltip.6=§6+Fire Resistance V
 item.onyx_v_chestplate.tooltip.7=§6+Strength V
-item.onyx_v_chestplate.tooltip.8=§6+Speed V
+item.onyx_v_chestplate.tooltip.8=§6+Speed II
 item.onyx_v_chestplate.tooltip.9=§6+Regeneration V
 
 item.onyx_v_leggings.name=Onyx leggings V
@@ -1132,7 +1150,7 @@ item.onyx_v_leggings.tooltip.4=When full Onyx V is equipped:
 item.onyx_v_leggings.tooltip.5=§6+Resistance IV
 item.onyx_v_leggings.tooltip.6=§6+Fire Resistance V
 item.onyx_v_leggings.tooltip.7=§6+Strength V
-item.onyx_v_leggings.tooltip.8=§6+Speed V
+item.onyx_v_leggings.tooltip.8=§6+Speed II
 item.onyx_v_leggings.tooltip.9=§6+Regeneration V
 
 item.onyx_v_boots.name=Onyx boots V
@@ -1144,7 +1162,7 @@ item.onyx_v_boots.tooltip.4=When full Onyx V is equipped:
 item.onyx_v_boots.tooltip.5=§6+Resistance IV
 item.onyx_v_boots.tooltip.6=§6+Fire Resistance V
 item.onyx_v_boots.tooltip.7=§6+Strength V
-item.onyx_v_boots.tooltip.8=§6+Speed V
+item.onyx_v_boots.tooltip.8=§6+Speed II
 item.onyx_v_boots.tooltip.9=§6+Regeneration V
 
 item.diamond_arrow.name=Diamond arrow
@@ -1272,6 +1290,10 @@ tile.wadsleyite_supercompact.name=Wadsleyite supercompact
 tile.olivine_supercompact.name=Olivine supercompact
 tile.tungsten_supercompact.name=Tungsten supercompact
 tile.titanium_supercompact.name=Titanium supercompact
+tile.boron_supercompact.name=Boron supercompact
+tile.lithium_supercompact.name=Lithium supercompact
+tile.magnesium_supercompact.name=Magnesium supercompact
+tile.thorium_supercompact.name=Thorium supercompact
 tile.uranium_supercompact.name=Uranium supercompact
 tile.zinc_supercompact.name=Zinc supercompact
 tile.aluminium_supercompact.name=Aluminium supercompact
@@ -1291,6 +1313,9 @@ tile.silver_supercompact.name=Silver supercompact
 tile.steel_supercompact.name=Steel supercompact
 tile.iron_supercompact.name=Iron supercompact
 tile.sulfur_supercompact.name=Sulfur supercompact
+tile.lapis_supercompact.name=Lapis supercompact
+tile.redstone_supercompact.name=Redstone supercompact
+tile.coal_supercompact.name=Coal supercompact
 
 tile.ore_majorite.name=Majorite ore
 tile.ore_brigmanite.name=Brigmanite ore
@@ -1298,8 +1323,8 @@ tile.ore_ringwoodite.name=Ringwoodite ore
 tile.ore_wadsleyite.name=Wadsleyite ore
 tile.ore_olivine.name=Olivine ore
 tile.ore_tungsten.name=Tungsten ore
-tile.ore_titanium.name=titanium ore
-tile.ore_uranium.name=uranium ore
+tile.ore_titanium.name=Titanium ore
+tile.ore_uranium.name=Uranium ore
 tile.ore_zinc.name=Zinc ore
 tile.ore_aluminium.name=Aluminium ore
 tile.ore_silicon.name=Silicon ore
@@ -1693,6 +1718,10 @@ tile.mantlerock_wadsleyite_mantlerock.name=Mantlerock Wadsleyite
 tile.mantlerock_olivine_mantlerock.name=Mantlerock Olivine
 tile.mantlerock_tungsten_mantlerock.name=Mantlerock Tungsten
 tile.mantlerock_titanium_mantlerock.name=Mantlerock titanium
+tile.mantlerock_boron_mantlerock.name=Mantlerock boron
+tile.mantlerock_lithium_mantlerock.name=Mantlerock lithium
+tile.mantlerock_magnesium_mantlerock.name=Mantlerock magnesium
+tile.mantlerock_thorium_mantlerock.name=Mantlerock thorium
 tile.mantlerock_uranium_mantlerock.name=Mantlerock uranium
 tile.mantlerock_zinc_mantlerock.name=Mantlerock Zinc
 tile.mantlerock_aluminium_mantlerock.name=Mantlerock aluminium
@@ -1796,6 +1825,26 @@ tile.mantlerock_wadsleyite_mantlerock1.name=Mantlerock1 Wadsleyite
 tile.mantlerock_olivine_mantlerock1.name=Mantlerock1 Olivine
 tile.mantlerock_tungsten_mantlerock1.name=Mantlerock1 Tungsten
 tile.mantlerock_titanium_mantlerock1.name=Mantlerock1 titanium
+tile.mantlerock_boron_mantlerock1.name=Mantlerock1 boron
+tile.mantlerock_lithium_mantlerock1.name=Mantlerock1 lithium
+tile.mantlerock_magnesium_mantlerock1.name=Mantlerock1 magnesium
+tile.mantlerock_thorium_mantlerock1.name=Mantlerock1 thorium
+tile.mantlerock_boron_mantlerock2.name=Mantlerock2 boron
+tile.mantlerock_lithium_mantlerock2.name=Mantlerock2 lithium
+tile.mantlerock_magnesium_mantlerock2.name=Mantlerock2 magnesium
+tile.mantlerock_thorium_mantlerock2.name=Mantlerock2 thorium
+tile.mantlerock_boron_lower_mantlerock.name=Lower Mantlerock boron
+tile.mantlerock_lithium_lower_mantlerock.name=Lower Mantlerock lithium
+tile.mantlerock_magnesium_lower_mantlerock.name=Lower Mantlerock magnesium
+tile.mantlerock_thorium_lower_mantlerock.name=Lower Mantlerock thorium
+tile.mantlerock_boron_lower_mantlerock1.name=Lower Mantlerock1 boron
+tile.mantlerock_lithium_lower_mantlerock1.name=Lower Mantlerock1 lithium
+tile.mantlerock_magnesium_lower_mantlerock1.name=Lower Mantlerock1 magnesium
+tile.mantlerock_thorium_lower_mantlerock1.name=Lower Mantlerock1 thorium
+tile.mantlerock_boron_lower_mantlerock2.name=Lower Mantlerock2 boron
+tile.mantlerock_lithium_lower_mantlerock2.name=Lower Mantlerock2 lithium
+tile.mantlerock_magnesium_lower_mantlerock2.name=Lower Mantlerock2 magnesium
+tile.mantlerock_thorium_lower_mantlerock2.name=Lower Mantlerock2 thorium
 tile.mantlerock_uranium_mantlerock1.name=Mantlerock1 uranium
 tile.mantlerock_zinc_mantlerock1.name=Mantlerock1 Zinc
 tile.mantlerock_aluminium_mantlerock1.name=Mantlerock1 aluminium
@@ -4364,8 +4413,12 @@ item.steel_ore.name=Steel ore
 item.silver_ore.name=Silver ore
 item.gold_ore.name=Gold ore
 item.platinum_ore.name=Platinum ore
-item.titanium_ore.name=titanium ore
-item.uranium_ore.name=uranium ore
+item.titanium_ore.name=Titanium ore
+item.boron_ore.name=Boron ore
+item.lithium_ore.name=Lithium ore
+item.magnesium_ore.name=Magnesium ore
+item.thorium_ore.name=Thorium ore
+item.uranium_ore.name=Uranium ore
 item.tungsten_ore.name=Tungsten ore
 
 item.aluminium_shard.name=Aluminium shard
@@ -4425,12 +4478,14 @@ item.steel_ingot.name=Steel ingot
 item.silver_ingot.name=Silver ingot
 item.gold_ingot.name=Gold ingot
 item.platinum_ingot.name=Platinum ingot
-item.titanium_ingot.name=titanium ingot
-item.uranium_ingot.name=uranium ingot
+item.titanium_ingot.name=Titanium ingot
+item.boron_ingot.name=Boron ingot
+item.lithium_ingot.name=Lithium ingot
+item.magnesium_ingot.name=Magnesium ingot
+item.thorium_ingot.name=Thorium ingot
+item.uranium_ingot.name=Uranium ingot
 item.tungsten_ingot.name=Tungsten ingot
-item.titanium_uranium_ingot.name=titanium and uranium alloy ingot
-item.tungsten_uranium_ingot.name=Tungsten and uranium alloy ingot
-item.tungsten_titanium_ingot.name=Tungsten and titanium alloy ingot
+item.tungsten_titanium_ingot.name=Tungsten and Titanium alloy ingot
 
 //Rod
 
