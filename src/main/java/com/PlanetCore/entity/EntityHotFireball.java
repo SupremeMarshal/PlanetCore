@@ -31,7 +31,7 @@ public class EntityHotFireball extends net.minecraft.entity.projectile.EntitySma
         {
             if (result.entityHit != null)
             {
-                result.entityHit.attackEntityFrom(DamageSource.GENERIC, 8.0F);
+                result.entityHit.attackEntityFrom(DamageSource.GENERIC, 4.0F);
                 this.applyEnchantments(this.shootingEntity, result.entityHit);
             }
 

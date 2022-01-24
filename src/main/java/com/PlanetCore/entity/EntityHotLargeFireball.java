@@ -34,7 +34,7 @@ public class EntityHotLargeFireball extends net.minecraft.entity.projectile.Enti
         {
             if (result.entityHit != null)
             {
-                result.entityHit.attackEntityFrom(GENERIC, 12.0F);
+                result.entityHit.attackEntityFrom(GENERIC, 8.0F);
                 this.applyEnchantments(this.shootingEntity, result.entityHit);
             }
 

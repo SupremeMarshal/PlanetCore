@@ -31,7 +31,7 @@ public class EntityOnyxFireball extends net.minecraft.entity.projectile.EntityLa
         {
             if (result.entityHit != null)
             {
-                result.entityHit.attackEntityFrom(DamageSource.GENERIC, 64.0F);
+                result.entityHit.attackEntityFrom(DamageSource.GENERIC, 20.0F);
                 this.applyEnchantments(this.shootingEntity, result.entityHit);
             }
 

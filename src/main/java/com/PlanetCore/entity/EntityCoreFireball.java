@@ -31,7 +31,7 @@ public class EntityCoreFireball extends net.minecraft.entity.projectile.EntityLa
         {
             if (result.entityHit != null)
             {
-                result.entityHit.attackEntityFrom(DamageSource.GENERIC, 16.0F);
+                result.entityHit.attackEntityFrom(DamageSource.GENERIC, 9.0F);
                 this.applyEnchantments(this.shootingEntity, result.entityHit);
             }
 
