@@ -99,12 +99,13 @@ public class RenderHandler
 	
 	public static void registerCustomMeshesAndStates()
 		{
+			/** iron lava */
 			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.IRON_LAVA_FLUID), new ItemMeshDefinition() {
 
 				@Override
 				public ModelResourceLocation getModelLocation(ItemStack stack) {
 
-					return new ModelResourceLocation("planetcore:amazonite_lava", "fluid");
+					return new ModelResourceLocation("planetcore:iron_lava", "fluid");
 
 				}
 			});
@@ -218,7 +219,7 @@ public class RenderHandler
 				}
 			});
 
-			/** platinum lava */
+			/** diamond lava */
 			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.DIAMOND_LAVA_FLUID), new ItemMeshDefinition() {
 
 				@Override
@@ -509,6 +510,7 @@ public class RenderHandler
 			}
 		});
 
+
 		ModelLoader.setCustomStateMapper(ModBlocks.CORE_LAVA_FLUID, new StateMapperBase() {
 
 			@Override
@@ -517,6 +519,8 @@ public class RenderHandler
 				return new ModelResourceLocation("planetcore:core_lava", "fluid");
 			}
 		});
+
+
 
 
 			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SULFURIC_ACID_FLUID), new ItemMeshDefinition() {
