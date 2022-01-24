@@ -18,7 +18,7 @@ import java.util.Random;
 public class ModSmelting {
 
 	private static final String[] Material = {"SULFUR","ALUMINIUM", "TIN", "COPPER", "IRON", "SILVER",
-			"GOLD", "TITANIUM", "URANIUM", "TUNGSTEN", "REDSTONE", "TOPAZ", "JADE", "RUBY", "SAPPHIRE", "OLIVINE",
+			"GOLD", "TITANIUM","BORON","LITHIUM","MAGNESIUM","THORIUM", "URANIUM", "TUNGSTEN", "REDSTONE", "TOPAZ", "JADE", "RUBY", "SAPPHIRE", "OLIVINE",
 			"WADSLEYITE", "RINGWOODITE", "BRIGMANITE", "MAJORITE", "AMAZONITE", "ONYX"};
 
 	private static final String[] Rock = {"ORE", "CRUSTROCK", "MANTLEROCK", "CORESTONE"};
@@ -40,8 +40,8 @@ public class ModSmelting {
 
 
 		for (int size = 0; size < 2; size++) {
-			for (int material = 0; (material < 22); material++) {
-				if (material < 10) {
+			for (int material = 0; (material < 26); material++) {
+				if (material < 14) {
 					itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_ingot";
 				} else {
 					itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT);
@@ -51,7 +51,7 @@ public class ModSmelting {
 				}
 				item = Item.getByNameOrId(itemname);
 				for (int rock = 0; rock < 4; rock++) {
-					if (rock == 3 && material < 11) {
+					if (rock == 3 && material < 17) {
 						continue;
 					}
 
@@ -82,6 +82,10 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModBlocks.SILVER_SUPERCOMPACT, new ItemStack(ModItems.SILVER_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.GOLD_SUPERCOMPACT, new ItemStack(Items.GOLD_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.TITANIUM_SUPERCOMPACT, new ItemStack(ModItems.TITANIUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.BORON_SUPERCOMPACT, new ItemStack(ModItems.BORON_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.LITHIUM_SUPERCOMPACT, new ItemStack(ModItems.LITHIUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MAGNESIUM_SUPERCOMPACT, new ItemStack(ModItems.MAGNESIUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.THORIUM_SUPERCOMPACT, new ItemStack(ModItems.THORIUM_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.URANIUM_SUPERCOMPACT, new ItemStack(ModItems.URANIUM_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.TUNGSTEN_SUPERCOMPACT, new ItemStack(ModItems.TUNGSTEN_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.TOPAZ_SUPERCOMPACT, new ItemStack(ModItems.TOPAZ, 9), 1.0F);
@@ -103,6 +107,10 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModItems.SILVER_ORE, new ItemStack(ModItems.SILVER_INGOT, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.GOLD_ORE, new ItemStack(Items.GOLD_INGOT, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.TITANIUM_ORE, new ItemStack(ModItems.TITANIUM_INGOT, 1), 1.0F);
+		GameRegistry.addSmelting(ModItems.BORON_ORE, new ItemStack(ModItems.BORON_INGOT, 1), 1.0F);
+		GameRegistry.addSmelting(ModItems.LITHIUM_ORE, new ItemStack(ModItems.LITHIUM_INGOT, 1), 1.0F);
+		GameRegistry.addSmelting(ModItems.MAGNESIUM_ORE, new ItemStack(ModItems.MAGNESIUM_INGOT, 1), 1.0F);
+		GameRegistry.addSmelting(ModItems.THORIUM_ORE, new ItemStack(ModItems.THORIUM_INGOT, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.URANIUM_ORE, new ItemStack(ModItems.URANIUM_INGOT, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.TUNGSTEN_ORE, new ItemStack(ModItems.TUNGSTEN_INGOT, 1), 1.0F);
 

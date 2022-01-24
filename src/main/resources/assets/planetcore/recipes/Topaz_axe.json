@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AA",
+        "AB",
+        " B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:topaz"
+        },
+        "B":
+        {
+            "item": "planetcore:jade_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:copper_axe",
+        "count": 1
+    }
+}

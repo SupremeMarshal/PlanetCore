@@ -116,6 +116,10 @@ public class RegistryHandler {
         OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.STEEL_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotBoron", new ItemStack(ModItems.BORON_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotLithium", new ItemStack(ModItems.LITHIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotMagnesium", new ItemStack(ModItems.MAGNESIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotThorium", new ItemStack(ModItems.THORIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotAluminum", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotAluminium", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotCopper", new ItemStack(ModItems.COPPER_INGOT, 1, OreDictionary.WILDCARD_VALUE));

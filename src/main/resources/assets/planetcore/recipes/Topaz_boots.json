@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A A",
+        "A A"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:topaz"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:topaz_boots",
+        "count": 1
+    }
+}

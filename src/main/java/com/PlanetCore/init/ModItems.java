@@ -476,6 +476,10 @@ public class ModItems {
 	public static final Item BRONZE_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SILVER_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TITANIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BORON_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item LITHIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item MAGNESIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item THORIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item URANIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_TITANIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -489,6 +493,10 @@ public class ModItems {
 	public static final Item GOLD_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TITANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item URANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item BORON_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item LITHIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item MAGNESIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item THORIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//metal shard//

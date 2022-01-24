@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "A",
+        "A",
+        "B"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:topaz"
+        },
+        "B":
+        {
+            "item": "planetcore:topaz_rod"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:topaz_sword",
+        "count": 1
+    }
+}
