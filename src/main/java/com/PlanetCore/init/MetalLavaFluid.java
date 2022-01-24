@@ -276,26 +276,4 @@ public class MetalLavaFluid extends BlockFluidClassic {
 			}
 		}
 	}
-
-	protected boolean isSurroundingBlockFlammable(World worldIn, BlockPos pos)
-	{
-		for (EnumFacing enumfacing : EnumFacing.values())
-		{
-			if (this.getCanBlockBurn(worldIn, pos.offset(enumfacing)))
-			{
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-
-	private boolean getCanBlockBurn(World worldIn, BlockPos pos)
-	{
-		return pos.getY() >= 0 && pos.getY() < 256 && !worldIn.isBlockLoaded(pos) ? false : worldIn.getBlockState(pos).getMaterial().getCanBurn();
-	}
-
-
-
 }
