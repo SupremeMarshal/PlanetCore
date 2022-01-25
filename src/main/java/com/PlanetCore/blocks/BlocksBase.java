@@ -14,7 +14,9 @@ import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.Explosion;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -23,13 +25,15 @@ import java.util.Random;
 public class BlocksBase extends BlockBase {
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
-	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness) {
+	public final PlanetExp planetExp;
+	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
 		super(name, material);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 		this.planetMaterial = planetMaterial;
 		this.planetHardness = planetHardness;
+		this.planetExp = planetExp;
 	}
 
 	@Override
@@ -44,11 +48,25 @@ public class BlocksBase extends BlockBase {
 
 	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random) {
-		if (this == ModBlocks.REDSTONE_SUPERCOMPACT || this == ModBlocks.LAPIS_SUPERCOMPACT)
+		if (this == ModBlocks.REDSTONE_SUPERCOMPACT)
 		{
-			return 24 + new Random().nextInt(fortune * 12 + 12);
+			return this.quantityDropped(random) + random.nextInt(fortune + 1);
 		}
-		else return 9 + random.nextInt(fortune * 9 + 1);
+		else if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
+		{
+			int i = random.nextInt(fortune + 2) - 1;
+
+			if (i < 0)
+			{
+				i = 0;
+			}
+
+			return this.quantityDropped(random) * (i + 1);
+		}
+		else
+		{
+			return this.quantityDropped(random);
+		}
 	}
 
 	@Override
@@ -57,5 +75,15 @@ public class BlocksBase extends BlockBase {
 			return EnumDyeColor.BLUE.getDyeDamage();
 		}
 		else return super.damageDropped(state);
+	}
+
+	@Override
+	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
+		Random rand = world instanceof World ? ((World)world).rand : new Random();
+		if (this.getItemDropped(state, rand, fortune) != Item.getItemFromBlock(this)) {
+			int i = MathHelper.getInt(rand, (int) planetExp.exp, (int) planetExp.exp * 2);
+			return i;
+		}
+		else return 0;
 	}
 }
