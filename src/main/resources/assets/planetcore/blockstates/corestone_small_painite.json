@@ -1,0 +1,8 @@
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_small_painite"},
+  "variant=corestone1":{"model":"planetcore:corestone1_small_painite"},
+  "variant=corestone2":{"model":"planetcore:corestone2_small_painite"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_small_painite"},
+  "variant=innercorestone1":{"model":"planetcore:innercorestone1_small_painite"},
+  "variant=innercorestone2":{"model":"planetcore:innercorestone2_small_painite"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_small_painite"}}}

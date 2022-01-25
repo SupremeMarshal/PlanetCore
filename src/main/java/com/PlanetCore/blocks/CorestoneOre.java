@@ -53,4 +53,29 @@ public class CorestoneOre extends Corestone implements IMetaName
         }
         else return 0;
     }
+
+    @Override
+    public int quantityDropped(Random random)
+    {
+        return (this == ModBlocks.CORESTONE_SMALL_ONYX || this == ModBlocks.CORESTONE_SMALL_PAINITE) ? 3 : 1;
+    }
+
+    @Override
+    public int quantityDroppedWithBonus(int fortune, Random random) {
+        if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
+        {
+            int i = random.nextInt(fortune + 2) - 1;
+
+            if (i < 0)
+            {
+                i = 0;
+            }
+
+            return this.quantityDropped(random) * (i + 1);
+        }
+        else
+        {
+            return this.quantityDropped(random);
+        }
+    }
 }

@@ -53,7 +53,27 @@ public class CorestoneOreCompact extends Corestone implements IMetaName {
     }
 
     @Override
+    public int quantityDropped(Random random)
+    {
+        return 3;
+    }
+
+    @Override
     public int quantityDroppedWithBonus(int fortune, Random random) {
-        return 3 + random.nextInt(fortune * 3 + 1);
+        if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
+        {
+            int i = random.nextInt(fortune + 2) - 1;
+
+            if (i < 0)
+            {
+                i = 0;
+            }
+
+            return this.quantityDropped(random) * (i + 1);
+        }
+        else
+        {
+            return this.quantityDropped(random);
+        }
     }
 }
