@@ -456,6 +456,7 @@ public class ModItems {
 	public static final Item TITANIUM_URANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_URANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_TITANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item TOPAZ_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item JADE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SAPPHIRE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RUBY_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -585,6 +586,7 @@ public class ModItems {
 	public static final Item URANIUM_SHIELD = new Shield(ShieldMaterial.URANIUM);
 	public static final Item TUNGSTEN_SHIELD = new Shield(ShieldMaterial.TUNGSTEN);
 	public static final Item TUNGSTEN_TITANIUM_SHIELD = new Shield(ShieldMaterial.TUNGSTEN_TITANIUM);
+	public static final Item TOPAZ_SHIELD = new Shield(ShieldMaterial.TOPAZ);
 	public static final Item JADE_SHIELD = new Shield(ShieldMaterial.JADE);
 	public static final Item SAPPHIRE_SHIELD = new Shield(ShieldMaterial.SAPPHIRE);
 	public static final Item RUBY_SHIELD = new Shield(ShieldMaterial.RUBY);
