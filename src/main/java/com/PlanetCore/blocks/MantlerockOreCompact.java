@@ -63,11 +63,33 @@ public class MantlerockOreCompact extends Mantlerock implements IMetaName {
     }
 
     @Override
+    public int quantityDropped(Random random)
+    {
+        if (this == ModBlocks.MANTLEROCK_COMPACT_LAPIS) return 12 + random.nextInt(5);
+        else if (this == ModBlocks.MANTLEROCK_COMPACT_REDSTONE) return 12 + random.nextInt(2);
+        else return 3;
+    }
+
+    @Override
     public int quantityDroppedWithBonus(int fortune, Random random) {
-        if (this == ModBlocks.MANTLEROCK_COMPACT_REDSTONE || this == ModBlocks.MANTLEROCK_COMPACT_LAPIS)
+        if (this == ModBlocks.MANTLEROCK_COMPACT_REDSTONE)
         {
-            return 12 + new Random().nextInt(fortune * 6 + 6);
+            return this.quantityDropped(random) + random.nextInt(fortune + 1);
         }
-        else return 3 + random.nextInt(fortune * 3 + 1);
+        else if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
+        {
+            int i = random.nextInt(fortune + 2) - 1;
+
+            if (i < 0)
+            {
+                i = 0;
+            }
+
+            return this.quantityDropped(random) * (i + 1);
+        }
+        else
+        {
+            return this.quantityDropped(random);
+        }
     }
 }

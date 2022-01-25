@@ -47,6 +47,14 @@ public class BlocksBase extends BlockBase {
 	}
 
 	@Override
+	public int quantityDropped(Random random)
+	{
+		if (this == ModBlocks.LAPIS_SUPERCOMPACT) return 36 + random.nextInt(5);
+		else if (this == ModBlocks.REDSTONE_SUPERCOMPACT) return 36 + random.nextInt(2);
+		else return 9;
+	}
+
+	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random) {
 		if (this == ModBlocks.REDSTONE_SUPERCOMPACT)
 		{

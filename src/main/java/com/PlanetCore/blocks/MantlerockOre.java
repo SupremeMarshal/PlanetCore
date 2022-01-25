@@ -4,6 +4,7 @@ import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
@@ -67,11 +68,33 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
     }
 
     @Override
+    public int quantityDropped(Random random)
+    {
+        if (this == ModBlocks.MANTLEROCK_LAPIS) return 4 + random.nextInt(5);
+        else if (this == ModBlocks.MANTLEROCK_REDSTONE) return 4 + random.nextInt(2);
+        else return 1;
+    }
+
+    @Override
     public int quantityDroppedWithBonus(int fortune, Random random) {
-        if (this == ModBlocks.MANTLEROCK_REDSTONE || this == ModBlocks.MANTLEROCK_LAPIS)
+        if (this == ModBlocks.MANTLEROCK_REDSTONE)
         {
-            return 4 + new Random().nextInt(fortune * 2 + 2);
+            return this.quantityDropped(random) + random.nextInt(fortune + 1);
         }
-        else return 1 + random.nextInt(fortune + 1);
+        else if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
+        {
+            int i = random.nextInt(fortune + 2) - 1;
+
+            if (i < 0)
+            {
+                i = 0;
+            }
+
+            return this.quantityDropped(random) * (i + 1);
+        }
+        else
+        {
+            return this.quantityDropped(random);
+        }
     }
 }
