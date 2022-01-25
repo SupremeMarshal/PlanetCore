@@ -75751,6 +75751,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
 						"Name": "planetcore:corestone_small_painite"
 					},
 					"biomes": null,
@@ -78978,6 +78981,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
 						"Name": "planetcore:corestone_small_painite"
 					},
 					"biomes": null,
@@ -82098,6 +82104,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone1"
+						},
 						"Name": "planetcore:corestone_small_painite"
 					},
 					"biomes": null,
@@ -82135,6 +82144,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone1"
+						},
 						"Name": "planetcore:corestone_painite"
 					},
 					"biomes": null,
@@ -85460,6 +85472,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone1"
+						},
 						"Name": "planetcore:corestone_small_painite"
 					},
 					"biomes": null,
@@ -85497,6 +85512,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone1"
+						},
 						"Name": "planetcore:corestone_painite"
 					},
 					"biomes": null,
@@ -88617,6 +88635,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone2"
+						},
 						"Name": "planetcore:corestone_small_painite"
 					},
 					"biomes": null,
@@ -88654,6 +88675,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone2"
+						},
 						"Name": "planetcore:corestone_painite"
 					},
 					"biomes": null,
@@ -88691,6 +88715,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone2"
+						},
 						"Name": "planetcore:corestone_compact_painite"
 					},
 					"biomes": null,
@@ -92016,6 +92043,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone2"
+						},
 						"Name": "planetcore:corestone_small_painite"
 					},
 					"biomes": null,
@@ -92053,6 +92083,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone2"
+						},
 						"Name": "planetcore:corestone_painite"
 					},
 					"biomes": null,
@@ -92090,6 +92123,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone2"
+						},
 						"Name": "planetcore:corestone_compact_painite"
 					},
 					"biomes": null,
@@ -93329,43 +93365,6 @@
 							"variant": "innercorestone2"
 						},
 						"Name": "planetcore:corestone"
-					},
-					"biomes": null,
-					"placeBlockWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Properties": {
-									"variant": "centercorestone"
-								},
-								"Name": "planetcore:corestone"
-							}
-						]
-					},
-					"generateWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Properties": {
-									"variant": "centercorestone"
-								},
-								"Name": "planetcore:corestone"
-							}
-						]
-					},
-					"spawnSize": 33,
-					"spawnTries": 2,
-					"spawnProbability": 1.0,
-					"minHeight": -Infinity,
-					"maxHeight": Infinity
-				},
-				{
-					"blockstate": {
-						"Name": "planetcore:painite_supercompact"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95207,6 +95206,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
 						"Name": "planetcore:corestone_small_painite"
 					},
 					"biomes": null,
@@ -95244,6 +95246,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
 						"Name": "planetcore:corestone_painite"
 					},
 					"biomes": null,
@@ -95281,6 +95286,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
 						"Name": "planetcore:corestone_compact_painite"
 					},
 					"biomes": null,
@@ -96762,43 +96770,6 @@
 							"variant": "innercorestone2"
 						},
 						"Name": "planetcore:corestone"
-					},
-					"biomes": null,
-					"placeBlockWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Properties": {
-									"variant": "centercorestone"
-								},
-								"Name": "planetcore:corestone"
-							}
-						]
-					},
-					"generateWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Properties": {
-									"variant": "centercorestone"
-								},
-								"Name": "planetcore:corestone"
-							}
-						]
-					},
-					"spawnSize": 33,
-					"spawnTries": 2,
-					"spawnProbability": 1.0,
-					"minHeight": -Infinity,
-					"maxHeight": Infinity
-				},
-				{
-					"blockstate": {
-						"Name": "planetcore:painite_supercompact"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -98480,6 +98451,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
 						"Name": "planetcore:corestone_small_painite"
 					},
 					"biomes": null,
@@ -98517,6 +98491,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
 						"Name": "planetcore:corestone_painite"
 					},
 					"biomes": null,
@@ -98554,6 +98531,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
 						"Name": "planetcore:corestone_compact_painite"
 					},
 					"biomes": null,
@@ -98746,6 +98726,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
 						"Name": "planetcore:centercorestone_painite"
 					},
 					"biomes": null,
@@ -98801,6 +98784,9 @@
 				},
 				{
 					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
 						"Name": "planetcore:centercorestone_compact_painite"
 					},
 					"biomes": null,
