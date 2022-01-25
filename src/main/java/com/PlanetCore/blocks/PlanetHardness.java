@@ -58,7 +58,9 @@ public enum PlanetHardness {
     COAL_COMPACT(4.5F),
 
     PAINITE(990),
+    PAINITE_SMALL(860),
     ONYX(760),
+    ONYX_SMALL(650),
     AMAZONITE(550),
     MAJORITE(450),
     BRIGMANITE(290),
