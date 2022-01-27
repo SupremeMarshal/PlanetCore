@@ -22,8 +22,10 @@ public class FogHandler {
     @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
 
     public void onEvent(EntityViewRenderEvent.FogDensity event) {
-        event.setCanceled(true);
         Entity p = event.getEntity();
+        String worldType = p.getEntityWorld().getWorldType().getName();
+        if (worldType != "PlanetCore") { event.setCanceled(false); }
+        else event.setCanceled(true);
         float Y = (float) p.posY;
         Block block = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock();
         Material material = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getMaterial();
@@ -51,6 +53,8 @@ public class FogHandler {
     @SubscribeEvent(priority = EventPriority.HIGH, receiveCanceled = true)
     public void onEvent(EntityViewRenderEvent.FogColors event) {
         Entity p = event.getEntity();
+        String worldType = p.getEntityWorld().getWorldType().getName();
+        if (worldType != "PlanetCore") return;
         float Y = (float) event.getEntity().posY;
         Block block = p.getEntityWorld().getBlockState(new BlockPos(p.posX, p.posY + p.getEyeHeight(), p.posZ)).getBlock();
         if (Y < 0) {
