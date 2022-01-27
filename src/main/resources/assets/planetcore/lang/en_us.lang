@@ -1305,6 +1305,7 @@ tile.onyx_supercompact.name=Onyx supercompact
 tile.amazonite_supercompact.name=Amazonite supercompact
 tile.jade_supercompact.name=Jade supercompact
 tile.diamond_supercompact.name=Diamond supercompact
+tile.emerald_supercompact.name=Emerald supercompact
 tile.topaz_supercompact.name=Topaz supercompact
 tile.ruby_supercompact.name=Ruby supercompact
 tile.sapphire_supercompact.name=Sapphire supercompact
@@ -1399,6 +1400,8 @@ tile.ore_compact_gold.name=Compact Gold ore
 tile.ore_compact_silver.name=Compact Silver ore
 tile.ore_compact_iron.name=Compact Iron ore
 tile.ore_compact_sulfur.name=Compact Sulfur ore
+tile.ore_compact_coal.name=Compact Coal ore
+tile.ore_compact_lapis.name=Compact Lapis ore
 
 tile.crustrock_crustrock.name=Crustrock
 tile.crustrock_majorite_crustrock.name=Crustrock Majorite
@@ -1789,8 +1792,32 @@ tile.mantlerock_compact_ringwoodite_mantlerock.name=Mantlerock compact Ringwoodi
 tile.mantlerock_compact_wadsleyite_mantlerock.name=Mantlerock compact Wadsleyite
 tile.mantlerock_compact_olivine_mantlerock.name=Mantlerock compact Olivine
 tile.mantlerock_compact_tungsten_mantlerock.name=Mantlerock compact Tungsten
-tile.mantlerock_compact_titanium_mantlerock.name=Mantlerock compact titanium
-tile.mantlerock_compact_uranium_mantlerock.name=Mantlerock compact uranium
+tile.mantlerock_compact_titanium_mantlerock.name=Mantlerock compact Titanium
+tile.mantlerock_compact_boron_mantlerock.name=Mantlerock compact Boron
+tile.mantlerock_compact_lithium_mantlerock.name=Mantlerock compact Lithium
+tile.mantlerock_compact_magnesium_mantlerock.name=Mantlerock compact Magnesium
+tile.mantlerock_compact_thorium_mantlerock.name=Mantlerock compact Thorium
+tile.mantlerock_compact_boron_mantlerock1.name=Mantlerock1 compact Boron
+tile.mantlerock_compact_lithium_mantlerock1.name=Mantlerock1 compact Lithium
+tile.mantlerock_compact_magnesium_mantlerock1.name=Mantlerock1 compact Magnesium
+tile.mantlerock_compact_thorium_mantlerock1.name=Mantlerock1 compact Thorium
+tile.mantlerock_compact_boron_mantlerock2.name=Mantlerock2 compact Boron
+tile.mantlerock_compact_lithium_mantlerock2.name=Mantlerock2 compact Lithium
+tile.mantlerock_compact_magnesium_mantlerock2.name=Mantlerock2 compact Magnesium
+tile.mantlerock_compact_thorium_mantlerock2.name=Mantlerock2 compact Thorium
+tile.mantlerock_compact_boron_lower_mantlerock.name=Lower Mantlerock compact Boron
+tile.mantlerock_compact_lithium_lower_mantlerock.name=Lower Mantlerock compact Lithium
+tile.mantlerock_compact_magnesium_lower_mantlerock.name=Lower Mantlerock compact Magnesium
+tile.mantlerock_compact_thorium_lower_mantlerock.name=Lower Mantlerock compact Thorium
+tile.mantlerock_compact_boron_lower_mantlerock1.name=Lower Mantlerock1 compact Boron
+tile.mantlerock_compact_lithium_lower_mantlerock1.name=Lower Mantlerock1 compact Lithium
+tile.mantlerock_compact_magnesium_lower_mantlerock1.name=Lower Mantlerock1 compact Magnesium
+tile.mantlerock_compact_thorium_lower_mantlerock1.name=Lower Mantlerock1 compact Thorium
+tile.mantlerock_compact_boron_lower_mantlerock2.name=Lower Mantlerock2 compact Boron
+tile.mantlerock_compact_lithium_lower_mantlerock2.name=Lower Mantlerock2 compact Lithium
+tile.mantlerock_compact_magnesium_lower_mantlerock2.name=Lower Mantlerock2 compact Magnesium
+tile.mantlerock_compact_thorium_lower_mantlerock2.name=Lower Mantlerock2 compact Thorium
+tile.mantlerock_compact_uranium_mantlerock.name=Mantlerock compact Uranium
 tile.mantlerock_compact_zinc_mantlerock.name=Mantlerock compact Zinc
 tile.mantlerock_compact_aluminium_mantlerock.name=Mantlerock compact aluminium
 tile.mantlerock_compact_silicon_mantlerock.name=Mantlerock compact Silicon
@@ -3413,6 +3440,7 @@ tile.corestone_iron_corestone.name=Corestone Iron
 tile.corestone_coal_corestone.name=Corestone Coal
 tile.corestone_redstone_corestone.name=Corestone Redstone
 tile.corestone_sulfur_corestone.name=Corestone Sulfur
+tile.corestone_painite_corestone.name=Corestone Painite
 
 tile.corestone_small_majorite_corestone.name=Corestone small Majorite
 tile.corestone_small_brigmanite_corestone.name=Corestone small Brigmanite
@@ -3447,6 +3475,7 @@ tile.corestone_small_iron_corestone.name=Corestone small Iron
 tile.corestone_small_coal_corestone.name=Corestone small Coal
 tile.corestone_small_redstone_corestone.name=Corestone small Redstone
 tile.corestone_small_sulfur_corestone.name=Corestone small Sulfur
+tile.corestone_small_painite_corestone.name=Corestone small Painite
 
 tile.corestone_compact_majorite_corestone.name=Corestone compact Majorite
 tile.corestone_compact_brigmanite_corestone.name=Corestone compact Brigmanite
@@ -3481,6 +3510,7 @@ tile.corestone_compact_iron_corestone.name=Corestone compact Iron
 tile.corestone_compact_coal_corestone.name=Corestone compact Coal
 tile.corestone_compact_redstone_corestone.name=Corestone compact Redstone
 tile.corestone_compact_sulfur_corestone.name=Corestone compact Sulfur
+tile.corestone_compact_painite_corestone.name=Corestone compact Painite
 
 tile.corestone_corestone1.name=Corestone1
 tile.corestone_majorite_corestone1.name=Corestone1 Majorite
@@ -3515,6 +3545,7 @@ tile.corestone_iron_corestone1.name=Corestone1 Iron
 tile.corestone_coal_corestone1.name=Corestone1 Coal
 tile.corestone_redstone_corestone1.name=Corestone1 Redstone
 tile.corestone_sulfur_corestone1.name=Corestone1 Sulfur
+tile.corestone_painite_corestone1.name=Corestone1 Painite
 
 tile.corestone_small_majorite_corestone1.name=Corestone1 small Majorite
 tile.corestone_small_brigmanite_corestone1.name=Corestone1 small Brigmanite
@@ -3549,6 +3580,7 @@ tile.corestone_small_iron_corestone1.name=Corestone1 small Iron
 tile.corestone_small_coal_corestone1.name=Corestone1 small Coal
 tile.corestone_small_redstone_corestone1.name=Corestone1 small Redstone
 tile.corestone_small_sulfur_corestone1.name=Corestone1 small Sulfur
+tile.corestone_small_painite_corestone1.name=Corestone1 small Painite
 
 tile.corestone_compact_majorite_corestone1.name=Corestone1 compact Majorite
 tile.corestone_compact_brigmanite_corestone1.name=Corestone1 compact Brigmanite
@@ -3583,6 +3615,7 @@ tile.corestone_compact_iron_corestone1.name=Corestone1 compact Iron
 tile.corestone_compact_coal_corestone1.name=Corestone1 compact Coal
 tile.corestone_compact_redstone_corestone1.name=Corestone1 compact Redstone
 tile.corestone_compact_sulfur_corestone1.name=Corestone1 compact Sulfur
+tile.corestone_compact_painite_corestone1.name=Corestone1 compact Painite
 
 tile.corestone_corestone2.name=Corestone2
 tile.corestone_majorite_corestone2.name=Corestone2 Majorite
@@ -3617,6 +3650,7 @@ tile.corestone_iron_corestone2.name=Corestone2 Iron
 tile.corestone_coal_corestone2.name=Corestone2 Coal
 tile.corestone_redstone_corestone2.name=Corestone2 Redstone
 tile.corestone_sulfur_corestone2.name=Corestone2 Sulfur
+tile.corestone_painite_corestone2.name=Corestone2 Painite
 
 tile.corestone_small_majorite_corestone2.name=Corestone2 small Majorite
 tile.corestone_small_brigmanite_corestone2.name=Corestone2 small Brigmanite
@@ -3651,6 +3685,7 @@ tile.corestone_small_iron_corestone2.name=Corestone2 small Iron
 tile.corestone_small_coal_corestone2.name=Corestone2 small Coal
 tile.corestone_small_redstone_corestone2.name=Corestone2 small Redstone
 tile.corestone_small_sulfur_corestone2.name=Corestone2 small Sulfur
+tile.corestone_small_painite_corestone2.name=Corestone2 small Painite
 
 tile.corestone_compact_majorite_corestone2.name=Corestone2 compact Majorite
 tile.corestone_compact_brigmanite_corestone2.name=Corestone2 compact Brigmanite
@@ -3685,6 +3720,7 @@ tile.corestone_compact_iron_corestone2.name=Corestone2 compact Iron
 tile.corestone_compact_coal_corestone2.name=Corestone2 compact Coal
 tile.corestone_compact_redstone_corestone2.name=Corestone2 compact Redstone
 tile.corestone_compact_sulfur_corestone2.name=Corestone2 compact Sulfur
+tile.corestone_compact_painite_corestone2.name=Corestone2 compact Painite
 
 tile.corestone_innercorestone.name=Innercorestone
 tile.corestone_majorite_innercorestone.name=Innercorestone Majorite
@@ -3719,6 +3755,7 @@ tile.corestone_iron_innercorestone.name=Innercorestone Iron
 tile.corestone_coal_innercorestone.name=Innercorestone Coal
 tile.corestone_redstone_innercorestone.name=Innercorestone Redstone
 tile.corestone_sulfur_innercorestone.name=Innercorestone Sulfur
+tile.corestone_painite_innercorestone.name=Innercorestone Painite
 
 tile.corestone_small_majorite_innercorestone.name=Innercorestone small Majorite
 tile.corestone_small_brigmanite_innercorestone.name=Innercorestone small Brigmanite
@@ -3753,6 +3790,7 @@ tile.corestone_small_iron_innercorestone.name=Innercorestone small Iron
 tile.corestone_small_coal_innercorestone.name=Innercorestone small Coal
 tile.corestone_small_redstone_innercorestone.name=Innercorestone small Redstone
 tile.corestone_small_sulfur_innercorestone.name=Innercorestone small Sulfur
+tile.corestone_small_painite_innercorestone.name=Innercorestone small Painite
 
 tile.corestone_compact_majorite_innercorestone.name=Innercorestone compact Majorite
 tile.corestone_compact_brigmanite_innercorestone.name=Innercorestone compact Brigmanite
@@ -3787,6 +3825,7 @@ tile.corestone_compact_iron_innercorestone.name=Innercorestone compact Iron
 tile.corestone_compact_coal_innercorestone.name=Innercorestone compact Coal
 tile.corestone_compact_redstone_innercorestone.name=Innercorestone compact Redstone
 tile.corestone_compact_sulfur_innercorestone.name=Innercorestone compact Sulfur
+tile.corestone_compact_painite_innercorestone.name=Innercorestone compact Painite
 
 tile.corestone_innercorestone1.name=Innercorestone1
 tile.corestone_majorite_innercorestone1.name=Innercorestone1 Majorite
@@ -3821,6 +3860,7 @@ tile.corestone_iron_innercorestone1.name=Innercorestone1 Iron
 tile.corestone_coal_innercorestone1.name=Innercorestone1 Coal
 tile.corestone_redstone_innercorestone1.name=Innercorestone1 Redstone
 tile.corestone_sulfur_innercorestone1.name=Innercorestone1 Sulfur
+tile.corestone_painite_innercorestone1.name=Innercorestone1 Painite
 
 tile.corestone_small_majorite_innercorestone1.name=Innercorestone1 small Majorite
 tile.corestone_small_brigmanite_innercorestone1.name=Innercorestone1 small Brigmanite
@@ -3855,6 +3895,7 @@ tile.corestone_small_iron_innercorestone1.name=Innercorestone1 small Iron
 tile.corestone_small_coal_innercorestone1.name=Innercorestone1 small Coal
 tile.corestone_small_redstone_innercorestone1.name=Innercorestone1 small Redstone
 tile.corestone_small_sulfur_innercorestone1.name=Innercorestone1 small Sulfur
+tile.corestone_small_painite_innercorestone1.name=Innercorestone1 small Painite
 
 tile.corestone_compact_majorite_innercorestone1.name=Innercorestone1 compact Majorite
 tile.corestone_compact_brigmanite_innercorestone1.name=Innercorestone1 compact Brigmanite
@@ -3889,6 +3930,7 @@ tile.corestone_compact_iron_innercorestone1.name=Innercorestone1 compact Iron
 tile.corestone_compact_coal_innercorestone1.name=Innercorestone1 compact Coal
 tile.corestone_compact_redstone_innercorestone1.name=Innercorestone1 compact Redstone
 tile.corestone_compact_sulfur_innercorestone1.name=Innercorestone1 compact Sulfur
+tile.corestone_compact_painite_innercorestone1.name=Innercorestone1 compact Painite
 
 tile.corestone_innercorestone2.name=Innercorestone2
 tile.corestone_majorite_innercorestone2.name=Innercorestone2 Majorite
@@ -3923,6 +3965,7 @@ tile.corestone_iron_innercorestone2.name=Innercorestone2 Iron
 tile.corestone_coal_innercorestone2.name=Innercorestone2 Coal
 tile.corestone_redstone_innercorestone2.name=Innercorestone2 Redstone
 tile.corestone_sulfur_innercorestone2.name=Innercorestone2 Sulfur
+tile.corestone_painite_innercorestone2.name=Innercorestone2 Painite
 
 tile.corestone_small_majorite_innercorestone2.name=Innercorestone2 small Majorite
 tile.corestone_small_brigmanite_innercorestone2.name=Innercorestone2 small Brigmanite
@@ -3957,6 +4000,7 @@ tile.corestone_small_iron_innercorestone2.name=Innercorestone2 small Iron
 tile.corestone_small_coal_innercorestone2.name=Innercorestone2 small Coal
 tile.corestone_small_redstone_innercorestone2.name=Innercorestone2 small Redstone
 tile.corestone_small_sulfur_innercorestone2.name=Innercorestone2 small Sulfur
+tile.corestone_small_painite_innercorestone2.name=Innercorestone2 small Painite
 
 tile.corestone_compact_majorite_innercorestone2.name=Innercorestone2 compact Majorite
 tile.corestone_compact_brigmanite_innercorestone2.name=Innercorestone2 compact Brigmanite
@@ -3991,6 +4035,7 @@ tile.corestone_compact_iron_innercorestone2.name=Innercorestone2 compact Iron
 tile.corestone_compact_coal_innercorestone2.name=Innercorestone2 compact Coal
 tile.corestone_compact_redstone_innercorestone2.name=Innercorestone2 compact Redstone
 tile.corestone_compact_sulfur_innercorestone2.name=Innercorestone2 compact Sulfur
+tile.corestone_compact_painite_innercorestone2.name=Innercorestone2 compact Painite
 
 tile.corestone_centercorestone.name=Centercorestone
 tile.corestone_majorite_centercorestone.name=Centercorestone Majorite
@@ -4025,6 +4070,7 @@ tile.corestone_iron_centercorestone.name=Centercorestone Iron
 tile.corestone_coal_centercorestone.name=Centercorestone Coal
 tile.corestone_redstone_centercorestone.name=Centercorestone Redstone
 tile.corestone_sulfur_centercorestone.name=Centercorestone Sulfur
+tile.corestone_painite_centercorestone.name=Centercorestone Painite
 
 tile.corestone_small_majorite_centercorestone.name=Centercorestone small Majorite
 tile.corestone_small_brigmanite_centercorestone.name=Centercorestone small Brigmanite
@@ -4059,6 +4105,7 @@ tile.corestone_small_iron_centercorestone.name=Centercorestone small Iron
 tile.corestone_small_coal_centercorestone.name=Centercorestone small Coal
 tile.corestone_small_redstone_centercorestone.name=Centercorestone small Redstone
 tile.corestone_small_sulfur_centercorestone.name=Centercorestone small Sulfur
+tile.corestone_small_painite_centercorestone.name=Centercorestone small Painite
 
 tile.corestone_compact_majorite_centercorestone.name=Centercorestone compact Majorite
 tile.corestone_compact_brigmanite_centercorestone.name=Centercorestone compact Brigmanite
@@ -4088,10 +4135,7 @@ tile.corestone_compact_iron_centercorestone.name=Centercorestone compact Iron
 tile.corestone_compact_coal_centercorestone.name=Centercorestone compact Coal
 tile.corestone_compact_redstone_centercorestone.name=Centercorestone compact Redstone
 tile.corestone_compact_sulfur_centercorestone.name=Centercorestone compact Sulfur
-
-tile.centercorestone_compact_painite.name=Centercorestone compact Painite
-tile.centercorestone_small_painite.name=Centercorestone small Painite
-tile.centercorestone_painite.name=Centercorestone Painite
+tile.corestone_compact_painite_centercorestone.name=Centercorestone compact Painite
 
 tile.onyx_gravel.name=Onyx gravel
 tile.amazonite_gravel.name=Amazonite gravel
@@ -4395,6 +4439,7 @@ fluid.amazonite_lava=Amazonite lava
 fluid.core_lava=Core lava
 fluid.sulfuric_acid=Sulfuric acid
 fluid.onyx_lava=Onyx lava
+fluid.painite_lava=Painite lava
 
 //ARTIFACT ITEMS
 item.enhancing_gem.name=Enhancing gem
