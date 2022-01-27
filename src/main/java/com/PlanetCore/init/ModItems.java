@@ -453,8 +453,6 @@ public class ModItems {
 	public static final Item TITANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item URANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TITANIUM_URANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TUNGSTEN_URANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_TITANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TOPAZ_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item JADE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -555,7 +553,6 @@ public class ModItems {
 	public static final Item DEMON_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item DEMON_STAR_CHARGED = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item CORE_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item ENHANCING_GEM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	/*
 	public static final Item PLATINUM_APPLE = new ThreeEffectFoodItem(10, 3.0F, false,
