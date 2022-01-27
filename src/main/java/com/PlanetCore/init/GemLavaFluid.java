@@ -53,40 +53,41 @@ public class GemLavaFluid extends BlockFluidClassic {
 		{
 			PotionEffect effect = ((EntityLivingBase) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 			float damage = 0;
-			if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 4;
-			else if (state.getBlock() == ModBlocks.TOPAZ_LAVA_FLUID) damage = 8;
-			else if (state.getBlock() == ModBlocks.JADE_LAVA_FLUID) damage = 12;
-			else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 16;
-			else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 32;
-			else if (state.getBlock() == ModBlocks.OLIVINE_LAVA_FLUID) damage = 48;
-			else if (state.getBlock() == ModBlocks.WADSLEYITE_LAVA_FLUID) damage = 64;
-			else if (state.getBlock() == ModBlocks.RINGWOODITE_LAVA_FLUID) damage = 80;
-			else if (state.getBlock() == ModBlocks.BRIGMANITE_LAVA_FLUID) damage = 96;
-			else if (state.getBlock() == ModBlocks.MAJORITE_LAVA_FLUID) damage = 128;
-			else if (state.getBlock() == ModBlocks.AMAZONITE_LAVA_FLUID) damage = 192;
-			else if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) damage = 256;
+			if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 2;
+			else if (state.getBlock() == ModBlocks.TOPAZ_LAVA_FLUID) damage = 4;
+			else if (state.getBlock() == ModBlocks.JADE_LAVA_FLUID) damage = 6;
+			else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 8;
+			else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 12;
+			else if (state.getBlock() == ModBlocks.OLIVINE_LAVA_FLUID) damage = 16;
+			else if (state.getBlock() == ModBlocks.WADSLEYITE_LAVA_FLUID) damage = 20;
+			else if (state.getBlock() == ModBlocks.RINGWOODITE_LAVA_FLUID) damage = 24;
+			else if (state.getBlock() == ModBlocks.BRIGMANITE_LAVA_FLUID) damage = 28;
+			else if (state.getBlock() == ModBlocks.MAJORITE_LAVA_FLUID) damage = 32;
+			else if (state.getBlock() == ModBlocks.AMAZONITE_LAVA_FLUID) damage = 40;
+			else if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) damage = 48;
+			else if (state.getBlock() == ModBlocks.PAINITE_LAVA_FLUID) damage = 64;
 			if (effect == null) {
 				entityIn.attackEntityFrom(DamageSource.LAVA, damage * 4);
 				entityIn.setFire(10);
 			}
 			else if (effect != null && effect.getAmplifier() == 0) {
-				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+				entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
 			}
 			else if (effect != null && effect.getAmplifier() == 1) {
-				damage = damage / 4;
+				damage = damage / 2;
 				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
 			}
 			else if (effect != null && effect.getAmplifier() == 2) {
-				damage = damage / 16;
-				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+				damage = damage / 4;
+				if (damage >= 2) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
 			}
 			else if (effect != null && effect.getAmplifier() == 3) {
-				damage = damage / 64;
-				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+				damage = damage / 8;
+				if (damage >= 3) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
 			}
 			else if (effect != null && effect.getAmplifier() == 4) {
-				damage = damage / 256;
-				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+				damage = damage / 16;
+				if (damage >= 4) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
 			}
 		}
 		super.onEntityCollision(worldIn, pos, state, entityIn);
@@ -151,33 +152,36 @@ public class GemLavaFluid extends BlockFluidClassic {
 			{
 				PotionEffect effect = ((EntityLiving) entity).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 				float damage = 0;
-				if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 4;
-				else if (state.getBlock() == ModBlocks.TOPAZ_LAVA_FLUID) damage = 8;
-				else if (state.getBlock() == ModBlocks.JADE_LAVA_FLUID) damage = 12;
-				else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 16;
-				else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 32;
-				else if (state.getBlock() == ModBlocks.OLIVINE_LAVA_FLUID) damage = 48;
-				else if (state.getBlock() == ModBlocks.WADSLEYITE_LAVA_FLUID) damage = 64;
-				else if (state.getBlock() == ModBlocks.RINGWOODITE_LAVA_FLUID) damage = 80;
-				else if (state.getBlock() == ModBlocks.BRIGMANITE_LAVA_FLUID) damage = 96;
-				else if (state.getBlock() == ModBlocks.MAJORITE_LAVA_FLUID) damage = 128;
-				else if (state.getBlock() == ModBlocks.AMAZONITE_LAVA_FLUID) damage = 192;
-				else if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) damage = 256;
+				if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 2;
+				else if (state.getBlock() == ModBlocks.TOPAZ_LAVA_FLUID) damage = 4;
+				else if (state.getBlock() == ModBlocks.JADE_LAVA_FLUID) damage = 6;
+				else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 8;
+				else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 12;
+				else if (state.getBlock() == ModBlocks.OLIVINE_LAVA_FLUID) damage = 16;
+				else if (state.getBlock() == ModBlocks.WADSLEYITE_LAVA_FLUID) damage = 20;
+				else if (state.getBlock() == ModBlocks.RINGWOODITE_LAVA_FLUID) damage = 24;
+				else if (state.getBlock() == ModBlocks.BRIGMANITE_LAVA_FLUID) damage = 28;
+				else if (state.getBlock() == ModBlocks.MAJORITE_LAVA_FLUID) damage = 32;
+				else if (state.getBlock() == ModBlocks.AMAZONITE_LAVA_FLUID) damage = 40;
+				else if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) damage = 48;
+				else if (state.getBlock() == ModBlocks.PAINITE_LAVA_FLUID) damage = 64;
 				if (effect == null) {
-					entity.attackEntityFrom(DamageSource.ON_FIRE, damage);
-					entity.setFire(10);
+					entity.attackEntityFrom(DamageSource.ON_FIRE, damage * 2);
+					entity.setFire(6);
 				} else if (effect != null && effect.getAmplifier() == 0) {
-					damage = damage / 4;
-					if (damage >= 1) entity.attackEntityFrom(DamageSource.GENERIC, damage);
+					entity.attackEntityFrom(DamageSource.GENERIC, damage);
 				} else if (effect != null && effect.getAmplifier() == 1) {
-					damage = damage / 16;
+					damage = damage / 2;
 					if (damage >= 1) entity.attackEntityFrom(DamageSource.GENERIC, damage);
 				} else if (effect != null && effect.getAmplifier() == 2) {
-					damage = damage / 64;
-					if (damage >= 1) entity.attackEntityFrom(DamageSource.GENERIC, damage);
+					damage = damage / 4;
+					if (damage >= 2) entity.attackEntityFrom(DamageSource.GENERIC, damage);
 				} else if (effect != null && effect.getAmplifier() == 3) {
-					damage = damage / 256;
-					if (damage >= 1) entity.attackEntityFrom(DamageSource.GENERIC, damage);
+					damage = damage / 8;
+					if (damage >= 3) entity.attackEntityFrom(DamageSource.GENERIC, damage);
+				} else if (effect != null && effect.getAmplifier() == 4) {
+					damage = damage / 16;
+					if (damage >= 4) entity.attackEntityFrom(DamageSource.GENERIC, damage);
 				}
 			}
 		}
