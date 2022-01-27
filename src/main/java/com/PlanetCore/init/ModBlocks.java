@@ -94,6 +94,8 @@ public class ModBlocks {
     public static final CoreLavaFluid CORE_LAVA_FLUID = _null();
     @ObjectHolder("onyx_lava")
     public static final GemLavaFluid ONYX_LAVA_FLUID = _null();
+    @ObjectHolder("painite_lava")
+    public static final GemLavaFluid PAINITE_LAVA_FLUID = _null();
 
     public static final CrustrockFurnace CRUSTROCK_FURNACE = _null();
     public static final CrustrockFurnace LIT_CRUSTROCK_FURNACE = _null();
@@ -381,6 +383,7 @@ public class ModBlocks {
                 new GemLavaFluid("amazonite_lava", ModFluids.AMAZONITE_LAVA_FLUID, Material.LAVA).setDensity(13000),
                 new CoreLavaFluid("core_lava", ModFluids.CORE_LAVA_FLUID, Material.LAVA).setDensity(5000),
                 new GemLavaFluid("onyx_lava", ModFluids.ONYX_LAVA_FLUID, Material.LAVA).setDensity(14000),
+                new GemLavaFluid("painite_lava", ModFluids.PAINITE_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new GemsGravel("diamond_gravel", PlanetMaterial.DIAMOND_GRAVEL, PlanetHardness.DIAMOND),
                 new GemsGravel("topaz_gravel", PlanetMaterial.TOPAZ_GRAVEL, PlanetHardness.TOPAZ),
                 new GemsGravel("jade_gravel", PlanetMaterial.JADE_GRAVEL, PlanetHardness.JADE),
@@ -397,12 +400,9 @@ public class ModBlocks {
                 new BlockBase("aluminium_block", Material.IRON).setHardness(2F).setResistance(1),
                 new BlockBase("tin_block", Material.IRON).setHardness(3.0F).setResistance(1),
                 new BlockBase("copper_block", Material.IRON).setHardness(3.0F).setResistance(1),
-                new BlockBase("iron_block", Material.IRON).setHardness(3.0F).setResistance(1),
                 new BlockBase("steel_block", Material.IRON).setHardness(10.0F).setResistance(1),
                 new BlockBase("bronze_block", Material.IRON).setHardness(12.0F).setResistance(1),
                 new BlockBase("silver_block", Material.IRON).setHardness(15.0F).setResistance(1),
-                new BlockBase("gold_block", Material.IRON).setHardness(22F).setResistance(1),
-                new BlockBase("platinum_block", Material.IRON).setHardness(35F).setResistance(2),
                 new BlockBase("titanium_block", Material.IRON).setHardness(50F).setResistance(3),
                 new BlockBase("uranium_block", Material.IRON).setHardness(75F).setResistance(4),
                 new BlockBase("tungsten_block", Material.IRON).setHardness(250F).setResistance(5),
@@ -411,7 +411,6 @@ public class ModBlocks {
                 new BlockBase("jade_block", Material.IRON).setHardness(1000F).setResistance(6),
                 new BlockBase("ruby_block", Material.IRON).setHardness(2000F).setResistance(7),
                 new BlockBase("sapphire_block", Material.IRON).setHardness(3000F).setResistance(8),
-                new BlockBase("diamond_block", Material.IRON).setHardness(5000F).setResistance(10),
                 new BlockBase("olivine_block", Material.IRON).setHardness(7500F).setResistance(12),
                 new BlockBase("wadsleyite_block", Material.IRON).setHardness(10000F).setResistance(14),
                 new BlockBase("ringwoodite_block", Material.IRON).setHardness(15000F).setResistance(16),

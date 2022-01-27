@@ -31,7 +31,7 @@ public class ModFluids
 	public static final Fluid CORE_LAVA_FLUID = new FluidLiquid("core_lava", new ResourceLocation("planetcore:blocks/core_lava_still"), new ResourceLocation("planetcore:blocks/core_lava_flow"));
 	public static final Fluid SULFURIC_ACID_FLUID = new FluidLiquid("sulfuric_acid", new ResourceLocation("planetcore:blocks/sulfuric_acid_still"), new ResourceLocation("planetcore:blocks/sulfuric_acid_flow"));
 	public static final Fluid ONYX_LAVA_FLUID = new FluidLiquid("onyx_lava", new ResourceLocation("planetcore:blocks/onyx_lava_still"), new ResourceLocation("planetcore:blocks/onyx_lava_flow"));
-
+	public static final Fluid PAINITE_LAVA_FLUID = new FluidLiquid("painite_lava", new ResourceLocation("planetcore:blocks/painite_lava_still"), new ResourceLocation("planetcore:blocks/painite_lava_flow"));
 	public static void registerFluids()
 	{
 		registerFluid(ALUMINIUM_LAVA_FLUID);
@@ -57,6 +57,7 @@ public class ModFluids
 		registerFluid(CORE_LAVA_FLUID);
 		registerFluid(SULFURIC_ACID_FLUID);
 		registerFluid(ONYX_LAVA_FLUID);
+		registerFluid(PAINITE_LAVA_FLUID);
 	}
 	public static void registerFluid(Fluid fluid)
 	{

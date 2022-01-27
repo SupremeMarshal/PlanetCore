@@ -560,6 +560,25 @@ public class RenderHandler
 					return new ModelResourceLocation("planetcore:onyx_lava", "fluid");
 				}
 			});
+
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.PAINITE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:painite_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.PAINITE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:painite_lava", "fluid");
+				}
+			});
 	}
 
 
