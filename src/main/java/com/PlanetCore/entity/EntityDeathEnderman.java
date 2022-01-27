@@ -12,6 +12,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
 
 public class EntityDeathEnderman extends EntityEnderman
 {
@@ -94,7 +95,7 @@ public class EntityDeathEnderman extends EntityEnderman
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -256) {
+		if (posY <= -256 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;

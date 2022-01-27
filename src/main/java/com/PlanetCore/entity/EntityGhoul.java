@@ -16,6 +16,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
 
 public class EntityGhoul extends EntityMob
 {
@@ -93,7 +94,7 @@ public class EntityGhoul extends EntityMob
 	
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -64 && posY > -1792) {
+		if (posY <= -64 && posY > -1792 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;

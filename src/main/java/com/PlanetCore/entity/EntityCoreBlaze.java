@@ -15,6 +15,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
 
 import java.util.Random;
 
@@ -327,7 +328,7 @@ public class EntityCoreBlaze extends EntityBlaze {
 
     @Override
     public boolean getCanSpawnHere() {
-        if (posY < -1792) {
+        if (posY < -1792 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
             return true;
         }
         else return false;

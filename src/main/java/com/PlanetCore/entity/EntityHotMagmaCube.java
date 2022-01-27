@@ -11,6 +11,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
 
 public class EntityHotMagmaCube extends EntityMagmaCube
 {
@@ -82,7 +83,7 @@ public class EntityHotMagmaCube extends EntityMagmaCube
 	
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -256 && posY > -1792) {
+		if (posY <= -256 && posY > -1792 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;

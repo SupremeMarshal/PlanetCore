@@ -20,6 +20,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
 
 import javax.swing.text.LayoutQueue;
 import java.util.Random;
@@ -334,7 +335,7 @@ public class EntityHotBlaze extends EntityBlaze {
 
     @Override
     public boolean getCanSpawnHere() {
-        if (posY < -256 && posY >= -1792) {
+        if (posY < -256 && posY >= -1792 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
             return true;
         }
         else return false;
