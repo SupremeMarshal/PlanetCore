@@ -45,9 +45,9 @@ public class ToolMaterials {
     public static final Item.ToolMaterial AMAZONITE = createToolMaterial("amazonite", 100, 3122, 300.0F, 8.5F, 22, 2);
     public static final Item.ToolMaterial ONYX = createToolMaterial("onyx", 1000, 3122, 400.0F, 9.0F, 22, 2);
     public static final Item.ToolMaterial ONYX_II = createToolMaterial("onyx_II", 1000, 3122, 500.0F, 10.0F, 22, 2);
-    public static final Item.ToolMaterial ONYX_III = createToolMaterial("onyx_III", 1000, 3122, 600.0F, 11.0F, 22, 2);
-    public static final Item.ToolMaterial ONYX_IV = createToolMaterial("onyx_IV", 1000, 3122, 700.0F, 12.0F, 22, 2);
-    public static final Item.ToolMaterial ONYX_V = createToolMaterial("onyx_V", 1000, 3122, 1000.0F, 13.0F, 22, 2);
+    public static final Item.ToolMaterial ONYX_III = createToolMaterial("onyx_III", 1000, 3122, 750.0F, 11.0F, 22, 2);
+    public static final Item.ToolMaterial ONYX_IV = createToolMaterial("onyx_IV", 1000, 3122, 1000.0F, 12.0F, 22, 2);
+    public static final Item.ToolMaterial ONYX_V = createToolMaterial("onyx_V", 1000, 3122, 1500.0F, 13.0F, 22, 2);
 
     public static Item.ToolMaterial createToolMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damageVsEntity, int enchantability, float relentless) {
         Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial(name, harvestLevel, maxUses, efficiency, damageVsEntity, enchantability);
