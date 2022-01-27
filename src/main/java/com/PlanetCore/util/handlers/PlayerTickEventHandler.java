@@ -68,173 +68,47 @@ public class PlayerTickEventHandler {
             PotionEffect effect = event.player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 
             float Y = (float) event.player.posY;
+            float damage = 1;
 
 
-            if (Y < -256 && Y >= -1024) {
-                if (event.player.world.getTotalWorldTime() % 600 == 0) {
-
-                    if (effect == null) {
-                        event.player.setFire(4);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.00390625F * Y);
-                    }
-                }
-            }
-            if (Y < -1024 && Y >= -2048) {
+            if (Y < -256 && Y >= -512) {
                 if (event.player.world.getTotalWorldTime() % 600 == 0) {
                     if (effect == null) {
                         event.player.setFire(4);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0078125F * (Y + 1024) + 4);
-                    }
-                    if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.001953125F * (Y + 1024) + 1);
+                        event.player.attackEntityFrom(DamageSource.GENERIC, 1);
                     }
                 }
             }
-            if (Y < -2048 && Y >= -3072) {
-                if (event.player.world.getTotalWorldTime() % 600 == 0) {
-                    if (effect == null) {
-                        event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.015625F * (Y + 2048) + 12);
-                    }
-                    if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.00390625F * (Y + 2048) + 3);
-                    }
-                    if(effect != null && effect.getAmplifier() == 1) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0009765625F * (Y + 2048) + 1);
-                    }
+            if (Y < -512) {
+                float time = 500 + ((Y+512)/5);
+                if (time < 20) {
+                    time = 20;
                 }
-            }
-            if (Y < -3072 && Y >= -4096) {
-                if (event.player.world.getTotalWorldTime() % 600 == 0) {
+                if (event.player.world.getTotalWorldTime() % time == 0) {
+                    damage = -0.0078125F * (Y + 512);
                     if (effect == null) {
                         event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.03125F * (Y + 3072) + 28);
+                        event.player.attackEntityFrom(DamageSource.GENERIC, damage + 1);
                     }
                     if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0078125F * (Y + 3072) + 7);
+                        damage = damage / 2;
+                        if (damage >= 2) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
                     }
                     if(effect != null && effect.getAmplifier() == 1) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.001953125F * (Y + 3072) + 2);
-                    }
-                }
-            }
-            if (Y < -4096 && Y >= -5120) {
-                if (event.player.world.getTotalWorldTime() % 600 == 0) {
-                    if (effect == null) {
-                        event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0625F * (Y + 4096) + 60);
-                    }
-                    if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.015625F * (Y + 4096) + 15);
-                    }
-                    if(effect != null && effect.getAmplifier() == 1) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.00390625F * (Y + 4096) + 4);
+                        damage = damage / 4;
+                        if (damage >= 2) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
                     }
                     if(effect != null && effect.getAmplifier() == 2) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0009765625F * (Y + 4096) + 1);
-                    }
-                }
-            }
-            if (Y < -5120 && Y >= -6144) {
-                if (event.player.world.getTotalWorldTime() % 500 == 0) {
-                    if (effect == null) {
-                        event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.125F * (Y + 5120) + 124);
-                    }
-                    if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.03125F * (Y + 5120) + 31);
-                    }
-                    if(effect != null && effect.getAmplifier() == 1) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0078125F * (Y + 5120) + 8);
-                    }
-                    if(effect != null && effect.getAmplifier() == 2) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.001953125F * (Y + 5120) + 2);
-                    }
-                }
-            }
-            if (Y < -6144 && Y >= -7168) {
-                if (event.player.world.getTotalWorldTime() % 400 == 0) {
-                    if (effect == null) {
-                        event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.25F * (Y + 6144) + 252);
-                    }
-                    if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0625F * (Y + 6144) + 63);
-                    }
-                    if(effect != null && effect.getAmplifier() == 1) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.015625F * (Y + 6144) + 16);
-                    }
-                    if(effect != null && effect.getAmplifier() == 2) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.00390625F * (Y + 6144) + 4);
+                        damage = damage / 8;
+                        if (damage >= 2.0) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
                     }
                     if(effect != null && effect.getAmplifier() == 3) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0009765625F * (Y + 6144) + 1);
-                    }
-                }
-            }
-            if (Y < -7168 && Y >= -8192) {
-                if (event.player.world.getTotalWorldTime() % 300 == 0) {
-                    if (effect == null) {
-                        event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.5F * (Y + 7168) + 508);
-                    }
-                    if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.125F * (Y + 7168) + 127);
-                    }
-                    if(effect != null && effect.getAmplifier() == 1) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.03125F * (Y + 7168) + 32);
-                    }
-                    if(effect != null && effect.getAmplifier() == 2) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0078125F * (Y + 7168) + 8);
-                    }
-                    if(effect != null && effect.getAmplifier() == 3) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.001953125F * (Y + 7168) + 2);
-                    }
-                }
-            }
-            if (Y < -8192 && Y >= -9216) {
-                if (event.player.world.getTotalWorldTime() % 200 == 0) {
-                    if (effect == null) {
-                        event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -1F * (Y + 8192) + 1020);
-                    }
-                    if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.25F * (Y + 8192) + 255);
-                    }
-                    if(effect != null && effect.getAmplifier() == 1) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0625F * (Y + 8192) + 64);
-                    }
-                    if(effect != null && effect.getAmplifier() == 2) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.015625F * (Y + 8192) + 16);
-                    }
-                    if(effect != null && effect.getAmplifier() == 3) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.00390625F * (Y + 8192) + 4);
+                        damage = damage / 16;
+                        if (damage >= 1.0) event.player.attackEntityFrom(DamageSource.GENERIC, damage);
                     }
                     if(effect != null && effect.getAmplifier() == 4) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0009765625F * (Y + 8192) + 1);
-                    }
-                }
-            }
-            if (Y < -8192) {
-                if (event.player.world.getTotalWorldTime() % 150 == 0) {
-                    if (effect == null) {
-                        event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -2F * (Y + 8192) + 2044);
-                    }
-                    if(effect != null && effect.getAmplifier() == 0) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.5F * (Y + 8192) + 511);
-                    }
-                    if(effect != null && effect.getAmplifier() == 1) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.125F * (Y + 8192) + 128);
-                    }
-                    if(effect != null && effect.getAmplifier() == 2) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.03125F * (Y + 8192) + 32);
-                    }
-                    if(effect != null && effect.getAmplifier() == 3) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.0078125F * (Y + 8192) + 8);
-                    }
-                    if(effect != null && effect.getAmplifier() == 4) {
-                        event.player.attackEntityFrom(DamageSource.GENERIC, -0.001953125F * (Y + 8192) + 2);
+                        damage = damage / 32;
+                        if (damage >= 0.5) event.player.attackEntityFrom(DamageSource.GENERIC, damage);
                     }
                 }
             }
