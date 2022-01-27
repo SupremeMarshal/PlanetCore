@@ -53,6 +53,8 @@ public class PlayerTickEventHandler {
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 
+        if (event.player.getEntityWorld().getWorldType().getName() != "PlanetCore") return;
+
         if (!event.player.getEntityWorld().isRemote) {
             //Heal player based on food level. Heal from 0% to 100% in 600 seconds at max food lvl. Heal fully in 3 hours if food level is 1. At 0 food, player stop healing.
             if (event.player.getFoodStats().getFoodLevel() >= 1) {
