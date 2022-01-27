@@ -99,20 +99,6 @@ public class RegistryHandler {
         MinecraftForge.EVENT_BUS.register(new FogHandler());
         MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
         ModPotions.registerPotions();
-        //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
-
-
-    }
-
-    @SubscribeEvent
-    public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
-        SoundHandler.registerSounds(event.getRegistry());
-    }
-
-    public static void initRegistries(FMLInitializationEvent event) {
-
-        NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
-
         OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.STEEL_INGOT, 1, OreDictionary.WILDCARD_VALUE));
@@ -133,6 +119,19 @@ public class RegistryHandler {
         OreDictionary.registerOre("ingotTitanium", new ItemStack(ModItems.TITANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotUranium", new ItemStack(ModItems.URANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotTungsten", new ItemStack(ModItems.TUNGSTEN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
+
+
+    }
+
+    @SubscribeEvent
+    public static void registerSounds(RegistryEvent.Register<SoundEvent> event) {
+        SoundHandler.registerSounds(event.getRegistry());
+    }
+
+    public static void initRegistries(FMLInitializationEvent event) {
+
+        NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 
 
     }
