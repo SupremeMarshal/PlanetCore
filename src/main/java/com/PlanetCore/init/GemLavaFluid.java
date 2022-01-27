@@ -125,6 +125,8 @@ public class GemLavaFluid extends BlockFluidClassic {
 					if (this == ModBlocks.BRIGMANITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.BRIGMANITE_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.MAJORITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.MAJORITE_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.AMAZONITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.AMAZONITE_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.ONYX_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.ONYX_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.PAINITE_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.PAINITE_SUPERCOMPACT.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}
@@ -144,13 +146,13 @@ public class GemLavaFluid extends BlockFluidClassic {
 	public static void burnEntities(World world, int x, int y, int z, int radius, IBlockState state) {
 
 		AxisAlignedBB bb = new AxisAlignedBB(x + 5, y + 5, z + 5, x - 5, y - 5, z - 5);
-		List list = world.getEntitiesWithinAABB(EntityLiving.class, bb);
+		List list = world.getEntitiesWithinAABB(EntityLivingBase.class, bb);
 
 		for (int i = 0; i < list.size(); ++i) {
 			Entity entity = (Entity) list.get(i);
 
 			{
-				PotionEffect effect = ((EntityLiving) entity).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+				PotionEffect effect = ((EntityLivingBase) entity).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 				float damage = 0;
 				if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 2;
 				else if (state.getBlock() == ModBlocks.TOPAZ_LAVA_FLUID) damage = 4;
