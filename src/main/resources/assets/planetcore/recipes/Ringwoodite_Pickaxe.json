@@ -3,26 +3,26 @@
     
     "pattern":
     [
-        "A",
-        "A",
-        "B"
+        "AAA",
+        " B ",
+        " B "
     ],
     
     "key":
     {
         "A":
         {
-            "item": "planetcore:tungsten_ingot"
+            "item": "planetcore:ringwoodite"
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:ringwoodite_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:tungsten_sword",
+        "item": "planetcore:ringwoodite_pickaxe",
         "count": 1
     }
 }

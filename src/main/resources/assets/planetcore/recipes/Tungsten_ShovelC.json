@@ -4,7 +4,7 @@
     "pattern":
     [
         "A",
-        "A",
+        "B",
         "B"
     ],
     
@@ -16,13 +16,13 @@
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:tungsten_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:tungsten_sword",
+        "item": "planetcore:complete_tungsten_shovel",
         "count": 1
     }
 }

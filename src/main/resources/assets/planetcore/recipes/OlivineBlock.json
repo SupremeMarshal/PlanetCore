@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:olivine"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:olivine_block",
+        "count": 1
+    }
+}

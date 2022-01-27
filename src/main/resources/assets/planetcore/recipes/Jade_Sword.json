@@ -12,17 +12,17 @@
     {
         "A":
         {
-            "item": "planetcore:tungsten_ingot"
+            "item": "planetcore:jade"
         },
         "B":
         {
-            "item": "minecraft:stick"
+            "item": "planetcore:jade_rod"
         }
     },
     
     "result":
     {
-        "item": "planetcore:tungsten_sword",
+        "item": "planetcore:jade_sword",
         "count": 1
     }
 }
