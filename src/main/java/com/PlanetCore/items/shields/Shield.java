@@ -45,10 +45,10 @@ public class Shield extends ItemShield {
     public Shield(ShieldMaterial shieldMaterial) {
 
         this.shieldMaterial = shieldMaterial;
-        if (shieldMaterial == ShieldMaterial.ALUMINIUM) {this.setMaxDamage(504);}
-        if (shieldMaterial == ShieldMaterial.IRON || shieldMaterial == ShieldMaterial.TIN || shieldMaterial == ShieldMaterial.COPPER) {this.setMaxDamage(672);}
-        if (shieldMaterial == ShieldMaterial.STEEL) {this.setMaxDamage(1008);}
-        if (shieldMaterial == ShieldMaterial.BRONZE) {this.setMaxDamage(1344);}
+        if (shieldMaterial == ShieldMaterial.ALUMINIUM || shieldMaterial == ShieldMaterial.SILVER) {this.setMaxDamage(504);}
+        else if (shieldMaterial == ShieldMaterial.IRON || shieldMaterial == ShieldMaterial.TIN || shieldMaterial == ShieldMaterial.COPPER || shieldMaterial == ShieldMaterial.BRONZE || shieldMaterial == ShieldMaterial.GOLD) {this.setMaxDamage(672);}
+        else if (shieldMaterial == ShieldMaterial.STEEL) {this.setMaxDamage(1008);}
+        else this.setMaxDamage(4368);
         //I'll do the rest later
 
     }
@@ -123,6 +123,7 @@ public class Shield extends ItemShield {
         if (shieldMaterial == ShieldMaterial.URANIUM) return ("Uranium shield");
         if (shieldMaterial == ShieldMaterial.TUNGSTEN) return ("Tungsten shield");
         if (shieldMaterial == ShieldMaterial.TUNGSTEN_TITANIUM) return ("Tungsten Titanium shield");
+        if (shieldMaterial == ShieldMaterial.TOPAZ) return ("Topaz shield");
         if (shieldMaterial == ShieldMaterial.JADE) return ("Jade shield");
         if (shieldMaterial == ShieldMaterial.RUBY) return ("Ruby shield");
         if (shieldMaterial == ShieldMaterial.SAPPHIRE) return ("Sapphire shield");
