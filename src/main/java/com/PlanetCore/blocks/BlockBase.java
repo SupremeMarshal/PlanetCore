@@ -5,8 +5,7 @@ import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
 import com.google.common.base.Predicate;
 import net.minecraft.advancements.CriteriaTriggers;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockWorldState;
 import net.minecraft.block.state.IBlockState;
@@ -115,7 +114,7 @@ public class BlockBase extends Block {
 				if (pos.getY() < 0 && pos.getY() >= -512 && Math.random() >= pos.getY() * -0.000009765625) {
 					return;
 				}
-				if (pos.getY() < -512 && pos.getY() >= -1024 && Math.random() >= (pos.getY() + 512) * -0.000009765625 + 0.005) {
+				if (pos.getY() < -512 && pos.getY() >= -1024 && Math.random() >= (pos.getY() + 512) * -0.00001953125 + 0.005) {
 					return;
 				}
 				if (pos.getY() < -1024 && pos.getY() >= -1536 && Math.random() >= (pos.getY() + 1024) * -0.0000390625 + 0.015) {
@@ -129,11 +128,26 @@ public class BlockBase extends Block {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
 					if (movedState.getMaterial() == Material.IRON || movedState.getBlock() == ModBlocks.AIR_NO_PRESSURE) return;
-					if (movedState == Blocks.AIR.getDefaultState() || movedState == Blocks.LADDER || movedState == Blocks.WALL_SIGN || movedState == Blocks.STONE_BUTTON || movedState == Blocks.WATER || movedState == Blocks.FLOWING_WATER) {
+					if (movedState == Blocks.AIR.getDefaultState()) {
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
-							.filter(s -> !movedPos.offset(s).equals(pos) && worldIn.isAirBlock(movedPos.offset(s)))
+							.filter(s -> !movedPos.offset(s).equals(pos) && (worldIn.isAirBlock(movedPos.offset(s))
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockLadder
+									|| worldIn.getBlockState(movedPos.offset(s)).getMaterial() == Material.WATER
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockTorch
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockBanner
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockBasePressurePlate
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockBrewingStand
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockBed
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockBush
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockButton
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockCactus
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockDirt
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockCake
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockCarpet
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockCarrot
+									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockCrops))
 							.toArray(EnumFacing[]::new);
 					if (sides.length == 0) {
 						continue;
@@ -149,7 +163,8 @@ public class BlockBase extends Block {
 	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
 	{
 		return this == ModBlocks.IRON_BLOCK || this == ModBlocks.STEEL_BLOCK || this == ModBlocks.SILVER_BLOCK || this ==  ModBlocks.GOLD_BLOCK
-				|| this == ModBlocks.PLATINUM_BLOCK || this == ModBlocks.SAPPHIRE_BLOCK || this == ModBlocks.RUBY_BLOCK
+				|| this == ModBlocks.SAPPHIRE_BLOCK || this == ModBlocks.RUBY_BLOCK || this == ModBlocks.OLIVINE_BLOCK || this == ModBlocks.WADSLEYITE_BLOCK
+				|| this == ModBlocks.RINGWOODITE_BLOCK || this == ModBlocks.BRIGMANITE_BLOCK || this == ModBlocks.MAJORITE_BLOCK
 				|| this == ModBlocks.DIAMOND_BLOCK || this == ModBlocks.AMAZONITE_BLOCK || this == ModBlocks.ONYX_BLOCK;
 	}
 
