@@ -17,9 +17,7 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.potion.PotionType;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -33,14 +31,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.oredict.RecipeSorter;
 
 import java.util.Collections;
 
 
 @EventBusSubscriber
 public class RegistryHandler {
-
 
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
@@ -54,6 +50,26 @@ public class RegistryHandler {
             }
             event.getRegistry().register(itemBlock.setRegistryName(block.getRegistryName()));
         }
+        OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.STEEL_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotBoron", new ItemStack(ModItems.BORON_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotLithium", new ItemStack(ModItems.LITHIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotMagnesium", new ItemStack(ModItems.MAGNESIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotThorium", new ItemStack(ModItems.THORIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotAluminum", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotAluminium", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotCopper", new ItemStack(ModItems.COPPER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotTin", new ItemStack(ModItems.TIN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotSilver", new ItemStack(ModItems.SILVER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemSapphire", new ItemStack(ModItems.SAPPHIRE, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemRuby", new ItemStack(ModItems.RUBY, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("gemAmazonite", new ItemStack(ModItems.AMAZONITE, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("itemSulfur", new ItemStack(ModItems.SULFUR, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotBronze", new ItemStack(ModItems.BRONZE_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotTitanium", new ItemStack(ModItems.TITANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotUranium", new ItemStack(ModItems.URANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("ingotTungsten", new ItemStack(ModItems.TUNGSTEN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
 
 
     }
@@ -84,12 +100,6 @@ public class RegistryHandler {
         ModBlocks.registerRenders();
     }
 
-    @SubscribeEvent
-    public static void registerEnchantment(RegistryEvent.Register<Enchantment> event) {
-        event.getRegistry().registerAll(EnchantmentInit.ENCHANTMENTS.toArray(new Enchantment[0]));
-    }
-
-
     public static void preInitRegistries(FMLPreInitializationEvent event) {
         ModFluids.registerFluids();
         EntityInit.registerEntities();
@@ -99,29 +109,13 @@ public class RegistryHandler {
         MinecraftForge.EVENT_BUS.register(new FogHandler());
         MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
         ModPotions.registerPotions();
-        OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotSteel", new ItemStack(ModItems.STEEL_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotBoron", new ItemStack(ModItems.BORON_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotLithium", new ItemStack(ModItems.LITHIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotMagnesium", new ItemStack(ModItems.MAGNESIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotThorium", new ItemStack(ModItems.THORIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotAluminum", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotAluminium", new ItemStack(ModItems.ALUMINIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotCopper", new ItemStack(ModItems.COPPER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotTin", new ItemStack(ModItems.TIN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotSilver", new ItemStack(ModItems.SILVER_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("gemSapphire", new ItemStack(ModItems.SAPPHIRE, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("gemRuby", new ItemStack(ModItems.RUBY, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("gemAmazonite", new ItemStack(ModItems.AMAZONITE, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("itemSulfur", new ItemStack(ModItems.SULFUR, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotBronze", new ItemStack(ModItems.BRONZE_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotTitanium", new ItemStack(ModItems.TITANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotUranium", new ItemStack(ModItems.URANIUM_INGOT, 1, OreDictionary.WILDCARD_VALUE));
-        OreDictionary.registerOre("ingotTungsten", new ItemStack(ModItems.TUNGSTEN_INGOT, 1, OreDictionary.WILDCARD_VALUE));
+
         //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
+    }
 
-
+    @SubscribeEvent
+    public static void registerEnchantment(RegistryEvent.Register<Enchantment> event) {
+        event.getRegistry().registerAll(EnchantmentInit.ENCHANTMENTS.toArray(new Enchantment[0]));
     }
 
     @SubscribeEvent
