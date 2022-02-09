@@ -1467,8 +1467,8 @@
 						]
 					},
 					"spawnSize": 9,
-					"spawnTries": 5,
-					"spawnProbability": 0.5,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -2939,9 +2939,9 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 5,
-					"spawnProbability": 0.2,
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -5402,8 +5402,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 2,
+					"spawnSize": 9,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -7667,8 +7667,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 2,
+					"spawnSize": 9,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -10419,8 +10419,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 2,
+					"spawnSize": 9,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -13119,8 +13119,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 2,
+					"spawnSize": 9,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -16045,8 +16045,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 2,
+					"spawnSize": 9,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -18724,9 +18724,9 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 5,
-					"spawnProbability": 0.5,
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -22332,9 +22332,9 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 5,
-					"spawnProbability": 0.5,
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -25521,7 +25521,7 @@
 							}
 						]
 					},
-					"spawnSize": 20,
+					"spawnSize": 9,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -28922,7 +28922,7 @@
 							}
 						]
 					},
-					"spawnSize": 20,
+					"spawnSize": 9,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -32033,7 +32033,7 @@
 							}
 						]
 					},
-					"spawnSize": 20,
+					"spawnSize": 9,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -35090,7 +35090,7 @@
 							}
 						]
 					},
-					"spawnSize": 20,
+					"spawnSize": 9,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -38001,8 +38001,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 4,
+					"spawnSize": 20,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -41179,8 +41179,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 4,
+					"spawnSize": 20,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -44241,8 +44241,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 3,
+					"spawnSize": 20,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -47625,8 +47625,8 @@
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 3,
+					"spawnSize": 20,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -50841,7 +50841,7 @@
 							}
 						]
 					},
-					"spawnSize": 33,
+					"spawnSize": 20,
 					"spawnTries": 2,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -54428,7 +54428,7 @@
 							}
 						]
 					},
-					"spawnSize": 33,
+					"spawnSize": 20,
 					"spawnTries": 2,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
