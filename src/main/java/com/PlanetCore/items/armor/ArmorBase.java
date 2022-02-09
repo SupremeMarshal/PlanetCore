@@ -219,7 +219,7 @@ public class ArmorBase extends ItemArmor {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
@@ -229,19 +229,6 @@ public class ArmorBase extends ItemArmor {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.7"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.8"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.7"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.8"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.9"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
     }

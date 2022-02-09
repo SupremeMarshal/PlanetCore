@@ -196,7 +196,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         )),
                         new PotionEffect(MobEffects.RESISTANCE, 0, 2),
-                        new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.STRENGTH, 0, 1),
                         new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 1)
@@ -210,7 +209,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
                         new PotionEffect(MobEffects.RESISTANCE, 0, 2),
-                        new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.STRENGTH, 0, 2),
                         new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 2)
@@ -224,7 +222,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
                         new PotionEffect(MobEffects.RESISTANCE, 0, 2),
-                        new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 3),
                         new PotionEffect(MobEffects.STRENGTH, 0, 3),
                         new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 3)
@@ -238,7 +235,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_V_BOOTS}
                         ),
                         new PotionEffect(MobEffects.RESISTANCE, 0, 3),
-                        new PotionEffect(MobEffects.FIRE_RESISTANCE, 0, 4),
                         new PotionEffect(MobEffects.STRENGTH, 0, 4),
                         new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 4)
