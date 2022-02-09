@@ -551,8 +551,8 @@ public class ModItems {
 	public static final Item ONYX_ARROW_V = new OnyxArrowV().setCreativeTab(CreativeTabs.COMBAT);
 
 	public static final Item DEMON_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item DEMON_STAR_CHARGED = new ShinyItem().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item CORE_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item ONYX_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	/*
 	public static final Item PLATINUM_APPLE = new ThreeEffectFoodItem(10, 3.0F, false,
