@@ -106,7 +106,7 @@ public class RegistryHandler {
         ModConfiguration.registerConfig(event);
         RemovingVanillaRecipes recipesEvent = new RemovingVanillaRecipes();
         MinecraftForge.EVENT_BUS.register(recipesEvent);
-        MinecraftForge.EVENT_BUS.register(new FogHandler());
+        //MinecraftForge.EVENT_BUS.register(new FogHandler());
         MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
         ModPotions.registerPotions();
 
