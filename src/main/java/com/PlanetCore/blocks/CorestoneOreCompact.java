@@ -1,6 +1,5 @@
 package com.PlanetCore.blocks;
 
-import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

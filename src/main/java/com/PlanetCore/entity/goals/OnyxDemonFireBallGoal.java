@@ -1,7 +1,5 @@
 package com.PlanetCore.entity.goals;
 
-import com.PlanetCore.entity.EntityCoreDemon;
-import com.PlanetCore.entity.EntityCoreLargeFireball;
 import com.PlanetCore.entity.EntityOnyxDemon;
 import com.PlanetCore.entity.EntityOnyxFireball;
 import net.minecraft.entity.EntityLivingBase;
@@ -10,7 +8,6 @@ import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 
 public class OnyxDemonFireBallGoal extends EntityAIBase {
     EntityOnyxDemon owner;

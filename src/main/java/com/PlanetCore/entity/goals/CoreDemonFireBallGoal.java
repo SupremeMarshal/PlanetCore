@@ -2,8 +2,6 @@ package com.PlanetCore.entity.goals;
 
 import com.PlanetCore.entity.EntityCoreDemon;
 import com.PlanetCore.entity.EntityCoreLargeFireball;
-import com.PlanetCore.entity.EntityDemon;
-import com.PlanetCore.entity.EntityHotLargeFireball;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIBase;

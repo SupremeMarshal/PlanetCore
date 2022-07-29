@@ -1,14 +1,9 @@
 package com.PlanetCore.items.arrows;
 
-import java.util.Random;
-
 import com.PlanetCore.init.ModItems;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 public class EntityJadeArrow extends EntityArrow

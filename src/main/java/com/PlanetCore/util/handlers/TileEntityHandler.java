@@ -1,6 +1,8 @@
 package com.PlanetCore.util.handlers;
 
-import com.PlanetCore.blocks.furnaces.*;
+import com.PlanetCore.blocks.furnaces.TileEntityCrustrockFurnace;
+import com.PlanetCore.blocks.furnaces.TileEntitySteelFurnace;
+import com.PlanetCore.blocks.furnaces.TileEntityTungstenFurnace;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class TileEntityHandler {

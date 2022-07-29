@@ -1,16 +1,15 @@
 package com.PlanetCore.entity.render.layers;
 
-import java.awt.Color;
-
 import com.PlanetCore.util.EmissiveUtil;
 import com.PlanetCore.util.Reference;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
+
+import java.awt.*;
 
 public class LayerOnyxDemonEyes<T extends EntityLiving & IAnimatable> extends GeoLayerRenderer<T> {
 

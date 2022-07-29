@@ -12,7 +12,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldType;
 
 public class EntityDeathEnderman extends EntityEnderman
 {

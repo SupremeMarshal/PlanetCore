@@ -1,17 +1,11 @@
 package com.PlanetCore.entity;
 
 import com.PlanetCore.util.handlers.LootTableHandler;
-import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityMagmaCube;
-import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldType;
 
 public class EntityHotMagmaCube extends EntityMagmaCube
 {

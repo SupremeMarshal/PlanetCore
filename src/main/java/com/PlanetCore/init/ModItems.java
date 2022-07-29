@@ -1,20 +1,16 @@
 package com.PlanetCore.init;
 
-import com.PlanetCore.items.ItemSpadeX;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
-import com.PlanetCore.items.ShinyItem;
-import com.PlanetCore.items.armor.*;
+import com.PlanetCore.items.ItemSpadeX;
+import com.PlanetCore.items.armor.ArmorBase;
 import com.PlanetCore.items.arrows.*;
 import com.PlanetCore.items.bows.*;
-import com.PlanetCore.items.food.SixEffectFoodItem;
-import com.PlanetCore.items.food.ThreeEffectFoodItem;
-import com.PlanetCore.items.shields.*;
+import com.PlanetCore.items.shields.Shield;
+import com.PlanetCore.items.shields.ShieldMaterial;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
-import net.minecraft.potion.PotionEffect;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

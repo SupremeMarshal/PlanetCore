@@ -4,29 +4,22 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.init.ModItems;
-import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
 import java.util.Random;
 
 public class Crustrock extends BlockBase implements IMetaName

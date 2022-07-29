@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "planetcore:air_no_pressure" }
+    }
+}

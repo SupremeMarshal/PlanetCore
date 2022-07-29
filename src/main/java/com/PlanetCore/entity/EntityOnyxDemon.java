@@ -1,7 +1,5 @@
 package com.PlanetCore.entity;
 
-import com.PlanetCore.entity.goals.CoreDemonAttackMeleeAi;
-import com.PlanetCore.entity.goals.CoreDemonFireBallGoal;
 import com.PlanetCore.entity.goals.OnyxDemonAttackMeleeAi;
 import com.PlanetCore.entity.goals.OnyxDemonFireBallGoal;
 import com.PlanetCore.init.ModBlocks;
@@ -31,7 +29,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.BossInfo;
 import net.minecraft.world.BossInfoServer;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldType;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;

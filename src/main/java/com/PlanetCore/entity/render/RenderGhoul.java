@@ -3,7 +3,6 @@ package com.PlanetCore.entity.render;
 import com.PlanetCore.entity.EntityGhoul;
 import com.PlanetCore.entity.model.ModelGhoul;
 import com.PlanetCore.util.Reference;
-
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;

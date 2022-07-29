@@ -1,7 +1,6 @@
 package com.PlanetCore.entity.goals;
 
 import com.PlanetCore.entity.EntityCoreDemon;
-import com.PlanetCore.entity.EntityDemon;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.player.EntityPlayer;

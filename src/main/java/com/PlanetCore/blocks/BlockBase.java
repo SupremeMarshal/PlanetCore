@@ -2,7 +2,6 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.init.ModItems;
 import com.google.common.base.Predicate;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.*;
@@ -17,23 +16,14 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.monster.EntityIronGolem;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 

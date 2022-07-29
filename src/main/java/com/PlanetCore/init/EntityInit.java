@@ -1,20 +1,18 @@
 package com.PlanetCore.init;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
 import com.PlanetCore.Main;
 import com.PlanetCore.entity.*;
 import com.PlanetCore.items.arrows.*;
 import com.PlanetCore.util.ModConfiguration;
 import com.PlanetCore.util.Reference;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EntityInit 
 {

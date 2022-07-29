@@ -1,11 +1,10 @@
 package com.PlanetCore.util;
 
-import java.io.File;
-
 import com.PlanetCore.Main;
-
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import java.io.File;
 
 public class ModConfiguration 
 {

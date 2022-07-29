@@ -7,13 +7,9 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import java.util.Iterator;
 import java.util.Locale;
-import java.util.Map;
-import java.util.Random;
 
 public class ModSmelting {
 

@@ -1,6 +1,5 @@
 package com.PlanetCore.entity.model;
 
-import com.PlanetCore.entity.EntityCoreDemon;
 import com.PlanetCore.entity.EntityOnyxDemon;
 import com.PlanetCore.util.Reference;
 import net.minecraft.util.ResourceLocation;

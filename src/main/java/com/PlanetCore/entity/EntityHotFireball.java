@@ -1,6 +1,5 @@
 package com.PlanetCore.entity;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.RayTraceResult;

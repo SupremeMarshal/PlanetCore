@@ -1,6 +1,5 @@
 package com.PlanetCore.util;
 
-import com.PlanetCore.util.Reference;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;

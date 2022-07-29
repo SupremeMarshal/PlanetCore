@@ -1,20 +1,13 @@
 package com.PlanetCore.init;
 
-import com.PlanetCore.potions.CustomPotions;
-import com.PlanetCore.util.Reference;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.PotionTypes;
 import net.minecraft.item.Item;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class ModPotions {

@@ -1,9 +1,5 @@
 package com.PlanetCore.items.shields;
 
-import com.PlanetCore.init.ModItems;
-import net.minecraft.item.Item;
-
-
 public enum ShieldMaterial {
 
     ONYXV("ONYXV"),

@@ -2,7 +2,6 @@
 package com.PlanetCore.entity.render;
 
 import com.PlanetCore.entity.EntityCoreBlaze;
-import com.PlanetCore.entity.EntityHotBlaze;
 import com.PlanetCore.util.Reference;
 import net.minecraft.client.model.ModelBlaze;
 import net.minecraft.client.renderer.GlStateManager;

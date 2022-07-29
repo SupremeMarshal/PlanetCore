@@ -1,15 +1,12 @@
 
 package com.PlanetCore.entity.render;
 
-import com.PlanetCore.entity.EntityGhoul;
 import com.PlanetCore.entity.EntityHotBlaze;
-import com.PlanetCore.entity.model.ModelGhoul;
 import com.PlanetCore.util.Reference;
 import net.minecraft.client.model.ModelBlaze;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
 public class RenderHotBlaze extends RenderLiving<EntityHotBlaze> {

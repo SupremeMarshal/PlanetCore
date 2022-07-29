@@ -8,10 +8,6 @@ import net.minecraft.entity.ai.*;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.entity.projectile.EntityDragonFireball;
-import net.minecraft.entity.projectile.EntityLargeFireball;
-import net.minecraft.entity.projectile.EntitySmallFireball;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
@@ -20,9 +16,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldType;
 
-import javax.swing.text.LayoutQueue;
 import java.util.Random;
 
 public class EntityHotBlaze extends EntityBlaze {

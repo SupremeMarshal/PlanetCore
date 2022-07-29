@@ -4,7 +4,6 @@ import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.util.Reference;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
-import net.minecraft.init.Enchantments;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.ResourceLocation;
 

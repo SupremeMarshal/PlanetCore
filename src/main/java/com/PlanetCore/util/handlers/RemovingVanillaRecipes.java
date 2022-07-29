@@ -1,7 +1,6 @@
 package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.recipes.TestRecipe;
-import com.PlanetCore.util.Reference;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;

@@ -2,7 +2,6 @@ package com.PlanetCore.entity.render.layers;
 
 import com.PlanetCore.util.EmissiveUtil;
 import com.PlanetCore.util.Reference;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 import software.bernie.geckolib3.core.IAnimatable;

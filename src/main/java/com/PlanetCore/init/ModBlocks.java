@@ -2,7 +2,9 @@ package com.PlanetCore.init;
 
 
 import com.PlanetCore.blocks.*;
-import com.PlanetCore.blocks.furnaces.*;
+import com.PlanetCore.blocks.furnaces.CrustrockFurnace;
+import com.PlanetCore.blocks.furnaces.SteelFurnace;
+import com.PlanetCore.blocks.furnaces.TungstenFurnace;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.registries.IForgeRegistry;
+
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.List;

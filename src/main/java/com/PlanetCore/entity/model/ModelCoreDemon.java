@@ -1,7 +1,6 @@
 package com.PlanetCore.entity.model;
 
 import com.PlanetCore.entity.EntityCoreDemon;
-import com.PlanetCore.entity.EntityDemon;
 import com.PlanetCore.util.Reference;
 import net.minecraft.util.ResourceLocation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;

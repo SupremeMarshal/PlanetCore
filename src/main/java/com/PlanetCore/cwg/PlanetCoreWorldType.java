@@ -6,7 +6,6 @@ import io.github.opencubicchunks.cubicchunks.api.worldgen.ICubeGenerator;
 import io.github.opencubicchunks.cubicchunks.cubicgen.asm.mixin.common.accessor.IBiomeProvider;
 import io.github.opencubicchunks.cubicchunks.cubicgen.blue.endless.jankson.api.DeserializationException;
 import io.github.opencubicchunks.cubicchunks.cubicgen.blue.endless.jankson.api.SyntaxError;
-import io.github.opencubicchunks.cubicchunks.cubicgen.common.world.storage.IWorldInfoAccess;
 import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.CustomGeneratorSettings;
 import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.CustomTerrainGenerator;
 import io.github.opencubicchunks.cubicchunks.cubicgen.preset.CustomGenSettingsSerialization;

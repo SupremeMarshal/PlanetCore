@@ -2,11 +2,7 @@ package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.blocks.BlockBase;
 import com.PlanetCore.blocks.GemsGravel;
-import com.PlanetCore.init.EnchantmentInit;
-import com.PlanetCore.init.ModItems;
 import com.PlanetCore.init.ToolMaterials;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -17,16 +13,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import java.awt.*;
 import java.util.Random;
 
 import static com.PlanetCore.init.EnchantmentInit.Relentless;

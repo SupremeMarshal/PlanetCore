@@ -4,7 +4,6 @@ package com.PlanetCore.entity.render;
 import com.PlanetCore.entity.EntityHellHound;
 import com.PlanetCore.entity.model.ModelHellHound;
 import com.PlanetCore.util.Reference;
-
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;

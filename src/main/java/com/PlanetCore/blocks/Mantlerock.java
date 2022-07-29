@@ -1,7 +1,6 @@
 package com.PlanetCore.blocks;
 
 
-import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -14,8 +13,6 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
@@ -23,10 +20,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
 import java.util.Random;
 
 public class Mantlerock extends BlockBase implements IMetaName

@@ -1,34 +1,18 @@
 package com.PlanetCore.items.shields;
 
-import com.PlanetCore.Main;
-import com.PlanetCore.blocks.PlanetHardness;
-import com.PlanetCore.blocks.PlanetMaterial;
-import com.PlanetCore.init.ArmorMaterials;
 import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.init.ModItems;
-import com.PlanetCore.items.armor.ItemSetPieces;
 import com.google.common.collect.Multimap;
-import net.minecraft.block.SoundType;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 

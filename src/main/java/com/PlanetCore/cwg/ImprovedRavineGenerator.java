@@ -7,13 +7,11 @@ import static net.minecraft.util.math.MathHelper.floor;
 import static net.minecraft.util.math.MathHelper.sin;
 
 import com.PlanetCore.init.ModBlocks;
-import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.worldgen.CubePrimer;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
 import io.github.opencubicchunks.cubicchunks.api.world.ICube;
 import io.github.opencubicchunks.cubicchunks.api.worldgen.structure.ICubicStructureGenerator;
 import io.github.opencubicchunks.cubicchunks.cubicgen.StructureGenUtil;
-import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.CustomGeneratorSettings;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

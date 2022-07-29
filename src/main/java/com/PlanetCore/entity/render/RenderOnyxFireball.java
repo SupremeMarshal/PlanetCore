@@ -1,6 +1,5 @@
 package com.PlanetCore.entity.render;
 
-import com.PlanetCore.entity.EntityCoreLargeFireball;
 import com.PlanetCore.entity.EntityOnyxFireball;
 import com.PlanetCore.init.ModItems;
 import net.minecraft.client.Minecraft;

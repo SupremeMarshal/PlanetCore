@@ -1,6 +1,5 @@
 package com.PlanetCore.items.bows;
 
-import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.init.ModItems;
 import com.PlanetCore.items.arrows.*;
 import net.minecraft.client.util.ITooltipFlag;

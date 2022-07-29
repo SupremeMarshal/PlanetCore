@@ -2,7 +2,6 @@ package com.PlanetCore.items.bows;
 
 import com.PlanetCore.init.ModItems;
 import com.PlanetCore.items.arrows.DiamondArrow;
-import com.PlanetCore.items.arrows.JadeArrow;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
