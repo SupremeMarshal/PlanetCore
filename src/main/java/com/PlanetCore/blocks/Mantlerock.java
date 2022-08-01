@@ -27,7 +27,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 {
 
 
-	private static final float [] mantleHardnessByMeta = {60, 70, 100, 150, 200, 250};
+	private static final float [] mantleHardnessByMeta = {30, 70, 100, 150, 200, 250};
 	public static final int [] mantleLightLevel = {0, 0, 9, 11, 13, 15};
 	public static final PropertyEnum<Mantlerock.EnumType> VARIANT = PropertyEnum.<Mantlerock.EnumType>create("variant",Mantlerock.EnumType.class);
 
