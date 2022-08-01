@@ -38,11 +38,11 @@ public class ClientHandler {
             String ore = "coal";
             String supercompact = "coal";
             if (maxHardness < 1.5F) rock = "can't break stone";
-            if (maxHardness >= 1.5F && maxHardness < 9) rock = "stone";
-            if (maxHardness >= 9 && maxHardness < 14) rock = "crustrock";
-            if (maxHardness >= 14 && maxHardness < 22) rock = "crustrock1";
-            if (maxHardness >= 22 && maxHardness < 60) rock = "crustrock2";
-            if (maxHardness >= 60 && maxHardness < 70) rock = "mantlerock";
+            if (maxHardness >= 1.5F && maxHardness < 4) rock = "stone";
+            if (maxHardness >= 4 && maxHardness < 8) rock = "crustrock";
+            if (maxHardness >= 8 && maxHardness < 12) rock = "crustrock1";
+            if (maxHardness >= 12 && maxHardness < 30) rock = "crustrock2";
+            if (maxHardness >= 30 && maxHardness < 70) rock = "mantlerock";
             if (maxHardness >= 70 && maxHardness < 100) rock = "mantlerock1";
             if (maxHardness >= 100 && maxHardness < 150) rock = "mantlerock2";
             if (maxHardness >= 150 && maxHardness < 200) rock = "lower_mantlerock";
