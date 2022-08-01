@@ -103,7 +103,7 @@ public class PickaxeRelentlessHandler {
             Item.ToolMaterial toolMaterial = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemTool)item,"field_77862_b");
             float base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,2.0F);
             if (stack.getItem() == Items.IRON_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,1.5F);
-            if (stack.getItem() == Items.GOLDEN_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,1.1F);
+            if (stack.getItem() == Items.GOLDEN_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,1.5F);
             if (stack.getItem() == Items.DIAMOND_PICKAXE) base = ToolMaterials.relentlessMap.getOrDefault(toolMaterial,2.5F);
             float enchLevel = EnchantmentHelper.getEnchantmentLevel(Relentless,stack);
             return base + (enchLevel / 2);
