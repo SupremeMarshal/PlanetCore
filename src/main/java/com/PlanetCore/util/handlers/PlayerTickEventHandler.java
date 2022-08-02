@@ -56,7 +56,7 @@ public class PlayerTickEventHandler {
             float damage = 1;
 
 
-            if (Y < -256 && Y >= -512) {
+            if (Y < -500 && Y >= -1000) {
                 if (event.player.world.getTotalWorldTime() % 600 == 0) {
                     if (effect == null) {
                         event.player.setFire(4);
@@ -64,36 +64,36 @@ public class PlayerTickEventHandler {
                     }
                 }
             }
-            if (Y < -512) {
-                float time = 500 + ((Y+512)/5);
-                if (time < 20) {
-                    time = 20;
+            if (Y < -1000) {
+                float time = 500 + ((Y+1000)/20);
+                if (time < 60) {
+                    time = 60;
                 }
                 if (event.player.world.getTotalWorldTime() % time == 0) {
-                    damage = -0.0078125F * (Y + 512);
+                    damage = -0.002111F * (Y + 1000) + 1;
                     if (effect == null) {
                         event.player.setFire(5);
-                        event.player.attackEntityFrom(DamageSource.GENERIC, damage + 1);
+                        event.player.attackEntityFrom(DamageSource.GENERIC, damage);
                     }
                     if(effect != null && effect.getAmplifier() == 0) {
                         damage = damage / 2;
-                        if (damage >= 2) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
+                        if (damage >= 1) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
                     }
                     if(effect != null && effect.getAmplifier() == 1) {
                         damage = damage / 4;
-                        if (damage >= 2) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
+                        if (damage >= 1) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
                     }
                     if(effect != null && effect.getAmplifier() == 2) {
                         damage = damage / 8;
-                        if (damage >= 2.0) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
+                        if (damage >= 1) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
                     }
                     if(effect != null && effect.getAmplifier() == 3) {
                         damage = damage / 16;
-                        if (damage >= 1.0) event.player.attackEntityFrom(DamageSource.GENERIC, damage);
+                        if (damage >= 1.0) event.player.attackEntityFrom(DamageSource.GENERIC, damage -1);
                     }
                     if(effect != null && effect.getAmplifier() == 4) {
                         damage = damage / 32;
-                        if (damage >= 0.5) event.player.attackEntityFrom(DamageSource.GENERIC, damage);
+                        if (damage >= 0.5) event.player.attackEntityFrom(DamageSource.GENERIC, damage -0.5f);
                     }
                 }
             }
