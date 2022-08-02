@@ -101,19 +101,9 @@ public class BlockBase extends Block {
 				 * At -6500Y, the chance is at 37% making the pressure happen extremely frequently.
 				 * Goodluck mining at these levels.
 				 */
-				if (pos.getY() < 0 && pos.getY() >= -512 && Math.random() >= pos.getY() * -0.000009765625) {
+				if (pos.getY() < 0 && Math.random() >= pos.getY() * -0.0000025) {
 					return;
 				}
-				if (pos.getY() < -512 && pos.getY() >= -1024 && Math.random() >= (pos.getY() + 512) * -0.00001953125 + 0.005) {
-					return;
-				}
-				if (pos.getY() < -1024 && pos.getY() >= -1536 && Math.random() >= (pos.getY() + 1024) * -0.0000390625 + 0.015) {
-					return;
-				}
-				if (pos.getY() < -1536 && Math.random() >= (pos.getY() + 1536) * -0.000078125 + 0.035) {
-					return;
-				}
-
 				for (EnumFacing side : EnumFacing.values()) {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
