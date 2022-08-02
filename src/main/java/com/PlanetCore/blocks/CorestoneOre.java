@@ -18,7 +18,7 @@ public class CorestoneOre extends Corestone implements IMetaName
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
     public final PlanetExp planetExp;
-    private static final float [] coreHardnessByMeta = {360, 460, 560, 770, 1000, 1250, 1500};
+    private static final float [] coreHardnessByMeta = {180, 230, 280, 385, 500, 625, 1000};
 
     public CorestoneOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
     {
