@@ -189,7 +189,7 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY < -3072 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
+		if (posY < -10000 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;

@@ -327,7 +327,7 @@ public class EntityCoreBlaze extends EntityBlaze {
 
     @Override
     public boolean getCanSpawnHere() {
-        if (posY < -1792 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
+        if (posY < -6000 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
             return true;
         }
         else return false;

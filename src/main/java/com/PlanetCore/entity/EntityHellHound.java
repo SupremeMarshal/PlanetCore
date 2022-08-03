@@ -92,7 +92,7 @@ public class EntityHellHound extends EntityMob
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -64 && posY > -1792 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
+		if (posY <= -64 && posY > -6000 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;

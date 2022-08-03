@@ -94,7 +94,7 @@ public class EntityDeathEnderman extends EntityEnderman
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -256 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
+		if (posY <= -1500 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;
