@@ -42,9 +42,6 @@ public class BlockBase extends Block {
 		}
 	};
 
-
-
-
 	public BlockBase(String name, Material material) {
 		super(material);
 
@@ -87,9 +84,6 @@ public class BlockBase extends Block {
 	 * @param state
 	 * @param rand
 	 */
-
-
-
 
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {

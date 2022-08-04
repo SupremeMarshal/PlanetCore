@@ -275,40 +275,40 @@ public class Corestone extends BlockBase implements IMetaName {
 		int X = pos.getX();
 		int Z = pos.getZ();
 		int Y = pos.getY();
-		if (!worldIn.isRemote && Y < -1600) {
+		if (!worldIn.isRemote && Y < -5000) {
 			if (state.getBlock().getMetaFromState(state) == 0) {
-				if (rand.nextInt(240) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 4, true);
+				if (rand.nextInt(365) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 1) {
-				if (rand.nextInt(260) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 5, true);
+				if (rand.nextInt(304) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 2) {
-				if (rand.nextInt(280) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 6, true);
+				if (rand.nextInt(253) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 3) {
-				if (rand.nextInt(300) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 7, true);
+				if (rand.nextInt(211) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 5, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 4) {
-				if (rand.nextInt(320) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 8, true);
+				if (rand.nextInt(176) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 5, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 5) {
-				if (rand.nextInt(340) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 9, true);
+				if (rand.nextInt(146) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 5, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 6) {
-				if (rand.nextInt(360) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(9) + 10, true);
+				if (rand.nextInt(73) == 0) {
+					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 6, true);
 				}
 			}
 		}
