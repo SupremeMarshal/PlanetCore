@@ -4415,9 +4415,10 @@ item.majorite_axe.name=Majorite axe
 item.iron_coal.name=Iron and coal
 item.sulfur.name=Sulfur
 
-item.hot_magma_cream.name=Hot Magma Cream
+item.hot_magma_cream.name=Hot magma cream
+item.very_hot_magma_cream.name=Very Hot magma cream
 item.demon_star.name=Demon star
-item.demon_star_charged.name=Charged Demon star
+item.demon_star_charged.name=Charged demon star
 item.demon_sword.name=Demon sword
 
 item.core_star.name=Core star
