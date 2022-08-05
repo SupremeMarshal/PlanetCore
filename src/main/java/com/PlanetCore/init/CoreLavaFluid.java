@@ -139,31 +139,31 @@ public class CoreLavaFluid extends BlockFluidClassic {
 		//thermalEffects(worldIn,pos,state);
 		coreTemperature(worldIn,pos,state);
 		vaporizeWater(worldIn, pos, state);
-		float chance = -0.0001220703125F * (pos.getY() + 5000);
+		float chance = -0.00003299197F * (pos.getY() + 5000);
 		if (pos.getY() <= -5000) {
 			if ((Math.random() < chance && worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.up()) == Blocks.WATER.getDefaultState())
-					|| (worldIn.getBlockState(pos.up()).getMaterial() != Material.LAVA && getBlockHardness(worldIn.getBlockState(pos.up()), worldIn, pos.up()) < 150 && worldIn.getBlockState(pos.up()).getClass() != Mantlerock.class))
+					|| (worldIn.getBlockState(pos.up()).getMaterial() != Material.FIRE && worldIn.getBlockState(pos.up()).getMaterial() != Material.LAVA && worldIn.getBlockState(pos.up()).getBlockHardness(worldIn, pos.up()) < 100))
 				worldIn.setBlockState(pos.up(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 			if ((Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.down()) == Blocks.WATER.getDefaultState())
-				|| (worldIn.getBlockState(pos.down()).getMaterial() != Material.LAVA && getBlockHardness(worldIn.getBlockState(pos.down()), worldIn, pos.down()) < 150 && worldIn.getBlockState(pos.down()).getClass() != Mantlerock.class))
+				|| (worldIn.getBlockState(pos.down()).getMaterial() != Material.FIRE && worldIn.getBlockState(pos.down()).getMaterial() != Material.LAVA && worldIn.getBlockState(pos.down()).getBlockHardness(worldIn, pos.down()) < 100))
 				worldIn.setBlockState(pos.down(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 			if ((Math.random() < chance && worldIn.getBlockState(pos.north()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.north()) == Blocks.WATER.getDefaultState())
-				|| (worldIn.getBlockState(pos.north()).getMaterial() != Material.LAVA && getBlockHardness(worldIn.getBlockState(pos.north()), worldIn, pos.north()) < 150 && worldIn.getBlockState(pos.north()).getClass() != Mantlerock.class))
+				|| (worldIn.getBlockState(pos.north()).getMaterial() != Material.FIRE && worldIn.getBlockState(pos.north()).getMaterial() != Material.LAVA && worldIn.getBlockState(pos.north()).getBlockHardness(worldIn, pos.north()) < 100))
 				worldIn.setBlockState(pos.north(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 			if ((Math.random() < chance && worldIn.getBlockState(pos.south()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.south()) == Blocks.WATER.getDefaultState())
-				|| (worldIn.getBlockState(pos.south()).getMaterial() != Material.LAVA && getBlockHardness(worldIn.getBlockState(pos.south()), worldIn, pos.south()) < 150 && worldIn.getBlockState(pos.south()).getClass() != Mantlerock.class))
+				|| (worldIn.getBlockState(pos.south()).getMaterial() != Material.FIRE && worldIn.getBlockState(pos.south()).getMaterial() != Material.LAVA && worldIn.getBlockState(pos.south()).getBlockHardness(worldIn, pos.south()) < 100))
 				worldIn.setBlockState(pos.south(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 			if ((Math.random() < chance && worldIn.getBlockState(pos.west()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.west()) == Blocks.WATER.getDefaultState())
-				|| (worldIn.getBlockState(pos.west()).getMaterial() != Material.LAVA && getBlockHardness(worldIn.getBlockState(pos.west()), worldIn, pos.west()) < 150 && worldIn.getBlockState(pos.west()).getClass() != Mantlerock.class))
+				|| (worldIn.getBlockState(pos.west()).getMaterial() != Material.FIRE && worldIn.getBlockState(pos.west()).getMaterial() != Material.LAVA && worldIn.getBlockState(pos.west()).getBlockHardness(worldIn, pos.west()) < 100))
 				worldIn.setBlockState(pos.west(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 			if ((Math.random() < chance && worldIn.getBlockState(pos.east()) == Blocks.AIR.getDefaultState()
 					|| worldIn.getBlockState(pos.east()) == Blocks.WATER.getDefaultState())
-				|| (worldIn.getBlockState(pos.east()).getMaterial() != Material.LAVA && getBlockHardness(worldIn.getBlockState(pos.east()), worldIn, pos.east()) < 150 && worldIn.getBlockState(pos.east()).getClass() != Mantlerock.class))
+				|| (worldIn.getBlockState(pos.east()).getMaterial() != Material.FIRE && worldIn.getBlockState(pos.east()).getMaterial() != Material.LAVA && worldIn.getBlockState(pos.east()).getBlockHardness(worldIn, pos.east()) < 100))
 				worldIn.setBlockState(pos.east(), ModBlocks.CORE_LAVA_FLUID.getDefaultState());
 		}
 	}
