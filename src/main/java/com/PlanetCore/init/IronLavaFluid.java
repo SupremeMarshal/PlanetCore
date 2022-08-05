@@ -132,8 +132,8 @@ public class IronLavaFluid extends BlockFluidClassic {
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 		super.updateTick(worldIn, pos, state, rand);
-		float chance = -0.00006103515625F * (pos.getY() + 1024);
-		if (pos.getY() <= 0) {
+		float chance = -0.000016495988F * (pos.getY() + 1000);
+		if (pos.getY() <= -1000) {
 			if (Math.random() < chance && worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState())
 				worldIn.setBlockState(pos.up(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
 			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
