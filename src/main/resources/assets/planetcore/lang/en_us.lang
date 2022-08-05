@@ -4424,6 +4424,8 @@ item.demon_sword.name=Demon sword
 item.core_star.name=Core star
 item.core_sword.name=Core sword
 
+item.onyx_star.name=Onyx star
+
 entity.demon.name=Demon
 entity.blackdemon.name=Black demon
 entity.core_demon.name=Core demon
