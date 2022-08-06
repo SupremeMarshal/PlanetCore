@@ -195,10 +195,6 @@ public class ModBlocks {
     public static final MantlerockOre MANTLEROCK_SILVER = _null();
     public static final MantlerockOre MANTLEROCK_GOLD = _null();
     public static final MantlerockOre MANTLEROCK_TITANIUM = _null();
-    public static final MantlerockOre MANTLEROCK_BORON = _null();
-    public static final MantlerockOre MANTLEROCK_LITHIUM = _null();
-    public static final MantlerockOre MANTLEROCK_MAGNESIUM = _null();
-    public static final MantlerockOre MANTLEROCK_THORIUM = _null();
     public static final MantlerockOre MANTLEROCK_URANIUM = _null();
     public static final MantlerockOre MANTLEROCK_TUNGSTEN = _null();
     public static final MantlerockOre MANTLEROCK_TOPAZ = _null();
@@ -225,10 +221,6 @@ public class ModBlocks {
     public static final MantlerockOreCompact MANTLEROCK_COMPACT_SILVER = _null();
     public static final MantlerockOreCompact MANTLEROCK_COMPACT_GOLD = _null();
     public static final MantlerockOreCompact MANTLEROCK_COMPACT_TITANIUM = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_BORON = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_LITHIUM = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_MAGNESIUM = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_THORIUM = _null();
     public static final MantlerockOreCompact MANTLEROCK_COMPACT_URANIUM = _null();
     public static final MantlerockOreCompact MANTLEROCK_COMPACT_TUNGSTEN = _null();
     public static final MantlerockOreCompact MANTLEROCK_COMPACT_TOPAZ = _null();
@@ -434,10 +426,6 @@ public class ModBlocks {
                 new BlocksBase("diamond_supercompact", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_SUPERCOMPACT, PlanetExp.DIAMOND_SUPERCOMPACT).setResistance(25),
                 new BlocksBase("emerald_supercompact", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_SUPERCOMPACT, PlanetExp.EMERALD_SUPERCOMPACT).setResistance(25),
                 new BlocksBase("titanium_supercompact", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("boron_supercompact", Material.ROCK, PlanetMaterial.BORON, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("lithium_supercompact", Material.ROCK, PlanetMaterial.LITHIUM, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("magnesium_supercompact", Material.ROCK, PlanetMaterial.MAGNESIUM, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("thorium_supercompact", Material.ROCK, PlanetMaterial.THORIUM, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
                 new BlocksBase("uranium_supercompact", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_SUPERCOMPACT, PlanetExp.URANIUM_SUPERCOMPACT).setResistance(50),
                 new BlocksBase("tungsten_supercompact", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_SUPERCOMPACT, PlanetExp.TUNGSTEN_SUPERCOMPACT).setResistance(50),
                 new BlocksBase("topaz_supercompact", Material.ROCK, PlanetMaterial.TOPAZ, PlanetHardness.TOPAZ_SUPERCOMPACT, PlanetExp.TOPAZ_SUPERCOMPACT).setResistance(50),
@@ -524,10 +512,6 @@ public class ModBlocks {
                 new MantlerockOre("mantlerock_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE,PlanetExp.REDSTONE).setResistance(1),
                 new MantlerockOre("mantlerock_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS,PlanetExp.LAPIS).setResistance(1),
                 new MantlerockOre("mantlerock_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
-                new MantlerockOre("mantlerock_boron", Material.ROCK, PlanetMaterial.BORON, PlanetHardness.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
-                new MantlerockOre("mantlerock_lithium", Material.ROCK, PlanetMaterial.LITHIUM, PlanetHardness.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
-                new MantlerockOre("mantlerock_magnesium", Material.ROCK, PlanetMaterial.MAGNESIUM, PlanetHardness.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
-                new MantlerockOre("mantlerock_thorium", Material.ROCK, PlanetMaterial.THORIUM, PlanetHardness.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
                 new MantlerockOre("mantlerock_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM,PlanetExp.URANIUM).setResistance(1),
                 new MantlerockOre("mantlerock_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN,PlanetExp.TUNGSTEN).setResistance(1),
                 new MantlerockOre("mantlerock_topaz", Material.ROCK, PlanetMaterial.TOPAZ, PlanetHardness.TOPAZ,PlanetExp.TOPAZ).setResistance(1),
@@ -554,10 +538,6 @@ public class ModBlocks {
                 new MantlerockOreCompact("mantlerock_compact_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_COMPACT,PlanetExp.REDSTONE_COMPACT).setResistance(1),
                 new MantlerockOreCompact("mantlerock_compact_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_COMPACT,PlanetExp.LAPIS_COMPACT).setResistance(1),
                 new MantlerockOreCompact("mantlerock_compact_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_COMPACT,PlanetExp.TITANIUM_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_boron", Material.ROCK, PlanetMaterial.BORON, PlanetHardness.TITANIUM_COMPACT,PlanetExp.TITANIUM_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_lithium", Material.ROCK, PlanetMaterial.LITHIUM, PlanetHardness.TITANIUM_COMPACT,PlanetExp.TITANIUM_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_magnesium", Material.ROCK, PlanetMaterial.MAGNESIUM, PlanetHardness.TITANIUM_COMPACT,PlanetExp.TITANIUM_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_thorium", Material.ROCK, PlanetMaterial.THORIUM, PlanetHardness.TITANIUM_COMPACT,PlanetExp.TITANIUM_COMPACT).setResistance(10),
                 new MantlerockOreCompact("mantlerock_compact_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_COMPACT,PlanetExp.URANIUM_COMPACT).setResistance(10),
                 new MantlerockOreCompact("mantlerock_compact_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_COMPACT,PlanetExp.TUNGSTEN_COMPACT).setResistance(10),
                 new MantlerockOreCompact("mantlerock_compact_topaz", Material.ROCK, PlanetMaterial.TOPAZ, PlanetHardness.TOPAZ_COMPACT,PlanetExp.TOPAZ_COMPACT).setResistance(10),
@@ -656,10 +636,6 @@ public class ModBlocks {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_BORON), meta, new ModelResourceLocation(name + "_boron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_LITHIUM), meta, new ModelResourceLocation(name + "_lithium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_MAGNESIUM), meta, new ModelResourceLocation(name + "_magnesium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_THORIUM), meta, new ModelResourceLocation(name + "_thorium", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_TUNGSTEN), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_TOPAZ), meta, new ModelResourceLocation(name + "_topaz", "inventory"));
@@ -686,10 +662,6 @@ public class ModBlocks {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_BORON), meta, new ModelResourceLocation(name + "_boron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_LITHIUM), meta, new ModelResourceLocation(name + "_lithium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_MAGNESIUM), meta, new ModelResourceLocation(name + "_magnesium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_THORIUM), meta, new ModelResourceLocation(name + "_thorium", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_TUNGSTEN), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_TOPAZ), meta, new ModelResourceLocation(name + "_topaz", "inventory"));
