@@ -92114,7 +92114,7 @@
 						]
 					},
 					"spawnSize": 9,
-					"spawnTries": 3,
+					"spawnTries": 2,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -92188,7 +92188,7 @@
 						]
 					},
 					"spawnSize": 8,
-					"spawnTries": 2,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -92262,7 +92262,7 @@
 						]
 					},
 					"spawnSize": 8,
-					"spawnTries": 2,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -92378,7 +92378,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 8,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -92495,7 +92495,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 8,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -92612,7 +92612,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 8,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -92729,7 +92729,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 8,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -92846,7 +92846,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 8,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -92963,7 +92963,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 8,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -93080,7 +93080,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 8,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -93197,7 +93197,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 8,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -93354,7 +93354,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 5,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -93793,6 +93793,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -93830,6 +93845,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -93867,6 +93897,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -93904,6 +93949,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -93941,6 +94001,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -93978,6 +94053,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -94015,6 +94105,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -94052,6 +94157,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -94089,6 +94209,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -94126,6 +94261,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -94163,6 +94313,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -94200,6 +94365,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -94237,6 +94417,21 @@
 						]
 					},
 					"generateWhen": {
+						"noneOf": [
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -4, "y": 0, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -4, "z": 0 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 4 },
+							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -4 }
+						],
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -95060,58 +95255,6 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_lava"
-					},
-					"biomes": null,
-					"placeBlockWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Properties": {
-									"variant": "centercorestone"
-								},
-								"Name": "planetcore:corestone"
-							}
-						]
-					},
-					"generateWhen": {
-						"noneOf": [
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 1, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -1, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 1, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -1, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 1 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -1 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 }
-						],
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Properties": {
-									"variant": "centercorestone"
-								},
-								"Name": "planetcore:corestone"
-							}
-						]
-					},
-					"spawnSize": 9,
-					"spawnTries": 1,
-					"spawnProbability": 0.0625,
-					"minHeight": -Infinity,
-					"maxHeight": Infinity
-				},
-				{
-					"blockstate": {
 						"Name": "planetcore:gold_supercompact"
 					},
 					"biomes": null,
@@ -95159,58 +95302,6 @@
 					"spawnSize": 9,
 					"spawnTries": 1,
 					"spawnProbability": 0.5,
-					"minHeight": -Infinity,
-					"maxHeight": Infinity
-				},
-				{
-					"blockstate": {
-						"Name": "planetcore:gold_lava"
-					},
-					"biomes": null,
-					"placeBlockWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Properties": {
-									"variant": "centercorestone"
-								},
-								"Name": "planetcore:corestone"
-							}
-						]
-					},
-					"generateWhen": {
-						"noneOf": [
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 1, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -1, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 1, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -1, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 1 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -1 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 2, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": -2, "y": 0, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 2, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": -2, "z": 0 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": 2 },
-							{ "blocks": [ {"Name": "planetcore:air_no_pressure"} ], "x": 0, "y": 0, "z": -2 }
-						],
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Properties": {
-									"variant": "centercorestone"
-								},
-								"Name": "planetcore:corestone"
-							}
-						]
-					},
-					"spawnSize": 9,
-					"spawnTries": 1,
-					"spawnProbability": 0.0625,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -95297,8 +95388,8 @@
 							}
 						]
 					},
-					"spawnSize": 9,
-					"spawnTries": 3,
+					"spawnSize": 10,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -95371,8 +95462,8 @@
 							}
 						]
 					},
-					"spawnSize": 8,
-					"spawnTries": 2,
+					"spawnSize": 10,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -95445,8 +95536,8 @@
 							}
 						]
 					},
-					"spawnSize": 8,
-					"spawnTries": 2,
+					"spawnSize": 10,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -95482,7 +95573,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 10,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -95519,7 +95610,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 10,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -95636,7 +95727,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 10,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -95753,7 +95844,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 10,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -95870,7 +95961,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 10,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -95987,7 +96078,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 10,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -96104,7 +96195,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 10,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -96221,7 +96312,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 10,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
@@ -96378,7 +96469,7 @@
 							}
 						]
 					},
-					"spawnSize": 3,
+					"spawnSize": 6,
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
