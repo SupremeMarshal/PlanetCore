@@ -13,6 +13,7 @@ public class LootTableHandler {
 	public static final ResourceLocation ONYX_DEMON = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "onyx_demon"));
 	public static final ResourceLocation HELLHOUND = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "hellhound"));
 	public static final ResourceLocation HOT_MAGMACUBE = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "hot_magmacube"));
+	public static final ResourceLocation VERY_HOT_MAGMACUBE = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "very_hot_magmacube"));
 	public static final ResourceLocation DEATH_ENDERMAN = LootTableList.register(new ResourceLocation(Reference.MOD_ID, "death_enderman"));
 
 }

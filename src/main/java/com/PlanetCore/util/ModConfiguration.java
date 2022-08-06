@@ -38,8 +38,9 @@ public class ModConfiguration
 	public static int ENTITY_COREFIREBALL_ID = 226;
 	public static int ENTITY_CORELARGEFIREBALL_ID = 227;
 	public static int ENTITY_HOT_MAGMACUBE_ID = 228;
-	public static int ENTITY_ONYX_DEMON_ID = 229;
-	public static int ENTITY_ONYX_FIREBALL_ID = 230;
+	public static int ENTITY_VERY_HOT_MAGMACUBE_ID = 229;
+	public static int ENTITY_ONYX_DEMON_ID = 230;
+	public static int ENTITY_ONYX_FIREBALL_ID = 231;
 
 	public static int GUI_CRUSTROCK_FURNACE_ID = 5;
 	public static int GUI_STEEL_FURNACE_ID = 6;
@@ -57,6 +58,7 @@ public class ModConfiguration
 		category = "Entity IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the entities to ensure that they don't clash with other mod's ids");
 		ENTITY_HOT_MAGMACUBE_ID = config.getInt("ENTITY_HOT_MAGMACUBE_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_VERY_HOT_MAGMACUBE_ID = config.getInt("ENTITY_VERY_HOT_MAGMACUBE_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_COREFIREBALL_ID = config.getInt("ENTITY_COREFIREBALL_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_CORELARGEFIREBALL_ID = config.getInt("ENTITY_CORELARGEFIREBALL_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_ONYX_FIREBALL_ID = config.getInt("ENTITY_ONYX_FIREBALL_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");

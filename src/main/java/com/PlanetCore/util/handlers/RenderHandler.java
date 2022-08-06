@@ -70,6 +70,7 @@ public class RenderHandler
 					return new RenderDeathEnderman(manager);
 				}
 			});
+			RenderingRegistry.registerEntityRenderingHandler(EntityVeryHotMagmaCube.class, manager -> new RenderVeryHotMagmaCube(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityHotMagmaCube.class, manager -> new RenderHotMagmaCube(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
