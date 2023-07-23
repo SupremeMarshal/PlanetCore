@@ -128,27 +128,27 @@ public class IronLavaFluid extends BlockFluidClassic {
 	}
 
 
-	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
-	{
-		super.updateTick(worldIn, pos, state, rand);
-		float chance = -0.000016495988F * (pos.getY() + 1000);
-		if (pos.getY() <= -1000) {
-			if (Math.random() < chance && worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.up(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.down(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.north(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.south(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.west(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
-				worldIn.setBlockState(pos.east(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-		}
-		this.checkForMixing(worldIn, pos, state);
-	}
+//	@Override
+//	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+//	{
+//		super.updateTick(worldIn, pos, state, rand);
+//		float chance = -0.000016495988F * (pos.getY() + 1000);
+//		if (pos.getY() <= -1000) {
+//			if (Math.random() < chance && worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState())
+//				worldIn.setBlockState(pos.up(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+//			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+//				worldIn.setBlockState(pos.down(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+//			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+//				worldIn.setBlockState(pos.north(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+//			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+//				worldIn.setBlockState(pos.south(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+//			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+//				worldIn.setBlockState(pos.west(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+//			if (Math.random() < chance && worldIn.getBlockState(pos.down()) == Blocks.AIR.getDefaultState())
+//				worldIn.setBlockState(pos.east(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+//		}
+//		this.checkForMixing(worldIn, pos, state);
+//	}
 
 	protected boolean isSurroundingBlockFlammable(World worldIn, BlockPos pos)
 	{

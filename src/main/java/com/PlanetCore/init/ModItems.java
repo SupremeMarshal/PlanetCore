@@ -31,104 +31,12 @@ public class ModItems {
 	public static final Item CORE_FIREBALL = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX_FIREBALL = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
-	//ALUMINIUM//
-
-	public static final ItemSword ALUMINIUM_SWORD = new ItemSword(ToolMaterials.ALUMINIUM);
-	public static final ItemSpade ALUMINIUM_SHOVEL = new ItemSpade(ToolMaterials.ALUMINIUM);
-	public static final ItemPickaxe ALUMINIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.ALUMINIUM);
-	public static final ItemAxe ALUMINIUM_AXE = new ItemAxeX(ToolMaterials.ALUMINIUM);
-	public static final ItemHoe ALUMINIUM_HOE = new ItemHoe(ToolMaterials.ALUMINIUM);
-	public static final ItemSword COMPLETE_ALUMINIUM_SWORD = new ItemSword(ToolMaterials.COMPLETE_ALUMINIUM);
-	public static final ItemSpade COMPLETE_ALUMINIUM_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_ALUMINIUM);
-	public static final ItemPickaxe COMPLETE_ALUMINIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_ALUMINIUM);
-	public static final ItemAxe COMPLETE_ALUMINIUM_AXE = new ItemAxeX(ToolMaterials.COMPLETE_ALUMINIUM);
-	public static final ItemHoe COMPLETE_ALUMINIUM_HOE = new ItemHoe(ToolMaterials.COMPLETE_ALUMINIUM);
-
-
-
-	public static final Item ALUMINIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM, 1, EntityEquipmentSlot.HEAD);
-	public static final Item ALUMINIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM, 1, EntityEquipmentSlot.CHEST);
-	public static final Item ALUMINIUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM, 2, EntityEquipmentSlot.LEGS);
-	public static final Item ALUMINIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM, 1, EntityEquipmentSlot.FEET);
-
-
-
-
-	//TIN//
-	public static final ItemSword TIN_SWORD = new ItemSword(ToolMaterials.TIN);
-	public static final ItemSpade TIN_SHOVEL = new ItemSpade(ToolMaterials.TIN);
-	public static final ItemPickaxe TIN_PICKAXE = new ItemPickaxeX(ToolMaterials.TIN);
-	public static final ItemAxe TIN_AXE = new ItemAxeX(ToolMaterials.TIN);
-	public static final ItemHoe TIN_HOE = new ItemHoe(ToolMaterials.TIN);
-	public static final ItemSword COMPLETE_TIN_SWORD = new ItemSword(ToolMaterials.COMPLETE_TIN);
-	public static final ItemSpade COMPLETE_TIN_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_TIN);
-	public static final ItemPickaxe COMPLETE_TIN_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_TIN);
-	public static final ItemAxe COMPLETE_TIN_AXE = new ItemAxeX(ToolMaterials.COMPLETE_TIN);
-	public static final ItemHoe COMPLETE_TIN_HOE = new ItemHoe(ToolMaterials.COMPLETE_TIN);
-
-	public static final Item TIN_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TIN, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TIN_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TIN, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TIN_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TIN, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TIN_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TIN, 1, EntityEquipmentSlot.FEET);
-
-
-	//COPPER//
-	public static final ItemSword COPPER_SWORD = new ItemSword(ToolMaterials.COPPER);
-	public static final ItemSpade COPPER_SHOVEL = new ItemSpade(ToolMaterials.COPPER);
-	public static final ItemPickaxe COPPER_PICKAXE = new ItemPickaxeX(ToolMaterials.COPPER);
-	public static final ItemAxe COPPER_AXE = new ItemAxeX(ToolMaterials.COPPER);
-	public static final ItemHoe COPPER_HOE = new ItemHoe(ToolMaterials.COPPER);
-	public static final ItemSword COMPLETE_COPPER_SWORD = new ItemSword(ToolMaterials.COMPLETE_COPPER);
-	public static final ItemSpade COMPLETE_COPPER_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_COPPER);
-	public static final ItemPickaxe COMPLETE_COPPER_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_COPPER);
-	public static final ItemAxe COMPLETE_COPPER_AXE = new ItemAxeX(ToolMaterials.COMPLETE_COPPER);
-	public static final ItemHoe COMPLETE_COPPER_HOE = new ItemHoe(ToolMaterials.COMPLETE_COPPER);
-
-	public static final Item COPPER_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_COPPER, 1, EntityEquipmentSlot.HEAD);
-	public static final Item COPPER_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_COPPER, 1, EntityEquipmentSlot.CHEST);
-	public static final Item COPPER_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_COPPER, 2, EntityEquipmentSlot.LEGS);
-	public static final Item COPPER_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_COPPER, 1, EntityEquipmentSlot.FEET);
-
 	//IRON//
 	public static final ItemSword COMPLETE_IRON_SWORD = new ItemSword(ToolMaterials.COMPLETE_IRON);
 	public static final ItemSpade COMPLETE_IRON_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_IRON);
 	public static final ItemPickaxe COMPLETE_IRON_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_IRON);
 	public static final ItemAxe COMPLETE_IRON_AXE = new ItemAxeX(ToolMaterials.COMPLETE_IRON);
 	public static final ItemHoe COMPLETE_IRON_HOE = new ItemHoe(ToolMaterials.COMPLETE_IRON);
-
-	//STEEL//
-	public static final ItemSword STEEL_SWORD = new ItemSword(ToolMaterials.STEEL);
-	public static final ItemSpade STEEL_SHOVEL = new ItemSpade(ToolMaterials.STEEL);
-	public static final ItemPickaxe STEEL_PICKAXE = new ItemPickaxeX(ToolMaterials.STEEL);
-	public static final ItemAxe STEEL_AXE = new ItemAxeX(ToolMaterials.STEEL);
-	public static final ItemHoe STEEL_HOE = new ItemHoe(ToolMaterials.STEEL);
-	public static final ItemSword COMPLETE_STEEL_SWORD = new ItemSword(ToolMaterials.COMPLETE_STEEL);
-	public static final ItemSpade COMPLETE_STEEL_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_STEEL);
-	public static final ItemPickaxe COMPLETE_STEEL_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_STEEL);
-	public static final ItemAxe COMPLETE_STEEL_AXE = new ItemAxeX(ToolMaterials.COMPLETE_STEEL);
-	public static final ItemHoe COMPLETE_STEEL_HOE = new ItemHoe(ToolMaterials.COMPLETE_STEEL);
-
-	public static final Item STEEL_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_STEEL, 1, EntityEquipmentSlot.HEAD);
-	public static final Item STEEL_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_STEEL, 1, EntityEquipmentSlot.CHEST);
-	public static final Item STEEL_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_STEEL, 2, EntityEquipmentSlot.LEGS);
-	public static final Item STEEL_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_STEEL, 1, EntityEquipmentSlot.FEET);
-
-	//BRONZE//
-	public static final ItemSword BRONZE_SWORD = new ItemSword(ToolMaterials.BRONZE);
-	public static final ItemSpade BRONZE_SHOVEL = new ItemSpade(ToolMaterials.BRONZE);
-	public static final ItemPickaxe BRONZE_PICKAXE = new ItemPickaxeX(ToolMaterials.BRONZE);
-	public static final ItemAxe BRONZE_AXE = new ItemAxeX(ToolMaterials.BRONZE);
-	public static final ItemHoe BRONZE_HOE = new ItemHoe(ToolMaterials.BRONZE);
-	public static final ItemSword COMPLETE_BRONZE_SWORD = new ItemSword(ToolMaterials.COMPLETE_BRONZE);
-	public static final ItemSpade COMPLETE_BRONZE_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_BRONZE);
-	public static final ItemPickaxe COMPLETE_BRONZE_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_BRONZE);
-	public static final ItemAxe COMPLETE_BRONZE_AXE = new ItemAxeX(ToolMaterials.COMPLETE_BRONZE);
-	public static final ItemHoe COMPLETE_BRONZE_HOE = new ItemHoe(ToolMaterials.COMPLETE_BRONZE);
-
-	public static final Item BRONZE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRONZE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item BRONZE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRONZE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item BRONZE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRONZE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item BRONZE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRONZE, 1, EntityEquipmentSlot.FEET);
 
 	//SILVER//
 	public static final ItemSword SILVER_SWORD = new ItemSword(ToolMaterials.SILVER);
@@ -212,43 +120,6 @@ public class ModItems {
 	public static final Item TUNGSTEN_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 2, EntityEquipmentSlot.LEGS);
 	public static final Item TUNGSTEN_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.FEET);
 
-	//TUNGSTEN_TITANIUM//
-	public static final ItemSword TUNGSTEN_TITANIUM_SWORD = new ItemSword(ToolMaterials.TUNGSTEN_TITANIUM);
-	public static final ItemSpade TUNGSTEN_TITANIUM_SHOVEL = new ItemSpadeX(ToolMaterials.TUNGSTEN_TITANIUM);
-	public static final ItemPickaxe TUNGSTEN_TITANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.TUNGSTEN_TITANIUM);
-	public static final ItemPickaxe COMPLETE_TUNGSTEN_TITANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_TUNGSTEN_TITANIUM);
-	public static final ItemAxe TUNGSTEN_TITANIUM_AXE = new ItemAxeX(ToolMaterials.TUNGSTEN_TITANIUM);
-	public static final ItemHoe TUNGSTEN_TITANIUM_HOE = new ItemHoe(ToolMaterials.TUNGSTEN_TITANIUM);
-
-	public static final Item TUNGSTEN_TITANIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TUNGSTEN_TITANIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TUNGSTEN_TITANIUM_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TUNGSTEN_TITANIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM, 1, EntityEquipmentSlot.FEET);
-
-	//TOPAZ//
-	public static final ItemSword TOPAZ_SWORD = new ItemSword(ToolMaterials.TOPAZ);
-	public static final ItemSpade TOPAZ_SHOVEL = new ItemSpadeX(ToolMaterials.TOPAZ);
-	public static final ItemPickaxe TOPAZ_PICKAXE = new ItemPickaxeX(ToolMaterials.TOPAZ);
-	public static final ItemAxe TOPAZ_AXE = new ItemAxeX(ToolMaterials.TOPAZ);
-	public static final ItemHoe TOPAZ_HOE = new ItemHoe(ToolMaterials.TOPAZ);
-
-	public static final Item TOPAZ_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.HEAD);
-	public static final Item TOPAZ_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.CHEST);
-	public static final Item TOPAZ_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 2, EntityEquipmentSlot.LEGS);
-	public static final Item TOPAZ_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TOPAZ, 1, EntityEquipmentSlot.FEET);
-	
-	//JADE//
-	public static final ItemSword JADE_SWORD = new ItemSword(ToolMaterials.JADE);
-	public static final ItemSpade JADE_SHOVEL = new ItemSpadeX(ToolMaterials.JADE);
-	public static final ItemPickaxe JADE_PICKAXE = new ItemPickaxeX(ToolMaterials.JADE);
-	public static final ItemAxe JADE_AXE = new ItemAxeX(ToolMaterials.JADE);
-	public static final ItemHoe JADE_HOE = new ItemHoe(ToolMaterials.JADE);
-
-	public static final Item JADE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_JADE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item JADE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_JADE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item JADE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_JADE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item JADE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_JADE, 1, EntityEquipmentSlot.FEET);
-
 	//RUBY//
 	public static final ItemSword RUBY_SWORD = new ItemSword(ToolMaterials.RUBY);
 	public static final ItemSpade RUBY_SHOVEL = new ItemSpadeX(ToolMaterials.RUBY);
@@ -272,54 +143,6 @@ public class ModItems {
 	public static final Item SAPPHIRE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.CHEST);
 	public static final Item SAPPHIRE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 2, EntityEquipmentSlot.LEGS);
 	public static final Item SAPPHIRE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.FEET);
-
-	//OLIVINE//
-	public static final ItemSword OLIVINE_SWORD = new ItemSword(ToolMaterials.OLIVINE);
-	public static final ItemSpade OLIVINE_SHOVEL = new ItemSpadeX(ToolMaterials.OLIVINE);
-	public static final ItemPickaxe OLIVINE_PICKAXE = new ItemPickaxeX(ToolMaterials.OLIVINE);
-	public static final ItemAxe OLIVINE_AXE = new ItemAxeX(ToolMaterials.OLIVINE);
-	public static final ItemHoe OLIVINE_HOE = new ItemHoe(ToolMaterials.OLIVINE);
-
-	public static final Item OLIVINE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item OLIVINE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item OLIVINE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item OLIVINE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_OLIVINE, 1, EntityEquipmentSlot.FEET);
-
-	//WADSLEYITE//
-	public static final ItemSword WADSLEYITE_SWORD = new ItemSword(ToolMaterials.WADSLEYITE);
-	public static final ItemSpade WADSLEYITE_SHOVEL = new ItemSpadeX(ToolMaterials.WADSLEYITE);
-	public static final ItemPickaxe WADSLEYITE_PICKAXE = new ItemPickaxeX(ToolMaterials.WADSLEYITE);
-	public static final ItemAxe WADSLEYITE_AXE = new ItemAxeX(ToolMaterials.WADSLEYITE);
-	public static final ItemHoe WADSLEYITE_HOE = new ItemHoe(ToolMaterials.WADSLEYITE);
-
-	public static final Item WADSLEYITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item WADSLEYITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item WADSLEYITE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item WADSLEYITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE, 1, EntityEquipmentSlot.FEET);
-
-	//RINGWOODITE//
-	public static final ItemSword RINGWOODITE_SWORD = new ItemSword(ToolMaterials.RINGWOODITE);
-	public static final ItemSpade RINGWOODITE_SHOVEL = new ItemSpadeX(ToolMaterials.RINGWOODITE);
-	public static final ItemPickaxe RINGWOODITE_PICKAXE = new ItemPickaxeX(ToolMaterials.RINGWOODITE);
-	public static final ItemAxe RINGWOODITE_AXE = new ItemAxeX(ToolMaterials.RINGWOODITE);
-	public static final ItemHoe RINGWOODITE_HOE = new ItemHoe(ToolMaterials.RINGWOODITE);
-
-	public static final Item RINGWOODITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item RINGWOODITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item RINGWOODITE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item RINGWOODITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE, 1, EntityEquipmentSlot.FEET);
-
-	//BRIGMANITE//
-	public static final ItemSword BRIGMANITE_SWORD = new ItemSword(ToolMaterials.BRIGMANITE);
-	public static final ItemSpade BRIGMANITE_SHOVEL = new ItemSpadeX(ToolMaterials.BRIGMANITE);
-	public static final ItemPickaxe BRIGMANITE_PICKAXE = new ItemPickaxeX(ToolMaterials.BRIGMANITE);
-	public static final ItemAxe BRIGMANITE_AXE = new ItemAxeX(ToolMaterials.BRIGMANITE);
-	public static final ItemHoe BRIGMANITE_HOE = new ItemHoe(ToolMaterials.BRIGMANITE);
-
-	public static final Item BRIGMANITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.HEAD);
-	public static final Item BRIGMANITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.CHEST);
-	public static final Item BRIGMANITE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 2, EntityEquipmentSlot.LEGS);
-	public static final Item BRIGMANITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE, 1, EntityEquipmentSlot.FEET);
 
 	//MAJORITE//
 	public static final ItemSword MAJORITE_SWORD = new ItemSword(ToolMaterials.MAJORITE);
@@ -405,121 +228,65 @@ public class ModItems {
 	public static final Item ONYX_V_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 2, EntityEquipmentSlot.LEGS);
 	public static final Item ONYX_V_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 1, EntityEquipmentSlot.FEET);
 
-
-	//DEMON//CORE//
-
 	//GEMS//
 	public static final Item ONYX_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item PAINITE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
-	public static final Item TOPAZ = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item JADE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RUBY = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SAPPHIRE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item OLIVINE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item WADSLEYITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item RINGWOODITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BRIGMANITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item MAJORITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item AMAZONITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item PAINITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	public static final Item BLADED_DIAMOND = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BLADED_TOPAZ = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BLADED_JADE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item BLADED_RUBY = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item BLADED_SAPPHIRE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BLADED_OLIVINE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BLADED_WADSLEYITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BLADED_RINGWOODITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BLADED_BRIGMANITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item BLADED_MAJORITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item BLADED_AMAZONITE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item BLADED_ONYX = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//ROD//
-	public static final Item ALUMINIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item COPPER_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TIN_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item IRON_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item STEEL_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BRONZE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SILVER_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item GOLD_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TITANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item URANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TUNGSTEN_TITANIUM_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TOPAZ_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item JADE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SAPPHIRE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item RUBY_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item DIAMOND_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item OLIVINE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item WADSLEYITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item RINGWOODITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BRIGMANITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item MAJORITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item AMAZONITE_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX_ROD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//Ingot//
-	public static final Item ALUMINIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item COPPER_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TIN_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item STEEL_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BRONZE_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SILVER_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TITANIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BORON_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item LITHIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item MAGNESIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item THORIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item URANIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TUNGSTEN_TITANIUM_INGOT = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//Ingot//
-	public static final Item ALUMINIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item COPPER_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TIN_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item IRON_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SILVER_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item GOLD_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TITANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item URANIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BORON_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item LITHIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item MAGNESIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item THORIUM_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_ORE = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//metal shard//
 	public static final Item SULFUR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
-	public static final Item ALUMINIUM_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item COPPER_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TIN_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item STEEL_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item BRONZE_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item SILVER_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item GOLD_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TITANIUM_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item URANIUM_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item TUNGSTEN_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item TUNGSTEN_TITANIUM_NUGGET = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//Bows
 	public static final Item DIAMOND_BOW = new DiamondBow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item TOPAZ_BOW = new TopazBow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item JADE_BOW = new JadeBow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item RUBY_BOW = new RubyBow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item SAPPHIRE_BOW = new SapphireBow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item OLIVINE_BOW = new OlivineBow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item WADSLEYITE_BOW = new WadsleyiteBow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item RINGWOODITE_BOW = new RingwooditeBow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item BRIGMANITE_BOW = new BrigmaniteBow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item MAJORITE_BOW = new MajoriteBow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item AMAZONITE_BOW = new AmazoniteBow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item ONYX_BOW = new OnyxBow().setCreativeTab(CreativeTabs.COMBAT);
@@ -531,14 +298,8 @@ public class ModItems {
 
 	//Arrows
 	public static final Item DIAMOND_ARROW = new DiamondArrow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item TOPAZ_ARROW = new TopazArrow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item JADE_ARROW = new JadeArrow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item RUBY_ARROW = new RubyArrow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item SAPPHIRE_ARROW = new SapphireArrow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item OLIVINE_ARROW = new OlivineArrow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item WADSLEYITE_ARROW = new WadsleyiteArrow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item RINGWOODITE_ARROW = new RingwooditeArrow().setCreativeTab(CreativeTabs.COMBAT);
-	public static final Item BRIGMANITE_ARROW = new BrigmaniteArrow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item MAJORITE_ARROW = new MajoriteArrow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item AMAZONITE_ARROW = new AmazoniteArrow().setCreativeTab(CreativeTabs.COMBAT);
 	public static final Item ONYX_ARROW = new OnyxArrow().setCreativeTab(CreativeTabs.COMBAT);
@@ -568,27 +329,15 @@ public class ModItems {
 	 */
 
 	//SHIELDS
-	public static final Item ALUMINIUM_SHIELD = new Shield(ShieldMaterial.ALUMINIUM);
-	public static final Item COPPER_SHIELD = new Shield(ShieldMaterial.COPPER);
-	public static final Item TIN_SHIELD = new Shield(ShieldMaterial.TIN);
 	public static final Item IRON_SHIELD = new Shield(ShieldMaterial.IRON);
-	public static final Item STEEL_SHIELD = new Shield(ShieldMaterial.STEEL);
-	public static final Item BRONZE_SHIELD = new Shield(ShieldMaterial.BRONZE);
 	public static final Item SILVER_SHIELD = new Shield(ShieldMaterial.SILVER);
 	public static final Item GOLD_SHIELD = new Shield(ShieldMaterial.GOLD);
 	public static final Item TITANIUM_SHIELD = new Shield(ShieldMaterial.TITANIUM);
 	public static final Item URANIUM_SHIELD = new Shield(ShieldMaterial.URANIUM);
 	public static final Item TUNGSTEN_SHIELD = new Shield(ShieldMaterial.TUNGSTEN);
-	public static final Item TUNGSTEN_TITANIUM_SHIELD = new Shield(ShieldMaterial.TUNGSTEN_TITANIUM);
-	public static final Item TOPAZ_SHIELD = new Shield(ShieldMaterial.TOPAZ);
-	public static final Item JADE_SHIELD = new Shield(ShieldMaterial.JADE);
 	public static final Item SAPPHIRE_SHIELD = new Shield(ShieldMaterial.SAPPHIRE);
 	public static final Item RUBY_SHIELD = new Shield(ShieldMaterial.RUBY);
 	public static final Item DIAMOND_SHIELD = new Shield(ShieldMaterial.DIAMOND);
-	public static final Item OLIVINE_SHIELD = new Shield(ShieldMaterial.OLIVINE);
-	public static final Item WADSLEYITE_SHIELD = new Shield(ShieldMaterial.WADSLEYITE);
-	public static final Item RINGWOODITE_SHIELD = new Shield(ShieldMaterial.RINGWOODITE);
-	public static final Item BRIGMANITE_SHIELD = new Shield(ShieldMaterial.BRIGMANITE);
 	public static final Item MAJORITE_SHIELD = new Shield(ShieldMaterial.MAJORITE);
 	public static final Item AMAZONITE_SHIELD = new Shield(ShieldMaterial.AMAZONITE);
 	public static final Item ONYX_SHIELD = new Shield(ShieldMaterial.ONYX);

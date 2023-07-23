@@ -65,10 +65,6 @@ public class FogHandler {
                 event.setRed(1.0F);
                 event.setGreen(0.85F);
                 event.setBlue(0.0F);
-            } else if (block == ModBlocks.CORE_LAVA_FLUID) {
-                event.setRed(0.6F);
-                event.setGreen(1.0F);
-                event.setBlue(1.0F);
             } else if (block == ModBlocks.ONYX_LAVA_FLUID) {
                 event.setRed(0.0F);
                 event.setGreen(0.0F);

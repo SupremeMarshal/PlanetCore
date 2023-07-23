@@ -125,9 +125,6 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
         CAVE0(Blocks.STONE,1.0, -30.0,128,10000,-10000, 10000, 64, 64),
         CAVE1(ModBlocks.COAL_SUPERCOMPACT,0.01, -2.0,32,10000,-10000, 10000, 64, 64),
-        CAVE2(ModBlocks.ALUMINIUM_SUPERCOMPACT,0.03, -4,32,10000,-10000, 10000, 64, 64),
-        CAVE3(ModBlocks.TIN_SUPERCOMPACT,0.03, -6.0,32,10000, -10000, 10000, 64, 64),
-        CAVE4(ModBlocks.COPPER_SUPERCOMPACT,0.03, -8.0,32,10000,-10000, 10000, 64, 64),
         CAVE5(ModBlocks.IRON_SUPERCOMPACT,0.05, -37.0,64,10000,-10000, 10000, 64, 64),
         CAVE6(ModBlocks.REDSTONE_SUPERCOMPACT,0.02, -74.0,64,10000, -10000, 10000, 64, 64),
         CAVE7(ModBlocks.SILVER_SUPERCOMPACT,0.02, -92.5,64,10000, -10000, 10000, 64, 64),
@@ -135,17 +132,11 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
         CAVE20(ModBlocks.DIAMOND_SUPERCOMPACT,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
         CAVE28(ModBlocks.EMERALD_SUPERCOMPACT,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
         CAVE29(ModBlocks.LAPIS_SUPERCOMPACT,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
-        CAVE9(ModBlocks.TOPAZ_SUPERCOMPACT,0.01, -148.0,64,10000,-10000, 10000, 64, 64),
         CAVE10(ModBlocks.TITANIUM_SUPERCOMPACT,0.02, -148.0,64,10000, -10000, 10000, 64, 64),
         CAVE15(ModBlocks.URANIUM_SUPERCOMPACT,0.02, -148.0,64,10000, -10000, 10000, 64, 64),
         CAVE16(ModBlocks.TUNGSTEN_SUPERCOMPACT,0.02, -155.4,64,10000, -10000, 10000, 64, 64),
-        CAVE17(ModBlocks.JADE_SUPERCOMPACT,0.01, -162.8,64,10000, -10000, 10000, 64, 64),
         CAVE18(ModBlocks.RUBY_SUPERCOMPACT,0.01, -170.2,64,10000, -10000, 10000, 64, 64),
         CAVE19(ModBlocks.SAPPHIRE_SUPERCOMPACT,0.01, -177.6,64,10000, -10000, 10000, 64, 64),
-        CAVE21(ModBlocks.OLIVINE_SUPERCOMPACT,0.01, -185.0,64,10000, -10000, 10000, 64, 64),
-        CAVE22(ModBlocks.WADSLEYITE_SUPERCOMPACT,0.01, -192.4,64,10000, -10000, 10000, 64, 64),
-        CAVE23(ModBlocks.RINGWOODITE_SUPERCOMPACT,0.01, -199.8,64,10000, -10000, 10000, 64, 64),
-        CAVE24(ModBlocks.BRIGMANITE_SUPERCOMPACT,0.01, -207.2,64,10000, -10000, 10000, 64, 64),
         CAVE25(ModBlocks.MAJORITE_SUPERCOMPACT,0.01, -214.6,64,10000, -10000, 10000, 64, 64),
         CAVE26(ModBlocks.AMAZONITE_SUPERCOMPACT,0.01, -222.0,64,10000, -10000, 10000, 64, 64),
         CAVE27(ModBlocks.ONYX_SUPERCOMPACT,0.01, -229.4,64,10000, -10000, 10000, 64, 64);
@@ -225,7 +216,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
      * Controls which blocks can be replaced by cave
      */
     private static Predicate<IBlockState> isBlockReplaceable = (state ->
-            state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS || state.getBlock() == Blocks.AIR || state.getBlock() == Blocks.GLASS || state.getBlock() == ModBlocks.CORE_LAVA_FLUID);
+            state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS || state.getBlock() == Blocks.AIR || state.getBlock() == Blocks.GLASS);
 
     @Override public void generate(World world, CubePrimer cube, CubePos cubePos) {
         this.generate(world, cube, cubePos, this::generate, RANGE, RANGE, 1, 1);

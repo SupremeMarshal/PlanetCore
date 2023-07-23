@@ -332,8 +332,8 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
                     }
                     if (localToBlock(generatedCubeY, localY) < lavaHeight) {
                         if (ravineY > -1000) { cube.setBlockState(localX, localY, localZ, Blocks.LAVA.getDefaultState()); }
-                        else if (ravineY <= -1000 && ravineY > -5000) { cube.setBlockState(localX, localY, localZ, ModBlocks.IRON_LAVA_FLUID.getDefaultState()); }
-                        else if (ravineY <= -5000 && ravineY > -10000) { cube.setBlockState(localX, localY, localZ, ModBlocks.CORE_LAVA_FLUID.getDefaultState()); }
+                        else if (ravineY <= -1000 && ravineY > -4000) { cube.setBlockState(localX, localY, localZ, ModBlocks.IRON_LAVA_FLUID.getDefaultState()); }
+                        else if (ravineY <= -4000 && ravineY > -10000) { cube.setBlockState(localX, localY, localZ, ModBlocks.DIAMOND_LAVA_FLUID.getDefaultState()); }
                         else if (ravineY <= -10000) { cube.setBlockState(localX, localY, localZ, ModBlocks.ONYX_LAVA_FLUID.getDefaultState()); }
                     } else {
                         cube.setBlockState(localX, localY, localZ, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
