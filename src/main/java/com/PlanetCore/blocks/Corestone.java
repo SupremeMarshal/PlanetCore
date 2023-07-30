@@ -13,7 +13,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
@@ -21,6 +23,7 @@ import net.minecraft.util.*;
 import net.minecraft.util.math.*;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -30,7 +33,7 @@ import java.util.Random;
 
 public class Corestone extends BlockBase implements IMetaName {
 
-	private static final float [] coreHardnessByMeta = {180, 230, 280, 385, 500, 625, 1000};
+	private static final float [] coreHardnessByMeta = {80, 160, 320, 640};
 	public static final PropertyEnum<Corestone.EnumType> VARIANT = PropertyEnum.create("variant", Corestone.EnumType.class);
 
 	public Corestone(String name, Material material) {
@@ -38,7 +41,7 @@ public class Corestone extends BlockBase implements IMetaName {
 
 		setSoundType(SoundType.METAL);
 		setHarvestLevel("pickaxe", 3);
-		setLightLevel(1.0F);
+		setLightLevel(15.0F);
 		setTickRandomly(true);
 
 	}
@@ -49,6 +52,11 @@ public class Corestone extends BlockBase implements IMetaName {
 			return getMetaFromState(state);
 		}
 		else return 0;
+	}
+
+	@Override
+	public int getLightValue(IBlockState state) {
+		return (15);
 	}
 
 	@Override
@@ -94,14 +102,10 @@ public class Corestone extends BlockBase implements IMetaName {
 	public enum EnumType implements IStringSerializable
 	{
 		CORE(0, "corestone"),
-		CORE1(1, "corestone1"),
-		CORE2(2, "corestone2"),
-		INNERCORE(3, "innercorestone"),
-		INNERCORE1(4, "innercorestone1"),
-		INNERCORE2(5, "innercorestone2"),
-		CENTERCORE(6, "centercorestone");
+		INNERCORE(1, "innercorestone"),
+		CENTERCORE(2, "centercorestone");
 
-		private static final Corestone.EnumType[] META_LOOKUP = new Corestone.EnumType[]{CORE, CORE1, CORE2, INNERCORE, INNERCORE1, INNERCORE2, CENTERCORE};
+		private static final Corestone.EnumType[] META_LOOKUP = new Corestone.EnumType[]{CORE, INNERCORE, CENTERCORE};
 		private final int meta;
 		private final String name;
 
@@ -139,6 +143,8 @@ public class Corestone extends BlockBase implements IMetaName {
 			}
 		}
 	}
+
+
 
 	@Override
 	public String getSpecialName(ItemStack stack)
@@ -314,13 +320,29 @@ public class Corestone extends BlockBase implements IMetaName {
 		}
 	}
 
+	@Override
+	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+	{
+		BlockPos blockpos = pos.up();
+		IBlockState iblockstate = worldIn.getBlockState(blockpos);
+
+		if (iblockstate.getBlock() == Blocks.WATER || iblockstate.getBlock() == Blocks.FLOWING_WATER)
+		{
+			worldIn.setBlockToAir(blockpos);
+			worldIn.playSound((EntityPlayer)null, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (worldIn.rand.nextFloat() - worldIn.rand.nextFloat()) * 0.8F);
+
+			if (worldIn instanceof WorldServer)
+			{
+				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
+			}
+		}
+	}
 
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		super.onPlayerDestroy(worldIn, pos, state);
 		naturalGasExplosion(worldIn, pos, state);
 	}
-
 
 	public boolean canEntitySpawn(IBlockState state, Entity entityIn)
 	{

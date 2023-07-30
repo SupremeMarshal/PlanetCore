@@ -33,14 +33,8 @@ public class EntityInit
 		registerEntity("hot_magmacube", EntityHotMagmaCube.class, ModConfiguration.ENTITY_HOT_MAGMACUBE_ID, 50, 11437146, 000000);
 		registerEntity("very_hot_magmacube", EntityVeryHotMagmaCube.class, ModConfiguration.ENTITY_VERY_HOT_MAGMACUBE_ID, 50, 11437146, 000000);
 		registerArrow("diamond_arrow", EntityDiamondArrow.class, ModConfiguration.ENTITY_DIAMOND_ARROW_ID);
-		registerArrow("topaz_arrow", EntityTopazArrow.class, ModConfiguration.ENTITY_TOPAZ_ARROW_ID);
-		registerArrow("jade_arrow", EntityJadeArrow.class, ModConfiguration.ENTITY_JADE_ARROW_ID);
 		registerArrow("ruby_arrow", EntityRubyArrow.class, ModConfiguration.ENTITY_RUBY_ARROW_ID);
 		registerArrow("sapphire_arrow", EntitySapphireArrow.class, ModConfiguration.ENTITY_SAPPHIRE_ARROW_ID);
-		registerArrow("olivine_arrow", EntityOlivineArrow.class, ModConfiguration.ENTITY_OLIVINE_ARROW_ID);
-		registerArrow("wadsleyite_arrow", EntityWadsleyiteArrow.class, ModConfiguration.ENTITY_WADSLEYITE_ARROW_ID);
-		registerArrow("ringwoodite_arrow", EntityRingwooditeArrow.class, ModConfiguration.ENTITY_RINGWOODITE_ARROW_ID);
-		registerArrow("brigmanite_arrow", EntityBrigmaniteArrow.class, ModConfiguration.ENTITY_BRIGMANITE_ARROW_ID);
 		registerArrow("majorite_arrow", EntityMajoriteArrow.class, ModConfiguration.ENTITY_MAJORITE_ARROW_ID);
 		registerArrow("amazonite_arrow", EntityAmazoniteArrow.class, ModConfiguration.ENTITY_AMAZONITE_ARROW_ID);
 		registerArrow("onyx_arrow", EntityOnyxArrow.class, ModConfiguration.ENTITY_ONYX_ARROW_ID);

@@ -1,8 +1,4 @@
 {"variants":{
   "variant=corestone":{"model":"planetcore:corestone_ruby"},
-  "variant=corestone1":{"model":"planetcore:corestone1_ruby"},
-  "variant=corestone2":{"model":"planetcore:corestone2_ruby"},
   "variant=innercorestone":{"model":"planetcore:innercorestone_ruby"},
-  "variant=innercorestone1":{"model":"planetcore:innercorestone1_ruby"},
-  "variant=innercorestone2":{"model":"planetcore:innercorestone2_ruby"},
   "variant=centercorestone":{"model":"planetcore:centercorestone_ruby"}}}

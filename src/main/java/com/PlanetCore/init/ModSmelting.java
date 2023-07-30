@@ -12,62 +12,26 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import java.util.Locale;
 
 public class ModSmelting {
-
-	private static final String[] Material = {"SULFUR", "IRON", "SILVER",
-			"GOLD", "TITANIUM", "URANIUM", "TUNGSTEN", "REDSTONE", "RUBY", "SAPPHIRE", "MAJORITE", "AMAZONITE", "ONYX"};
-
-	private static final String[] Rock = {"ORE", "CRUSTROCK", "MANTLEROCK", "CORESTONE"};
-	private static final String[] Size = {"","COMPACT"};
-	private static final int[] Amount = {1,3};
-
-
+	
 	public static void init()
 	{
-		String blockname;
-		String itemname;
-		String itemname1;
-		Block block;
-		Item item;
-		Item item1;
 		/**
 		 * NORMAL FURNACE RECIPES
 		 */
 
-
-		for (int size = 0; size < 2; size++) {
-			for (int material = 0; (material < 13); material++) {
-				if (material < 7) {
-					itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT) + "_ingot";
-				} else {
-					itemname = "planetcore:" + Material[material].toLowerCase(Locale.ROOT);
-					if (Material[material].contains("REDSTONE")) {
-						itemname = "minecraft:" + Material[material].toLowerCase(Locale.ROOT);
-					}
-				}
-				item = Item.getByNameOrId(itemname);
-				for (int rock = 0; rock < 4; rock++) {
-					if (rock == 3 && material < 8) {
-						continue;
-					}
-
-					if (size == 0) {
-						if (material < 7) {
-							blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
-							block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
-							GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
-
-						}
-						if (size != 0) {
-
-							blockname = "planetcore:" + Rock[rock].toLowerCase(Locale.ROOT) + "_" + Size[size].toLowerCase(Locale.ROOT) + "_" + Material[material].toLowerCase(Locale.ROOT);
-							block = BlockBase.getBlockFromName(blockname).getBlockState().getBlock();
-							GameRegistry.addSmelting(block, new ItemStack(item, Amount[size]), 0.25F * Amount[size]);
-						}
-					}
-				}
-			}
-		}
-
+		GameRegistry.addSmelting(ModBlocks.IRON_BLOCK, new ItemStack(Items.IRON_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SULFUR_BLOCK, new ItemStack(ModItems.SULFUR, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SILVER_BLOCK, new ItemStack(ModItems.SILVER_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.GOLD_BLOCK, new ItemStack(Items.GOLD_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.TITANIUM_BLOCK, new ItemStack(ModItems.TITANIUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.URANIUM_BLOCK, new ItemStack(ModItems.URANIUM_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.TUNGSTEN_BLOCK, new ItemStack(ModItems.TUNGSTEN_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.RUBY_BLOCK, new ItemStack(ModItems.RUBY, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.SAPPHIRE_BLOCK, new ItemStack(ModItems.SAPPHIRE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MAJORITE_BLOCK, new ItemStack(ModItems.MAJORITE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.AMAZONITE_BLOCK, new ItemStack(ModItems.AMAZONITE, 9), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.ONYX_BLOCK, new ItemStack(ModItems.ONYX, 9), 1.0F);
+		
 		GameRegistry.addSmelting(ModBlocks.IRON_SUPERCOMPACT, new ItemStack(Items.IRON_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.SULFUR_SUPERCOMPACT, new ItemStack(ModItems.SULFUR, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.REDSTONE_SUPERCOMPACT, new ItemStack(Blocks.REDSTONE_BLOCK, 1), 1.0F);
@@ -88,6 +52,25 @@ public class ModSmelting {
 		GameRegistry.addSmelting(ModItems.TITANIUM_ORE, new ItemStack(ModItems.TITANIUM_INGOT, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.URANIUM_ORE, new ItemStack(ModItems.URANIUM_INGOT, 1), 1.0F);
 		GameRegistry.addSmelting(ModItems.TUNGSTEN_ORE, new ItemStack(ModItems.TUNGSTEN_INGOT, 1), 1.0F);
-
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_RUBY, new ItemStack(ModItems.RUBY, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_MAJORITE, new ItemStack(ModItems.MAJORITE, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_COMPACT_RUBY, new ItemStack(ModItems.RUBY, 3), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_COMPACT_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 3), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_COMPACT_MAJORITE, new ItemStack(ModItems.MAJORITE, 3), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.MANTLEROCK_COMPACT_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 3), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_RUBY, new ItemStack(ModItems.RUBY, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_MAJORITE, new ItemStack(ModItems.MAJORITE, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_ONYX, new ItemStack(ModItems.ONYX, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_PAINITE, new ItemStack(ModItems.PAINITE, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_COMPACT_RUBY, new ItemStack(ModItems.RUBY, 3), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_COMPACT_SAPPHIRE, new ItemStack(ModItems.SAPPHIRE, 3), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_COMPACT_MAJORITE, new ItemStack(ModItems.MAJORITE, 3), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_COMPACT_AMAZONITE, new ItemStack(ModItems.AMAZONITE, 3), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_COMPACT_ONYX, new ItemStack(ModItems.ONYX, 1), 1.0F);
+		GameRegistry.addSmelting(ModBlocks.CORESTONE_COMPACT_PAINITE, new ItemStack(ModItems.PAINITE, 1), 1.0F);
 	}
 }

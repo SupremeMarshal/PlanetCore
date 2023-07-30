@@ -1,8 +1,4 @@
 {"variants": {
   "variant=corestone":{"model":"planetcore:corestone_majorite"},
-  "variant=corestone1":{"model":"planetcore:corestone1_majorite"},
-  "variant=corestone2":{"model":"planetcore:corestone2_majorite"},
   "variant=innercorestone":{"model":"planetcore:innercorestone_majorite"},
-  "variant=innercorestone1":{"model":"planetcore:innercorestone1_majorite"},
-  "variant=innercorestone2":{"model":"planetcore:innercorestone2_majorite"},
   "variant=centercorestone":{"model":"planetcore:centercorestone_majorite"}}}

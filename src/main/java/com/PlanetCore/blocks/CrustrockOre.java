@@ -19,7 +19,7 @@ public class CrustrockOre extends Crustrock implements IMetaName
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
 	public final PlanetExp planetExp;
-	private static final float [] crustHardnessByMeta = {4, 8, 12};
+	private static final float [] crustHardnessByMeta = {3, 4, 5};
 
 	public CrustrockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
 	{

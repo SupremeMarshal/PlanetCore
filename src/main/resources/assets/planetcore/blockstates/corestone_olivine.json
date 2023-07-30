@@ -1,8 +1,0 @@
-{"variants":{
-  "variant=corestone":{"model":"planetcore:corestone_olivine"},
-  "variant=corestone1":{"model":"planetcore:corestone1_olivine"},
-  "variant=corestone2":{"model":"planetcore:corestone2_olivine"},
-  "variant=innercorestone":{"model":"planetcore:innercorestone_olivine"},
-  "variant=innercorestone1":{"model":"planetcore:innercorestone1_olivine"},
-  "variant=innercorestone2":{"model":"planetcore:innercorestone2_olivine"},
-  "variant=centercorestone":{"model":"planetcore:centercorestone_olivine"}}}

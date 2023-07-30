@@ -31,8 +31,6 @@ public class PlayerTickEventHandler {
     */
 
 
-
-
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 

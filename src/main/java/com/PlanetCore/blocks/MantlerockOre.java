@@ -18,7 +18,7 @@ public class MantlerockOre extends Mantlerock implements IMetaName {
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
     public final PlanetExp planetExp;
-    private static final float [] mantleHardnessByMeta = {20, 30, 50, 75, 100, 125};
+    private static final float [] mantleHardnessByMeta = {10, 15, 20, 30, 40, 50};
 
     public MantlerockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
     {

@@ -1,8 +1,0 @@
-{"variants":{
-  "variant=corestone":{"model":"planetcore:corestone_compact_wadsleyite"},
-  "variant=corestone1":{"model":"planetcore:corestone1_compact_wadsleyite"},
-  "variant=corestone2":{"model":"planetcore:corestone2_compact_wadsleyite"},
-  "variant=innercorestone":{"model":"planetcore:innercorestone_compact_wadsleyite"},
-  "variant=innercorestone1":{"model":"planetcore:innercorestone1_compact_wadsleyite"},
-  "variant=innercorestone2":{"model":"planetcore:innercorestone2_compact_wadsleyite"},
-  "variant=centercorestone":{"model":"planetcore:centercorestone_compact_wadsleyite"}}}

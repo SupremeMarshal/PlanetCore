@@ -1,8 +1,0 @@
-{"variants":{
-  "variant=corestone":{"model":"planetcore:corestone_ringwoodite"},
-  "variant=corestone1":{"model":"planetcore:corestone1_ringwoodite"},
-  "variant=corestone2":{"model":"planetcore:corestone2_ringwoodite"},
-  "variant=innercorestone":{"model":"planetcore:innercorestone_ringwoodite"},
-  "variant=innercorestone1":{"model":"planetcore:innercorestone1_ringwoodite"},
-  "variant=innercorestone2":{"model":"planetcore:innercorestone2_ringwoodite"},
-  "variant=centercorestone":{"model":"planetcore:centercorestone_ringwoodite"}}}

@@ -40,23 +40,12 @@ public class ArmorBase extends ItemArmor {
     @Override
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
     {
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM) return repair.getItem() == ModItems.ALUMINIUM_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_STEEL) return repair.getItem() == ModItems.STEEL_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TIN) return repair.getItem() == ModItems.TIN_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_COPPER) return repair.getItem() == ModItems.COPPER_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRONZE) return repair.getItem() == ModItems.BRONZE_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) return repair.getItem() == ModItems.SILVER_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM) return repair.getItem() == ModItems.TITANIUM_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM) return repair.getItem() == ModItems.URANIUM_INGOT || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) return repair.getItem() == ModItems.TUNGSTEN_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM) return repair.getItem() == ModItems.TUNGSTEN_TITANIUM_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_JADE) return repair.getItem() == ModItems.JADE || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) return repair.getItem() == ModItems.RUBY || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) return repair.getItem() == ModItems.SAPPHIRE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE) return repair.getItem() == ModItems.OLIVINE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE) return repair.getItem() == ModItems.WADSLEYITE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE) return repair.getItem() == ModItems.RINGWOODITE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE) return repair.getItem() == ModItems.BRIGMANITE || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE) return repair.getItem() == ModItems.MAJORITE || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) return repair.getItem() == ModItems.AMAZONITE || super.getIsRepairable(toRepair, repair);
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) return repair.getItem() == ModItems.ONYX || super.getIsRepairable(toRepair, repair);

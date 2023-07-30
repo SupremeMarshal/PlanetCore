@@ -47,22 +47,6 @@ public class SapphireBow extends ItemBow
                 return entityIn != null && arrow == ModItems.DIAMOND_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
             }
         });
-        this.addPropertyOverride(new ResourceLocation("pulling_topaz"), new IItemPropertyGetter()
-        {
-            @SideOnly(Side.CLIENT)
-            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
-            {
-                return entityIn != null && arrow == ModItems.TOPAZ_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
-            }
-        });
-        this.addPropertyOverride(new ResourceLocation("pulling_jade"), new IItemPropertyGetter()
-        {
-            @SideOnly(Side.CLIENT)
-            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
-            {
-                return entityIn != null && arrow == ModItems.JADE_ARROW && entityIn.isHandActive() && entityIn.getActiveItemStack() == stack ? 1.0F : 0.0F;
-            }
-        });
         this.addPropertyOverride(new ResourceLocation("pulling_ruby"), new IItemPropertyGetter()
         {
             @SideOnly(Side.CLIENT)
@@ -96,7 +80,7 @@ public class SapphireBow extends ItemBow
     @Override
     protected boolean isArrow(ItemStack stack)
     {
-        if(stack.getItem() instanceof ItemArrow || stack.getItem() == ModItems.DIAMOND_ARROW || stack.getItem() == ModItems.TOPAZ_ARROW || stack.getItem() == ModItems.JADE_ARROW || stack.getItem() == ModItems.RUBY_ARROW || stack.getItem() == ModItems.SAPPHIRE_ARROW)
+        if(stack.getItem() instanceof ItemArrow || stack.getItem() == ModItems.DIAMOND_ARROW || stack.getItem() == ModItems.RUBY_ARROW || stack.getItem() == ModItems.SAPPHIRE_ARROW)
         {
             return true;
         }
@@ -144,14 +128,6 @@ public class SapphireBow extends ItemBow
                         if (itemstack.getItem() == ModItems.DIAMOND_ARROW) {
                             entityarrow = ((DiamondArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
                             damage = 3;
-                        }
-                        if (itemstack.getItem() == ModItems.TOPAZ_ARROW) {
-                            entityarrow = ((TopazArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 4;
-                        }
-                        if (itemstack.getItem() == ModItems.JADE_ARROW) {
-                            entityarrow = ((JadeArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 5;
                         }
                         if (itemstack.getItem() == ModItems.RUBY_ARROW) {
                             entityarrow = ((RubyArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);

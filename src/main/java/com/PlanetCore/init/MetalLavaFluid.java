@@ -70,9 +70,6 @@ public class MetalLavaFluid extends BlockFluidClassic {
 				Integer integer = (Integer)state.getValue(LEVEL);
 				if (integer.intValue() == 0)
 				{
-					if (this == ModBlocks.ALUMINIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.ALUMINIUM_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.TIN_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TIN_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.COPPER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.COPPER_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.SILVER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SILVER_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.GOLD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.GOLD_SUPERCOMPACT.getDefaultState()));
 					if (this == ModBlocks.TITANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TITANIUM_SUPERCOMPACT.getDefaultState()));

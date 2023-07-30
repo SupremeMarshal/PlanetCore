@@ -76,14 +76,8 @@ public class RenderHandler
 			RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityDiamondArrow.class, manager -> new RenderDiamondArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityTopazArrow.class, manager -> new RenderTopazArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityJadeArrow.class, manager -> new RenderJadeArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityRubyArrow.class, manager -> new RenderRubyArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntitySapphireArrow.class, manager -> new RenderSapphireArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityOlivineArrow.class, manager -> new RenderOlivineArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityWadsleyiteArrow.class, manager -> new RenderWadsleyiteArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityRingwooditeArrow.class, manager -> new RenderRingwooditeArrow(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityBrigmaniteArrow.class, manager -> new RenderBrigmaniteArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityMajoriteArrow.class, manager -> new RenderMajoriteArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityAmazoniteArrow.class, manager -> new RenderAmazoniteArrow(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityOnyxArrow.class, manager -> new RenderOnyxArrow(manager));

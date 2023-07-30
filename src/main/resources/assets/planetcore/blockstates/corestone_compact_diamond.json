@@ -1,9 +1,5 @@
 {
   "variants": {
     "variant=corestone": {"model": "planetcore:corestone_compact_diamond"},
-    "variant=corestone1": {"model": "planetcore:corestone1_compact_diamond"},
-    "variant=corestone2": {"model": "planetcore:corestone2_compact_diamond"},
     "variant=innercorestone": {"model": "planetcore:innercorestone_compact_diamond"},
-    "variant=innercorestone1": {"model": "planetcore:innercorestone1_compact_diamond"},
-    "variant=innercorestone2": {"model": "planetcore:innercorestone2_compact_diamond"},
     "variant=centercorestone": {"model": "planetcore:centercorestone_compact_diamond"}}}

@@ -64,6 +64,11 @@ public class BlockBase extends Block {
 		super.onEntityWalk(worldIn, pos, entityIn);
 	}
 
+	@Override
+	public int getLightValue(IBlockState state) {
+		int mantleLightLevel = state == ModBlocks.MANTLEROCK1_BOULDER ? 3 : state == ModBlocks.MANTLEROCK2_BOULDER ? 5 : state == ModBlocks.LOWER_MANTLEROCK_BOULDER ? 7 : state == ModBlocks.LOWER_MANTLEROCK1_BOULDER ? 9 : state == ModBlocks.LOWER_MANTLEROCK2_BOULDER ? 11 : state == ModBlocks.OUTERCORE_BOULDER ? 13 : state == ModBlocks.INNERCORE_BOULDER || state == ModBlocks.CENTERCORE_BOULDER || state == ModBlocks.SUPERHEATED_BEDROCK ? 15 : 0;
+		return (mantleLightLevel);
+	}
 	/**
 	 * Previous hardness's value + (3*Meta)
 	 * public static int recursive(int in) {
@@ -136,10 +141,9 @@ public class BlockBase extends Block {
 
 	public boolean isBeaconBase(IBlockAccess worldObj, BlockPos pos, BlockPos beacon)
 	{
-		return this == ModBlocks.IRON_BLOCK || this == ModBlocks.STEEL_BLOCK || this == ModBlocks.SILVER_BLOCK || this ==  ModBlocks.GOLD_BLOCK
-				|| this == ModBlocks.SAPPHIRE_BLOCK || this == ModBlocks.RUBY_BLOCK || this == ModBlocks.OLIVINE_BLOCK || this == ModBlocks.WADSLEYITE_BLOCK
-				|| this == ModBlocks.RINGWOODITE_BLOCK || this == ModBlocks.BRIGMANITE_BLOCK || this == ModBlocks.MAJORITE_BLOCK
-				|| this == ModBlocks.DIAMOND_BLOCK || this == ModBlocks.AMAZONITE_BLOCK || this == ModBlocks.ONYX_BLOCK;
+		return this == ModBlocks.IRON_BLOCK || this == ModBlocks.SILVER_BLOCK || this ==  ModBlocks.GOLD_BLOCK
+				|| this == ModBlocks.SAPPHIRE_BLOCK || this == ModBlocks.RUBY_BLOCK
+				|| this == ModBlocks.DIAMOND_BLOCK || this == ModBlocks.MAJORITE_BLOCK || this == ModBlocks.AMAZONITE_BLOCK || this == ModBlocks.ONYX_BLOCK;
 	}
 
 	private void add(BlockPos pos, IBlockState state) {
