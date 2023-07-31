@@ -65,7 +65,7 @@ repositories {
     }
 
     maven {
-        url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+        url "https://cursemaven.com"
     }
 
 
@@ -78,7 +78,8 @@ dependencies {
     deobfProvided ("com.github.OpenCubicChunks:CubicWorldGen:3d80b2fac5") {
         transitive = false
     }
-    deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.31')
+
+    implementation fg.deobf("curse.maven:geckolib-388172:4020277")
 
     compile ("org.spongepowered:mixin:0.8.1")
 }
