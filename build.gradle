@@ -78,7 +78,7 @@ dependencies {
     deobfProvided ("com.github.OpenCubicChunks:CubicWorldGen:3d80b2fac5") {
         transitive = false
     }
-    deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.14')
+    deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.31')
 
     compile ("org.spongepowered:mixin:0.8.1")
 }
