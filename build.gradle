@@ -72,10 +72,10 @@ repositories {
 }
 
 dependencies {
-    deobfProvided ("com.github.OpenCubicChunks.CubicChunks:cubicchunks:c4696fdd5e2061ce4a8aa6b3b1ed8c11336f4a9d") {
+    deobfProvided ("com.github.OpenCubicChunks:CubicChunks:c4696fdd5e") {
         transitive = false
     }
-    deobfProvided ("com.github.OpenCubicChunks:CubicWorldGen:d97d7dcbf280ce929e4551c524703270a8b33aaf") {
+    deobfProvided ("com.github.OpenCubicChunks:CubicWorldGen:3d80b2fac5") {
         transitive = false
     }
     deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.14')
