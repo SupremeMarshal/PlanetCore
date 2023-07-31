@@ -113,6 +113,26 @@ public class RenderHandler
 				}
 			});
 
+			/** redstone lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.REDSTONE_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:redstone_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.REDSTONE_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:redstone_lava", "fluid");
+				}
+			});
+
 			/** silver lava */
 			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SILVER_LAVA_FLUID), new ItemMeshDefinition() {
 

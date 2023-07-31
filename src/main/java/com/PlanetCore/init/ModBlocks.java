@@ -50,6 +50,8 @@ public class ModBlocks {
 
     @ObjectHolder("iron_lava")
     public static final IronLavaFluid IRON_LAVA_FLUID = _null();
+    @ObjectHolder("redstone_lava")
+    public static final MetalLavaFluid REDSTONE_LAVA_FLUID = _null();
     @ObjectHolder("silver_lava")
     public static final MetalLavaFluid SILVER_LAVA_FLUID = _null();
     @ObjectHolder("gold_lava")
@@ -255,6 +257,7 @@ public class ModBlocks {
                 new BlockBase("crust_cobblestone", Material.ROCK).setHardness(2.0F).setResistance(1),
                 new BlockBase("superheated_bedrock", Material.ROCK).setHardness(1000000.0F).setResistance(1000000),
                 new IronLavaFluid("iron_lava", ModFluids.IRON_LAVA_FLUID, Material.LAVA).setDensity(1500),
+                new MetalLavaFluid("redstone_lava", ModFluids.REDSTONE_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("silver_lava", ModFluids.SILVER_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("gold_lava", ModFluids.GOLD_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new GemLavaFluid("diamond_lava", ModFluids.DIAMOND_LAVA_FLUID, Material.LAVA).setDensity(1500),
