@@ -52,7 +52,7 @@ public class IronLavaFluid extends BlockFluidClassic {
 
 	public boolean checkForMixing(World worldIn, BlockPos pos, IBlockState state)
 	{
-		if (this.material == Material.LAVA && this.canCreateSources)
+		if (this.material == Material.LAVA)
 		{
 			boolean flag = false;
 
@@ -69,7 +69,7 @@ public class IronLavaFluid extends BlockFluidClassic {
 			{
 				Integer integer = (Integer)state.getValue(LEVEL);
 
-				if (integer.intValue() == 0)
+				if (integer.intValue() == 0 && this.canCreateSources)
 				{
 					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
