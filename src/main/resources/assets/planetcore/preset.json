@@ -105,7 +105,7 @@
 		"mainProbability": [
 			{
 				"y": 0.0,
-				"v": 0.015625
+				"v": 0.75
 			}
 		]
 	}
@@ -238,10 +238,7 @@
 				},
 				{
 					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
+					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
 						{
@@ -264,7 +261,7 @@
 					"mainProbability": [
 						{
 							"y": 0.0,
-							"v": 0.015625
+							"v": 0.75
 						}
 					]
 				}
@@ -2431,10 +2428,7 @@
 				},
 				{
 					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
+					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
 						{
@@ -2457,7 +2451,7 @@
 					"mainProbability": [
 						{
 							"y": 0.0,
-							"v": 0.015625
+							"v": 0.75
 						}
 					]
 				}
@@ -5692,38 +5686,6 @@
 						{
 							"y": 128.0,
 							"v": 7.849871180951595E-4
-						}
-					]
-				},
-				{
-					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
-					"biomeSelect": "EXCLUDE",
-					"surfaceProbability": [
-						{
-							"y": -1.0,
-							"v": 0.25
-						},
-						{
-							"y": 0.0,
-							"v": 0.25
-						},
-						{
-							"y": 128.0,
-							"v": 0.125
-						},
-						{
-							"y": 129.0,
-							"v": 0.125
-						}
-					],
-					"mainProbability": [
-						{
-							"y": 0.0,
-							"v": 0.015625
 						}
 					]
 				}
@@ -9299,38 +9261,6 @@
 						{
 							"y": 128.0,
 							"v": 7.849871180951595E-4
-						}
-					]
-				},
-				{
-					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
-					"biomeSelect": "EXCLUDE",
-					"surfaceProbability": [
-						{
-							"y": -1.0,
-							"v": 0.25
-						},
-						{
-							"y": 0.0,
-							"v": 0.25
-						},
-						{
-							"y": 128.0,
-							"v": 0.125
-						},
-						{
-							"y": 129.0,
-							"v": 0.125
-						}
-					],
-					"mainProbability": [
-						{
-							"y": 0.0,
-							"v": 0.015625
 						}
 					]
 				}
@@ -13144,38 +13074,6 @@
 							"v": 7.849871180951595E-4
 						}
 					]
-				},
-				{
-					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
-					"biomeSelect": "EXCLUDE",
-					"surfaceProbability": [
-						{
-							"y": -1.0,
-							"v": 0.25
-						},
-						{
-							"y": 0.0,
-							"v": 0.25
-						},
-						{
-							"y": 128.0,
-							"v": 0.125
-						},
-						{
-							"y": 129.0,
-							"v": 0.125
-						}
-					],
-					"mainProbability": [
-						{
-							"y": 0.0,
-							"v": 0.015625
-						}
-					]
 				}
 			],
 			"lavaOceans": false,
@@ -13591,7 +13489,7 @@
 			"dungeonCount": 7,
 			"lakes": [
 				{
-					"block": "planetcore:diamond_lava",
+					"block": "planetcore:iron_lava",
 					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
@@ -13652,38 +13550,6 @@
 						{
 							"y": 128.0,
 							"v": 7.849871180951595E-4
-						}
-					]
-				},
-				{
-					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
-					"biomeSelect": "EXCLUDE",
-					"surfaceProbability": [
-						{
-							"y": -1.0,
-							"v": 0.25
-						},
-						{
-							"y": 0.0,
-							"v": 0.25
-						},
-						{
-							"y": 128.0,
-							"v": 0.125
-						},
-						{
-							"y": 129.0,
-							"v": 0.125
-						}
-					],
-					"mainProbability": [
-						{
-							"y": 0.0,
-							"v": 0.015625
 						}
 					]
 				}
@@ -14101,7 +13967,7 @@
 			"dungeonCount": 7,
 			"lakes": [
 				{
-					"block": "planetcore:topaz_lava",
+					"block": "planetcore:iron_lava",
 					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
@@ -14162,38 +14028,6 @@
 						{
 							"y": 128.0,
 							"v": 7.849871180951595E-4
-						}
-					]
-				},
-				{
-					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
-					"biomeSelect": "EXCLUDE",
-					"surfaceProbability": [
-						{
-							"y": -1.0,
-							"v": 0.25
-						},
-						{
-							"y": 0.0,
-							"v": 0.25
-						},
-						{
-							"y": 128.0,
-							"v": 0.125
-						},
-						{
-							"y": 129.0,
-							"v": 0.125
-						}
-					],
-					"mainProbability": [
-						{
-							"y": 0.0,
-							"v": 0.015625
 						}
 					]
 				}
@@ -14529,7 +14363,7 @@
 			"dungeonCount": 7,
 			"lakes": [
 				{
-					"block": "planetcore:jade_lava",
+					"block": "planetcore:iron_lava",
 					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
@@ -14590,38 +14424,6 @@
 						{
 							"y": 128.0,
 							"v": 7.849871180951595E-4
-						}
-					]
-				},
-				{
-					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
-					"biomeSelect": "EXCLUDE",
-					"surfaceProbability": [
-						{
-							"y": -1.0,
-							"v": 0.25
-						},
-						{
-							"y": 0.0,
-							"v": 0.25
-						},
-						{
-							"y": 128.0,
-							"v": 0.125
-						},
-						{
-							"y": 129.0,
-							"v": 0.125
-						}
-					],
-					"mainProbability": [
-						{
-							"y": 0.0,
-							"v": 0.015625
 						}
 					]
 				}
@@ -14957,7 +14759,7 @@
 			"dungeonCount": 7,
 			"lakes": [
 				{
-					"block": "planetcore:ruby_lava",
+					"block": "planetcore:iron_lava",
 					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
@@ -14968,26 +14770,6 @@
 						{
 							"y": 0.0,
 							"v": 0.06108487769961357
-						},
-						{
-							"y": 31.0,
-							"v": 0.032675087451934814
-						},
-						{
-							"y": 63.0,
-							"v": 0.007101680152118206
-						},
-						{
-							"y": 95.0,
-							"v": 0.004936832934617996
-						},
-						{
-							"y": 127.0,
-							"v": 0.003164479276165366
-						},
-						{
-							"y": 128.0,
-							"v": 0.003164479276165366
 						}
 					],
 					"mainProbability": [
@@ -15018,38 +14800,6 @@
 						{
 							"y": 128.0,
 							"v": 7.849871180951595E-4
-						}
-					]
-				},
-				{
-					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
-					"biomeSelect": "EXCLUDE",
-					"surfaceProbability": [
-						{
-							"y": -1.0,
-							"v": 0.25
-						},
-						{
-							"y": 0.0,
-							"v": 0.25
-						},
-						{
-							"y": 128.0,
-							"v": 0.125
-						},
-						{
-							"y": 129.0,
-							"v": 0.125
-						}
-					],
-					"mainProbability": [
-						{
-							"y": 0.0,
-							"v": 0.015625
 						}
 					]
 				}
@@ -15510,10 +15260,7 @@
 				},
 				{
 					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
+					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
 						{
@@ -15536,7 +15283,7 @@
 					"mainProbability": [
 						{
 							"y": 0.0,
-							"v": 0.015625
+							"v": 0.75
 						}
 					]
 				}
@@ -16055,10 +15802,7 @@
 				},
 				{
 					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
+					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
 						{
@@ -16081,7 +15825,7 @@
 					"mainProbability": [
 						{
 							"y": 0.0,
-							"v": 0.015625
+							"v": 0.75
 						}
 					]
 				}
@@ -19307,10 +19051,7 @@
 				},
 				{
 					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
+					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
 						{
@@ -19333,7 +19074,7 @@
 					"mainProbability": [
 						{
 							"y": 0.0,
-							"v": 0.015625
+							"v": 0.75
 						}
 					]
 				}
@@ -22551,10 +22292,7 @@
 				},
 				{
 					"block": "minecraft:water",
-					"biomes": [
-						"minecraft:desert_hills",
-						"minecraft:desert"
-					],
+					"biomes": [],
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
 						{
@@ -22577,7 +22315,7 @@
 					"mainProbability": [
 						{
 							"y": 0.0,
-							"v": 0.015625
+							"v": 0.75
 						}
 					]
 				}

@@ -1,15 +1,21 @@
 buildscript {
     repositories {
         jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
+        maven { url = "https://files.minecraftforge.net/maven" }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public' }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+        classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.6-SNAPSHOT'
     }
 }
 plugins {
     id("io.github.opencubicchunks.gradle.fg2fixed")
 }
+
+apply plugin: 'org.spongepowered.mixin'
+
+
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
@@ -25,7 +31,16 @@ compileJava {
 minecraft {
     version = "1.12.2-14.23.5.2838"
     runDir = "run"
-    
+
+    coreMod = "com.PlanetCore.asm.PlanetCoreFMLLoadingPlugin"
+
+    def args = [
+            "-Dmixin.debug.export=true",
+            "-Dmixin.debug.verbose=true",
+    ]
+    clientJvmArgs += args
+    serverJvmArgs += args
+
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
     // stable_#            stables are built at the discretion of the MCP team.
@@ -62,6 +77,31 @@ dependencies {
         transitive = false
     }
     deobfCompile('software.bernie.geckolib:forge-1.12.2-geckolib:3.0.14')
+
+    compile ("org.spongepowered:mixin:0.8.1")
+}
+
+mixin {
+    add sourceSets.main, "mixins.planetcore.refmap.json"
+}
+
+sourceSets {
+    main {
+        ext.refMap = "mixins.planetcore.refmap.json"
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                "MixinConfigs": "mixins.planetcore.json",
+                "tweakClass": "org.spongepowered.asm.launch.MixinTweaker",
+                "TweakOrder": 0,
+                "FMLCorePlugin": "com.PlanetCore.asm.PlanetCoreFMLLoadingPlugin",
+                "FMLCorePluginContainsFMLMod": "true",
+                "ForceLoadAsMod": "true",
+        )
+    }
 }
 
 processResources {

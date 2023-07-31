@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "planetcore:superheated_bedrock" }
+    }
+}

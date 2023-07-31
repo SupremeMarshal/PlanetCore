@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.7",
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.PlanetCore.asm.mixin",
+  "refmap": "mixins.planetcore.refmap.json",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
