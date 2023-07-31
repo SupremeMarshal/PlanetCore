@@ -5,6 +5,7 @@
   "package": "com.PlanetCore.asm.mixin",
   "refmap": "mixins.planetcore.refmap.json",
   "mixins": [
+    "MixinWorld"
   ],
   "injectors": {
     "defaultRequire": 1
