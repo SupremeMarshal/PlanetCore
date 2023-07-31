@@ -7,6 +7,7 @@ buildscript {
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
         classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.6-SNAPSHOT'
+		classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.4'
     }
 }
 plugins {
@@ -14,6 +15,7 @@ plugins {
 }
 
 apply plugin: 'org.spongepowered.mixin'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -103,6 +105,16 @@ jar {
         )
     }
 }
+
+shadowJar {
+	classifier = ''
+	exclude 'LICENSE.txt'
+	dependencies {
+		include(dependency("org.spongepowered:mixin:0.8.1"))
+	}
+}
+
+build.dependsOn(shadowJar)
 
 processResources {
     // this will ensure that this task is redone when the versions change.
