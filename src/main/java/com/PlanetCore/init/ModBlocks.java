@@ -83,6 +83,10 @@ public class ModBlocks {
     public static final Mantlerock MANTLEROCK = _null();
     public static final Corestone CORESTONE = _null();
 
+    public static final BlockBase HOT_GRANITE = _null();
+    public static final BlockBase VERY_HOT_GRANITE = _null();
+    public static final BlockBase SUPERHEATED_GRANITE = _null();
+
     public static final GemsGravel RUBY_GRAVEL = _null();
     public static final GemsGravel SAPPHIRE_GRAVEL = _null();
     public static final GemsGravel DIAMOND_GRAVEL = _null();
@@ -256,6 +260,9 @@ public class ModBlocks {
                 new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
                 new BlockBase("crust_cobblestone", Material.ROCK).setHardness(2.0F).setResistance(1),
                 new BlockBase("superheated_bedrock", Material.ROCK).setHardness(1000000.0F).setResistance(1000000),
+                new BlockBase("hot_granite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(5F),
+                new BlockBase("very_hot_granite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(10F),
+                new BlockBase("superheated_granite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(15F),
                 new IronLavaFluid("iron_lava", ModFluids.IRON_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("redstone_lava", ModFluids.REDSTONE_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("silver_lava", ModFluids.SILVER_LAVA_FLUID, Material.LAVA).setDensity(1500),
