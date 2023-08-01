@@ -72,6 +72,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.jetbrains:annotations:20.1.0'
     deobfProvided ("com.github.OpenCubicChunks:CubicChunks:c4696fdd5e") {
         transitive = false
     }
@@ -79,7 +80,9 @@ dependencies {
         transitive = false
     }
 
-    implementation fg.deobf("curse.maven:geckolib-388172:4020277")
+    deobfProvided("curse.maven:GeckoLib-388172:4020277") {
+        transitive = false
+    }
 
     compile ("org.spongepowered:mixin:0.8.1")
 }
