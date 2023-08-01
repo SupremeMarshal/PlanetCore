@@ -9,9 +9,9 @@ public class CustomCaveInjector {
         switch (event.getType()) {
             case CAVE:
                 event.setNewGen(new WrappedStructureGenerator(
-                        new ImprovedCaveGenerator()
-                        //new NoiseCaveGenerator2(),
-                        //new NoiseCaveGenerator3()
+                        new ImprovedCaveGenerator(),
+                        new NoiseCaveGenerator2(),
+                        new NoiseCaveGenerator3()
                 ));
                 break;
             case RAVINE:
