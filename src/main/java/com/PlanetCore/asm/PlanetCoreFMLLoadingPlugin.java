@@ -13,7 +13,7 @@ public class PlanetCoreFMLLoadingPlugin implements IFMLLoadingPlugin {
         FMLLog.log.info("PlanetCore Mixin init");
         MixinBootstrap.init();
 
-        Mixins.addConfiguration("mixins.planetcore.json");
+        Mixins.addConfiguration("mixins.mixins.planetcore.json");
     }
 
     @Override

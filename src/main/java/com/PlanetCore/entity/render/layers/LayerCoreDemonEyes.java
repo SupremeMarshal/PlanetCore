@@ -21,33 +21,28 @@ public class LayerCoreDemonEyes<T extends EntityLiving & IAnimatable> extends Ge
         this.geoRendererInstance = renderer;
     }
 
-
-    @Override
-    public void render(T entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, Color renderColor) {
-
-        EmissiveUtil.preEmissiveTextureRendering();
-
-        this.geoRendererInstance.bindTexture(new ResourceLocation(Reference.MOD_ID + ":textures/entity/demon_core_eyes.png"));
-        GlStateManager.scale(0.5F, 0.5F, 0.5F);
-        this.geoRendererInstance.render(
-                this.getEntityModel().getModel(new ResourceLocation(Reference.MOD_ID, "geo/demon.geo.json")),
-                entitylivingbaseIn,
-                partialTicks,
-                (float) renderColor.getRed() / 255f,
-                (float) renderColor.getBlue() / 255f,
-                (float) renderColor.getGreen() / 255f,
-                (float) renderColor.getAlpha() / 255
-        );
-
-        EmissiveUtil.postEmissiveTextureRendering();
-    }
-
-
-
     @Override
     public boolean shouldCombineTextures() {
         return false;
     }
 
 
+    @Override
+    public void render(T t, float v, float v1, float v2, float v3, float v4, float v5, software.bernie.geckolib3.core.util.Color color) {
+        EmissiveUtil.preEmissiveTextureRendering();
+
+        this.geoRendererInstance.bindTexture(new ResourceLocation(Reference.MOD_ID + ":textures/entity/demon_core_eyes.png"));
+        GlStateManager.scale(0.5F, 0.5F, 0.5F);
+        this.geoRendererInstance.render(
+                this.getEntityModel().getModel(new ResourceLocation(Reference.MOD_ID, "geo/demon.geo.json")),
+                t,
+                v,
+                (float) color.getRed() / 255f,
+                (float) color.getBlue() / 255f,
+                (float) color.getGreen() / 255f,
+                (float) color.getAlpha() / 255
+        );
+
+        EmissiveUtil.postEmissiveTextureRendering();
+    }
 }

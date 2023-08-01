@@ -113,6 +113,13 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
                 return findStoneBlock(layer.getValue(), cubePos);
             }
         }
-        return settings.replacerConfig.getBlockstate("cubicgen", "terrain_fill_block", Blocks.STONE.getDefaultState());
+        /*
+        for (CustomGeneratorSettings.ReplacerConfig replace :settings.replacers)
+        {
+            return null;//replace.biomeFilter.getBlockstate("cubicgen", "terrain_fill_block", Blocks.STONE.getDefaultState());
+        }
+
+         */
+        return null;
     }
 }

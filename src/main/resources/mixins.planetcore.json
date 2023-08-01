@@ -3,7 +3,7 @@
   "minVersion": "0.7",
   "compatibilityLevel": "JAVA_8",
   "package": "com.PlanetCore.asm.mixin",
-  "refmap": "mixins.planetcore.refmap.json",
+  "refmap": "mixins.planetcore.refmap",
   "mixins": [
     "MixinWorld"
   ],
