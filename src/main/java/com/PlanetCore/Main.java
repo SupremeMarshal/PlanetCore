@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
+import software.bernie.example.GeckoLibMod;
 import software.bernie.geckolib3.GeckoLib;
 
 
@@ -29,6 +30,7 @@ public class Main {
     public Main()
     {
         GeckoLib.initialize();
+        GeckoLibMod.DISABLE_IN_DEV = true;
     }
     
 

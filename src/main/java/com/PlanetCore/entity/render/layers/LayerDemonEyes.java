@@ -21,12 +21,6 @@ public class LayerDemonEyes<T extends EntityLiving & IAnimatable> extends GeoLay
     }
 
     @Override
-    public boolean shouldCombineTextures() {
-        return false;
-    }
-
-
-    @Override
     public void render(T t, float v, float v1, float v2, float v3, float v4, float v5, software.bernie.geckolib3.core.util.Color color) {
         EmissiveUtil.preEmissiveTextureRendering();
         this.geoRendererInstance.bindTexture(new ResourceLocation(Reference.MOD_ID + ":textures/entity/demon_eyes.png"));
@@ -42,4 +36,16 @@ public class LayerDemonEyes<T extends EntityLiving & IAnimatable> extends GeoLay
 
         EmissiveUtil.postEmissiveTextureRendering();
     }
+
+    @Override
+    public void doRenderLayer(T entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+
+    }
+
+    @Override
+    public boolean shouldCombineTextures() {
+        return false;
+    }
+
+
 }
