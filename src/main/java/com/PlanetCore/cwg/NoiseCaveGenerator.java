@@ -7,6 +7,7 @@ import io.github.opencubicchunks.cubicchunks.api.worldgen.CubePrimer;
 import io.github.opencubicchunks.cubicchunks.api.worldgen.structure.ICubicStructureGenerator;
 import io.github.opencubicchunks.cubicchunks.cubicgen.blue.endless.jankson.api.DeserializationException;
 import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.CustomGeneratorSettings;
+import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.CustomGeneratorSettings.DensityRangeReplacerConfig;
 import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.builder.IBuilder;
 import io.github.opencubicchunks.cubicchunks.cubicgen.customcubic.builder.NoiseSource;
 import io.github.opencubicchunks.cubicchunks.cubicgen.preset.fixer.CustomGeneratorSettingsFixer;
@@ -113,6 +114,9 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
                 return findStoneBlock(layer.getValue(), cubePos);
             }
         }
-        return null; //settings.replacerConfig.getBlockstate("cubicgen", "terrain_fill_block", Blocks.STONE.getDefaultState());
+        return settings.replacers.stream()
+                .filter(conf -> conf instanceof DensityRangeReplacerConfig)
+                .map(conf -> ((DensityRangeReplacerConfig) conf).blockInRange.getOrDefault(Blocks.STONE.getDefaultState()))
+                .findFirst().orElse(Blocks.STONE.getDefaultState());
     }
 }
