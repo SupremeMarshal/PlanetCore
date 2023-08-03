@@ -90,6 +90,7 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.3:processor'
     implementation 'org.jetbrains:annotations:20.1.0'
 
+    implementation fg.deobf("curse.maven:hackForMixinFMLAgent_deobfedDeps_-223896:2680892")
     implementation fg.deobf ("com.github.OpenCubicChunks:CubicChunks:c4696fdd5e") {
         transitive = false
     }
@@ -99,7 +100,6 @@ dependencies {
     implementation fg.deobf("curse.maven:GeckoLib-388172:4020277") {
         transitive = false
     }
-
 }
 
 processResources {
