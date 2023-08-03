@@ -89,6 +89,9 @@ public class ModBlocks {
     public static final BlockBase HOT_DIORITE = _null();
     public static final BlockBase VERY_HOT_DIORITE = _null();
     public static final BlockBase SUPERHEATED_DIORITE = _null();
+    public static final BlockBase HOT_ANDESITE = _null();
+    public static final BlockBase VERY_HOT_ANDESITE = _null();
+    public static final BlockBase SUPERHEATED_ANDESITE = _null();
 
     public static final GemsGravel RUBY_GRAVEL = _null();
     public static final GemsGravel SAPPHIRE_GRAVEL = _null();
@@ -269,6 +272,9 @@ public class ModBlocks {
                 new BlockBase("hot_diorite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(5F),
                 new BlockBase("very_hot_diorite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(10F),
                 new BlockBase("superheated_diorite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(15F),
+                new BlockBase("hot_andesite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(5F),
+                new BlockBase("very_hot_andesite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(10F),
+                new BlockBase("superheated_andesite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(15F),
                 new IronLavaFluid("iron_lava", ModFluids.IRON_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("redstone_lava", ModFluids.REDSTONE_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("silver_lava", ModFluids.SILVER_LAVA_FLUID, Material.LAVA).setDensity(1500),
