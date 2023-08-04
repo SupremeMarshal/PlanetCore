@@ -1,6 +1,7 @@
 package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.init.ModItems;
+import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 
 import net.minecraft.item.Item;
@@ -12,7 +13,7 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod.EventBusSubscriber(modid="planetcore")
+@Mod.EventBusSubscriber(modid= Reference.MOD_ID)
 public class pickaxe3x3Handler {
 
     @SubscribeEvent

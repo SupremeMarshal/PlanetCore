@@ -8,6 +8,7 @@ import com.PlanetCore.init.ToolMaterials;
 import com.PlanetCore.util.Reference;
 import com.PlanetCore.util.handlers.RegistryHandler;
 
+import com.PlanetCore.util.handlers.WorldgenHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -53,6 +54,7 @@ public class Main {
         RegistryHandler.preInitRegistries(event);
 
         MinecraftForge.TERRAIN_GEN_BUS.register(new CustomCaveInjector());
+        MinecraftForge.ORE_GEN_BUS.register(new WorldgenHandler());
         new PlanetCoreWorldType();
     }
 

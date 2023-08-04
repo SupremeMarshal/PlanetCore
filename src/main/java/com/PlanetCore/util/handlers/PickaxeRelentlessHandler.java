@@ -3,6 +3,7 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.blocks.BlockBase;
 import com.PlanetCore.blocks.GemsGravel;
 import com.PlanetCore.init.ToolMaterials;
+import com.PlanetCore.util.Reference;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -23,7 +24,7 @@ import java.util.Random;
 
 import static com.PlanetCore.init.EnchantmentInit.Relentless;
 
-@Mod.EventBusSubscriber(modid="planetcore")
+@Mod.EventBusSubscriber(modid= Reference.MOD_ID)
 public class PickaxeRelentlessHandler {
 
     private static final SoundEvent[] sound = {SoundHandler.INDESTRUCTIBLE, SoundHandler.INDESTRUCTIBLE1, SoundHandler.INDESTRUCTIBLE2, SoundHandler.INDESTRUCTIBLE3, SoundHandler.INDESTRUCTIBLE4, SoundHandler.INDESTRUCTIBLE5, SoundHandler.INDESTRUCTIBLE6, SoundHandler.INDESTRUCTIBLE7, SoundHandler.INDESTRUCTIBLE8, SoundHandler.INDESTRUCTIBLE9, SoundHandler.INDESTRUCTIBLE10, SoundHandler.INDESTRUCTIBLE11, SoundHandler.INDESTRUCTIBLE12, SoundHandler.INDESTRUCTIBLE13, SoundHandler.INDESTRUCTIBLE14, SoundHandler.INDESTRUCTIBLE15, SoundHandler.INDESTRUCTIBLE16, SoundHandler.INDESTRUCTIBLE17, SoundHandler.INDESTRUCTIBLE18, SoundHandler.INDESTRUCTIBLE19 };
