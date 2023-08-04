@@ -226,15 +226,15 @@ public class ModBlocks {
     public static final BlockBase SULFUR_BLOCK = _null();
     public static final BlockBase IRON_BLOCK = _null();
 
-    public static final BlockBase MANTLEROCK1_BOULDER = _null();
-    public static final BlockBase MANTLEROCK2_BOULDER = _null();
-    public static final BlockBase LOWER_MANTLEROCK_BOULDER = _null();
-    public static final BlockBase LOWER_MANTLEROCK1_BOULDER = _null();
-    public static final BlockBase LOWER_MANTLEROCK2_BOULDER = _null();
-    public static final BlockBase OUTERCORE_BOULDER = _null();
-    public static final BlockBase INNERCORE_BOULDER = _null();
-    public static final BlockBase CENTERCORE_BOULDER = _null();
-    public static final BlockBase SUPERHEATED_BEDROCK = _null();
+    public static final HotRocks MANTLEROCK1_BOULDER = _null();
+    public static final HotRocks MANTLEROCK2_BOULDER = _null();
+    public static final VeryHotRocks LOWER_MANTLEROCK_BOULDER = _null();
+    public static final VeryHotRocks LOWER_MANTLEROCK1_BOULDER = _null();
+    public static final VeryHotRocks LOWER_MANTLEROCK2_BOULDER = _null();
+    public static final SuperheatedRocks OUTERCORE_BOULDER = _null();
+    public static final SuperheatedRocks INNERCORE_BOULDER = _null();
+    public static final SuperheatedRocks CENTERCORE_BOULDER = _null();
+    public static final SuperheatedRocks SUPERHEATED_BEDROCK = _null();
 
     public static final BlocksBase PAINITE_SUPERCOMPACT = _null();
     public static final BlocksBase ONYX_SUPERCOMPACT = _null();
@@ -318,14 +318,14 @@ public class ModBlocks {
                 new GemsGravel("majorite_gravel", PlanetMaterial.MAJORITE_GRAVEL, PlanetHardness.MAJORITE),
                 new GemsGravel("amazonite_gravel", PlanetMaterial.AMAZONITE_GRAVEL, PlanetHardness.AMAZONITE),
                 new GemsGravel("onyx_gravel", PlanetMaterial.ONYX_GRAVEL, PlanetHardness.ONYX),
-                new BlockBase("mantlerock1_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(3),
-                new BlockBase("mantlerock2_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(5),
-                new BlockBase("lower_mantlerock_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(7),
-                new BlockBase("lower_mantlerock1_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(9),
-                new BlockBase("lower_mantlerock2_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(11),
-                new BlockBase("outercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(13),
-                new BlockBase("innercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(15),
-                new BlockBase("centercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(15),
+                new HotRocks("mantlerock1_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(3),
+                new HotRocks("mantlerock2_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(5),
+                new VeryHotRocks("lower_mantlerock_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(7),
+                new VeryHotRocks("lower_mantlerock1_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(9),
+                new VeryHotRocks("lower_mantlerock2_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(11),
+                new SuperheatedRocks("outercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(13),
+                new SuperheatedRocks("innercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(15),
+                new SuperheatedRocks("centercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(15),
                 new BlockBase("sulfur_block", Material.ROCK).setHardness(1F).setResistance(1),
                 new BlockBase("silver_block", Material.IRON).setHardness(15.0F).setResistance(1),
                 new BlockBase("titanium_block", Material.IRON).setHardness(50F).setResistance(3),
