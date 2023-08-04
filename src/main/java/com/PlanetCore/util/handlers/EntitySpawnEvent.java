@@ -1,12 +1,13 @@
 package com.PlanetCore.util.handlers;
 
+import com.PlanetCore.util.Reference;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod.EventBusSubscriber(modid="planetcore")
+@Mod.EventBusSubscriber(modid= Reference.MOD_ID)
 public class EntitySpawnEvent {
 
     @SubscribeEvent

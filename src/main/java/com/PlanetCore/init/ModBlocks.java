@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@ObjectHolder("planetcore")
+@ObjectHolder(Reference.MOD_ID)
 
 public class ModBlocks {
 
