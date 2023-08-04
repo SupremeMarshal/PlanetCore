@@ -83,15 +83,27 @@ public class ModBlocks {
     public static final Mantlerock MANTLEROCK = _null();
     public static final Corestone CORESTONE = _null();
 
-    public static final BlockBase HOT_GRANITE = _null();
-    public static final BlockBase VERY_HOT_GRANITE = _null();
-    public static final BlockBase SUPERHEATED_GRANITE = _null();
-    public static final BlockBase HOT_DIORITE = _null();
-    public static final BlockBase VERY_HOT_DIORITE = _null();
-    public static final BlockBase SUPERHEATED_DIORITE = _null();
-    public static final BlockBase HOT_ANDESITE = _null();
-    public static final BlockBase VERY_HOT_ANDESITE = _null();
-    public static final BlockBase SUPERHEATED_ANDESITE = _null();
+    public static final HotRocks HOT_GRANITE = _null();
+    public static final VeryHotRocks VERY_HOT_GRANITE = _null();
+    public static final SuperheatedRocks SUPERHEATED_GRANITE = _null();
+    public static final HotRocks HOT_DIORITE = _null();
+    public static final VeryHotRocks VERY_HOT_DIORITE = _null();
+    public static final SuperheatedRocks SUPERHEATED_DIORITE = _null();
+    public static final HotRocks HOT_ANDESITE = _null();
+    public static final VeryHotRocks VERY_HOT_ANDESITE = _null();
+    public static final SuperheatedRocks SUPERHEATED_ANDESITE = _null();
+
+    public static final HotSupercompressed HOT_SUPERCOMPRESSED_IRON = _null();
+    public static final VeryHotSupercompressed VERY_HOT_SUPERCOMPRESSED_IRON = _null();
+    public static final SuperheatedRocks SUPERHEATED_SUPERCOMPRESSED_IRON = _null();
+    public static final HotSupercompressed HOT_SUPERCOMPRESSED_REDSTONE = _null();
+    public static final VeryHotSupercompressed VERY_HOT_SUPERCOMPRESSED_REDSTONE = _null();
+    public static final SuperheatedSupercompressed SUPERHEATED_SUPERCOMPRESSED_REDSTONE = _null();
+    public static final HotSupercompressed HOT_SUPERCOMPRESSED_LAPIS = _null();
+    public static final VeryHotSupercompressed VERY_HOT_SUPERCOMPRESSED_LAPIS = _null();
+    public static final SuperheatedSupercompressed SUPERHEATED_SUPERCOMPRESSED_LAPIS = _null();
+    public static final SuperheatedSupercompressed SUPERHEATED_SUPERCOMPRESSED_DIAMOND = _null();
+    public static final SuperheatedSupercompressed SUPERHEATED_SUPERCOMPRESSED_EMERALD = _null();
 
     public static final GemsGravel RUBY_GRAVEL = _null();
     public static final GemsGravel SAPPHIRE_GRAVEL = _null();
@@ -265,16 +277,27 @@ public class ModBlocks {
 
                 new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
                 new BlockBase("crust_cobblestone", Material.ROCK).setHardness(2.0F).setResistance(1),
-                new BlockBase("superheated_bedrock", Material.ROCK).setHardness(1000000.0F).setResistance(1000000),
-                new BlockBase("hot_granite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(5F),
-                new BlockBase("very_hot_granite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(10F),
-                new BlockBase("superheated_granite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(15F),
-                new BlockBase("hot_diorite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(5F),
-                new BlockBase("very_hot_diorite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(10F),
-                new BlockBase("superheated_diorite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(15F),
-                new BlockBase("hot_andesite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(5F),
-                new BlockBase("very_hot_andesite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(10F),
-                new BlockBase("superheated_andesite", Material.ROCK).setHardness(10.0F).setResistance(2).setLightLevel(15F),
+                new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
+                new HotRocks("hot_granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new VeryHotRocks("very_hot_granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new SuperheatedRocks("superheated_granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new HotRocks("hot_diorite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new VeryHotRocks("very_hot_diorite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new SuperheatedRocks("superheated_diorite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new HotRocks("hot_andesite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new VeryHotRocks("very_hot_andesite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new SuperheatedRocks("superheated_andesite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new HotSupercompressed("hot_supercompressed_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_SUPERCOMPACT, PlanetExp.IRON_SUPERCOMPACT).setResistance(2),
+                new VeryHotSupercompressed("very_hot_supercompressed_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_SUPERCOMPACT, PlanetExp.IRON_SUPERCOMPACT).setResistance(2),
+                new SuperheatedSupercompressed("superheated_supercompressed_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_SUPERCOMPACT, PlanetExp.IRON_SUPERCOMPACT).setResistance(2),
+                new HotSupercompressed("hot_supercompressed_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_SUPERCOMPACT, PlanetExp.REDSTONE_SUPERCOMPACT).setResistance(2),
+                new VeryHotSupercompressed("very_hot_supercompressed_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_SUPERCOMPACT, PlanetExp.REDSTONE_SUPERCOMPACT).setResistance(2),
+                new SuperheatedSupercompressed("superheated_supercompressed_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_SUPERCOMPACT, PlanetExp.REDSTONE_SUPERCOMPACT).setResistance(2),
+                new HotSupercompressed("hot_supercompressed_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_SUPERCOMPACT, PlanetExp.LAPIS_SUPERCOMPACT).setResistance(2),
+                new VeryHotSupercompressed("very_hot_supercompressed_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_SUPERCOMPACT, PlanetExp.LAPIS_SUPERCOMPACT).setResistance(2),
+                new SuperheatedSupercompressed("superheated_supercompressed_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_SUPERCOMPACT, PlanetExp.LAPIS_SUPERCOMPACT).setResistance(2),
+                new SuperheatedSupercompressed("superheated_supercompressed_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_SUPERCOMPACT, PlanetExp.DIAMOND_SUPERCOMPACT).setResistance(2),
+                new SuperheatedSupercompressed("superheated_supercompressed_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_SUPERCOMPACT, PlanetExp.EMERALD_SUPERCOMPACT).setResistance(2),
                 new IronLavaFluid("iron_lava", ModFluids.IRON_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("redstone_lava", ModFluids.REDSTONE_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("silver_lava", ModFluids.SILVER_LAVA_FLUID, Material.LAVA).setDensity(1500),
@@ -295,14 +318,14 @@ public class ModBlocks {
                 new GemsGravel("majorite_gravel", PlanetMaterial.MAJORITE_GRAVEL, PlanetHardness.MAJORITE),
                 new GemsGravel("amazonite_gravel", PlanetMaterial.AMAZONITE_GRAVEL, PlanetHardness.AMAZONITE),
                 new GemsGravel("onyx_gravel", PlanetMaterial.ONYX_GRAVEL, PlanetHardness.ONYX),
-                new BlockBase("mantlerock1_boulder", Material.ROCK).setHardness(1000000F).setResistance(1),
-                new BlockBase("mantlerock2_boulder", Material.ROCK).setHardness(1000000F).setResistance(1),
-                new BlockBase("lower_mantlerock_boulder", Material.ROCK).setHardness(1000000F).setResistance(1),
-                new BlockBase("lower_mantlerock1_boulder", Material.ROCK).setHardness(1000000F).setResistance(1),
-                new BlockBase("lower_mantlerock2_boulder", Material.ROCK).setHardness(1000000F).setResistance(1),
-                new BlockBase("outercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1),
-                new BlockBase("innercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1),
-                new BlockBase("centercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1),
+                new BlockBase("mantlerock1_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(3),
+                new BlockBase("mantlerock2_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(5),
+                new BlockBase("lower_mantlerock_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(7),
+                new BlockBase("lower_mantlerock1_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(9),
+                new BlockBase("lower_mantlerock2_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(11),
+                new BlockBase("outercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(13),
+                new BlockBase("innercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(15),
+                new BlockBase("centercore_boulder", Material.ROCK).setHardness(1000000F).setResistance(1).setLightLevel(15),
                 new BlockBase("sulfur_block", Material.ROCK).setHardness(1F).setResistance(1),
                 new BlockBase("silver_block", Material.IRON).setHardness(15.0F).setResistance(1),
                 new BlockBase("titanium_block", Material.IRON).setHardness(50F).setResistance(3),

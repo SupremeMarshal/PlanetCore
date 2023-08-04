@@ -52,23 +52,6 @@ public class BlockBase extends Block {
 		setSoundType(SoundType.METAL);
 	}
 
-	@Override
-	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
-		ResourceLocation a = this.getRegistryName();
-		IBlockState b = worldIn.getBlockState(pos);
-		if (a.toString().contains("mantlerock") &&
-				b.getBlock().getMetaFromState(b) >= 7 &&
-				!entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn)) {
-			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 0.25F * b.getBlock().getMetaFromState(b) - 1.50F);
-		}
-		super.onEntityWalk(worldIn, pos, entityIn);
-	}
-
-	@Override
-	public int getLightValue(IBlockState state) {
-		int mantleLightLevel = state == ModBlocks.MANTLEROCK1_BOULDER ? 3 : state == ModBlocks.MANTLEROCK2_BOULDER ? 5 : state == ModBlocks.LOWER_MANTLEROCK_BOULDER ? 7 : state == ModBlocks.LOWER_MANTLEROCK1_BOULDER ? 9 : state == ModBlocks.LOWER_MANTLEROCK2_BOULDER ? 11 : state == ModBlocks.OUTERCORE_BOULDER ? 13 : state == ModBlocks.INNERCORE_BOULDER || state == ModBlocks.CENTERCORE_BOULDER || state == ModBlocks.SUPERHEATED_BEDROCK ? 15 : 0;
-		return (mantleLightLevel);
-	}
 	/**
 	 * Previous hardness's value + (3*Meta)
 	 * public static int recursive(int in) {

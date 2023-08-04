@@ -58,6 +58,7 @@ public enum PlanetHardness {
     LAPIS(3),
     REDSTONE(3),
     SULFUR(2),
+    HOT_ROCK(10),
     COAL(0.5F);
 
     public final float hardness;
