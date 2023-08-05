@@ -13388,6 +13388,7 @@
 					"maxHeight": Infinity
 				}
 			],
+			"periodicGaussianOres": [],
 			"expectedBaseHeight": -448.0,
 			"expectedHeightVariation": 64.0,
 			"actualHeight": 64.0,
@@ -13866,6 +13867,7 @@
 					"maxHeight": Infinity
 				}
 			],
+			"periodicGaussianOres": [],
 			"expectedBaseHeight": -640.0,
 			"expectedHeightVariation": 64.0,
 			"actualHeight": 64.0,
@@ -14262,6 +14264,7 @@
 					"maxHeight": Infinity
 				}
 			],
+			"periodicGaussianOres": [],
 			"expectedBaseHeight": -896.0,
 			"expectedHeightVariation": 64.0,
 			"actualHeight": 64.0,
@@ -14658,6 +14661,7 @@
 					"maxHeight": Infinity
 				}
 			],
+			"periodicGaussianOres": [],
 			"expectedBaseHeight": -1152.0,
 			"expectedHeightVariation": 64.0,
 			"actualHeight": 64.0,
