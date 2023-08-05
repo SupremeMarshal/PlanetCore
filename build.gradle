@@ -98,7 +98,7 @@ dependencies {
     implementation fg.deobf ("com.github.OpenCubicChunks:CubicChunks:c4696fdd5e") {
         transitive = false
     }
-    implementation fg.deobf ("com.github.OpenCubicChunks:CubicWorldGen:f51549b") {
+    implementation fg.deobf ("com.github.OpenCubicChunks:CubicWorldGen:974add4") {
         transitive = false
     }
     implementation fg.deobf("curse.maven:GeckoLib-388172:4020277") {
