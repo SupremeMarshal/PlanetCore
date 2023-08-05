@@ -69,7 +69,7 @@ public class PlanetCoreWorldType extends WorldType implements ICubicWorldType {
 
     public ICubeGenerator createCubeGenerator(World world) {
         CustomGeneratorSettings cfg;
-        try (InputStream in = PlanetCoreWorldType.class.getResourceAsStream("/assets/planetcore/preset.json")) {
+        try (InputStream in = PlanetCoreWorldType.class.getResourceAsStream("/assets/planetcore/preset.json5")) {
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             byte[] buf = new byte[4096];
             for (int i; (i = in.read(buf)) >= 0;) {
