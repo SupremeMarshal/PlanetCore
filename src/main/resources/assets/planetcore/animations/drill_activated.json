@@ -16,6 +16,10 @@
 					}
 				}
 			}
+		},
+		"drill_inactive": {
+			"loop": true,
+			"animation_length": 0
 		}
 	}
 }

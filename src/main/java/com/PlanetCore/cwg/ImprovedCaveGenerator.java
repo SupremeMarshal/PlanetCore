@@ -99,12 +99,12 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
     /**
      * Maximum value by which horizontal cave direction randomly changes each step, lower values are much more likely.
      */
-    private static final float MAX_ADD_DIRECTION_CHANGE_HORIZ = 4.0f;
+    private static final float MAX_ADD_DIRECTION_CHANGE_HORIZ = 10.0f;
 
     /**
      * Maximum value by which vertical cave direction randomly changes each step, lower values are much more likely.
      */
-    private static final float MAX_ADD_DIRECTION_CHANGE_VERT = 4.0f;
+    private static final float MAX_ADD_DIRECTION_CHANGE_VERT = 10.0f;
 
     private static final float VERT_ANGLE_FACTOR = 1.0f/3.0f;
 
@@ -122,21 +122,21 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
         CAVE0(Blocks.STONE, Blocks.LAVA,1.0, -30.0,128,10000,-10000, 10000, 64, 64),
         CAVE1(ModBlocks.COAL_SUPERCOMPACT, Blocks.LAVA,0.01, -2.0,32,10000,-10000, 10000, 64, 64),
-        CAVE5(ModBlocks.IRON_SUPERCOMPACT, ModBlocks.IRON_LAVA_FLUID,0.05, -37.0,64,10000,-10000, 10000, 64, 64),
-        CAVE6(ModBlocks.REDSTONE_SUPERCOMPACT, ModBlocks.REDSTONE_LAVA_FLUID,0.02, -74.0,64,10000, -10000, 10000, 64, 64),
-        CAVE7(ModBlocks.SILVER_SUPERCOMPACT, ModBlocks.SILVER_LAVA_FLUID,0.02, -92.5,64,10000, -10000, 10000, 64, 64),
-        CAVE8(ModBlocks.GOLD_SUPERCOMPACT, ModBlocks.GOLD_LAVA_FLUID,0.02, -111.0,64,10000,-10000, 10000, 64, 64),
-        CAVE20(ModBlocks.DIAMOND_SUPERCOMPACT, ModBlocks.DIAMOND_LAVA_FLUID,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
-        CAVE28(ModBlocks.EMERALD_SUPERCOMPACT, Blocks.LAVA,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
-        CAVE29(ModBlocks.LAPIS_SUPERCOMPACT, Blocks.LAVA,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
-        CAVE10(ModBlocks.TITANIUM_SUPERCOMPACT, ModBlocks.TITANIUM_LAVA_FLUID,0.02, -148.0,64,10000, -10000, 10000, 64, 64),
-        CAVE15(ModBlocks.URANIUM_SUPERCOMPACT, ModBlocks.URANIUM_LAVA_FLUID,0.02, -148.0,64,10000, -10000, 10000, 64, 64),
-        CAVE16(ModBlocks.TUNGSTEN_SUPERCOMPACT, ModBlocks.TUNGSTEN_LAVA_FLUID,0.02, -155.4,64,10000, -10000, 10000, 64, 64),
-        CAVE18(ModBlocks.RUBY_SUPERCOMPACT, ModBlocks.RUBY_LAVA_FLUID,0.01, -170.2,64,10000, -10000, 10000, 64, 64),
-        CAVE19(ModBlocks.SAPPHIRE_SUPERCOMPACT, ModBlocks.SAPPHIRE_LAVA_FLUID,0.01, -177.6,64,10000, -10000, 10000, 64, 64),
-        CAVE25(ModBlocks.MAJORITE_SUPERCOMPACT, ModBlocks.MAJORITE_LAVA_FLUID,0.01, -214.6,64,10000, -10000, 10000, 64, 64),
-        CAVE26(ModBlocks.AMAZONITE_SUPERCOMPACT, ModBlocks.AMAZONITE_LAVA_FLUID,0.01, -222.0,64,10000, -10000, 10000, 64, 64),
-        CAVE27(ModBlocks.ONYX_SUPERCOMPACT, ModBlocks.ONYX_LAVA_FLUID,0.01, -229.4,64,10000, -10000, 10000, 64, 64);
+        CAVE2(ModBlocks.IRON_SUPERCOMPACT, ModBlocks.IRON_LAVA_FLUID,0.2, -20.0,64,10000,-10000, 10000, 64, 64),
+        CAVE3(ModBlocks.REDSTONE_SUPERCOMPACT, ModBlocks.REDSTONE_LAVA_FLUID,0.07, -22.0,64,10000, -10000, 10000, 64, 64),
+        CAVE4(ModBlocks.SILVER_SUPERCOMPACT, ModBlocks.SILVER_LAVA_FLUID,0.07, -24.0,64,10000, -10000, 10000, 64, 64),
+        CAVE5(ModBlocks.GOLD_SUPERCOMPACT, ModBlocks.GOLD_LAVA_FLUID,0.05, -26,64,10000,-10000, 10000, 64, 64),
+        CAVE6(ModBlocks.DIAMOND_SUPERCOMPACT, ModBlocks.DIAMOND_LAVA_FLUID,0.03, -30,64,10000, -10000, 10000, 64, 64),
+        CAVE7(ModBlocks.EMERALD_SUPERCOMPACT, Blocks.LAVA,0.01, -33,64,10000, -10000, 10000, 64, 64),
+        CAVE8(ModBlocks.LAPIS_SUPERCOMPACT, Blocks.LAVA,0.05, -22,64,10000, -10000, 10000, 64, 64),
+        CAVE9(ModBlocks.TITANIUM_SUPERCOMPACT, ModBlocks.TITANIUM_LAVA_FLUID,0.02, -35,64,10000, -10000, 10000, 64, 64),
+        CAVE10(ModBlocks.URANIUM_SUPERCOMPACT, ModBlocks.URANIUM_LAVA_FLUID,0.02, -37,64,10000, -10000, 10000, 64, 64),
+        CAVE11(ModBlocks.TUNGSTEN_SUPERCOMPACT, ModBlocks.TUNGSTEN_LAVA_FLUID,0.02, -40,64,10000, -10000, 10000, 64, 64),
+        CAVE12(ModBlocks.RUBY_SUPERCOMPACT, ModBlocks.RUBY_LAVA_FLUID,0.01, -45,64,10000, -10000, 10000, 64, 64),
+        CAVE13(ModBlocks.SAPPHIRE_SUPERCOMPACT, ModBlocks.SAPPHIRE_LAVA_FLUID,0.01, -50,64,10000, -10000, 10000, 64, 64),
+        CAVE14(ModBlocks.MAJORITE_SUPERCOMPACT, ModBlocks.MAJORITE_LAVA_FLUID,0.01, -55,64,10000, -10000, 10000, 64, 64),
+        CAVE15(ModBlocks.AMAZONITE_SUPERCOMPACT, ModBlocks.AMAZONITE_LAVA_FLUID,0.01, -60,64,10000, -10000, 10000, 64, 64),
+        CAVE16(ModBlocks.ONYX_SUPERCOMPACT, ModBlocks.ONYX_LAVA_FLUID,0.01, -65,64,10000, -10000, 10000, 64, 64);
 
 
         private final IBlockState block;
@@ -262,7 +262,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
             double modifier = MathUtil.bellCurveProbabilityCyclic(cubeYOrigin, iMean, scaledStdDev, iSpacing);
 
             double random = Math.abs(rand.nextDouble());
-            double probability = cave.probability * modifier * 10;
+            double probability = cave.probability * modifier * 20;
             if (cave != CaveType.CAVE0) {
                 //Modify base probability with the curve
                 if (random < probability) {
