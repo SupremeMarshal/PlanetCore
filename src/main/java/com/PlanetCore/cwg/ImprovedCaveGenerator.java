@@ -1,6 +1,7 @@
 package com.PlanetCore.cwg;
 
 import com.PlanetCore.init.ModBlocks;
+import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
 import io.github.opencubicchunks.cubicchunks.api.util.MathUtil;
 import io.github.opencubicchunks.cubicchunks.api.world.ICube;
@@ -73,17 +74,17 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
     /**
      * After each step the Y direction component will be multiplied by this value, unless steeper cave is allowed
      */
-    private static final float FLATTEN_FACTOR = 0.7f;
+    private static final float FLATTEN_FACTOR = 0.0f;
 
     /**
      * If steeper cave is allowed - this value will be used instead of FLATTEN_FACTOR
      */
-    private static final float STEEPER_FLATTEN_FACTOR = 0.92f;
+    private static final float STEEPER_FLATTEN_FACTOR = 0.9f;
 
     /**
      * Each step cave direction angles will be changed by this fraction of values that specify how direction changes
      */
-    private static final float DIRECTION_CHANGE_FACTOR = 0.1f;
+    private static final float DIRECTION_CHANGE_FACTOR = 0.85f;
 
     /**
      * This fraction of the previous value that controls horizontal direction changes will be used in next step
@@ -105,6 +106,9 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
      */
     private static final float MAX_ADD_DIRECTION_CHANGE_VERT = 2.0f;
 
+    private static final float VERT_ANGLE_FACTOR = 1.0f/3.0f;
+
+    private static final float INITIAL_VERT_ANGLE_FACTOR = 2.0F / 8.0F;
     /**
      * 1 in this amount of steps will actually carve any blocks,
      */
@@ -114,35 +118,29 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
     private static boolean REPLACE_WITH_AIR = false;
 
-    private static final int SPECIAL_CAVE_RARITY = 2;
-
-    private static Block CAVE_MATERIAL = Blocks.STONE;
-
-    private static Block SPECIAL_CAVE_MATERIAL = Blocks.STONE;
-
-
     public enum CaveType {
 
-        CAVE0(Blocks.STONE,1.0, -30.0,128,10000,-10000, 10000, 64, 64),
-        CAVE1(ModBlocks.COAL_SUPERCOMPACT,0.01, -2.0,32,10000,-10000, 10000, 64, 64),
-        CAVE5(ModBlocks.IRON_SUPERCOMPACT,0.05, -37.0,64,10000,-10000, 10000, 64, 64),
-        CAVE6(ModBlocks.REDSTONE_SUPERCOMPACT,0.02, -74.0,64,10000, -10000, 10000, 64, 64),
-        CAVE7(ModBlocks.SILVER_SUPERCOMPACT,0.02, -92.5,64,10000, -10000, 10000, 64, 64),
-        CAVE8(ModBlocks.GOLD_SUPERCOMPACT,0.02, -111.0,64,10000,-10000, 10000, 64, 64),
-        CAVE20(ModBlocks.DIAMOND_SUPERCOMPACT,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
-        CAVE28(ModBlocks.EMERALD_SUPERCOMPACT,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
-        CAVE29(ModBlocks.LAPIS_SUPERCOMPACT,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
-        CAVE10(ModBlocks.TITANIUM_SUPERCOMPACT,0.02, -148.0,64,10000, -10000, 10000, 64, 64),
-        CAVE15(ModBlocks.URANIUM_SUPERCOMPACT,0.02, -148.0,64,10000, -10000, 10000, 64, 64),
-        CAVE16(ModBlocks.TUNGSTEN_SUPERCOMPACT,0.02, -155.4,64,10000, -10000, 10000, 64, 64),
-        CAVE18(ModBlocks.RUBY_SUPERCOMPACT,0.01, -170.2,64,10000, -10000, 10000, 64, 64),
-        CAVE19(ModBlocks.SAPPHIRE_SUPERCOMPACT,0.01, -177.6,64,10000, -10000, 10000, 64, 64),
-        CAVE25(ModBlocks.MAJORITE_SUPERCOMPACT,0.01, -214.6,64,10000, -10000, 10000, 64, 64),
-        CAVE26(ModBlocks.AMAZONITE_SUPERCOMPACT,0.01, -222.0,64,10000, -10000, 10000, 64, 64),
-        CAVE27(ModBlocks.ONYX_SUPERCOMPACT,0.01, -229.4,64,10000, -10000, 10000, 64, 64);
+        CAVE0(Blocks.STONE, Blocks.LAVA,1.0, -30.0,128,10000,-10000, 10000, 64, 64),
+        CAVE1(ModBlocks.COAL_SUPERCOMPACT, Blocks.LAVA,0.01, -2.0,32,10000,-10000, 10000, 64, 64),
+        CAVE5(ModBlocks.IRON_SUPERCOMPACT, ModBlocks.IRON_LAVA_FLUID,0.05, -37.0,64,10000,-10000, 10000, 64, 64),
+        CAVE6(ModBlocks.REDSTONE_SUPERCOMPACT, ModBlocks.REDSTONE_LAVA_FLUID,0.02, -74.0,64,10000, -10000, 10000, 64, 64),
+        CAVE7(ModBlocks.SILVER_SUPERCOMPACT, ModBlocks.SILVER_LAVA_FLUID,0.02, -92.5,64,10000, -10000, 10000, 64, 64),
+        CAVE8(ModBlocks.GOLD_SUPERCOMPACT, ModBlocks.GOLD_LAVA_FLUID,0.02, -111.0,64,10000,-10000, 10000, 64, 64),
+        CAVE20(ModBlocks.DIAMOND_SUPERCOMPACT, ModBlocks.DIAMOND_LAVA_FLUID,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
+        CAVE28(ModBlocks.EMERALD_SUPERCOMPACT, Blocks.LAVA,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
+        CAVE29(ModBlocks.LAPIS_SUPERCOMPACT, Blocks.LAVA,0.01, -129.5,64,10000, -10000, 10000, 64, 64),
+        CAVE10(ModBlocks.TITANIUM_SUPERCOMPACT, ModBlocks.TITANIUM_LAVA_FLUID,0.02, -148.0,64,10000, -10000, 10000, 64, 64),
+        CAVE15(ModBlocks.URANIUM_SUPERCOMPACT, ModBlocks.URANIUM_LAVA_FLUID,0.02, -148.0,64,10000, -10000, 10000, 64, 64),
+        CAVE16(ModBlocks.TUNGSTEN_SUPERCOMPACT, ModBlocks.TUNGSTEN_LAVA_FLUID,0.02, -155.4,64,10000, -10000, 10000, 64, 64),
+        CAVE18(ModBlocks.RUBY_SUPERCOMPACT, ModBlocks.RUBY_LAVA_FLUID,0.01, -170.2,64,10000, -10000, 10000, 64, 64),
+        CAVE19(ModBlocks.SAPPHIRE_SUPERCOMPACT, ModBlocks.SAPPHIRE_LAVA_FLUID,0.01, -177.6,64,10000, -10000, 10000, 64, 64),
+        CAVE25(ModBlocks.MAJORITE_SUPERCOMPACT, ModBlocks.MAJORITE_LAVA_FLUID,0.01, -214.6,64,10000, -10000, 10000, 64, 64),
+        CAVE26(ModBlocks.AMAZONITE_SUPERCOMPACT, ModBlocks.AMAZONITE_LAVA_FLUID,0.01, -222.0,64,10000, -10000, 10000, 64, 64),
+        CAVE27(ModBlocks.ONYX_SUPERCOMPACT, ModBlocks.ONYX_LAVA_FLUID,0.01, -229.4,64,10000, -10000, 10000, 64, 64);
 
 
-        private final Block block;
+        private final IBlockState block;
+        private final IBlockState lavaMaterial;
         private final double probability;
         private final double heightMean;
         private final double heightStdDeviation;
@@ -153,8 +151,10 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
         private final double expectedBaseHeight;
 
 
-        CaveType(Block block, double probability, double heightMean,double heightStdDeviation, double heightSpacing, double minHeight, double maxHeight, double expectedHeightVariation, double expectedBaseHeight) {
-            this.block = block;
+        CaveType(Block block, Block lavaMaterial, double probability, double heightMean,double heightStdDeviation, double heightSpacing,
+                double minHeight, double maxHeight, double expectedHeightVariation, double expectedBaseHeight) {
+            this.block = block.getDefaultState();
+            this.lavaMaterial = lavaMaterial.getDefaultState();
             this.probability = probability;
             this.heightMean = heightMean;
             this.heightStdDeviation = heightStdDeviation;
@@ -165,7 +165,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
             this.expectedBaseHeight = expectedBaseHeight;
         }
 
-        public Block block() {
+        public IBlockState block() {
             return block;
         }
 
@@ -236,6 +236,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
         }
 
         for (CaveType cave : CaveType.values()) {
+            if(cave==CaveType.CAVE0) continue;
             if (cave != CaveType.CAVE0 && cubeYOrigin > -10)
             {
                 continue;
@@ -261,21 +262,20 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
             double modifier = MathUtil.bellCurveProbabilityCyclic(cubeYOrigin, iMean, scaledStdDev, iSpacing);
 
             double random = Math.abs(rand.nextDouble());
-            double probability = cave.probability * modifier;
+            double probability = cave.probability * modifier * 10;
             if (cave != CaveType.CAVE0) {
                 //Modify base probability with the curve
                 if (random < probability) {
                     isBlockReplaceable = (state -> state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getMaterial() == Material.AIR || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS);
-                    CAVE_MATERIAL = cave.block;
                     nodes = rand.nextInt(rand.nextInt(rand.nextInt(5) + 1) + 1);
                 } else { continue; }
             }
             else
             {
                 isBlockReplaceable = (state -> state.getMaterial() == Material.ROCK || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS);
-                CAVE_MATERIAL = cave.block;
                 nodes = rand.nextInt(rand.nextInt(rand.nextInt(rand.nextInt(15) +2) +2) +1);
             }
+            int lavaHeight = Coords.cubeToCenterBlock(cubeYOrigin) + relativeFillY(rand, cubeXOrigin, cubeYOrigin, cubeZOrigin, cave);
 
             for (int node = 0; node < nodes; ++node) {
 
@@ -285,15 +285,15 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                 int subBranches = 1;
 
                 if (rand.nextInt(LARGE_NODE_RARITY) == 0) {
-                    this.generateLargeNode(cube, rand, rand.nextLong(), generatedCubePos,
-                            branchStartX, branchStartY, branchStartZ);
+                    this.generateLargeNode(cube, cave, rand, rand.nextLong(), generatedCubePos,
+                            branchStartX, branchStartY, branchStartZ, lavaHeight);
                     subBranches += rand.nextInt(LARGE_NODE_MAX_BRANCHES);
                 }
 
                 for (int branch = 0; branch < subBranches; ++branch) {
 
                     float horizDirAngle = rand.nextFloat() * (float) Math.PI * 2.0F;
-                    float vertDirAngle = (rand.nextFloat() - 0.5F) * 2.0F / 8.0F;
+                    float vertDirAngle = (rand.nextFloat() - 0.5F) * INITIAL_VERT_ANGLE_FACTOR;
                     float baseHorizSize = rand.nextFloat() * 2.0F * rand.nextFloat() + rand.nextFloat();
 
                     if (rand.nextInt(4) == 0) {
@@ -310,10 +310,10 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                         OUTER_CAVE_THICKNESS = 0;
                         REPLACE_WITH_AIR = true;
                         long tempLong = rand.nextLong();
-                        this.generateNode(cube, tempLong, generatedCubePos,
+                        this.generateNode(cube, cave, tempLong, generatedCubePos,
                                 branchStartX, branchStartY, branchStartZ,
                                 baseHorizSize, horizDirAngle, vertDirAngle,
-                                startWalkedDistance, maxWalkedDistance, vertCaveSizeMod);
+                                startWalkedDistance, maxWalkedDistance, vertCaveSizeMod, lavaHeight);
                     }
                     else
                     {
@@ -321,17 +321,17 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                         OUTER_CAVE_THICKNESS = 2;
                         REPLACE_WITH_AIR = false;
                         long tempLong = rand.nextLong();
-                        this.generateNode(cube, tempLong, generatedCubePos,
+                        this.generateNode(cube, cave, tempLong, generatedCubePos,
                                 branchStartX, branchStartY, branchStartZ,
                                 baseHorizSize, horizDirAngle, vertDirAngle,
-                                startWalkedDistance, maxWalkedDistance, vertCaveSizeMod);
+                                startWalkedDistance, maxWalkedDistance, vertCaveSizeMod, lavaHeight);
 
                         OUTER_CAVE_THICKNESS = 0;
                         REPLACE_WITH_AIR = true;
-                        this.generateNode(cube, tempLong, generatedCubePos,
+                        this.generateNode(cube, cave, tempLong, generatedCubePos,
                                 branchStartX, branchStartY, branchStartZ,
                                 baseHorizSize, horizDirAngle, vertDirAngle,
-                                startWalkedDistance, maxWalkedDistance, vertCaveSizeMod);
+                                startWalkedDistance, maxWalkedDistance, vertCaveSizeMod, lavaHeight);
 
                     }
                 }
@@ -339,12 +339,17 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
         }
     }
 
+    private int relativeFillY(Random rand, int originX, int originY, int originZ, CaveType caveType) {
+        // value of 0 means a cave system is filled from the middle down
+        // value of -10 means it's going to be filled from 10 blocks below the middle of it
+        return (int) ((rand.nextDouble() * 2 - 1) * 64);
+    }
 
     /**
      * Generates a flattened cave "room", usually more caves split off it
      */
-    private void generateLargeNode(CubePrimer cube, Random rand, long seed, CubePos generatedCubePos,
-                                   double x, double y, double z) {
+    private void generateLargeNode(CubePrimer cube, CaveType caveType, Random rand, long seed, CubePos generatedCubePos,
+                                   double x, double y, double z, int lavaHeight) {
         float baseHorizSize = 1.0F + rand.nextFloat() * 6.0F;
         float horizDirAngle = 0;
         float vertDirAngle = 0;
@@ -352,9 +357,9 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
         int startWalkedDistance = -1;
         int maxWalkedDistance = -1;
         double vertCaveSizeMod = 1.0;
-        this.generateNode(cube, seed, generatedCubePos, x, y, z,
+        this.generateNode(cube, caveType, seed, generatedCubePos, x, y, z,
                 baseHorizSize, horizDirAngle, vertDirAngle,
-                startWalkedDistance, maxWalkedDistance, vertCaveSizeMod);
+                startWalkedDistance, maxWalkedDistance, vertCaveSizeMod, lavaHeight);
     }
 
     /**
@@ -375,11 +380,12 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
      * @param vertDirAngle changes vertical size of the cave, values < 1 result in flattened caves, > 1 result in
      * vertically stretched caves
      */
-    private void generateNode(CubePrimer cube, long seed,
+    private void generateNode(CubePrimer cube, CaveType caveType, long seed,
                               CubePos generatedCubePos,
                               double caveX, double caveY, double caveZ,
                               float baseCaveSize, float horizDirAngle, float vertDirAngle,
-                              int startWalkedDistance, int maxWalkedDistance, double vertCaveSizeMod) {
+                              int startWalkedDistance, int maxWalkedDistance, double vertCaveSizeMod,
+                              int lavaHeight) {
         Random rand = new Random(seed);
 
         //store by how much the horizontal and vertical direction angles will change each step
@@ -445,17 +451,17 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
             //if we reached split point - try to split
             //can split only if it's not final branch and the cave is still big enough (>1 block radius)
             if (!finalStep && walkedDistance == splitPoint && baseCaveSize > 1.0F) {
-                this.generateNode(cube, rand.nextLong(),
+                this.generateNode(cube, caveType, rand.nextLong(),
                         generatedCubePos, caveX, caveY, caveZ,
                         rand.nextFloat() * 0.5F + 0.5F,//base cave size
                         horizDirAngle - ((float) Math.PI / 2F),//horiz. angle - subtract 90 degrees
-                        vertDirAngle / 3.0F, walkedDistance, maxWalkedDistance,
-                        1.0D);
-                this.generateNode(cube, rand.nextLong(), generatedCubePos, caveX, caveY, caveZ,
+                        vertDirAngle * VERT_ANGLE_FACTOR, walkedDistance, maxWalkedDistance,
+                        1.0D, lavaHeight);
+                this.generateNode(cube, caveType, rand.nextLong(), generatedCubePos, caveX, caveY, caveZ,
                         rand.nextFloat() * 0.5F + 0.5F,//base cave size
                         horizDirAngle + ((float) Math.PI / 2F),//horiz. angle - add 90 degrees
-                        vertDirAngle / 3.0F, walkedDistance, maxWalkedDistance,
-                        1.0D);
+                        vertDirAngle  * VERT_ANGLE_FACTOR, walkedDistance, maxWalkedDistance,
+                        1.0D, lavaHeight);
                 return;
             }
 
@@ -478,9 +484,9 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                 return;
             }
 
-            tryCarveBlocks(cube, generatedCubePos,
+            tryCarveBlocks(cube, caveType, generatedCubePos,
                     caveX, caveY, caveZ,
-                    caveSizeHoriz, caveSizeVert);
+                    caveSizeHoriz, caveSizeVert, lavaHeight);
             if (finalStep) {
                 return;
             }
@@ -488,9 +494,9 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
     }
 
     //returns true if cave generation should be continued
-    private void tryCarveBlocks(@Nonnull CubePrimer cube, @Nonnull CubePos generatedCubePos,
+    private void tryCarveBlocks(@Nonnull CubePrimer cube, @Nonnull CaveType caveType, @Nonnull CubePos generatedCubePos,
                                 double caveX, double caveY, double caveZ,
-                                double caveSizeHoriz, double caveSizeVert) {
+                                double caveSizeHoriz, double caveSizeVert, int lavaHeight) {
         double genCubeCenterX = generatedCubePos.getXCenter();
         double genCubeCenterY = generatedCubePos.getYCenter();
         double genCubeCenterZ = generatedCubePos.getZCenter();
@@ -526,15 +532,15 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                 (b) -> b.getBlock() == Blocks.LAVA || b.getBlock() == Blocks.FLOWING_LAVA);
 
         if (!hitLiquid) {
-            carveBlocks(cube, generatedCubePos, caveX, caveY, caveZ, caveSizeHoriz, caveSizeVert, boundingBox);
+            carveBlocks(cube, caveType, generatedCubePos, caveX, caveY, caveZ, caveSizeHoriz, caveSizeVert, boundingBox, lavaHeight);
         }
     }
 
-    private void carveBlocks(CubePrimer cube,
+    private void carveBlocks(CubePrimer cube, CaveType caveType,
                              CubePos generatedCubePos,
                              double caveX, double caveY, double caveZ,
                              double caveSizeHoriz, double caveSizeVert,
-                             StructureBoundingBox boundingBox) {
+                             StructureBoundingBox boundingBox, int lavaHeight) {
 
         int generatedCubeX = generatedCubePos.getX();
         int generatedCubeY = generatedCubePos.getY();
@@ -568,10 +574,13 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                     if (shouldCarveBlock(distX, distY, distZ)) {
                         // No lava generation, infinite depth. Lava will be generated differently (or not generated)
                         if(REPLACE_WITH_AIR) {
-                            cube.setBlockState(localX, localY, localZ, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
-                        }
-                        else{
-                            cube.setBlockState(localX, localY, localZ, CAVE_MATERIAL.getDefaultState());
+                            if (Coords.localToBlock(generatedCubeY, localY) <= lavaHeight) {
+                                cube.setBlockState(localX, localY, localZ, caveType.lavaMaterial);
+                            } else {
+                                cube.setBlockState(localX, localY, localZ, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
+                            }
+                        } else{
+                            cube.setBlockState(localX, localY, localZ, caveType.block);
                         }
                     } else if (state.getBlock() == Blocks.DIRT) {
                         //vanilla dirt-grass replacement works by scanning top-down and moving the block
