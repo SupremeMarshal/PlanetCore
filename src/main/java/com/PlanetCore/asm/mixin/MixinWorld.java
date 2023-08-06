@@ -44,7 +44,7 @@ public abstract class MixinWorld {
         if (world.playerEntities.isEmpty()) return;
         WorldServer serverWorld = (WorldServer) (Object) this;
         for (EntityPlayer player : world.playerEntities) {
-            if (player.getDistanceSqToCenter(pos) > 16) continue;
+            if (player.getDistanceSqToCenter(pos) > 8*8) continue;
             world.playSound(null, pos, SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.BLOCKS, 0.5F, 2.6F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.8F);
             serverWorld.spawnParticle(
                     EnumParticleTypes.SMOKE_LARGE,
