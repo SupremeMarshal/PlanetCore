@@ -1,12 +1,20 @@
 package com.PlanetCore.util.handlers;
 
+import com.PlanetCore.init.ModItems;
+import com.PlanetCore.items.Drills.IronDrill;
 import com.PlanetCore.util.Reference;
 import net.minecraft.init.MobEffects;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib3.util.GeckoLibUtil;
 
 @Mod.EventBusSubscriber(modid= Reference.MOD_ID)
 public class PlayerTickEventHandler {
@@ -44,10 +52,6 @@ public class PlayerTickEventHandler {
                     event.player.heal(event.player.getMaxHealth() / (12000 / event.player.getFoodStats().getFoodLevel()));
                 }
             }
-
-
-
-
 
             PotionEffect effect = event.player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 

@@ -154,7 +154,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY < -900 && posY >= -1050 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
+		if (posY < -512 && posY >= -1350 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;

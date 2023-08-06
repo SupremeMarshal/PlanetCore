@@ -3,6 +3,7 @@ package com.PlanetCore.init;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.ItemSpadeX;
+import com.PlanetCore.items.Drills.IronDrill;
 import com.PlanetCore.items.armor.ArmorBase;
 import com.PlanetCore.items.arrows.*;
 import com.PlanetCore.items.bows.*;
@@ -23,6 +24,8 @@ public class ModItems {
 
 	private static final List<Item> ITEMS = new ArrayList<>();
 
+
+	public static final IronDrill IRON_DRILL = (IronDrill) new IronDrill().setCreativeTab(CreativeTabs.TOOLS);
 
 	public static final Item HOT_BLAZE_POWDER = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item HOT_MAGMA_CREAM = new Item().setCreativeTab(CreativeTabs.MATERIALS);

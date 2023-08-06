@@ -84,22 +84,15 @@ public class ArmorBase extends ItemArmor {
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM) health = 0.5F;
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM) health = 0.5F;
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) health = 1.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM) health = 1.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TOPAZ) health = 0.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_JADE) health = 1.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) health = 2.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) health = 2.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE) health = 3.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE) health = 3.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE) health = 4.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE) health = 4.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE) health = 5.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) health = 6.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) health = 7.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II) health = 8.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III) health = 9.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV) health = 10.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) health = 11.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) health = 1.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) health = 2.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE) health = 2.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) health = 3.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) health = 3.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II) health = 4.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III) health = 4.5F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV) health = 5.0F;
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) health = 6.0F;
 
 
 
@@ -170,23 +163,20 @@ public class ArmorBase extends ItemArmor {
          * tooltip 5 = When full armor of this tier or above is equipped:
          * tooltip 6 = +Resistance
          */
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ALUMINIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_STEEL
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TIN || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_COPPER
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRONZE
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN_TITANIUM) {
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TOPAZ || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_JADE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
@@ -195,8 +185,7 @@ public class ArmorBase extends ItemArmor {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_OLIVINE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_WADSLEYITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RINGWOODITE
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_BRIGMANITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
+        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));

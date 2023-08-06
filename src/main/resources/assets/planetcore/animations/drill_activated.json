@@ -1,0 +1,21 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"drill_active": {
+			"loop": true,
+			"animation_length": 0.16667,
+			"bones": {
+				"drill": {
+					"rotation": {
+						"0.0": {
+							"vector": [-55, 0, 0]
+						},
+						"0.1667": {
+							"vector": [360, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	}
+}

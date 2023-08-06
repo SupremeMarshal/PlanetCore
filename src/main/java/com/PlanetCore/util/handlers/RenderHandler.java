@@ -3,6 +3,8 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.entity.*;
 import com.PlanetCore.entity.render.*;
 import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.init.ModItems;
+import com.PlanetCore.items.Drills.IronDrillRender;
 import com.PlanetCore.items.arrows.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.ItemMeshDefinition;
@@ -20,7 +22,16 @@ public class RenderHandler
 	{
 
 		public static void registerEntityRenders() {
+			ModItems.IRON_DRILL.setTileEntityItemStackRenderer(new IronDrillRender());
 			//Demon
+			RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new IRenderFactory<EntityDemon>() {
+
+				@Override
+				public Render<? super EntityDemon> createRenderFor(RenderManager manager) {
+					return new RenderDemon(manager);
+				}
+			});
+
 			RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new IRenderFactory<EntityDemon>() {
 
 				@Override

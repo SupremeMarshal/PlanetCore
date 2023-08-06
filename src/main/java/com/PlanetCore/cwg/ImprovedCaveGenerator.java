@@ -104,7 +104,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
     /**
      * Maximum value by which vertical cave direction randomly changes each step, lower values are much more likely.
      */
-    private static final float MAX_ADD_DIRECTION_CHANGE_VERT = 2.0f;
+    private static final float MAX_ADD_DIRECTION_CHANGE_VERT = 4.0f;
 
     private static final float VERT_ANGLE_FACTOR = 1.0f/3.0f;
 

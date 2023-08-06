@@ -34,10 +34,10 @@ public class WorldGenLakesMixin {
     @Unique
     private IBlockState planetCore$getCorrespondingStoneBlock(Block lava, IBlockState default_) {
         if (lava == ModBlocks.IRON_LAVA_FLUID) {
-            return ModBlocks.IRON_SUPERCOMPACT.getDefaultState();
+            return Math.random() < 0.5 ? ModBlocks.IRON_SUPERCOMPACT.getDefaultState() : ModBlocks.HOT_SUPERCOMPRESSED_IRON.getDefaultState();
         }
         if (lava == ModBlocks.REDSTONE_LAVA_FLUID) {
-            return ModBlocks.REDSTONE_SUPERCOMPACT.getDefaultState();
+            return Math.random() < 0.5 ? ModBlocks.REDSTONE_SUPERCOMPACT.getDefaultState() : ModBlocks.HOT_SUPERCOMPRESSED_REDSTONE.getDefaultState();
         }
         if (lava == ModBlocks.SILVER_LAVA_FLUID) {
             return ModBlocks.SILVER_SUPERCOMPACT.getDefaultState();
@@ -46,7 +46,7 @@ public class WorldGenLakesMixin {
             return ModBlocks.GOLD_SUPERCOMPACT.getDefaultState();
         }
         if (lava == ModBlocks.DIAMOND_LAVA_FLUID) {
-            return ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState();
+            return Math.random() < 0.5 ? ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState() : ModBlocks.SUPERHEATED_SUPERCOMPRESSED_DIAMOND.getDefaultState();
         }
         if (lava == ModBlocks.TITANIUM_LAVA_FLUID) {
             return ModBlocks.TITANIUM_SUPERCOMPACT.getDefaultState();

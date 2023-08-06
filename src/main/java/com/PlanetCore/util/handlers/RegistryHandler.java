@@ -1,13 +1,11 @@
 package com.PlanetCore.util.handlers;
 
 
-import com.PlanetCore.Main;
 import com.PlanetCore.init.*;
 import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.items.armor.ItemSetPieces;
 import com.PlanetCore.util.IMetaName;
 import com.PlanetCore.util.ModConfiguration;
-import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
@@ -28,11 +26,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.Collections;
+
+import static com.PlanetCore.util.Reference.MOD_ID;
 
 
 @EventBusSubscriber
@@ -73,7 +72,7 @@ public class RegistryHandler {
     public static void onModelRegister(ModelRegistryEvent event) {
 
         ForgeRegistries.ITEMS.getValues().stream()
-                .filter(item -> Reference.MOD_ID.equals(item.getRegistryName().getNamespace())).forEach(item -> {
+                .filter(item -> MOD_ID.equals(item.getRegistryName().getNamespace())).forEach(item -> {
             if (item instanceof ItemBlockVariants) {
                 for (int i = 0; i < 3; i++) {
                     //    ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(item.getRegistryName(), "inventory"));
@@ -82,7 +81,6 @@ public class RegistryHandler {
                 ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
             }
         });
-
 
         RenderHandler.registerEntityRenders();
         RenderHandler.registerCustomMeshesAndStates();

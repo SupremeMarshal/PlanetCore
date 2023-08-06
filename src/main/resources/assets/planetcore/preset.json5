@@ -105,7 +105,7 @@
 		"mainProbability": [
 			{
 				"y": 0.0,
-				"v": 0.75
+				"v": 0.2
 			}
 		]
 	}
@@ -2461,6 +2461,162 @@
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "granite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "diorite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "andesite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
 				{
 					"blockstate": {
 						"Name": "minecraft:flowing_lava"
@@ -5695,6 +5851,162 @@
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "granite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "diorite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "andesite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock1"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
 				{
 					"blockstate": {
 						"Name": "minecraft:flowing_lava"
@@ -9205,71 +9517,254 @@
 					"biomeSelect": "EXCLUDE",
 					"surfaceProbability": [
 						{
-							"y": -1.0,
+							"y": 0,
 							"v": 0.06108487769961357
-						},
+						}
+					],
+					"mainProbability": [
+						{
+							"y": 0,
+							"v": 0.015209125354886055
+						}
+					]
+				},
+				{
+					"block": "planetcore:silver_lava",
+					"biomes": [
+					"minecraft:mutated_mesa_clear_rock",
+					"minecraft:extreme_hills",
+					"minecraft:mutated_mesa",
+					"minecraft:mesa_rock",
+					"minecraft:mutated_mesa_rock",
+					"minecraft:mesa",
+					"minecraft:mesa_clear_rock"
+					],
+					"biomeSelect": "EXCLUDE",
+					"surfaceProbability": [
 						{
 							"y": 0.0,
-							"v": 0.06108487769961357
-						},
-						{
-							"y": 31.0,
-							"v": 0.032675087451934814
-						},
-						{
-							"y": 63.0,
-							"v": 0.007101680152118206
-						},
-						{
-							"y": 95.0,
-							"v": 0.004936832934617996
-						},
-						{
-							"y": 127.0,
-							"v": 0.003164479276165366
-						},
-						{
-							"y": 128.0,
-							"v": 0.003164479276165366
+							"v": 0.30000001192092896
 						}
 					],
 					"mainProbability": [
 						{
 							"y": 0.0,
-							"v": 0.015209125354886055
-						},
-						{
-							"y": 7.0,
-							"v": 0.015209125354886055
-						},
-						{
-							"y": 8.0,
-							"v": 0.0151477986946702
-						},
-						{
-							"y": 62.0,
-							"v": 0.011836133897304535
-						},
-						{
-							"y": 63.0,
-							"v": 0.0011774806771427393
-						},
-						{
-							"y": 127.0,
-							"v": 7.849871180951595E-4
-						},
-						{
-							"y": 128.0,
-							"v": 7.849871180951595E-4
+							"v": 0.20000000298023224
 						}
 					]
-				}
+				},
+				{
+					"block": "planetcore:gold_lava",
+					"biomes": [
+					"minecraft:mutated_mesa_clear_rock",
+					"minecraft:extreme_hills",
+					"minecraft:mutated_mesa",
+					"minecraft:mesa_rock",
+					"minecraft:mutated_mesa_rock",
+					"minecraft:mesa",
+					"minecraft:mesa_clear_rock"
+					],
+					"biomeSelect": "EXCLUDE",
+					"surfaceProbability": [
+						{
+							"y": 0.0,
+							"v": 0.15000001192092896
+						}
+					],
+					"mainProbability": [
+						{
+							"y": 0.0,
+							"v": 0.10000000298023224
+						}
+					]
+				},
+				{
+					"block": "planetcore:diamond_lava",
+					"biomes": [
+					"minecraft:extreme_hills_with_trees",
+					"minecraft:mutated_extreme_hills",
+					"minecraft:extreme_hills",
+					"minecraft:mutated_extreme_hills_with_trees",
+					"minecraft:smaller_extreme_hills"
+					],
+					"biomeSelect": "EXCLUDE",
+					"surfaceProbability": [
+						{
+							"y": 0.0,
+							"v": 0.05000001192092896
+						}
+					],
+					"mainProbability": [
+						{
+							"y": 0.0,
+							"v": 0.02000000298023224
+						}
+					]
+				},
+
+
 			],
 			"lavaOceans": false,
 			"biome": 1,
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "granite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "diorite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "stone",
+						"Properties": {
+							"variant": "andesite"
+						}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "crustrock2"
+								},
+								"Name": "planetcore:crustrock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
 				{
 					"blockstate": {
 						"Name": "minecraft:flowing_lava"
@@ -9383,6 +9878,17 @@
 					"spawnSize": 20,
 					"spawnTries": 1,
 					"spawnProbability": 0.4,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "gravel",
+					"biomes": null,
+					"placeBlockWhen": null,
+					"generateWhen": null,
+					"spawnSize": 33,
+					"spawnTries": 8,
+					"spawnProbability": 0.0625,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -13083,6 +13589,153 @@
 			"standardOres": [
 				{
 					"blockstate": {
+						"Name": "planetcore:hot_granite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_diorite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_andesite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
 						"Name": "planetcore:mantlerock_boulder"
 					},
 					"biomes": null,
@@ -13386,6 +14039,53 @@
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "gravel",
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 8,
+					"spawnProbability": 0.0625,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
 				}
 			],
 			"periodicGaussianOres": [],
@@ -13560,6 +14260,200 @@
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+				{
+					"blockstate": "gravel",
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 8,
+					"spawnProbability": 0.0625,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_granite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_diorite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_andesite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
 				{
 					"blockstate": {
 						"Name": "planetcore:mantlerock1_boulder"
@@ -14040,6 +14934,200 @@
 			"riverSize": 4,
 			"standardOres": [
 				{
+					"blockstate": "gravel",
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 8,
+					"spawnProbability": 0.0625,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_granite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_diorite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_andesite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
 					"blockstate": {
 						"Name": "planetcore:mantlerock2_boulder"
 					},
@@ -14437,6 +15525,200 @@
 			"riverSize": 4,
 			"standardOres": [
 				{
+					"blockstate": "gravel",
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 8,
+					"spawnProbability": 0.0625,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:very_hot_granite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:very_hot_diorite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:very_hot_andesite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
 					"blockstate": {
 						"Name": "planetcore:lower_mantlerock_boulder"
 					},
@@ -14813,6 +16095,200 @@
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+				{
+					"blockstate": "gravel",
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 8,
+					"spawnProbability": 0.0625,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:very_hot_granite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:very_hot_diorite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:very_hot_andesite"
+					},
+					"biomes": null,
+					"placeBlockWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"generateWhen":  {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "lower_mantlerock1"
+								},
+								"Name": "planetcore:mantlerock"
+							},
+							{
+								"Properties": {
+									"variant": "lower_mantlerock2"
+								},
+								"Name": "planetcore:mantlerock"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 10,
+					"spawnProbability": 0.20000000298023224,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
 				{
 					"blockstate": {
 						"Name": "planetcore:lower_mantlerock1_boulder"
