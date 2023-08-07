@@ -20,11 +20,11 @@ import net.minecraft.world.biome.Biome;
 
 import java.util.Map;
 
-public class NoiseCaveGenerator1 implements ICubicStructureGenerator {
+public class NoiseStalagmiteGenerator implements ICubicStructureGenerator {
     //V17
     private IBuilder builder;
     private IBlockState stoneBlock;
-    public NoiseCaveGenerator1() {
+    public NoiseStalagmiteGenerator() {
     }
     @Override
     public void generate(World world, CubePrimer cubePrimer, CubePos cubePos) {
@@ -33,10 +33,10 @@ public class NoiseCaveGenerator1 implements ICubicStructureGenerator {
 
             // the scale for caves when they generate
             // smaller value = bigger caves
-            double caveScale = 0.01;
+            double caveScale = 0.1;
             // the scale for placement
             // 2/placementScale should be roughly the average distance between cave systems
-            double placementScale = scaleFactor * 1 / 512.0;
+            double placementScale = scaleFactor * 1 / 20.0;
             // bigger value = smaller cave systems
             // value 0f 0 means that all of the world will be cave systems
             // values above 0.5 are expected to make them unusably small
@@ -52,16 +52,16 @@ public class NoiseCaveGenerator1 implements ICubicStructureGenerator {
 
             // bigger value = finer detail for caves. Adding 1 = double the detail
 
-            int caveOctaves = 8;
+            int caveOctaves = 12;
             // bigger value = finer detail for placement. Adding 1 = double the detail
 
-            int placementOctaves = 8;
+            int placementOctaves = 12;
 
             IBuilder caveNoise = NoiseSource.perlin().frequency(caveScale).octaves(caveOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1024).create();
             IBuilder placementNoise = NoiseSource.perlin().frequency(placementScale).octaves(placementOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1025).create()
                     .apply(Math::abs).sub(caveSystemSizeFactor).mul(transitionConstant1).clamp(0, 1);
             this.builder = placementNoise.mul(caveNoise).sub(transitionConstant2);
-            this.stoneBlock = findStoneBlock(world.getWorldInfo().getGeneratorOptions(), cubePos);
+            this.stoneBlock = findAirBlock(world.getWorldInfo().getGeneratorOptions(), cubePos);
         }
         int cubeX = cubePos.getX();
         int cubeY = cubePos.getY();
@@ -87,7 +87,7 @@ public class NoiseCaveGenerator1 implements ICubicStructureGenerator {
             }
             if (!skip) {
                 if (value > 0) {
-                    cubePrimer.setBlockState(x, y, z, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
+                    cubePrimer.setBlockState(x, y, z, findStoneBlock(world.getWorldInfo().getGeneratorOptions(), cubePos));
                 } else {
                     if (value + gradY > 0) {
                         Biome biome = world.getBiomeProvider().getBiome(new BlockPos(blockX, blockY, blockZ));
@@ -99,6 +99,26 @@ public class NoiseCaveGenerator1 implements ICubicStructureGenerator {
             }
         });
     }
+    private IBlockState findAirBlock(String generatorOptions, CubePos cubePos) {
+        try {
+            CustomGeneratorSettings settings = CustomGeneratorSettingsFixer.INSTANCE.fixPreset(generatorOptions);
+            return findAirBlock(settings, cubePos);
+        } catch (PresetLoadError | DeserializationException err) {
+            throw new RuntimeException(err);
+        }
+    }
+    private IBlockState findAirBlock(CustomGeneratorSettings settings, CubePos cubePos) {
+        for (Map.Entry<CustomGeneratorSettings.IntAABB, CustomGeneratorSettings> layer : settings.cubeAreas.map) {
+            if (layer.getKey().contains(cubePos.getX(), cubePos.getY(), cubePos.getZ())) {
+                return findAirBlock(layer.getValue(), cubePos);
+            }
+        }
+        return settings.replacers.stream()
+                .filter(conf -> conf instanceof CustomGeneratorSettings.DensityRangeReplacerConfig)
+                .map(conf -> ((CustomGeneratorSettings.DensityRangeReplacerConfig) conf).blockInRange.getOrDefault(ModBlocks.AIR_NO_PRESSURE.getDefaultState()))
+                .findFirst().orElse(ModBlocks.AIR_NO_PRESSURE.getDefaultState());
+    }
+
     private IBlockState findStoneBlock(String generatorOptions, CubePos cubePos) {
         try {
             CustomGeneratorSettings settings = CustomGeneratorSettingsFixer.INSTANCE.fixPreset(generatorOptions);
