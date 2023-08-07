@@ -1,87 +1,84 @@
 package com.PlanetCore.util.handlers;
 
-import com.PlanetCore.init.ModItems;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
-
-import net.minecraft.item.Item;
-import net.minecraft.util.EnumFacing;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
+import net.minecraft.network.play.server.SPacketBlockChange;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.event.entity.living.LivingDestroyBlockEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraft.world.World;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid= Reference.MOD_ID)
 public class pickaxe3x3Handler {
 
-    @SubscribeEvent
-    public static void onBreakEvent(BlockEvent.BreakEvent event) {
-        Item pickaxe = event.getPlayer().getHeldItemMainhand().getItem();
-        EnumFacing facing = EnumFacing.getDirectionFromEntityLiving(event.getPos(), event.getPlayer()).getOpposite();
-        if (pickaxe == ModItems.RUBY_PICKAXE || pickaxe == ModItems.ONYX_V_PICKAXE)
-        {
-            if (facing == EnumFacing.DOWN) {
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().north(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().south(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().north().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().north().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().south().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().south().east(), true);
+
+    /**
+     * borrowed from Ellpeck/ActuallyAdditions
+     * Tries to break a block as if this player had broken it.  This is a complex operation.
+     * @param stack The player's current held stack, main hand.
+     * @param world The player's world.
+     * @param player The player that is breaking this block.
+     * @param pos The pos to break.
+     * @return If the break was successful.
+     */
+    public static boolean breakExtraBlock(ItemStack stack, World world, EntityPlayer player, BlockPos pos) {
+        IBlockState state = world.getBlockState(pos);
+        Block block = state.getBlock();
+
+        if (player.capabilities.isCreativeMode) {
+            if (block.removedByPlayer(state, world, pos, player, false)) {
+                block.onPlayerDestroy(world, pos, state);
             }
-            if (facing == EnumFacing.UP) {
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().north(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().south(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().north().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().north().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().south().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().south().east(), true);
+
+            // send update to client
+            if (!world.isRemote) {
+                ((EntityPlayerMP) player).connection.sendPacket(new SPacketBlockChange(world, pos));
             }
-            if (facing == EnumFacing.EAST) {
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().north(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().south(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up().north(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down().north(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up().south(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down().south(), true);
+            return true;
+        }
+
+        // callback to the tool the player uses. Called on both sides. This damages the tool n stuff.
+        stack.onBlockDestroyed(world, state, pos, player);
+
+        // server sided handling
+        if (!world.isRemote) {
+            // send the blockbreak event
+            int xp = ForgeHooks.onBlockBreakEvent(world, ((EntityPlayerMP) player).interactionManager.getGameType(), (EntityPlayerMP) player, pos);
+            if (xp == -1) return false;
+
+            TileEntity tileEntity = world.getTileEntity(pos);
+            if (block.removedByPlayer(state, world, pos, player, true)) { // boolean is if block can be harvested, checked above
+                block.onPlayerDestroy(world, pos, state);
+                block.harvestBlock(world, player, pos, state, tileEntity, stack);
+                block.dropXpOnBlockBreak(world, pos, xp);
             }
-            if (facing == EnumFacing.WEST) {
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().north(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().south(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up().north(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down().north(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up().south(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down().south(), true);
+
+            // always send block update to client
+            ((EntityPlayerMP) player).connection.sendPacket(new SPacketBlockChange(world, pos));
+            return true;
+        }
+        // client sided handling
+        else {
+            // clientside we do a "this block has been clicked on long enough to be broken" call. This should not send any new packets
+            // the code above, executed on the server, sends a block-updates that give us the correct state of the block we destroy.
+
+            // following code can be found in PlayerControllerMP.onPlayerDestroyBlock
+            world.playEvent(2001, pos, Block.getStateId(state));
+            if (block.removedByPlayer(state, world, pos, player, true)) {
+                block.onPlayerDestroy(world, pos, state);
             }
-            if (facing == EnumFacing.NORTH) {
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down().west(), true);
-            }
-            if (facing == EnumFacing.SOUTH) {
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down().east(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().up().west(), true);
-                event.getPlayer().getEntityWorld().destroyBlock(event.getPos().down().west(), true);
-            }
+            // callback to the tool
+            stack.onBlockDestroyed(world, state, pos, player);
+
+            // send an update to the server, so we get an update back
+            //is this needed?
+            // ActuallyAdditions.PROXY.sendBreakPacket(pos);
+            return true;
         }
     }
     
