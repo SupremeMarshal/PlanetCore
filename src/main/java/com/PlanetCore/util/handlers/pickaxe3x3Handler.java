@@ -77,7 +77,7 @@ public class pickaxe3x3Handler {
 
             // send an update to the server, so we get an update back
             //is this needed?
-            // ActuallyAdditions.PROXY.sendBreakPacket(pos);
+            // Client.sendBreakPacket(pos);
             return true;
         }
     }
