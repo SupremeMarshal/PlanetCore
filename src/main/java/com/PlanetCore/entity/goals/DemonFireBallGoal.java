@@ -51,7 +51,7 @@ public class DemonFireBallGoal extends EntityAIBase {
         {
             if (this.attackTime <= 0)
             {
-                this.attackTime = 20;
+                this.attackTime = 100;
                 this.owner.attackEntityAsMob(entitylivingbase);
             }
 

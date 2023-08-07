@@ -189,8 +189,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(90D);
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(3.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(80.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(9D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(7D);
 		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
 		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999999, 1));
 		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 999999999, 3));
@@ -440,7 +439,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 							if (this.parentEntity.hasAttackTarget()) {
 								this.action = EntityMoveHelper.Action.WAIT;
 							} else {
-								this.parentEntity.motionY += 0.03;
+								this.parentEntity.motionY += 0.02;
 							}
 						}
 					}
