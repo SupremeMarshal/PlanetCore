@@ -120,69 +120,48 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
     public enum CaveType {
 
-        CAVE0(Blocks.STONE, Blocks.LAVA,1.0, -30.0,128,10000,-10000, 10000, 64, 64),
-        CAVE1(ModBlocks.COAL_SUPERCOMPACT, Blocks.LAVA,0.01, -2.0,32,10000,-10000, 10000, 64, 64),
-        CAVE2(ModBlocks.IRON_SUPERCOMPACT, ModBlocks.IRON_LAVA_FLUID,0.2, -20.0,64,10000,-10000, 10000, 64, 64),
-        CAVE3(ModBlocks.REDSTONE_SUPERCOMPACT, ModBlocks.REDSTONE_LAVA_FLUID,0.07, -22.0,64,10000, -10000, 10000, 64, 64),
-        CAVE4(ModBlocks.SILVER_SUPERCOMPACT, ModBlocks.SILVER_LAVA_FLUID,0.07, -24.0,64,10000, -10000, 10000, 64, 64),
-        CAVE5(ModBlocks.GOLD_SUPERCOMPACT, ModBlocks.GOLD_LAVA_FLUID,0.05, -26,64,10000,-10000, 10000, 64, 64),
-        CAVE6(ModBlocks.DIAMOND_SUPERCOMPACT, ModBlocks.DIAMOND_LAVA_FLUID,0.03, -30,64,10000, -10000, 10000, 64, 64),
-        CAVE7(ModBlocks.EMERALD_SUPERCOMPACT, Blocks.LAVA,0.01, -33,64,10000, -10000, 10000, 64, 64),
-        CAVE8(ModBlocks.LAPIS_SUPERCOMPACT, Blocks.LAVA,0.05, -22,64,10000, -10000, 10000, 64, 64),
-        CAVE9(ModBlocks.TITANIUM_SUPERCOMPACT, ModBlocks.TITANIUM_LAVA_FLUID,0.02, -35,64,10000, -10000, 10000, 64, 64),
-        CAVE10(ModBlocks.URANIUM_SUPERCOMPACT, ModBlocks.URANIUM_LAVA_FLUID,0.02, -37,64,10000, -10000, 10000, 64, 64),
-        CAVE11(ModBlocks.TUNGSTEN_SUPERCOMPACT, ModBlocks.TUNGSTEN_LAVA_FLUID,0.02, -40,64,10000, -10000, 10000, 64, 64),
-        CAVE12(ModBlocks.RUBY_SUPERCOMPACT, ModBlocks.RUBY_LAVA_FLUID,0.01, -45,64,10000, -10000, 10000, 64, 64),
-        CAVE13(ModBlocks.SAPPHIRE_SUPERCOMPACT, ModBlocks.SAPPHIRE_LAVA_FLUID,0.01, -50,64,10000, -10000, 10000, 64, 64),
-        CAVE14(ModBlocks.MAJORITE_SUPERCOMPACT, ModBlocks.MAJORITE_LAVA_FLUID,0.01, -55,64,10000, -10000, 10000, 64, 64),
-        CAVE15(ModBlocks.AMAZONITE_SUPERCOMPACT, ModBlocks.AMAZONITE_LAVA_FLUID,0.01, -60,64,10000, -10000, 10000, 64, 64),
-        CAVE16(ModBlocks.ONYX_SUPERCOMPACT, ModBlocks.ONYX_LAVA_FLUID,0.01, -65,64,10000, -10000, 10000, 64, 64);
-
+        CAVE0(Blocks.STONE, Blocks.LAVA,0.05f, -10000,10000),
+        CAVE1(ModBlocks.COAL_SUPERCOMPACT, Blocks.LAVA,0.05f, -10000,-15),
+        CAVE2(ModBlocks.IRON_SUPERCOMPACT, ModBlocks.IRON_LAVA_FLUID,0.05f, -200,-100),
+        CAVE3(ModBlocks.HOT_SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.05f, -300,-200),
+        CAVE4(ModBlocks.SUPERHEATED_SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.05f, -300,-200),
+        CAVE5(ModBlocks.SILVER_SUPERCOMPACT, ModBlocks.SILVER_LAVA_FLUID,0.025f, -200,-100),
+        CAVE6(ModBlocks.GOLD_SUPERCOMPACT, ModBlocks.GOLD_LAVA_FLUID,0.02f, -300,-200),
+        CAVE7(ModBlocks.SUPERHEATED_SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.01f, -300,-200),
+        CAVE8(ModBlocks.EMERALD_SUPERCOMPACT, Blocks.LAVA,0.0075f, -25000,-300),
+        CAVE9(ModBlocks.LAPIS_SUPERCOMPACT, Blocks.LAVA,0.005f, -25000,-500),
+        CAVE10(ModBlocks.TITANIUM_SUPERCOMPACT, ModBlocks.TITANIUM_LAVA_FLUID,0.04f, -25000,-600),
+        CAVE11(ModBlocks.URANIUM_SUPERCOMPACT, ModBlocks.URANIUM_LAVA_FLUID,0.04f, -25000,-700),
+        CAVE12(ModBlocks.TUNGSTEN_SUPERCOMPACT, ModBlocks.TUNGSTEN_LAVA_FLUID,0.04f, -25000,-800),
+        CAVE13(ModBlocks.RUBY_SUPERCOMPACT, ModBlocks.RUBY_LAVA_FLUID,0.02f, -25000,-1000),
+        CAVE14(ModBlocks.SAPPHIRE_SUPERCOMPACT, ModBlocks.SAPPHIRE_LAVA_FLUID,0.02f, -25000,-1200),
+        CAVE15(ModBlocks.MAJORITE_SUPERCOMPACT, ModBlocks.MAJORITE_LAVA_FLUID,0.01f, -25000,-1500),
+        CAVE16(ModBlocks.AMAZONITE_SUPERCOMPACT, ModBlocks.AMAZONITE_LAVA_FLUID,0.01f, -25000,-2000),
+        CAVE17(ModBlocks.ONYX_SUPERCOMPACT, ModBlocks.ONYX_LAVA_FLUID,0.01f, -25000,-2300),
+        CAVE18(ModBlocks.PAINITE_SUPERCOMPACT, ModBlocks.PAINITE_LAVA_FLUID,0.01f, -25000,-2300);
 
         private final IBlockState block;
         private final IBlockState lavaMaterial;
-        private final double probability;
-        private final double heightMean;
-        private final double heightStdDeviation;
-        private final double heightSpacing;
+        private final float probability;
         private final double minHeight;
         private final double maxHeight;
-        private final double expectedHeightVariation;
-        private final double expectedBaseHeight;
 
 
-        CaveType(Block block, Block lavaMaterial, double probability, double heightMean,double heightStdDeviation, double heightSpacing,
-                double minHeight, double maxHeight, double expectedHeightVariation, double expectedBaseHeight) {
+        CaveType(Block block, Block lavaMaterial, float probability,
+                 double minHeight, double maxHeight) {
             this.block = block.getDefaultState();
             this.lavaMaterial = lavaMaterial.getDefaultState();
             this.probability = probability;
-            this.heightMean = heightMean;
-            this.heightStdDeviation = heightStdDeviation;
-            this.heightSpacing = heightSpacing;
             this.minHeight = minHeight;
             this.maxHeight = maxHeight;
-            this.expectedHeightVariation = expectedHeightVariation;
-            this.expectedBaseHeight = expectedBaseHeight;
         }
 
         public IBlockState block() {
             return block;
         }
 
-        public double probability() {
+        public float probability() {
             return probability;
-        }
-
-        public double heightMean() {
-            return heightMean;
-        }
-
-        public double heightStdDeviation() {
-            return heightStdDeviation;
-        }
-
-        public double heightSpacing() {
-            return heightSpacing;
         }
 
         public double minHeight() {
@@ -191,14 +170,6 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
         public double maxHeight() {
             return maxHeight;
-        }
-
-        public double expectedHeightVariation() {
-            return expectedHeightVariation;
-        }
-
-        public double expectedBaseHeight() {
-            return expectedBaseHeight;
         }
     }
 
@@ -231,10 +202,6 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
          * Each blocks contain a max Y and min Y
          * The caves will generate with these blocks
          */
-        if (rand.nextInt(CAVE_RARITY) != 0) {
-            return;
-        }
-
         for (CaveType cave : CaveType.values()) {
             if(cave==CaveType.CAVE0) continue;
             if (cave != CaveType.CAVE0 && cubeYOrigin > -10)
@@ -243,32 +210,25 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
             }
 
             //very low probability of generating high number
-            int nodes = rand.nextInt(rand.nextInt(rand.nextInt(MAX_INIT_NODES + 1) + 1) + 1);
+            int nodes = 0;
 
-            int minBlockY = Math.round((float) (cave.minHeight * cave.expectedHeightVariation + cave.expectedBaseHeight));
-            int maxBlockY = Math.round((float) (cave.maxHeight * cave.expectedHeightVariation + cave.expectedBaseHeight));
-            double spacing = cave.heightSpacing;
+            int minBlockY = (int) cave.minHeight;
+            int maxBlockY = (int) cave.maxHeight;
             //temporary fix for slider becoming 0 at minimum position
-            if (cave.heightSpacing == 0.0) {
-                spacing = 0.5;
-            }
-            int iSpacing = Math.round((float) (spacing * cave.expectedHeightVariation));
-            int iMean = Math.round((float) (cave.heightMean * cave.expectedHeightVariation + cave.expectedBaseHeight));
-            double scaledStdDev = cave.heightStdDeviation * cave.expectedHeightVariation;
 
-            if ((cubeYOrigin > maxBlockY) || (cubeYOrigin < minBlockY)) {
+            if ((cubeYOrigin > (maxBlockY / 16)) || (cubeYOrigin < (minBlockY / 16))) {
                 continue;
             }
-            double modifier = MathUtil.bellCurveProbabilityCyclic(cubeYOrigin, iMean, scaledStdDev, iSpacing);
 
             double random = Math.abs(rand.nextDouble());
-            double probability = cave.probability * modifier * 20;
+            double probability = cave.probability;
             if (cave != CaveType.CAVE0) {
-                //Modify base probability with the curve
-                if (random < probability) {
+                if (Math.random() < probability) {
                     isBlockReplaceable = (state -> state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getMaterial() == Material.AIR || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS);
-                    nodes = rand.nextInt(rand.nextInt(rand.nextInt(5) + 1) + 1);
-                } else { continue; }
+                    nodes = rand.nextInt(rand.nextInt(rand.nextInt(1) + 1) + 1) + 1;
+                }
+                else
+                { continue; }
             }
             else
             {
