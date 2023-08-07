@@ -90,11 +90,11 @@ public class BlockBase extends Block {
 					BlockPos movedPos = pos.offset(side);
 					IBlockState movedState = worldIn.getBlockState(movedPos);
 					if (movedState.getMaterial() == Material.IRON || movedState.getBlock() == ModBlocks.AIR_NO_PRESSURE) return;
-					if (movedState == Blocks.AIR.getDefaultState()) {
+					if (movedState == Blocks.AIR.getDefaultState() && movedState != ModBlocks.AIR_NO_PRESSURE.getDefaultState()) {
 						continue;
 					}
 					EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)
-							.filter(s -> !movedPos.offset(s).equals(pos) && (worldIn.isAirBlock(movedPos.offset(s))
+							.filter(s -> !movedPos.offset(s).equals(pos) && (worldIn.getBlockState(movedPos.offset(s)).getBlock() == Blocks.AIR
 									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockLadder
 									|| worldIn.getBlockState(movedPos.offset(s)).getMaterial() == Material.WATER
 									|| worldIn.getBlockState(movedPos.offset(s)).getBlock() instanceof BlockTorch

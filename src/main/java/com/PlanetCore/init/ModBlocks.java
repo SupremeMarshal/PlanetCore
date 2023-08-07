@@ -275,7 +275,7 @@ public class ModBlocks {
 
         registry.registerAll(
 
-                new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
+                new BlockAirNoPressure("air_no_pressure", Material.AIR).setResistance(100000),
                 new BlockBase("crust_cobblestone", Material.ROCK).setHardness(2.0F).setResistance(1),
                 new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
                 new HotRocks("hot_granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
