@@ -3,26 +3,35 @@ package com.PlanetCore.blocks;
 
 
 
-import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.EnumDyeColor;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class HotRocks extends BlockBase {
+public class HotRocks extends BlockBase implements IMetaName {
 
 	public final PlanetHardness planetHardness;
+	public static final PropertyEnum<HotRocks.EnumType> VARIANT = PropertyEnum.create("variant", HotRocks.EnumType.class);
 
 	public HotRocks(String name, Material material, PlanetHardness planetHardness) {
 		super(name, material);
@@ -33,9 +42,111 @@ public class HotRocks extends BlockBase {
 	}
 
 	@Override
-	public int getLightValue(IBlockState state) {
-		return (5);
+	public int damageDropped(IBlockState state) {
+		return getMetaFromState(state);
 	}
+
+	@Override
+	public int getLightValue(IBlockState state) {
+		return (15);
+	}
+
+	@Override
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
+		for (HotRocks.EnumType HotRocks$enumtype : HotRocks.EnumType.values()) {
+			items.add(new ItemStack(this, 1, HotRocks$enumtype.getMeta()));
+		}
+	}
+
+	@Override
+	public IBlockState getStateFromMeta(int meta)
+	{
+		return this.getDefaultState().withProperty(VARIANT, HotRocks.EnumType.byMetadata(meta));
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state)
+	{
+		return state.getValue(VARIANT).getMeta();
+	}
+
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+		return new ItemStack(Item.getItemFromBlock(this),1, getMetaFromState(world.getBlockState(pos)));
+	}
+
+
+	@Override
+	protected BlockStateContainer createBlockState()
+	{
+		return new BlockStateContainer(this, VARIANT);
+	}
+
+
+
+
+	public enum EnumType implements IStringSerializable
+	{
+		HOT(1, "hot"),
+		VERYHOT(2, "veryhot"),
+		SUPERHEATED(3, "superheated");
+
+		private static final HotRocks.EnumType[] META_LOOKUP = new HotRocks.EnumType[]{HOT, VERYHOT, SUPERHEATED};
+		private final int meta;
+		private final String name;
+
+		EnumType(int meta, String name)
+		{
+			this.meta=meta;
+			this.name=name;
+		}
+
+		@Override
+		public String getName() {
+			return this.name;
+		}
+
+		public int getMeta()
+		{
+			return this.meta;
+		}
+
+		@Override
+		public String toString()
+		{
+			return this.name;
+		}
+
+		public static HotRocks.EnumType byMetadata(int meta)
+		{
+			return META_LOOKUP[meta];
+		}
+
+		static {
+			for(HotRocks.EnumType HotRocks$enumtype : values())
+			{
+				META_LOOKUP[HotRocks$enumtype.getMeta()] = HotRocks$enumtype;
+			}
+		}
+	}
+
+	@Override
+	public String getSpecialName(ItemStack stack)
+	{
+		return HotRocks.EnumType.values()[stack.getItemDamage()].getName();
+	}
+
+	@Override
+	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
+		System.out.println(meta);
+		return this.getDefaultState().withProperty(VARIANT, HotRocks.EnumType.byMetadata(meta));
+	}
+
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		return 15;
+	}
+	
 	@Override
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
 	{
@@ -44,10 +155,6 @@ public class HotRocks extends BlockBase {
 			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
 		}
 		super.onEntityWalk(worldIn, pos, entityIn);
-	}
-	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		return planetHardness.hardness;
 	}
 
 	@Override

@@ -4,25 +4,38 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlocksBase extends BlockBase {
+public class BlocksBase extends BlockBase implements IMetaName {
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
 	public final PlanetExp planetExp;
+
+	public static final PropertyEnum<BlocksBase.EnumType> VARIANT = PropertyEnum.create("variant", BlocksBase.EnumType.class);
 	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
 		super(name, material);
-		setSoundType(SoundType.STONE);
+		setSoundType(SoundType.METAL);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 		this.planetMaterial = planetMaterial;
@@ -31,8 +44,110 @@ public class BlocksBase extends BlockBase {
 	}
 
 	@Override
+	public int damageDropped(IBlockState state) {
+		return getMetaFromState(state);
+	}
+
+	@Override
+	public int getLightValue(IBlockState state) {
+		return (15);
+	}
+
+	@Override
+	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
+		for (BlocksBase.EnumType BlocksBase$enumtype : BlocksBase.EnumType.values()) {
+			items.add(new ItemStack(this, 1, BlocksBase$enumtype.getMeta()));
+		}
+	}
+
+	@Override
+	public IBlockState getStateFromMeta(int meta)
+	{
+		return this.getDefaultState().withProperty(VARIANT, BlocksBase.EnumType.byMetadata(meta));
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state)
+	{
+		return state.getValue(VARIANT).getMeta();
+	}
+
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+		return new ItemStack(Item.getItemFromBlock(this),1, getMetaFromState(world.getBlockState(pos)));
+	}
+
+
+	@Override
+	protected BlockStateContainer createBlockState()
+	{
+		return new BlockStateContainer(this, VARIANT);
+	}
+
+
+
+
+	public enum EnumType implements IStringSerializable
+	{
+		COLD(0, "supercompressed"),
+		HOT(1, "hot_supercompressed"),
+		VERYHOT(2, "veryhot_supercompressed"),
+		SUPERHEATED(3, "superheated_supercompressed");
+
+		private static final BlocksBase.EnumType[] META_LOOKUP = new BlocksBase.EnumType[]{COLD, HOT, VERYHOT, SUPERHEATED};
+		private final int meta;
+		private final String name;
+
+		EnumType(int meta, String name)
+		{
+			this.meta=meta;
+			this.name=name;
+		}
+
+		@Override
+		public String getName() {
+			return this.name;
+		}
+
+		public int getMeta()
+		{
+			return this.meta;
+		}
+
+		@Override
+		public String toString()
+		{
+			return this.name;
+		}
+
+		public static BlocksBase.EnumType byMetadata(int meta)
+		{
+			return META_LOOKUP[meta];
+		}
+
+		static {
+			for(BlocksBase.EnumType BlocksBase$enumtype : values())
+			{
+				META_LOOKUP[BlocksBase$enumtype.getMeta()] = BlocksBase$enumtype;
+			}
+		}
+	}
+
+	@Override
+	public String getSpecialName(ItemStack stack)
+	{
+		return BlocksBase.EnumType.values()[stack.getItemDamage()].getName();
+	}
+
+	@Override
+	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
+		System.out.println(meta);
+		return this.getDefaultState().withProperty(VARIANT, BlocksBase.EnumType.byMetadata(meta));
+	}
+
+	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		return planetHardness.hardness;
+		return 1000000;
 	}
 
 	@Override
@@ -69,14 +184,6 @@ public class BlocksBase extends BlockBase {
 		{
 			return this.quantityDropped(random);
 		}
-	}
-
-	@Override
-	public int damageDropped(IBlockState state) {
-		if (this == ModBlocks.LAPIS_SUPERCOMPACT) {
-			return EnumDyeColor.BLUE.getDyeDamage();
-		}
-		else return super.damageDropped(state);
 	}
 
 	@Override
