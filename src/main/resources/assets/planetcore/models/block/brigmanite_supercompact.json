@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "planetcore:blocks/brigmanite_supercompact"
+       "all": "planetcore:blocks/brigmanite_supercompressed"
    }
 }

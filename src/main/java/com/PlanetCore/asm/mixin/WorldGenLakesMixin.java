@@ -34,46 +34,46 @@ public class WorldGenLakesMixin {
     @Unique
     private IBlockState planetCore$getCorrespondingStoneBlock(Block lava, IBlockState default_) {
         if (lava == ModBlocks.IRON_LAVA_FLUID) {
-            return ModBlocks.IRON_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_IRON.getDefaultState();
         }
         if (lava == ModBlocks.REDSTONE_LAVA_FLUID) {
-            return ModBlocks.REDSTONE_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_REDSTONE.getDefaultState();
         }
         if (lava == ModBlocks.SILVER_LAVA_FLUID) {
-            return ModBlocks.SILVER_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_SILVER.getDefaultState();
         }
         if (lava == ModBlocks.GOLD_LAVA_FLUID) {
-            return ModBlocks.GOLD_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_GOLD.getDefaultState();
         }
         if (lava == ModBlocks.DIAMOND_LAVA_FLUID) {
-            return ModBlocks.DIAMOND_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_DIAMOND.getDefaultState();
         }
         if (lava == ModBlocks.TITANIUM_LAVA_FLUID) {
-            return ModBlocks.TITANIUM_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_TITANIUM.getDefaultState();
         }
         if (lava == ModBlocks.URANIUM_LAVA_FLUID) {
-            return ModBlocks.URANIUM_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_URANIUM.getDefaultState();
         }
         if (lava == ModBlocks.TUNGSTEN_LAVA_FLUID) {
-            return ModBlocks.TUNGSTEN_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_TUNGSTEN.getDefaultState();
         }
         if (lava == ModBlocks.RUBY_LAVA_FLUID) {
-            return ModBlocks.RUBY_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_RUBY.getDefaultState();
         }
         if (lava == ModBlocks.SAPPHIRE_LAVA_FLUID) {
-            return ModBlocks.SAPPHIRE_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_SAPPHIRE.getDefaultState();
         }
         if (lava == ModBlocks.MAJORITE_LAVA_FLUID) {
-            return ModBlocks.MAJORITE_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_MAJORITE.getDefaultState();
         }
         if (lava == ModBlocks.AMAZONITE_LAVA_FLUID) {
-            return ModBlocks.AMAZONITE_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_AMAZONITE.getDefaultState();
         }
         if (lava == ModBlocks.ONYX_LAVA_FLUID) {
-            return ModBlocks.ONYX_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_ONYX.getDefaultState();
         }
         if (lava == ModBlocks.PAINITE_LAVA_FLUID) {
-            return ModBlocks.PAINITE_SUPERCOMPACT.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_PAINITE.getDefaultState();
         }
         return default_;
     }

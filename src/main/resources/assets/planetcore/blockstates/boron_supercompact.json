@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:boron_supercompact" }
+        "normal": { "model": "planetcore:boron_supercompressed" }
     }
 }

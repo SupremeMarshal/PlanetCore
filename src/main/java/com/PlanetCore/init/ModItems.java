@@ -29,7 +29,7 @@ public class ModItems {
 
 	public static final Item HOT_BLAZE_POWDER = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item HOT_MAGMA_CREAM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
-	public static final Item VERY_HOT_MAGMA_CREAM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
+	public static final Item VERYHOT_MAGMA_CREAM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	
 	public static final Item CORE_FIREBALL = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX_FIREBALL = new Item().setCreativeTab(CreativeTabs.MATERIALS);

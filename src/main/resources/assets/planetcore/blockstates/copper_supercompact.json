@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:copper_supercompact" }
+        "normal": { "model": "planetcore:copper_supercompressed" }
     }
 }

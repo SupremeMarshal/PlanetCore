@@ -1,0 +1,5 @@
+{"variants":{
+  "variant=supercompressed":{"model":"planetcore:supercompressed_majorite"},
+  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_majorite"},
+  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_majorite"},
+  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_majorite"}}}

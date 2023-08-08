@@ -1,0 +1,5 @@
+{"variants":{
+  "variant=supercompressed":{"model":"planetcore:supercompressed_uranium"},
+  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_uranium"},
+  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_uranium"},
+  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_uranium"}}}

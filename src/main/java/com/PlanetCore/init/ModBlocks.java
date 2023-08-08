@@ -83,9 +83,9 @@ public class ModBlocks {
     public static final Mantlerock MANTLEROCK = _null();
     public static final Corestone CORESTONE = _null();
 
-    public static final HotRocks HOT_GRANITE = _null();
-    public static final HotRocks HOT_DIORITE = _null();
-    public static final HotRocks HOT_ANDESITE = _null();
+    public static final HotRocks GRANITE = _null();
+    public static final HotRocks DIORITE = _null();
+    public static final HotRocks ANDESITE = _null();
 
     public static final GemsGravel RUBY_GRAVEL = _null();
     public static final GemsGravel SAPPHIRE_GRAVEL = _null();
@@ -208,8 +208,8 @@ public class ModBlocks {
     public static final BlockBase SULFUR_BLOCK = _null();
     public static final BlockBase IRON_BLOCK = _null();
 
-    public static final HotRocks MANTLEROCK1_BOULDER = _null();
-    public static final HotRocks MANTLEROCK2_BOULDER = _null();
+    public static final VeryHotRocks MANTLEROCK1_BOULDER = _null();
+    public static final VeryHotRocks MANTLEROCK2_BOULDER = _null();
     public static final VeryHotRocks LOWER_MANTLEROCK_BOULDER = _null();
     public static final VeryHotRocks LOWER_MANTLEROCK1_BOULDER = _null();
     public static final VeryHotRocks LOWER_MANTLEROCK2_BOULDER = _null();
@@ -218,24 +218,24 @@ public class ModBlocks {
     public static final SuperheatedRocks CENTERCORE_BOULDER = _null();
     public static final SuperheatedRocks SUPERHEATED_BEDROCK = _null();
 
-    public static final BlocksBase PAINITE_SUPERCOMPACT = _null();
-    public static final BlocksBase ONYX_SUPERCOMPACT = _null();
-    public static final BlocksBase AMAZONITE_SUPERCOMPACT = _null();
-    public static final BlocksBase MAJORITE_SUPERCOMPACT = _null();
-    public static final BlocksBase DIAMOND_SUPERCOMPACT = _null();
-    public static final BlocksBase SAPPHIRE_SUPERCOMPACT = _null();
-    public static final BlocksBase RUBY_SUPERCOMPACT = _null();
-    public static final BlocksBase URANIUM_SUPERCOMPACT = _null();
-    public static final BlocksBase TUNGSTEN_SUPERCOMPACT = _null();
-    public static final BlocksBase TITANIUM_SUPERCOMPACT = _null();
-    public static final BlocksBase EMERALD_SUPERCOMPACT = _null();
-    public static final BlocksBase GOLD_SUPERCOMPACT = _null();
-    public static final BlocksBase SILVER_SUPERCOMPACT = _null();
-    public static final BlocksBase LAPIS_SUPERCOMPACT = _null();
-    public static final BlocksBase REDSTONE_SUPERCOMPACT = _null();
-    public static final BlocksBase SULFUR_SUPERCOMPACT = _null();
-    public static final BlocksBase IRON_SUPERCOMPACT = _null();
-    public static final BlocksBase COAL_SUPERCOMPACT = _null();
+    public static final BlocksBase SUPERCOMPRESSED_PAINITE = _null();
+    public static final BlocksBase SUPERCOMPRESSED_ONYX = _null();
+    public static final BlocksBase SUPERCOMPRESSED_AMAZONITE = _null();
+    public static final BlocksBase SUPERCOMPRESSED_MAJORITE = _null();
+    public static final BlocksBase SUPERCOMPRESSED_DIAMOND = _null();
+    public static final BlocksBase SUPERCOMPRESSED_SAPPHIRE = _null();
+    public static final BlocksBase SUPERCOMPRESSED_RUBY = _null();
+    public static final BlocksBase SUPERCOMPRESSED_URANIUM = _null();
+    public static final BlocksBase SUPERCOMPRESSED_TUNGSTEN = _null();
+    public static final BlocksBase SUPERCOMPRESSED_TITANIUM = _null();
+    public static final BlocksBase SUPERCOMPRESSED_EMERALD = _null();
+    public static final BlocksBase SUPERCOMPRESSED_GOLD = _null();
+    public static final BlocksBase SUPERCOMPRESSED_SILVER = _null();
+    public static final BlocksBase SUPERCOMPRESSED_LAPIS = _null();
+    public static final BlocksBase SUPERCOMPRESSED_REDSTONE = _null();
+    public static final BlocksBase SUPERCOMPRESSED_SULFUR = _null();
+    public static final BlocksBase SUPERCOMPRESSED_IRON = _null();
+    public static final BlockBase SUPERCOMPRESSED_COAL = _null();
 
     public static final BlockBase CRUST_COBBLESTONE = _null();
 
@@ -260,9 +260,9 @@ public class ModBlocks {
                 new BlockAirNoPressure("air_no_pressure", Material.AIR).setResistance(100000),
                 new BlockBase("crust_cobblestone", Material.ROCK).setHardness(2.0F).setResistance(1),
                 new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
-                new HotRocks("hot_granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
-                new HotRocks("hot_diorite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
-                new HotRocks("hot_andesite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new HotRocks("granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new HotRocks("diorite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
+                new HotRocks("andesite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
                 new IronLavaFluid("iron_lava", ModFluids.IRON_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("redstone_lava", ModFluids.REDSTONE_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("silver_lava", ModFluids.SILVER_LAVA_FLUID, Material.LAVA).setDensity(1500),
@@ -283,8 +283,8 @@ public class ModBlocks {
                 new GemsGravel("majorite_gravel", PlanetMaterial.MAJORITE_GRAVEL, PlanetHardness.MAJORITE),
                 new GemsGravel("amazonite_gravel", PlanetMaterial.AMAZONITE_GRAVEL, PlanetHardness.AMAZONITE),
                 new GemsGravel("onyx_gravel", PlanetMaterial.ONYX_GRAVEL, PlanetHardness.ONYX),
-                new HotRocks("mantlerock1_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(3),
-                new HotRocks("mantlerock2_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(5),
+                new VeryHotRocks("mantlerock1_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(3),
+                new VeryHotRocks("mantlerock2_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(5),
                 new VeryHotRocks("lower_mantlerock_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(7),
                 new VeryHotRocks("lower_mantlerock1_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(9),
                 new VeryHotRocks("lower_mantlerock2_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(11),
@@ -302,24 +302,24 @@ public class ModBlocks {
                 new BlockBase("amazonite_block", Material.IRON).setHardness(50000F).setResistance(25),
                 new BlockBase("onyx_block", Material.IRON).setHardness(200000F).setResistance(30),
                 new BlockBase("painite_block", Material.IRON).setHardness(1000000F).setResistance(30),
-                new BlocksBase("sulfur_supercompact", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_SUPERCOMPACT, PlanetExp.SULFUR_SUPERCOMPACT).setResistance(1),
-                new BlocksBase("redstone_supercompact", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_SUPERCOMPACT, PlanetExp.REDSTONE_SUPERCOMPACT).setResistance(1),
-                new BlocksBase("lapis_supercompact", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_SUPERCOMPACT, PlanetExp.LAPIS_SUPERCOMPACT).setResistance(1),
-                new BlocksBase("coal_supercompact", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL_SUPERCOMPACT, PlanetExp.COAL_SUPERCOMPACT).setResistance(1),
-                new BlocksBase("iron_supercompact", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_SUPERCOMPACT, PlanetExp.IRON_SUPERCOMPACT).setResistance(4),
-                new BlocksBase("silver_supercompact", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_SUPERCOMPACT, PlanetExp.SILVER_SUPERCOMPACT).setResistance(6),
-                new BlocksBase("gold_supercompact", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_SUPERCOMPACT, PlanetExp.GOLD_SUPERCOMPACT).setResistance(8),
-                new BlocksBase("diamond_supercompact", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_SUPERCOMPACT, PlanetExp.DIAMOND_SUPERCOMPACT).setResistance(25),
-                new BlocksBase("emerald_supercompact", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_SUPERCOMPACT, PlanetExp.EMERALD_SUPERCOMPACT).setResistance(25),
-                new BlocksBase("titanium_supercompact", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("uranium_supercompact", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_SUPERCOMPACT, PlanetExp.URANIUM_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("tungsten_supercompact", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_SUPERCOMPACT, PlanetExp.TUNGSTEN_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("ruby_supercompact", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY_SUPERCOMPACT, PlanetExp.RUBY_SUPERCOMPACT).setResistance(100),
-                new BlocksBase("sapphire_supercompact", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE_SUPERCOMPACT, PlanetExp.SAPPHIRE_SUPERCOMPACT).setResistance(100),
-                new BlocksBase("majorite_supercompact", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE_SUPERCOMPACT, PlanetExp.MAJORITE_SUPERCOMPACT).setResistance(200),
-                new BlocksBase("amazonite_supercompact", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE_SUPERCOMPACT, PlanetExp.AMAZONITE_SUPERCOMPACT).setResistance(250),
-                new BlocksBase("onyx_supercompact", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX_SUPERCOMPACT, PlanetExp.ONYX_SUPERCOMPACT).setResistance(300),
-                new BlocksBase("painite_supercompact", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE_SUPERCOMPACT, PlanetExp.PAINITE_SUPERCOMPACT).setResistance(300),
+                new BlocksBase("supercompressed_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_SUPERCOMPACT, PlanetExp.SULFUR_SUPERCOMPACT).setResistance(1),
+                new BlocksBase("supercompressed_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_SUPERCOMPACT, PlanetExp.REDSTONE_SUPERCOMPACT).setResistance(1),
+                new BlocksBase("supercompressed_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_SUPERCOMPACT, PlanetExp.LAPIS_SUPERCOMPACT).setResistance(1),
+                new BlockBase("supercompressed_coal", Material.ROCK).setResistance(1),
+                new BlocksBase("supercompressed_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_SUPERCOMPACT, PlanetExp.IRON_SUPERCOMPACT).setResistance(4),
+                new BlocksBase("supercompressed_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_SUPERCOMPACT, PlanetExp.SILVER_SUPERCOMPACT).setResistance(6),
+                new BlocksBase("supercompressed_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_SUPERCOMPACT, PlanetExp.GOLD_SUPERCOMPACT).setResistance(8),
+                new BlocksBase("supercompressed_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_SUPERCOMPACT, PlanetExp.DIAMOND_SUPERCOMPACT).setResistance(25),
+                new BlocksBase("supercompressed_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_SUPERCOMPACT, PlanetExp.EMERALD_SUPERCOMPACT).setResistance(25),
+                new BlocksBase("supercompressed_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
+                new BlocksBase("supercompressed_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_SUPERCOMPACT, PlanetExp.URANIUM_SUPERCOMPACT).setResistance(50),
+                new BlocksBase("supercompressed_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_SUPERCOMPACT, PlanetExp.TUNGSTEN_SUPERCOMPACT).setResistance(50),
+                new BlocksBase("supercompressed_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY_SUPERCOMPACT, PlanetExp.RUBY_SUPERCOMPACT).setResistance(100),
+                new BlocksBase("supercompressed_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE_SUPERCOMPACT, PlanetExp.SAPPHIRE_SUPERCOMPACT).setResistance(100),
+                new BlocksBase("supercompressed_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE_SUPERCOMPACT, PlanetExp.MAJORITE_SUPERCOMPACT).setResistance(200),
+                new BlocksBase("supercompressed_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE_SUPERCOMPACT, PlanetExp.AMAZONITE_SUPERCOMPACT).setResistance(250),
+                new BlocksBase("supercompressed_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX_SUPERCOMPACT, PlanetExp.ONYX_SUPERCOMPACT).setResistance(300),
+                new BlocksBase("supercompressed_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE_SUPERCOMPACT, PlanetExp.PAINITE_SUPERCOMPACT).setResistance(300),
                 new Crustrock("crustrock", Material.ROCK).setResistance(1),
                 new Mantlerock("mantlerock", Material.ROCK).setResistance(1),
                 new Corestone("corestone", Material.ROCK).setResistance(1),
@@ -419,29 +419,29 @@ public class ModBlocks {
 
         for (int meta = 0; meta < 3; meta++) {
             String name = Reference.MOD_ID + ":" + HotRocks.EnumType.values()[meta].getName();
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.HOT_GRANITE), meta, new ModelResourceLocation(name, "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.HOT_DIORITE), meta, new ModelResourceLocation(name, "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.HOT_ANDESITE), meta, new ModelResourceLocation(name, "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.GRANITE), meta, new ModelResourceLocation(name + "_granite", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.DIORITE), meta, new ModelResourceLocation(name + "_diorite", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.ANDESITE), meta, new ModelResourceLocation(name + "_andesite", "inventory"));
         }
 
         for (int meta = 0; meta < 4; meta++) {
             String name = Reference.MOD_ID + ":" + BlocksBase.EnumType.values()[meta].getName();
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SULFUR_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_sulfur", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.IRON_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_iron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.LAPIS_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_lapis", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.REDSTONE_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_redstone", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SILVER_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_silver", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.GOLD_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_gold", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.DIAMOND_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_diamond", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.URANIUM_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.TITANIUM_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.TUNGSTEN_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.RUBY_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_ruby", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SAPPHIRE_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_sapphire", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MAJORITE_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_majorite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.AMAZONITE_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_amazonite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.ONYX_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.PAINITE_SUPERCOMPACT), meta, new ModelResourceLocation(name + "_painite", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_SULFUR), meta, new ModelResourceLocation(name + "_sulfur", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_IRON), meta, new ModelResourceLocation(name + "_iron", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_LAPIS), meta, new ModelResourceLocation(name + "_lapis", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_REDSTONE), meta, new ModelResourceLocation(name + "_redstone", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_DIAMOND), meta, new ModelResourceLocation(name + "_diamond", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_TUNGSTEN), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_RUBY), meta, new ModelResourceLocation(name + "_ruby", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_SAPPHIRE), meta, new ModelResourceLocation(name + "_sapphire", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_MAJORITE), meta, new ModelResourceLocation(name + "_majorite", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_AMAZONITE), meta, new ModelResourceLocation(name + "_amazonite", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_ONYX), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_PAINITE), meta, new ModelResourceLocation(name + "_painite", "inventory"));
         }
 
         for (int meta = 0; meta < 3; meta++) {

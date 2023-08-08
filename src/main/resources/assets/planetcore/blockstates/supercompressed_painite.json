@@ -1,0 +1,5 @@
+{"variants":{
+  "variant=supercompressed":{"model":"planetcore:supercompressed_painite"},
+  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_painite"},
+  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_painite"},
+  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_painite"}}}

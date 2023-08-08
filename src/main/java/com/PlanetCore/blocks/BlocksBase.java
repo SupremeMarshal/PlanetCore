@@ -32,7 +32,7 @@ public class BlocksBase extends BlockBase implements IMetaName {
 	public final PlanetHardness planetHardness;
 	public final PlanetExp planetExp;
 
-	public static final PropertyEnum<BlocksBase.EnumType> VARIANT = PropertyEnum.create("variant", BlocksBase.EnumType.class);
+	public static final PropertyEnum<BlocksBase.EnumType> VARIANT_SUPERCOMPRESSED = PropertyEnum.create("variant", BlocksBase.EnumType.class);
 	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
 		super(name, material);
 		setSoundType(SoundType.METAL);
@@ -63,13 +63,13 @@ public class BlocksBase extends BlockBase implements IMetaName {
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(VARIANT, BlocksBase.EnumType.byMetadata(meta));
+		return this.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(meta));
 	}
 
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return state.getValue(VARIANT).getMeta();
+		return state.getValue(VARIANT_SUPERCOMPRESSED).getMeta();
 	}
 
 	@Override
@@ -81,7 +81,7 @@ public class BlocksBase extends BlockBase implements IMetaName {
 	@Override
 	protected BlockStateContainer createBlockState()
 	{
-		return new BlockStateContainer(this, VARIANT);
+		return new BlockStateContainer(this, VARIANT_SUPERCOMPRESSED);
 	}
 
 
@@ -142,7 +142,7 @@ public class BlocksBase extends BlockBase implements IMetaName {
 	@Override
 	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
 		System.out.println(meta);
-		return this.getDefaultState().withProperty(VARIANT, BlocksBase.EnumType.byMetadata(meta));
+		return this.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(meta));
 	}
 
 	@Override
@@ -158,14 +158,14 @@ public class BlocksBase extends BlockBase implements IMetaName {
 	@Override
 	public int quantityDropped(Random random)
 	{
-		if (this == ModBlocks.LAPIS_SUPERCOMPACT) return 36 + random.nextInt(5);
-		else if (this == ModBlocks.REDSTONE_SUPERCOMPACT) return 36 + random.nextInt(2);
+		if (this == ModBlocks.SUPERCOMPRESSED_LAPIS) return 36 + random.nextInt(5);
+		else if (this == ModBlocks.SUPERCOMPRESSED_REDSTONE) return 36 + random.nextInt(2);
 		else return 9;
 	}
 
 	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random) {
-		if (this == ModBlocks.REDSTONE_SUPERCOMPACT)
+		if (this == ModBlocks.SUPERCOMPRESSED_REDSTONE)
 		{
 			return this.quantityDropped(random) + random.nextInt(fortune + 1);
 		}

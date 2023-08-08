@@ -1,6 +1,7 @@
 package com.PlanetCore.cwg;
 
 import com.PlanetCore.blocks.BlocksBase;
+import com.PlanetCore.blocks.HotRocks;
 import com.PlanetCore.init.ModBlocks;
 import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
@@ -19,13 +20,13 @@ import javax.annotation.Nonnull;
 import java.util.Random;
 import java.util.function.Predicate;
 
-import static com.PlanetCore.blocks.BlocksBase.VARIANT;
+import static com.PlanetCore.blocks.BlocksBase.VARIANT_SUPERCOMPRESSED;
+import static com.PlanetCore.blocks.HotRocks.VARIANT_HOTROCKS;
 import static io.github.opencubicchunks.cubicchunks.api.util.Coords.cubeToMinBlock;
 import static io.github.opencubicchunks.cubicchunks.api.util.Coords.localToBlock;
 import static io.github.opencubicchunks.cubicchunks.cubicgen.StructureGenUtil.normalizedDistance;
 import static java.lang.Math.max;
 import static net.minecraft.util.math.MathHelper.*;
-import static net.minecraft.util.math.MathHelper.floor;
 
 public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
@@ -130,38 +131,80 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
     public enum CaveType {
 
-        CAVE0(ModBlocks.AIR_NO_PRESSURE, Blocks.LAVA,0.05f, -10000,32),
-        CAVE1(ModBlocks.COAL_SUPERCOMPACT, Blocks.LAVA,0.05f, -10000,-15),
-        CAVE2(ModBlocks.IRON_SUPERCOMPACT, ModBlocks.IRON_LAVA_FLUID,0.05f, -200,-100),
-        CAVE3(ModBlocks.HOT_GRANITE, ModBlocks.IRON_LAVA_FLUID,0.05f, -300,-50),
-        CAVE4(ModBlocks.HOT_DIORITE, ModBlocks.IRON_LAVA_FLUID,0.05f, -300,-50),
-        CAVE5(ModBlocks.HOT_ANDESITE, ModBlocks.IRON_LAVA_FLUID,0.05f, -300,-50),
-        CAVE6(ModBlocks.REDSTONE_SUPERCOMPACT, ModBlocks.REDSTONE_LAVA_FLUID,0.05f, -300,-200),
-        CAVE7(ModBlocks.SILVER_SUPERCOMPACT, ModBlocks.SILVER_LAVA_FLUID,0.025f, -200,-100),
-        CAVE8(ModBlocks.GOLD_SUPERCOMPACT, ModBlocks.GOLD_LAVA_FLUID,0.02f, -300,-200),
-        CAVE9(ModBlocks.DIAMOND_SUPERCOMPACT, ModBlocks.DIAMOND_LAVA_FLUID,0.01f, -300,-200),
-        CAVE10(ModBlocks.EMERALD_SUPERCOMPACT, Blocks.LAVA,0.0075f, -25000,-300),
-        CAVE11(ModBlocks.LAPIS_SUPERCOMPACT, Blocks.LAVA,0.005f, -25000,-500),
-        CAVE12(ModBlocks.TITANIUM_SUPERCOMPACT, ModBlocks.TITANIUM_LAVA_FLUID,0.04f, -25000,-600),
-        CAVE13(ModBlocks.URANIUM_SUPERCOMPACT, ModBlocks.URANIUM_LAVA_FLUID,0.04f, -25000,-700),
-        CAVE14(ModBlocks.TUNGSTEN_SUPERCOMPACT, ModBlocks.TUNGSTEN_LAVA_FLUID,0.04f, -25000,-800),
-        CAVE15(ModBlocks.RUBY_SUPERCOMPACT, ModBlocks.RUBY_LAVA_FLUID,0.02f, -25000,-1000),
-        CAVE16(ModBlocks.SAPPHIRE_SUPERCOMPACT, ModBlocks.SAPPHIRE_LAVA_FLUID,0.02f, -25000,-1200),
-        CAVE17(ModBlocks.MAJORITE_SUPERCOMPACT, ModBlocks.MAJORITE_LAVA_FLUID,0.01f, -25000,-1500),
-        CAVE18(ModBlocks.AMAZONITE_SUPERCOMPACT, ModBlocks.AMAZONITE_LAVA_FLUID,0.01f, -25000,-2000),
-        CAVE19(ModBlocks.ONYX_SUPERCOMPACT, ModBlocks.ONYX_LAVA_FLUID,0.01f, -25000,-2300),
-        CAVE20(ModBlocks.PAINITE_SUPERCOMPACT, ModBlocks.PAINITE_LAVA_FLUID,0.01f, -25000,-2300);
+        CAVE0(ModBlocks.AIR_NO_PRESSURE, Blocks.LAVA,0.03f, -10000,32, 0),
+        CAVE1(ModBlocks.SUPERCOMPRESSED_COAL, Blocks.LAVA,0.002f, -200,-15, 0),
+        CAVE2(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.005f, -200,-100, 0),
+        CAVE3(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.005f, -400,-200, 1),
+        CAVE4(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.005f, -900,-400, 2),
+        CAVE5(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.005f, -1000000,-900, 3),
+        CAVE6(ModBlocks.GRANITE, Blocks.LAVA,0.005f, -400,-200, 0),
+        CAVE7(ModBlocks.GRANITE, Blocks.LAVA,0.005f, -900,-400, 1),
+        CAVE8(ModBlocks.GRANITE, Blocks.LAVA,0.005f, -1000000,-900, 2),
+        CAVE9(ModBlocks.DIORITE, Blocks.LAVA,0.005f, -400,-200, 0),
+        CAVE10(ModBlocks.DIORITE, Blocks.LAVA,0.005f, -900,-400, 1),
+        CAVE11(ModBlocks.DIORITE, Blocks.LAVA,0.005f, -1000000,-900, 2),
+        CAVE12(ModBlocks.ANDESITE, Blocks.LAVA,0.005f, -400,-50, 0),
+        CAVE13(ModBlocks.ANDESITE, Blocks.LAVA,0.005f, -900,-400, 1),
+        CAVE14(ModBlocks.ANDESITE, Blocks.LAVA,0.005f, -1000000,-900, 2),
+        CAVE15(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.001f, -400,-200, 0),
+        CAVE16(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.001f, -900,-400, 1),
+        CAVE17(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.001f, -1500,-900, 2),
+        CAVE18(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.001f, -1000000,-1500, 3),
+        CAVE19(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.001f, -400,-100, 0),
+        //CAVE20(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.01f, -900,-400, 1),
+        //CAVE21(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.01f, -1500,-900, 2),
+        //CAVE22(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.01f, -1000000,-1500, 3),
+        CAVE23(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.001f, -400,-200, 0),
+        //CAVE24(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.01f, -900,-400, 1),
+        //CAVE25(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.01f, -1500,-900, 2),
+        //CAVE26(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.01f, -1000000,-1500, 3),
+        CAVE27(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.00025f, -900,-200, 0),
+        //CAVE28(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.005f, -1500,-900, 1),
+        //CAVE29(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.01f, -2000,-1500, 2),
+        CAVE30(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.002f, -1000000,-2000, 3),
+        CAVE31(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.00025f, -900,-300, 0),
+        //CAVE32(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.005f, -1500,-900, 1),
+        //CAVE33(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.01f, -2000,-1500, 2),
+        //CAVE34(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.02f, -1000000,-2000, 3),
+        CAVE35(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.0001f, -900,-500, 0),
+        //CAVE36(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.0015f, -1500,-900, 1),
+        //CAVE37(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.002f, -2000,-1500, 2),
+        //CAVE38(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.0025f, -1000000,-2000, 3),
+        CAVE39(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.002f, -900,-600, 0),
+        //CAVE40(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.02f, -1500,-900, 1),
+        //CAVE41(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.02f, -2000,-1500, 2),
+        //CAVE42(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.02f, -1000000,-2000, 3),
+        CAVE43(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.002f, -25000,-700, 0),
+        CAVE44(ModBlocks.SUPERCOMPRESSED_TUNGSTEN, ModBlocks.TUNGSTEN_LAVA_FLUID,0.002f, -25000,-800, 0),
+        CAVE45(ModBlocks.SUPERCOMPRESSED_RUBY, ModBlocks.RUBY_LAVA_FLUID,0.001f, -25000,-1000, 0),
+        CAVE46(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.001f, -25000,-1200, 0),
+        CAVE47(ModBlocks.SUPERCOMPRESSED_MAJORITE, ModBlocks.MAJORITE_LAVA_FLUID,0.001f, -25000,-1500, 0),
+        CAVE48(ModBlocks.SUPERCOMPRESSED_AMAZONITE, ModBlocks.AMAZONITE_LAVA_FLUID,0.001f, -25000,-2000, 0),
+        CAVE49(ModBlocks.SUPERCOMPRESSED_ONYX, ModBlocks.ONYX_LAVA_FLUID,0.001f, -25000,-2300, 0),
+        CAVE50(ModBlocks.SUPERCOMPRESSED_PAINITE, ModBlocks.PAINITE_LAVA_FLUID,0.001f, -25000,-2300, 0);
 
         private final IBlockState block;
         private final IBlockState lavaMaterial;
         private final float probability;
         private final double minHeight;
         private final double maxHeight;
+        private final int meta;
 
 
         CaveType(Block block, Block lavaMaterial, float probability,
-                 double minHeight, double maxHeight) {
-            this.block = block.getDefaultState();
+                 double minHeight, double maxHeight, int meta) {
+            this.meta = meta;
+
+            //Problem: Crash because block has variant properties.
+            if (block == ModBlocks.AIR_NO_PRESSURE || block == ModBlocks.SUPERCOMPRESSED_COAL)
+            {
+                this.block = block.getDefaultState();
+            }
+            else if (block == ModBlocks.GRANITE || block == ModBlocks.DIORITE || block == ModBlocks.ANDESITE)
+            {
+                this.block = block.getDefaultState().withProperty(VARIANT_HOTROCKS, HotRocks.EnumType.byMetadata(meta));
+            }
+            else this.block = block.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(meta));
             this.lavaMaterial = lavaMaterial.getDefaultState();
             this.probability = probability;
             this.minHeight = minHeight;
@@ -183,7 +226,12 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
         public double maxHeight() {
             return maxHeight;
         }
+        
+        public int meta() {
+            return meta;
+        }
     }
+    
 
     private static final int RANGE = 8;
     /**
@@ -207,7 +255,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
          */
         for (CaveType cave : CaveType.values()) {
             if(cave==CaveType.CAVE0) continue;
-            if (cave != CaveType.CAVE0 && cubeYOrigin > -10)
+            if (cave != CaveType.CAVE0 && cubeYOrigin > -10 && Math.random() > cave.probability)
             {
                 continue;
             }
@@ -246,31 +294,10 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                 double branchStartZ = localToBlock(cubeZOrigin, rand.nextInt(ICube.SIZE));
                 int subBranches = 1;
 
-                if (rand.nextInt(LARGE_NODE_RARITY) == 0)
-                {
-                    if (cave == CaveType.CAVE0) {
-                    //CAVE_SIZE_ADD = rand.nextInt(rand.nextInt(rand.nextInt(4) + 1) + 1) + 1.5D;
-                    OUTER_CAVE_THICKNESS = 0;
-                    REPLACE_WITH_AIR = true;
-                        this.generateLargeNode(cube, cave, rand, rand.nextLong(), generatedCubePos,
-                                branchStartX, branchStartY, branchStartZ, lavaHeight);
-                        subBranches += rand.nextInt(LARGE_NODE_MAX_BRANCHES);
-                    }
-                    else
-                    {
-                        //CAVE_SIZE_ADD = rand.nextInt(rand.nextInt(rand.nextInt(4) + 1) + 1) + 1.5D;
-                        OUTER_CAVE_THICKNESS = 2;
-                        REPLACE_WITH_AIR = false;
-                        this.generateLargeNode(cube, cave, rand, rand.nextLong(), generatedCubePos,
-                                branchStartX, branchStartY, branchStartZ, lavaHeight);
-                        subBranches += rand.nextInt(LARGE_NODE_MAX_BRANCHES);
-
-                        OUTER_CAVE_THICKNESS = 0;
-                        REPLACE_WITH_AIR = true;
-                        this.generateLargeNode(cube, cave, rand, rand.nextLong(), generatedCubePos,
-                                branchStartX, branchStartY, branchStartZ, lavaHeight);
-                        subBranches += rand.nextInt(LARGE_NODE_MAX_BRANCHES);
-                    }
+                if (rand.nextInt(LARGE_NODE_RARITY) == 0) {
+                    this.generateLargeNode(cube, cave, rand, rand.nextLong(), generatedCubePos,
+                            branchStartX, branchStartY, branchStartZ, lavaHeight);
+                    subBranches += rand.nextInt(LARGE_NODE_MAX_BRANCHES);
                 }
 
                 for (int branch = 0; branch < subBranches; ++branch) {
@@ -563,26 +590,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                                 cube.setBlockState(localX, localY, localZ, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
                             }
                         } else {
-                            if (caveType.block() == ModBlocks.HOT_GRANITE || caveType.block() == ModBlocks.HOT_DIORITE || caveType.block() == ModBlocks.HOT_ANDESITE) {
-                                if (localY < -250 && localY >= -500) {
-                                    cube.setBlockState(localX, localY, localZ, caveType.block.withProperty(VARIANT, BlocksBase.EnumType.byMetadata(0)));
-                                } else if (localY < -500 && localY >= -1000) {
-                                    cube.setBlockState(localX, localY, localZ, caveType.block.withProperty(VARIANT, BlocksBase.EnumType.byMetadata(1)));
-                                } else if (localY < -1000) {
-                                    cube.setBlockState(localX, localY, localZ, caveType.block.withProperty(VARIANT, BlocksBase.EnumType.byMetadata(2)));
-                                }
-                            } else {
-                                if (localY >= -250) {
-                                    cube.setBlockState(localX, localY, localZ, caveType.block.withProperty(VARIANT, BlocksBase.EnumType.byMetadata(0)));
-                                } else if (localY < -250 && localY >= -500) {
-                                    cube.setBlockState(localX, localY, localZ, caveType.block.withProperty(VARIANT, BlocksBase.EnumType.byMetadata(1)));
-                                } else if (localY < -500 && localY >= -1000) {
-                                    cube.setBlockState(localX, localY, localZ, caveType.block.withProperty(VARIANT, BlocksBase.EnumType.byMetadata(2)));
-                                } else if (localY < -1000) {
-                                    cube.setBlockState(localX, localY, localZ, caveType.block.withProperty(VARIANT, BlocksBase.EnumType.byMetadata(3)));
-                                }
-                            }
-
+                            cube.setBlockState(localX, localY, localZ, caveType.block);
                         }
                     } else if (state.getBlock() == Blocks.DIRT) {
                         //vanilla dirt-grass replacement works by scanning top-down and moving the block

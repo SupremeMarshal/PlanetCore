@@ -70,11 +70,11 @@ public class MetalLavaFluid extends BlockFluidClassic {
 				Integer integer = (Integer)state.getValue(LEVEL);
 				if (integer.intValue() == 0)
 				{
-					if (this == ModBlocks.SILVER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SILVER_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.GOLD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.GOLD_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.TITANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TITANIUM_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.URANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.URANIUM_SUPERCOMPACT.getDefaultState()));
-					if (this == ModBlocks.TUNGSTEN_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.TUNGSTEN_SUPERCOMPACT.getDefaultState()));
+					if (this == ModBlocks.SILVER_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SUPERCOMPRESSED_SILVER.getDefaultState()));
+					if (this == ModBlocks.GOLD_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SUPERCOMPRESSED_GOLD.getDefaultState()));
+					if (this == ModBlocks.TITANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SUPERCOMPRESSED_TITANIUM.getDefaultState()));
+					if (this == ModBlocks.URANIUM_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SUPERCOMPRESSED_URANIUM.getDefaultState()));
+					if (this == ModBlocks.TUNGSTEN_LAVA_FLUID) worldIn.setBlockState(pos, ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SUPERCOMPRESSED_TUNGSTEN.getDefaultState()));
 
 					this.triggerMixEffects(worldIn, pos);
 					return true;

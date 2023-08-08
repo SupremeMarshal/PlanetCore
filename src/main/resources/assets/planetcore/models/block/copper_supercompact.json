@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "planetcore:blocks/copper_supercompact"
+       "all": "planetcore:blocks/copper_supercompressed"
    }
 }

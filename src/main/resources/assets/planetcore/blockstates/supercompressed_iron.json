@@ -1,0 +1,5 @@
+{"variants":{
+  "variant=supercompressed":{"model":"planetcore:supercompressed_iron"},
+  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_iron"},
+  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_iron"},
+  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_iron"}}}

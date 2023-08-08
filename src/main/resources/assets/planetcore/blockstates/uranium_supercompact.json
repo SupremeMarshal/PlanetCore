@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:uranium_supercompact" }
+        "normal": { "model": "planetcore:uranium_supercompressed" }
     }
 }

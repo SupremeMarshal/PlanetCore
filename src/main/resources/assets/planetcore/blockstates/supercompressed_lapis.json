@@ -1,0 +1,5 @@
+{"variants":{
+  "variant=supercompressed":{"model":"planetcore:supercompressed_lapis"},
+  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_lapis"},
+  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_lapis"},
+  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_lapis"}}}

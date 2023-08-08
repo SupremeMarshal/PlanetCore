@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:amazonite_supercompact" }
+        "normal": { "model": "planetcore:amazonite_supercompressed" }
     }
 }

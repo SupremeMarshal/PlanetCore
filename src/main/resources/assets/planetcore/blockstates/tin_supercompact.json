@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:tin_supercompact" }
+        "normal": { "model": "planetcore:tin_supercompressed" }
     }
 }

@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "planetcore:blocks/silicon_supercompact"
+       "all": "planetcore:blocks/silicon_supercompressed"
    }
 }

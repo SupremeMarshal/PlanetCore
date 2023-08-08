@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "planetcore:blocks/topaz_supercompact"
+       "all": "planetcore:blocks/topaz_supercompressed"
    }
 }

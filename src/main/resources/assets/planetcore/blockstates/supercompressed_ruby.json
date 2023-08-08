@@ -1,0 +1,5 @@
+{"variants":{
+  "variant=supercompressed":{"model":"planetcore:supercompressed_ruby"},
+  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_ruby"},
+  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_ruby"},
+  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_ruby"}}}

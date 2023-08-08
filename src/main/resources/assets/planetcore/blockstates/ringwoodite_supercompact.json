@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:ringwoodite_supercompact" }
+        "normal": { "model": "planetcore:ringwoodite_supercompressed" }
     }
 }

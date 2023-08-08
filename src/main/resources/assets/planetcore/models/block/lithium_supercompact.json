@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "planetcore:blocks/lithium_supercompact"
+       "all": "planetcore:blocks/lithium_supercompressed"
    }
 }

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:ruby_supercompact" }
+        "normal": { "model": "planetcore:ruby_supercompressed" }
     }
 }

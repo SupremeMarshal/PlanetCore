@@ -446,7 +446,7 @@
 	},
 	{
 		"blockstate": {
-			"Name": "planetcore:aluminium_supercompact"
+			"Name": "planetcore:aluminium_supercompressed"
 		},
 		"biomes": null,
 		"placeBlockWhen": null,
@@ -1030,7 +1030,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": null,
@@ -1175,7 +1175,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": null,
@@ -1358,7 +1358,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": null,
@@ -1445,7 +1445,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": null,
@@ -2335,7 +2335,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -2497,7 +2497,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -2659,7 +2659,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -2711,7 +2711,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -2910,7 +2910,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -3057,7 +3057,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -3271,7 +3271,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -3485,7 +3485,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -3699,7 +3699,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -3913,7 +3913,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -4798,7 +4798,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -4960,7 +4960,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -5122,7 +5122,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -5174,7 +5174,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -5373,7 +5373,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -5465,7 +5465,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -5624,7 +5624,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -5838,7 +5838,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -6052,7 +6052,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -6266,7 +6266,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -7063,7 +7063,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -7225,7 +7225,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -7387,7 +7387,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -7439,7 +7439,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -7638,7 +7638,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -7730,7 +7730,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -7889,7 +7889,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -8103,7 +8103,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -8317,7 +8317,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -8531,7 +8531,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -8693,7 +8693,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -9815,7 +9815,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -9977,7 +9977,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -10139,7 +10139,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -10191,7 +10191,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -10390,7 +10390,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -10482,7 +10482,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -10641,7 +10641,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -10855,7 +10855,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -11069,7 +11069,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -11283,7 +11283,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -11445,7 +11445,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -12515,7 +12515,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -12677,7 +12677,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -12839,7 +12839,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -12891,7 +12891,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -13090,7 +13090,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -13182,7 +13182,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -13341,7 +13341,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -13555,7 +13555,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -13769,7 +13769,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -13983,7 +13983,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -14145,7 +14145,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -15441,7 +15441,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -15603,7 +15603,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -15765,7 +15765,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -15817,7 +15817,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -16016,7 +16016,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -16108,7 +16108,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -16267,7 +16267,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -16481,7 +16481,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -16695,7 +16695,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -16909,7 +16909,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -17071,7 +17071,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -18120,7 +18120,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -18282,7 +18282,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -18444,7 +18444,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -18496,7 +18496,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -18695,7 +18695,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -18732,7 +18732,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -18836,7 +18836,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -19050,7 +19050,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -19264,7 +19264,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -19478,7 +19478,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -19640,7 +19640,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -19772,7 +19772,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -19919,7 +19919,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -20066,7 +20066,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -20213,7 +20213,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -20360,7 +20360,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -20507,7 +20507,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -20624,7 +20624,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -21728,7 +21728,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -21890,7 +21890,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -22052,7 +22052,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -22104,7 +22104,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:aluminium_supercompact"
+						"Name": "planetcore:aluminium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -22303,7 +22303,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -22340,7 +22340,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -22444,7 +22444,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -22658,7 +22658,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -22872,7 +22872,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -23086,7 +23086,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -23248,7 +23248,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -23380,7 +23380,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -23527,7 +23527,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -23674,7 +23674,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -23821,7 +23821,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -23968,7 +23968,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -24115,7 +24115,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -24232,7 +24232,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -25171,7 +25171,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -25278,7 +25278,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -25385,7 +25385,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -25492,7 +25492,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -25529,7 +25529,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -25633,7 +25633,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -25792,7 +25792,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -25951,7 +25951,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -26165,7 +26165,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -26327,7 +26327,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -26459,7 +26459,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -26606,7 +26606,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -26753,7 +26753,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -26900,7 +26900,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -27047,7 +27047,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -27194,7 +27194,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -27311,7 +27311,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -27458,7 +27458,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -28572,7 +28572,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -28679,7 +28679,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -28786,7 +28786,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -28893,7 +28893,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -28930,7 +28930,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tin_supercompact"
+						"Name": "planetcore:tin_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -29034,7 +29034,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:copper_supercompact"
+						"Name": "planetcore:copper_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -29193,7 +29193,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -29352,7 +29352,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -29566,7 +29566,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -29728,7 +29728,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -29860,7 +29860,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -30007,7 +30007,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -30154,7 +30154,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -30301,7 +30301,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -30448,7 +30448,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -30595,7 +30595,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -30712,7 +30712,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -30859,7 +30859,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -30979,7 +30979,7 @@
 						"Properties": {
 							"variant": "mantlerock1"
 						},
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -31848,7 +31848,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -31900,7 +31900,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -31952,7 +31952,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -32004,7 +32004,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -32041,7 +32041,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -32145,7 +32145,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -32304,7 +32304,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -32466,7 +32466,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -32598,7 +32598,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -32745,7 +32745,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -32892,7 +32892,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -33039,7 +33039,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -33186,7 +33186,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -33333,7 +33333,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -33450,7 +33450,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -33597,7 +33597,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -33714,7 +33714,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -33831,7 +33831,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -34905,7 +34905,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -34957,7 +34957,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35009,7 +35009,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35061,7 +35061,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35098,7 +35098,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35202,7 +35202,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35361,7 +35361,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35523,7 +35523,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35655,7 +35655,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35802,7 +35802,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -35949,7 +35949,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -36096,7 +36096,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -36243,7 +36243,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -36390,7 +36390,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -36507,7 +36507,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -36654,7 +36654,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -36771,7 +36771,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -36888,7 +36888,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -37816,7 +37816,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -37868,7 +37868,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -37920,7 +37920,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -37972,7 +37972,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -38009,7 +38009,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -38113,7 +38113,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -38217,7 +38217,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -38379,7 +38379,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -38511,7 +38511,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -38658,7 +38658,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -38805,7 +38805,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -38952,7 +38952,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -39099,7 +39099,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -39246,7 +39246,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -39363,7 +39363,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -39510,7 +39510,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -39627,7 +39627,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -39744,7 +39744,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -39861,7 +39861,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -40994,7 +40994,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41046,7 +41046,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41098,7 +41098,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41150,7 +41150,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41187,7 +41187,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41291,7 +41291,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41395,7 +41395,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41557,7 +41557,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41689,7 +41689,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41836,7 +41836,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -41983,7 +41983,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -42130,7 +42130,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -42277,7 +42277,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -42424,7 +42424,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -42541,7 +42541,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -42688,7 +42688,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -42805,7 +42805,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -42922,7 +42922,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -43039,7 +43039,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44056,7 +44056,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44108,7 +44108,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44160,7 +44160,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44212,7 +44212,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44249,7 +44249,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44353,7 +44353,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44457,7 +44457,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44619,7 +44619,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44751,7 +44751,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -44898,7 +44898,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -45045,7 +45045,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -45192,7 +45192,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -45339,7 +45339,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -45486,7 +45486,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -45603,7 +45603,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -45750,7 +45750,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -45867,7 +45867,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -45984,7 +45984,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -46101,7 +46101,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -46218,7 +46218,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -47440,7 +47440,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -47492,7 +47492,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -47544,7 +47544,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -47596,7 +47596,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -47633,7 +47633,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -47737,7 +47737,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -47841,7 +47841,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -48003,7 +48003,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -48135,7 +48135,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -48282,7 +48282,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -48429,7 +48429,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -48576,7 +48576,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -48723,7 +48723,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -48870,7 +48870,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -48987,7 +48987,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -49134,7 +49134,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -49251,7 +49251,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -49368,7 +49368,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -49485,7 +49485,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -49602,7 +49602,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -50656,7 +50656,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -50708,7 +50708,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -50760,7 +50760,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -50812,7 +50812,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -50849,7 +50849,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -50953,7 +50953,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -51057,7 +51057,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -51219,7 +51219,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -51351,7 +51351,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -51498,7 +51498,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -51645,7 +51645,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -51792,7 +51792,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -51939,7 +51939,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -52086,7 +52086,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -52203,7 +52203,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -52350,7 +52350,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -52467,7 +52467,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -52584,7 +52584,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -52701,7 +52701,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -52818,7 +52818,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -52935,7 +52935,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -53012,7 +53012,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54243,7 +54243,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54295,7 +54295,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54347,7 +54347,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54399,7 +54399,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54436,7 +54436,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54540,7 +54540,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54644,7 +54644,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54806,7 +54806,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -54938,7 +54938,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -55085,7 +55085,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -55232,7 +55232,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:boron_supercompact"
+						"Name": "planetcore:boron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -55379,7 +55379,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lithium_supercompact"
+						"Name": "planetcore:lithium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -55526,7 +55526,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:magnesium_supercompact"
+						"Name": "planetcore:magnesium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -55673,7 +55673,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:thorium_supercompact"
+						"Name": "planetcore:thorium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -55790,7 +55790,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -55937,7 +55937,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -56054,7 +56054,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -56171,7 +56171,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -56288,7 +56288,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -56405,7 +56405,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -56522,7 +56522,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -57597,7 +57597,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -57634,7 +57634,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -57686,7 +57686,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -57738,7 +57738,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -57790,7 +57790,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -57827,7 +57827,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -57931,7 +57931,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58035,7 +58035,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58087,7 +58087,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58124,7 +58124,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58161,7 +58161,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58198,7 +58198,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58235,7 +58235,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58352,7 +58352,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58469,7 +58469,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58586,7 +58586,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58703,7 +58703,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -58820,7 +58820,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60100,7 +60100,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60137,7 +60137,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60189,7 +60189,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60241,7 +60241,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60293,7 +60293,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60330,7 +60330,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60434,7 +60434,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60538,7 +60538,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60590,7 +60590,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60627,7 +60627,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60664,7 +60664,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60701,7 +60701,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60738,7 +60738,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60855,7 +60855,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -60972,7 +60972,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -61089,7 +61089,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -61206,7 +61206,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -61323,7 +61323,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62487,7 +62487,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62524,7 +62524,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62576,7 +62576,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62628,7 +62628,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62680,7 +62680,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62717,7 +62717,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62769,7 +62769,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62873,7 +62873,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62925,7 +62925,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62962,7 +62962,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -62999,7 +62999,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -63036,7 +63036,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -63073,7 +63073,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -63190,7 +63190,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -63307,7 +63307,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -63424,7 +63424,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -63541,7 +63541,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -63658,7 +63658,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -63775,7 +63775,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65144,7 +65144,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65181,7 +65181,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65233,7 +65233,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65285,7 +65285,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65337,7 +65337,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65374,7 +65374,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65426,7 +65426,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65530,7 +65530,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65582,7 +65582,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65619,7 +65619,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65656,7 +65656,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65693,7 +65693,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65730,7 +65730,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65847,7 +65847,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -65964,7 +65964,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -66081,7 +66081,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -66198,7 +66198,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -66315,7 +66315,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -66432,7 +66432,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -67685,7 +67685,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -67722,7 +67722,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -67759,7 +67759,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -67811,7 +67811,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -67863,7 +67863,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -67915,7 +67915,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -67952,7 +67952,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68004,7 +68004,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68056,7 +68056,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68108,7 +68108,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68145,7 +68145,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68182,7 +68182,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68219,7 +68219,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68256,7 +68256,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68373,7 +68373,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68490,7 +68490,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68607,7 +68607,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68724,7 +68724,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68841,7 +68841,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -68958,7 +68958,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -69075,7 +69075,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70533,7 +70533,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70570,7 +70570,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70607,7 +70607,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70659,7 +70659,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70711,7 +70711,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70763,7 +70763,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70800,7 +70800,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70852,7 +70852,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70904,7 +70904,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70956,7 +70956,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -70993,7 +70993,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71030,7 +71030,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71067,7 +71067,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71104,7 +71104,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71221,7 +71221,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71338,7 +71338,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71455,7 +71455,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71572,7 +71572,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71689,7 +71689,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71806,7 +71806,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -71923,7 +71923,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73265,7 +73265,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73302,7 +73302,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73339,7 +73339,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73391,7 +73391,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73443,7 +73443,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73495,7 +73495,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73532,7 +73532,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73584,7 +73584,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73636,7 +73636,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73688,7 +73688,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73725,7 +73725,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73762,7 +73762,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73799,7 +73799,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73836,7 +73836,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -73953,7 +73953,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -74070,7 +74070,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -74187,7 +74187,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -74304,7 +74304,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -74421,7 +74421,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -74538,7 +74538,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -74655,7 +74655,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -74772,7 +74772,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:amazonite_supercompact"
+						"Name": "planetcore:amazonite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76319,7 +76319,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76356,7 +76356,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76393,7 +76393,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76445,7 +76445,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76497,7 +76497,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76549,7 +76549,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76586,7 +76586,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76638,7 +76638,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76690,7 +76690,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76742,7 +76742,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76779,7 +76779,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76816,7 +76816,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76853,7 +76853,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -76890,7 +76890,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -77007,7 +77007,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -77124,7 +77124,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -77241,7 +77241,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -77358,7 +77358,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -77475,7 +77475,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -77592,7 +77592,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -77709,7 +77709,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -77826,7 +77826,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:amazonite_supercompact"
+						"Name": "planetcore:amazonite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79220,7 +79220,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79257,7 +79257,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79294,7 +79294,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79346,7 +79346,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79398,7 +79398,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79450,7 +79450,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79487,7 +79487,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79539,7 +79539,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79591,7 +79591,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79643,7 +79643,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79680,7 +79680,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79717,7 +79717,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79754,7 +79754,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79791,7 +79791,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -79908,7 +79908,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -80025,7 +80025,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -80142,7 +80142,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -80259,7 +80259,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -80376,7 +80376,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -80493,7 +80493,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -80610,7 +80610,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -80727,7 +80727,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:amazonite_supercompact"
+						"Name": "planetcore:amazonite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82406,7 +82406,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82443,7 +82443,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82480,7 +82480,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82532,7 +82532,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82584,7 +82584,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82636,7 +82636,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82673,7 +82673,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82725,7 +82725,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82777,7 +82777,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82829,7 +82829,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82866,7 +82866,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82903,7 +82903,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82940,7 +82940,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -82977,7 +82977,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -83094,7 +83094,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -83211,7 +83211,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -83328,7 +83328,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -83445,7 +83445,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -83562,7 +83562,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -83679,7 +83679,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -83796,7 +83796,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -83913,7 +83913,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:amazonite_supercompact"
+						"Name": "planetcore:amazonite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85350,7 +85350,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85387,7 +85387,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85424,7 +85424,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85476,7 +85476,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85528,7 +85528,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85580,7 +85580,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85617,7 +85617,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85721,7 +85721,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85825,7 +85825,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85877,7 +85877,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85914,7 +85914,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85951,7 +85951,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -85988,7 +85988,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86025,7 +86025,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86142,7 +86142,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86259,7 +86259,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86376,7 +86376,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86493,7 +86493,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86610,7 +86610,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86727,7 +86727,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86844,7 +86844,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -86961,7 +86961,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:amazonite_supercompact"
+						"Name": "planetcore:amazonite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -87118,7 +87118,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:onyx_supercompact"
+						"Name": "planetcore:onyx_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -88680,7 +88680,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -88717,7 +88717,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -88754,7 +88754,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -88806,7 +88806,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -88858,7 +88858,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -88910,7 +88910,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -88947,7 +88947,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -88999,7 +88999,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89051,7 +89051,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89103,7 +89103,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89140,7 +89140,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89177,7 +89177,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89214,7 +89214,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89251,7 +89251,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89368,7 +89368,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89485,7 +89485,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89602,7 +89602,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89719,7 +89719,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89836,7 +89836,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -89953,7 +89953,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -90070,7 +90070,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -90187,7 +90187,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:amazonite_supercompact"
+						"Name": "planetcore:amazonite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -90344,7 +90344,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:onyx_supercompact"
+						"Name": "planetcore:onyx_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -91661,7 +91661,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -91698,7 +91698,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -91735,7 +91735,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -91787,7 +91787,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -91839,7 +91839,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -91891,7 +91891,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -91928,7 +91928,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -91980,7 +91980,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92032,7 +92032,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92084,7 +92084,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92121,7 +92121,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92158,7 +92158,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92195,7 +92195,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92232,7 +92232,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92349,7 +92349,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92466,7 +92466,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92583,7 +92583,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92700,7 +92700,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92817,7 +92817,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -92934,7 +92934,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -93051,7 +93051,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -93168,7 +93168,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:amazonite_supercompact"
+						"Name": "planetcore:amazonite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -93325,7 +93325,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:onyx_supercompact"
+						"Name": "planetcore:onyx_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -93482,7 +93482,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:painite_supercompact"
+						"Name": "planetcore:painite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -94936,7 +94936,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:diamond_supercompact"
+						"Name": "planetcore:diamond_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -94973,7 +94973,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95010,7 +95010,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:lapis_supercompact"
+						"Name": "planetcore:lapis_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95062,7 +95062,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sulfur_supercompact"
+						"Name": "planetcore:sulfur_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95114,7 +95114,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:coal_supercompact"
+						"Name": "planetcore:coal_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95166,7 +95166,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:iron_supercompact"
+						"Name": "planetcore:iron_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95203,7 +95203,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:silver_supercompact"
+						"Name": "planetcore:silver_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95255,7 +95255,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:gold_supercompact"
+						"Name": "planetcore:gold_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95307,7 +95307,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:redstone_supercompact"
+						"Name": "planetcore:redstone_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95359,7 +95359,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:emerald_supercompact"
+						"Name": "planetcore:emerald_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95396,7 +95396,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:titanium_supercompact"
+						"Name": "planetcore:titanium_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95433,7 +95433,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:topaz_supercompact"
+						"Name": "planetcore:topaz_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95470,7 +95470,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:tungsten_supercompact"
+						"Name": "planetcore:tungsten_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95507,7 +95507,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:jade_supercompact"
+						"Name": "planetcore:jade_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95544,7 +95544,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ruby_supercompact"
+						"Name": "planetcore:ruby_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95581,7 +95581,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:sapphire_supercompact"
+						"Name": "planetcore:sapphire_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95698,7 +95698,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:olivine_supercompact"
+						"Name": "planetcore:olivine_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95815,7 +95815,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:wadsleyite_supercompact"
+						"Name": "planetcore:wadsleyite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -95932,7 +95932,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ringwoodite_supercompact"
+						"Name": "planetcore:ringwoodite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -96049,7 +96049,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:brigmanite_supercompact"
+						"Name": "planetcore:brigmanite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -96166,7 +96166,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:majorite_supercompact"
+						"Name": "planetcore:majorite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -96283,7 +96283,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:amazonite_supercompact"
+						"Name": "planetcore:amazonite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -96440,7 +96440,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:onyx_supercompact"
+						"Name": "planetcore:onyx_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {
@@ -96597,7 +96597,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:painite_supercompact"
+						"Name": "planetcore:painite_supercompressed"
 					},
 					"biomes": null,
 					"placeBlockWhen": {

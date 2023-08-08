@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "planetcore:blocks/jade_supercompact"
+       "all": "planetcore:blocks/jade_supercompressed"
    }
 }

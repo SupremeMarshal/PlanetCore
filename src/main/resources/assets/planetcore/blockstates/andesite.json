@@ -1,0 +1,4 @@
+{"variants":{
+  "variant=hot":{"model":"planetcore:hot_andesite"},
+  "variant=veryhot":{"model":"planetcore:veryhot_andesite"},
+  "variant=superheated":{"model":"planetcore:superheated_andesite"}}}

@@ -1,0 +1,4 @@
+{"variants":{
+  "variant=hot":{"model":"planetcore:hot_granite"},
+  "variant=veryhot":{"model":"planetcore:veryhot_granite"},
+  "variant=superheated":{"model":"planetcore:superheated_granite"}}}

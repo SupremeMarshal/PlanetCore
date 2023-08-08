@@ -1,0 +1,5 @@
+{"variants":{
+  "variant=supercompressed":{"model":"planetcore:supercompressed_diamond"},
+  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_diamond"},
+  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_diamond"},
+  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_diamond"}}}

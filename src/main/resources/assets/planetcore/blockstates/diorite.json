@@ -1,0 +1,4 @@
+{"variants":{
+  "variant=hot":{"model":"planetcore:hot_diorite"},
+  "variant=veryhot":{"model":"planetcore:veryhot_diorite"},
+  "variant=superheated":{"model":"planetcore:superheated_diorite"}}}

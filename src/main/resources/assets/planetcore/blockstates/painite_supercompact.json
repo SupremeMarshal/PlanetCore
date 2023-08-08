@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:painite_supercompact" }
+        "normal": { "model": "planetcore:painite_supercompressed" }
     }
 }

@@ -1,0 +1,5 @@
+{"variants":{
+  "variant=supercompressed":{"model":"planetcore:supercompressed_titanium"},
+  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_titanium"},
+  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_titanium"},
+  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_titanium"}}}

@@ -14,7 +14,7 @@
                 {
                     "type": "item",
                     "weight": 1,
-                    "name": "planetcore:very_hot_magma_cream",
+                    "name": "planetcore:veryhot_magma_cream",
                     "conditions": [
                         {
                             "condition": "killed_by_player"

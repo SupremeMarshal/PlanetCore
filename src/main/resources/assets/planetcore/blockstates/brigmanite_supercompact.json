@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:brigmanite_supercompact" }
+        "normal": { "model": "planetcore:brigmanite_supercompressed" }
     }
 }

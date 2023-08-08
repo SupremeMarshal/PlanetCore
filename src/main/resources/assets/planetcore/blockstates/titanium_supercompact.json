@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:titanium_supercompact" }
+        "normal": { "model": "planetcore:titanium_supercompressed" }
     }
 }

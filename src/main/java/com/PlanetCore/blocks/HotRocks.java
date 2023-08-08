@@ -31,7 +31,7 @@ import java.util.Random;
 public class HotRocks extends BlockBase implements IMetaName {
 
 	public final PlanetHardness planetHardness;
-	public static final PropertyEnum<HotRocks.EnumType> VARIANT = PropertyEnum.create("variant", HotRocks.EnumType.class);
+	public static final PropertyEnum<HotRocks.EnumType> VARIANT_HOTROCKS = PropertyEnum.create("variant", HotRocks.EnumType.class);
 
 	public HotRocks(String name, Material material, PlanetHardness planetHardness) {
 		super(name, material);
@@ -61,13 +61,13 @@ public class HotRocks extends BlockBase implements IMetaName {
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return this.getDefaultState().withProperty(VARIANT, HotRocks.EnumType.byMetadata(meta));
+		return this.getDefaultState().withProperty(VARIANT_HOTROCKS, HotRocks.EnumType.byMetadata(meta));
 	}
 
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return state.getValue(VARIANT).getMeta();
+		return state.getValue(VARIANT_HOTROCKS).getMeta();
 	}
 
 	@Override
@@ -79,7 +79,7 @@ public class HotRocks extends BlockBase implements IMetaName {
 	@Override
 	protected BlockStateContainer createBlockState()
 	{
-		return new BlockStateContainer(this, VARIANT);
+		return new BlockStateContainer(this, VARIANT_HOTROCKS);
 	}
 
 
@@ -87,9 +87,9 @@ public class HotRocks extends BlockBase implements IMetaName {
 
 	public enum EnumType implements IStringSerializable
 	{
-		HOT(1, "hot"),
-		VERYHOT(2, "veryhot"),
-		SUPERHEATED(3, "superheated");
+		HOT(0, "hot"),
+		VERYHOT(1, "veryhot"),
+		SUPERHEATED(2, "superheated");
 
 		private static final HotRocks.EnumType[] META_LOOKUP = new HotRocks.EnumType[]{HOT, VERYHOT, SUPERHEATED};
 		private final int meta;
@@ -139,7 +139,7 @@ public class HotRocks extends BlockBase implements IMetaName {
 	@Override
 	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
 		System.out.println(meta);
-		return this.getDefaultState().withProperty(VARIANT, HotRocks.EnumType.byMetadata(meta));
+		return this.getDefaultState().withProperty(VARIANT_HOTROCKS, HotRocks.EnumType.byMetadata(meta));
 	}
 
 	@Override

@@ -71,7 +71,7 @@ public class IronLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() == 0 && this.canCreateSources)
 				{
-					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.IRON_SUPERCOMPACT.getDefaultState()));
+					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SUPERCOMPRESSED_IRON.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}

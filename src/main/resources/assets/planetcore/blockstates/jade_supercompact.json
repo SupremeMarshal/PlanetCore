@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:jade_supercompact" }
+        "normal": { "model": "planetcore:jade_supercompressed" }
     }
 }

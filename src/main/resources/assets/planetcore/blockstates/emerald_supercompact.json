@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "planetcore:emerald_supercompact" }
+        "normal": { "model": "planetcore:emerald_supercompressed" }
     }
 }
