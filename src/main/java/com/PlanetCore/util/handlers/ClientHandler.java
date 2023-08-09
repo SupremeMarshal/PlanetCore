@@ -161,7 +161,7 @@ public class ClientHandler {
             if (stack.getItem() instanceof IronDrill) {
                 ISound sound = e.getSound();
                 ResourceLocation rl = sound.getSoundLocation();
-                if (rl.getPath().endsWith("break")) {
+                if (rl.getPath().endsWith("hit")) {
                     e.setResultSound(null);
                 }
             }
