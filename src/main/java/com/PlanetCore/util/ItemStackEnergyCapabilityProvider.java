@@ -9,13 +9,13 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.EnergyStorage;
+import net.minecraftforge.energy.IEnergyStorage;
 
 import javax.annotation.Nullable;
 
 public class ItemStackEnergyCapabilityProvider<T extends Item & EnergyUser> implements ICapabilityProvider {
 
-    public static final String ENERGY = "Energy";
-    public final EnergyStorage storage;
+    public final ItemStackEnergyStorage<T> storage;
 
     public ItemStackEnergyCapabilityProvider(final ItemStack stack, T item) {
         this.storage = new ItemStackEnergyStorage<>(stack,item);
@@ -35,37 +35,64 @@ public class ItemStackEnergyCapabilityProvider<T extends Item & EnergyUser> impl
         return null;
     }
 
-    public static class ItemStackEnergyStorage<T extends Item & EnergyUser> extends EnergyStorage {
+    public static class ItemStackEnergyStorage<T extends Item & EnergyUser> implements IEnergyStorage {
 
         private final ItemStack stack;
+        private final T energyUser;
 
         public ItemStackEnergyStorage(ItemStack stack, T item) {
-            super(item.getCapacity(),item.getTransfer());
-            this.energy = item.getStoredEnergy(stack);
             this.stack = stack;
+            this.energyUser = item;
         }
 
         @Override
         public int receiveEnergy(int maxReceive, boolean simulate) {
-            int i = super.receiveEnergy(maxReceive, simulate);
-            if (!simulate && i > 0) {
-                saveToItem();
+            if (!canReceive())
+                return 0;
+
+            int energy = getEnergyStored();
+            int energyReceived = Math.min(getMaxEnergyStored() - energy, Math.min(energyUser.getTransfer(), maxReceive));
+            if (!simulate) {
+                setEnergy(energyReceived + energy);
             }
-            return i;
+            return energyReceived;
         }
 
-        public void saveToItem() {
-            if (!stack.hasTagCompound()) stack.setTagCompound(new NBTTagCompound());
-            stack.getTagCompound().setInteger(ENERGY,energy);
+        @Override
+        public boolean canReceive() {
+            return true;
+        }
+
+        @Override
+        public boolean canExtract() {
+            return true;
+        }
+
+        @Override
+        public int getEnergyStored() {
+            return energyUser.getStoredEnergy(stack);
+        }
+
+        @Override
+        public int getMaxEnergyStored() {
+            return energyUser.getCapacity();
+        }
+
+        public void setEnergy(int energy) {
+            energyUser.setStoredEnergy(stack,energy);
         }
 
         @Override
         public int extractEnergy(int maxExtract, boolean simulate) {
-            int i = super.extractEnergy(maxExtract, simulate);
-            if (!simulate && i > 0) {
-                saveToItem();
+            if (!canExtract())
+                return 0;
+
+            int energy = getEnergyStored();
+            int energyExtracted = Math.min(energy, Math.min(energyUser.getTransfer(), maxExtract));
+            if (!simulate) {
+                setEnergy(energy - energyExtracted);
             }
-            return i;
+            return energyExtracted;
         }
     }
 }

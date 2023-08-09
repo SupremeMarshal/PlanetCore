@@ -232,11 +232,6 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
     }
 
     @Override
-    public int getStoredEnergy(ItemStack stack) {
-        return stack.hasTagCompound() ? stack.getTagCompound().getInteger(ItemStackEnergyCapabilityProvider.ENERGY) : 0;
-    }
-
-    @Override
     public void consumeEnergy(ItemStack stack,int amount) {
         stack.getCapability(CapabilityEnergy.ENERGY,null).extractEnergy(amount,false);
     }
