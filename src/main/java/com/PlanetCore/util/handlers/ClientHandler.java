@@ -4,6 +4,7 @@ import com.PlanetCore.items.Drills.IronDrill;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.init.MobEffects;
@@ -35,9 +36,8 @@ public class ClientHandler {
                     efficiency += effLevel * effLevel + 1;
                 }
                 PotionEffect effect = (event.getEntityPlayer()).getActivePotionEffect(MobEffects.HASTE);
-                if (effect != null)
-                {
-                    efficiency = efficiency*(1+(0.2F*effect.getAmplifier()));
+                if (effect != null) {
+                    efficiency = efficiency * (1 + (0.2F * effect.getAmplifier()));
                 }
             }
             float relentless = PickaxeRelentlessHandler.getRelentless(stack);
@@ -154,13 +154,16 @@ public class ClientHandler {
 
     @SubscribeEvent
     public static void playSound(PlaySoundEvent e) {
-        ItemStack stack = Minecraft.getMinecraft().player.getHeldItemMainhand();
+        EntityPlayer player = Minecraft.getMinecraft().player;
 
-        if (stack.getItem() instanceof IronDrill) {
-            ISound sound = e.getSound();
-            ResourceLocation rl = sound.getSoundLocation();
-            if (rl.getPath().contains("break")) {
-                e.setResultSound(null);
+        if (player != null) {
+            ItemStack stack = player.getHeldItemMainhand();
+            if (stack.getItem() instanceof IronDrill) {
+                ISound sound = e.getSound();
+                ResourceLocation rl = sound.getSoundLocation();
+                if (rl.getPath().endsWith("break")) {
+                    e.setResultSound(null);
+                }
             }
         }
     }
