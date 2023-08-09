@@ -1,5 +1,8 @@
 package com.PlanetCore.util.handlers;
 
+import com.PlanetCore.items.Drills.IronDrill;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.audio.ISound;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
@@ -7,10 +10,15 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.InputUpdateEvent;
+import net.minecraftforge.client.event.sound.PlaySoundEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.util.GeckoLibUtil;
 
 @Mod.EventBusSubscriber(Side.CLIENT)
 public class ClientHandler {
@@ -125,6 +133,35 @@ public class ClientHandler {
             event.getToolTip().add("Can break supercompact: " + supercompact);
             event.getToolTip().add("Efficiency: " + efficiency);
             event.getToolTip().add("Relentless: " + relentless);
+        }
+    }
+
+    @SubscribeEvent
+    public static void trackLeftClick(InputUpdateEvent e) {
+        boolean attacking = Minecraft.getMinecraft().gameSettings.keyBindAttack.isKeyDown();
+        ItemStack stack = Minecraft.getMinecraft().player.getHeldItemMainhand();
+        if (stack.getItem() instanceof IronDrill) {
+            IronDrill ironDrill = (IronDrill) stack.getItem();
+            AnimationController<?> controller =
+                    GeckoLibUtil.getControllerForStack(ironDrill.getFactory(), stack, IronDrill.CTRL_NAME);
+            if (attacking) {
+                controller.setAnimation(IronDrill.ACTIVE_DRILL);
+            } else {
+                controller.setAnimation(IronDrill.INACTIVE_DRILL);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void playSound(PlaySoundEvent e) {
+        ItemStack stack = Minecraft.getMinecraft().player.getHeldItemMainhand();
+
+        if (stack.getItem() instanceof IronDrill) {
+            ISound sound = e.getSound();
+            ResourceLocation rl = sound.getSoundLocation();
+            if (rl.getPath().contains("break")) {
+                e.setResultSound(null);
+            }
         }
     }
 }
