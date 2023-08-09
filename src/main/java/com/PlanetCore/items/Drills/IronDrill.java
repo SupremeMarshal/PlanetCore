@@ -5,8 +5,6 @@ import com.PlanetCore.util.ItemStackEnergyCapabilityProvider;
 import com.PlanetCore.util.handlers.pickaxe3x3Handler;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.settings.GameSettings;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,9 +18,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.energy.CapabilityEnergy;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.InputEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.jetbrains.annotations.Nullable;
@@ -38,10 +33,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-@Mod.EventBusSubscriber()
 public class IronDrill extends Item implements IAnimatable, EnergyUser {
-
-    public static boolean drill_active;
 
     private int energy_per_block_broken = 50;
 
@@ -95,10 +87,11 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
     }
 
     public AnimationFactory factory = new AnimationFactory(this);
+    public static final String CTRL_NAME = "iron_drill";
 
     @Override
     public void registerControllers(AnimationData animationData) {
-        animationData.addAnimationController(new AnimationController<>(this, "iron_drill", 1, this::predicate));
+        animationData.addAnimationController(new AnimationController<>(this, CTRL_NAME, 1, this::predicate));
     }
 
     @Override
@@ -112,11 +105,6 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
     }
 
     private <P extends Item & IAnimatable> PlayState predicate(AnimationEvent<P> event) {
-        if (drill_active) {
-            event.getController().setAnimation((new AnimationBuilder()).addAnimation("drill_active", true));
-        } else {
-            event.getController().setAnimation((new AnimationBuilder()).addAnimation("drill_inactive", true));
-        }
         return PlayState.CONTINUE;
     }
 
@@ -234,19 +222,17 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
         return false;
     }
 
+    public static final AnimationBuilder ACTIVE_DRILL = new AnimationBuilder().addAnimation("drill_active", true);
+    public static final AnimationBuilder INACTIVE_DRILL = new AnimationBuilder().addAnimation("drill_inactive", false);
+
+
     @Override
     public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack stack) {
-        return true;
-    }
-
-    @SubscribeEvent
-    public static void onPlayerStoppedLeftClicking(InputEvent.MouseInputEvent event) {
-        GameSettings gs = Minecraft.getMinecraft().gameSettings;
-        if (gs.keyBindAttack.isKeyDown()) // add your additional conditions here
-        {
-            drill_active = true;
+        boolean enoughEnergy = getStoredEnergy(stack) >= energy_per_block_broken;
+        if (enoughEnergy) {
+            return true;
         } else {
-            drill_active = false;
+            return false;
         }
     }
 
