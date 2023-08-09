@@ -225,15 +225,10 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
     public static final AnimationBuilder ACTIVE_DRILL = new AnimationBuilder().addAnimation("drill_active", true);
     public static final AnimationBuilder INACTIVE_DRILL = new AnimationBuilder().addAnimation("drill_inactive", false);
 
-
+    //swing if the drill doesn't have enough energy
     @Override
     public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack stack) {
-        boolean enoughEnergy = getStoredEnergy(stack) >= energy_per_block_broken;
-        if (enoughEnergy) {
-            return true;
-        } else {
-            return false;
-        }
+        return getStoredEnergy(stack) >= energy_per_block_broken;
     }
 
     @Override
