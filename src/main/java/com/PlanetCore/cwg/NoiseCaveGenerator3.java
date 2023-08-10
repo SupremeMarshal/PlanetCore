@@ -53,9 +53,9 @@ public class NoiseCaveGenerator3 implements ICubicStructureGenerator {
             double transitionConstant2 = 0.26;
 
             // bigger value = finer detail for caves. Adding 1 = double the detail
-            int caveOctaves = 8;
+            int caveOctaves = 16;
             // bigger value = finer detail for placement. Adding 1 = double the detail
-            int placementOctaves = 8;
+            int placementOctaves = 16;
 
             // bigger values -> caves are more filled with air and less with stone
             double caveFillConstant = 0.0;
@@ -91,14 +91,14 @@ public class NoiseCaveGenerator3 implements ICubicStructureGenerator {
             z = Coords.blockToLocal(z);
             boolean skip = false;
             if (y != ICube.SIZE - 1) {
-                if (!cubePrimer.getBlockState(x, y, z).getMaterial().isLiquid() && cubePrimer.getBlockState(x, y + 1, z).getMaterial().isLiquid()) {
-                    cubePrimer.setBlockState(x, y, z, stoneBlock);
-                    skip = true;
-                }
+//                if (cubePrimer.getBlockState(x, y, z).getMaterial().isLiquid()) {
+//                    cubePrimer.setBlockState(x, y, z, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
+//                    skip = true;
+//                }
             }
-            if (cubePrimer.getBlockState(x, y, z).getMaterial().isLiquid()) {
-                skip = true;
-            }
+//            if (cubePrimer.getBlockState(x, y, z).getMaterial().isLiquid()) {
+//                skip = true;
+//            }
 
             if (!skip) {
                 if (value > 0) {
