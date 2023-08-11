@@ -74,11 +74,9 @@ public class BlockBase extends Block {
 
 
 				/**
-				 * The pressure effect occur more and more exponentially. Every 1024 Y level, the pressure effect's growth by Y level is doubled.
-				 * At -6500Y, the chance is at 37% making the pressure happen extremely frequently.
-				 * Goodluck mining at these levels.
+				 * The pressure effect occur more and more below -512Y. The pressure effect cause the terrain to close on itself.
 				 */
-				if (pos.getY() < 0 && Math.random() >= pos.getY() * -0.0000025) {
+				if (pos.getY() <= -512 && Math.random() >= (pos.getY() + 512) * -0.000006) {
 					return;
 				}
 				for (EnumFacing side : EnumFacing.values()) {
