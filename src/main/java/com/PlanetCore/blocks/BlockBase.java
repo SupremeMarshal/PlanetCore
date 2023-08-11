@@ -70,13 +70,13 @@ public class BlockBase extends Block {
 
 		@Override
 		public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && pos.getY() < 0) {
+			if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && pos.getY() <= -512) {
 
 
 				/**
 				 * The pressure effect occur more and more below -512Y. The pressure effect cause the terrain to close on itself.
 				 */
-				if (pos.getY() <= -512 && Math.random() >= (pos.getY() + 512) * -0.000006) {
+				if (Math.random() >= (pos.getY() + 512) * -0.000006) {
 					return;
 				}
 				for (EnumFacing side : EnumFacing.values()) {
