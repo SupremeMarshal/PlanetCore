@@ -354,7 +354,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
         int startWalkedDistance = -1;
         int maxWalkedDistance = -1;
-        double vertCaveSizeMod = 1.0;
+        double vertCaveSizeMod = 3.0;
         this.generateNode(cube, caveType, seed, generatedCubePos, x, y, z,
                 baseHorizSize, horizDirAngle, vertDirAngle,
                 startWalkedDistance, maxWalkedDistance, vertCaveSizeMod, lavaHeight);
@@ -557,7 +557,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                             cube.setBlockState(localX, localY, localZ, block);
                         }
                         if (REPLACE_WITH_AIR) {
-                            cube.setBlockState(localX, localY, localZ, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
+                            cube.setBlockState(localX, localY, localZ, Blocks.AIR.getDefaultState());
                             if (Coords.localToBlock(generatedCubeY, localY) <= lavaHeight) {
                                 cube.setBlockState(localX, localY, localZ, caveType.lavaMaterial);
                             }
