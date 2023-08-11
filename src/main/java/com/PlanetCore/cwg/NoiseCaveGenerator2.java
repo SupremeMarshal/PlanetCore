@@ -1,5 +1,6 @@
 package com.PlanetCore.cwg;
 
+import com.PlanetCore.blocks.Corestone;
 import com.PlanetCore.init.ModBlocks;
 import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
@@ -67,11 +68,19 @@ public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
             // specifies how quickly cave systems become smaller as you go up
             double yCutoffFactor2 = 0.004;
 
+            // caves will begin to get smaller below this height
+            double yCutoff1 = -1400;
+            // specifies how quickly they will get smaller as you go down
+            double yCutoffFactor3 = -0.004;
+            // specifies how quickly cave systems become smaller as you go down
+            double yCutoffFactor4 = -0.004;
+
             IBuilder caveNoise = NoiseSource.perlin().frequency(caveScale).octaves(caveOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1024).create()
-                    .add((x, y, z) -> y < yCutoff ? 0 : ((yCutoff - y) * yCutoffFactor1));
+                    .add((x, y, z) -> y > yCutoff ? ((yCutoff - y) * yCutoffFactor1) : y < yCutoff1 ? ((yCutoff1 - y) * yCutoffFactor3) : 0);
+
             IBuilder placementNoise = NoiseSource.perlin().frequency(placementScale).octaves(placementOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1025).create()
                     .apply(Math::abs).sub(caveSystemSizeFactor)
-                    .add((x, y, z) -> y < yCutoff ? 0 : ((yCutoff - y) * yCutoffFactor2))
+                    .add((x, y, z) -> y > yCutoff ? ((yCutoff - y) * yCutoffFactor2) : y < yCutoff1 ? ((yCutoff1 - y) * yCutoffFactor4) : 0)
                     .mul(transitionConstant1).clamp(0, 1);
             this.builder = placementNoise.mul(caveNoise.add(caveFillConstant)).sub(transitionConstant2);
             this.stoneBlock = findStoneBlock(world.getWorldInfo().getGeneratorOptions(), cubePos);
@@ -89,27 +98,14 @@ public class NoiseCaveGenerator2 implements ICubicStructureGenerator {
             x = Coords.blockToLocal(x);
             y = Coords.blockToLocal(y);
             z = Coords.blockToLocal(z);
-            boolean skip = false;
-            if (y != ICube.SIZE - 1) {
-//                if (cubePrimer.getBlockState(x, y, z).getMaterial().isLiquid()) {
-//                    cubePrimer.setBlockState(x, y, z, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
-//                    skip = true;
-//                }
-            }
-//            if (cubePrimer.getBlockState(x, y, z).getMaterial().isLiquid()) {
-//                skip = true;
-//            }
-
-            if (!skip) {
-                if (value > 0) {
-                    cubePrimer.setBlockState(x, y, z, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
-                }
-                else {
-                    if (value + gradY > 0) {
-                        Biome biome = world.getBiomeProvider().getBiome(new BlockPos(blockX, blockY, blockZ));
-                        if (cubePrimer.getBlockState(x, y, z) == biome.fillerBlock) {
-                            cubePrimer.setBlockState(x, y, z, biome.topBlock);
-                        }
+            if (value > 0) {
+                if (blockY < -768) cubePrimer.setBlockState(x, y, z, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+                else cubePrimer.setBlockState(x, y, z, Blocks.AIR.getDefaultState());
+            } else {
+                if (value + gradY > 0) {
+                    Biome biome = world.getBiomeProvider().getBiome(new BlockPos(blockX, blockY, blockZ));
+                    if (cubePrimer.getBlockState(x, y, z) == biome.fillerBlock) {
+                        cubePrimer.setBlockState(x, y, z, biome.topBlock);
                     }
                 }
             }

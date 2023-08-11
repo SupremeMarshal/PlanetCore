@@ -88,7 +88,7 @@ public class NoiseCaveGenerator implements ICubicStructureGenerator {
             }
             if (!skip) {
                 if (value > 0) {
-                    cubePrimer.setBlockState(x, y, z, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
+                    cubePrimer.setBlockState(x, y, z, Blocks.AIR.getDefaultState());
                 } else {
                     if (value + gradY > 0) {
                         Biome biome = world.getBiomeProvider().getBiome(new BlockPos(blockX, blockY, blockZ));
