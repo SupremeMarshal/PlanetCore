@@ -33,6 +33,7 @@ public class HotRocks extends BlockBase implements IMetaName {
 	public final PlanetHardness planetHardness;
 	public static final PropertyEnum<HotRocks.EnumType> VARIANT_HOTROCKS = PropertyEnum.create("variant", HotRocks.EnumType.class);
 
+	public static final int [] LightLevel = {5, 10, 15};
 	public HotRocks(String name, Material material, PlanetHardness planetHardness) {
 		super(name, material);
 		setSoundType(SoundType.STONE);
@@ -41,6 +42,7 @@ public class HotRocks extends BlockBase implements IMetaName {
 		this.planetHardness = planetHardness;
 	}
 
+
 	@Override
 	public int damageDropped(IBlockState state) {
 		return getMetaFromState(state);
@@ -48,7 +50,8 @@ public class HotRocks extends BlockBase implements IMetaName {
 
 	@Override
 	public int getLightValue(IBlockState state) {
-		return (15);
+		int meta = getMetaFromState(state);
+		return (LightLevel[meta]);
 	}
 
 	@Override
