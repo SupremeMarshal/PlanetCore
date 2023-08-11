@@ -106,7 +106,7 @@ public class ImprovedRavineGenerator implements ICubicStructureGenerator {
      */
     @Nonnull
     private static final Predicate<IBlockState> isBlockReplaceable = (state ->
-            state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS);
+            state.getMaterial() == Material.ROCK || state.getMaterial() == Material.IRON || state.getBlock() == Blocks.DIRT || state.getBlock() == Blocks.GRASS || state.getMaterial().isLiquid());
 
     private final int maxCubeY;
 
