@@ -16400,7 +16400,6 @@
 						]
 					},
 					"generateWhen": {
-						
 						"x": 0.0,
 						"y": 0.0,
 						"z": 0.0,
@@ -16829,7 +16828,4780 @@
 			"biome": 1,
 			"biomeSize": 4,
 			"riverSize": 4,
-			"standardOres": [],
+			"standardOres": [
+				{
+					"blockstate": "gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:granite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 2,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:diorite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 2,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:andesite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 2,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:majorite_gravel"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 22,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:amazonite_gravel"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 22,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:onyx_gravel"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 22,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_lapis"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_lapis"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_lapis"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_sulfur"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_sulfur"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_sulfur"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_iron"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_iron"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_iron"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_silver"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_silver"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_silver"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_gold"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_gold"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_gold"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_titanium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_titanium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_titanium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_uranium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_uranium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_uranium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_tungsten"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_tungsten"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_tungsten"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_redstone"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_redstone"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_redstone"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_diamond"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_diamond"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_diamond"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_emerald"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_emerald"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_emerald"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_ruby"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_ruby"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_ruby"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_sapphire"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_sapphire"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_sapphire"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_majorite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_majorite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_majorite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 6,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_small_amazonite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_amazonite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_amazonite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 6,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_amazonite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 5,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_small_onyx"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_onyx"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 6,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_onyx"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 5,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_onyx"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 4,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_painite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 5,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_painite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 4,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_painite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 3,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:granite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 2,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:diorite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 2,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:andesite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 2,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:majorite_gravel"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 22,
+					"spawnTries": 1,
+					"spawnProbability": 0.2,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:amazonite_gravel"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 22,
+					"spawnTries": 1,
+					"spawnProbability": 0.2,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:onyx_gravel"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 22,
+					"spawnTries": 1,
+					"spawnProbability": 0.2,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_lapis"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_lapis"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_lapis"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_sulfur"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_sulfur"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_sulfur"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_iron"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_iron"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_iron"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_silver"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_silver"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_silver"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_gold"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_gold"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_gold"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_titanium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_titanium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_titanium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_uranium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_uranium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_uranium"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_tungsten"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_tungsten"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_tungsten"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_redstone"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_redstone"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_redstone"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_diamond"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_diamond"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_diamond"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_emerald"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_emerald"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_emerald"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_ruby"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_ruby"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_ruby"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_sapphire"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_sapphire"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_sapphire"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_majorite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_majorite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_majorite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 6,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_small_amazonite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_amazonite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_amazonite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 6,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_amazonite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 5,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_small_onyx"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_onyx"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 6,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "innercorestone"
+						},
+						"Name": "planetcore:corestone_compact_onyx"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 5,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_onyx"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "innercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 4,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_painite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 5,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "centercorestone"
+						},
+						"Name": "planetcore:corestone_compact_painite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 4,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Properties": {
+							"variant": "superheated"
+						},
+						"Name": "planetcore:supercompressed_painite"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "centercorestone"
+								},
+								"Name": "planetcore:corestone"
+							}
+						]
+					},
+					"spawnSize": 3,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				}
+			],
 			"periodicGaussianOres": [],
 			"expectedBaseHeight": -2176.0,
 			"expectedHeightVariation": 64.0,
