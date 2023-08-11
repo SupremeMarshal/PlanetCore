@@ -281,47 +281,27 @@ public class Corestone extends BlockBase implements IMetaName {
 		int X = pos.getX();
 		int Z = pos.getZ();
 		int Y = pos.getY();
-		if (!worldIn.isRemote && Y < -5000) {
+		if (!worldIn.isRemote && Y < -1000) {
 			if (state.getBlock().getMetaFromState(state) == 0) {
-				if (rand.nextInt(365) == 0) {
+				if (rand.nextInt(100) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 1) {
-				if (rand.nextInt(304) == 0) {
+				if (rand.nextInt(50) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
 				}
 			}
 			if (state.getBlock().getMetaFromState(state) == 2) {
-				if (rand.nextInt(253) == 0) {
+				if (rand.nextInt(33) == 0) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 3) {
-				if (rand.nextInt(211) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 5, true);
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 4) {
-				if (rand.nextInt(176) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 5, true);
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 5) {
-				if (rand.nextInt(146) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 5, true);
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 6) {
-				if (rand.nextInt(73) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(7) + 6, true);
 				}
 			}
 		}
 	}
 
 	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
+	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
 		BlockPos blockpos = pos.up();
 		IBlockState iblockstate = worldIn.getBlockState(blockpos);
@@ -336,12 +316,17 @@ public class Corestone extends BlockBase implements IMetaName {
 				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
 			}
 		}
+		if (Math.random() < 0.0001 * this.getMetaFromState(state) && worldIn.getBlockState(pos.up()).getMaterial() == Material.AIR)
+		{
+			worldIn.setBlockState(pos.up(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+		}
 	}
 
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		super.onPlayerDestroy(worldIn, pos, state);
 		naturalGasExplosion(worldIn, pos, state);
+		worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
 	}
 
 	public boolean canEntitySpawn(IBlockState state, Entity entityIn)

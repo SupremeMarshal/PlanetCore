@@ -1,6 +1,7 @@
 package com.PlanetCore.blocks;
 
 
+import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -174,25 +175,22 @@ public class Mantlerock extends BlockBase implements IMetaName
 		int Y = pos.getY();
 		int meta = getMetaFromState(state);
 		if (!worldIn.isRemote) {
-			if (meta == 0 && rand.nextInt(4000) == 0) {
+			if (meta == 0 && Math.random() < 0.01) {
 					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
 			}
-			if (meta == 1 && rand.nextInt(2666) == 0) {
+			else if (meta == 1 && Math.random() < 0.02) {
 				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
 			}
-			if (meta == 2 && rand.nextInt(1776) == 0) {
+			else if (meta == 2 && Math.random() < 0.03) {
 				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(4) + 1, true);
 			}
-			if (meta == 3 && rand.nextInt(1184) == 0) {
+			else if (meta == 3 && Math.random() < 0.04) {
 				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 			}
-			if (meta == 4 && rand.nextInt(790) == 0) {
+			else if (meta == 4 && Math.random() < 0.05) {
 				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 			}
-			if (meta == 5 && rand.nextInt(526) == 0) {
-				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
-			}
-			if (rand.nextInt(438) == 0) {
+			else if (meta == 5 && Math.random() < 0.06) {
 				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 			}
 		}
@@ -202,5 +200,25 @@ public class Mantlerock extends BlockBase implements IMetaName
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		super.onPlayerDestroy(worldIn, pos, state);
 		naturalGasExplosion(worldIn, pos, state);
+		if (getMetaFromState(state) == 1 && Math.random() < 0.02)
+		{
+			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+		}
+		else if (getMetaFromState(state) == 2 && Math.random() < 0.08)
+		{
+			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+		}
+		else if (getMetaFromState(state) == 3 && Math.random() < 0.2)
+		{
+			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+		}
+		else if (getMetaFromState(state) == 4 && Math.random() < 0.4)
+		{
+			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+		}
+		else if (getMetaFromState(state) == 5)
+		{
+			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+		}
 	}
 }
