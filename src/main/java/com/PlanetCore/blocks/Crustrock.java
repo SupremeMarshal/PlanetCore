@@ -30,7 +30,7 @@ public class Crustrock extends BlockBase implements IMetaName
 
 	public Crustrock(String name, Material material)
 	{
-		super(name, material);
+		super(name, material,false);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);

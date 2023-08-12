@@ -34,7 +34,7 @@ public class BlocksBase extends BlockBase implements IMetaName {
 
 	public static final PropertyEnum<BlocksBase.EnumType> VARIANT_SUPERCOMPRESSED = PropertyEnum.create("variant", BlocksBase.EnumType.class);
 	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
-		super(name, material);
+		super(name, material,false);
 		setSoundType(SoundType.METAL);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);

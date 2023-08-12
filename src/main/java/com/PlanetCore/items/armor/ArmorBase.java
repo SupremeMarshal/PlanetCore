@@ -2,7 +2,6 @@ package com.PlanetCore.items.armor;
 
 
 import com.PlanetCore.init.ArmorMaterials;
-import com.PlanetCore.init.ModItems;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -30,32 +29,13 @@ import java.util.UUID;
 public class ArmorBase extends ItemArmor {
 
 
+    private final float healthBoost;
 
-
-    public ArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+    public ArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn, float healthBoost) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
+        this.healthBoost = healthBoost;
         setCreativeTab(CreativeTabs.COMBAT);
     }
-
-    @Override
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
-    {
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) return repair.getItem() == ModItems.SILVER_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM) return repair.getItem() == ModItems.TITANIUM_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM) return repair.getItem() == ModItems.URANIUM_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) return repair.getItem() == ModItems.TUNGSTEN_INGOT || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) return repair.getItem() == ModItems.RUBY || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) return repair.getItem() == ModItems.SAPPHIRE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE) return repair.getItem() == ModItems.MAJORITE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) return repair.getItem() == ModItems.AMAZONITE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) return repair.getItem() == ModItems.ONYX || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II) return repair.getItem() == ModItems.PAINITE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III) return repair.getItem() == ModItems.PAINITE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV) return repair.getItem() == ModItems.PAINITE || super.getIsRepairable(toRepair, repair);
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) return repair.getItem() == ModItems.PAINITE || super.getIsRepairable(toRepair, repair);
-        return super.getIsRepairable(toRepair, repair);
-    }
-
 
     public static final UUID MAX_HEALTH_HELM_UUID = UUID.fromString("de2d6ce5-561c-47e6-a9d1-219b6a1fac02");
     public static final UUID MAX_HEALTH_BODY_UUID = UUID.fromString("f32661c4-8f25-4404-a3d3-6627735bf883");
@@ -80,40 +60,24 @@ public class ArmorBase extends ItemArmor {
 
         Multimap<String, AttributeModifier> mods = super.getAttributeModifiers(slot, stack);
 
-        float health = 0;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM) health = 0.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM) health = 0.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) health = 1.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY) health = 1.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) health = 2.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE) health = 2.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) health = 3.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX) health = 3.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II) health = 4.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III) health = 4.5F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV) health = 5.0F;
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) health = 6.0F;
-
-
-
         String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
         String knockback_resistance = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
         if (slot == EntityEquipmentSlot.HEAD) {
 
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_HELM_UUID, "MAX_HEALTH_HELM_UUID", health, 0));
+            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_HELM_UUID, "MAX_HEALTH_HELM_UUID", healthBoost, 0));
         }
         if (slot == EntityEquipmentSlot.CHEST) {
 
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BODY_UUID, "MAX_HEALTH_BODY_UUID", health, 0));
+            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BODY_UUID, "MAX_HEALTH_BODY_UUID", healthBoost, 0));
         }
         if (slot == EntityEquipmentSlot.LEGS) {
 
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_LEGS_UUID, "MAX_HEALTH_LEGS_UUID", health, 0));
+            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_LEGS_UUID, "MAX_HEALTH_LEGS_UUID", healthBoost, 0));
         }
         if (slot == EntityEquipmentSlot.FEET) {
 
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BOOTS_UUID, "MAX_HEALTH_BOOTS_UUID", health, 0));
+            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BOOTS_UUID, "MAX_HEALTH_BOOTS_UUID", healthBoost, 0));
         }
         return mods;
 

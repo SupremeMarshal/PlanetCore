@@ -1,15 +1,10 @@
 package com.PlanetCore.init;
 
 
-import com.PlanetCore.blocks.BlockBase;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-
-import java.util.Locale;
 
 public class ModSmelting {
 	
@@ -19,10 +14,10 @@ public class ModSmelting {
 		 * NORMAL FURNACE RECIPES
 		 */
 
-		GameRegistry.addSmelting(ModBlocks.IRON_BLOCK, new ItemStack(Items.IRON_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(Blocks.IRON_BLOCK, new ItemStack(Items.IRON_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.SULFUR_BLOCK, new ItemStack(ModItems.SULFUR, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.SILVER_BLOCK, new ItemStack(ModItems.SILVER_INGOT, 9), 1.0F);
-		GameRegistry.addSmelting(ModBlocks.GOLD_BLOCK, new ItemStack(Items.GOLD_INGOT, 9), 1.0F);
+		GameRegistry.addSmelting(Blocks.GOLD_BLOCK, new ItemStack(Items.GOLD_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.TITANIUM_BLOCK, new ItemStack(ModItems.TITANIUM_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.URANIUM_BLOCK, new ItemStack(ModItems.URANIUM_INGOT, 9), 1.0F);
 		GameRegistry.addSmelting(ModBlocks.TUNGSTEN_BLOCK, new ItemStack(ModItems.TUNGSTEN_INGOT, 9), 1.0F);

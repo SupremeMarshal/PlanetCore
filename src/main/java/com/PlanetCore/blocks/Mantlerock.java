@@ -36,7 +36,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 
 	public Mantlerock(String name, Material material)
 	{
-		super(name, material);
+		super(name, material,false);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
@@ -48,10 +48,7 @@ public class Mantlerock extends BlockBase implements IMetaName
 		int meta = getMetaFromState(worldIn.getBlockState(pos));
 		if (meta > 1 && !entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn))
 		{
-			if (meta == 2) entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 1.0F);
-			if (meta == 3) entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 2.0F);
-			if (meta == 4) entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 3.0F);
-			if (meta == 5) entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, 4.0F);
+			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, meta - 1);
 		}
 
 		super.onEntityWalk(worldIn, pos, entityIn);

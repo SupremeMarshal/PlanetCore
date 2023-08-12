@@ -1,6 +1,5 @@
 package com.PlanetCore.items.shields;
 
-import com.PlanetCore.init.ModBlocks;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
@@ -8,10 +7,10 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -49,57 +48,23 @@ public class Shield extends ItemShield {
 
     private static final Map<IAttribute, AttributeModifier> modMap = new HashMap<>();
 
-    @Override
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+    public String getItemStackDisplayName(ItemStack stack)
     {
-        if (shieldMaterial == ShieldMaterial.IRON) return repair.getItem() == Item.getItemFromBlock(ModBlocks.IRON_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.SILVER) return repair.getItem() == Item.getItemFromBlock(ModBlocks.SILVER_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.GOLD) return repair.getItem() == Item.getItemFromBlock(ModBlocks.GOLD_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.TITANIUM) return repair.getItem() == Item.getItemFromBlock(ModBlocks.TITANIUM_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.URANIUM) return repair.getItem() == Item.getItemFromBlock(ModBlocks.URANIUM_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.TUNGSTEN) return repair.getItem() == Item.getItemFromBlock(ModBlocks.TUNGSTEN_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.RUBY) return repair.getItem() == Item.getItemFromBlock(ModBlocks.RUBY_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.SAPPHIRE) return repair.getItem() == Item.getItemFromBlock(ModBlocks.SAPPHIRE_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.DIAMOND) return repair.getItem() == Item.getItemFromBlock(ModBlocks.DIAMOND_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.MAJORITE) return repair.getItem() == Item.getItemFromBlock(ModBlocks.MAJORITE_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.AMAZONITE) return repair.getItem() == Item.getItemFromBlock(ModBlocks.AMAZONITE_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.ONYX) return repair.getItem() == Item.getItemFromBlock(ModBlocks.ONYX_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.ONYXII) return repair.getItem() == Item.getItemFromBlock(ModBlocks.PAINITE_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.ONYXIII) return repair.getItem() == Item.getItemFromBlock(ModBlocks.PAINITE_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.ONYXIV) return repair.getItem() == Item.getItemFromBlock(ModBlocks.PAINITE_BLOCK) || super.getIsRepairable(toRepair, repair);
-        if (shieldMaterial == ShieldMaterial.ONYXV) return repair.getItem() == Item.getItemFromBlock(ModBlocks.PAINITE_BLOCK) || super.getIsRepairable(toRepair, repair);
+        return I18n.translateToLocal(this.getUnlocalizedNameInefficiently(stack) + ".name").trim();
+    }
 
-
-        return super.getIsRepairable(toRepair, repair);
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return shieldMaterial.getRepairMaterial().test(repair) || super.getIsRepairable(toRepair, repair);
     }
 
     @Override
     public boolean isShield(ItemStack stack, @Nullable EntityLivingBase entity)
     {
-        return stack.getItem() == this;
+        return true;
     }
 
-    @Override
-    public String getItemStackDisplayName(ItemStack stack) {
 
-        if (shieldMaterial == ShieldMaterial.IRON) return ("Iron shield");
-        if (shieldMaterial == ShieldMaterial.SILVER) return ("Silver shield");
-        if (shieldMaterial == ShieldMaterial.GOLD) return ("Gold shield");
-        if (shieldMaterial == ShieldMaterial.TITANIUM) return ("Titanium shield");
-        if (shieldMaterial == ShieldMaterial.URANIUM) return ("Uranium shield");
-        if (shieldMaterial == ShieldMaterial.TUNGSTEN) return ("Tungsten shield");
-        if (shieldMaterial == ShieldMaterial.RUBY) return ("Ruby shield");
-        if (shieldMaterial == ShieldMaterial.SAPPHIRE) return ("Sapphire shield");
-        if (shieldMaterial == ShieldMaterial.DIAMOND) return ("Diamond shield");
-        if (shieldMaterial == ShieldMaterial.MAJORITE) return ("Majorite shield");
-        if (shieldMaterial == ShieldMaterial.AMAZONITE) return ("Amazonite shield");
-        if (shieldMaterial == ShieldMaterial.ONYX) return ("Onyx shield");
-        if (shieldMaterial == ShieldMaterial.ONYXII) return ("Onyx shield II");
-        if (shieldMaterial == ShieldMaterial.ONYXIII) return ("Onyx shield III");
-        if (shieldMaterial == ShieldMaterial.ONYXIV) return ("Onyx shield IV");
-        if (shieldMaterial == ShieldMaterial.ONYXV) return ("Onyx shield V");
-        return ("Shield");
-    }
 
     @SideOnly(Side.CLIENT)
     @Override

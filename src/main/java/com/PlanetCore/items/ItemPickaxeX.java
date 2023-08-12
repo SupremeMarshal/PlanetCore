@@ -8,7 +8,5 @@ import net.minecraft.item.ItemPickaxe;
 public class ItemPickaxeX extends ItemPickaxe {
     public ItemPickaxeX(ToolMaterial material) {
         super(material);
-        this.attackDamage = material.getAttackDamage() * 0.7F;
-        this.attackSpeed = -1F;
     }
 }

@@ -1,16 +1,12 @@
 package com.PlanetCore.blocks;
 
 
-
-
-import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
@@ -25,7 +21,7 @@ public class SuperheatedRocks extends BlockBase {
 	public final PlanetHardness planetHardness;
 
 	public SuperheatedRocks(String name, Material material, PlanetHardness planetHardness) {
-		super(name, material);
+		super(name, material,false);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
