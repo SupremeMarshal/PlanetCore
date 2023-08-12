@@ -35,7 +35,7 @@ public class HotRocks extends BlockBase implements IMetaName {
 
 	public static final int [] LightLevel = {5, 10, 15};
 	public HotRocks(String name, Material material, PlanetHardness planetHardness) {
-		super(name, material);
+		super(name, material,false);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);

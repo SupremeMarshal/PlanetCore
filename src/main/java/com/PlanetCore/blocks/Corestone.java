@@ -37,7 +37,7 @@ public class Corestone extends BlockBase implements IMetaName {
 	public static final PropertyEnum<Corestone.EnumType> VARIANT = PropertyEnum.create("variant", Corestone.EnumType.class);
 
 	public Corestone(String name, Material material) {
-		super(name, material);
+		super(name, material,false);
 
 		setSoundType(SoundType.METAL);
 		setHarvestLevel("pickaxe", 3);

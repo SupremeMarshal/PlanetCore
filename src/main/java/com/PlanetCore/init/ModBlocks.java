@@ -197,16 +197,13 @@ public class ModBlocks {
     public static final BlockBase ONYX_BLOCK = _null();
     public static final BlockBase AMAZONITE_BLOCK = _null();
     public static final BlockBase MAJORITE_BLOCK = _null();
-    public static final BlockBase DIAMOND_BLOCK = _null();
     public static final BlockBase SAPPHIRE_BLOCK = _null();
     public static final BlockBase RUBY_BLOCK = _null();
     public static final BlockBase TUNGSTEN_BLOCK = _null();
     public static final BlockBase TITANIUM_BLOCK = _null();
     public static final BlockBase URANIUM_BLOCK = _null();
-    public static final BlockBase GOLD_BLOCK = _null();
     public static final BlockBase SILVER_BLOCK = _null();
     public static final BlockBase SULFUR_BLOCK = _null();
-    public static final BlockBase IRON_BLOCK = _null();
 
     public static final VeryHotRocks MANTLEROCK1_BOULDER = _null();
     public static final VeryHotRocks MANTLEROCK2_BOULDER = _null();
@@ -258,7 +255,7 @@ public class ModBlocks {
         registry.registerAll(
 
                 new BlockAirNoPressure("air_no_pressure", Material.AIR).setResistance(100000),
-                new BlockBase("crust_cobblestone", Material.ROCK).setHardness(2.0F).setResistance(1),
+                new BlockBase("crust_cobblestone", Material.ROCK,false).setHardness(2.0F).setResistance(1),
                 new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
                 new HotRocks("granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
                 new HotRocks("diorite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
@@ -291,21 +288,21 @@ public class ModBlocks {
                 new SuperheatedRocks("outercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(13),
                 new SuperheatedRocks("innercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(15),
                 new SuperheatedRocks("centercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(15),
-                new BlockBase("sulfur_block", Material.ROCK).setHardness(1F).setResistance(1),
-                new BlockBase("silver_block", Material.IRON).setHardness(15.0F).setResistance(1),
-                new BlockBase("titanium_block", Material.IRON).setHardness(50F).setResistance(3),
-                new BlockBase("uranium_block", Material.IRON).setHardness(75F).setResistance(4),
-                new BlockBase("tungsten_block", Material.IRON).setHardness(250F).setResistance(5),
-                new BlockBase("ruby_block", Material.IRON).setHardness(2000F).setResistance(7),
-                new BlockBase("sapphire_block", Material.IRON).setHardness(3000F).setResistance(8),
-                new BlockBase("majorite_block", Material.IRON).setHardness(33750F).setResistance(20),
-                new BlockBase("amazonite_block", Material.IRON).setHardness(50000F).setResistance(25),
-                new BlockBase("onyx_block", Material.IRON).setHardness(200000F).setResistance(30),
-                new BlockBase("painite_block", Material.IRON).setHardness(1000000F).setResistance(30),
+                new BlockBase("sulfur_block", Material.ROCK,false).setHardness(1F).setResistance(1),
+                new BlockBase("silver_block", Material.IRON,true).setHardness(15.0F).setResistance(1),
+                new BlockBase("titanium_block", Material.IRON,true).setHardness(50F).setResistance(3),
+                new BlockBase("uranium_block", Material.IRON,true).setHardness(75F).setResistance(4),
+                new BlockBase("tungsten_block", Material.IRON,true).setHardness(250F).setResistance(5),
+                new BlockBase("ruby_block", Material.IRON,true).setHardness(2000F).setResistance(7),
+                new BlockBase("sapphire_block", Material.IRON,true).setHardness(3000F).setResistance(8),
+                new BlockBase("majorite_block", Material.IRON,true).setHardness(33750F).setResistance(20),
+                new BlockBase("amazonite_block", Material.IRON,true).setHardness(50000F).setResistance(25),
+                new BlockBase("onyx_block", Material.IRON,true).setHardness(200000F).setResistance(30),
+                new BlockBase("painite_block", Material.IRON,true).setHardness(1000000F).setResistance(30),
                 new BlocksBase("supercompressed_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_SUPERCOMPACT, PlanetExp.SULFUR_SUPERCOMPACT).setResistance(1),
                 new BlocksBase("supercompressed_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_SUPERCOMPACT, PlanetExp.REDSTONE_SUPERCOMPACT).setResistance(1),
                 new BlocksBase("supercompressed_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_SUPERCOMPACT, PlanetExp.LAPIS_SUPERCOMPACT).setResistance(1),
-                new BlockBase("supercompressed_coal", Material.ROCK).setResistance(1),
+                new BlockBase("supercompressed_coal", Material.ROCK,false).setResistance(1),
                 new BlocksBase("supercompressed_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_SUPERCOMPACT, PlanetExp.IRON_SUPERCOMPACT).setResistance(4),
                 new BlocksBase("supercompressed_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_SUPERCOMPACT, PlanetExp.SILVER_SUPERCOMPACT).setResistance(6),
                 new BlocksBase("supercompressed_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_SUPERCOMPACT, PlanetExp.GOLD_SUPERCOMPACT).setResistance(8),

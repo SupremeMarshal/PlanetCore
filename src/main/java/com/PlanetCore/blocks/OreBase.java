@@ -18,7 +18,7 @@ public class OreBase extends BlockBase {
 
     public OreBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
     {
-        super(name, material);
+        super(name, material,false);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
         this.planetExp = planetExp;
