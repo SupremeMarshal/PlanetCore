@@ -27,11 +27,6 @@ public class BlockAirNoPressure extends Block {
     }
 
     @Override
-    public SoundType getSoundType(IBlockState state, World world, BlockPos pos, @org.jetbrains.annotations.Nullable Entity entity) {
-        return null;
-    }
-
-    @Override
     public EnumBlockRenderType getRenderType(IBlockState state)
     {
         return EnumBlockRenderType.INVISIBLE;
