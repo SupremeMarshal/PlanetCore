@@ -1,6 +1,7 @@
 package com.PlanetCore.blocks;
 
 
+import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
@@ -19,7 +20,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
@@ -162,60 +162,29 @@ public class Mantlerock extends BlockBase implements IMetaName
 	}
 
 
-	//Natural Gas Explosion event
-	//Upon destroying the block, it has a small chance to explode. The deeper the rock is, the more probability it has to explode with a larger explosion.
-	public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
-	{
+	@Override
+	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest) {
 		Random rand = new Random();
 		int X = pos.getX();
 		int Z = pos.getZ();
 		int Y = pos.getY();
 		int meta = getMetaFromState(state);
-		if (!worldIn.isRemote) {
-			if (meta == 0 && Math.random() < 0.01) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(2) + 1, true);
+		int refinerLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.Refiner, player);
+		int frostMiningLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.FrostMining, player);
+		if (!world.isRemote) {
+			if (Math.random() < (0.05556 * meta) * (1 - (0.2 * refinerLevel))) {
+				world.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 			}
-			else if (meta == 1 && Math.random() < 0.02) {
-				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(3) + 1, true);
-			}
-			else if (meta == 2 && Math.random() < 0.03) {
-				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(4) + 1, true);
-			}
-			else if (meta == 3 && Math.random() < 0.04) {
-				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
-			}
-			else if (meta == 4 && Math.random() < 0.05) {
-				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
-			}
-			else if (meta == 5 && Math.random() < 0.06) {
-				worldIn.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
+			if (Math.random() < (0.05556 * meta) * (1 - (0.2 * frostMiningLevel))) {
+				world.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
 			}
 		}
+		return super.removedByPlayer(state, world, pos, player, willHarvest);
 	}
 
 	@Override
 	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
 		super.onPlayerDestroy(worldIn, pos, state);
-		naturalGasExplosion(worldIn, pos, state);
-		if (getMetaFromState(state) == 1 && Math.random() < 0.02)
-		{
-			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-		}
-		else if (getMetaFromState(state) == 2 && Math.random() < 0.08)
-		{
-			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-		}
-		else if (getMetaFromState(state) == 3 && Math.random() < 0.2)
-		{
-			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-		}
-		else if (getMetaFromState(state) == 4 && Math.random() < 0.4)
-		{
-			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-		}
-		else if (getMetaFromState(state) == 5)
-		{
-			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-		}
+
 	}
 }

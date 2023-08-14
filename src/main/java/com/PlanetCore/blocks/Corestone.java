@@ -1,5 +1,6 @@
 package com.PlanetCore.blocks;
 
+import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
@@ -272,34 +273,6 @@ public class Corestone extends BlockBase implements IMetaName {
 		return 15728880;
 	}
 
-
-
-
-	public void naturalGasExplosion(World worldIn, BlockPos pos, IBlockState state)
-	{
-		Random rand = new Random();
-		int X = pos.getX();
-		int Z = pos.getZ();
-		int Y = pos.getY();
-		if (!worldIn.isRemote && Y < -1000) {
-			if (state.getBlock().getMetaFromState(state) == 0) {
-				if (rand.nextInt(100) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 1) {
-				if (rand.nextInt(50) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
-				}
-			}
-			if (state.getBlock().getMetaFromState(state) == 2) {
-				if (rand.nextInt(33) == 0) {
-					worldIn.createExplosion(null, X, Y, Z, rand.nextInt(6) + 4, true);
-				}
-			}
-		}
-	}
-
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand)
 	{
@@ -323,10 +296,24 @@ public class Corestone extends BlockBase implements IMetaName {
 	}
 
 	@Override
-	public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
-		super.onPlayerDestroy(worldIn, pos, state);
-		naturalGasExplosion(worldIn, pos, state);
-		worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest) {
+		Random rand = new Random();
+		int X = pos.getX();
+		int Z = pos.getZ();
+		int Y = pos.getY();
+		int meta = getMetaFromState(state);
+		int refinerLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.Refiner, player);
+		int frostMiningLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.FrostMining, player);
+		if (!world.isRemote) {
+			if (Math.random() < (0.3334 * meta) * (1 - (0.2 * refinerLevel))) {
+				world.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
+			}
+			if (Math.random() < (0.3334 * meta) * (1 - (0.2 * frostMiningLevel))) {
+				world.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+			}
+		}
+
+		return super.removedByPlayer(state, world, pos, player, willHarvest);
 	}
 
 	public boolean canEntitySpawn(IBlockState state, Entity entityIn)

@@ -254,7 +254,7 @@ public class ModBlocks {
 
         registry.registerAll(
 
-                new BlockAirNoPressure("air_no_pressure", Material.AIR).setResistance(100000),
+                new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
                 new BlockBase("crust_cobblestone", Material.ROCK,false).setHardness(2.0F).setResistance(1),
                 new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
                 new HotRocks("granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
@@ -376,6 +376,9 @@ public class ModBlocks {
                 new MantlerockOre("mantlerock_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND,PlanetExp.DIAMOND).setResistance(1),
                 new MantlerockOre("mantlerock_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD,PlanetExp.EMERALD).setResistance(1),
                 new MantlerockOre("mantlerock_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE,PlanetExp.MAJORITE).setResistance(10),
+                new MantlerockOre("mantlerock_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE,PlanetExp.AMAZONITE).setResistance(10),
+                new MantlerockOre("mantlerock_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX,PlanetExp.ONYX).setResistance(10),
+                new MantlerockOre("mantlerock_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE,PlanetExp.PAINITE).setResistance(10),
 
                 new MantlerockOreCompact("mantlerock_compact_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL_COMPACT,PlanetExp.COAL_COMPACT).setResistance(1),
                 new MantlerockOreCompact("mantlerock_compact_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_COMPACT,PlanetExp.IRON_COMPACT).setResistance(1),
@@ -392,6 +395,9 @@ public class ModBlocks {
                 new MantlerockOreCompact("mantlerock_compact_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_COMPACT,PlanetExp.DIAMOND_COMPACT).setResistance(10),
                 new MantlerockOreCompact("mantlerock_compact_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_COMPACT,PlanetExp.EMERALD_COMPACT).setResistance(10),
                 new MantlerockOreCompact("mantlerock_compact_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE_COMPACT,PlanetExp.MAJORITE_COMPACT).setResistance(100),
+                new MantlerockOreCompact("mantlerock_compact_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE_COMPACT,PlanetExp.AMAZONITE_COMPACT).setResistance(10),
+                new MantlerockOreCompact("mantlerock_compact_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX_COMPACT,PlanetExp.ONYX_COMPACT).setResistance(10),
+                new MantlerockOreCompact("mantlerock_compact_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE_COMPACT,PlanetExp.PAINITE_COMPACT).setResistance(10),
 
                 new CorestoneOre("corestone_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY,PlanetExp.RUBY).setResistance(10),
                 new CorestoneOre("corestone_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE,PlanetExp.SAPPHIRE).setResistance(10),

@@ -106,11 +106,6 @@ public class EntityVeryHotMagmaCube extends EntityMagmaCube
 	}
 
 	@Override
-	protected boolean canDespawn() {
-		return false;
-	}
-
-	@Override
 	public int getMaxSpawnedInChunk() {
 		return 5;
 	}

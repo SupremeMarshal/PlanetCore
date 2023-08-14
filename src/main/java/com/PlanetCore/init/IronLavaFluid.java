@@ -134,7 +134,7 @@ public class IronLavaFluid extends BlockFluidClassic {
 		super.updateTick(worldIn, pos, state, rand);
 		float chance = 0.4F;
 		if (pos.getY() <= -1600) {
-			if (Math.random() < chance && worldIn.getBlockState(pos.up()) == Blocks.AIR.getDefaultState())
+			if (Math.random() < chance && worldIn.getBlockState(pos.up()).getMaterial() == Material.AIR && worldIn.getBlockState(pos.up()).getMaterial() != Material.FIRE)
 				worldIn.setBlockState(pos.up(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
 		}
 		this.checkForMixing(worldIn, pos, state);

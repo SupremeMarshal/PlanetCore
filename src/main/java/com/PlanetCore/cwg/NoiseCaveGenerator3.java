@@ -69,11 +69,11 @@ public class NoiseCaveGenerator3 implements ICubicStructureGenerator {
             double yCutoffFactor2 = 0.004;
 
             // caves will begin to get smaller below this height
-            double yCutoff1 = -1400;
+            double yCutoff1 = -1500;
             // specifies how quickly they will get smaller as you go down
-            double yCutoffFactor3 = -0.004;
+            double yCutoffFactor3 = -0.001;
             // specifies how quickly cave systems become smaller as you go down
-            double yCutoffFactor4 = -0.004;
+            double yCutoffFactor4 = -0.001;
 
             IBuilder caveNoise = NoiseSource.perlin().frequency(caveScale).octaves(caveOctaves).normalizeTo(-1, 1).seed(world.getSeed() + 1024).create()
                     .add((x, y, z) -> y > yCutoff ? ((yCutoff - y) * yCutoffFactor1) : y < yCutoff1 ? ((yCutoff1 - y) * yCutoffFactor3) : 0);
@@ -100,8 +100,8 @@ public class NoiseCaveGenerator3 implements ICubicStructureGenerator {
             y = Coords.blockToLocal(y);
             z = Coords.blockToLocal(z);
             if (value > 0) {
-                if (blockY < -768) cubePrimer.setBlockState(x, y, z, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-                else cubePrimer.setBlockState(x, y, z, Blocks.AIR.getDefaultState());
+                if (blockY < -768 && blockY > -1800) cubePrimer.setBlockState(x, y, z, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+                else cubePrimer.setBlockState(x, y, z, ModBlocks.AIR_NO_PRESSURE.getDefaultState());
             } else {
                 if (value + gradY > 0) {
                     Biome biome = world.getBiomeProvider().getBiome(new BlockPos(blockX, blockY, blockZ));
