@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "variant=corestone": {"model": "planetcore:corestone_compact_sulfur"},
+    "variant=innercorestone": {"model": "planetcore:innercorestone_compact_sulfur"},
+    "variant=centercorestone": {"model": "planetcore:centercorestone_compact_sulfur"}}}

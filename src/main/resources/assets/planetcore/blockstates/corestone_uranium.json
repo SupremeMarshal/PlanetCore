@@ -1,0 +1,4 @@
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_uranium"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_uranium"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_uranium"}}}

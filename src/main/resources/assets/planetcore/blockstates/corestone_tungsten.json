@@ -1,0 +1,4 @@
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_tungsten"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_tungsten"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_tungsten"}}}

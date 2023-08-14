@@ -1,0 +1,4 @@
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_iron"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_iron"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_iron"}}}

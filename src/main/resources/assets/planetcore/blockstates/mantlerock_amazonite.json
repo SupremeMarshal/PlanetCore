@@ -1,0 +1,7 @@
+{"variants": {
+  "variant=mantlerock": {"model":"planetcore:mantlerock_amazonite"},
+  "variant=mantlerock1":{"model":"planetcore:mantlerock1_amazonite"},
+  "variant=mantlerock2":{"model":"planetcore:mantlerock2_amazonite"},
+  "variant=lower_mantlerock":{"model":"planetcore:lower_mantlerock_amazonite"},
+  "variant=lower_mantlerock1":{"model":"planetcore:lower_mantlerock1_amazonite"},
+  "variant=lower_mantlerock2":{"model":"planetcore:lower_mantlerock2_amazonite"}}}

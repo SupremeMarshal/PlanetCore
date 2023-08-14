@@ -1,0 +1,4 @@
+{"variants":{
+  "variant=corestone":{"model":"planetcore:corestone_titanium"},
+  "variant=innercorestone":{"model":"planetcore:innercorestone_titanium"},
+  "variant=centercorestone":{"model":"planetcore:centercorestone_titanium"}}}
