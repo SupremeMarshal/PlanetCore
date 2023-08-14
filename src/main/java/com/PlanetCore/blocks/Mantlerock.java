@@ -15,6 +15,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
@@ -161,6 +162,17 @@ public class Mantlerock extends BlockBase implements IMetaName
 		return Mantlerock.EnumType.values()[stack.getItemDamage()].getName();
 	}
 
+	@Override
+	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+		int Y = pos.getY();
+		int meta = getMetaFromState(state);
+		if (Math.random() < 0.1 * meta && (worldIn.isAirBlock(pos.up()))) {
+			{
+				worldIn.setBlockState(pos.up(), Blocks.FIRE.getDefaultState(), 11);
+			}
+		}
+		super.randomTick(worldIn, pos, state, rand);
+	}
 
 	@Override
 	public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer player, boolean willHarvest) {
@@ -170,12 +182,12 @@ public class Mantlerock extends BlockBase implements IMetaName
 		int Y = pos.getY();
 		int meta = getMetaFromState(state);
 		int refinerLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.Refiner, player);
-		int frostMiningLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.FrostMining, player);
+		int frostingLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.Frosting, player);
 		if (!world.isRemote) {
 			if (Math.random() < (0.05556 * meta) * (1 - (0.2 * refinerLevel))) {
 				world.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 			}
-			if (Math.random() < (0.05556 * meta) * (1 - (0.2 * frostMiningLevel))) {
+			if (Math.random() < (0.05556 * meta) * (1 - (0.2 * frostingLevel))) {
 				world.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
 			}
 		}
