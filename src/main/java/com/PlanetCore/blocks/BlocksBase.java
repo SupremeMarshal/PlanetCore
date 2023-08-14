@@ -31,7 +31,7 @@ public class BlocksBase extends BlockBase implements IMetaName {
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
 	public final PlanetExp planetExp;
-
+	public static final int [] LightLevel = {0, 5, 10, 15};
 	public static final PropertyEnum<BlocksBase.EnumType> VARIANT_SUPERCOMPRESSED = PropertyEnum.create("variant", BlocksBase.EnumType.class);
 	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
 		super(name, material,false);
@@ -50,7 +50,8 @@ public class BlocksBase extends BlockBase implements IMetaName {
 
 	@Override
 	public int getLightValue(IBlockState state) {
-		return (15);
+		int meta = getMetaFromState(state);
+		return (LightLevel[meta]);
 	}
 
 	@Override
