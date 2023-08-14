@@ -278,6 +278,13 @@ public class Corestone extends BlockBase implements IMetaName {
 	{
 		BlockPos blockpos = pos.up();
 		IBlockState iblockstate = worldIn.getBlockState(blockpos);
+		int Y = pos.getY();
+		int meta = getMetaFromState(state);
+		if (Math.random() < 0.6 + 0.2 * (meta + 1) && Y < -400 && (worldIn.isAirBlock(pos.up()))) {
+			{
+				worldIn.setBlockState(pos.up(), Blocks.FIRE.getDefaultState(), 11);
+			}
+		}
 
 		if (iblockstate.getBlock() == Blocks.WATER || iblockstate.getBlock() == Blocks.FLOWING_WATER)
 		{
@@ -289,10 +296,11 @@ public class Corestone extends BlockBase implements IMetaName {
 				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
 			}
 		}
-		if (Math.random() < 0.0001 * this.getMetaFromState(state) && worldIn.getBlockState(pos.up()).getMaterial() == Material.AIR)
+		if (Math.random() < 0.01 * (meta + meta + meta + 1) && (worldIn.isAirBlock(pos.up()) || worldIn.isAirBlock(pos.down()) || worldIn.isAirBlock(pos.north()) || worldIn.isAirBlock(pos.south()) || worldIn.isAirBlock(pos.west()) || worldIn.isAirBlock(pos.east())))
 		{
-			worldIn.setBlockState(pos.up(), ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
 		}
+		super.randomTick(worldIn, pos, state, rand);
 	}
 
 	@Override
@@ -303,12 +311,12 @@ public class Corestone extends BlockBase implements IMetaName {
 		int Y = pos.getY();
 		int meta = getMetaFromState(state);
 		int refinerLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.Refiner, player);
-		int frostMiningLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.FrostMining, player);
+		int frostingLevel = EnchantmentHelper.getMaxEnchantmentLevel(EnchantmentInit.Frosting, player);
 		if (!world.isRemote) {
 			if (Math.random() < (0.3334 * meta) * (1 - (0.2 * refinerLevel))) {
 				world.createExplosion(null, X, Y, Z, rand.nextInt(5) + 1, true);
 			}
-			if (Math.random() < (0.3334 * meta) * (1 - (0.2 * frostMiningLevel))) {
+			if (Math.random() < (0.3334 * meta) * (1 - (0.2 * frostingLevel))) {
 				world.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
 			}
 		}
