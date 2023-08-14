@@ -2,7 +2,6 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
-import com.google.common.base.Predicate;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -13,7 +12,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
@@ -58,7 +56,7 @@ public class BlockBase extends Block {
 			/**
 			 * The pressure effect occur more and more below -512Y. The pressure effect cause the terrain to close on itself.
 			 */
-			if (Math.random() >= (pos.getY() + 512) * -0.000006) {
+			if (Math.random() >= (pos.getY() + 512) * -0.000025) {
 				return;
 			}
 			for (EnumFacing side : EnumFacing.values()) {
