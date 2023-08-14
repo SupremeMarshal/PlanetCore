@@ -8,11 +8,11 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.ResourceLocation;
 
 
-public class FrostMining extends Enchantment{
-    public FrostMining(){
+public class Frosting extends Enchantment{
+    public Frosting(){
         super(Rarity.VERY_RARE, EnumEnchantmentType.DIGGER, new EntityEquipmentSlot[] {EntityEquipmentSlot.MAINHAND});
-        this.setName("frostMining");
-        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":frost_mining"));
+        this.setName("frosting");
+        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":frosting"));
         EnchantmentInit.ENCHANTMENTS.add(this);
     }
 

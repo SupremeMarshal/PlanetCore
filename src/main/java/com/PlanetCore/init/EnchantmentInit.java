@@ -1,6 +1,6 @@
 package com.PlanetCore.init;
 
-import com.PlanetCore.enchantments.FrostMining;
+import com.PlanetCore.enchantments.Frosting;
 import com.PlanetCore.enchantments.Refiner;
 import com.PlanetCore.enchantments.RelentlessEnchantment;
 import com.PlanetCore.util.Reference;
@@ -22,6 +22,6 @@ public class EnchantmentInit
 
     public static final Enchantment Relentless = new RelentlessEnchantment();
     public static final Enchantment Refiner = new Refiner();
-    public static final Enchantment FrostMining = new FrostMining();
+    public static final Enchantment Frosting = new Frosting();
 
 }
