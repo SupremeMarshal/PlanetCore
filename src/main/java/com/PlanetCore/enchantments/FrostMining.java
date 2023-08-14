@@ -8,64 +8,26 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.util.ResourceLocation;
 
 
-public class Efficiency extends Enchantment
-
-{
-
-    public Efficiency()
-
-    {
-
-        super(Rarity.COMMON, EnumEnchantmentType.DIGGER, new EntityEquipmentSlot[] {EntityEquipmentSlot.MAINHAND});
-
-        this.setName("efficiency");
-
-        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":efficiency"));
-
-
-
+public class FrostMining extends Enchantment{
+    public FrostMining(){
+        super(Rarity.VERY_RARE, EnumEnchantmentType.DIGGER, new EntityEquipmentSlot[] {EntityEquipmentSlot.MAINHAND});
+        this.setName("frostMining");
+        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":frost_mining"));
         EnchantmentInit.ENCHANTMENTS.add(this);
-
     }
 
-
-
     @Override
-
-    public int getMinEnchantability(int enchantmentLevel)
-
-    {
-
+    public int getMinEnchantability(int enchantmentLevel){
         return 20 * enchantmentLevel;
-
     }
 
-
-
     @Override
-
-    public int getMaxEnchantability(int enchantmentLevel)
-
-    {
-
+    public int getMaxEnchantability(int enchantmentLevel){
         return this.getMinEnchantability(enchantmentLevel) + 10;
-
     }
-
-
 
     @Override
-
-    public int getMaxLevel()
-
-    {
-
-        return 10;
-
+    public int getMaxLevel(){
+        return 5;
     }
-
-
-
-
-
 }
