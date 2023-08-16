@@ -1,8 +1,13 @@
 package com.PlanetCore.items.armor;
 
 
+import com.PlanetCore.blocks.PlanetHardness;
 import com.PlanetCore.init.ArmorMaterials;
+import com.PlanetCore.init.ModItems;
+import com.PlanetCore.items.Drills.IronDrill;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -14,10 +19,16 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import net.minecraftforge.client.event.InputUpdateEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 import java.util.HashMap;
@@ -25,17 +36,25 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-
 public class ArmorBase extends ItemArmor {
 
 
-    private final float healthBoost;
+    private final float health;
+    public final int extraArmor;
+    private ArmorMaterial armorMaterials;
 
-    public ArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn, float healthBoost) {
+    public ArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn, float health, int extraArmor) {
         super(materialIn, renderIndexIn, equipmentSlotIn);
-        this.healthBoost = healthBoost;
+        this.health = health;
+        this.extraArmor = extraArmor;
         setCreativeTab(CreativeTabs.COMBAT);
     }
+
+//    @Override
+//    public ArmorMaterial getArmorMaterial() {
+//        armorMaterials = this.getArmorMaterial();
+//        return ArmorMaterial.valueOf(armorMaterials.toString()); // Replace with the appropriate ArmorMaterial
+//    }
 
     public static final UUID MAX_HEALTH_HELM_UUID = UUID.fromString("de2d6ce5-561c-47e6-a9d1-219b6a1fac02");
     public static final UUID MAX_HEALTH_BODY_UUID = UUID.fromString("f32661c4-8f25-4404-a3d3-6627735bf883");
@@ -63,21 +82,22 @@ public class ArmorBase extends ItemArmor {
         String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
         String knockback_resistance = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
+
         if (slot == EntityEquipmentSlot.HEAD) {
 
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_HELM_UUID, "MAX_HEALTH_HELM_UUID", healthBoost, 0));
+            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_HELM_UUID, "MAX_HEALTH_HELM_UUID", health, 0));
         }
         if (slot == EntityEquipmentSlot.CHEST) {
 
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BODY_UUID, "MAX_HEALTH_BODY_UUID", healthBoost, 0));
+            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BODY_UUID, "MAX_HEALTH_BODY_UUID", health, 0));
         }
         if (slot == EntityEquipmentSlot.LEGS) {
 
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_LEGS_UUID, "MAX_HEALTH_LEGS_UUID", healthBoost, 0));
+            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_LEGS_UUID, "MAX_HEALTH_LEGS_UUID", health, 0));
         }
         if (slot == EntityEquipmentSlot.FEET) {
 
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BOOTS_UUID, "MAX_HEALTH_BOOTS_UUID", healthBoost, 0));
+            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_BOOTS_UUID, "MAX_HEALTH_BOOTS_UUID", health, 0));
         }
         return mods;
 
@@ -98,7 +118,6 @@ public class ArmorBase extends ItemArmor {
             player.addPotionEffect(effect);
         }
     }
-
 
     @SideOnly(Side.CLIENT)
     @Override
@@ -128,47 +147,39 @@ public class ArmorBase extends ItemArmor {
          * tooltip 6 = +Resistance
          */
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
+            tooltip.add("§8"+damageReduceAmount);
+            tooltip.add("When equipped:");
+            tooltip.add("§9"+ damageReduceAmount+ " Armor");
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
+                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) {
+            tooltip.add("When equipped:");
+            tooltip.add("§9"+ damageReduceAmount+ " Armor");
+            tooltip.add("§9"+ toughness + " Toughness");
+            tooltip.add("§9"+ health + " Health bonus");
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
+            tooltip.add("When equipped:");
+            tooltip.add("§9"+ damageReduceAmount+ " Armor");
+            tooltip.add("§9"+ toughness + " Toughness");
+            tooltip.add("§9"+ health + " Health bonus");
+            tooltip.add("§9"+ extraArmor + " Extra Armor bonus");
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
+            tooltip.add("When equipped:");
+            tooltip.add("§9"+ damageReduceAmount + " Armor");
+            tooltip.add("§9"+ toughness + " Toughness");
+            tooltip.add("§9"+ health + " Health bonus");
+            tooltip.add("§9"+ extraArmor + " Extra Armor bonus");
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
             tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.7"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.8"));
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
     }

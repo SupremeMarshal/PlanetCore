@@ -95,6 +95,7 @@ public class RegistryHandler {
         MinecraftForge.EVENT_BUS.register(recipesEvent);
         MinecraftForge.EVENT_BUS.register(new FogHandler());
         MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
+        MinecraftForge.EVENT_BUS.register((new DamageReductionArmorHandler()));
         ModPotions.registerPotions();
 
         //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
@@ -118,22 +119,11 @@ public class RegistryHandler {
 
         ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
                         ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.SAPPHIRE_HELMET, ModItems.MAJORITE_HELMET, ModItems.AMAZONITE_HELMET, ModItems.ONYX_HELMET, ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.SAPPHIRE_CHESTPLATE, ModItems.MAJORITE_CHESTPLATE, ModItems.AMAZONITE_CHESTPLATE, ModItems.ONYX_CHESTPLATE, ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.SAPPHIRE_LEGGINGS, ModItems.MAJORITE_LEGGINGS, ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.SAPPHIRE_BOOTS, ModItems.MAJORITE_BOOTS, ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
-                        ),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 0)
-                )
-        );
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        ItemSetPieces.newArrayList(
                                 new Item[] {ModItems.MAJORITE_HELMET, ModItems.AMAZONITE_HELMET, ModItems.ONYX_HELMET, ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
                                 new Item[] {ModItems.MAJORITE_CHESTPLATE, ModItems.AMAZONITE_CHESTPLATE, ModItems.ONYX_CHESTPLATE, ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
                                 new Item[] {ModItems.MAJORITE_LEGGINGS, ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
                                 new Item[] {ModItems.MAJORITE_BOOTS, ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 0)
                 )
         );
@@ -144,7 +134,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.MAJORITE_LEGGINGS, ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
                                 new Item[] {ModItems.MAJORITE_BOOTS, ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.REGENERATION, 0, 0)
                 )
         );
@@ -155,7 +144,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
                                 new Item[] {ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.REGENERATION, 0, 1)
                 )
         );
@@ -166,7 +154,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
                                 new Item[] {ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.STRENGTH, 0, 0),
                         new PotionEffect(MobEffects.SPEED, 0, 0),
                         new PotionEffect(MobEffects.REGENERATION, 0, 1)
@@ -179,7 +166,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
                                 new Item[] {ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         )),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.STRENGTH, 0, 1),
                         new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 1)
@@ -192,7 +178,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
                                 new Item[] {ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.STRENGTH, 0, 2),
                         new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 2)
@@ -205,7 +190,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
                                 new Item[] {ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
                         ),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 2),
                         new PotionEffect(MobEffects.STRENGTH, 0, 3),
                         new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 3)
@@ -218,7 +202,6 @@ public class RegistryHandler {
                                 new Item[] {ModItems.ONYX_V_LEGGINGS},
                                 new Item[] {ModItems.ONYX_V_BOOTS}
                         ),
-                        new PotionEffect(MobEffects.RESISTANCE, 0, 3),
                         new PotionEffect(MobEffects.STRENGTH, 0, 4),
                         new PotionEffect(MobEffects.SPEED, 0, 1),
                         new PotionEffect(MobEffects.REGENERATION, 0, 4)
