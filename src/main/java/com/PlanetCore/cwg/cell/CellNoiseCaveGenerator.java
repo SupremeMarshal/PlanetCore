@@ -42,20 +42,19 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
         if (rand.nextBoolean()) {
             return CellCaveTypes.SMALL_CAVES;
         } else {
-            if (cellY > -512 && rand.nextFloat() < 0.1)
+            if (cellY > -512 && rand.nextFloat() < 0.2)
             {
-                return CellCaveTypes.NO_CAVE;
+                return CellCaveTypes.SUPER_LARGE_CAVES;
             }
             else if (rand.nextFloat() < 0.33) {
                 return CellCaveTypes.BIG_CAVES;
             }
-            else if (cellY < -768 && cellY > -1700) {
+            else if (cellY < -768 && rand.nextBoolean()) {
                 return CellCaveTypes.SUPER_LARGE_CAVES;
             }
-            else if (cellY < -1700)
-                if (rand.nextBoolean()) return CellCaveTypes.VERY_SMALL_CAVES;
-                else return CellCaveTypes.SUPER_LARGE_CAVES;
-            else return CellCaveTypes.SMALL_CAVES;
+            else if (rand.nextBoolean())
+                return CellCaveTypes.VERY_SMALL_CAVES;
+            else return CellCaveTypes.TINY_CAVE;
         }
     }
 
