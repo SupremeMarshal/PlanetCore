@@ -57210,7 +57210,7 @@
 						"blocks": [
 							{
 								"Properties": {
-									"variant": "innercorestone"
+									"variant": "centercorestone"
 								},
 								"Name": "planetcore:corestone"
 							}
@@ -57223,7 +57223,7 @@
 						"blocks": [
 							{
 								"Properties": {
-									"variant": "innercorestone"
+									"variant": "centercorestone"
 								},
 								"Name": "planetcore:corestone"
 							}
@@ -57330,7 +57330,7 @@
 						"blocks": [
 							{
 								"Properties": {
-									"variant": "innercorestone"
+									"variant": "centercorestone"
 								},
 								"Name": "planetcore:corestone"
 							}
@@ -57343,7 +57343,7 @@
 						"blocks": [
 							{
 								"Properties": {
-									"variant": "innercorestone"
+									"variant": "centercorestone"
 								},
 								"Name": "planetcore:corestone"
 							}
@@ -57598,7 +57598,7 @@
 				{
 					"blockstate": {
 						"Properties": {
-							"variant": "innercorestone"
+							"variant": "centercorestone"
 						},
 						"Name": "planetcore:corestone_compact_onyx"
 					},
@@ -57610,7 +57610,7 @@
 						"blocks": [
 							{
 								"Properties": {
-									"variant": "innercorestone"
+									"variant": "centercorestone"
 								},
 								"Name": "planetcore:corestone"
 							}
@@ -57623,7 +57623,7 @@
 						"blocks": [
 							{
 								"Properties": {
-									"variant": "innercorestone"
+									"variant": "centercorestone"
 								},
 								"Name": "planetcore:corestone"
 							}
@@ -57650,7 +57650,7 @@
 						"blocks": [
 							{
 								"Properties": {
-									"variant": "innercorestone"
+									"variant": "centercorestone"
 								},
 								"Name": "planetcore:corestone"
 							}
@@ -57663,7 +57663,7 @@
 						"blocks": [
 							{
 								"Properties": {
-									"variant": "innercorestone"
+									"variant": "centercorestone"
 								},
 								"Name": "planetcore:corestone"
 							}

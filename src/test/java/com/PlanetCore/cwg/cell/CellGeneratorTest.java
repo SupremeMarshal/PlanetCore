@@ -30,22 +30,23 @@ public class CellGeneratorTest {
         BufferedImage noiseCave = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
         for (int i = 0; i < w; i++) {
             for (int i1 = 0; i1 < h; i1++) {
-                noiseCave.setRGB(i, i1, terrain(-1, -1, 128));
+                noiseCave.setRGB(i, i1, terrain(-1, 0,-1, 128));
             }
         }
         CellNoiseCaveGenerator cn = new CellNoiseCaveGenerator(0);
 
-        long seed = 42;
+        long seed = 40;
 
         cn.generateScaled(seed,
                 new Vec3i(0, yOff / 4, 0),
                 new Vec3i(w / 4, (yOff + h) / 4, 1), new Vec3i(4, 4, 4),
                 (x, y, z, v, lavaY, lavaBlock, airBlock, cell, type, cellX, cellY, cellZ) -> {
                     int lavaDepth = lavaY - y;
-                    if (Math.abs(y - cellY) <= 2) {
-                        noiseCave.setRGB(x - xOff, h - 1 - (y - yOff), 0xFF00FF);
-                    } else {
-                        noiseCave.setRGB(x - xOff, h - 1 - (y - yOff), terrain(v, lavaDepth, cell));
+//                    if (Math.abs(y - cellY) <= 2) {
+//                        noiseCave.setRGB(x - xOff, h - 1 - (y - yOff), 0xFF00FF);
+//                    } else
+                    {
+                        noiseCave.setRGB(x - xOff, h - 1 - (y - yOff), terrain(v, y, lavaDepth, cell));
                     }
 
                 });
@@ -61,7 +62,7 @@ public class CellGeneratorTest {
         CellNoiseCaveGenerator cn = new CellNoiseCaveGenerator(0);
 
         CellNoiseCaveGenerator.CaveSample cs = new CellNoiseCaveGenerator.CaveSample();
-        long seed = 42;
+        long seed = 40;
         FastRandom rand = new FastRandom();
         for (int x = 0; x < w; x++) {
             for (int y = 0; y < h; y++) {
@@ -75,7 +76,7 @@ public class CellGeneratorTest {
     private static void cellNoise() throws IOException {
         final int w = 2048;
         final int h = 1024*3;
-        long seed = 42;
+        long seed = 40;
         CellGenerator cg = new CellGenerator(seed);
         BufferedImage cells = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
         BufferedImage distance = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
@@ -100,7 +101,7 @@ public class CellGeneratorTest {
     private static void turbulentCellNoise() throws IOException {
         final int w = 2048;
         final int h = 1024*3;
-        long seed = 42;
+        long seed = 40;
         CellGenerator cg = new CellGenerator(seed);
         BufferedImage cells = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
         BufferedImage distance = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
@@ -153,13 +154,66 @@ public class CellGeneratorTest {
         }
     }
 
-    private static int terrain(double x, int lavaDepth, int cell) {
+    private static int terrain(double x, double y, int lavaDepth, int cell) {
         boolean colorizeCells = false;
         if (x < 0) {
             int col = gray(MathHelper.clamp(-x * 0.8 + 0.4, 0.4, 0.8));
             if (colorizeCells) {
                 col = col & ~0xFF | (cell & 0xFF);
             }
+//
+//            if (y < 0)
+//            {
+//                col = 0x00cc00;
+//            }
+//            if (y < -1)
+//            {
+//                col = 0x663300;
+//            }
+//            if (y < -6)
+//            {
+//                col = 0xb5b5b5;
+//            }
+//            if (y < -255)
+//            {
+//                col = 0x6b7b4c;
+//            }
+//            if (y < -385)
+//            {
+//                col = 0xc4a600;
+//            }
+//            if (y < -512)
+//            {
+//                col = 0x942f00;
+//            }
+//            if (y < -768)
+//            {
+//                col = 0xff6000;
+//            }
+//            if (y < -1024)
+//            {
+//                col = 0xff8700;
+//            }
+//            if (y < -1280)
+//            {
+//                col = 0xffe100;
+//            }
+//            if (y < -1536)
+//            {
+//                col = 0xffea10;
+//            }
+//            if (y < -1792)
+//            {
+//                col = 0xffff95;
+//            }
+//            if (y < -2048)
+//            {
+//                col = 0xffffdc;
+//            }
+//            if (y < -2304)
+//            {
+//                col = 0xffffff;
+//            }
             return col;
         }
         if (lavaDepth >= 0) {

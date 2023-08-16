@@ -38,13 +38,24 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
     //       it's best to have a pre-made table/hashmap and choose from that instead
     //       if you have to create them dynamically - try caching, or contact me
     private CellCaveType caveTypeForCell(int cellX, int cellY, int cellZ, int cell, FastRandom rand) {
+
         if (rand.nextBoolean()) {
-            return CellCaveTypes.EXAMPLE;
+            return CellCaveTypes.SMALL_CAVES;
         } else {
-            if (rand.nextBoolean()) {
+            if (cellY > -512 && rand.nextFloat() < 0.1)
+            {
                 return CellCaveTypes.NO_CAVE;
             }
-            return CellCaveTypes.EXAMPLE_2;
+            else if (rand.nextFloat() < 0.33) {
+                return CellCaveTypes.BIG_CAVES;
+            }
+            else if (cellY < -768 && cellY > -1700) {
+                return CellCaveTypes.SUPER_LARGE_CAVES;
+            }
+            else if (cellY < -1700)
+                if (rand.nextBoolean()) return CellCaveTypes.VERY_SMALL_CAVES;
+                else return CellCaveTypes.SUPER_LARGE_CAVES;
+            else return CellCaveTypes.SMALL_CAVES;
         }
     }
 
@@ -55,10 +66,17 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
         int avgY;
         if (cellY > -200) {
             avgY = (int) (cellY - cellSizeY);
-        } else if (cellY > -2500) {
+        } else if (cellY > -1024) {
             avgY = cellY;
-        } else {
-            avgY = (int) (cellY + cellSizeY/2);
+        } else if (cellY > -2048) {
+            if (type == CellCaveTypes.SUPER_LARGE_CAVES) {
+                avgY = (int) (cellY + cellSizeY/2);
+            } else {
+                avgY = cellY;
+            }
+        }
+        else {
+            avgY = (int) (cellY + cellSizeY/4);
         }
         return randomLevel(rand, avgY, (int) (cellSizeY / 5), true);
     }
@@ -66,20 +84,20 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
     @SuppressWarnings("Convert2MethodRef")
     private Supplier<IBlockState> lavaBlock(int cellX, int cellY, int cellZ, CellCaveType type, int cell, FastRandom rand) {
         Block[] blocks = {
-                ModBlocks.IRON_LAVA_FLUID,
-                ModBlocks.REDSTONE_LAVA_FLUID,
-                ModBlocks.SILVER_LAVA_FLUID,
-                ModBlocks.GOLD_LAVA_FLUID,
-                ModBlocks.DIAMOND_LAVA_FLUID,
-                ModBlocks.TITANIUM_LAVA_FLUID,
-                ModBlocks.URANIUM_LAVA_FLUID,
-                ModBlocks.TUNGSTEN_LAVA_FLUID,
-                ModBlocks.RUBY_LAVA_FLUID,
-                ModBlocks.SAPPHIRE_LAVA_FLUID,
-                ModBlocks.MAJORITE_LAVA_FLUID,
-                ModBlocks.AMAZONITE_LAVA_FLUID,
-                ModBlocks.ONYX_LAVA_FLUID,
-                ModBlocks.PAINITE_LAVA_FLUID
+                ModBlocks.IRON_LAVA_FLUID
+//                ModBlocks.REDSTONE_LAVA_FLUID,
+//                ModBlocks.SILVER_LAVA_FLUID,
+//                ModBlocks.GOLD_LAVA_FLUID,
+//                ModBlocks.DIAMOND_LAVA_FLUID,
+//                ModBlocks.TITANIUM_LAVA_FLUID,
+//                ModBlocks.URANIUM_LAVA_FLUID,
+//                ModBlocks.TUNGSTEN_LAVA_FLUID,
+//                ModBlocks.RUBY_LAVA_FLUID,
+//                ModBlocks.SAPPHIRE_LAVA_FLUID,
+//                ModBlocks.MAJORITE_LAVA_FLUID,
+//                ModBlocks.AMAZONITE_LAVA_FLUID,
+//                ModBlocks.ONYX_LAVA_FLUID,
+//                ModBlocks.PAINITE_LAVA_FLUID
         };
         Block block = blocks[rand.nextInt(blocks.length)];
         return () -> block.getDefaultState();
