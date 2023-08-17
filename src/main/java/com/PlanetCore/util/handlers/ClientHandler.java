@@ -1,6 +1,7 @@
 package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.items.Drills.IronDrill;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -13,6 +14,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.InputUpdateEvent;
+import net.minecraftforge.client.event.RenderBlockOverlayEvent;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.sound.PlaySoundEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -153,6 +156,31 @@ public class ClientHandler {
     }
 
     @SubscribeEvent
+    public static void temperatureHud(RenderGameOverlayEvent event) {
+        if (event.getType() == RenderGameOverlayEvent.ElementType.ALL) {
+            Minecraft minecraft = Minecraft.getMinecraft();
+            EntityPlayer player = minecraft.player;
+            if (player != null) {
+                double y = player.posY;
+                if (y < 0) {
+                    double temp = TemperatureHandler.calcTemp(y);
+                    PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+                    int fireResist = effect == null ? 0 : effect.getAmplifier() + 1;
+                    int limit = TemperatureHandler.getLimit(fireResist);
+                    int color = 0x00ff00;
+
+                    if (temp >= limit) {
+                        color = 0xff0000;
+                    } else if (limit - temp < 10) {
+                        color = 0xffff00;
+                    }
+                    minecraft.ingameGUI.drawString(minecraft.fontRenderer,"Temperature: "+temp +" C",0,0,color);
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
     public static void playSound(PlaySoundEvent e) {
         EntityPlayer player = Minecraft.getMinecraft().player;
 
@@ -163,6 +191,25 @@ public class ClientHandler {
                 ResourceLocation rl = sound.getSoundLocation();
                 if (rl.getPath().endsWith("hit")) {
                     e.setResultSound(null);
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void overlay(RenderBlockOverlayEvent e) {
+        RenderBlockOverlayEvent.OverlayType overlayType = e.getOverlayType();
+        if (overlayType == RenderBlockOverlayEvent.OverlayType.FIRE) {
+            EntityPlayer player = e.getPlayer();
+            if (player.isBurning()) {
+
+                PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+                int fireResist = effect == null ? 0 : effect.getAmplifier() + 1;
+                double y = player.posY;
+                double temp = TemperatureHandler.calcTemp(y);
+                double damage = TemperatureHandler.getDamage(temp,fireResist);
+                if (damage <= 0) {
+                    e.setCanceled(true);
                 }
             }
         }
