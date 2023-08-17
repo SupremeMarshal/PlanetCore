@@ -34,7 +34,7 @@ import java.util.Random;
 
 public class Corestone extends BlockBase implements IMetaName {
 
-	private static final float [] coreHardnessByMeta = {80, 160, 320, 640};
+	public static final float [] coreHardnessByMeta = {135, 202, 303};
 	public static final PropertyEnum<Corestone.EnumType> VARIANT = PropertyEnum.create("variant", Corestone.EnumType.class);
 
 	public Corestone(String name, Material material) {

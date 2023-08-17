@@ -21,15 +21,15 @@ public class ToolMaterials {
     public static final Item.ToolMaterial COMPLETE_URANIUM = createToolMaterial("complete_uranium", 4, 240, 15.0F, 4.0F, 22, 2.0F);
     public static final Item.ToolMaterial TUNGSTEN = createToolMaterial("tungsten", 4, 2000, 20.0F, 4.0F, 22, 2F);
     public static final Item.ToolMaterial COMPLETE_TUNGSTEN = createToolMaterial("complete_tungsten", 4, 4000, 20.0F, 4.0F, 22, 2F);
-    public static final Item.ToolMaterial RUBY = createToolMaterial("ruby", 6, 3122, 10.0F, 5.0F, 22, 2F);
-    public static final Item.ToolMaterial SAPPHIRE = createToolMaterial("sapphire", 6, 3122, 100.0F, 6.0F, 22, 2F);
-    public static final Item.ToolMaterial MAJORITE = createToolMaterial("majorite", 15, 3122, 250.0F, 8.0F, 22, 2);
-    public static final Item.ToolMaterial AMAZONITE = createToolMaterial("amazonite", 100, 3122, 500.0F, 10.0F, 22, 2);
-    public static final Item.ToolMaterial ONYX = createToolMaterial("onyx", 1000, 3122, 1000.0F, 12.0F, 22, 2);
-    public static final Item.ToolMaterial ONYX_II = createToolMaterial("onyx_II", 1000, 3122, 1500.0F, 14.0F, 22, 2);
-    public static final Item.ToolMaterial ONYX_III = createToolMaterial("onyx_III", 1000, 3122, 2000.0F, 16.0F, 22, 2);
-    public static final Item.ToolMaterial ONYX_IV = createToolMaterial("onyx_IV", 1000, 3122, 3000.0F, 18.0F, 22, 2);
-    public static final Item.ToolMaterial ONYX_V = createToolMaterial("onyx_V", 1000, 3122, 5000.0F, 20.0F, 22, 2);
+    public static final Item.ToolMaterial RUBY = createToolMaterial("ruby", 6, 3122, 30.0F, 5.0F, 22, 2F);
+    public static final Item.ToolMaterial SAPPHIRE = createToolMaterial("sapphire", 6, 3122, 45.0F, 6.0F, 22, 2F);
+    public static final Item.ToolMaterial MAJORITE = createToolMaterial("majorite", 15, 3122, 67.5F, 8.0F, 22, 2);
+    public static final Item.ToolMaterial AMAZONITE = createToolMaterial("amazonite", 100, 3122, 100.0F, 10.0F, 22, 2);
+    public static final Item.ToolMaterial ONYX = createToolMaterial("onyx", 1000, 3122, 150.0F, 12.0F, 22, 2);
+    public static final Item.ToolMaterial ONYX_II = createToolMaterial("onyx_II", 1000, 3122, 225.0F, 14.0F, 22, 2);
+    public static final Item.ToolMaterial ONYX_III = createToolMaterial("onyx_III", 1000, 3122, 337.0F, 16.0F, 22, 2);
+    public static final Item.ToolMaterial ONYX_IV = createToolMaterial("onyx_IV", 1000, 3122, 506.0F, 18.0F, 22, 2);
+    public static final Item.ToolMaterial ONYX_V = createToolMaterial("onyx_V", 1000, 3122, 760.0F, 20.0F, 22, 2);
 
     public static Item.ToolMaterial createToolMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damageVsEntity, int enchantability, float relentless) {
         Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial(name, harvestLevel, maxUses, efficiency, damageVsEntity, enchantability);
