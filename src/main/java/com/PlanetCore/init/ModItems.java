@@ -331,22 +331,22 @@ public class ModItems {
 	 */
 
 	//SHIELDS
-	public static final Item IRON_SHIELD = new Shield(ShieldMaterial.IRON);
-	public static final Item SILVER_SHIELD = new Shield(ShieldMaterial.SILVER);
-	public static final Item GOLD_SHIELD = new Shield(ShieldMaterial.GOLD);
-	public static final Item TITANIUM_SHIELD = new Shield(ShieldMaterial.TITANIUM);
-	public static final Item URANIUM_SHIELD = new Shield(ShieldMaterial.URANIUM);
-	public static final Item TUNGSTEN_SHIELD = new Shield(ShieldMaterial.TUNGSTEN);
-	public static final Item SAPPHIRE_SHIELD = new Shield(ShieldMaterial.SAPPHIRE);
-	public static final Item RUBY_SHIELD = new Shield(ShieldMaterial.RUBY);
-	public static final Item DIAMOND_SHIELD = new Shield(ShieldMaterial.DIAMOND);
-	public static final Item MAJORITE_SHIELD = new Shield(ShieldMaterial.MAJORITE);
-	public static final Item AMAZONITE_SHIELD = new Shield(ShieldMaterial.AMAZONITE);
-	public static final Item ONYX_SHIELD = new Shield(ShieldMaterial.ONYX);
-	public static final Item ONYX_II_SHIELD = new Shield(ShieldMaterial.ONYXII);
-	public static final Item ONYX_III_SHIELD = new Shield(ShieldMaterial.ONYXIII);
-	public static final Item ONYX_IV_SHIELD = new Shield(ShieldMaterial.ONYXIV);
-	public static final Item ONYX_V_SHIELD = new Shield(ShieldMaterial.ONYXV);
+	public static final Item IRON_SHIELD = new Shield(ShieldMaterial.IRON, 3, 0.05f);
+	public static final Item SILVER_SHIELD = new Shield(ShieldMaterial.SILVER, 4, 0.05f);
+	public static final Item GOLD_SHIELD = new Shield(ShieldMaterial.GOLD, 5, 0.05f);
+	public static final Item DIAMOND_SHIELD = new Shield(ShieldMaterial.DIAMOND, 6, 0.1f);
+	public static final Item TITANIUM_SHIELD = new Shield(ShieldMaterial.TITANIUM, 8, 0.12f);
+	public static final Item URANIUM_SHIELD = new Shield(ShieldMaterial.URANIUM, 11, 0.14f);
+	public static final Item TUNGSTEN_SHIELD = new Shield(ShieldMaterial.TUNGSTEN, 15, 0.16f);
+	public static final Item RUBY_SHIELD = new Shield(ShieldMaterial.RUBY, 20, 0.18f);
+	public static final Item SAPPHIRE_SHIELD = new Shield(ShieldMaterial.SAPPHIRE, 27, 0.20f);
+	public static final Item MAJORITE_SHIELD = new Shield(ShieldMaterial.MAJORITE, 36, 0.22f);
+	public static final Item AMAZONITE_SHIELD = new Shield(ShieldMaterial.AMAZONITE, 47, 0.25f);
+	public static final Item ONYX_SHIELD = new Shield(ShieldMaterial.ONYX, 63, 0.30f);
+	public static final Item ONYX_II_SHIELD = new Shield(ShieldMaterial.ONYXII, 84, 0.35f);
+	public static final Item ONYX_III_SHIELD = new Shield(ShieldMaterial.ONYXIII, 112, 0.40f);
+	public static final Item ONYX_IV_SHIELD = new Shield(ShieldMaterial.ONYXIV, 150, 0.45f);
+	public static final Item ONYX_V_SHIELD = new Shield(ShieldMaterial.ONYXV, 200, 0.50f);
 
 	public static List<Item> getItems() {
 		if (ITEMS.isEmpty()) {

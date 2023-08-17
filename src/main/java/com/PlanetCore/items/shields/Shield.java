@@ -25,12 +25,14 @@ import java.util.UUID;
 public class Shield extends ItemShield {
 
     public final ShieldMaterial shieldMaterial;
-    public Shield(ShieldMaterial shieldMaterial) {
+    public final float knockbackResistance;
+    public final int extraArmor;
+    public Shield(ShieldMaterial shieldMaterial, int extraArmor, float knockbackResistance) {
 
         this.shieldMaterial = shieldMaterial;
-        if (shieldMaterial == ShieldMaterial.SILVER) {this.setMaxDamage(504);}
-        else if (shieldMaterial == ShieldMaterial.IRON || shieldMaterial == ShieldMaterial.GOLD) {this.setMaxDamage(672);}
-        else this.setMaxDamage(4368);
+        this.extraArmor = extraArmor;
+        this.knockbackResistance = knockbackResistance;
+        this.setMaxDamage(3000);
         //I'll do the rest later
 
     }
@@ -77,30 +79,9 @@ public class Shield extends ItemShield {
             // hides normal info
             stack.getTagCompound().setInteger("HideFlags", 2);
         }
-        if (shieldMaterial == ShieldMaterial.IRON || shieldMaterial == ShieldMaterial.SILVER || shieldMaterial == ShieldMaterial.GOLD || shieldMaterial == ShieldMaterial.DIAMOND) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        } else if (shieldMaterial == ShieldMaterial.TITANIUM || shieldMaterial == ShieldMaterial.URANIUM
-                || shieldMaterial == ShieldMaterial.TUNGSTEN) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        } else if (shieldMaterial == ShieldMaterial.RUBY || shieldMaterial == ShieldMaterial.SAPPHIRE) {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        } else {
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.1"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.2"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.3"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        }
+        tooltip.add("§9" + knockbackResistance + "% Knockback Resistance");
+        tooltip.add("§9" + extraArmor + " Extra Armor bonus");
+        tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 
     @Override
@@ -110,81 +91,11 @@ public class Shield extends ItemShield {
 
         Multimap<String, AttributeModifier> mods = super.getAttributeModifiers(slot, stack);
 
-
-        float health = 0;
-        float knockback = 0;
-        if (shieldMaterial == ShieldMaterial.IRON) {
-            knockback = 0.05F;
-        }
-        if (shieldMaterial == ShieldMaterial.SILVER) {
-            knockback = 0.08F;
-        }
-        if (shieldMaterial == ShieldMaterial.GOLD) {
-            knockback = 0.09F;
-        }
-        if (shieldMaterial == ShieldMaterial.DIAMOND) {
-            knockback = 0.1F;
-        }
-        if (shieldMaterial == ShieldMaterial.TITANIUM) {
-            health = 1.0F;
-            knockback = 0.11F;
-        }
-        if (shieldMaterial == ShieldMaterial.URANIUM) {
-            health = 1.0F;
-            knockback = 0.12F;
-        }
-        if (shieldMaterial == ShieldMaterial.TUNGSTEN) {
-            health = 2.0F;
-            knockback = 0.14F;
-        }
-        if (shieldMaterial == ShieldMaterial.RUBY) {
-            health = 4.0F;
-            knockback = 0.2F;
-        }
-        if (shieldMaterial == ShieldMaterial.SAPPHIRE) {
-            health = 5.0F;
-            knockback = 0.22F;
-        }
-        if (shieldMaterial == ShieldMaterial.MAJORITE) {
-            health = 10.0F;
-            knockback = 0.34F;
-        }
-        if (shieldMaterial == ShieldMaterial.AMAZONITE) {
-            health = 11.0F;
-            knockback = 0.36F;
-        }
-        if (shieldMaterial == ShieldMaterial.ONYX) {
-            health = 12.0F;
-            knockback = 0.38F;
-
-        }
-        if (shieldMaterial == ShieldMaterial.ONYXII) {
-            health = 13.0F;
-            knockback = 0.4F;
-
-        }
-        if (shieldMaterial == ShieldMaterial.ONYXIII) {
-            health = 14.0F;
-            knockback = 0.42F;
-
-        }
-        if (shieldMaterial == ShieldMaterial.ONYXIV) {
-            health = 15.0F;
-            knockback = 0.44F;
-        }
-        if (shieldMaterial == ShieldMaterial.ONYXV) {
-            health = 16.0F;
-            knockback = 0.46F;
-        }
-
-
         String maxhealth = SharedMonsterAttributes.MAX_HEALTH.getName();
         String knockback_resistance = SharedMonsterAttributes.KNOCKBACK_RESISTANCE.getName();
 
         if (slot == EntityEquipmentSlot.OFFHAND) {
-
-            mods.put(maxhealth, new AttributeModifier(MAX_HEALTH_SHIELD_UUID, "MAX_HEALTH_SHIELD_UUID", health, 0));
-            mods.put(knockback_resistance, new AttributeModifier(KNOCKBACK_RESISTANCE_SHIELD_UUID, "KNOCKBACK_RESISTANCE_SHIELD_UUID", knockback, 0));
+            mods.put(knockback_resistance, new AttributeModifier(KNOCKBACK_RESISTANCE_SHIELD_UUID, "KNOCKBACK_RESISTANCE_SHIELD_UUID", knockbackResistance, 0));
         }
         return mods;
     }
