@@ -182,9 +182,9 @@ public class ClientHandler {
         if (overlayType == RenderBlockOverlayEvent.OverlayType.FIRE) {
             EntityPlayer player = e.getPlayer();
             if (player.isBurning()) {
-
                 PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
                 int fireResist = effect == null ? 0 : effect.getAmplifier() + 1;
+                if (fireResist == 0) return;
                 double y = player.posY;
                 double temp = TemperatureHandler.calcTemp(y);
                 double damage = TemperatureHandler.getDamage(temp,fireResist);
