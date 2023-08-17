@@ -158,6 +158,7 @@ public class ArmorBase extends ItemArmor {
             tooltip.add("§9"+ damageReduceAmount+ " Armor");
             tooltip.add("§9"+ toughness + " Toughness");
             tooltip.add("§9"+ health + " Health bonus");
+            tooltip.add("§9"+ extraArmor + " Extra Armor bonus");
             tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         }
         if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
