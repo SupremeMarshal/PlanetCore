@@ -92,6 +92,7 @@ dependencies {
         transitive = false
     }
 
+    compileOnly('org.spongepowered:noise:2.0.0-SNAPSHOT')
     implementation 'org.jetbrains:annotations:20.1.0'
 
     implementation fg.deobf("curse.maven:hackForMixinFMLAgent_deobfedDeps_-223896:2680892")
