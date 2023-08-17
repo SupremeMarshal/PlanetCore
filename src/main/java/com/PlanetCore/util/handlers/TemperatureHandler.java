@@ -14,11 +14,11 @@ public class TemperatureHandler {
 
     static {
         heatMap.put(0,70);
-        heatMap.put(1,300);
-        heatMap.put(2,600);
-        heatMap.put(3,1200);
-        heatMap.put(4,2000);
-        heatMap.put(5,3000);
+        heatMap.put(1,500);
+        heatMap.put(2,1000);
+        heatMap.put(3,2000);
+        heatMap.put(4,3000);
+        heatMap.put(5,4000);
     }
 
     public static double calcTemp(double y) {
@@ -32,9 +32,12 @@ public class TemperatureHandler {
     public static double getDamage(double temp, int  fireResist) {
         int lowerBound = heatMap.getOrDefault(fireResist, heatMap.get(heatMap.size() - 1));
 
-        if (temp < lowerBound) return 0;
+        if (temp < lowerBound / 1.2) return 0;
 
-        double damage = (temp - lowerBound) / lowerBound;
+        double damage = (temp - lowerBound) / lowerBound + 2;
+
+        if (temp >= lowerBound / 1.2 && temp < lowerBound)
+            damage = 2;
 
         return damage;
     }
@@ -45,8 +48,11 @@ public class TemperatureHandler {
         double y = player.posY;
         double temp = calcTemp(y);
         double damage = getDamage(temp,fireResist);
-        if (damage > 0) {
+        if (damage > 0)
+        {
             player.attackEntityFrom(PlayerTickEventHandler.OVERHEAT, (float) damage);
+        }
+        if (damage > 2) {
             player.setFire(15);
         }
     }
