@@ -5,6 +5,7 @@ import com.PlanetCore.blocks.Crustrock;
 import com.PlanetCore.blocks.Mantlerock;
 import com.PlanetCore.items.Drills.IronDrill;
 import com.PlanetCore.items.armor.ArmorBase;
+import com.PlanetCore.items.shields.Shield;
 import com.PlanetCore.util.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
@@ -90,22 +91,30 @@ public class ClientHandler {
                 ItemStack chestplate = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
                 ItemStack leggings = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
                 ItemStack boots = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
+                ItemStack shield = player.getItemStackFromSlot(EntityEquipmentSlot.OFFHAND);
 
                 float helmetArmor = 0;
                 float chestArmor = 0;
                 float legsArmor = 0;
                 float bootsArmor = 0;
+                float shieldArmor = 0;
 
-                if (helmet.getItem() instanceof ArmorBase) helmetArmor = ((ArmorBase) helmet.getItem()).extraArmor;
+                if (helmet.getItem() instanceof ArmorBase)
+                    helmetArmor = ((ArmorBase) helmet.getItem()).extraArmor;
                 if (chestplate.getItem() instanceof ArmorBase)
                     chestArmor = ((ArmorBase) chestplate.getItem()).extraArmor;
-                if (leggings.getItem() instanceof ArmorBase) legsArmor = ((ArmorBase) leggings.getItem()).extraArmor;
-                if (boots.getItem() instanceof ArmorBase) bootsArmor = ((ArmorBase) boots.getItem()).extraArmor;
+                if (leggings.getItem() instanceof ArmorBase)
+                    legsArmor = ((ArmorBase) leggings.getItem()).extraArmor;
+                if (boots.getItem() instanceof ArmorBase)
+                    bootsArmor = ((ArmorBase) boots.getItem()).extraArmor;
+                if (shield.getItem() instanceof Shield)
+                    shieldArmor = ((Shield) shield.getItem()).extraArmor;
+
                 // Calculate the total extra armor value
-                float totalExtraArmor = (helmetArmor + chestArmor + legsArmor + bootsArmor);
+                float totalExtraArmor = ( helmetArmor + chestArmor + legsArmor + bootsArmor + shieldArmor );
 
                 float modifiedDamage = (float) (((armor + toughness + totalExtraArmor) * 0.03) / (float) (1 + 0.03 * (armor + toughness + totalExtraArmor)));
-                event.getToolTip().add(String.format("%.2f", modifiedDamage * 100) + "%");
+                event.getToolTip().add("§9"+ String.format("%.2f", modifiedDamage * 100) + "%");
             }
         }
     }
