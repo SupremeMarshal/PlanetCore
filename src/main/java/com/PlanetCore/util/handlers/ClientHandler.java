@@ -3,12 +3,12 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.blocks.Corestone;
 import com.PlanetCore.blocks.Crustrock;
 import com.PlanetCore.blocks.Mantlerock;
-import com.PlanetCore.blocks.PlanetHardness;
 import com.PlanetCore.items.Drills.IronDrill;
-import net.minecraft.block.state.IBlockState;
 import com.PlanetCore.items.armor.ArmorBase;
+import com.PlanetCore.util.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
@@ -135,28 +135,58 @@ public class ClientHandler {
         }
     }
 
+    static final int TEX_WIDTH = 48;
+    static final int TEX_HEIGHT = 24;
+
     @SubscribeEvent
-    public static void temperatureHud(RenderGameOverlayEvent event) {
+    public static void temperatureHud(RenderGameOverlayEvent.Post event) {
         if (event.getType() == RenderGameOverlayEvent.ElementType.ALL) {
             Minecraft minecraft = Minecraft.getMinecraft();
             EntityPlayer player = minecraft.player;
             if (player != null) {
                 double y = player.posY;
                 if (y < 0) {
-                    double temp = TemperatureHandler.calcTemp(y);
+                    int temp = (int) TemperatureHandler.calcTemp(y);
                     PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
                     int fireResist = effect == null ? 0 : effect.getAmplifier() + 1;
                     int limit = TemperatureHandler.getLimit(fireResist);
-                    int color = 0x00ff00;
+
+                    Heat heat = Heat.SAFE;
 
                     if (temp >= limit) {
-                        color = 0xff0000;
+                        heat = Heat.DANGER;
                     } else if (limit - temp < limit - (limit / 1.2)) {
-                        color = 0xffff00;
+                        heat = Heat.WARN;
                     }
-                    minecraft.ingameGUI.drawString(minecraft.fontRenderer,"Temperature: "+String.format("%.0f",temp) +" C",0,0,color);
+
+                    String s = temp + " C";
+
+                    int textWidth = minecraft.fontRenderer.getStringWidth(s);
+
+                    int x1 = event.getResolution().getScaledWidth() / 2 - TEX_WIDTH / 2;
+                    int x2 = x1 + TEX_WIDTH / 2 - textWidth / 2;
+                    int y1 = 0;
+
+
+                    minecraft.getTextureManager().bindTexture(heat.tex);
+
+                    Gui.drawModalRectWithCustomSizedTexture(x1, y1, 0, 0, TEX_WIDTH, TEX_HEIGHT, TEX_WIDTH, TEX_HEIGHT);
+                    minecraft.fontRenderer.drawString(s, x2, y1 + 11, heat.color, true);
                 }
             }
+        }
+    }
+
+    enum Heat {
+        SAFE(0x00ff00, new ResourceLocation(Reference.MOD_ID, "textures/gui/temp_gui.png")),
+        WARN(0xffff00, new ResourceLocation(Reference.MOD_ID, "textures/gui/temp_gui_hot.png")),
+        DANGER(0xff0000, new ResourceLocation(Reference.MOD_ID, "textures/gui/temp_gui_superheated.png"));
+        final int color;
+        final ResourceLocation tex;
+
+        Heat(int color, ResourceLocation tex) {
+            this.color = color;
+            this.tex = tex;
         }
     }
 
@@ -187,7 +217,7 @@ public class ClientHandler {
                 if (fireResist == 0) return;
                 double y = player.posY;
                 double temp = TemperatureHandler.calcTemp(y);
-                double damage = TemperatureHandler.getDamage(temp,fireResist);
+                double damage = TemperatureHandler.getDamage(temp, fireResist);
                 if (damage <= 0) {
                     e.setCanceled(true);
                 }
