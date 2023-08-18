@@ -26,6 +26,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -88,6 +89,7 @@ public class RegistryHandler {
     }
 
     public static void preInitRegistries(FMLPreInitializationEvent event) {
+
         ModFluids.registerFluids();
         EntityInit.registerEntities();
         ModConfiguration.registerConfig(event);
@@ -97,6 +99,8 @@ public class RegistryHandler {
         MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
         MinecraftForge.EVENT_BUS.register((new DamageReductionArmorHandler()));
         ModPotions.registerPotions();
+        NetworkRegistry.INSTANCE.registerGuiHandler(MOD_ID, new GuiHandler());
+
 
         //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
     }
@@ -112,7 +116,7 @@ public class RegistryHandler {
     }
 
     public static void initRegistries(FMLInitializationEvent event) {
-
+        MinecraftForge.EVENT_BUS.register(new GravityHandler());
     }
 
     public static void posInitRegistries(FMLPostInitializationEvent event) {

@@ -6,6 +6,7 @@ import com.PlanetCore.cwg.PlanetCoreWorldType;
 import com.PlanetCore.init.ModSmelting;
 import com.PlanetCore.init.ToolMaterials;
 import com.PlanetCore.util.Reference;
+import com.PlanetCore.util.handlers.GuiHandler;
 import com.PlanetCore.util.handlers.RegistryHandler;
 
 import com.PlanetCore.util.handlers.WorldgenHandler;
@@ -50,9 +51,9 @@ public class Main {
 
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event) {
+
         LOGGER = event.getModLog();
         RegistryHandler.preInitRegistries(event);
-
         MinecraftForge.TERRAIN_GEN_BUS.register(new CustomCaveInjector());
         MinecraftForge.ORE_GEN_BUS.register(new WorldgenHandler());
         new PlanetCoreWorldType();
