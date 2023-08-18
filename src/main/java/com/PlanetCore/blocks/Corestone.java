@@ -296,10 +296,10 @@ public class Corestone extends BlockBase implements IMetaName {
 				((WorldServer)worldIn).spawnParticle(EnumParticleTypes.SMOKE_LARGE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
 			}
 		}
-		if (Math.random() < 0.01 * (meta + meta + meta + 1) && (worldIn.isAirBlock(pos.up()) || worldIn.isAirBlock(pos.down()) || worldIn.isAirBlock(pos.north()) || worldIn.isAirBlock(pos.south()) || worldIn.isAirBlock(pos.west()) || worldIn.isAirBlock(pos.east())))
-		{
-			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
-		}
+//		if (Math.random() < 0.01 * (meta + meta + meta + 1) && (worldIn.isAirBlock(pos.up()) || worldIn.isAirBlock(pos.down()) || worldIn.isAirBlock(pos.north()) || worldIn.isAirBlock(pos.south()) || worldIn.isAirBlock(pos.west()) || worldIn.isAirBlock(pos.east())))
+//		{
+//			worldIn.setBlockState(pos, ModBlocks.IRON_LAVA_FLUID.getDefaultState());
+//		}
 		super.randomTick(worldIn, pos, state, rand);
 	}
 
