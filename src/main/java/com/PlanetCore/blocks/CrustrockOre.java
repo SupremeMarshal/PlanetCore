@@ -18,7 +18,6 @@ public class CrustrockOre extends Crustrock
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
 	public final PlanetExp planetExp;
-	private static final float [] crustHardnessByMeta = {3, 4, 5};
 
 	public CrustrockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
 	{

@@ -74,9 +74,9 @@ public class RegistryHandler {
 
         ForgeRegistries.ITEMS.getValues().stream()
                 .filter(item -> MOD_ID.equals(item.getRegistryName().getNamespace())).forEach(item -> {
-            if (item instanceof ItemBlockVariants) {
+            if (item.getHasSubtypes()) {
                 for (int i = 0; i < 3; i++) {
-                    //    ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+                      //  ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(item.getRegistryName(), "inventory"));
                 }
             } else {
                 ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
