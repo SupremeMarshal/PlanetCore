@@ -1,7 +1,5 @@
 package com.PlanetCore.blocks;
 
-import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -12,7 +10,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class CorestoneOreCompact extends Corestone implements IMetaName {
+public class CorestoneOreCompact extends Corestone {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
@@ -60,7 +58,7 @@ public class CorestoneOreCompact extends Corestone implements IMetaName {
 
     @Override
     public int quantityDroppedWithBonus(int fortune, Random random) {
-        if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
+        if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped(this.getBlockState().getValidStates().iterator().next(), random, fortune))
         {
             int i = random.nextInt(fortune + 1) - 1;
 

@@ -74,14 +74,10 @@ public class RegistryHandler {
 
         ForgeRegistries.ITEMS.getValues().stream()
                 .filter(item -> MOD_ID.equals(item.getRegistryName().getNamespace())).forEach(item -> {
-            if (item instanceof ItemBlockVariants) {
-                for (int i = 0; i < 3; i++) {
-                    //    ModelLoader.setCustomModelResourceLocation(item, i, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-                }
-            } else {
-                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-            }
-        });
+                    if (!item.getHasSubtypes()) {
+                        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+                    }
+                });
 
         RenderHandler.registerEntityRenders();
         RenderHandler.registerCustomMeshesAndStates();
@@ -99,7 +95,7 @@ public class RegistryHandler {
         MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
         MinecraftForge.EVENT_BUS.register((new DamageReductionArmorHandler()));
         ModPotions.registerPotions();
-        NetworkRegistry.INSTANCE.registerGuiHandler(MOD_ID, new GuiHandler());
+     //   NetworkRegistry.INSTANCE.registerGuiHandler(MOD_ID, new GuiHandler());
 
 
         //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
