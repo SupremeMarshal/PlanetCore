@@ -1,7 +1,6 @@
 package com.PlanetCore.blocks;
 
 import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.EnumDyeColor;
@@ -13,7 +12,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class CrustrockOre extends Crustrock implements IMetaName
+public class CrustrockOre extends Crustrock
 {
 
 	public final PlanetMaterial planetMaterial;

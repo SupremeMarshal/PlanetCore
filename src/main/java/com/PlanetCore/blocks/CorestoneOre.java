@@ -1,7 +1,6 @@
 package com.PlanetCore.blocks;
 
 import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -12,7 +11,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class CorestoneOre extends Corestone implements IMetaName
+public class CorestoneOre extends Corestone
 {
 
     public final PlanetMaterial planetMaterial;

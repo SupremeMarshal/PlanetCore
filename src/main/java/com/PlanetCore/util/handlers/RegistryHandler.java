@@ -99,7 +99,7 @@ public class RegistryHandler {
         MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
         MinecraftForge.EVENT_BUS.register((new DamageReductionArmorHandler()));
         ModPotions.registerPotions();
-        NetworkRegistry.INSTANCE.registerGuiHandler(MOD_ID, new GuiHandler());
+     //   NetworkRegistry.INSTANCE.registerGuiHandler(MOD_ID, new GuiHandler());
 
 
         //CapabilityManager.INSTANCE.register(IUserSettings.class, new UserSettingsStorage(), () -> new UserSettings());
