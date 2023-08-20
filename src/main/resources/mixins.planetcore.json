@@ -1,14 +1,15 @@
 {
-    "required": true,
-    "minVersion": "0.7",
-    "compatibilityLevel": "JAVA_8",
-    "package": "com.PlanetCore.asm.mixin",
-    "refmap": "mixins.planetcore.refmap",
-    "mixins": [
-        "MixinWorld",
-        "WorldGenLakesMixin"
-    ],
-    "injectors": {
-        "defaultRequire": 1
+  "required": true,
+  "minVersion": "0.7",
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.PlanetCore.asm.mixin",
+  "refmap": "mixins.planetcore.refmap",
+  "mixins": [
+    "EntityLivingBaseMixin",
+    "MixinWorld",
+    "WorldGenLakesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
   }
 }
