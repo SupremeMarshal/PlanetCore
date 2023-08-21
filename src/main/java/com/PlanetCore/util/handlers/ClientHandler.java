@@ -1,25 +1,20 @@
 package com.PlanetCore.util.handlers;
 
-import com.PlanetCore.blocks.Corestone;
-import com.PlanetCore.blocks.Crustrock;
-import com.PlanetCore.blocks.Mantlerock;
 import com.PlanetCore.items.Drills.IronDrill;
+import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.armor.ArmorBase;
 import com.PlanetCore.items.shields.Shield;
 import com.PlanetCore.util.Reference;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
 import net.minecraft.client.gui.Gui;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Enchantments;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemPickaxe;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.InputUpdateEvent;
@@ -43,40 +38,19 @@ public class ClientHandler {
             EntityPlayer player = event.getEntityPlayer();
             if (stack.getItem() instanceof ItemPickaxe || stack.getDisplayName().contains("ickaxe")) {
                 float efficiency = event.getItemStack().getDestroySpeed(Blocks.STONE.getDefaultState());
-                //float efficiency1 = ObfuscationReflectionHelper.getPrivateValue(ItemTool.class,(ItemTool)stack.getItem(),"field_77864_a");
-                if (event.getEntityPlayer() != null) {
-                    int effLevel = EnchantmentHelper.getEnchantmentLevel(Enchantments.EFFICIENCY, stack);
-                    if (effLevel > 0) {
-                        efficiency += effLevel * effLevel + 1;
-                    }
-                    PotionEffect effect = (event.getEntityPlayer()).getActivePotionEffect(MobEffects.HASTE);
-                    if (effect != null) {
-                        efficiency = efficiency * (1 + (0.2F * effect.getAmplifier()));
-                    }
-                }
                 float relentless = PickaxeRelentlessHandler.getRelentless(stack);
-                float maxHardness = relentless * efficiency / 1.5F;
-                String rock = "stone";
-                String ore = "coal";
-                String supercompact = "coal";
-                if (maxHardness < 1.5F) rock = "can't break stone";
-                if (maxHardness >= 1.5F) rock = "stone";
-                if (maxHardness >= Crustrock.crustHardnessByMeta[0]) rock = "crustrock";
-                if (maxHardness >= Crustrock.crustHardnessByMeta[1]) rock = "crustrock1";
-                if (maxHardness >= Crustrock.crustHardnessByMeta[2]) rock = "crustrock2";
-                if (maxHardness >= Mantlerock.mantleHardnessByMeta[0]) rock = "mantlerock";
-                if (maxHardness >= Mantlerock.mantleHardnessByMeta[1]) rock = "mantlerock1";
-                if (maxHardness >= Mantlerock.mantleHardnessByMeta[2]) rock = "mantlerock2";
-                if (maxHardness >= Mantlerock.mantleHardnessByMeta[3]) rock = "lower_mantlerock";
-                if (maxHardness >= Mantlerock.mantleHardnessByMeta[4]) rock = "lower_mantlerock1";
-                if (maxHardness >= Mantlerock.mantleHardnessByMeta[5]) rock = "lower_mantlerock2";
-                if (maxHardness >= Corestone.coreHardnessByMeta[0]) rock = "corestone";
-                if (maxHardness >= Corestone.coreHardnessByMeta[1]) rock = "innercorestone";
-                if (maxHardness >= Corestone.coreHardnessByMeta[2]) rock = "centercorestone";
+                Item item = stack.getItem();
+                ItemTool toolItem = (ItemTool) item;
+                IBlockState blockState = Blocks.STONE.getDefaultState();
+                String toolClass = blockState.getBlock().getHarvestTool(blockState);
+                int tierLevel = toolItem.getHarvestLevel(stack, toolClass, player, blockState);
 
-                event.getToolTip().add("Can break up to " + rock);
-                event.getToolTip().add("Efficiency: " + efficiency);
-                event.getToolTip().add("Relentless: " + relentless);
+                if (stack.getItem() instanceof ItemPickaxeX)
+                {
+                    event.getToolTip().add("Tier level: §9" + tierLevel);
+                }
+                event.getToolTip().add("Efficiency: §9" + efficiency);
+                event.getToolTip().add("Relentless: §9" + relentless);
 
 
             }
