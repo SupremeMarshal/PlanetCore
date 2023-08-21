@@ -195,9 +195,7 @@ public class ModBlocks {
     public static final CorestoneOre CORESTONE_MAJORITE = _null();
     public static final CorestoneOre CORESTONE_AMAZONITE = _null();
     public static final CorestoneOre CORESTONE_ONYX = _null();
-    public static final CorestoneOre CORESTONE_SMALL_ONYX = _null();
     public static final CorestoneOre CORESTONE_PAINITE = _null();
-    public static final CorestoneOre CORESTONE_SMALL_PAINITE = _null();
 
     public static final CorestoneOreCompact CORESTONE_COMPACT_COAL = _null();
     public static final CorestoneOreCompact CORESTONE_COMPACT_SULFUR = _null();
@@ -443,8 +441,6 @@ public class ModBlocks {
                 new CorestoneOre("corestone_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE,PlanetExp.AMAZONITE).setResistance(10),
                 new CorestoneOre("corestone_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX,PlanetExp.ONYX).setResistance(10),
                 new CorestoneOre("corestone_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE,PlanetExp.PAINITE).setResistance(10),
-                new CorestoneOre("corestone_small_onyx", Material.ROCK, PlanetMaterial.ONYX_SMALL, PlanetHardness.ONYX_SMALL,PlanetExp.ONYX).setResistance(100),
-                new CorestoneOre("corestone_small_painite", Material.ROCK, PlanetMaterial.PAINITE_SMALL, PlanetHardness.PAINITE_SMALL, PlanetExp.PAINITE).setResistance(20),
 
                 new CorestoneOreCompact("corestone_compact_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL_COMPACT,PlanetExp.COAL_COMPACT).setResistance(1),
                 new CorestoneOreCompact("corestone_compact_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_COMPACT,PlanetExp.IRON_COMPACT).setResistance(1),
@@ -485,6 +481,7 @@ public class ModBlocks {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_REDSTONE), meta, new ModelResourceLocation(name + "_redstone", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_EMERALD), meta, new ModelResourceLocation(name + "_emerald", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_DIAMOND), meta, new ModelResourceLocation(name + "_diamond", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
@@ -591,9 +588,7 @@ public class ModBlocks {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_MAJORITE), meta, new ModelResourceLocation(name + "_majorite", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_AMAZONITE), meta, new ModelResourceLocation(name + "_amazonite", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_ONYX), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_SMALL_ONYX), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_PAINITE), meta, new ModelResourceLocation(name + "_painite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_SMALL_PAINITE), meta, new ModelResourceLocation(name + "_painite", "inventory"));
 
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_COAL), meta, new ModelResourceLocation(name + "_compact_coal", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_SULFUR), meta, new ModelResourceLocation(name + "_compact_sulfur", "inventory"));
