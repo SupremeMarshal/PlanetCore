@@ -1,5 +1,6 @@
 package com.PlanetCore.asm.mixin;
 
+import com.PlanetCore.blocks.BlocksBase;
 import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -11,6 +12,10 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.Slice;
+
+import java.util.Random;
+
+import static com.PlanetCore.blocks.BlocksBase.VARIANT_SUPERCOMPRESSED;
 
 @Mixin(WorldGenLakes.class)
 public class WorldGenLakesMixin {
@@ -34,46 +39,46 @@ public class WorldGenLakesMixin {
     @Unique
     private IBlockState planetCore$getCorrespondingStoneBlock(Block lava, IBlockState default_) {
         if (lava == ModBlocks.IRON_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_IRON.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_IRON.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.REDSTONE_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_REDSTONE.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_REDSTONE.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.SILVER_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_SILVER.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_SILVER.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.GOLD_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_GOLD.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_GOLD.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.DIAMOND_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_DIAMOND.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_DIAMOND.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.TITANIUM_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_TITANIUM.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_TITANIUM.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.URANIUM_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_URANIUM.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_URANIUM.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.TUNGSTEN_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_TUNGSTEN.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_TUNGSTEN.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.RUBY_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_RUBY.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_RUBY.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.SAPPHIRE_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_SAPPHIRE.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_SAPPHIRE.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.MAJORITE_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_MAJORITE.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_MAJORITE.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.AMAZONITE_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_AMAZONITE.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_AMAZONITE.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.ONYX_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_ONYX.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_ONYX.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         if (lava == ModBlocks.PAINITE_LAVA_FLUID) {
-            return ModBlocks.SUPERCOMPRESSED_PAINITE.getDefaultState();
+            return ModBlocks.SUPERCOMPRESSED_PAINITE.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(new Random().nextInt(2)+1));
         }
         return default_;
     }
