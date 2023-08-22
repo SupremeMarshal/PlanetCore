@@ -53,12 +53,6 @@ public class CorestoneOre extends Corestone
     }
 
     @Override
-    public int quantityDropped(Random random)
-    {
-        return (this == ModBlocks.CORESTONE_SMALL_ONYX || this == ModBlocks.CORESTONE_SMALL_PAINITE) ? 3 : 1;
-    }
-
-    @Override
     public int quantityDroppedWithBonus(int fortune, Random random) {
         if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
         {
