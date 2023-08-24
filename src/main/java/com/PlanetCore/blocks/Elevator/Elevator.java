@@ -29,11 +29,12 @@ public class Elevator extends BlockLadder {
         setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         ModBlocks.BLOCKS.add(this);
         setSoundType(SoundType.METAL);
+        setDefaultState(getDefaultState().withProperty(POWERED,false));
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[]{FACING, POWERED});
+        return new BlockStateContainer(this, FACING, POWERED);
     }
 
     @Override public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity) {
@@ -99,12 +100,15 @@ public class Elevator extends BlockLadder {
 
     public void updatePowerState(World world, BlockPos pos) {
         IBlockState state = world.getBlockState(pos);
-        boolean currentPower = state.getValue(POWERED);
-        boolean newPower = world.isBlockPowered(pos);
 
-        if (newPower != currentPower) {
-            world.setBlockState(pos, state.withProperty(POWERED, newPower), 2);
-            propagatePower(world, pos, newPower);
+        if (state.getBlock() == this) {
+            boolean currentPower = state.getValue(POWERED);
+            boolean newPower = world.isBlockPowered(pos);
+
+            if (newPower != currentPower) {
+                world.setBlockState(pos, state.withProperty(POWERED, newPower), 2);
+                propagatePower(world, pos, newPower);
+            }
         }
     }
 
