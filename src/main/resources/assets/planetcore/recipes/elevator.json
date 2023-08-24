@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "ABA",
+    "DCD",
+    "ABA"
+  ],
+
+  "key":
+  {
+    "A":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "B":
+    {
+      "item": "minecraft:redstone"
+    },
+    "C":
+    {
+      "item": "planetcore:iron_rod"
+    },
+    "D":
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+
+  "result":
+  {
+    "item": "planetcore:elevator",
+    "count": 6
+  }
+}

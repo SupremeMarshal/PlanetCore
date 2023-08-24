@@ -2,6 +2,7 @@ package com.PlanetCore.init;
 
 
 import com.PlanetCore.blocks.*;
+import com.PlanetCore.blocks.Elevator.Elevator;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -86,6 +87,8 @@ public class ModBlocks {
     public static final HotRocks GRANITE = _null();
     public static final HotRocks DIORITE = _null();
     public static final HotRocks ANDESITE = _null();
+
+    public static final Elevator ELEVATOR = _null();
 
     public static final GemsGravel RUBY_GRAVEL = _null();
     public static final GemsGravel SAPPHIRE_GRAVEL = _null();
@@ -278,6 +281,7 @@ public class ModBlocks {
 
         registry.registerAll(
 
+                new Elevator("elevator"),
                 new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
                 new BlockBase("crust_cobblestone", Material.ROCK,false).setHardness(2.0F).setResistance(1),
                 new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
