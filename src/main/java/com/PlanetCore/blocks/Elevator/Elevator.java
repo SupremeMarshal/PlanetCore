@@ -1,10 +1,7 @@
 package com.PlanetCore.blocks.Elevator;
 
 import com.PlanetCore.init.ModBlocks;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockLadder;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.*;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -29,14 +26,16 @@ public class Elevator extends BlockLadder {
         setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         ModBlocks.BLOCKS.add(this);
         setSoundType(SoundType.METAL);
+        setDefaultState(getDefaultState().withProperty(POWERED, false));
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, new IProperty[]{FACING, POWERED});
+        return new BlockStateContainer(this, FACING, POWERED);
     }
 
-    @Override public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity) {
+    @Override
+    public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity) {
         return false;
     }
 
@@ -95,80 +94,71 @@ public class Elevator extends BlockLadder {
         }
     }
 
+    @Override
+    public void breakBlock(World world, BlockPos pos, IBlockState state) {
+        super.breakBlock(world, pos, state);
+        world.notifyNeighborsOfStateChange(pos, this, false);
+    }
 
 
-    public void updatePowerState(World world, BlockPos pos) {
-        IBlockState state = world.getBlockState(pos);
-        boolean currentPower = state.getValue(POWERED);
-        boolean newPower = world.isBlockPowered(pos);
-
-        if (newPower != currentPower) {
-            world.setBlockState(pos, state.withProperty(POWERED, newPower), 2);
-            propagatePower(world, pos, newPower);
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
+        if (!worldIn.isRemote) {
+            this.updateState(state, worldIn, pos);
         }
     }
 
-    public void propagatePower(World world, BlockPos originalPos, boolean powerState) {
-        for (int y = -5; y <= 5; y++) {
-            BlockPos newPos = originalPos.add(0, y, 0);
-            IBlockState state = world.getBlockState(newPos);
+    protected void updateState(IBlockState state, World worldIn, BlockPos pos) {
+        boolean flag = state.getValue(POWERED);
+        boolean flag1 = worldIn.isBlockPowered(pos) || this.findPoweredLadderSignal(worldIn, pos, state, true, 0) || this.findPoweredLadderSignal(worldIn, pos, state, false, 0);
 
-            if (state.getBlock() instanceof Elevator && state.getValue(POWERED) != powerState) {
-                // Check if the blocks are adjacent (i.e., no empty space)
-                boolean shouldPropagate = true;
-                if (y > 0) {
-                    for (int checkY = 1; checkY <= y; checkY++) {
-                        if (world.isAirBlock(originalPos.add(0, checkY, 0))) {
-                            shouldPropagate = false;
-                            break;
-                        }
-                    }
-                } else if (y < 0) {
-                    for (int checkY = -1; checkY >= y; checkY--) {
-                        if (world.isAirBlock(originalPos.add(0, checkY, 0))) {
-                            shouldPropagate = false;
-                            break;
-                        }
-                    }
-                }
+        if (flag1 != flag) {
+            worldIn.setBlockState(pos, state.withProperty(POWERED, flag1), 3);
+            worldIn.notifyNeighborsOfStateChange(pos.down(), this, false);
+        }
+    }
 
-                if (shouldPropagate) {
-                    world.setBlockState(newPos, state.withProperty(POWERED, powerState), 2);
+    protected boolean findPoweredLadderSignal(World worldIn, BlockPos pos, IBlockState state, boolean searchForward, int recursionCount) {
+        if (recursionCount >= 8) {
+            return false;
+        } else {
+            int x = pos.getX();
+            int y = pos.getY();
+            int z = pos.getZ();
+            EnumFacing direction = state.getValue(FACING);
+
+            if (searchForward) {
+                y++;
+            } else {
+                y--;
+            }
+
+            return this.isSameLadderWithPower(worldIn, new BlockPos(x, y, z), searchForward, recursionCount, direction);
+        }
+    }
+
+    protected boolean isSameLadderWithPower(World worldIn, BlockPos pos, boolean searchForward, int distance, EnumFacing direction) {
+        IBlockState iblockstate = worldIn.getBlockState(pos);
+
+        if (!(iblockstate.getBlock() instanceof Elevator)) {
+            return false;
+        } else {
+            EnumFacing direction2 = iblockstate.getValue(FACING);
+
+            if (direction2 == direction) {
+                if (iblockstate.getValue(POWERED)) {
+                    return worldIn.isBlockPowered(pos) || this.findPoweredLadderSignal(worldIn, pos, iblockstate, searchForward, distance + 1);
+                } else {
+                    return false;
                 }
+            } else {
+                return false;
             }
         }
     }
 
-
-    @Override
-    public void breakBlock(World world, BlockPos pos, IBlockState state) {
-        super.breakBlock(world, pos, state);
-        for (int y = -1; y <= 1; y++) {
-            updatePowerState(world, pos.add(0, y, 0));
+    public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+        if (!worldIn.isRemote) {
+            state.neighborChanged(worldIn, pos, this, pos);
         }
     }
-
-
-    @Override
-    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn, BlockPos fromPos) {
-        boolean isCurrentlyPowered = state.getValue(POWERED);
-        boolean shouldBePowered = world.isBlockPowered(pos);
-
-        // If the current state doesn't match the actual state, update all relevant blocks.
-        if (isCurrentlyPowered != shouldBePowered) {
-            world.setBlockState(pos, state.withProperty(POWERED, shouldBePowered), 2);
-
-            propagatePower(world, pos, shouldBePowered);
-        }
-    }
-
-
-
-//    @Override
-//    public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn, BlockPos fromPos) {
-//        boolean powered = world.isBlockPowered(pos);
-//        if (powered != state.getValue(POWERED)) {
-//            world.setBlockState(pos, state.withProperty(POWERED, powered), 2);
-//        }
-//    }
 }
