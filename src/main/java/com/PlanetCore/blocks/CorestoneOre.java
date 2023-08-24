@@ -16,14 +16,16 @@ public class CorestoneOre extends Corestone
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetHarvestLevel planetHarvestLevel;
     public final PlanetExp planetExp;
     private static final float [] coreHardnessByMeta = {80, 160, 320, 640};
 
-    public CorestoneOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
+    public CorestoneOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetHarvestLevel planetHarvestLevel, PlanetExp planetExp)
     {
         super(name, material);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetHarvestLevel = planetHarvestLevel;
         this.planetExp = planetExp;
     }
 
@@ -35,6 +37,11 @@ public class CorestoneOre extends Corestone
             return coreHardnessByMeta[meta];
         }
         return planetHardness.hardness;
+    }
+
+    @Override
+    public int getHarvestLevel(IBlockState state) {
+        return planetHarvestLevel.harvestLevel;
     }
 
     @Override

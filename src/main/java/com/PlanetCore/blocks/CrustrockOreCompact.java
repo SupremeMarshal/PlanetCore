@@ -16,13 +16,15 @@ public class CrustrockOreCompact extends Crustrock {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetHarvestLevel planetHarvestLevel;
     public final PlanetExp planetExp;
 
-    public CrustrockOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
+    public CrustrockOreCompact(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetHarvestLevel planetHarvestLevel, PlanetExp planetExp)
     {
         super(name, material);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetHarvestLevel = planetHarvestLevel;
         this.planetExp = planetExp;
     }
 
@@ -34,6 +36,11 @@ public class CrustrockOreCompact extends Crustrock {
             return crustHardnessByMeta[meta];
         }
         return planetHardness.hardness;
+    }
+
+    @Override
+    public int getHarvestLevel(IBlockState state) {
+        return planetHarvestLevel.harvestLevel;
     }
 
     @Override

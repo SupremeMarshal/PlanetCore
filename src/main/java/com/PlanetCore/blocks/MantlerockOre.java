@@ -16,14 +16,16 @@ public class MantlerockOre extends Mantlerock {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetHarvestLevel planetHarvestLevel;
     public final PlanetExp planetExp;
     private static final float [] mantleHardnessByMeta = {10, 15, 20, 30, 40, 50};
 
-    public MantlerockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
+    public MantlerockOre(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetHarvestLevel planetHarvestLevel, PlanetExp planetExp)
     {
         super(name, material);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetHarvestLevel = planetHarvestLevel;
         this.planetExp = planetExp;
     }
 
@@ -39,7 +41,7 @@ public class MantlerockOre extends Mantlerock {
 
     @Override
     public int getHarvestLevel(IBlockState state) {
-        return super.getHarvestLevel(state);
+        return planetHarvestLevel.harvestLevel;
     }
 
     @Override

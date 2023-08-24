@@ -16,19 +16,26 @@ public class OreCompactBase extends BlockBase {
 
     public final PlanetMaterial planetMaterial;
     public final PlanetHardness planetHardness;
+    public final PlanetHarvestLevel planetHarvestLevel;
     public final PlanetExp planetExp;
 
-    public OreCompactBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp)
+    public OreCompactBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetHarvestLevel planetHarvestLevel, PlanetExp planetExp)
     {
         super(name, material,false);
         this.planetMaterial = planetMaterial;
         this.planetHardness = planetHardness;
+        this.planetHarvestLevel = planetHarvestLevel;
         this.planetExp = planetExp;
     }
 
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
         return planetHardness.hardness;
+    }
+
+    @Override
+    public int getHarvestLevel(IBlockState state) {
+        return planetHarvestLevel.harvestLevel;
     }
 
     @Override
