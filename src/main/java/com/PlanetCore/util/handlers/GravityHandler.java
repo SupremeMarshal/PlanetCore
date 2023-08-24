@@ -12,36 +12,14 @@ import net.minecraft.entity.player.EntityPlayer;
 @Mod.EventBusSubscriber(modid= Reference.MOD_ID)
 public class GravityHandler {
 
-    // Usage example
-
-    @SubscribeEvent
-    public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-    }
 
     public static double calculateGravityModifier(double yPosition) {
         if (yPosition >= 0) {
             return 1.0;
         }
-        yPosition = Math.min(yPosition,2500);
-        double modifier = Math.sqrt(1 + yPosition / 2600);
+        double modifier = yPosition > -1995 ? Math.sqrt(1 + yPosition / 2000) : 0.05;
         // Calculate the normalized Y position within the range
         return modifier;
     }
 
-    @SubscribeEvent
-    public void onPlayerJump(LivingEvent.LivingJumpEvent event)
-    {
-        //double jumpHeightMultiplier = jumpLevel + (-0.0005 * event.getEntityLiving().posY);
-        //event.getEntityLiving().motionY *= jumpHeightMultiplier;
-    }
-
-    @SubscribeEvent
-    public void onPlayerFall(LivingFallEvent event)
-    {
-        // Increase falling speed when gravity is low
-       // double modifiedFallDistance = event.getDistance() / gravityLevel;
-
-        // Apply the modified fall distance
-       // event.setDistance((float) modifiedFallDistance);
-    }
 }
