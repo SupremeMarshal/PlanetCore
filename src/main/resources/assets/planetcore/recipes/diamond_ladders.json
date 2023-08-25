@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "ABA",
+    "DCD",
+    "ABA"
+  ],
+
+  "key":
+  {
+    "A":
+    {
+      "item": "minecraft:diamond"
+    },
+    "B":
+    {
+      "item": "minecraft:redstone"
+    },
+    "C":
+    {
+      "item": "planetcore:diamond_rod"
+    },
+    "D":
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+
+  "result":
+  {
+    "item": "planetcore:diamond_ladders",
+    "count": 6
+  }
+}
