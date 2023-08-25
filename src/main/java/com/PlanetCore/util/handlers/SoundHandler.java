@@ -27,6 +27,15 @@ public class SoundHandler
     public static SoundEvent INDESTRUCTIBLE17;
     public static SoundEvent INDESTRUCTIBLE18;
     public static SoundEvent INDESTRUCTIBLE19;
+    public static SoundEvent CRUST_MUSIC;
+    public static SoundEvent CRUST1_MUSIC;
+    public static SoundEvent CRUST2_MUSIC;
+    public static SoundEvent MANTLE_MUSIC;
+    public static SoundEvent MANTLE1_MUSIC;
+    public static SoundEvent MANTLE1_1_MUSIC;
+    public static SoundEvent MANTLE2_MUSIC;
+    public static SoundEvent MANTLE2_1_MUSIC;
+    public static SoundEvent LAVA_AMBIENCE;
     public static void registerSounds(IForgeRegistry<SoundEvent> registry)
     {
         INDESTRUCTIBLE = registerSound("action.indestructible",registry);
@@ -49,6 +58,15 @@ public class SoundHandler
         INDESTRUCTIBLE17 = registerSound("action.indestructible17", registry);
         INDESTRUCTIBLE18 = registerSound("action.indestructible18", registry);
         INDESTRUCTIBLE19 = registerSound("action.indestructible19", registry);
+        CRUST_MUSIC = registerSound("crust_music", registry);
+        CRUST1_MUSIC = registerSound("crust1_music", registry);
+        CRUST2_MUSIC = registerSound("crust2_music", registry);
+        MANTLE_MUSIC = registerSound("mantle_music", registry);
+        MANTLE1_MUSIC = registerSound("mantle1_music", registry);
+        MANTLE1_1_MUSIC = registerSound("mantle1-1_music", registry);
+        MANTLE2_MUSIC = registerSound("mantle2_music", registry);
+        MANTLE2_1_MUSIC = registerSound("mantle2-1_music", registry);
+        LAVA_AMBIENCE = registerSound("lava_ambience", registry);
     }
     private static SoundEvent registerSound(String name, IForgeRegistry<SoundEvent> registry)
     {

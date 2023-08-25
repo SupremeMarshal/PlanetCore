@@ -1,4 +1,130 @@
 {
+  "lava_ambience": {
+    "category": "ambience",
+    "sounds": [
+      {
+        "name": "planetcore:lava_ambience",
+        "stream": true
+      }
+    ]
+  },
+  "crust_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:crust",
+        "stream": true
+      }
+    ]
+  },
+  "crust1_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:crust1",
+        "stream": true
+      }
+    ]
+  },
+  "crust2_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:crust2",
+        "stream": true
+      }
+    ]
+  },
+  "mantle_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:mantle",
+        "stream": true
+      }
+    ]
+  },
+  "mantle1_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:mantle1",
+        "stream": true
+      }
+    ]
+  },
+  "mantle1-1_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:mantle1-1",
+        "stream": true
+      }
+    ]
+  },
+  "mantle2_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:mantle2",
+        "stream": true
+      }
+    ]
+  },
+  "mantle2-1_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:mantle2-1",
+        "stream": true
+      }
+    ]
+  },
+  "lower_mantle_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:lower_mantle",
+        "stream": true
+      }
+    ]
+  },
+  "lower_mantle1_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:lower_mantle1",
+        "stream": true
+      }
+    ]
+  },
+  "outer_core_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:outer_core",
+        "stream": true
+      }
+    ]
+  },
+  "inner_core_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:inner_core",
+        "stream": true
+      }
+    ]
+  },
+  "center_core_music": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "planetcore:center_core",
+        "stream": true
+      }
+    ]
+  },
   "action.indestructible":
   {
     "category": "action",
