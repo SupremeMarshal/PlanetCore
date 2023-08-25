@@ -1,4 +1,4 @@
-package com.PlanetCore.blocks.Elevator;
+package com.PlanetCore.blocks.Powered_ladders;
 
 import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.*;
@@ -13,13 +13,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class Elevator extends BlockLadder {
+public class Powered_ladders extends BlockLadder {
 
     public static final PropertyBool POWERED = PropertyBool.create("powered");
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 
-    public Elevator(String name) {
+    public Powered_ladders(String name) {
         super();
         setTranslationKey(name);
         setRegistryName(name);
@@ -139,7 +139,7 @@ public class Elevator extends BlockLadder {
     protected boolean isSameLadderWithPower(World worldIn, BlockPos pos, boolean searchForward, int distance, EnumFacing direction) {
         IBlockState iblockstate = worldIn.getBlockState(pos);
 
-        if (!(iblockstate.getBlock() instanceof Elevator)) {
+        if (!(iblockstate.getBlock() instanceof Powered_ladders)) {
             return false;
         } else {
             EnumFacing direction2 = iblockstate.getValue(FACING);

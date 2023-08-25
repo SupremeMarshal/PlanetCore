@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=east,powered=true": { "model": "planetcore:diamond_ladders_powered", "y": 270 },
+    "facing=west,powered=true": { "model": "planetcore:diamond_ladders_powered", "y": 90 },
+    "facing=south,powered=true": { "model": "planetcore:diamond_ladders_powered" },
+    "facing=north,powered=true": { "model": "planetcore:diamond_ladders_powered", "y": 180 },
+    "facing=east,powered=false": { "model": "planetcore:diamond_ladders", "y": 270 },
+    "facing=west,powered=false": { "model": "planetcore:diamond_ladders", "y": 90 },
+    "facing=south,powered=false": { "model": "planetcore:diamond_ladders" },
+    "facing=north,powered=false": { "model": "planetcore:diamond_ladders", "y": 180 }
+  }
+}

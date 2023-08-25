@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "planetcore:blocks/elevator"
+    "layer0": "planetcore:blocks/diamond_ladders"
   }
 }

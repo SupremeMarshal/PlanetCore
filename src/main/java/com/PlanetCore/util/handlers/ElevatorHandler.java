@@ -1,6 +1,6 @@
 package com.PlanetCore.util.handlers;
 
-import com.PlanetCore.blocks.Elevator.Elevator;
+import com.PlanetCore.blocks.Powered_ladders.Powered_ladders;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -22,11 +22,11 @@ public class ElevatorHandler {
         }
         boolean isPowered = false;
         EntityPlayer player = event.player;
-        boolean isOnElevator = player.world.getBlockState(new BlockPos(player.posX, player.posY, player.posZ)).getBlock() instanceof Elevator;
+        boolean isOnElevator = player.world.getBlockState(new BlockPos(player.posX, player.posY, player.posZ)).getBlock() instanceof Powered_ladders;
         IBlockState state = player.world.getBlockState(new BlockPos(player.posX, player.posY, player.posZ));
-        if (state.getBlock() instanceof Elevator)
+        if (state.getBlock() instanceof Powered_ladders)
         {
-            isPowered = state.getValue(Elevator.POWERED);
+            isPowered = state.getValue(Powered_ladders.POWERED);
         }
         double elevatorSpeed = 0.2;
         if (isPowered)
@@ -65,6 +65,8 @@ public class ElevatorHandler {
             }
         }
     }
+
+
 }
 
 

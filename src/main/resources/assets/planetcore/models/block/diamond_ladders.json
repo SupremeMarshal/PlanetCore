@@ -1,0 +1,17 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "texture": "planetcore:blocks/diamond_ladders",
+    "particle": "planetcore:blocks/diamond_ladders"
+  },
+  "elements": [
+    {
+      "from": [ 0, 0, 0 ],
+      "to": [ 16, 16, 1 ],
+      "faces": {
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#texture" }
+      }
+    }
+  ]
+}
