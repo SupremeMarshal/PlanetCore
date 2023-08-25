@@ -6,6 +6,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 public class ElevatorHandler {
 
     private static boolean wasOnElevator = false;
+    private static long lastElevatorTime = 0L;
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
@@ -39,6 +41,7 @@ public class ElevatorHandler {
 
             if (isOnElevator) {
                 wasOnElevator = true;
+                lastElevatorTime = System.currentTimeMillis();
                 EntityPlayerSP player1 = (EntityPlayerSP) event.player;
                 // If the player is looking downwards and pressing the "down" key
                 if (player1.movementInput.sneak)
@@ -58,7 +61,7 @@ public class ElevatorHandler {
                 }
             }
             else {
-                if (wasOnElevator) {
+                if (wasOnElevator && System.currentTimeMillis() - lastElevatorTime < 1000) { // 1000 ms = 1 second
                     player.motionY = 0;
                     wasOnElevator = false;
                 }
@@ -66,7 +69,13 @@ public class ElevatorHandler {
         }
     }
 
-
+    @SubscribeEvent
+    public static void onLivingFall(LivingFallEvent event) {
+        // Check if the fall is happening within 1 second of the player leaving the elevator
+        if (event.getEntityLiving() instanceof EntityPlayer && System.currentTimeMillis() - lastElevatorTime < 1000) {
+            event.setCanceled(true); // Cancel the fall damage
+        }
+    }
 }
 
 
