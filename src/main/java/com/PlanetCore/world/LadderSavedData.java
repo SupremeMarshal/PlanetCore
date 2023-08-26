@@ -4,16 +4,16 @@ import com.PlanetCore.util.Reference;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.storage.WorldSavedData;
 import net.minecraftforge.common.util.Constants;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LadderSavedData extends WorldSavedData {
 
-    private final Set<Pillar> pillars = new HashSet<>();
+    private final List<Pillar> pillars = new ArrayList<>();
 
     public static final String ID = Reference.MOD_ID+"_ladders";
 
@@ -25,7 +25,7 @@ public class LadderSavedData extends WorldSavedData {
         super(ID);
     }
 
-    public Set<Pillar> getPillars() {
+    public List<Pillar> getPillars() {
         return pillars;
     }
 
@@ -36,7 +36,7 @@ public class LadderSavedData extends WorldSavedData {
         for (NBTBase nbtBase : nbtTagList) {
             NBTTagCompound nbtTagCompound = (NBTTagCompound) nbtBase;
             int[] ints = nbtTagCompound.getIntArray("pos");
-            BlockPos.MutableBlockPos pos = new BlockPos.MutableBlockPos(ints[0], ints[1], ints[2]);
+            BlockPos pos = new BlockPos(ints[0], ints[1], ints[2]);
             int height = nbtTagCompound.getInteger("height");
             pillars.add(Pillar.of(pos, height));
         }
@@ -121,18 +121,7 @@ public class LadderSavedData extends WorldSavedData {
             }
         }
 
-        HashSet<Pillar> toKeep = new HashSet<>();
-
-        //todo, why doesn't Set#remove work?
-
-        for (Pillar pillar : pillars) {
-            if (pillar.getHeight() >0) {
-                toKeep.add(pillar);
-            }
-        }
-
-        pillars.clear();
-        pillars.addAll(toKeep);
+        pillars.removeIf(pillar -> pillar.getHeight() <= 0);
 
         if (!addedToExistingPillar) {
             pillars.add(Pillar.of(pos, 1));
@@ -145,7 +134,7 @@ public class LadderSavedData extends WorldSavedData {
         Pillar pillarToBreak = null;
 
         for (Pillar p : pillars) {
-            if (p.contains(pos)) {
+            if (p.containsPos(pos)) {
                 pillarToBreak = p;
                 break;
             }
@@ -154,7 +143,6 @@ public class LadderSavedData extends WorldSavedData {
         if (pillarToBreak != null) {
             int height = pillarToBreak.getHeight();
             if (height < 2) {
-                //remove the pillar entirely
                 pillars.remove(pillarToBreak);
             } else {
                 int diff = pos.getY() - pillarToBreak.getBase().getY();
@@ -184,7 +172,7 @@ public class LadderSavedData extends WorldSavedData {
 
     public Pillar findPillarAt(BlockPos pos) {
         for (Pillar pillar : pillars) {
-            if (pillar.contains(pos)) {
+            if (pillar.containsPos(pos)) {
                 return pillar;
             }
         }

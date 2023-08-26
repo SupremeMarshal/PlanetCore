@@ -1,29 +1,24 @@
 package com.PlanetCore.util.debug.render;
 
-import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.init.ModItems;
 import com.PlanetCore.util.Reference;
 import com.PlanetCore.world.Pillar;
-import com.flowpowered.noise.module.combiner.Min;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
-import org.lwjgl.Sys;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RendererCube {
 
     public static boolean DEBUG = true;
-    private static Set<Pillar> rendererCubeTargets = new HashSet<>();
+    private static java.util.List<Pillar> rendererCubeTargets = new ArrayList<>();
     private static long currentTime;
 
-    public static void draw(Set<Pillar> pillars) {
+    public static void draw(List<Pillar> pillars) {
         RendererCube.rendererCubeTargets = pillars;
         currentTime = System.currentTimeMillis();
     }
