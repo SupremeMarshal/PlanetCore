@@ -1,42 +1,30 @@
 package com.PlanetCore.blocks.Powered_ladders;
 
 import com.PlanetCore.init.ModBlocks;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockLadder;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.PropertyBool;
-import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class Powered_ladders extends BlockLadder {
+public class ComplexLadderBlock extends BlockLadder {
 
     public static final PropertyBool POWERED = PropertyBool.create("powered");
-    public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
-
-
-    public Powered_ladders(String name) {
+    public ComplexLadderBlock() {
         super();
-        setTranslationKey(name);
-        setRegistryName(name);
-        setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        setSoundType(SoundType.METAL);//this is protected
         ModBlocks.BLOCKS.add(this);
-        setSoundType(SoundType.METAL);
         setDefaultState(getDefaultState().withProperty(POWERED, false));
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
         return new BlockStateContainer(this, FACING, POWERED);
-    }
-
-    @Override
-    public boolean isLadder(IBlockState state, IBlockAccess world, BlockPos pos, EntityLivingBase entity) {
-        return false;
     }
 
     @Override
@@ -84,7 +72,6 @@ public class Powered_ladders extends BlockLadder {
         boolean powered = (meta & 4) != 0;
         return this.getDefaultState().withProperty(FACING, facing).withProperty(POWERED, powered);
     }
-
     @Override
     public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
         if (state.getValue(POWERED)) {
@@ -102,9 +89,11 @@ public class Powered_ladders extends BlockLadder {
 
 
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
+
         if (!worldIn.isRemote) {
             this.updateState(state, worldIn, pos);
         }
+        super.neighborChanged(state,worldIn,pos,blockIn,fromPos);
     }
 
     protected void updateState(IBlockState state, World worldIn, BlockPos pos) {
@@ -112,9 +101,13 @@ public class Powered_ladders extends BlockLadder {
         boolean flag1 = worldIn.isBlockPowered(pos) || this.findPoweredLadderSignal(worldIn, pos, state, true, 0) || this.findPoweredLadderSignal(worldIn, pos, state, false, 0);
 
         if (flag1 != flag) {
-            worldIn.setBlockState(pos, state.withProperty(POWERED, flag1), 3);
+            updatePoweredState(worldIn,pos,state,flag1);
             worldIn.notifyNeighborsOfStateChange(pos.down(), this, false);
         }
+    }
+
+    public void updatePoweredState(World world,BlockPos pos,IBlockState state,boolean powered) {
+        world.setBlockState(pos, state.withProperty(POWERED, powered), 3);
     }
 
     protected boolean findPoweredLadderSignal(World worldIn, BlockPos pos, IBlockState state, boolean searchForward, int recursionCount) {
@@ -139,7 +132,7 @@ public class Powered_ladders extends BlockLadder {
     protected boolean isSameLadderWithPower(World worldIn, BlockPos pos, boolean searchForward, int distance, EnumFacing direction) {
         IBlockState iblockstate = worldIn.getBlockState(pos);
 
-        if (!(iblockstate.getBlock() instanceof Powered_ladders)) {
+        if (!(iblockstate.getBlock() instanceof DiamondLadderBlock)) {
             return false;
         } else {
             EnumFacing direction2 = iblockstate.getValue(FACING);

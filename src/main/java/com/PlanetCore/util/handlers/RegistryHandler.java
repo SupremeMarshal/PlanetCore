@@ -94,7 +94,7 @@ public class RegistryHandler {
         MinecraftForge.EVENT_BUS.register(new FogHandler());
         MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
         MinecraftForge.EVENT_BUS.register((new DamageReductionArmorHandler()));
-        MinecraftForge.EVENT_BUS.register((new LavaWalker()));
+      //  MinecraftForge.EVENT_BUS.register((new LavaWalker()));
         ModPotions.registerPotions();
      //   NetworkRegistry.INSTANCE.registerGuiHandler(MOD_ID, new GuiHandler());
 
