@@ -2,6 +2,7 @@ package com.PlanetCore.net;
 
 import com.PlanetCore.util.debug.render.RendererCube;
 import com.PlanetCore.world.Pillar;
+import com.google.common.collect.Sets;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.math.BlockPos;
@@ -10,17 +11,18 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 // not threadsafe!
 public class S2CLadderPacket implements IMessage {
 
-  private Set<Pillar> pillars = new HashSet<>();
+  private List<Pillar> pillars = new ArrayList<>();
   public S2CLadderPacket() {
   }
 
-  public S2CLadderPacket(Set<Pillar> pillars) {
+  public S2CLadderPacket(List<Pillar> pillars) {
     this.pillars = pillars;
   }
 
@@ -28,7 +30,7 @@ public class S2CLadderPacket implements IMessage {
   public void fromBytes(ByteBuf buf) {
     int size = buf.readInt();
     for( int i = 0; i< size;i++) {
-      pillars.add(Pillar.of(new BlockPos.MutableBlockPos(buf.readInt(), buf.readInt(),buf.readInt()),buf.readInt()));
+      pillars.add(Pillar.of(new BlockPos(buf.readInt(), buf.readInt(),buf.readInt()),buf.readInt()));
     }
   }
 

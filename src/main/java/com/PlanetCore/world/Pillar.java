@@ -26,7 +26,7 @@ public class Pillar {
     }
 
     public BlockPos getTop() {
-        return base.toImmutable().up(height-1);
+        return base.up(height-1);
     }
 
     public int getHeight() {
@@ -37,7 +37,7 @@ public class Pillar {
         this.height = height;
     }
 
-    public boolean contains(BlockPos pos) {
+    public boolean containsPos(BlockPos pos) {
         if (pos.getX() == base.getX() && pos.getZ() == base.getZ()) {
             int diff = pos.getY() - base.getY();
             if (diff < 0)return false;
