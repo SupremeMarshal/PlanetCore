@@ -4,6 +4,7 @@ package com.PlanetCore;
 import com.PlanetCore.cwg.CustomCaveInjector;
 import com.PlanetCore.cwg.PlanetCoreWorldType;
 import com.PlanetCore.init.ModSmelting;
+import com.PlanetCore.net.PacketHandler;
 import com.PlanetCore.util.Reference;
 import com.PlanetCore.util.handlers.RegistryHandler;
 import com.PlanetCore.util.handlers.WorldgenHandler;
@@ -61,6 +62,7 @@ public class Main {
     public static void init(FMLInitializationEvent event) {
 
         RegistryHandler.initRegistries(event);
+        PacketHandler.registerMessages();
         Scoreboard scoreboard = new Scoreboard();
         ScoreObjective objective = scoreboard.addScoreObjective("planetcore_score", ScoreCriteria.DUMMY);
     }

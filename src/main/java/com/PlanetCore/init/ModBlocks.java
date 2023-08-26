@@ -2,11 +2,14 @@ package com.PlanetCore.init;
 
 
 import com.PlanetCore.blocks.*;
-import com.PlanetCore.blocks.Powered_ladders.Powered_ladders;
+import com.PlanetCore.blocks.Powered_ladders.DiamondLadderBlock;
+import com.PlanetCore.blocks.Powered_ladders.IronLadderBlock;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
@@ -87,8 +90,8 @@ public class ModBlocks {
     public static final HotRocks DIORITE = _null();
     public static final HotRocks ANDESITE = _null();
 
-    public static final Powered_ladders IRON_LADDERS = _null();
-    public static final Powered_ladders DIAMOND_LADDERS = _null();
+    public static final IronLadderBlock IRON_LADDERS = _null();
+    public static final DiamondLadderBlock DIAMOND_LADDERS = _null();
 
     public static final GemsGravel RUBY_GRAVEL = _null();
     public static final GemsGravel SAPPHIRE_GRAVEL = _null();
@@ -281,8 +284,8 @@ public class ModBlocks {
 
         registry.registerAll(
 
-                new Powered_ladders("iron_ladders"),
-                new Powered_ladders("diamond_ladders"),
+                new IronLadderBlock().setTranslationKey("iron_ladders").setRegistryName("iron_ladders").setCreativeTab(CreativeTabs.BUILDING_BLOCKS),
+                new DiamondLadderBlock().setTranslationKey("diamond_ladders").setRegistryName("diamond_ladders").setCreativeTab(CreativeTabs.BUILDING_BLOCKS),
                 new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
                 new BlockBase("crust_cobblestone", Material.ROCK,false).setHardness(2.0F).setResistance(1),
                 new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
