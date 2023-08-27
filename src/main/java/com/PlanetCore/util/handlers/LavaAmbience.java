@@ -22,7 +22,7 @@ public class LavaAmbience extends MovingSound {
         this.world = player.world;
         this.repeat = true;
         this.repeatDelay = 0;
-        this.volume = calculateVolume(lavaCount);
+        this.volume = 1.0f;
         this.pitch = 1.0f;
         this.xPosF = (float) player.posX;
         this.yPosF = (float) player.posY;
@@ -33,6 +33,7 @@ public class LavaAmbience extends MovingSound {
     public void update() {
         // Check if the player is near the lava
         double minDistance = Double.MAX_VALUE;
+        lavaCount = 0;
         for (int x = -10; x <= 10; x++) {
             for (int y = -10; y <= 10; y++) {
                 for (int z = -10; z <= 10; z++) {
@@ -50,7 +51,10 @@ public class LavaAmbience extends MovingSound {
                 }
             }
         }
-
+        if (minDistance <= MAX_DISTANCE) {
+            volume = calculateVolume(lavaCount);
+            pitch = calculateVolume(lavaCount);
+        }
         if (minDistance > MAX_DISTANCE) {
             this.donePlaying = true;
             this.repeat = false;
@@ -61,6 +65,9 @@ public class LavaAmbience extends MovingSound {
     private static float calculateVolume(int lavaCount) {
         // Define how the volume should be calculated based on the lava count
         // You might want to normalize it to be within a range (e.g., 0.1 to 1.0)
-        return Math.min(1.0f, 0.2f + 0.3f * lavaCount);
+        if (lavaCount == 1) return 0.001f;
+        if (lavaCount == 2) return 0.003f;
+        if (lavaCount == 3) return 0.006f;
+        else return Math.min(1.0f, 0.01f * lavaCount - 0.03f);
     }
 }

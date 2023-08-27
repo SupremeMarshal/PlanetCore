@@ -37,9 +37,9 @@ public class LavaSoundManager {
         World world = player.world;
         double minDistance = Double.MAX_VALUE;
 
-        for (int x = -10; x <= 10; x++) {
-            for (int y = -10; y <= 10; y++) {
-                for (int z = -10; z <= 10; z++) {
+        for (int x = -12; x <= 12; x++) {
+            for (int y = -12; y <= 12; y++) {
+                for (int z = -12; z <= 12; z++) {
                     BlockPos pos = new BlockPos(player.posX + x, player.posY + y, player.posZ + z);
                     if (world.getBlockState(pos).getMaterial() == Material.LAVA) {
                         double distance = player.getDistanceSqToCenter(pos);
