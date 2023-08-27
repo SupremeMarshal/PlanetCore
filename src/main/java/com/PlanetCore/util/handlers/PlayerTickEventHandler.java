@@ -27,13 +27,14 @@ public class PlayerTickEventHandler {
             PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
             int fireResist = effect == null ? 0 : effect.getAmplifier() + 1;
             double y = event.player.posY;
-            double temp = calcTemp(y);
+            double temp = calcTemp(y, player.dimension);
             double damage = getDamage(temp,fireResist);
-            if (damage > 0 && damage <= 2 && player.world.getTotalWorldTime() % 400 == 1)
-                TemperatureHandler.tickTemps(event.player);
+            int dimension = player.dimension;
+            if (damage > 0 && damage <= 2 && player.world.getTotalWorldTime() % 300 == 1)
+                TemperatureHandler.tickTemps(event.player, dimension);
             else if (damage > 2)
             {
-                TemperatureHandler.tickTemps(event.player);
+                TemperatureHandler.tickTemps(event.player, dimension);
             }
         }
     }

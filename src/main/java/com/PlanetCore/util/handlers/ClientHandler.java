@@ -126,10 +126,11 @@ public class ClientHandler {
         if (event.getType() == RenderGameOverlayEvent.ElementType.ALL) {
             Minecraft minecraft = Minecraft.getMinecraft();
             EntityPlayer player = minecraft.player;
+            int dimension = player.dimension;
             if (player != null) {
                 double y = player.posY;
-                if (y < 0) {
-                    int temp = (int) TemperatureHandler.calcTemp(y);
+                if (y < 0 || dimension == -1) {
+                    int temp = (int) TemperatureHandler.calcTemp(y, dimension);
                     PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
                     int fireResist = effect == null ? 0 : effect.getAmplifier() + 1;
                     int limit = TemperatureHandler.getLimit(fireResist);
@@ -194,12 +195,13 @@ public class ClientHandler {
         RenderBlockOverlayEvent.OverlayType overlayType = e.getOverlayType();
         if (overlayType == RenderBlockOverlayEvent.OverlayType.FIRE) {
             EntityPlayer player = e.getPlayer();
+            int dimension = player.dimension;
             if (player.isBurning()) {
                 PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
                 int fireResist = effect == null ? 0 : effect.getAmplifier() + 1;
                 if (fireResist == 0) return;
                 double y = player.posY;
-                double temp = TemperatureHandler.calcTemp(y);
+                double temp = TemperatureHandler.calcTemp(y, dimension);
                 double damage = TemperatureHandler.getDamage(temp, fireResist);
                 if (damage <= 0) {
                     e.setCanceled(true);

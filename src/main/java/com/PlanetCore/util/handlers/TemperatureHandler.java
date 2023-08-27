@@ -5,6 +5,7 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,12 +22,15 @@ public class TemperatureHandler {
         heatMap.put(5,4000);
     }
 
-    public static double calcTemp(double y) {
-        if (y >= 0) return 20;
-        if (y >= -512) return y * -0.15625 + 20;
-        else if (y >= -768) return (y + 512) * -0.78125 + 100;
-        else if (y >= -2500) return (y + 768) * -2.8291 + 300;
-        else return 5200;
+    public static double calcTemp(double y, int dimension) {
+        if (dimension == -1) return 60;
+        else {
+            if (y >= 0) return 20;
+            if (y >= -512) return y * -0.15625 + 20;
+            else if (y >= -768) return (y + 512) * -0.78125 + 100;
+            else if (y >= -2500) return (y + 768) * -2.8291 + 300;
+            else return 5200;
+        }
     }
 
     public static double getDamage(double temp, int  fireResist) {
@@ -42,11 +46,11 @@ public class TemperatureHandler {
         return damage;
     }
 
-    public static void tickTemps(EntityPlayer player) {
+    public static void tickTemps(EntityPlayer player, int dimension) {
         PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
         int fireResist = effect == null ? 0 : effect.getAmplifier() + 1;
         double y = player.posY;
-        double temp = calcTemp(y);
+        double temp = calcTemp(y, dimension);
         double damage = getDamage(temp,fireResist);
         if (damage > 0)
         {
