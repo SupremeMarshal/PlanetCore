@@ -39,15 +39,15 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
 
     public IronDrill() {
         this.maxStackSize = 1;
-        setHarvestLevel("pickaxe",2);
+        setHarvestLevel("pickaxe",3);
     }
 
     @Override
     public float getDestroySpeed(ItemStack stack, IBlockState state) {
         if (getStoredEnergy(stack) < energy_per_block_broken) {
-            return .1f;
+            return .2f;
         }
-        return 1;
+        return 2;
     }
 
     @Override
