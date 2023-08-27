@@ -27,13 +27,26 @@ public class DiamondLadderBlock extends ComplexLadderBlock {
             Pillar pillar = ladderSavedData.findPillarAt(pos);
             if (pillar != null) {
                 BlockPos top = pillar.getTop();
+                BlockPos bot = pillar.getBase();
 
 
                 EntityPlayerMP entityplayermp = (EntityPlayerMP) playerIn;
 
-                if (entityplayermp.connection.getNetworkManager().isChannelOpen() && !entityplayermp.isPlayerSleeping())
+                if (entityplayermp.rotationPitch < -45 && entityplayermp.connection.getNetworkManager().isChannelOpen() && !entityplayermp.isPlayerSleeping())
                 {
                     EnderTeleportEvent event = new EnderTeleportEvent(entityplayermp, top.getX() +.5,top.getY()+1,top.getZ()+.5,0);
+                    if (!MinecraftForge.EVENT_BUS.post(event)) {
+
+                        if (entityplayermp.isRiding()) {
+                            entityplayermp.dismountRidingEntity();
+                        }
+                        entityplayermp.setPositionAndUpdate(event.getTargetX(), event.getTargetY(), event.getTargetZ());
+                        entityplayermp.fallDistance = 0.0F;
+                    }
+                }
+                if (entityplayermp.rotationPitch > 45 && entityplayermp.connection.getNetworkManager().isChannelOpen() && !entityplayermp.isPlayerSleeping())
+                {
+                    EnderTeleportEvent event = new EnderTeleportEvent(entityplayermp, bot.getX() +.5,bot.getY(),bot.getZ()+.5,0);
                     if (!MinecraftForge.EVENT_BUS.post(event)) {
 
                         if (entityplayermp.isRiding()) {
