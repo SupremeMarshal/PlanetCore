@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_sulfur"},
+  "variant=mantle":{"model":"planetcore:mantleslate_sulfur"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_sulfur"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_sulfur"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_sulfur"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_sulfur"}}}

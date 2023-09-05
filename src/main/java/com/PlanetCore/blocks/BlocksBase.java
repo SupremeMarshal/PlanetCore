@@ -27,12 +27,10 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlocksBase extends BlockBase implements IMetaName {
+public class BlocksBase extends BlockBase {
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
 	public final PlanetExp planetExp;
-	public static final int [] LightLevel = {0, 5, 10, 15};
-	public static final PropertyEnum<BlocksBase.EnumType> VARIANT_SUPERCOMPRESSED = PropertyEnum.create("variant", BlocksBase.EnumType.class);
 	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
 		super(name, material,false);
 		setSoundType(SoundType.METAL);
@@ -46,104 +44,6 @@ public class BlocksBase extends BlockBase implements IMetaName {
 	@Override
 	public int damageDropped(IBlockState state) {
 		return getMetaFromState(state);
-	}
-
-	@Override
-	public int getLightValue(IBlockState state) {
-		int meta = getMetaFromState(state);
-		return (LightLevel[meta]);
-	}
-
-	@Override
-	public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items) {
-		for (BlocksBase.EnumType BlocksBase$enumtype : BlocksBase.EnumType.values()) {
-			items.add(new ItemStack(this, 1, BlocksBase$enumtype.getMeta()));
-		}
-	}
-
-	@Override
-	public IBlockState getStateFromMeta(int meta)
-	{
-		return this.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(meta));
-	}
-
-	@Override
-	public int getMetaFromState(IBlockState state)
-	{
-		return state.getValue(VARIANT_SUPERCOMPRESSED).getMeta();
-	}
-
-	@Override
-	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		return new ItemStack(Item.getItemFromBlock(this),1, getMetaFromState(world.getBlockState(pos)));
-	}
-
-
-	@Override
-	protected BlockStateContainer createBlockState()
-	{
-		return new BlockStateContainer(this, VARIANT_SUPERCOMPRESSED);
-	}
-
-
-
-
-	public enum EnumType implements IStringSerializable
-	{
-		COLD(0, "supercompressed"),
-		HOT(1, "hot_supercompressed"),
-		VERYHOT(2, "veryhot_supercompressed"),
-		SUPERHEATED(3, "superheated_supercompressed");
-
-		private static final BlocksBase.EnumType[] META_LOOKUP = new BlocksBase.EnumType[]{COLD, HOT, VERYHOT, SUPERHEATED};
-		private final int meta;
-		private final String name;
-
-		EnumType(int meta, String name)
-		{
-			this.meta=meta;
-			this.name=name;
-		}
-
-		@Override
-		public String getName() {
-			return this.name;
-		}
-
-		public int getMeta()
-		{
-			return this.meta;
-		}
-
-		@Override
-		public String toString()
-		{
-			return this.name;
-		}
-
-		public static BlocksBase.EnumType byMetadata(int meta)
-		{
-			return META_LOOKUP[meta];
-		}
-
-		static {
-			for(BlocksBase.EnumType BlocksBase$enumtype : values())
-			{
-				META_LOOKUP[BlocksBase$enumtype.getMeta()] = BlocksBase$enumtype;
-			}
-		}
-	}
-
-	@Override
-	public String getSpecialName(ItemStack stack)
-	{
-		return BlocksBase.EnumType.values()[stack.getItemDamage()].getName();
-	}
-
-	@Override
-	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-		System.out.println(meta);
-		return this.getDefaultState().withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(meta));
 	}
 
 	@Override

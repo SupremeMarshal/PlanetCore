@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_gold"},
+  "variant=mantle":{"model":"planetcore:mantleslate_gold"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_gold"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_gold"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_gold"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_gold"}}}

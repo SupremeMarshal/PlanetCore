@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_diamond"},
+  "variant=mantle":{"model":"planetcore:mantleslate_diamond"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_diamond"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_diamond"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_diamond"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_diamond"}}}

@@ -124,6 +124,26 @@ public class RenderHandler
 				}
 			});
 
+			/** superheated lava */
+			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.SUPERHEATED_LAVA_FLUID), new ItemMeshDefinition() {
+
+				@Override
+				public ModelResourceLocation getModelLocation(ItemStack stack) {
+
+					return new ModelResourceLocation("planetcore:superheated_lava", "fluid");
+
+				}
+			});
+
+			ModelLoader.setCustomStateMapper(ModBlocks.SUPERHEATED_LAVA_FLUID, new StateMapperBase() {
+
+				@Override
+				protected ModelResourceLocation getModelResourceLocation(IBlockState state) {
+
+					return new ModelResourceLocation("planetcore:superheated_lava", "fluid");
+				}
+			});
+
 			/** redstone lava */
 			ModelLoader.setCustomMeshDefinition(Item.getItemFromBlock(ModBlocks.REDSTONE_LAVA_FLUID), new ItemMeshDefinition() {
 

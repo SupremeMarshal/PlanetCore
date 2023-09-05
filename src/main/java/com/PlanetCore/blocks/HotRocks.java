@@ -141,7 +141,6 @@ public class HotRocks extends BlockBase implements IMetaName {
 
 	@Override
 	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing blockFaceClickedOn, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-		System.out.println(meta);
 		return this.getDefaultState().withProperty(VARIANT_HOTROCKS, HotRocks.EnumType.byMetadata(meta));
 	}
 

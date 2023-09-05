@@ -42,15 +42,8 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
         if (rand.nextBoolean()) {
             return CellCaveTypes.SMALL_CAVES;
         } else {
-            if (cellY > -512 && rand.nextFloat() < 0.2)
-            {
-                return CellCaveTypes.SUPER_LARGE_CAVES;
-            }
-            else if (rand.nextFloat() < 0.33) {
+            if (cellY < -128 && rand.nextBoolean()) {
                 return CellCaveTypes.BIG_CAVES;
-            }
-            else if (cellY < -768 && rand.nextBoolean()) {
-                return CellCaveTypes.SUPER_LARGE_CAVES;
             }
             else if (rand.nextBoolean())
                 return CellCaveTypes.VERY_SMALL_CAVES;
@@ -63,19 +56,15 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
             return Integer.MIN_VALUE;
         }
         int avgY;
-        if (cellY > -200) {
+        if (cellY > -400) {
             avgY = (int) (cellY - cellSizeY);
-        } else if (cellY > -1024) {
+        } else if (cellY > -1000) {
+            avgY = (int) (cellY - (cellSizeY / 1.5));
+        } else if (cellY > -2000) {
             avgY = cellY;
-        } else if (cellY > -2048) {
-            if (type == CellCaveTypes.SUPER_LARGE_CAVES) {
-                avgY = (int) (cellY + cellSizeY/2);
-            } else {
-                avgY = cellY;
-            }
         }
         else {
-            avgY = (int) (cellY + cellSizeY/4);
+            avgY = (int) (cellY - cellSizeY/2);
         }
         return randomLevel(rand, avgY, (int) (cellSizeY / 5), true);
     }
@@ -83,8 +72,9 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
     @SuppressWarnings("Convert2MethodRef")
     private Supplier<IBlockState> lavaBlock(int cellX, int cellY, int cellZ, CellCaveType type, int cell, FastRandom rand) {
         Block[] blocks = {
-                ModBlocks.IRON_LAVA_FLUID
-//                ModBlocks.REDSTONE_LAVA_FLUID,
+                Blocks.LAVA,
+                ModBlocks.IRON_LAVA_FLUID,
+                ModBlocks.SUPERHEATED_LAVA_FLUID
 //                ModBlocks.SILVER_LAVA_FLUID,
 //                ModBlocks.GOLD_LAVA_FLUID,
 //                ModBlocks.DIAMOND_LAVA_FLUID,
@@ -98,7 +88,11 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
 //                ModBlocks.ONYX_LAVA_FLUID,
 //                ModBlocks.PAINITE_LAVA_FLUID
         };
-        Block block = blocks[rand.nextInt(blocks.length)];
+        Block block;
+        if (cellY > -4000) {
+            block = blocks[rand.nextInt(1)];
+        }
+        else block = blocks[rand.nextInt(1) + 1];
         return () -> block.getDefaultState();
     }
 

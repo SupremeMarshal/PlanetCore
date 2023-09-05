@@ -21,6 +21,10 @@ public class ThreeEffectFoodItem extends ItemFood {
         this.effect2 = effect2;
     }
 
+    @Override
+    public ItemFood setAlwaysEdible() {
+        return super.setAlwaysEdible();
+    }
 
     @Override
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player) {

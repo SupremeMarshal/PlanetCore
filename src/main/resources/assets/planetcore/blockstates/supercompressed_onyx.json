@@ -1,5 +1,5 @@
-{"variants":{
-  "variant=supercompressed":{"model":"planetcore:supercompressed_onyx"},
-  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_onyx"},
-  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_onyx"},
-  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_onyx"}}}
+{
+  "variants": {
+    "normal": { "model": "planetcore:supercompressed_onyx" }
+  }
+}

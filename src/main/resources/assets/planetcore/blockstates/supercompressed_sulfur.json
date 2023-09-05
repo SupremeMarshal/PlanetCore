@@ -1,5 +1,5 @@
-{"variants":{
-  "variant=supercompressed":{"model":"planetcore:supercompressed_sulfur"},
-  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_sulfur"},
-  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_sulfur"},
-  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_sulfur"}}}
+{
+  "variants": {
+    "normal": { "model": "planetcore:supercompressed_sulfur" }
+  }
+}

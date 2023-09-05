@@ -21,8 +21,6 @@ import javax.annotation.Nonnull;
 import java.util.Random;
 import java.util.function.Predicate;
 
-import static com.PlanetCore.blocks.BlocksBase.VARIANT_SUPERCOMPRESSED;
-import static com.PlanetCore.blocks.HotRocks.VARIANT_HOTROCKS;
 import static io.github.opencubicchunks.cubicchunks.api.util.Coords.cubeToMinBlock;
 import static io.github.opencubicchunks.cubicchunks.api.util.Coords.localToBlock;
 import static io.github.opencubicchunks.cubicchunks.cubicgen.StructureGenUtil.normalizedDistance;
@@ -122,55 +120,55 @@ import static net.minecraft.util.math.MathHelper.floor;
 
         public enum CaveType {
 
-            CAVE0(Blocks.STONE, Blocks.LAVA,0.000f, -400,-200, 0),
-            CAVE15(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.008f, -400,-200, 0),
-            CAVE16(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.008f, -900,-400, 1),
-            CAVE17(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.008f, -1500,-900, 2),
-            CAVE18(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.008f, -1000000,-1500, 3),
-            CAVE19(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.008f, -400,-100, 0),
-            CAVE20(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.008f, -900,-400, 1),
-            CAVE21(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.008f, -1500,-900, 2),
-            CAVE22(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.008f, -1000000,-1500, 3),
-            CAVE23(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.016f, -400,-200, 0),
-            CAVE24(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.016f, -900,-400, 1),
-            CAVE25(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.016f, -1500,-900, 2),
-            CAVE26(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.016f, -1000000,-1500, 3),
-            CAVE27(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.005f, -900,-200, 0),
-            CAVE28(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.005f, -1500,-900, 1),
-            CAVE29(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.01f, -2000,-1500, 2),
-            CAVE30(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.005f, -1000000,-2000, 3),
-            CAVE31(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.005f, -900,-300, 0),
-            CAVE32(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.005f, -1500,-900, 1),
-            CAVE33(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.01f, -2000,-1500, 2),
-            CAVE34(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.02f, -1000000,-2000, 3),
-            CAVE35(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.005f, -900,-500, 0),
-            CAVE36(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.0015f, -1500,-900, 1),
-            CAVE37(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.002f, -2000,-1500, 2),
-            CAVE38(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.0025f, -1000000,-2000, 3),
-            CAVE39(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,1.2f, -900,-600, 0),
-            CAVE40(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.2f, -1500,-900, 1),
-            CAVE41(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.2f, -2000,-1500, 2),
-            CAVE42(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.2f, -1000000,-2000, 3),
-            CAVE43(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.2f, -900,-700, 0),
-            CAVE44(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.2f, -1500,-900, 1),
-            CAVE45(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.2f, -2000,-1500, 2),
-            CAVE46(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.2f, -1000000,-2000, 3),
-            CAVE47(ModBlocks.SUPERCOMPRESSED_TUNGSTEN, ModBlocks.TUNGSTEN_LAVA_FLUID,0.2f, -1200,-800, 0),
-            CAVE48(ModBlocks.SUPERCOMPRESSED_TUNGSTEN, ModBlocks.TUNGSTEN_LAVA_FLUID,0.2f, -1500,-1200, 1),
-            CAVE49(ModBlocks.SUPERCOMPRESSED_TUNGSTEN, ModBlocks.TUNGSTEN_LAVA_FLUID,0.2f, -2000,-1500, 2),
+            CAVE0(Blocks.AIR, Blocks.LAVA,0.000f, -1000000,-200, 0),
+            CAVE15(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.008f, -1000000,-1500, 0),
+            //CAVE16(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.008f, -900,-400, 1),
+            //CAVE17(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.008f, -1500,-900, 2),
+            //CAVE18(ModBlocks.SUPERCOMPRESSED_REDSTONE, ModBlocks.REDSTONE_LAVA_FLUID,0.008f, -1000000,-1500, 3),
+            CAVE19(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.008f, -1000000,-1000, 0),
+            //CAVE20(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.008f, -900,-400, 1),
+            //CAVE21(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.008f, -1500,-900, 2),
+            //CAVE22(ModBlocks.SUPERCOMPRESSED_SILVER, ModBlocks.SILVER_LAVA_FLUID,0.008f, -1000000,-1500, 3),
+            CAVE23(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.016f, -1000000,-1500, 0),
+            //CAVE24(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.016f, -900,-400, 1),
+            //CAVE25(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.016f, -1500,-900, 2),
+            //CAVE26(ModBlocks.SUPERCOMPRESSED_GOLD, ModBlocks.GOLD_LAVA_FLUID,0.016f, -1000000,-1500, 3),
+            CAVE27(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.005f, -1000000,-4000, 0),
+            //CAVE28(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.005f, -1500,-900, 1),
+            //CAVE29(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.01f, -2000,-1500, 2),
+            //CAVE30(ModBlocks.SUPERCOMPRESSED_DIAMOND, ModBlocks.DIAMOND_LAVA_FLUID,0.005f, -1000000,-2000, 3),
+            CAVE31(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.005f, -1000000,-4000, 0),
+            //CAVE32(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.005f, -1500,-900, 1),
+            //CAVE33(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.01f, -2000,-1500, 2),
+            //CAVE34(ModBlocks.SUPERCOMPRESSED_EMERALD, Blocks.LAVA,0.02f, -1000000,-2000, 3),
+            CAVE35(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.005f, -1000000,-3000, 0),
+            //CAVE36(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.0015f, -1500,-900, 1),
+            //CAVE37(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.002f, -2000,-1500, 2),
+            //CAVE38(ModBlocks.SUPERCOMPRESSED_LAPIS, Blocks.LAVA,0.0025f, -1000000,-2000, 3),
+            CAVE39(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,1.2f, -1000000,-2000, 0),
+            //CAVE40(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.2f, -1500,-900, 1),
+            //CAVE41(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.2f, -2000,-1500, 2),
+            //CAVE42(ModBlocks.SUPERCOMPRESSED_TITANIUM, ModBlocks.TITANIUM_LAVA_FLUID,0.2f, -1000000,-2000, 3),
+            CAVE43(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.2f, -900,-2000, 0),
+            //CAVE44(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.2f, -1500,-900, 1),
+            //CAVE45(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.2f, -2000,-1500, 2),
+            //CAVE46(ModBlocks.SUPERCOMPRESSED_URANIUM, ModBlocks.URANIUM_LAVA_FLUID,0.2f, -1000000,-2000, 3),
+            //CAVE47(ModBlocks.SUPERCOMPRESSED_TUNGSTEN, ModBlocks.TUNGSTEN_LAVA_FLUID,0.2f, -1000000,-2500, 0),
+            //CAVE48(ModBlocks.SUPERCOMPRESSED_TUNGSTEN, ModBlocks.TUNGSTEN_LAVA_FLUID,0.2f, -1500,-1200, 1),
+            //CAVE49(ModBlocks.SUPERCOMPRESSED_TUNGSTEN, ModBlocks.TUNGSTEN_LAVA_FLUID,0.2f, -2000,-1500, 2),
             CAVE50(ModBlocks.SUPERCOMPRESSED_TUNGSTEN, ModBlocks.TUNGSTEN_LAVA_FLUID,0.2f, -1000000,-2000, 3),
-            CAVE51(ModBlocks.SUPERCOMPRESSED_RUBY, ModBlocks.RUBY_LAVA_FLUID,0.08f, -1500,-1000, 0),
-            CAVE52(ModBlocks.SUPERCOMPRESSED_RUBY, ModBlocks.RUBY_LAVA_FLUID,0.08f, -2000,-1500, 1),
-            CAVE53(ModBlocks.SUPERCOMPRESSED_RUBY, ModBlocks.RUBY_LAVA_FLUID,0.08f, -2300,-2000, 2),
+            //CAVE51(ModBlocks.SUPERCOMPRESSED_RUBY, ModBlocks.RUBY_LAVA_FLUID,0.08f, -1000000,-3000, 0),
+            //CAVE52(ModBlocks.SUPERCOMPRESSED_RUBY, ModBlocks.RUBY_LAVA_FLUID,0.08f, -2000,-1500, 1),
+            //CAVE53(ModBlocks.SUPERCOMPRESSED_RUBY, ModBlocks.RUBY_LAVA_FLUID,0.08f, -2300,-2000, 2),
             CAVE54(ModBlocks.SUPERCOMPRESSED_RUBY, ModBlocks.RUBY_LAVA_FLUID,0.08f, -1000000,-2300, 3),
-            CAVE55(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.07f, -1500,-1200, 0),
-            CAVE56(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.07f, -2000,-1500, 1),
-            CAVE57(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.07f, -2300,-2000, 2),
-            CAVE58(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.07f, -1000000,-2300, 3),
-            CAVE59(ModBlocks.SUPERCOMPRESSED_MAJORITE, ModBlocks.MAJORITE_LAVA_FLUID,0.06f, -25000,-1500, 0),
-            CAVE60(ModBlocks.SUPERCOMPRESSED_AMAZONITE, ModBlocks.AMAZONITE_LAVA_FLUID,0.06f, -25000,-2000, 0),
-            CAVE61(ModBlocks.SUPERCOMPRESSED_ONYX, ModBlocks.ONYX_LAVA_FLUID,0.05f, -25000,-2300, 0),
-            CAVE62(ModBlocks.SUPERCOMPRESSED_PAINITE, ModBlocks.PAINITE_LAVA_FLUID,0.04f, -25000,-2300, 0);
+            CAVE55(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.07f, -1000000,-3500, 0),
+            //CAVE56(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.07f, -2000,-1500, 1),
+            //CAVE57(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.07f, -2300,-2000, 2),
+            //CAVE58(ModBlocks.SUPERCOMPRESSED_SAPPHIRE, ModBlocks.SAPPHIRE_LAVA_FLUID,0.07f, -1000000,-2300, 3),
+            CAVE59(ModBlocks.SUPERCOMPRESSED_MAJORITE, ModBlocks.MAJORITE_LAVA_FLUID,0.06f, -1000000,-4000, 0),
+            CAVE60(ModBlocks.SUPERCOMPRESSED_AMAZONITE, ModBlocks.AMAZONITE_LAVA_FLUID,0.06f, -1000000,-4500, 0),
+            CAVE61(ModBlocks.SUPERCOMPRESSED_ONYX, ModBlocks.ONYX_LAVA_FLUID,0.05f, -1000000,-5000, 0),
+            CAVE62(ModBlocks.SUPERCOMPRESSED_PAINITE, ModBlocks.PAINITE_LAVA_FLUID,0.04f, -1000000,-6000, 0);
 
 
             private final IBlockState block;
@@ -520,7 +518,7 @@ import static net.minecraft.util.math.MathHelper.floor;
                                          double caveSizeHoriz, double caveSizeVert,
                                          StructureBoundingBox boundingBox, int lavaHeight) {
 
-                    IBlockState block = caveType.block.withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(caveType.meta));
+                    IBlockState block = caveType.block;
 
                     int generatedCubeX = generatedCubePos.getX();
                     int generatedCubeY = generatedCubePos.getY();

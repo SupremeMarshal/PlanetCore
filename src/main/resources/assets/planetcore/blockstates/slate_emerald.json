@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_emerald"},
+  "variant=mantle":{"model":"planetcore:mantleslate_emerald"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_emerald"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_emerald"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_emerald"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_emerald"}}}

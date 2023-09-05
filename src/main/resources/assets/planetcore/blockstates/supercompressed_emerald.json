@@ -1,5 +1,5 @@
-{"variants":{
-  "variant=supercompressed":{"model":"planetcore:supercompressed_emerald"},
-  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_emerald"},
-  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_emerald"},
-  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_emerald"}}}
+{
+  "variants": {
+    "normal": { "model": "planetcore:supercompressed_emerald" }
+  }
+}

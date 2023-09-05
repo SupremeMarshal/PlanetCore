@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_onyx"},
+  "variant=mantle":{"model":"planetcore:mantleslate_onyx"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_onyx"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_onyx"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_onyx"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_onyx"}}}

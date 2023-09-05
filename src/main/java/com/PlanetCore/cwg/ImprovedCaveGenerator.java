@@ -20,8 +20,6 @@ import javax.annotation.Nonnull;
 import java.util.Random;
 import java.util.function.Predicate;
 
-import static com.PlanetCore.blocks.BlocksBase.VARIANT_SUPERCOMPRESSED;
-import static com.PlanetCore.blocks.HotRocks.VARIANT_HOTROCKS;
 import static io.github.opencubicchunks.cubicchunks.api.util.Coords.cubeToMinBlock;
 import static io.github.opencubicchunks.cubicchunks.api.util.Coords.localToBlock;
 import static io.github.opencubicchunks.cubicchunks.cubicgen.StructureGenUtil.normalizedDistance;
@@ -132,21 +130,9 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
     public enum CaveType {
 
-        CAVE0(ModBlocks.AIR_NO_PRESSURE, Blocks.LAVA,1.0f, -10000,10000, 0),
-        CAVE1(ModBlocks.SUPERCOMPRESSED_COAL, Blocks.LAVA,0.1f, -200,-15, 0),
-        CAVE2(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.1f, -200,-100, 0),
-        CAVE3(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.1f, -400,-200, 1),
-        CAVE4(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.1f, -900,-400, 2),
-        CAVE5(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.1f, -1000000,-900, 3),
-        CAVE6(ModBlocks.GRANITE, Blocks.LAVA,0.1f, -400,-200, 0),
-        CAVE7(ModBlocks.GRANITE, Blocks.LAVA,0.2f, -900,-400, 1),
-        CAVE8(ModBlocks.GRANITE, Blocks.LAVA,0.3f, -1000000,-900, 2),
-        CAVE9(ModBlocks.DIORITE, Blocks.LAVA,0.1f, -400,-200, 0),
-        CAVE10(ModBlocks.DIORITE, Blocks.LAVA,0.2f, -900,-400, 1),
-        CAVE11(ModBlocks.DIORITE, Blocks.LAVA,0.3f, -1000000,-900, 2),
-        CAVE12(ModBlocks.ANDESITE, Blocks.LAVA,0.1f, -400,-50, 0),
-        CAVE13(ModBlocks.ANDESITE, Blocks.LAVA,0.2f, -900,-400, 1),
-        CAVE14(ModBlocks.ANDESITE, Blocks.LAVA,0.3f, -1000000,-900, 2);
+        CAVE0(Blocks.AIR, Blocks.LAVA,1.0f, -10000,10000, 0),
+        CAVE1(ModBlocks.SUPERCOMPRESSED_COAL, Blocks.LAVA,0.1f, -500,-15, 0),
+        CAVE2(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.1f, -1000,-100, 0);
 
         private final IBlockState block;
         private final IBlockState lavaMaterial;
@@ -473,13 +459,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
                              double caveSizeHoriz, double caveSizeVert,
                              StructureBoundingBox boundingBox, int lavaHeight) {
         IBlockState block;
-        if (caveType == CaveType.CAVE0 || caveType == CaveType.CAVE1)
-        {
-            block = caveType.block;
-        }
-        else if (caveType == CaveType.CAVE6 || caveType == CaveType.CAVE7 || caveType == CaveType.CAVE8 || caveType == CaveType.CAVE9 || caveType == CaveType.CAVE10 || caveType == CaveType.CAVE11 || caveType == CaveType.CAVE12 || caveType == CaveType.CAVE13 || caveType == CaveType.CAVE14) {
-            block = caveType.block.withProperty(VARIANT_HOTROCKS, HotRocks.EnumType.byMetadata(caveType.meta));
-        } else block = caveType.block.withProperty(VARIANT_SUPERCOMPRESSED, BlocksBase.EnumType.byMetadata(caveType.meta));
+        block = caveType.block;
 
         int generatedCubeX = generatedCubePos.getX();
         int generatedCubeY = generatedCubePos.getY();

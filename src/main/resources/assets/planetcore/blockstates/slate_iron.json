@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_iron"},
+  "variant=mantle":{"model":"planetcore:mantleslate_iron"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_iron"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_iron"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_iron"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_iron"}}}

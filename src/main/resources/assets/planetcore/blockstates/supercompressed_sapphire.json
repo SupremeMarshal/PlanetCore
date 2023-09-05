@@ -1,5 +1,5 @@
-{"variants":{
-  "variant=supercompressed":{"model":"planetcore:supercompressed_sapphire"},
-  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_sapphire"},
-  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_sapphire"},
-  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_sapphire"}}}
+{
+  "variants": {
+    "normal": { "model": "planetcore:supercompressed_sapphire" }
+  }
+}

@@ -17,7 +17,7 @@ public class GravityHandler {
         if (yPosition >= 0) {
             return 1.0;
         }
-        double modifier = yPosition > -1995 ? Math.sqrt(1 + yPosition / 2000) : 0.05;
+        double modifier = yPosition > -5995 ? Math.sqrt(1 + yPosition / 6000) : 0.05;
         // Calculate the normalized Y position within the range
         return modifier;
     }

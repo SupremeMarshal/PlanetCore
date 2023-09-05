@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_lapis"},
+  "variant=mantle":{"model":"planetcore:mantleslate_lapis"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_lapis"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_lapis"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_lapis"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_lapis"}}}

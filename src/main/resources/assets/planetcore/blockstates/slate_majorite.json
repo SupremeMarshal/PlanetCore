@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_majorite"},
+  "variant=mantle":{"model":"planetcore:mantleslate_majorite"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_majorite"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_majorite"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_majorite"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_majorite"}}}

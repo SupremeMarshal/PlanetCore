@@ -20,9 +20,11 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.biome.BiomeProviderSingle;
 import net.minecraft.world.gen.ChunkGeneratorSettings;
+import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.storage.WorldInfo;
 import net.minecraftforge.common.DimensionManager;
 
+import javax.annotation.Nonnull;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -66,6 +68,12 @@ public class PlanetCoreWorldType extends WorldType implements ICubicWorldType {
             return makeBiomeProvider(world, conf);
         }
     }
+
+//    @Override
+//    public IChunkGenerator getChunkGenerator(@Nonnull World world, String generatorOptions) {
+//        return (IChunkGenerator) new UndergroundTerrainGeneration(world); // Replace with your ICubeGenerator implementation
+//    }
+
 
     public ICubeGenerator createCubeGenerator(World world) {
         CustomGeneratorSettings cfg;

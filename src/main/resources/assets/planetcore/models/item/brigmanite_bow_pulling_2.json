@@ -1,7 +1,0 @@
-{
-  "parent": "item/bow",
-  "textures":
-  {
-    "layer0": "planetcore:items/brigmanite_bow_pulling_2"
-  }
-}

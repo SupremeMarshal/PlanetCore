@@ -8,6 +8,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 public class ModFluids
 {
 	public static final Fluid IRON_LAVA_FLUID = new FluidLiquid("iron_lava", new ResourceLocation("planetcore:blocks/iron_lava_still"), new ResourceLocation("planetcore:blocks/iron_lava_flow"));
+	public static final Fluid SUPERHEATED_LAVA_FLUID = new FluidLiquid("superheated_lava", new ResourceLocation("planetcore:blocks/superheated_lava_still"), new ResourceLocation("planetcore:blocks/superheated_lava_flow"));
 	public static final Fluid REDSTONE_LAVA_FLUID = new FluidLiquid("redstone_lava", new ResourceLocation("planetcore:blocks/redstone_lava_still"), new ResourceLocation("planetcore:blocks/redstone_lava_flow"));
 	public static final Fluid SILVER_LAVA_FLUID = new FluidLiquid("silver_lava", new ResourceLocation("planetcore:blocks/silver_lava_still"), new ResourceLocation("planetcore:blocks/silver_lava_flow"));
 	public static final Fluid GOLD_LAVA_FLUID = new FluidLiquid("gold_lava", new ResourceLocation("planetcore:blocks/gold_lava_still"), new ResourceLocation("planetcore:blocks/gold_lava_flow"));
@@ -24,6 +25,7 @@ public class ModFluids
 	public static void registerFluids()
 	{
 		registerFluid(IRON_LAVA_FLUID);
+		registerFluid(SUPERHEATED_LAVA_FLUID);
 		registerFluid(REDSTONE_LAVA_FLUID);
 		registerFluid(SILVER_LAVA_FLUID);
 		registerFluid(GOLD_LAVA_FLUID);

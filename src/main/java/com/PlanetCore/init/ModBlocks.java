@@ -6,7 +6,6 @@ import com.PlanetCore.blocks.Powered_ladders.DiamondLadderBlock;
 import com.PlanetCore.blocks.Powered_ladders.IronLadderBlock;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -53,6 +52,8 @@ public class ModBlocks {
 
     @ObjectHolder("iron_lava")
     public static final IronLavaFluid IRON_LAVA_FLUID = _null();
+    @ObjectHolder("superheated_lava")
+    public static final IronLavaFluid SUPERHEATED_LAVA_FLUID = _null();
     @ObjectHolder("redstone_lava")
     public static final MetalLavaFluid REDSTONE_LAVA_FLUID = _null();
     @ObjectHolder("silver_lava")
@@ -82,13 +83,22 @@ public class ModBlocks {
 
     public static final BlockAirNoPressure AIR_NO_PRESSURE = _null();
 
-    public static final Crustrock CRUSTROCK = _null();
-    public static final Mantlerock MANTLEROCK = _null();
-    public static final Corestone CORESTONE = _null();
-
     public static final HotRocks GRANITE = _null();
     public static final HotRocks DIORITE = _null();
     public static final HotRocks ANDESITE = _null();
+
+    public static final BoulderBase BOULDER = _null();
+    public static final BoulderBase HOT_BOULDER = _null();
+    public static final BoulderBase LOWERMANTLE_BOULDER = _null();
+    public static final BoulderBase OUTERCORE_BOULDER = _null();
+    public static final BoulderBase INNERCORE_BOULDER = _null();
+    public static final BoulderBase CALCITE = _null();
+    public static final BoulderBase BLACKSTONE = _null();
+
+    public static final BlockBase MANTLE_MAGMA = _null();
+    public static final BlockBase LOWERMANTLE_MAGMA = _null();
+    public static final BlockBase OUTERCORE_MAGMA = _null();
+    public static final BlockBase INNERCORE_MAGMA = _null();
 
     public static final IronLadderBlock IRON_LADDERS = _null();
     public static final DiamondLadderBlock DIAMOND_LADDERS = _null();
@@ -106,122 +116,25 @@ public class ModBlocks {
     public static final OreBase ORE_DIAMOND = _null();
     public static final OreBase ORE_SULFUR = _null();
 
-    public static final OreCompactBase ORE_COMPACT_COAL = _null();
-    public static final OreCompactBase ORE_COMPACT_IRON = _null();
-    public static final OreCompactBase ORE_COMPACT_SILVER = _null();
-    public static final OreCompactBase ORE_COMPACT_GOLD = _null();
-    public static final OreCompactBase ORE_COMPACT_EMERALD = _null();
-    public static final OreCompactBase ORE_COMPACT_DIAMOND = _null();
-    public static final OreCompactBase ORE_COMPACT_LAPIS = _null();
-    public static final OreCompactBase ORE_COMPACT_REDSTONE = _null();
-    public static final OreCompactBase ORE_COMPACT_SULFUR = _null();
-
-    public static final CrustrockOre CRUSTROCK_COAL = _null();
-    public static final CrustrockOre CRUSTROCK_SULFUR = _null();
-    public static final CrustrockOre CRUSTROCK_REDSTONE = _null();
-    public static final CrustrockOre CRUSTROCK_LAPIS = _null();
-    public static final CrustrockOre CRUSTROCK_IRON = _null();
-    public static final CrustrockOre CRUSTROCK_SILVER = _null();
-    public static final CrustrockOre CRUSTROCK_GOLD = _null();
-    public static final CrustrockOre CRUSTROCK_EMERALD = _null();
-    public static final CrustrockOre CRUSTROCK_DIAMOND = _null();
-    public static final CrustrockOre CRUSTROCK_TITANIUM = _null();
-    public static final CrustrockOre CRUSTROCK_URANIUM = _null();
-    public static final CrustrockOre CRUSTROCK_TUNGSTEN = _null();
-
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_COAL = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_SULFUR = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_REDSTONE = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_LAPIS = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_IRON = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_SILVER = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_GOLD = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_EMERALD = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_DIAMOND = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_TITANIUM = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_URANIUM = _null();
-    public static final CrustrockOreCompact CRUSTROCK_COMPACT_TUNGSTEN = _null();
-
-    public static final MantlerockOre MANTLEROCK_COAL = _null();
-    public static final MantlerockOre MANTLEROCK_SULFUR = _null();
-    public static final MantlerockOre MANTLEROCK_REDSTONE = _null();
-    public static final MantlerockOre MANTLEROCK_LAPIS = _null();
-    public static final MantlerockOre MANTLEROCK_IRON = _null();
-    public static final MantlerockOre MANTLEROCK_SILVER = _null();
-    public static final MantlerockOre MANTLEROCK_GOLD = _null();
-    public static final MantlerockOre MANTLEROCK_TITANIUM = _null();
-    public static final MantlerockOre MANTLEROCK_URANIUM = _null();
-    public static final MantlerockOre MANTLEROCK_TUNGSTEN = _null();
-    public static final MantlerockOre MANTLEROCK_RUBY = _null();
-    public static final MantlerockOre MANTLEROCK_SAPPHIRE = _null();
-    public static final MantlerockOre MANTLEROCK_EMERALD = _null();
-    public static final MantlerockOre MANTLEROCK_DIAMOND = _null();
-    public static final MantlerockOre MANTLEROCK_MAJORITE = _null();
-    public static final MantlerockOre MANTLEROCK_AMAZONITE = _null();
-    public static final MantlerockOre MANTLEROCK_ONYX = _null();
-    public static final MantlerockOre MANTLEROCK_PAINITE = _null();
-
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_COAL = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_SULFUR = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_REDSTONE = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_LAPIS = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_IRON = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_SILVER = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_GOLD = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_TITANIUM = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_URANIUM = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_TUNGSTEN = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_RUBY = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_SAPPHIRE = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_EMERALD = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_DIAMOND = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_MAJORITE = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_AMAZONITE = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_ONYX = _null();
-    public static final MantlerockOreCompact MANTLEROCK_COMPACT_PAINITE = _null();
-
-    public static final CorestoneOre CORESTONE_COAL = _null();
-    public static final CorestoneOre CORESTONE_SULFUR = _null();
-    public static final CorestoneOre CORESTONE_REDSTONE = _null();
-    public static final CorestoneOre CORESTONE_LAPIS = _null();
-    public static final CorestoneOre CORESTONE_IRON = _null();
-    public static final CorestoneOre CORESTONE_SILVER = _null();
-    public static final CorestoneOre CORESTONE_GOLD = _null();
-    public static final CorestoneOre CORESTONE_TITANIUM = _null();
-    public static final CorestoneOre CORESTONE_URANIUM = _null();
-    public static final CorestoneOre CORESTONE_TUNGSTEN = _null();
-    public static final CorestoneOre CORESTONE_EMERALD = _null();
-    public static final CorestoneOre CORESTONE_RUBY = _null();
-    public static final CorestoneOre CORESTONE_SAPPHIRE = _null();
-    public static final CorestoneOre CORESTONE_DIAMOND = _null();
-    public static final CorestoneOre CORESTONE_OLIVINE = _null();
-    public static final CorestoneOre CORESTONE_WADSLEYITE = _null();
-    public static final CorestoneOre CORESTONE_RINGWOODITE = _null();
-    public static final CorestoneOre CORESTONE_BRIGMANITE = _null();
-    public static final CorestoneOre CORESTONE_MAJORITE = _null();
-    public static final CorestoneOre CORESTONE_AMAZONITE = _null();
-    public static final CorestoneOre CORESTONE_ONYX = _null();
-    public static final CorestoneOre CORESTONE_PAINITE = _null();
-
-    public static final CorestoneOreCompact CORESTONE_COMPACT_COAL = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_SULFUR = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_REDSTONE = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_LAPIS = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_IRON = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_SILVER = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_GOLD = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_TITANIUM = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_URANIUM = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_TUNGSTEN = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_EMERALD = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_RUBY = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_SAPPHIRE = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_DIAMOND = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_OLIVINE = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_MAJORITE = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_AMAZONITE = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_ONYX = _null();
-    public static final CorestoneOreCompact CORESTONE_COMPACT_PAINITE = _null();
+    public static final Slate SLATE = _null();
+    public static final SlateOre SLATE_COAL = _null();
+    public static final SlateOre SLATE_SULFUR = _null();
+    public static final SlateOre SLATE_REDSTONE = _null();
+    public static final SlateOre SLATE_LAPIS = _null();
+    public static final SlateOre SLATE_IRON = _null();
+    public static final SlateOre SLATE_SILVER = _null();
+    public static final SlateOre SLATE_GOLD = _null();
+    public static final SlateOre SLATE_TITANIUM = _null();
+    public static final SlateOre SLATE_URANIUM = _null();
+    public static final SlateOre SLATE_TUNGSTEN = _null();
+    public static final SlateOre SLATE_RUBY = _null();
+    public static final SlateOre SLATE_SAPPHIRE = _null();
+    public static final SlateOre SLATE_EMERALD = _null();
+    public static final SlateOre SLATE_DIAMOND = _null();
+    public static final SlateOre SLATE_MAJORITE = _null();
+    public static final SlateOre SLATE_AMAZONITE = _null();
+    public static final SlateOre SLATE_ONYX = _null();
+    public static final SlateOre SLATE_PAINITE = _null();
 
     public static final BlockBase PAINITE_BLOCK = _null();
     public static final BlockBase ONYX_BLOCK = _null();
@@ -234,16 +147,6 @@ public class ModBlocks {
     public static final BlockBase URANIUM_BLOCK = _null();
     public static final BlockBase SILVER_BLOCK = _null();
     public static final BlockBase SULFUR_BLOCK = _null();
-
-    public static final VeryHotRocks MANTLEROCK1_BOULDER = _null();
-    public static final VeryHotRocks MANTLEROCK2_BOULDER = _null();
-    public static final VeryHotRocks LOWER_MANTLEROCK_BOULDER = _null();
-    public static final VeryHotRocks LOWER_MANTLEROCK1_BOULDER = _null();
-    public static final VeryHotRocks LOWER_MANTLEROCK2_BOULDER = _null();
-    public static final SuperheatedRocks OUTERCORE_BOULDER = _null();
-    public static final SuperheatedRocks INNERCORE_BOULDER = _null();
-    public static final SuperheatedRocks CENTERCORE_BOULDER = _null();
-    public static final SuperheatedRocks SUPERHEATED_BEDROCK = _null();
 
     public static final BlocksBase SUPERCOMPRESSED_PAINITE = _null();
     public static final BlocksBase SUPERCOMPRESSED_ONYX = _null();
@@ -268,8 +171,6 @@ public class ModBlocks {
 
     // GENERATED BEGIN
 
-    public static final Corestone COLD_CORESTONE = _null();
-
 
     // GENERATED END
 
@@ -286,13 +187,25 @@ public class ModBlocks {
 
                 new IronLadderBlock().setTranslationKey("iron_ladders").setRegistryName("iron_ladders").setCreativeTab(CreativeTabs.BUILDING_BLOCKS),
                 new DiamondLadderBlock().setTranslationKey("diamond_ladders").setRegistryName("diamond_ladders").setCreativeTab(CreativeTabs.BUILDING_BLOCKS),
-                new BlockAirNoPressure("air_no_pressure", Material.FIRE).setResistance(100000),
+                new MagmaBase("mantle_magma", Material.ROCK).setHardness(1.0f),
+                new MagmaBase("lowermantle_magma", Material.ROCK).setHardness(1.0f),
+                new MagmaBase("outercore_magma", Material.ROCK).setHardness(1.0f),
+                new MagmaBase("innercore_magma", Material.ROCK).setHardness(1.0f),
+                new BoulderBase("boulder", Material.ROCK).setHardness(1000000.0F),
+                new BoulderBase("red_boulder", Material.ROCK).setHardness(1000000.0F),
+                new BoulderBase("mantle_boulder", Material.ROCK).setHardness(1000000.0F),
+                new BoulderBase("lowermantle_boulder", Material.ROCK).setHardness(1000000.0F),
+                new BoulderBase("outercore_boulder", Material.ROCK).setHardness(1000000.0F),
+                new BoulderBase("innercore_boulder", Material.ROCK).setHardness(1000000.0F),
+                new BlockBase("calcite", Material.ROCK, false).setHardness(5.0F),
+                new BlockBase("blackstone", Material.ROCK, false).setHardness(25.0F),
                 new BlockBase("crust_cobblestone", Material.ROCK,false).setHardness(2.0F).setResistance(1),
                 new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
                 new HotRocks("granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
                 new HotRocks("diorite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
                 new HotRocks("andesite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
                 new IronLavaFluid("iron_lava", ModFluids.IRON_LAVA_FLUID, Material.LAVA).setDensity(1500),
+                new IronLavaFluid("superheated_lava", ModFluids.SUPERHEATED_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("redstone_lava", ModFluids.REDSTONE_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("silver_lava", ModFluids.SILVER_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("gold_lava", ModFluids.GOLD_LAVA_FLUID, Material.LAVA).setDensity(1500),
@@ -312,14 +225,8 @@ public class ModBlocks {
                 new GemsGravel("majorite_gravel", PlanetMaterial.MAJORITE_GRAVEL, PlanetHardness.MAJORITE),
                 new GemsGravel("amazonite_gravel", PlanetMaterial.AMAZONITE_GRAVEL, PlanetHardness.AMAZONITE),
                 new GemsGravel("onyx_gravel", PlanetMaterial.ONYX_GRAVEL, PlanetHardness.ONYX),
-                new VeryHotRocks("mantlerock1_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(3),
-                new VeryHotRocks("mantlerock2_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(5),
-                new VeryHotRocks("lower_mantlerock_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(7),
-                new VeryHotRocks("lower_mantlerock1_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(9),
-                new VeryHotRocks("lower_mantlerock2_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(11),
-                new SuperheatedRocks("outercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(13),
-                new SuperheatedRocks("innercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(15),
-                new SuperheatedRocks("centercore_boulder", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(15),
+                new VeryHotRocks("hot_mantlerock", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(3),
+                new VeryHotRocks("hot_mantlerock1", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(1).setLightLevel(5),
                 new BlockBase("sulfur_block", Material.ROCK,false).setHardness(1F).setResistance(1),
                 new BlockBase("silver_block", Material.IRON,true).setHardness(15.0F).setResistance(1),
                 new BlockBase("titanium_block", Material.IRON,true).setHardness(50F).setResistance(3),
@@ -349,126 +256,29 @@ public class ModBlocks {
                 new BlocksBase("supercompressed_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE_SUPERCOMPACT, PlanetExp.AMAZONITE_SUPERCOMPACT).setResistance(250),
                 new BlocksBase("supercompressed_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX_SUPERCOMPACT, PlanetExp.ONYX_SUPERCOMPACT).setResistance(300),
                 new BlocksBase("supercompressed_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE_SUPERCOMPACT, PlanetExp.PAINITE_SUPERCOMPACT).setResistance(300),
-                new Crustrock("crustrock", Material.ROCK).setResistance(1),
-                new Mantlerock("mantlerock", Material.ROCK).setResistance(1),
-                new Corestone("corestone", Material.ROCK).setResistance(1),
+                new Slate("slate", Material.ROCK),
 
-                new OreBase("ore_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON, PlanetHarvestLevel.IRON, PlanetExp.IRON).setResistance(1),
                 new OreBase("ore_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER, PlanetHarvestLevel.SILVER,PlanetExp.SILVER).setResistance(1),
-                new OreBase("ore_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD, PlanetHarvestLevel.GOLD,PlanetExp.GOLD).setResistance(1),
-                new OreBase("ore_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND, PlanetHarvestLevel.DIAMOND,PlanetExp.DIAMOND).setResistance(1),
-                new OreBase("ore_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD, PlanetHarvestLevel.EMERALD,PlanetExp.EMERALD).setResistance(1),
                 new OreBase("ore_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR, PlanetHarvestLevel.SULFUR,PlanetExp.SULFUR).setResistance(1),
-                new OreCompactBase("ore_compact_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL_COMPACT, PlanetHarvestLevel.COAL_COMPACT,PlanetExp.COAL_COMPACT).setResistance(1),
-                new OreCompactBase("ore_compact_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_COMPACT, PlanetHarvestLevel.IRON_COMPACT,PlanetExp.IRON_COMPACT).setResistance(1),
-                new OreCompactBase("ore_compact_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_COMPACT, PlanetHarvestLevel.SILVER_COMPACT,PlanetExp.SILVER_COMPACT).setResistance(1),
-                new OreCompactBase("ore_compact_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_COMPACT, PlanetHarvestLevel.GOLD_COMPACT,PlanetExp.GOLD_COMPACT).setResistance(1),
-                new OreCompactBase("ore_compact_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_COMPACT, PlanetHarvestLevel.DIAMOND_COMPACT,PlanetExp.DIAMOND_COMPACT).setResistance(10),
-                new OreCompactBase("ore_compact_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_COMPACT, PlanetHarvestLevel.SULFUR_COMPACT,PlanetExp.SULFUR_COMPACT).setResistance(1),
-                new OreCompactBase("ore_compact_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_COMPACT, PlanetHarvestLevel.LAPIS_COMPACT,PlanetExp.LAPIS_COMPACT).setResistance(1),
-                new OreCompactBase("ore_compact_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_COMPACT, PlanetHarvestLevel.EMERALD_COMPACT,PlanetExp.EMERALD_COMPACT).setResistance(10),
 
-                new CrustrockOre("crustrock_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL, PlanetHarvestLevel.COAL,PlanetExp.COAL).setResistance(1),
-                new CrustrockOre("crustrock_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON, PlanetHarvestLevel.IRON,PlanetExp.IRON).setResistance(1),
-                new CrustrockOre("crustrock_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER, PlanetHarvestLevel.SILVER,PlanetExp.SILVER).setResistance(1),
-                new CrustrockOre("crustrock_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD, PlanetHarvestLevel.GOLD,PlanetExp.GOLD).setResistance(1),
-                new CrustrockOre("crustrock_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND, PlanetHarvestLevel.DIAMOND,PlanetExp.DIAMOND).setResistance(1),
-                new CrustrockOre("crustrock_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD, PlanetHarvestLevel.EMERALD,PlanetExp.EMERALD).setResistance(1),
-                new CrustrockOre("crustrock_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR, PlanetHarvestLevel.SULFUR,PlanetExp.SULFUR).setResistance(1),
-                new CrustrockOre("crustrock_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE, PlanetHarvestLevel.REDSTONE,PlanetExp.REDSTONE).setResistance(1),
-                new CrustrockOre("crustrock_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS, PlanetHarvestLevel.LAPIS,PlanetExp.LAPIS).setResistance(1),
-                new CrustrockOre("crustrock_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM, PlanetHarvestLevel.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
-                new CrustrockOre("crustrock_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM, PlanetHarvestLevel.URANIUM,PlanetExp.URANIUM).setResistance(1),
-                new CrustrockOre("crustrock_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN, PlanetHarvestLevel.TUNGSTEN,PlanetExp.TUNGSTEN).setResistance(1),
-                new CrustrockOreCompact("crustrock_compact_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL_COMPACT, PlanetHarvestLevel.COAL_COMPACT,PlanetExp.COAL_COMPACT).setResistance(1),
-                new CrustrockOreCompact("crustrock_compact_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_COMPACT, PlanetHarvestLevel.IRON_COMPACT,PlanetExp.IRON_COMPACT).setResistance(1),
-                new CrustrockOreCompact("crustrock_compact_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_COMPACT, PlanetHarvestLevel.SILVER_COMPACT,PlanetExp.SILVER_COMPACT).setResistance(1),
-                new CrustrockOreCompact("crustrock_compact_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_COMPACT, PlanetHarvestLevel.GOLD_COMPACT,PlanetExp.GOLD_COMPACT).setResistance(1),
-                new CrustrockOreCompact("crustrock_compact_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_COMPACT, PlanetHarvestLevel.DIAMOND_COMPACT,PlanetExp.DIAMOND_COMPACT).setResistance(10),
-                new CrustrockOreCompact("crustrock_compact_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_COMPACT, PlanetHarvestLevel.EMERALD_COMPACT,PlanetExp.EMERALD_COMPACT).setResistance(10),
-                new CrustrockOreCompact("crustrock_compact_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_COMPACT, PlanetHarvestLevel.SULFUR,PlanetExp.SULFUR_COMPACT).setResistance(10),
-                new CrustrockOreCompact("crustrock_compact_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_COMPACT, PlanetHarvestLevel.REDSTONE,PlanetExp.REDSTONE_COMPACT).setResistance(10),
-                new CrustrockOreCompact("crustrock_compact_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_COMPACT, PlanetHarvestLevel.LAPIS_COMPACT,PlanetExp.LAPIS_COMPACT).setResistance(10),
-                new CrustrockOreCompact("crustrock_compact_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_COMPACT, PlanetHarvestLevel.TITANIUM_COMPACT,PlanetExp.TITANIUM_COMPACT).setResistance(10),
-                new CrustrockOreCompact("crustrock_compact_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_COMPACT, PlanetHarvestLevel.URANIUM_COMPACT,PlanetExp.URANIUM_COMPACT).setResistance(10),
-                new CrustrockOreCompact("crustrock_compact_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_COMPACT, PlanetHarvestLevel.TUNGSTEN_COMPACT,PlanetExp.TUNGSTEN_COMPACT).setResistance(10),
-
-                new MantlerockOre("mantlerock_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL, PlanetHarvestLevel.COAL,PlanetExp.COAL).setResistance(1),
-                new MantlerockOre("mantlerock_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON, PlanetHarvestLevel.IRON,PlanetExp.IRON).setResistance(1),
-                new MantlerockOre("mantlerock_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER, PlanetHarvestLevel.SILVER,PlanetExp.SILVER).setResistance(1),
-                new MantlerockOre("mantlerock_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD, PlanetHarvestLevel.GOLD,PlanetExp.GOLD).setResistance(1),
-                new MantlerockOre("mantlerock_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR, PlanetHarvestLevel.SULFUR,PlanetExp.SULFUR).setResistance(1),
-                new MantlerockOre("mantlerock_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE, PlanetHarvestLevel.REDSTONE,PlanetExp.REDSTONE).setResistance(1),
-                new MantlerockOre("mantlerock_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS, PlanetHarvestLevel.LAPIS,PlanetExp.LAPIS).setResistance(1),
-                new MantlerockOre("mantlerock_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM, PlanetHarvestLevel.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
-                new MantlerockOre("mantlerock_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM, PlanetHarvestLevel.URANIUM,PlanetExp.URANIUM).setResistance(1),
-                new MantlerockOre("mantlerock_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN, PlanetHarvestLevel.TUNGSTEN,PlanetExp.TUNGSTEN).setResistance(1),
-                new MantlerockOre("mantlerock_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY, PlanetHarvestLevel.RUBY,PlanetExp.RUBY).setResistance(1),
-                new MantlerockOre("mantlerock_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE, PlanetHarvestLevel.SAPPHIRE,PlanetExp.SAPPHIRE).setResistance(1),
-                new MantlerockOre("mantlerock_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND, PlanetHarvestLevel.DIAMOND,PlanetExp.DIAMOND).setResistance(1),
-                new MantlerockOre("mantlerock_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD, PlanetHarvestLevel.EMERALD,PlanetExp.EMERALD).setResistance(1),
-                new MantlerockOre("mantlerock_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE, PlanetHarvestLevel.MAJORITE,PlanetExp.MAJORITE).setResistance(10),
-                new MantlerockOre("mantlerock_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE, PlanetHarvestLevel.AMAZONITE,PlanetExp.AMAZONITE).setResistance(10),
-                new MantlerockOre("mantlerock_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX, PlanetHarvestLevel.ONYX,PlanetExp.ONYX).setResistance(10),
-                new MantlerockOre("mantlerock_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE, PlanetHarvestLevel.PAINITE,PlanetExp.PAINITE).setResistance(10),
-
-                new MantlerockOreCompact("mantlerock_compact_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL_COMPACT, PlanetHarvestLevel.COAL_COMPACT,PlanetExp.COAL_COMPACT).setResistance(1),
-                new MantlerockOreCompact("mantlerock_compact_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_COMPACT, PlanetHarvestLevel.IRON_COMPACT,PlanetExp.IRON_COMPACT).setResistance(1),
-                new MantlerockOreCompact("mantlerock_compact_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_COMPACT, PlanetHarvestLevel.SILVER_COMPACT,PlanetExp.SILVER_COMPACT).setResistance(1),
-                new MantlerockOreCompact("mantlerock_compact_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_COMPACT, PlanetHarvestLevel.GOLD_COMPACT,PlanetExp.GOLD_COMPACT).setResistance(1),
-                new MantlerockOreCompact("mantlerock_compact_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_COMPACT, PlanetHarvestLevel.SULFUR_COMPACT,PlanetExp.SULFUR_COMPACT).setResistance(1),
-                new MantlerockOreCompact("mantlerock_compact_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_COMPACT, PlanetHarvestLevel.REDSTONE_COMPACT,PlanetExp.REDSTONE_COMPACT).setResistance(1),
-                new MantlerockOreCompact("mantlerock_compact_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_COMPACT, PlanetHarvestLevel.LAPIS_COMPACT,PlanetExp.LAPIS_COMPACT).setResistance(1),
-                new MantlerockOreCompact("mantlerock_compact_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_COMPACT, PlanetHarvestLevel.TITANIUM_COMPACT,PlanetExp.TITANIUM_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_COMPACT, PlanetHarvestLevel.URANIUM_COMPACT,PlanetExp.URANIUM_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_COMPACT, PlanetHarvestLevel.TUNGSTEN_COMPACT,PlanetExp.TUNGSTEN_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY_COMPACT, PlanetHarvestLevel.RUBY_COMPACT,PlanetExp.RUBY_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE_COMPACT, PlanetHarvestLevel.SAPPHIRE_COMPACT,PlanetExp.SAPPHIRE_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_COMPACT, PlanetHarvestLevel.DIAMOND_COMPACT,PlanetExp.DIAMOND_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_COMPACT, PlanetHarvestLevel.EMERALD_COMPACT,PlanetExp.EMERALD_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE_COMPACT, PlanetHarvestLevel.MAJORITE_COMPACT,PlanetExp.MAJORITE_COMPACT).setResistance(100),
-                new MantlerockOreCompact("mantlerock_compact_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE_COMPACT, PlanetHarvestLevel.AMAZONITE_COMPACT,PlanetExp.AMAZONITE_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX_COMPACT, PlanetHarvestLevel.ONYX_COMPACT,PlanetExp.ONYX_COMPACT).setResistance(10),
-                new MantlerockOreCompact("mantlerock_compact_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE_COMPACT, PlanetHarvestLevel.PAINITE_COMPACT,PlanetExp.PAINITE_COMPACT).setResistance(10),
-
-                new CorestoneOre("corestone_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL, PlanetHarvestLevel.COAL,PlanetExp.COAL).setResistance(1),
-                new CorestoneOre("corestone_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON, PlanetHarvestLevel.IRON,PlanetExp.IRON).setResistance(1),
-                new CorestoneOre("corestone_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER, PlanetHarvestLevel.SILVER,PlanetExp.SILVER).setResistance(1),
-                new CorestoneOre("corestone_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD, PlanetHarvestLevel.GOLD,PlanetExp.GOLD).setResistance(1),
-                new CorestoneOre("corestone_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR, PlanetHarvestLevel.SULFUR,PlanetExp.SULFUR).setResistance(1),
-                new CorestoneOre("corestone_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE, PlanetHarvestLevel.REDSTONE,PlanetExp.REDSTONE).setResistance(1),
-                new CorestoneOre("corestone_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS, PlanetHarvestLevel.LAPIS,PlanetExp.LAPIS).setResistance(1),
-                new CorestoneOre("corestone_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM, PlanetHarvestLevel.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
-                new CorestoneOre("corestone_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM, PlanetHarvestLevel.URANIUM,PlanetExp.URANIUM).setResistance(1),
-                new CorestoneOre("corestone_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN, PlanetHarvestLevel.TUNGSTEN,PlanetExp.TUNGSTEN).setResistance(1),
-                new CorestoneOre("corestone_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY, PlanetHarvestLevel.RUBY,PlanetExp.RUBY).setResistance(1),
-                new CorestoneOre("corestone_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE, PlanetHarvestLevel.SAPPHIRE,PlanetExp.SAPPHIRE).setResistance(1),
-                new CorestoneOre("corestone_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND, PlanetHarvestLevel.DIAMOND,PlanetExp.DIAMOND).setResistance(1),
-                new CorestoneOre("corestone_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD, PlanetHarvestLevel.EMERALD,PlanetExp.EMERALD).setResistance(1),
-                new CorestoneOre("corestone_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE, PlanetHarvestLevel.MAJORITE,PlanetExp.MAJORITE).setResistance(10),
-                new CorestoneOre("corestone_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE, PlanetHarvestLevel.AMAZONITE,PlanetExp.AMAZONITE).setResistance(10),
-                new CorestoneOre("corestone_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX, PlanetHarvestLevel.ONYX,PlanetExp.ONYX).setResistance(10),
-                new CorestoneOre("corestone_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE, PlanetHarvestLevel.PAINITE,PlanetExp.PAINITE).setResistance(10),
-
-                new CorestoneOreCompact("corestone_compact_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL_COMPACT, PlanetHarvestLevel.COAL_COMPACT,PlanetExp.COAL_COMPACT).setResistance(1),
-                new CorestoneOreCompact("corestone_compact_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_COMPACT, PlanetHarvestLevel.IRON_COMPACT,PlanetExp.IRON_COMPACT).setResistance(1),
-                new CorestoneOreCompact("corestone_compact_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_COMPACT, PlanetHarvestLevel.SILVER_COMPACT,PlanetExp.SILVER_COMPACT).setResistance(1),
-                new CorestoneOreCompact("corestone_compact_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_COMPACT, PlanetHarvestLevel.GOLD_COMPACT,PlanetExp.GOLD_COMPACT).setResistance(1),
-                new CorestoneOreCompact("corestone_compact_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_COMPACT, PlanetHarvestLevel.SULFUR_COMPACT,PlanetExp.SULFUR_COMPACT).setResistance(1),
-                new CorestoneOreCompact("corestone_compact_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_COMPACT, PlanetHarvestLevel.REDSTONE_COMPACT,PlanetExp.REDSTONE_COMPACT).setResistance(1),
-                new CorestoneOreCompact("corestone_compact_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_COMPACT, PlanetHarvestLevel.LAPIS_COMPACT,PlanetExp.LAPIS_COMPACT).setResistance(1),
-                new CorestoneOreCompact("corestone_compact_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_COMPACT, PlanetHarvestLevel.TITANIUM_COMPACT,PlanetExp.TITANIUM_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_COMPACT, PlanetHarvestLevel.URANIUM_COMPACT,PlanetExp.URANIUM_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_COMPACT, PlanetHarvestLevel.TUNGSTEN_COMPACT,PlanetExp.TUNGSTEN_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY_COMPACT, PlanetHarvestLevel.RUBY_COMPACT,PlanetExp.RUBY_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE_COMPACT, PlanetHarvestLevel.SAPPHIRE_COMPACT,PlanetExp.SAPPHIRE_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_COMPACT, PlanetHarvestLevel.DIAMOND_COMPACT,PlanetExp.DIAMOND_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_COMPACT, PlanetHarvestLevel.EMERALD_COMPACT,PlanetExp.EMERALD_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE_COMPACT, PlanetHarvestLevel.MAJORITE_COMPACT,PlanetExp.MAJORITE_COMPACT).setResistance(100),
-                new CorestoneOreCompact("corestone_compact_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE_COMPACT, PlanetHarvestLevel.AMAZONITE_COMPACT,PlanetExp.AMAZONITE_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX_COMPACT, PlanetHarvestLevel.ONYX_COMPACT,PlanetExp.ONYX_COMPACT).setResistance(10),
-                new CorestoneOreCompact("corestone_compact_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE_COMPACT, PlanetHarvestLevel.PAINITE_COMPACT,PlanetExp.PAINITE_COMPACT).setResistance(10)
-
+                new SlateOre("slate_coal", Material.ROCK, PlanetMaterial.COAL, PlanetHardness.COAL, PlanetHarvestLevel.COAL,PlanetExp.COAL).setResistance(1),
+                new SlateOre("slate_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON, PlanetHarvestLevel.IRON,PlanetExp.IRON).setResistance(1),
+                new SlateOre("slate_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER, PlanetHarvestLevel.SILVER,PlanetExp.SILVER).setResistance(1),
+                new SlateOre("slate_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD, PlanetHarvestLevel.GOLD,PlanetExp.GOLD).setResistance(1),
+                new SlateOre("slate_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR, PlanetHarvestLevel.SULFUR,PlanetExp.SULFUR).setResistance(1),
+                new SlateOre("slate_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE, PlanetHarvestLevel.REDSTONE,PlanetExp.REDSTONE).setResistance(1),
+                new SlateOre("slate_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS, PlanetHarvestLevel.LAPIS,PlanetExp.LAPIS).setResistance(1),
+                new SlateOre("slate_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM, PlanetHarvestLevel.TITANIUM,PlanetExp.TITANIUM).setResistance(1),
+                new SlateOre("slate_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM, PlanetHarvestLevel.URANIUM,PlanetExp.URANIUM).setResistance(1),
+                new SlateOre("slate_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN, PlanetHarvestLevel.TUNGSTEN,PlanetExp.TUNGSTEN).setResistance(1),
+                new SlateOre("slate_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY, PlanetHarvestLevel.RUBY,PlanetExp.RUBY).setResistance(1),
+                new SlateOre("slate_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE, PlanetHarvestLevel.SAPPHIRE,PlanetExp.SAPPHIRE).setResistance(1),
+                new SlateOre("slate_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND, PlanetHarvestLevel.DIAMOND,PlanetExp.DIAMOND).setResistance(1),
+                new SlateOre("slate_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD, PlanetHarvestLevel.EMERALD,PlanetExp.EMERALD).setResistance(1),
+                new SlateOre("slate_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE, PlanetHarvestLevel.MAJORITE,PlanetExp.MAJORITE).setResistance(10),
+                new SlateOre("slate_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE, PlanetHarvestLevel.AMAZONITE,PlanetExp.AMAZONITE).setResistance(10),
+                new SlateOre("slate_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX, PlanetHarvestLevel.ONYX,PlanetExp.ONYX).setResistance(10),
+                new SlateOre("slate_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE, PlanetHarvestLevel.PAINITE,PlanetExp.PAINITE).setResistance(10)
                 );
     }
 
@@ -481,141 +291,28 @@ public class ModBlocks {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.ANDESITE), meta, new ModelResourceLocation(name + "_andesite", "inventory"));
         }
 
-        for (int meta = 0; meta < 4; meta++) {
-            String name = Reference.MOD_ID + ":" + BlocksBase.EnumType.values()[meta].getName();
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_SULFUR), meta, new ModelResourceLocation(name + "_sulfur", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_IRON), meta, new ModelResourceLocation(name + "_iron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_LAPIS), meta, new ModelResourceLocation(name + "_lapis", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_REDSTONE), meta, new ModelResourceLocation(name + "_redstone", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_EMERALD), meta, new ModelResourceLocation(name + "_emerald", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_DIAMOND), meta, new ModelResourceLocation(name + "_diamond", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_TUNGSTEN), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_RUBY), meta, new ModelResourceLocation(name + "_ruby", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_SAPPHIRE), meta, new ModelResourceLocation(name + "_sapphire", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_MAJORITE), meta, new ModelResourceLocation(name + "_majorite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_AMAZONITE), meta, new ModelResourceLocation(name + "_amazonite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_ONYX), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SUPERCOMPRESSED_PAINITE), meta, new ModelResourceLocation(name + "_painite", "inventory"));
-        }
-
-        for (int meta = 0; meta < 3; meta++) {
-            String name = Reference.MOD_ID + ":" + Crustrock.EnumType.values()[meta].getName();
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK), meta, new ModelResourceLocation(name, "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COAL), meta, new ModelResourceLocation(name + "_coal", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_SULFUR), meta, new ModelResourceLocation(name + "_sulfur", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_REDSTONE), meta, new ModelResourceLocation(name + "_redstone", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_LAPIS), meta, new ModelResourceLocation(name + "_lapis", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_IRON), meta, new ModelResourceLocation(name + "_iron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_DIAMOND), meta, new ModelResourceLocation(name + "_diamond", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_EMERALD), meta, new ModelResourceLocation(name + "_emerald", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_TUNGSTEN), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
-
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_COAL), meta, new ModelResourceLocation(name + "_compact_coal", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_SULFUR), meta, new ModelResourceLocation(name + "_compact_sulfur", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_REDSTONE), meta, new ModelResourceLocation(name + "_compact_redstone", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_LAPIS), meta, new ModelResourceLocation(name + "_compact_lapis", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_IRON), meta, new ModelResourceLocation(name + "_compact_iron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_SILVER), meta, new ModelResourceLocation(name + "_compact_silver", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_GOLD), meta, new ModelResourceLocation(name + "_compact_gold", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_DIAMOND), meta, new ModelResourceLocation(name + "_compact_diamond", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_EMERALD), meta, new ModelResourceLocation(name + "_compact_emerald", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_TITANIUM), meta, new ModelResourceLocation(name + "_compact_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_URANIUM), meta, new ModelResourceLocation(name + "_compact_uranium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CRUSTROCK_COMPACT_TUNGSTEN), meta, new ModelResourceLocation(name + "_compact_tungsten", "inventory"));
-        }
-
         for (int meta = 0; meta < 6; meta++) {
-            String name = Reference.MOD_ID + ":" + Mantlerock.EnumType.values()[meta].getName();
 
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK), meta, new ModelResourceLocation(name, "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COAL), meta, new ModelResourceLocation(name + "_coal", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_SULFUR), meta, new ModelResourceLocation(name + "_sulfur", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_REDSTONE), meta, new ModelResourceLocation(name + "_redstone", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_LAPIS), meta, new ModelResourceLocation(name + "_lapis", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_IRON), meta, new ModelResourceLocation(name + "_iron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_TUNGSTEN), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_RUBY), meta, new ModelResourceLocation(name + "_ruby", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_SAPPHIRE), meta, new ModelResourceLocation(name + "_sapphire", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_DIAMOND), meta, new ModelResourceLocation(name + "_diamond", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_EMERALD), meta, new ModelResourceLocation(name + "_emerald", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_MAJORITE), meta, new ModelResourceLocation(name + "_majorite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_AMAZONITE), meta, new ModelResourceLocation(name + "_amazonite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_ONYX), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_PAINITE), meta, new ModelResourceLocation(name + "_painite", "inventory"));
-
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_COAL), meta, new ModelResourceLocation(name + "_compact_coal", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_SULFUR), meta, new ModelResourceLocation(name + "_compact_sulfur", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_REDSTONE), meta, new ModelResourceLocation(name + "_compact_redstone", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_LAPIS), meta, new ModelResourceLocation(name + "_compact_lapis", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_IRON), meta, new ModelResourceLocation(name + "_compact_iron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_SILVER), meta, new ModelResourceLocation(name + "_compact_silver", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_GOLD), meta, new ModelResourceLocation(name + "_compact_gold", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_TITANIUM), meta, new ModelResourceLocation(name + "_compact_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_URANIUM), meta, new ModelResourceLocation(name + "_compact_uranium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_TUNGSTEN), meta, new ModelResourceLocation(name + "_compact_tungsten", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_RUBY), meta, new ModelResourceLocation(name + "_compact_ruby", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_SAPPHIRE), meta, new ModelResourceLocation(name + "_compact_sapphire", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_DIAMOND), meta, new ModelResourceLocation(name + "_compact_diamond", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_EMERALD), meta, new ModelResourceLocation(name + "_compact_emerald", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_MAJORITE), meta, new ModelResourceLocation(name + "_compact_majorite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_AMAZONITE), meta, new ModelResourceLocation(name + "_compact_amazonite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_ONYX), meta, new ModelResourceLocation(name + "_compact_onyx", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MANTLEROCK_COMPACT_PAINITE), meta, new ModelResourceLocation(name + "_compact_painite", "inventory"));
-        }
-
-        for (int meta = 0; meta < 3; meta++) {
-
-            String name = Reference.MOD_ID + ":" + Corestone.EnumType.values()[meta].getName();
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE), meta, new ModelResourceLocation(name, "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COAL), meta, new ModelResourceLocation(name + "_coal", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_SULFUR), meta, new ModelResourceLocation(name + "_sulfur", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_REDSTONE), meta, new ModelResourceLocation(name + "_redstone", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_LAPIS), meta, new ModelResourceLocation(name + "_lapis", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_IRON), meta, new ModelResourceLocation(name + "_iron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_TUNGSTEN), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_RUBY), meta, new ModelResourceLocation(name + "_ruby", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_SAPPHIRE), meta, new ModelResourceLocation(name + "_sapphire", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_DIAMOND), meta, new ModelResourceLocation(name + "_diamond", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_EMERALD), meta, new ModelResourceLocation(name + "_emerald", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_MAJORITE), meta, new ModelResourceLocation(name + "_majorite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_AMAZONITE), meta, new ModelResourceLocation(name + "_amazonite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_ONYX), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_PAINITE), meta, new ModelResourceLocation(name + "_painite", "inventory"));
-
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_COAL), meta, new ModelResourceLocation(name + "_compact_coal", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_SULFUR), meta, new ModelResourceLocation(name + "_compact_sulfur", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_REDSTONE), meta, new ModelResourceLocation(name + "_compact_redstone", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_LAPIS), meta, new ModelResourceLocation(name + "_compact_lapis", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_IRON), meta, new ModelResourceLocation(name + "_compact_iron", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_SILVER), meta, new ModelResourceLocation(name + "_compact_silver", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_GOLD), meta, new ModelResourceLocation(name + "_compact_gold", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_TITANIUM), meta, new ModelResourceLocation(name + "_compact_titanium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_URANIUM), meta, new ModelResourceLocation(name + "_compact_uranium", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_TUNGSTEN), meta, new ModelResourceLocation(name + "_compact_tungsten", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_RUBY), meta, new ModelResourceLocation(name + "_compact_ruby", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_SAPPHIRE), meta, new ModelResourceLocation(name + "_compact_sapphire", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_DIAMOND), meta, new ModelResourceLocation(name + "_compact_diamond", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_EMERALD), meta, new ModelResourceLocation(name + "_compact_emerald", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_MAJORITE), meta, new ModelResourceLocation(name + "_compact_majorite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_AMAZONITE), meta, new ModelResourceLocation(name + "_compact_amazonite", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_ONYX), meta, new ModelResourceLocation(name + "_compact_onyx", "inventory"));
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE_COMPACT_PAINITE), meta, new ModelResourceLocation(name + "_compact_painite", "inventory"));
+            String name = Reference.MOD_ID + ":" + Slate.EnumType.values()[meta].getName();
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE), meta, new ModelResourceLocation(name, "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_COAL), meta, new ModelResourceLocation(name + "_coal", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_SULFUR), meta, new ModelResourceLocation(name + "_sulfur", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_REDSTONE), meta, new ModelResourceLocation(name + "_redstone", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_LAPIS), meta, new ModelResourceLocation(name + "_lapis", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_IRON), meta, new ModelResourceLocation(name + "_iron", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_SILVER), meta, new ModelResourceLocation(name + "_silver", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_GOLD), meta, new ModelResourceLocation(name + "_gold", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_TITANIUM), meta, new ModelResourceLocation(name + "_titanium", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_URANIUM), meta, new ModelResourceLocation(name + "_uranium", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_TUNGSTEN), meta, new ModelResourceLocation(name + "_tungsten", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_RUBY), meta, new ModelResourceLocation(name + "_ruby", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_SAPPHIRE), meta, new ModelResourceLocation(name + "_sapphire", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_DIAMOND), meta, new ModelResourceLocation(name + "_diamond", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_EMERALD), meta, new ModelResourceLocation(name + "_emerald", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_MAJORITE), meta, new ModelResourceLocation(name + "_majorite", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_AMAZONITE), meta, new ModelResourceLocation(name + "_amazonite", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_ONYX), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_PAINITE), meta, new ModelResourceLocation(name + "_painite", "inventory"));
         }
     }
 

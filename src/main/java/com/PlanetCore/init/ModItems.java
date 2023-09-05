@@ -4,14 +4,19 @@ import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.ItemSpadeX;
 import com.PlanetCore.items.Drills.IronDrill;
+import com.PlanetCore.items.food.SixEffectFoodItem;
+import com.PlanetCore.items.food.ThreeEffectFoodItem;
+import com.PlanetCore.items.tutorialBook.TutorialBook;
 import com.PlanetCore.items.armor.ArmorBase;
 import com.PlanetCore.items.arrows.*;
 import com.PlanetCore.items.bows.*;
 import com.PlanetCore.items.shields.Shield;
 import com.PlanetCore.items.shields.ShieldMaterial;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
+import net.minecraft.potion.PotionEffect;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -26,6 +31,8 @@ public class ModItems {
 
 
 	public static final IronDrill IRON_DRILL = (IronDrill) new IronDrill().setCreativeTab(CreativeTabs.TOOLS);
+
+	public static final TutorialBook TUTORIAL_BOOK = (TutorialBook) new TutorialBook().setCreativeTab(CreativeTabs.MATERIALS);
 
 	public static final Item HOT_BLAZE_POWDER = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item HOT_MAGMA_CREAM = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -314,21 +321,13 @@ public class ModItems {
 	public static final Item CORE_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item ONYX_STAR = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
-	/*
-	public static final Item PLATINUM_APPLE = new ThreeEffectFoodItem(10, 3.0F, false,
-			new PotionEffect(MobEffects.ABSORPTION, 6000, 4, false, false),
-			new PotionEffect(MobEffects.REGENERATION, 400, 2, false, false),
-			new PotionEffect(MobEffects.FIRE_RESISTANCE, 3600, 0, false, false));
 
-	public static final Item ENCHANTED_PLATINUM_APPLE = new SixEffectFoodItem(10, 3.0F, false,
+	public static final Item DIAMOND_APPLE = new ThreeEffectFoodItem(10, 3.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 6000, 4, false, false),
-			new PotionEffect(MobEffects.REGENERATION, 800, 2, false, false),
-			new PotionEffect(MobEffects.STRENGTH, 3000, 1, false, false),
-			new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 1, false, false),
-			new PotionEffect(MobEffects.RESISTANCE, 6000, 1, false, false),
-			new PotionEffect(MobEffects.GLOWING, 3000, 0, false, false));
+			new PotionEffect(MobEffects.REGENERATION, 600, 2, false, false),
+			new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 0, false, false));
 
-	 */
+
 
 	//SHIELDS
 	public static final Item IRON_SHIELD = new Shield(ShieldMaterial.IRON, 3, 0.05f);

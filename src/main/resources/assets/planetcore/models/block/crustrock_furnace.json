@@ -1,8 +1,0 @@
-{
-  "parent": "block/orientable",
-  "textures": {
-    "top": "planetcore:blocks/crustrock_furnace_top",
-    "front": "planetcore:blocks/crustrock_furnace_front_off",
-    "side": "planetcore:blocks/crustrock_furnace_side"
-  }
-}

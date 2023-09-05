@@ -91,11 +91,14 @@ public class EntityHellHound extends EntityMob
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY <= -64 && posY > -6000 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
+		int dimensionID = this.getEntityWorld().provider.getDimension();
+		String worldType = getEntityWorld().getWorldType().getName();
+		if (dimensionID == 0 && posY < -300 && posY >= -1050 && worldType == "PlanetCore") {
 			return true;
-		} else {
-			return false;
+		} else if (dimensionID == -1) {
+			return true;
 		}
+		else return false;
 	}
 
 	@Override

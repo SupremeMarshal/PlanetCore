@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_redstone"},
+  "variant=mantle":{"model":"planetcore:mantleslate_redstone"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_redstone"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_redstone"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_redstone"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_redstone"}}}

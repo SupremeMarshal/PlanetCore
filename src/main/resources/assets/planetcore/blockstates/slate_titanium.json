@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_titanium"},
+  "variant=mantle":{"model":"planetcore:mantleslate_titanium"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_titanium"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_titanium"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_titanium"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_titanium"}}}

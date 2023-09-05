@@ -1,7 +1,0 @@
-{"variants": {
-  "variant=mantlerock": {"model":"planetcore:mantlerock_compact_iron"},
-  "variant=mantlerock1":{"model":"planetcore:mantlerock1_compact_iron"},
-  "variant=mantlerock2":{"model":"planetcore:mantlerock2_compact_iron"},
-  "variant=lower_mantlerock":{"model":"planetcore:lower_mantlerock_compact_iron"},
-  "variant=lower_mantlerock1":{"model":"planetcore:lower_mantlerock1_compact_iron"},
-  "variant=lower_mantlerock2":{"model":"planetcore:lower_mantlerock2_compact_iron"}}}

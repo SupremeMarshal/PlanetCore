@@ -58,7 +58,7 @@ public class PickaxeRelentlessHandler {
             float Relentless = holdingPickaxe(player) ? getRelentless(stack) : 1;
             float breaktime = blockHardness * 1.5F / stack.getDestroySpeed(state);//is there a better way?
 
-            //Determine if the block is undestructible.
+            //Determine if the block is indestructible.
             if (breaktime > Relentless) {
                 if (!aboutToBreak) {
                     if (holdingPickaxe(player) && player.world.getTotalWorldTime() % 6 == 1) {

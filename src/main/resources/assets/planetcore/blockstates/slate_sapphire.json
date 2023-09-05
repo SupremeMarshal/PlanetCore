@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_sapphire"},
+  "variant=mantle":{"model":"planetcore:mantleslate_sapphire"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_sapphire"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_sapphire"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_sapphire"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_sapphire"}}}

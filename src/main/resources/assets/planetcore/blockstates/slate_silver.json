@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_silver"},
+  "variant=mantle":{"model":"planetcore:mantleslate_silver"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_silver"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_silver"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_silver"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_silver"}}}

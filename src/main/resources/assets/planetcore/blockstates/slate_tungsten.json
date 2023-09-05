@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_tungsten"},
+  "variant=mantle":{"model":"planetcore:mantleslate_tungsten"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_tungsten"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_tungsten"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_tungsten"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_tungsten"}}}

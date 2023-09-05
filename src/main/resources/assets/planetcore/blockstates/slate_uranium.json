@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_uranium"},
+  "variant=mantle":{"model":"planetcore:mantleslate_uranium"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_uranium"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_uranium"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_uranium"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_uranium"}}}

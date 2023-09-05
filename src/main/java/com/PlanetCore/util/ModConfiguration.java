@@ -48,6 +48,8 @@ public class ModConfiguration
 	public static int GUI_TUNGSTEN_FURNACE_ID = 8;
 	public static int GUI_TUNGSTEN_TITANIUM_FURNACE_ID = 9;
 
+	public static int GUI_TUTORIAL_BOOK_ID = 10;
+
 
 	public static void init(File file)
 	{
@@ -92,6 +94,7 @@ public class ModConfiguration
 		GUI_TITANIUM_FURNACE_ID = config.getInt("GUI_TITANIUM_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Titanium Furnace (Non-Electric)");
 		GUI_TUNGSTEN_FURNACE_ID = config.getInt("GUI_TUNGSTEN_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Tungsten Furnace (Non-Electric)");
 		GUI_TUNGSTEN_TITANIUM_FURNACE_ID = config.getInt("GUI_TUNGSTEN_TITANIUM_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Tungsten Titanium Furnace (Non-Electric)");
+		GUI_TUTORIAL_BOOK_ID = config.getInt("GUI_TUTORIAL_BOOK_ID", category, 1, 1, 999, "Set the ID for the Tutorial Book (Non-Electric)");
 	}
 	
 	public static void registerConfig(FMLPreInitializationEvent event)

@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_amazonite"},
+  "variant=mantle":{"model":"planetcore:mantleslate_amazonite"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_amazonite"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_amazonite"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_amazonite"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_amazonite"}}}

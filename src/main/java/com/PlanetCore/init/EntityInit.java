@@ -9,10 +9,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
+import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Set;
 
 public class EntityInit 
 {
@@ -48,11 +50,13 @@ public class EntityInit
 	{
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
 		Biome[] spawnBiomes = allbiomes(Biome.REGISTRY);
-		EntityRegistry.addSpawn(EntityDemon.class, 80, 1, 6, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityDemon.class, 6, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityDemon.class, 5, 1, 1, EnumCreatureType.MONSTER, getNetherBiome());
 		EntityRegistry.addSpawn(EntityCoreDemon.class, 1, 1, 1, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityOnyxDemon.class, 1, 1, 1, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityGhoul.class, 5, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityHellHound.class, 5, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityHellHound.class, 8, 1, 3, EnumCreatureType.MONSTER, getNetherBiome());
 		EntityRegistry.addSpawn(EntityDeathEnderman.class, 1, 1, 1, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityHotBlaze.class, 5, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityCoreBlaze.class, 4, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
@@ -76,5 +80,15 @@ public class EntityInit
 
 
 	}
-	
+
+	public static Biome getNetherBiome() {
+		Set<Biome> netherBiomes = BiomeDictionary.getBiomes(BiomeDictionary.Type.NETHER);
+		for (Biome biome : netherBiomes) {
+			// Assuming you want the default Nether biome, which is usually called "hell"
+			if (biome.getRegistryName().getPath().equals("hell")) {
+				return biome;
+			}
+		}
+		return null;
+	}
 }

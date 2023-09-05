@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_coal"},
+  "variant=mantle":{"model":"planetcore:mantleslate_coal"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_coal"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_coal"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_coal"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_coal"}}}

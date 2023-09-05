@@ -24,7 +24,6 @@ public class BlockBase extends Block {
 	public BlockBase(String name, Material material, boolean mineral) {
 		super(material);
 		this.mineral = mineral;
-
 		setTranslationKey(name);
 		setRegistryName(name);
 		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
@@ -40,6 +39,15 @@ public class BlockBase extends Block {
 	 */
 
 
+	@Override
+	public int getLightValue(IBlockState state, IBlockAccess world, BlockPos pos) {
+		if (this == ModBlocks.LOWERMANTLE_BOULDER)
+			return 15;
+		else if (this == ModBlocks.HOT_BOULDER)
+			return 4;
+		else return super.getLightValue(state, world, pos);
+	}
+
 	/**
 	 * cause the terrain to close on itself, creating a pressure effect inside the planet.
 	 * @param worldIn
@@ -48,9 +56,11 @@ public class BlockBase extends Block {
 	 * @param rand
 	 */
 
+
+
 	@Override
 	public void randomTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		if ((this == ModBlocks.MANTLEROCK || this == ModBlocks.CRUSTROCK || this == ModBlocks.CORESTONE) && pos.getY() <= -512) {
+		if ((this == ModBlocks.SLATE) && pos.getY() <= -512) {
 
 
 			/**
@@ -62,8 +72,8 @@ public class BlockBase extends Block {
 			for (EnumFacing side : EnumFacing.values()) {
 				BlockPos movedPos = pos.offset(side);
 				IBlockState movedState = worldIn.getBlockState(movedPos);
-				if (movedState.getMaterial() == Material.IRON || movedState.getBlock() == ModBlocks.AIR_NO_PRESSURE) return;
-				if (movedState == Blocks.AIR.getDefaultState() && movedState != ModBlocks.AIR_NO_PRESSURE.getDefaultState()) {
+				if (movedState.getMaterial() == Material.IRON) return;
+				if (movedState == Blocks.AIR.getDefaultState()) {
 					continue;
 				}
 				EnumFacing[] sides = Arrays.stream(EnumFacing.VALUES)

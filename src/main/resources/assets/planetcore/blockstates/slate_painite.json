@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_painite"},
+  "variant=mantle":{"model":"planetcore:mantleslate_painite"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_painite"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_painite"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_painite"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_painite"}}}

@@ -20,7 +20,7 @@ public class VeryHotRocks extends BlockBase {
 	public final PlanetHardness planetHardness;
 
 	public VeryHotRocks(String name, Material material, PlanetHardness planetHardness) {
-		super(name, material,false);
+		super(name, material, false);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);

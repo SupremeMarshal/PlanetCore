@@ -1,5 +1,5 @@
-{"variants":{
-  "variant=supercompressed":{"model":"planetcore:supercompressed_redstone"},
-  "variant=hot_supercompressed":{"model":"planetcore:hot_supercompressed_redstone"},
-  "variant=veryhot_supercompressed":{"model":"planetcore:veryhot_supercompressed_redstone"},
-  "variant=superheated_supercompressed":{"model":"planetcore:superheated_supercompressed_redstone"}}}
+{
+  "variants": {
+    "normal": { "model": "planetcore:supercompressed_redstone" }
+  }
+}

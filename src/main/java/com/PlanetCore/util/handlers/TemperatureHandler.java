@@ -26,9 +26,10 @@ public class TemperatureHandler {
         if (dimension == -1) return 60;
         else {
             if (y >= 0) return 20;
-            if (y >= -512) return y * -0.15625 + 20;
-            else if (y >= -768) return (y + 512) * -0.78125 + 100;
-            else if (y >= -2500) return (y + 768) * -2.8291 + 300;
+            if (y >= -640) return y * -0.75 + 20;
+            else if (y >= -1280) return (y + 640) * -2.03125 + 500;
+            else if (y >= -2800) return (y + 1280) * -0.46052 + 1800;
+            else if (y >= -6371) return (y + 2800) * -0.75609 + 2500;
             else return 5200;
         }
     }

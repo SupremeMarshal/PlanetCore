@@ -1,0 +1,7 @@
+{"variants":{
+  "variant=deep":{"model":"planetcore:deepslate_ruby"},
+  "variant=mantle":{"model":"planetcore:mantleslate_ruby"},
+  "variant=hotmantle":{"model":"planetcore:hotmantleslate_ruby"},
+  "variant=lowermantle":{"model":"planetcore:lowermantleslate_ruby"},
+  "variant=outercore":{"model":"planetcore:outercoreslate_ruby"},
+  "variant=innercore":{"model":"planetcore:innercoreslate_ruby"}}}
