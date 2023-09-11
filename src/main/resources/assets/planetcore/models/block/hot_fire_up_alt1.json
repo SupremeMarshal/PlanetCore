@@ -1,0 +1,7 @@
+{
+    "parent": "planetcore:block/hot_fire_up_alt",
+    "textures": {
+        "particle": "planetcore:blocks/hot_fire_1",
+        "hot_fire": "planetcore:blocks/hot_fire_0"
+    }
+}

@@ -1,0 +1,10 @@
+{"variants":{
+    "variant=coal":{"model":"planetcore:quartz_coal"},
+    "variant=iron":{"model":"planetcore:quartz_iron"},
+    "variant=sulfur":{"model":"planetcore:quartz_sulfur"},
+    "variant=redstone":{"model":"planetcore:quartz_redstone"},
+    "variant=lapis":{"model":"planetcore:quartz_lapis"},
+    "variant=silver":{"model":"planetcore:quartz_silver"},
+    "variant=gold":{"model":"planetcore:quartz_gold"},
+    "variant=diamond":{"model":"planetcore:quartz_diamond"},
+    "variant=emerald":{"model":"planetcore:quartz_emerald"}}}

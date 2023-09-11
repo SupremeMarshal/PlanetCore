@@ -1,0 +1,6 @@
+{"variants":{
+    "variant=peridotite":{"model":"planetcore:peridotite_magma"},
+    "variant=garnet":{"model":"planetcore:garnet_magma"},
+    "variant=bridgmanite":{"model":"planetcore:bridgmanite_magma"},
+    "variant=ferropericlase":{"model":"planetcore:ferropericlase_magma"},
+    "variant=onyx":{"model":"planetcore:onyx_magma"}}}

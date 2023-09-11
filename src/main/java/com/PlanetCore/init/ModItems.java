@@ -325,7 +325,7 @@ public class ModItems {
 	public static final Item DIAMOND_APPLE = new ThreeEffectFoodItem(10, 3.0F, false,
 			new PotionEffect(MobEffects.ABSORPTION, 6000, 4, false, false),
 			new PotionEffect(MobEffects.REGENERATION, 600, 2, false, false),
-			new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 0, false, false));
+			new PotionEffect(MobEffects.FIRE_RESISTANCE, 36000, 0, false, false));
 
 
 

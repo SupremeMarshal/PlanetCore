@@ -1,4 +1,10 @@
 {"variants":{
-  "variant=hot":{"model":"planetcore:hot_granite"},
-  "variant=veryhot":{"model":"planetcore:veryhot_granite"},
-  "variant=superheated":{"model":"planetcore:superheated_granite"}}}
+    "variant=coal":{"model":"planetcore:granite_coal"},
+    "variant=iron":{"model":"planetcore:granite_iron"},
+    "variant=sulfur":{"model":"planetcore:granite_sulfur"},
+    "variant=redstone":{"model":"planetcore:granite_redstone"},
+    "variant=lapis":{"model":"planetcore:granite_lapis"},
+    "variant=silver":{"model":"planetcore:granite_silver"},
+    "variant=gold":{"model":"planetcore:granite_gold"},
+    "variant=diamond":{"model":"planetcore:granite_diamond"},
+    "variant=emerald":{"model":"planetcore:granite_emerald"}}}

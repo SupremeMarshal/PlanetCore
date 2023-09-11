@@ -1,6 +1,7 @@
 package com.PlanetCore.util.handlers;
 
 
+import com.PlanetCore.blocks.customFire;
 import com.PlanetCore.init.*;
 import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.items.armor.ItemSetPieces;
@@ -43,6 +44,7 @@ public class RegistryHandler {
         event.getRegistry().registerAll(ModItems.getItems().toArray(new Item[0]));
         for (Block block : ModBlocks.getBlocks()) {
             ItemBlock itemBlock;
+            if (block == ModBlocks.PERIDOTITE_FIRE || block == ModBlocks.GARNET_FIRE || block == ModBlocks.BRIDGMANITE_FIRE || block == ModBlocks.FERROPERICLASE_FIRE || block == ModBlocks.HOT_FIRE || block == ModBlocks.ONYX_FIRE || block == ModBlocks.CORE_FIRE) continue;
             if (block instanceof IMetaName) {
                 itemBlock = new ItemBlockVariants(block);
             } else {
@@ -65,7 +67,8 @@ public class RegistryHandler {
     }
 
     @SubscribeEvent
-    public static void onBlockRegister(RegistryEvent.Register<Block> event) {
+    public static void onBlockRegister(RegistryEvent.Register<Block> event)
+    {
         ModBlocks.register(event.getRegistry());
     }
 

@@ -22,8 +22,8 @@ public class CellGeneratorTest {
 
     private static void cellCavesScaled() throws IOException {
 
-        final int w = 2048;
-        final int h = 1024*3;
+        final int w = 2000;
+        final int h = 1024*10;
 
         final int xOff = 0;
         final int yOff = -h;

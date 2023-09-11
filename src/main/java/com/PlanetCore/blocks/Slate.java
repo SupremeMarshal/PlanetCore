@@ -131,7 +131,8 @@ public class Slate extends BlockBase implements IMetaName
 		int meta = getMetaFromState(state);
 		if (Math.random() < 0.1 * meta && (worldIn.isAirBlock(pos.up()))) {
 			{
-				worldIn.setBlockState(pos.up(), Blocks.FIRE.getDefaultState(), 11);
+				if (meta >= 3) worldIn.setBlockState(pos.up(), ModBlocks.HOT_FIRE.getDefaultState(), 11);
+				else worldIn.setBlockState(pos.up(), Blocks.FIRE.getDefaultState(), 11);
 			}
 		}
 		super.randomTick(worldIn, pos, state, rand);

@@ -1,5 +1,12 @@
-{
-    "variants": {
-        "normal": { "model": "planetcore:blackstone" }
-    }
-}
+{"variants":{
+    "variant=coal":{"model":"planetcore:blackstone_coal"},
+    "variant=iron":{"model":"planetcore:blackstone_iron"},
+    "variant=sulfur":{"model":"planetcore:blackstone_sulfur"},
+    "variant=redstone":{"model":"planetcore:blackstone_redstone"},
+    "variant=lapis":{"model":"planetcore:blackstone_lapis"},
+    "variant=silver":{"model":"planetcore:blackstone_silver"},
+    "variant=gold":{"model":"planetcore:blackstone_gold"},
+    "variant=diamond":{"model":"planetcore:blackstone_diamond"},
+    "variant=emerald":{"model":"planetcore:blackstone_emerald"},
+    "variant=titanium":{"model":"planetcore:blackstone_titanium"},
+    "variant=uranium":{"model":"planetcore:blackstone_uranium"}}}

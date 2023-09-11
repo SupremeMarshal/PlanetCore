@@ -1,0 +1,15 @@
+{"variants":{
+    "variant=quartz":{"model":"planetcore:quartz"},
+    "variant=granite":{"model":"planetcore:granite"},
+    "variant=blackstone":{"model":"planetcore:blackstone"},
+    "variant=peridotite":{"model":"planetcore:peridotite"},
+    "variant=hot_peridotite":{"model":"planetcore:hot_peridotite"},
+    "variant=garnet":{"model":"planetcore:garnet"},
+    "variant=hot_garnet":{"model":"planetcore:hot_garnet"},
+    "variant=bridgmanite":{"model":"planetcore:bridgmanite"},
+    "variant=hot_bridgmanite":{"model":"planetcore:hot_bridgmanite"},
+    "variant=ferropericlase":{"model":"planetcore:ferropericlase"},
+    "variant=hot_ferropericlase":{"model":"planetcore:hot_ferropericlase"},
+    "variant=corestone":{"model":"planetcore:corestone"},
+    "variant=onyxslate":{"model":"planetcore:onyxslate"},
+    "variant=hot_onyxslate":{"model":"planetcore:hot_onyxslate"}}}

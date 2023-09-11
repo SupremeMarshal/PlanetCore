@@ -1,0 +1,15 @@
+{"variants":{
+    "variant=coal":{"model":"planetcore:peridotite_coal"},
+    "variant=iron":{"model":"planetcore:peridotite_iron"},
+    "variant=sulfur":{"model":"planetcore:peridotite_sulfur"},
+    "variant=redstone":{"model":"planetcore:peridotite_redstone"},
+    "variant=lapis":{"model":"planetcore:peridotite_lapis"},
+    "variant=silver":{"model":"planetcore:peridotite_silver"},
+    "variant=gold":{"model":"planetcore:peridotite_gold"},
+    "variant=diamond":{"model":"planetcore:peridotite_diamond"},
+    "variant=emerald":{"model":"planetcore:peridotite_emerald"},
+    "variant=titanium":{"model":"planetcore:peridotite_titanium"},
+    "variant=uranium":{"model":"planetcore:peridotite_uranium"},
+    "variant=tungsten":{"model":"planetcore:peridotite_tungsten"},
+    "variant=ruby":{"model":"planetcore:peridotite_ruby"},
+    "variant=sapphire":{"model":"planetcore:peridotite_sapphire"}}}

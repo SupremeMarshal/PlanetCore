@@ -1,0 +1,7 @@
+{
+    "parent": "planetcore:block/ferropericlase_fire_floor",
+    "textures": {
+        "particle": "planetcore:blocks/ferropericlase_fire_0",
+        "ferropericlase_fire": "planetcore:blocks/ferropericlase_fire_0"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "planetcore:block/onyx_fire_side",
+    "textures": {
+        "particle": "planetcore:blocks/onyx_fire_0",
+        "onyx_fire": "planetcore:blocks/onyx_fire_0"
+    }
+}

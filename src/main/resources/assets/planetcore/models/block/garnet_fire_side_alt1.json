@@ -1,0 +1,7 @@
+{
+    "parent": "planetcore:block/garnet_fire_side_alt",
+    "textures": {
+        "particle": "planetcore:blocks/garnet_fire_1",
+        "garnet_fire": "planetcore:blocks/garnet_fire_1"
+    }
+}

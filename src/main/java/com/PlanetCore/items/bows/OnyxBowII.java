@@ -166,40 +166,40 @@ public class OnyxBowII extends ItemBow
                         Item itemarrow = (itemstack.getItem() instanceof Item ? itemstack.getItem() : Items.ARROW);
                         if (itemstack.getItem() instanceof ItemArrow) {
                             entityarrow = ((ItemArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 2;
+                            damage = 1;
                         }
                         if (itemstack.getItem() == ModItems.DIAMOND_ARROW) {
                             entityarrow = ((DiamondArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 3;
+                            damage = 2;
                         }
                         if (itemstack.getItem() == ModItems.RUBY_ARROW) {
                             entityarrow = ((RubyArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 6;
+                            damage = 3;
                         }
                         if (itemstack.getItem() == ModItems.SAPPHIRE_ARROW) {
                             entityarrow = ((SapphireArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 7;
+                            damage = 4;
                         }
                         if (itemstack.getItem() == ModItems.MAJORITE_ARROW) {
                             entityarrow = ((MajoriteArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 12;
+                            damage = 5;
                         }
                         if (itemstack.getItem() == ModItems.AMAZONITE_ARROW) {
                             entityarrow = ((AmazoniteArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 13;
+                            damage = 6;
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW) {
                             entityarrow = ((OnyxArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 14;
+                            damage = 7;
                         }
                         if (itemstack.getItem() == ModItems.ONYX_ARROW_II) {
                             entityarrow = ((OnyxArrowII) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 15;
+                            damage = 8;
                         }
 
                         entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                        entityarrow.setDamage(damage + 13);
+                        entityarrow.setDamage(damage + 7);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -254,7 +254,7 @@ public class OnyxBowII extends ItemBow
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to onyx II tier arrows."));
         tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment don't work with this bow."));
-        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("§c+7 Damage"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }

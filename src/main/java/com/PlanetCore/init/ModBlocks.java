@@ -15,8 +15,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 
 @ObjectHolder(Reference.MOD_ID)
@@ -83,7 +82,6 @@ public class ModBlocks {
 
     public static final BlockAirNoPressure AIR_NO_PRESSURE = _null();
 
-    public static final HotRocks GRANITE = _null();
     public static final HotRocks DIORITE = _null();
     public static final HotRocks ANDESITE = _null();
 
@@ -92,8 +90,7 @@ public class ModBlocks {
     public static final BoulderBase LOWERMANTLE_BOULDER = _null();
     public static final BoulderBase OUTERCORE_BOULDER = _null();
     public static final BoulderBase INNERCORE_BOULDER = _null();
-    public static final BoulderBase CALCITE = _null();
-    public static final BoulderBase BLACKSTONE = _null();
+    public static final BlockBase CALCITE = _null();
 
     public static final BlockBase MANTLE_MAGMA = _null();
     public static final BlockBase LOWERMANTLE_MAGMA = _null();
@@ -136,6 +133,10 @@ public class ModBlocks {
     public static final SlateOre SLATE_ONYX = _null();
     public static final SlateOre SLATE_PAINITE = _null();
 
+    public static final Rock ROCK = _null();
+
+    public static final MagmaRock MAGMA = _null();
+
     public static final BlockBase PAINITE_BLOCK = _null();
     public static final BlockBase ONYX_BLOCK = _null();
     public static final BlockBase AMAZONITE_BLOCK = _null();
@@ -169,8 +170,20 @@ public class ModBlocks {
 
     public static final BlockBase CRUST_COBBLESTONE = _null();
 
+    public static final GraniteOre GRANITE = _null();
+    public static final QuartzOre QUARTZ = _null();
+    public static final BlackstoneOre BLACKSTONE = _null();
+    public static final PeridotiteOre PERIDOTITE = _null();
+
     // GENERATED BEGIN
 
+    public static final customFire PERIDOTITE_FIRE = _null();
+    public static final customFire GARNET_FIRE = _null();
+    public static final customFire BRIDGMANITE_FIRE = _null();
+    public static final customFire FERROPERICLASE_FIRE = _null();
+    public static final customFire HOT_FIRE = _null();
+    public static final customFire ONYX_FIRE = _null();
+    public static final customFire CORE_FIRE = _null();
 
     // GENERATED END
 
@@ -183,7 +196,10 @@ public class ModBlocks {
         Create a loop to get the coresponding blocks.
          */
 
+        // Register the rock block first
+
         registry.registerAll(
+                new Rock("rock", Material.ROCK),
 
                 new IronLadderBlock().setTranslationKey("iron_ladders").setRegistryName("iron_ladders").setCreativeTab(CreativeTabs.BUILDING_BLOCKS),
                 new DiamondLadderBlock().setTranslationKey("diamond_ladders").setRegistryName("diamond_ladders").setCreativeTab(CreativeTabs.BUILDING_BLOCKS),
@@ -198,12 +214,8 @@ public class ModBlocks {
                 new BoulderBase("outercore_boulder", Material.ROCK).setHardness(1000000.0F),
                 new BoulderBase("innercore_boulder", Material.ROCK).setHardness(1000000.0F),
                 new BlockBase("calcite", Material.ROCK, false).setHardness(5.0F),
-                new BlockBase("blackstone", Material.ROCK, false).setHardness(25.0F),
                 new BlockBase("crust_cobblestone", Material.ROCK,false).setHardness(2.0F).setResistance(1),
                 new SuperheatedRocks("superheated_bedrock", Material.ROCK, PlanetHardness.AMAZONITE).setResistance(1000000),
-                new HotRocks("granite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
-                new HotRocks("diorite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
-                new HotRocks("andesite", Material.ROCK, PlanetHardness.HOT_ROCK).setResistance(2),
                 new IronLavaFluid("iron_lava", ModFluids.IRON_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new IronLavaFluid("superheated_lava", ModFluids.SUPERHEATED_LAVA_FLUID, Material.LAVA).setDensity(1500),
                 new MetalLavaFluid("redstone_lava", ModFluids.REDSTONE_LAVA_FLUID, Material.LAVA).setDensity(1500),
@@ -278,8 +290,23 @@ public class ModBlocks {
                 new SlateOre("slate_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE, PlanetHarvestLevel.MAJORITE,PlanetExp.MAJORITE).setResistance(10),
                 new SlateOre("slate_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE, PlanetHarvestLevel.AMAZONITE,PlanetExp.AMAZONITE).setResistance(10),
                 new SlateOre("slate_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX, PlanetHarvestLevel.ONYX,PlanetExp.ONYX).setResistance(10),
-                new SlateOre("slate_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE, PlanetHarvestLevel.PAINITE,PlanetExp.PAINITE).setResistance(10)
-                );
+                new SlateOre("slate_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE, PlanetHarvestLevel.PAINITE,PlanetExp.PAINITE).setResistance(10),
+
+                new MagmaRock("magma", Material.ROCK),
+
+                new GraniteOre("granite", Material.ROCK),
+                new QuartzOre("quartz", Material.ROCK),
+                new BlackstoneOre("blackstone", Material.ROCK),
+                new PeridotiteOre("peridotite", Material.ROCK),
+
+                new customFire("peridotite_fire"),
+                new customFire("garnet_fire"),
+                new customFire("bridgmanite_fire"),
+                new customFire("ferropericlase_fire"),
+                new customFire("hot_fire"),
+                new customFire("onyx_fire"),
+                new customFire("core_fire")
+        );
     }
 
     public static void registerRenders() {
@@ -313,6 +340,50 @@ public class ModBlocks {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_AMAZONITE), meta, new ModelResourceLocation(name + "_amazonite", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_ONYX), meta, new ModelResourceLocation(name + "_onyx", "inventory"));
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.SLATE_PAINITE), meta, new ModelResourceLocation(name + "_painite", "inventory"));
+        }
+
+        for (int meta = 0; meta < 10; meta++) {
+
+            String name = Reference.MOD_ID + ":" + Rock.EnumType.values()[meta].getName();
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.ROCK), meta, new ModelResourceLocation(name, "inventory"));
+        }
+
+        for (int meta = 0; meta < 9; meta++) {
+            String name = GraniteOre.EnumType.values()[meta].getName();
+            String fullName = "granite_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.GRANITE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+
+            name = QuartzOre.EnumType.values()[meta].getName();
+            fullName = "quartz_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.QUARTZ), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+        }
+
+        for (int meta = 0; meta < 9; meta++) {
+            String name = PeridotiteOre.EnumType.values()[meta].getName();
+            String fullName = "blackstone_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.BLACKSTONE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+        }
+
+        for (int meta = 0; meta < 12; meta++) {
+            String name = PeridotiteOre.EnumType.values()[meta].getName();
+            String fullName = "peridotite_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.PERIDOTITE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+        }
+
+
+        for (int meta = 0; meta < 5; meta++) {
+            String enumName = MagmaRock.EnumType.values()[meta].getName();
+            String name = Reference.MOD_ID + ":" + enumName;
+            String blockStateName = name + "_magma";  // Append "_magma" here
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.MAGMA), meta, new ModelResourceLocation(blockStateName, "inventory"));
         }
     }
 

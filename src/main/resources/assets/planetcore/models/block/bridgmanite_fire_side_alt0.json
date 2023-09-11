@@ -1,0 +1,7 @@
+{
+    "parent": "planetcore:block/bridgmanite_fire_side_alt",
+    "textures": {
+        "particle": "planetcore:blocks/bridgmanite_fire_0",
+        "bridgmanite_fire": "planetcore:blocks/bridgmanite_fire_0"
+    }
+}

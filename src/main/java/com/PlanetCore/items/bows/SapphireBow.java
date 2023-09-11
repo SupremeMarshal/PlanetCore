@@ -123,23 +123,23 @@ public class SapphireBow extends ItemBow
                         Item itemarrow = (itemstack.getItem() instanceof Item ? itemstack.getItem() : Items.ARROW);
                         if (itemstack.getItem() instanceof ItemArrow) {
                             entityarrow = ((ItemArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 2;
+                            damage = 1;
                         }
                         if (itemstack.getItem() == ModItems.DIAMOND_ARROW) {
                             entityarrow = ((DiamondArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 3;
+                            damage = 2;
                         }
                         if (itemstack.getItem() == ModItems.RUBY_ARROW) {
                             entityarrow = ((RubyArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 6;
+                            damage = 3;
                         }
                         if (itemstack.getItem() == ModItems.SAPPHIRE_ARROW) {
                             entityarrow = ((SapphireArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 7;
+                            damage = 4;
                         }
                         entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                        entityarrow.setDamage(damage + 5);
+                        entityarrow.setDamage(damage + 3);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -194,7 +194,7 @@ public class SapphireBow extends ItemBow
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to sapphire tier arrows."));
         tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment don't work with this bow."));
-        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("§c+3 Damage"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }

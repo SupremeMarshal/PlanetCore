@@ -1,0 +1,7 @@
+{
+    "parent": "planetcore:block/peridotite_fire_up_alt",
+    "textures": {
+        "particle": "planetcore:blocks/peridotite_fire_0",
+        "peridotite_fire": "planetcore:blocks/peridotite_fire_0"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "planetcore:block/core_fire_floor",
+    "textures": {
+        "particle": "planetcore:blocks/core_fire_1",
+        "core_fire": "planetcore:blocks/core_fire_1"
+    }
+}

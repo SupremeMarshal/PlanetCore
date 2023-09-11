@@ -130,10 +130,7 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
 
     public enum CaveType {
 
-        CAVE0(Blocks.AIR, Blocks.LAVA,1.0f, -10000,10000, 0),
-        CAVE1(ModBlocks.SUPERCOMPRESSED_COAL, Blocks.LAVA,0.1f, -500,-15, 0),
-        CAVE2(ModBlocks.SUPERCOMPRESSED_IRON, ModBlocks.IRON_LAVA_FLUID,0.1f, -1000,-100, 0);
-
+        CAVE0(Blocks.AIR, Blocks.LAVA,1.0f, -10000,10000, 0);
         private final IBlockState block;
         private final IBlockState lavaMaterial;
         private final float probability;
@@ -278,7 +275,9 @@ public class ImprovedCaveGenerator implements ICubicStructureGenerator {
     private double relativeFillY(Random rand, int originX, int originY, int originZ, CaveType caveType) {
         // value of 0 means a cave system is filled from the middle down
         // value of -10 means it's going to be filled from 10 blocks below the middle of it
-        return (double) ((rand.nextDouble() * 2 - 1) * 32) - 64 + (-0.0256 * originY * 16);
+        double lavaLevel = -30 + (-0.00015 * originY * 16);
+        if (lavaLevel > 25) lavaLevel = 25;
+        return lavaLevel;
     }
 
     /**

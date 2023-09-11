@@ -110,11 +110,11 @@ public class DiamondBow extends ItemBow
                         Item itemarrow = (itemstack.getItem() instanceof Item ? itemstack.getItem() : Items.ARROW);
                         if (itemstack.getItem() instanceof ItemArrow) {
                             entityarrow = ((ItemArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 2;
+                            damage = 1;
                         }
                         if (itemstack.getItem() == ModItems.DIAMOND_ARROW) {
                             entityarrow = ((DiamondArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 3;
+                            damage = 2;
                         }
 
                         entityarrow = this.customizeArrow(entityarrow);
@@ -174,7 +174,7 @@ public class DiamondBow extends ItemBow
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to diamond tier arrows."));
         tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment don't work with this bow."));
-        tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.0"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("§c+1 Damage"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }

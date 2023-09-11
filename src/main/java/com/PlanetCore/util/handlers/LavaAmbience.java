@@ -34,6 +34,7 @@ public class LavaAmbience extends MovingSound {
         // Check if the player is near the lava
         double minDistance = Double.MAX_VALUE;
         lavaCount = 0;
+        if (player.isSpectator() || player.isCreative()) return;
         for (int x = -10; x <= 10; x++) {
             for (int y = -10; y <= 10; y++) {
                 for (int z = -10; z <= 10; z++) {

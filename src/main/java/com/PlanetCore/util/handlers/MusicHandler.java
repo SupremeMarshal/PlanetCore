@@ -62,6 +62,10 @@ public class MusicHandler {
         {
             mantle_range = false;
         }
+        if (!event.player.isCreative() && !event.player.isSpectator() && (Y >= -256 || Y < -768))
+        {
+            mantle_range = false;
+        }
 
         if (event.phase != TickEvent.Phase.END) return;
 
