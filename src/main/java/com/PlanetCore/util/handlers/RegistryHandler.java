@@ -8,6 +8,7 @@ import com.PlanetCore.items.armor.ItemSetPieces;
 import com.PlanetCore.util.IMetaName;
 import com.PlanetCore.util.ModConfiguration;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
@@ -118,6 +119,8 @@ public class RegistryHandler {
     public static void initRegistries(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new GravityHandler());
         MinecraftForge.EVENT_BUS.register(new scoreEvent());
+        Minecraft mc = Minecraft.getMinecraft();
+        MinecraftForge.EVENT_BUS.register(new MusicHandler1(mc));
     }
 
     public static void posInitRegistries(FMLPostInitializationEvent event) {
