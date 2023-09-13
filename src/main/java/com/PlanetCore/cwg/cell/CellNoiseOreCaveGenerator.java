@@ -34,7 +34,7 @@ public class CellNoiseOreCaveGenerator implements ICubicStructureGenerator {
     //       if you have to create them dynamically - try caching, or contact me
     private CellCaveType caveTypeForCell(int cellX, int cellY, int cellZ, int cell, FastRandom rand) {
         if (cellY < 0) {
-            if (rand.nextFloat() < 0.02 && cellY > -250) {
+            if (rand.nextFloat() < 0.02 && cellY > -250 && cellY < -128) {
                 return CellCaveTypes.COAL_CAVE;
             }
             else if (rand.nextFloat() < 0.04 && cellY > -1000) {

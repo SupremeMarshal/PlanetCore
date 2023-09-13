@@ -31,7 +31,7 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
     //       it's best to have a pre-made table/hashmap and choose from that instead
     //       if you have to create them dynamically - try caching, or contact me
     private CellCaveType caveTypeForCell(int cellX, int cellY, int cellZ, int cell, FastRandom rand) {
-        if (rand.nextBoolean())
+        if (rand.nextBoolean() && cellY < -128)
         {
             return CellCaveTypes.SMALL_CAVES;
         }

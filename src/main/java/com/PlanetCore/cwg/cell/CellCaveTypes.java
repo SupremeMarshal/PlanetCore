@@ -74,16 +74,29 @@ public class CellCaveTypes {
             .build();
 
     public static final CellCaveType GRANITE_CAVE = builder()
-            .cellWallTransitionHardness(5)
-            .scaleFactor(10)
-            .caveScale(1 / 200000.0)
-            .placementScale(1)
-            .caveSystemSizeFactor(0)
-            .transitionConstant1(40)
-            .transitionConstant2(0.4)
-            .caveOctaves(1)
-            .placementOctaves(0)
-            .caveFillConstant(100)
+            .cellWallTransitionHardness(2)
+            .scaleFactor(2)
+            // the scale for caves when they generate
+            // smaller value = bigger caves
+            .caveScale(1 / 250.0)
+            // the scale for placement
+            // 2/placementScale should be roughly the average distance between cave systems
+            .placementScale(1 / 512.0)
+            // bigger value = smaller cave systems
+            // value 0f 0 means that all of the world will be cave systems
+            // values above 0.5 are expected to make them unusably small
+            // value 1 and above means they won't generate
+            .caveSystemSizeFactor(0.30)
+            // bigger values = less smooth transition on the edges of cave system
+            .transitionConstant1(2)
+            // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
+            .transitionConstant2(0.2)
+            // bigger value = finer detail for caves. Adding 1 = double the detail
+            .caveOctaves(16)
+            // bigger value = finer detail for placement. Adding 1 = double the detail
+            .placementOctaves(16)
+            // bigger values -> caves are more filled with air and less with stone
+            .caveFillConstant(0.9)
             .yCutoffMax(Double.POSITIVE_INFINITY)
             .yCutoffFactorCaveMax(0)
             .yCutoffFactorPlacementMax(0)
@@ -92,35 +105,61 @@ public class CellCaveTypes {
             .yCutoffFactorPlacementMin(0)
             .build();
     public static final CellCaveType QUARTZ_CAVE = builder()
-            .cellWallTransitionHardness(5)
-            .scaleFactor(10)
-            .caveScale(1 / 200000.0)
-            .placementScale(1)
-            .caveSystemSizeFactor(0)
-            .transitionConstant1(40)
-            .transitionConstant2(0.4)
-            .caveOctaves(1)
-            .placementOctaves(0)
-            .caveFillConstant(100)
-            .yCutoffMax(0)
+            .cellWallTransitionHardness(2)
+            .scaleFactor(2)
+            // the scale for caves when they generate
+            // smaller value = bigger caves
+            .caveScale(1 / 250.0)
+            // the scale for placement
+            // 2/placementScale should be roughly the average distance between cave systems
+            .placementScale(1 / 512.0)
+            // bigger value = smaller cave systems
+            // value 0f 0 means that all of the world will be cave systems
+            // values above 0.5 are expected to make them unusably small
+            // value 1 and above means they won't generate
+            .caveSystemSizeFactor(0.30)
+            // bigger values = less smooth transition on the edges of cave system
+            .transitionConstant1(2)
+            // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
+            .transitionConstant2(0.2)
+            // bigger value = finer detail for caves. Adding 1 = double the detail
+            .caveOctaves(16)
+            // bigger value = finer detail for placement. Adding 1 = double the detail
+            .placementOctaves(16)
+            // bigger values -> caves are more filled with air and less with stone
+            .caveFillConstant(0.9)
+            .yCutoffMax(Double.POSITIVE_INFINITY)
             .yCutoffFactorCaveMax(0)
             .yCutoffFactorPlacementMax(0)
-            .yCutoffMin(100)
-            .yCutoffFactorCaveMin(-1)
-            .yCutoffFactorPlacementMin(-1)
+            .yCutoffMin(Double.NEGATIVE_INFINITY)
+            .yCutoffFactorCaveMin(0)
+            .yCutoffFactorPlacementMin(0)
             .build();
 
     public static final CellCaveType BLACKSTONE_CAVE = builder()
-            .cellWallTransitionHardness(5)
-            .scaleFactor(10)
-            .caveScale(1 / 200000.0)
-            .placementScale(1)
-            .caveSystemSizeFactor(0)
-            .transitionConstant1(40)
-            .transitionConstant2(0.4)
-            .caveOctaves(1)
-            .placementOctaves(0)
-            .caveFillConstant(100)
+            .cellWallTransitionHardness(2)
+            .scaleFactor(2)
+            // the scale for caves when they generate
+            // smaller value = bigger caves
+            .caveScale(1 / 250.0)
+            // the scale for placement
+            // 2/placementScale should be roughly the average distance between cave systems
+            .placementScale(1 / 512.0)
+            // bigger value = smaller cave systems
+            // value 0f 0 means that all of the world will be cave systems
+            // values above 0.5 are expected to make them unusably small
+            // value 1 and above means they won't generate
+            .caveSystemSizeFactor(0.30)
+            // bigger values = less smooth transition on the edges of cave system
+            .transitionConstant1(2)
+            // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
+            .transitionConstant2(0.2)
+            // bigger value = finer detail for caves. Adding 1 = double the detail
+            .caveOctaves(16)
+            // bigger value = finer detail for placement. Adding 1 = double the detail
+            .placementOctaves(16)
+            // bigger values -> caves are more filled with air and less with stone
+            .caveFillConstant(0.9)
             .yCutoffMax(Double.POSITIVE_INFINITY)
             .yCutoffFactorCaveMax(0)
             .yCutoffFactorPlacementMax(0)
@@ -130,16 +169,29 @@ public class CellCaveTypes {
             .build();
 
     public static final CellCaveType PERIDOTITE_CAVE = builder()
-            .cellWallTransitionHardness(5)
-            .scaleFactor(10)
-            .caveScale(1 / 200000.0)
-            .placementScale(1)
-            .caveSystemSizeFactor(0)
-            .transitionConstant1(40)
-            .transitionConstant2(0.4)
-            .caveOctaves(1)
-            .placementOctaves(0)
-            .caveFillConstant(100)
+            .cellWallTransitionHardness(2)
+            .scaleFactor(2)
+            // the scale for caves when they generate
+            // smaller value = bigger caves
+            .caveScale(1 / 250.0)
+            // the scale for placement
+            // 2/placementScale should be roughly the average distance between cave systems
+            .placementScale(1 / 512.0)
+            // bigger value = smaller cave systems
+            // value 0f 0 means that all of the world will be cave systems
+            // values above 0.5 are expected to make them unusably small
+            // value 1 and above means they won't generate
+            .caveSystemSizeFactor(0.30)
+            // bigger values = less smooth transition on the edges of cave system
+            .transitionConstant1(2)
+            // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
+            .transitionConstant2(0.2)
+            // bigger value = finer detail for caves. Adding 1 = double the detail
+            .caveOctaves(16)
+            // bigger value = finer detail for placement. Adding 1 = double the detail
+            .placementOctaves(16)
+            // bigger values -> caves are more filled with air and less with stone
+            .caveFillConstant(0.9)
             .yCutoffMax(Double.POSITIVE_INFINITY)
             .yCutoffFactorCaveMax(0)
             .yCutoffFactorPlacementMax(0)
@@ -149,16 +201,29 @@ public class CellCaveTypes {
             .build();
 
     public static final CellCaveType GARNET_CAVE = builder()
-            .cellWallTransitionHardness(5)
-            .scaleFactor(10)
-            .caveScale(1 / 200000.0)
-            .placementScale(1)
-            .caveSystemSizeFactor(0)
-            .transitionConstant1(40)
-            .transitionConstant2(0.4)
-            .caveOctaves(1)
-            .placementOctaves(0)
-            .caveFillConstant(100)
+            .cellWallTransitionHardness(2)
+            .scaleFactor(2)
+            // the scale for caves when they generate
+            // smaller value = bigger caves
+            .caveScale(1 / 250.0)
+            // the scale for placement
+            // 2/placementScale should be roughly the average distance between cave systems
+            .placementScale(1 / 512.0)
+            // bigger value = smaller cave systems
+            // value 0f 0 means that all of the world will be cave systems
+            // values above 0.5 are expected to make them unusably small
+            // value 1 and above means they won't generate
+            .caveSystemSizeFactor(0.30)
+            // bigger values = less smooth transition on the edges of cave system
+            .transitionConstant1(2)
+            // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
+            .transitionConstant2(0.2)
+            // bigger value = finer detail for caves. Adding 1 = double the detail
+            .caveOctaves(16)
+            // bigger value = finer detail for placement. Adding 1 = double the detail
+            .placementOctaves(16)
+            // bigger values -> caves are more filled with air and less with stone
+            .caveFillConstant(0.9)
             .yCutoffMax(Double.POSITIVE_INFINITY)
             .yCutoffFactorCaveMax(0)
             .yCutoffFactorPlacementMax(0)
@@ -168,16 +233,29 @@ public class CellCaveTypes {
             .build();
 
     public static final CellCaveType BRIDGMANITE_CAVE = builder()
-            .cellWallTransitionHardness(5)
-            .scaleFactor(10)
-            .caveScale(1 / 200000.0)
-            .placementScale(1)
-            .caveSystemSizeFactor(0)
-            .transitionConstant1(40)
-            .transitionConstant2(0.4)
-            .caveOctaves(1)
-            .placementOctaves(0)
-            .caveFillConstant(100)
+            .cellWallTransitionHardness(2)
+            .scaleFactor(2)
+            // the scale for caves when they generate
+            // smaller value = bigger caves
+            .caveScale(1 / 250.0)
+            // the scale for placement
+            // 2/placementScale should be roughly the average distance between cave systems
+            .placementScale(1 / 512.0)
+            // bigger value = smaller cave systems
+            // value 0f 0 means that all of the world will be cave systems
+            // values above 0.5 are expected to make them unusably small
+            // value 1 and above means they won't generate
+            .caveSystemSizeFactor(0.30)
+            // bigger values = less smooth transition on the edges of cave system
+            .transitionConstant1(2)
+            // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
+            .transitionConstant2(0.2)
+            // bigger value = finer detail for caves. Adding 1 = double the detail
+            .caveOctaves(16)
+            // bigger value = finer detail for placement. Adding 1 = double the detail
+            .placementOctaves(16)
+            // bigger values -> caves are more filled with air and less with stone
+            .caveFillConstant(0.9)
             .yCutoffMax(Double.POSITIVE_INFINITY)
             .yCutoffFactorCaveMax(0)
             .yCutoffFactorPlacementMax(0)
@@ -187,16 +265,29 @@ public class CellCaveTypes {
             .build();
 
     public static final CellCaveType FERROPERICLASE_CAVE = builder()
-            .cellWallTransitionHardness(5)
-            .scaleFactor(10)
-            .caveScale(1 / 200000.0)
-            .placementScale(1)
-            .caveSystemSizeFactor(0)
-            .transitionConstant1(40)
-            .transitionConstant2(0.4)
-            .caveOctaves(1)
-            .placementOctaves(0)
-            .caveFillConstant(100)
+            .cellWallTransitionHardness(2)
+            .scaleFactor(2)
+            // the scale for caves when they generate
+            // smaller value = bigger caves
+            .caveScale(1 / 250.0)
+            // the scale for placement
+            // 2/placementScale should be roughly the average distance between cave systems
+            .placementScale(1 / 512.0)
+            // bigger value = smaller cave systems
+            // value 0f 0 means that all of the world will be cave systems
+            // values above 0.5 are expected to make them unusably small
+            // value 1 and above means they won't generate
+            .caveSystemSizeFactor(0.30)
+            // bigger values = less smooth transition on the edges of cave system
+            .transitionConstant1(2)
+            // bigger value means smoother transitions at the edges, but also smaller cave systems (in a way similar to caveSystemSizeFactor)
+            .transitionConstant2(0.2)
+            // bigger value = finer detail for caves. Adding 1 = double the detail
+            .caveOctaves(16)
+            // bigger value = finer detail for placement. Adding 1 = double the detail
+            .placementOctaves(16)
+            // bigger values -> caves are more filled with air and less with stone
+            .caveFillConstant(0.9)
             .yCutoffMax(Double.POSITIVE_INFINITY)
             .yCutoffFactorCaveMax(0)
             .yCutoffFactorPlacementMax(0)
