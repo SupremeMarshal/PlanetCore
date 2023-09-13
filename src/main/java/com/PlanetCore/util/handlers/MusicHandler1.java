@@ -51,44 +51,41 @@ public class MusicHandler1 extends MusicTicker {
     @Override
     public void update() {
         MusicTicker.MusicType musicticker$musictype = this.mc.getAmbientMusicType();
-        double Y = this.mc.player.posY;
-        if (Y <= 0) {
-            if (this.currentMusic != null) {
-                if (Y <= -256) {
-                    // Stop playing crust music, if it's currently playing
-                    if (Arrays.asList(crust_soundtracks).contains(this.currentMusic)) {
-                        this.mc.getSoundHandler().stopSound(this.currentMusic);
-                        this.currentMusic = null;
-                    }
-                }
-                else {
-                    // Stop playing mantle music, if it's currently playing
-                    if (Arrays.asList(mantle_soundtracks).contains(this.currentMusic)) {
-                        this.mc.getSoundHandler().stopSound(this.currentMusic);
-                        this.currentMusic = null;
-                    }
-                }
+        double Y = 64;
+        //this.timeUntilNextMusic--;
+        if (this.mc.player != null) {
+            Y = this.mc.player.posY;
+        }
+        if (this.currentMusic != null && !musicticker$musictype.getMusicLocation().getSoundName().equals(this.currentMusic.getSoundLocation()) &&
+                !Arrays.asList(crust_soundtracks).contains(this.currentMusic) && !Arrays.asList(mantle_soundtracks).contains(this.currentMusic)) {
+            this.mc.getSoundHandler().stopSound(this.currentMusic);
+            this.timeUntilNextMusic = MathHelper.getInt(this.rand, 0, musicticker$musictype.getMinDelay() / 2);
+        }
+        if (Y <= 0 && Y > -256) {
+            if (this.currentMusic != null && !this.mc.getSoundHandler().isSoundPlaying(this.currentMusic)) {
+                this.currentMusic = null;
+                this.timeUntilNextMusic = Math.min(MathHelper.getInt(this.rand, musicticker$musictype.getMinDelay(), musicticker$musictype.getMaxDelay()), this.timeUntilNextMusic);
             }
+            this.timeUntilNextMusic = Math.min(this.timeUntilNextMusic, musicticker$musictype.getMaxDelay());
 
-            if (this.currentMusic == null) {
-                if (Y > -256) {
-                    randomIndex = rand.nextInt(crust_soundtracks.length);
-                    this.currentMusic = crust_soundtracks[randomIndex];
-                } else {
-                    randomIndex = rand.nextInt(mantle_soundtracks.length);
-                    this.currentMusic = mantle_soundtracks[randomIndex];
+            if (this.currentMusic == null && this.timeUntilNextMusic-- <= 0) {
+                this.playMusic(musicticker$musictype);
+            }
+        }
+        else if (Y <= -256) {
+                if (this.currentMusic != null && !this.mc.getSoundHandler().isSoundPlaying(this.currentMusic)) {
+                    this.currentMusic = null;
+                    this.timeUntilNextMusic = Math.min(MathHelper.getInt(this.rand, musicticker$musictype.getMinDelay(), musicticker$musictype.getMaxDelay()), this.timeUntilNextMusic);
                 }
+            this.timeUntilNextMusic = Math.min(this.timeUntilNextMusic, musicticker$musictype.getMaxDelay());
 
-                this.mc.getSoundHandler().playSound(this.currentMusic);
-                timeUntilNextMusic = 3500 + rand.nextInt(3500);
+            if (this.currentMusic == null && this.timeUntilNextMusic-- <= 0) {
+                this.playMusic(musicticker$musictype);
             }
         }
         else {
+
             if (this.currentMusic != null) {
-                if (!musicticker$musictype.getMusicLocation().getSoundName().equals(this.currentMusic.getSoundLocation())) {
-                    this.mc.getSoundHandler().stopSound(this.currentMusic);
-                    this.timeUntilNextMusic = MathHelper.getInt(this.rand, 0, musicticker$musictype.getMinDelay() / 2);
-                }
 
                 if (!this.mc.getSoundHandler().isSoundPlaying(this.currentMusic)) {
                     this.currentMusic = null;
@@ -96,17 +93,20 @@ public class MusicHandler1 extends MusicTicker {
                 }
             }
 
-            this.timeUntilNextMusic = Math.min(this.timeUntilNextMusic, musicticker$musictype.getMaxDelay());
+        }
+        this.timeUntilNextMusic = Math.min(this.timeUntilNextMusic, musicticker$musictype.getMaxDelay());
 
-            if (this.currentMusic == null && this.timeUntilNextMusic-- <= 0) {
-                this.playMusic(musicticker$musictype);
-            }
+        if (this.currentMusic == null && this.timeUntilNextMusic-- <= 0) {
+            this.playMusic(musicticker$musictype);
         }
     }
 
     @Override
     public void playMusic(MusicTicker.MusicType requestedMusicType) {
-        double Y = this.mc.player.posY;
+        double Y = 64;
+        if (this.mc.player != null) {
+            Y = this.mc.player.posY;
+        }
 
         if (Y <= 0) {
             if (Y > -256) {
@@ -119,18 +119,15 @@ public class MusicHandler1 extends MusicTicker {
                 selectedSound = mantle_soundtracks[randomIndex];
             }
 
-            // If the custom music is not currently playing, then play it
-            if (this.currentMusic == null || !this.mc.getSoundHandler().isSoundPlaying(this.currentMusic)) {
-                this.currentMusic = selectedSound;
-                this.mc.getSoundHandler().playSound(this.currentMusic);
-                timeUntilNextMusic = 3500 + rand.nextInt(3500);
-            }
+            this.currentMusic = selectedSound;
+            this.mc.getSoundHandler().playSound(this.currentMusic);
+            this.timeUntilNextMusic = 2500 + rand.nextInt(2500);
             return;
         }
 
         // The existing logic for when Y > 0, typically you'd play Minecraft's default music here
         this.currentMusic = PositionedSoundRecord.getMusicRecord(requestedMusicType.getMusicLocation());
         this.mc.getSoundHandler().playSound(this.currentMusic);
-        this.timeUntilNextMusic = Integer.MAX_VALUE;
+        this.timeUntilNextMusic = 2500 + rand.nextInt(2500);
     }
 }
