@@ -977,7 +977,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.25,
+					"spawnProbability": 0.5,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -1559,7 +1559,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.25,
+					"spawnProbability": 0.5,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -1911,6 +1911,19 @@
 					"spawnSize": 8,
 					"spawnTries": 2,
 					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "minecraft:diamond_ore"
+					},
+					"biomes": null,
+					"placeBlockWhen": null,
+					"generateWhen": null,
+					"spawnSize": 8,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -2801,7 +2814,7 @@
 					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
-					"maxHeight": -2
+					"maxHeight": Infinity
 				}
 			],
 			"periodicGaussianOres": [
@@ -2883,60 +2896,6 @@
 					"heightStdDeviation": 1,
 					"heightSpacing": 100.0,
 					"minHeight": 0,
-					"maxHeight": Infinity
-				},
-				{
-					"blockstate": "diamond_ore",
-					"biomes": null,
-					"placeBlockWhen": null,
-					"generateWhen": null,
-					"spawnSize": 8,
-					"spawnTries": 1,
-					"spawnProbability": 0.5,
-					"heightMean": -2,
-					"heightStdDeviation": 1,
-					"heightSpacing": 100.0,
-					"minHeight": -2,
-					"maxHeight": Infinity
-				},
-				{
-					"blockstate": {
-						"Name": "planetcore:slate_diamond"
-					},
-					"biomes": null,
-					"placeBlockWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Name": "planetcore:slate",
-									"Properties": {
-									"variant": "deep"
-								}
-							}
-						]
-					},
-					"generateWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Name": "planetcore:slate",
-									"Properties": {
-									"variant": "deep"
-								}
-							}
-						]
-					},
-					"spawnSize": 9,
-					"spawnTries": 1,
-					"spawnProbability": 0.5,
-					"heightMean": -2,
-					"heightStdDeviation": 1,
-					"heightSpacing": 100.0,
-					"minHeight": -2,
 					"maxHeight": Infinity
 				}
 			],
@@ -3659,7 +3618,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.25,
+					"spawnProbability": 0.5,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -4241,7 +4200,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.25,
+					"spawnProbability": 0.5,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -5700,7 +5659,7 @@
 					"spawnTries": 1,
 					"spawnProbability": 0.5,
 					"minHeight": -Infinity,
-					"maxHeight": 2
+					"maxHeight": Infinity
 				},
 				{
 					"blockstate": {
@@ -5740,7 +5699,7 @@
 					"spawnTries": 1,
 					"spawnProbability": 0.5,
 					"minHeight": -Infinity,
-					"maxHeight": 2
+					"maxHeight": Infinity
 				},
 				{
 					"blockstate": {
@@ -6159,92 +6118,6 @@
 					"heightStdDeviation": 1,
 					"heightSpacing": 100.0,
 					"minHeight": 0,
-					"maxHeight": Infinity
-				},
-				{
-					"blockstate": {
-						"Name": "planetcore:slate_diamond",
-							"Properties": {
-								"variant": "deep"
-							}
-					},
-					"biomes": null,
-					"placeBlockWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Name": "planetcore:slate",
-									"Properties": {
-									"variant": "deep"
-								}
-							}
-						]
-					},
-					"generateWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Name": "planetcore:slate",
-									"Properties": {
-									"variant": "deep"
-								}
-							}
-						]
-					},
-					"spawnSize": 9,
-					"spawnTries": 1,
-					"spawnProbability": 0.5,
-					"heightMean": 2,
-					"heightStdDeviation": 1,
-					"heightSpacing": 100.0,
-					"minHeight": 2,
-					"maxHeight": Infinity
-				},
-				{
-					"blockstate": {
-						"Name": "planetcore:slate_diamond",
-							"Properties": {
-								"variant": "mantle"
-							}
-					},
-					"biomes": null,
-					"placeBlockWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Name": "planetcore:slate",
-									"Properties": {
-									"variant": "mantle"
-								}
-							}
-						]
-					},
-					"generateWhen": {
-						"x": 0.0,
-						"y": 0.0,
-						"z": 0.0,
-						"blocks": [
-							{
-								"Name": "planetcore:slate",
-									"Properties": {
-									"variant": "mantle"
-								}
-							}
-						]
-					},
-					"spawnSize": 9,
-					"spawnTries": 1,
-					"spawnProbability": 0.5,
-					"heightMean": 2,
-					"heightStdDeviation": 1,
-					"heightSpacing": 100.0,
-					"minHeight": 2,
 					"maxHeight": Infinity
 				},
 				{
@@ -7053,7 +6926,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -7895,7 +7768,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -9674,7 +9547,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -9714,7 +9587,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -11346,7 +11219,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -12368,7 +12241,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.75,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -14346,7 +14219,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -14386,7 +14259,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -16724,7 +16597,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -17978,7 +17851,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -20049,7 +19922,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -20089,7 +19962,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -22565,7 +22438,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -24347,6 +24220,43 @@
 				},
 				{
 					"blockstate": {
+						"Name": "planetcore:innercore_magma"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							}
+						]
+					},
+					"spawnSize": 33,
+					"spawnTries": 8,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
 						"Name": "planetcore:magma",
 									"Properties": {
 									"variant": "onyx"
@@ -25385,7 +25295,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -25425,7 +25335,7 @@
 					},
 					"spawnSize": 9,
 					"spawnTries": 1,
-					"spawnProbability": 0.5,
+					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
