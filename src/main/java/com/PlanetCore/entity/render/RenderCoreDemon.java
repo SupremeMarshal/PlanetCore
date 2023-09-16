@@ -16,7 +16,7 @@ public class RenderCoreDemon extends GeoEntityRenderer<EntityCoreDemon>{
 
 	@Override
 	public void render(GeoModel model, EntityCoreDemon animatable, float partialTicks, float red, float green, float blue, float alpha) {
-		GlStateManager.scale(2.0F, 2.0F, 2.0F);
+		GlStateManager.scale(1.0F, 1.0F, 1.0F);
 		super.render(model, animatable, partialTicks, red,green,blue,alpha);
 	}
 }

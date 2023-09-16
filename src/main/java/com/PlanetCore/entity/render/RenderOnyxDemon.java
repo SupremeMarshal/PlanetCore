@@ -16,7 +16,7 @@ public class RenderOnyxDemon extends GeoEntityRenderer<EntityOnyxDemon> {
 
 	@Override
 	public void render(GeoModel model, EntityOnyxDemon animatable, float partialTicks, float red, float green, float blue, float alpha) {
-		GlStateManager.scale(3.0F, 3.0F, 3.0F);
+		GlStateManager.scale(1.0F, 1.0F, 1.0F);
 		super.render(model, animatable, partialTicks, red, green, blue, alpha);
 	}
 }
