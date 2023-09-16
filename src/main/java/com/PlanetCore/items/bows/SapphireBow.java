@@ -127,19 +127,19 @@ public class SapphireBow extends ItemBow
                         }
                         if (itemstack.getItem() == ModItems.DIAMOND_ARROW) {
                             entityarrow = ((DiamondArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 2;
+                            damage = 4;
                         }
                         if (itemstack.getItem() == ModItems.RUBY_ARROW) {
                             entityarrow = ((RubyArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 3;
+                            damage = 6;
                         }
                         if (itemstack.getItem() == ModItems.SAPPHIRE_ARROW) {
                             entityarrow = ((SapphireArrow) itemarrow).createArrow(worldIn, itemstack, entityplayer);
-                            damage = 4;
+                            damage = 8;
                         }
                         entityarrow = this.customizeArrow(entityarrow);
                         entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.0F, 1.0F);
-                        entityarrow.setDamage(damage + 3);
+                        entityarrow.setDamage(damage + 10);
 
                         if (f == 1.0F) {
                             entityarrow.setIsCritical(true);
@@ -194,7 +194,7 @@ public class SapphireBow extends ItemBow
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(net.minecraft.client.resources.I18n.format("Can use up to sapphire tier arrows."));
         tooltip.add(net.minecraft.client.resources.I18n.format("Infinity enchantment don't work with this bow."));
-        tooltip.add(net.minecraft.client.resources.I18n.format("§c+3 Damage"));
+        tooltip.add(net.minecraft.client.resources.I18n.format("§c+10 Damage"));
         tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }
