@@ -1,7 +1,5 @@
-scoreboard.planetcore_score.name = "Mining Scores"
+scoreboard.planetcore_score.name="Mining Scores"
 
-
-//ENCHANTMENT
 enchantment.relentless=Relentless
 enchantment.relentless.tooltip.0= Relentless help breaking blocks with higher hardness.
 
@@ -11,7 +9,6 @@ enchantment.refiner.tooltip.0= Reduce the chance to make gas pocket to explode b
 enchantment.frosting=Frosting
 enchantment.frosting.tooltip.0= Reduce the chance to spawn lava when destroying rocks by (20% * enchant level).
 
-//POTIONS
 effect.very_long_fire_resistance=Very Long Fire resistance
 potion.effect.very_long_fire_resistance=Very Long Fire resistance
 splash_potion.effect.very_long_fire_resistance=Very Long Splash fire resistance
@@ -138,25 +135,15 @@ splash_potion.effect.long_haste_IV=Splash long haste IV
 lingering_potion.effect.long_haste_IV=Lingering long haste IV
 tipped_arrow.effect.long_haste_IV=Arrow of long haste IV
 
-
-//ENCHANTMENTS
-
+item.fiery_mushroom_food.name=Fiery mushroom
+tile.fiery_mushroom.name=Fiery mushroom
 
 generator.PlanetCore=PlanetCore
 
-
-
-//TOOLS
-
-item.titanium_sword.name=Titanium sword
-item.titanium_shovel.name=Titanium shovel
-item.titanium_pickaxe.name=Titanium pickaxe
 item.titanium_pickaxe.tooltip.0=Tier: 7
 item.titanium_pickaxe.tooltip.1=Can break mantlerock3
 item.complete_titanium_pickaxe.tooltip.0=Tier: 7
 item.complete_titanium_pickaxe.tooltip.1=Can break mantlerock3
-item.titanium_axe.name=Titanium axe
-item.titanium_hoe.name=Titanium hoe
 
 item.titanium_helmet.name=titanium helmet
 item.titanium_helmet.tooltip.0=When equipped:
@@ -182,12 +169,6 @@ item.titanium_boots.tooltip.1=§9+3 Armor
 item.titanium_boots.tooltip.2=§9+3 Toughness
 item.titanium_boots.tooltip.3=§a+0.5 Max health
 
-item.uranium_sword.name=uranium sword
-item.uranium_shovel.name=uranium shovel
-item.uranium_pickaxe.name=uranium pickaxe
-item.uranium_axe.name=uranium axe
-item.uranium_hoe.name=uranium hoe
-
 item.uranium_helmet.name=uranium helmet
 item.uranium_helmet.tooltip.0=When equipped:
 item.uranium_helmet.tooltip.1=§9+3 Armor
@@ -212,72 +193,35 @@ item.uranium_boots.tooltip.1=§9+3 Armor
 item.uranium_boots.tooltip.2=§9+3 Toughness
 item.uranium_boots.tooltip.3=§a+0.5 Max health
 
-item.tungsten_sword.name=Tungsten sword
-item.tungsten_shovel.name=Tungsten shovel
-item.tungsten_pickaxe.name=Tungsten pickaxe
-item.tungsten_axe.name=Tungsten axe
-item.tungsten_hoe.name=Tungsten hoe
-
 item.tungsten_helmet.name=Tungsten helmet
 item.tungsten_chestplate.name=Tungsten chestplate
 item.tungsten_leggings.name=Tungsten leggings
 item.tungsten_boots.name=Tungsten boots
 
-item.tungsten_titanium_sword.name=Tungsten-titanium sword
-item.tungsten_titanium_shovel.name=Tungsten-titanium shovel
 item.tungsten_titanium_pickaxe.name=Tungsten-titanium pickaxe
-item.tungsten_titanium_axe.name=Tungsten-titanium axe
-item.tungsten_titanium_hoe.name=Tungsten-titanium hoe
 item.tungsten_titanium_helmet.name=Tungsten-titanium helmet
 
-
-item.ruby_sword.name=Ruby sword
-item.ruby_shovel.name=Ruby shovel
-item.ruby_pickaxe.name=Ruby pickaxe
-item.ruby_axe.name=Ruby axe
-item.ruby_hoe.name=Ruby hoe
 item.ruby_helmet.name=Ruby helmet
 item.ruby_chestplate.name=Ruby chestplate
 item.ruby_leggings.name=Ruby leggings
 item.ruby_boots.name=Ruby boots
-
-item.sapphire_sword.name=Sapphire sword
-item.sapphire_shovel.name=Sapphire shovel
-item.sapphire_pickaxe.name=Sapphire pickaxe
-item.sapphire_axe.name=Sapphire axe
-item.sapphire_hoe.name=Sapphire hoe
 
 item.sapphire_helmet.name=Sapphire helmet
 item.sapphire_chestplate.name=Sapphire chestplate
 item.sapphire_leggings.name=Sapphire leggings
 item.sapphire_boots.name=Sapphire boots
 
-item.majorite_sword.name=Majorite sword
-item.majorite_shovel.name=Majorite shovel
-item.majorite_pickaxe.name=Majorite pickaxe
-item.majorite_axe.name=Majorite axe
-item.majorite_hoe.name=Majorite hoe
-
 item.majorite_helmet.name=Majorite helmet
 item.majorite_chestplate.name=Majorite chestplate
 item.majorite_leggings.name=Majorite leggings
 item.majorite_boots.name=Majorite boots
 
-item.amazonite_sword.name=Amazonite sword
-item.amazonite_shovel.name=Amazonite shovel
-item.amazonite_pickaxe.name=Amazonite pickaxe
-item.amazonite_axe.name=Amazonite axe
-item.amazonite_hoe.name=Amazonite hoe
 item.amazonite_helmet.name=Amazonite helmet
 item.amazonite_chestplate.name=Amazonite chestplate
 item.amazonite_leggings.name=Amazonite leggings
 item.amazonite_boots.name=Amazonite boots
 
-item.onyx_sword.name=Onyx sword
-item.onyx_shovel.name=Onyx shovel
 item.onyx_pickaxe.name=Onyx pickaxe
-item.onyx_axe.name=Onyx axe
-item.onyx_hoe.name=Onyx hoe
 item.onyx_helmet.name=Onyx helmet
 item.onyx_chestplate.name=Onyx chestplate
 item.onyx_leggings.name=Onyx leggings
@@ -324,6 +268,16 @@ item.onyx_v_chestplate.name=Onyx chestplate V
 item.onyx_v_leggings.name=Onyx leggings V
 item.onyx_v_boots.name=Onyx boots V
 
+item.onyx_core_sword.name=Onyx Core sword
+item.onyx_core_shovel.name=Onyx Core shovel
+item.onyx_core_pickaxe.name=Onyx Core pickaxe
+item.onyx_core_axe.name=Onyx Core axe
+item.onyx_core_hoe.name=Onyx Core hoe
+item.onyx_core_helmet.name=Onyx Core helmet
+item.onyx_core_chestplate.name=Onyx Core chestplate
+item.onyx_core_leggings.name=Onyx Core leggings
+item.onyx_core_boots.name=Onyx Core boots
+
 item.diamond_arrow.name=Diamond arrow
 item.topaz_arrow.name=Topaz arrow
 item.jade_arrow.name=Jade arrow
@@ -352,20 +306,14 @@ item.onyx_bow_iii.name=Onyx bow III
 item.onyx_bow_iv.name=Onyx bow IV
 item.onyx_bow_v.name=Onyx bow V
 
-//Items
-item.iron_ingot.name=Iron ingot
-item.steel_ingot.name=Steel ingot
-item.silver_ingot.name=Silver ingot
-item.gold_ingot.name=Gold ingot
-item.platinum_ingot.name=Platinum ingot
-
 item.iron_nugget.name=Iron nugget
 item.steel_nugget.name=Steel nugget
 item.silver_nugget.name=Silver nugget
 item.gold_nugget.name=Gold nugget
-item.platinum_nugget.name=Platinum nugget
+item.titanium_nugget.name=Titanium nugget
+item.uranium_nugget.name=Uranium nugget
+item.tungsten_nugget.name=Tungsten nugget
 
-//gems
 item.topaz.name=Topaz
 item.jade.name=Jade
 item.ruby.name=Ruby
@@ -379,8 +327,6 @@ item.majorite.name=Majorite
 item.amazonite.name=Amazonite
 item.onyx.name=Onyx
 item.painite.name=Painite
-
-//BLOCKS
 
 tile.painite_block.name=Block of painite
 tile.majorite_block.name=Block of majorite
@@ -446,7 +392,6 @@ tile.supercompressed_iron.name=Iron supercompressed
 tile.supercompressed_sulfur.name=Sulfur supercompressed
 tile.supercompressed_lapis.name=Lapis supercompressed
 tile.supercompressed_redstone.name=Redstone supercompressed
-tile.supercompressed_coal.name=Coal supercompressed
 
 tile.ore_majorite.name=Majorite ore
 tile.ore_brigmanite.name=Brigmanite ore
@@ -510,6 +455,7 @@ tile.slate_iron_deep.name=Deepslate Iron
 tile.slate_coal_deep.name=Deepslate Coal
 tile.slate_redstone_deep.name=Deepslate Redstone
 tile.slate_sulfur_deep.name=Deepslate Sulfur
+tile.slate_painite_deep.name=Deepslate Painite
 
 tile.slate_mantle.name=Mantleslate
 tile.slate_majorite_mantle.name=Mantleslate Majorite
@@ -545,6 +491,7 @@ tile.slate_iron_mantle.name=Mantleslate Iron
 tile.slate_coal_mantle.name=Mantleslate Coal
 tile.slate_redstone_mantle.name=Mantleslate Redstone
 tile.slate_sulfur_mantle.name=Mantleslate Sulfur
+tile.slate_painite_mantle.name=Mantleslate Painite
 
 tile.slate_hotmantle.name=Hot Mantleslate
 tile.slate_majorite_hotmantle.name=Hot Mantleslate Majorite
@@ -580,6 +527,7 @@ tile.slate_iron_hotmantle.name=Hot Mantleslate Iron
 tile.slate_coal_hotmantle.name=Hot Mantleslate Coal
 tile.slate_redstone_hotmantle.name=Hot Mantleslate Redstone
 tile.slate_sulfur_hotmantle.name=Hot Mantleslate Sulfur
+tile.slate_painite_hotmantle.name=Hot Mantleslate Painite
 
 tile.slate_lowermantle.name=Lower Mantleslate
 tile.slate_majorite_lowermantle.name=Lower Mantleslate Majorite
@@ -615,6 +563,7 @@ tile.slate_iron_lowermantle.name=Lower Mantleslate Iron
 tile.slate_coal_lowermantle.name=Lower Mantleslate Coal
 tile.slate_redstone_lowermantle.name=Lower Mantleslate Redstone
 tile.slate_sulfur_lowermantle.name=Lower Mantleslate Sulfur
+tile.slate_painite_lowermantle.name=Lower Mantleslate Painite
 
 tile.slate_outercore.name=Outer Coreslate
 tile.slate_majorite_outercore.name=Outer Coreslate Majorite
@@ -650,6 +599,7 @@ tile.slate_iron_outercore.name=Outer Coreslate Iron
 tile.slate_coal_outercore.name=Outer Coreslate Coal
 tile.slate_redstone_outercore.name=Outer Coreslate Redstone
 tile.slate_sulfur_outercore.name=Outer Coreslate Sulfur
+tile.slate_painite_outercore.name=Outer Coreslate Painite
 
 tile.slate_innercore.name=Inner Coreslate
 tile.slate_majorite_innercore.name=Inner Coreslate Majorite
@@ -685,6 +635,7 @@ tile.slate_iron_innercore.name=Inner Coreslate Iron
 tile.slate_coal_innercore.name=Inner Coreslate Coal
 tile.slate_redstone_innercore.name=Inner Coreslate Redstone
 tile.slate_sulfur_innercore.name=Inner Coreslate Sulfur
+tile.slate_painite_innercore.name=Inner Coreslate Painite
 
 tile.granite_hot.name=Hot Granite
 tile.granite_veryhot.name=Very hot Granite
@@ -697,6 +648,7 @@ tile.diorite_veryhot.name=Very hot Diorite
 tile.diorite_superheated.name=Superheated Diorite
 
 tile.boulder.name=Boulder
+tile.mantle_boulder.name=Mantle Boulder
 tile.mantlerock1_boulder.name=Hot Boulder
 tile.mantlerock2_boulder.name=Hot Boulder
 tile.lower_mantlerock_boulder.name=Very hot Boulder
@@ -705,261 +657,26 @@ tile.lower_mantlerock2_boulder.name=Very hot Boulder
 tile.outercore_boulder.name=Superheated Boulder
 tile.innercore_boulder.name=Superheated Boulder
 tile.centercore_boulder.name=Superheated Boulder
+tile.hot_mantlerock.name=Hot Mantlerock
+tile.hot_mantlerock1.name=Hot Mantlerock
 
-tile.mantle_magma.name = Mantle Magma
-tile.lowermantle_magma.name = Lower Mantle Magma
-tile.outercore_magma.name = Outer Core Magma
-tile.innercore_magma.name = Inner Core Magma
-tile.magma_corestone.name = Corestone Magma
-tile.magma_peridotite.name = Peridotite Magma
-tile.magma_garnet.name = Garnet Magma
-tile.magma_bridgmanite.name = Bridgmanite Magma
-tile.magma_ferropericlase.name = Ferropericlase Magma
+tile.mantle_magma.name=Mantle Magma
+tile.lowermantle_magma.name=Lower Mantle Magma
+tile.outercore_magma.name=Outer Core Magma
+tile.innercore_magma.name=Inner Core Magma
+tile.magma_corestone.name=Corestone Magma
 
-tile.rock_granite.name = Granite
-tile.rock_majorite_granite.name=Granite Majorite
-tile.rock_brigmanite_granite.name=Granite Brigmanite
-tile.rock_ringwoodite_granite.name=Granite Ringwoodite
-tile.rock_wadsleyite_granite.name=Granite Wadsleyite
-tile.rock_olivine_granite.name=Granite Olivine
-tile.rock_tungsten_granite.name=Granite Tungsten
-tile.rock_titanium_granite.name=Granite titanium
-tile.rock_uranium_granite.name=Granite uranium
-tile.rock_zinc_granite.name=Granite Zinc
-tile.rock_aluminium_granite.name=Granite aluminium
-tile.rock_silicon_granite.name=Granite Silicon
-tile.rock_lead_granite.name=Granite Lead
-tile.rock_copper_granite.name=Granite Copper
-tile.rock_tin_granite.name=Granite Tin
-tile.rock_azurite_granite.name=Granite Azurite
-tile.rock_onyx_granite.name=Granite Onyx
-tile.rock_amethyst_granite.name=Granite Amethyst
-tile.rock_amazonite_granite.name=Granite Amazonite
-tile.rock_jade_granite.name=Granite Jade
-tile.rock_diamond_granite.name=Granite Diamond
-tile.rock_topaz_granite.name=Granite Topaz
-tile.rock_ruby_granite.name=Granite Ruby
-tile.rock_flaming_topaz_granite.name=Granite Flaming Topaz
-tile.rock_sapphire_granite.name=Granite Sapphire
-tile.rock_emerald_granite.name=Granite Emerald
-tile.rock_lapis_granite.name=Granite Lapis Lazuli
-tile.rock_platinum_granite.name=Granite Platinum
-tile.rock_gold_granite.name=Granite Gold
-tile.rock_silver_granite.name=Granite Silver
-tile.rock_iron_granite.name=Granite Iron
-tile.rock_coal_granite.name=Granite Coal
-tile.rock_redstone_granite.name=Granite Redstone
-tile.rock_sulfur_granite.name=Granite Sulfur
-
-tile.rock_quartz.name = Quartz
-tile.rock_majorite_quartz.name=Quartz Majorite
-tile.rock_brigmanite_quartz.name=Quartz Brigmanite
-tile.rock_ringwoodite_quartz.name=Quartz Ringwoodite
-tile.rock_wadsleyite_quartz.name=Quartz Wadsleyite
-tile.rock_olivine_quartz.name=Quartz Olivine
-tile.rock_tungsten_quartz.name=Quartz Tungsten
-tile.rock_titanium_quartz.name=Quartz titanium
-tile.rock_uranium_quartz.name=Quartz uranium
-tile.rock_zinc_quartz.name=Quartz Zinc
-tile.rock_aluminium_quartz.name=Quartz aluminium
-tile.rock_silicon_quartz.name=Quartz Silicon
-tile.rock_lead_quartz.name=Quartz Lead
-tile.rock_copper_quartz.name=Quartz Copper
-tile.rock_tin_quartz.name=Quartz Tin
-tile.rock_azurite_quartz.name=Quartz Azurite
-tile.rock_onyx_quartz.name=Quartz Onyx
-tile.rock_amethyst_quartz.name=Quartz Amethyst
-tile.rock_amazonite_quartz.name=Quartz Amazonite
-tile.rock_jade_quartz.name=Quartz Jade
-tile.rock_diamond_quartz.name=Quartz Diamond
-tile.rock_topaz_quartz.name=Quartz Topaz
-tile.rock_ruby_quartz.name=Quartz Ruby
-tile.rock_flaming_topaz_quartz.name=Quartz Flaming Topaz
-tile.rock_sapphire_quartz.name=Quartz Sapphire
-tile.rock_emerald_quartz.name=Quartz Emerald
-tile.rock_lapis_quartz.name=Quartz Lapis Lazuli
-tile.rock_platinum_quartz.name=Quartz Platinum
-tile.rock_gold_quartz.name=Quartz Gold
-tile.rock_silver_quartz.name=Quartz Silver
-tile.rock_iron_quartz.name=Quartz Iron
-tile.rock_coal_quartz.name=Quartz Coal
-tile.rock_redstone_quartz.name=Quartz Redstone
-tile.rock_sulfur_quartz.name=Quartz Sulfur
-
-tile.rock_blackstone.name = Blackstone
-tile.rock_majorite_blackstone.name=Blackstone Majorite
-tile.rock_brigmanite_blackstone.name=Blackstone Brigmanite
-tile.rock_ringwoodite_blackstone.name=Blackstone Ringwoodite
-tile.rock_wadsleyite_blackstone.name=Blackstone Wadsleyite
-tile.rock_olivine_blackstone.name=Blackstone Olivine
-tile.rock_tungsten_blackstone.name=Blackstone Tungsten
-tile.rock_titanium_blackstone.name=Blackstone titanium
-tile.rock_uranium_blackstone.name=Blackstone uranium
-tile.rock_zinc_blackstone.name=Blackstone Zinc
-tile.rock_aluminium_blackstone.name=Blackstone aluminium
-tile.rock_silicon_blackstone.name=Blackstone Silicon
-tile.rock_lead_blackstone.name=Blackstone Lead
-tile.rock_copper_blackstone.name=Blackstone Copper
-tile.rock_tin_blackstone.name=Blackstone Tin
-tile.rock_azurite_blackstone.name=Blackstone Azurite
-tile.rock_onyx_blackstone.name=Blackstone Onyx
-tile.rock_amethyst_blackstone.name=Blackstone Amethyst
-tile.rock_amazonite_blackstone.name=Blackstone Amazonite
-tile.rock_jade_blackstone.name=Blackstone Jade
-tile.rock_diamond_blackstone.name=Blackstone Diamond
-tile.rock_topaz_blackstone.name=Blackstone Topaz
-tile.rock_ruby_blackstone.name=Blackstone Ruby
-tile.rock_flaming_topaz_blackstone.name=Blackstone Flaming Topaz
-tile.rock_sapphire_blackstone.name=Blackstone Sapphire
-tile.rock_emerald_blackstone.name=Blackstone Emerald
-tile.rock_lapis_blackstone.name=Blackstone Lapis Lazuli
-tile.rock_platinum_blackstone.name=Blackstone Platinum
-tile.rock_gold_blackstone.name=Blackstone Gold
-tile.rock_silver_blackstone.name=Blackstone Silver
-tile.rock_iron_blackstone.name=Blackstone Iron
-tile.rock_coal_blackstone.name=Blackstone Coal
-tile.rock_redstone_blackstone.name=Blackstone Redstone
-tile.rock_sulfur_blackstone.name=Blackstone Sulfur
-
-tile.rock_peridotite.name = Peridotite
-tile.rock_majorite_peridotite.name=Peridotite Majorite
-tile.rock_brigmanite_peridotite.name=Peridotite Brigmanite
-tile.rock_ringwoodite_peridotite.name=Peridotite Ringwoodite
-tile.rock_wadsleyite_peridotite.name=Peridotite Wadsleyite
-tile.rock_olivine_peridotite.name=Peridotite Olivine
-tile.rock_tungsten_peridotite.name=Peridotite Tungsten
-tile.rock_titanium_peridotite.name=Peridotite titanium
-tile.rock_uranium_peridotite.name=Peridotite uranium
-tile.rock_zinc_peridotite.name=Peridotite Zinc
-tile.rock_aluminium_peridotite.name=Peridotite aluminium
-tile.rock_silicon_peridotite.name=Peridotite Silicon
-tile.rock_lead_peridotite.name=Peridotite Lead
-tile.rock_copper_peridotite.name=Peridotite Copper
-tile.rock_tin_peridotite.name=Peridotite Tin
-tile.rock_azurite_peridotite.name=Peridotite Azurite
-tile.rock_onyx_peridotite.name=Peridotite Onyx
-tile.rock_amethyst_peridotite.name=Peridotite Amethyst
-tile.rock_amazonite_peridotite.name=Peridotite Amazonite
-tile.rock_jade_peridotite.name=Peridotite Jade
-tile.rock_diamond_peridotite.name=Peridotite Diamond
-tile.rock_topaz_peridotite.name=Peridotite Topaz
-tile.rock_ruby_peridotite.name=Peridotite Ruby
-tile.rock_flaming_topaz_peridotite.name=Peridotite Flaming Topaz
-tile.rock_sapphire_peridotite.name=Peridotite Sapphire
-tile.rock_emerald_peridotite.name=Peridotite Emerald
-tile.rock_lapis_peridotite.name=Peridotite Lapis Lazuli
-tile.rock_platinum_peridotite.name=Peridotite Platinum
-tile.rock_gold_peridotite.name=Peridotite Gold
-tile.rock_silver_peridotite.name=Peridotite Silver
-tile.rock_iron_peridotite.name=Peridotite Iron
-tile.rock_coal_peridotite.name=Peridotite Coal
-tile.rock_redstone_peridotite.name=Peridotite Redstone
-tile.rock_sulfur_peridotite.name=Peridotite Sulfur
-
-tile.rock_garnet.name = Garnet
-tile.rock_majorite_garnet.name=Garnet Majorite
-tile.rock_brigmanite_garnet.name=Garnet Brigmanite
-tile.rock_ringwoodite_garnet.name=Garnet Ringwoodite
-tile.rock_wadsleyite_garnet.name=Garnet Wadsleyite
-tile.rock_olivine_garnet.name=Garnet Olivine
-tile.rock_tungsten_garnet.name=Garnet Tungsten
-tile.rock_titanium_garnet.name=Garnet titanium
-tile.rock_uranium_garnet.name=Garnet uranium
-tile.rock_zinc_garnet.name=Garnet Zinc
-tile.rock_aluminium_garnet.name=Garnet aluminium
-tile.rock_silicon_garnet.name=Garnet Silicon
-tile.rock_lead_garnet.name=Garnet Lead
-tile.rock_copper_garnet.name=Garnet Copper
-tile.rock_tin_garnet.name=Garnet Tin
-tile.rock_azurite_garnet.name=Garnet Azurite
-tile.rock_onyx_garnet.name=Garnet Onyx
-tile.rock_amethyst_garnet.name=Garnet Amethyst
-tile.rock_amazonite_garnet.name=Garnet Amazonite
-tile.rock_jade_garnet.name=Garnet Jade
-tile.rock_diamond_garnet.name=Garnet Diamond
-tile.rock_topaz_garnet.name=Garnet Topaz
-tile.rock_ruby_garnet.name=Garnet Ruby
-tile.rock_flaming_topaz_garnet.name=Garnet Flaming Topaz
-tile.rock_sapphire_garnet.name=Garnet Sapphire
-tile.rock_emerald_garnet.name=Garnet Emerald
-tile.rock_lapis_garnet.name=Garnet Lapis Lazuli
-tile.rock_platinum_garnet.name=Garnet Platinum
-tile.rock_gold_garnet.name=Garnet Gold
-tile.rock_silver_garnet.name=Garnet Silver
-tile.rock_iron_garnet.name=Garnet Iron
-tile.rock_coal_garnet.name=Garnet Coal
-tile.rock_redstone_garnet.name=Garnet Redstone
-tile.rock_sulfur_garnet.name=Garnet Sulfur
-
-tile.rock_bridgmanite.name = Bridgmanite
-tile.rock_majorite_bridgmanite.name=Bridgmanite Majorite
-tile.rock_brigmanite_bridgmanite.name=Bridgmanite Brigmanite
-tile.rock_ringwoodite_bridgmanite.name=Bridgmanite Ringwoodite
-tile.rock_wadsleyite_bridgmanite.name=Bridgmanite Wadsleyite
-tile.rock_olivine_bridgmanite.name=Bridgmanite Olivine
-tile.rock_tungsten_bridgmanite.name=Bridgmanite Tungsten
-tile.rock_titanium_bridgmanite.name=Bridgmanite titanium
-tile.rock_uranium_bridgmanite.name=Bridgmanite uranium
-tile.rock_zinc_bridgmanite.name=Bridgmanite Zinc
-tile.rock_aluminium_bridgmanite.name=Bridgmanite aluminium
-tile.rock_silicon_bridgmanite.name=Bridgmanite Silicon
-tile.rock_lead_bridgmanite.name=Bridgmanite Lead
-tile.rock_copper_bridgmanite.name=Bridgmanite Copper
-tile.rock_tin_bridgmanite.name=Bridgmanite Tin
-tile.rock_azurite_bridgmanite.name=Bridgmanite Azurite
-tile.rock_onyx_bridgmanite.name=Bridgmanite Onyx
-tile.rock_amethyst_bridgmanite.name=Bridgmanite Amethyst
-tile.rock_amazonite_bridgmanite.name=Bridgmanite Amazonite
-tile.rock_jade_bridgmanite.name=Bridgmanite Jade
-tile.rock_diamond_bridgmanite.name=Bridgmanite Diamond
-tile.rock_topaz_bridgmanite.name=Bridgmanite Topaz
-tile.rock_ruby_bridgmanite.name=Bridgmanite Ruby
-tile.rock_flaming_topaz_bridgmanite.name=Bridgmanite Flaming Topaz
-tile.rock_sapphire_bridgmanite.name=Bridgmanite Sapphire
-tile.rock_emerald_bridgmanite.name=Bridgmanite Emerald
-tile.rock_lapis_bridgmanite.name=Bridgmanite Lapis Lazuli
-tile.rock_platinum_bridgmanite.name=Bridgmanite Platinum
-tile.rock_gold_bridgmanite.name=Bridgmanite Gold
-tile.rock_silver_bridgmanite.name=Bridgmanite Silver
-tile.rock_iron_bridgmanite.name=Bridgmanite Iron
-tile.rock_coal_bridgmanite.name=Bridgmanite Coal
-tile.rock_redstone_bridgmanite.name=Bridgmanite Redstone
-tile.rock_sulfur_bridgmanite.name=Bridgmanite Sulfur
-
-tile.rock_ferropericlase.name = Ferropericlase
-tile.rock_majorite_ferropericlase.name=Ferropericlase Majorite
-tile.rock_brigmanite_ferropericlase.name=Ferropericlase Brigmanite
-tile.rock_ringwoodite_ferropericlase.name=Ferropericlase Ringwoodite
-tile.rock_wadsleyite_ferropericlase.name=Ferropericlase Wadsleyite
-tile.rock_olivine_ferropericlase.name=Ferropericlase Olivine
-tile.rock_tungsten_ferropericlase.name=Ferropericlase Tungsten
-tile.rock_titanium_ferropericlase.name=Ferropericlase titanium
-tile.rock_uranium_ferropericlase.name=Ferropericlase uranium
-tile.rock_zinc_ferropericlase.name=Ferropericlase Zinc
-tile.rock_aluminium_ferropericlase.name=Ferropericlase aluminium
-tile.rock_silicon_ferropericlase.name=Ferropericlase Silicon
-tile.rock_lead_ferropericlase.name=Ferropericlase Lead
-tile.rock_copper_ferropericlase.name=Ferropericlase Copper
-tile.rock_tin_ferropericlase.name=Ferropericlase Tin
-tile.rock_azurite_ferropericlase.name=Ferropericlase Azurite
-tile.rock_onyx_ferropericlase.name=Ferropericlase Onyx
-tile.rock_amethyst_ferropericlase.name=Ferropericlase Amethyst
-tile.rock_amazonite_ferropericlase.name=Ferropericlase Amazonite
-tile.rock_jade_ferropericlase.name=Ferropericlase Jade
-tile.rock_diamond_ferropericlase.name=Ferropericlase Diamond
-tile.rock_topaz_ferropericlase.name=Ferropericlase Topaz
-tile.rock_ruby_ferropericlase.name=Ferropericlase Ruby
-tile.rock_flaming_topaz_ferropericlase.name=Ferropericlase Flaming Topaz
-tile.rock_sapphire_ferropericlase.name=Ferropericlase Sapphire
-tile.rock_emerald_ferropericlase.name=Ferropericlase Emerald
-tile.rock_lapis_ferropericlase.name=Ferropericlase Lapis Lazuli
-tile.rock_platinum_ferropericlase.name=Ferropericlase Platinum
-tile.rock_gold_ferropericlase.name=Ferropericlase Gold
-tile.rock_silver_ferropericlase.name=Ferropericlase Silver
-tile.rock_iron_ferropericlase.name=Ferropericlase Iron
-tile.rock_coal_ferropericlase.name=Ferropericlase Coal
-tile.rock_redstone_ferropericlase.name=Ferropericlase Redstone
-tile.rock_sulfur_ferropericlase.name=Ferropericlase Sulfur
+tile.rock_granite.name=Granite
+tile.rock_quartz.name=Quartz
+tile.rock_blackstone.name=Blackstone
+tile.rock_peridotite.name=Peridotite
+tile.rock_hot_peridotite.name=Hot Peridotite
+tile.rock_garnet.name=Garnet
+tile.rock_hot_garnet.name=Hot Garnet
+tile.rock_bridgmanite.name=Bridgmanite
+tile.rock_hot_bridgmanite.name=Hot Bridgmanite
+tile.rock_ferropericlase.name=Ferropericlase
+tile.rock_hot_ferropericlase.name=Hot Ferropericlase
 
 tile.supercompressed_coal.name=Supercompressed Coal
 tile.supercompressed_iron_supercompressed.name=Supercompressed Iron
@@ -1031,6 +748,173 @@ tile.supercompressed_painite_hot_supercompressed.name=Hot Supercompressed Painit
 tile.supercompressed_painite_veryhot_supercompressed.name=Very hot Supercompressed Painite
 tile.supercompressed_painite_superheated_supercompressed.name=Superheated Supercompressed Painite
 
+tile.magma_peridotite.name=Peridotite Magma
+tile.magma_garnet.name=Garnet Magma
+tile.magma_bridgmanite.name=Bridgmanite Magma
+tile.magma_ferropericlase.name=Ferropericlase Magma
+tile.magma_onyx.name=Onyx Magma
+
+tile.quartz_coal.name=Quartz Coal
+tile.quartz_iron.name=Quartz Iron
+tile.quartz_sulfur.name=Quartz Sulfur
+tile.quartz_lapis.name=Quartz Lapis
+tile.quartz_redstone.name=Quartz Redstone
+tile.quartz_silver.name=Quartz Silver
+tile.quartz_gold.name=Quartz Gold
+tile.quartz_diamond.name=Quartz Diamond
+tile.quartz_emerald.name=Quartz Emerald
+
+tile.granite_coal.name=Granite Coal
+tile.granite_iron.name=Granite Iron
+tile.granite_sulfur.name=Granite Sulfur
+tile.granite_lapis.name=Granite Lapis
+tile.granite_redstone.name=Granite Redstone
+tile.granite_silver.name=Granite Silver
+tile.granite_gold.name=Granite Gold
+tile.granite_diamond.name=Granite Diamond
+tile.granite_emerald.name=Granite Emerald
+
+tile.blackstone.name=Blackstone
+tile.blackstone_coal.name=Blackstone Coal
+tile.blackstone_iron.name=Blackstone Iron
+tile.blackstone_sulfur.name=Blackstone Sulfur
+tile.blackstone_lapis.name=Blackstone Lapis
+tile.blackstone_redstone.name=Blackstone Redstone
+tile.blackstone_silver.name=Blackstone Silver
+tile.blackstone_gold.name=Blackstone Gold
+tile.blackstone_diamond.name=Blackstone Diamond
+tile.blackstone_emerald.name=Blackstone Emerald
+tile.blackstone_titanium.name=Blackstone Titanium
+tile.blackstone_uranium.name=Blackstone Uranium
+
+tile.peridotite_coal.name=Peridotite Coal
+tile.peridotite_iron.name=Peridotite Iron
+tile.peridotite_sulfur.name=Peridotite Sulfur
+tile.peridotite_lapis.name=Peridotite Lapis
+tile.peridotite_redstone.name=Peridotite Redstone
+tile.peridotite_silver.name=Peridotite Silver
+tile.peridotite_gold.name=Peridotite Gold
+tile.peridotite_diamond.name=Peridotite Diamond
+tile.peridotite_emerald.name=Peridotite Emerald
+tile.peridotite_titanium.name=Peridotite Titanium
+tile.peridotite_uranium.name=Peridotite Uranium
+tile.peridotite_tungsten.name=Peridotite Tungsten
+tile.peridotite_ruby.name=Peridotite Ruby
+tile.peridotite_sapphire.name=Peridotite Sapphire
+
+tile.hot_peridotite_coal.name=Hot Peridotite Coal
+tile.hot_peridotite_iron.name=Hot Peridotite Iron
+tile.hot_peridotite_sulfur.name=Hot Peridotite Sulfur
+tile.hot_peridotite_lapis.name=Hot Peridotite Lapis
+tile.hot_peridotite_redstone.name=Hot Peridotite Redstone
+tile.hot_peridotite_silver.name=Hot Peridotite Silver
+tile.hot_peridotite_gold.name=Hot Peridotite Gold
+tile.hot_peridotite_diamond.name=Hot Peridotite Diamond
+tile.hot_peridotite_emerald.name=Hot Peridotite Emerald
+tile.hot_peridotite_titanium.name=Hot Peridotite Titanium
+tile.hot_peridotite_uranium.name=Hot Peridotite Uranium
+tile.hot_peridotite_tungsten.name=Hot Peridotite Tungsten
+tile.hot_peridotite_ruby.name=Hot Peridotite Ruby
+tile.hot_peridotite_sapphire.name=Hot Peridotite Sapphire
+
+tile.garnet_coal.name=Garnet Coal
+tile.garnet_iron.name=Garnet Iron
+tile.garnet_sulfur.name=Garnet Sulfur
+tile.garnet_lapis.name=Garnet Lapis
+tile.garnet_redstone.name=Garnet Redstone
+tile.garnet_silver.name=Garnet Silver
+tile.garnet_gold.name=Garnet Gold
+tile.garnet_diamond.name=Garnet Diamond
+tile.garnet_emerald.name=Garnet Emerald
+tile.garnet_titanium.name=Garnet Titanium
+tile.garnet_uranium.name=Garnet Uranium
+tile.garnet_tungsten.name=Garnet Tungsten
+tile.garnet_ruby.name=Garnet Ruby
+tile.garnet_sapphire.name=Garnet Sapphire
+
+tile.hot_garnet_coal.name=Hot Garnet Coal
+tile.hot_garnet_iron.name=Hot Garnet Iron
+tile.hot_garnet_sulfur.name=Hot Garnet Sulfur
+tile.hot_garnet_lapis.name=Hot Garnet Lapis
+tile.hot_garnet_redstone.name=Hot Garnet Redstone
+tile.hot_garnet_silver.name=Hot Garnet Silver
+tile.hot_garnet_gold.name=Hot Garnet Gold
+tile.hot_garnet_diamond.name=Hot Garnet Diamond
+tile.hot_garnet_emerald.name=Hot Garnet Emerald
+tile.hot_garnet_titanium.name=Hot Garnet Titanium
+tile.hot_garnet_uranium.name=Hot Garnet Uranium
+tile.hot_garnet_tungsten.name=Hot Garnet Tungsten
+tile.hot_garnet_ruby.name=Hot Garnet Ruby
+tile.hot_garnet_sapphire.name=Hot Garnet Sapphire
+
+tile.bridgmanite_coal.name=Bridgmanite Coal
+tile.bridgmanite_iron.name=Bridgmanite Iron
+tile.bridgmanite_sulfur.name=Bridgmanite Sulfur
+tile.bridgmanite_lapis.name=Bridgmanite Lapis
+tile.bridgmanite_redstone.name=Bridgmanite Redstone
+tile.bridgmanite_silver.name=Bridgmanite Silver
+tile.bridgmanite_gold.name=Bridgmanite Gold
+tile.bridgmanite_diamond.name=Bridgmanite Diamond
+tile.bridgmanite_emerald.name=Bridgmanite Emerald
+tile.bridgmanite_titanium.name=Bridgmanite Titanium
+tile.bridgmanite_uranium.name=Bridgmanite Uranium
+tile.bridgmanite_tungsten.name=Bridgmanite Tungsten
+tile.bridgmanite_ruby.name=Bridgmanite Ruby
+tile.bridgmanite_sapphire.name=Bridgmanite Sapphire
+tile.bridgmanite_majorite.name=Bridgmanite Majorite
+
+tile.hot_bridgmanite_coal.name=Hot Bridgmanite Coal
+tile.hot_bridgmanite_iron.name=Hot Bridgmanite Iron
+tile.hot_bridgmanite_sulfur.name=Hot Bridgmanite Sulfur
+tile.hot_bridgmanite_lapis.name=Hot Bridgmanite Lapis
+tile.hot_bridgmanite_redstone.name=Hot Bridgmanite Redstone
+tile.hot_bridgmanite_silver.name=Hot Bridgmanite Silver
+tile.hot_bridgmanite_gold.name=Hot Bridgmanite Gold
+tile.hot_bridgmanite_diamond.name=Hot Bridgmanite Diamond
+tile.hot_bridgmanite_emerald.name=Hot Bridgmanite Emerald
+tile.hot_bridgmanite_titanium.name=Hot Bridgmanite Titanium
+tile.hot_bridgmanite_uranium.name=Hot Bridgmanite Uranium
+tile.hot_bridgmanite_tungsten.name=Hot Bridgmanite Tungsten
+tile.hot_bridgmanite_ruby.name=Hot Bridgmanite Ruby
+tile.hot_bridgmanite_sapphire.name=Hot Bridgmanite Sapphire
+tile.hot_bridgmanite_majorite.name=Hot Bridgmanite Majorite
+
+tile.ferropericlase_coal.name=Ferropericlase Coal
+tile.ferropericlase_iron.name=Ferropericlase Iron
+tile.ferropericlase_sulfur.name=Ferropericlase Sulfur
+tile.ferropericlase_lapis.name=Ferropericlase Lapis
+tile.ferropericlase_redstone.name=Ferropericlase Redstone
+tile.ferropericlase_silver.name=Ferropericlase Silver
+tile.ferropericlase_gold.name=Ferropericlase Gold
+tile.ferropericlase_diamond.name=Ferropericlase Diamond
+tile.ferropericlase_emerald.name=Ferropericlase Emerald
+tile.ferropericlase_titanium.name=Ferropericlase Titanium
+tile.ferropericlase_uranium.name=Ferropericlase Uranium
+tile.ferropericlase_tungsten.name=Ferropericlase Tungsten
+tile.ferropericlase_ruby.name=Ferropericlase Ruby
+tile.ferropericlase_sapphire.name=Ferropericlase Sapphire
+tile.ferropericlase_majorite.name=Ferropericlase Majorite
+tile.ferropericlase_amazonite.name=Ferropericlase Amazonite
+tile.ferropericlase_onyx.name=Ferropericlase Onyx
+
+tile.hot_ferropericlase_coal.name=Hot Ferropericlase Coal
+tile.hot_ferropericlase_iron.name=Hot Ferropericlase Iron
+tile.hot_ferropericlase_sulfur.name=Hot Ferropericlase Sulfur
+tile.hot_ferropericlase_lapis.name=Hot Ferropericlase Lapis
+tile.hot_ferropericlase_redstone.name=Hot Ferropericlase Redstone
+tile.hot_ferropericlase_silver.name=Hot Ferropericlase Silver
+tile.hot_ferropericlase_gold.name=Hot Ferropericlase Gold
+tile.hot_ferropericlase_diamond.name=Hot Ferropericlase Diamond
+tile.hot_ferropericlase_emerald.name=Hot Ferropericlase Emerald
+tile.hot_ferropericlase_titanium.name=Hot Ferropericlase Titanium
+tile.hot_ferropericlase_uranium.name=Hot Ferropericlase Uranium
+tile.hot_ferropericlase_tungsten.name=Hot Ferropericlase Tungsten
+tile.hot_ferropericlase_ruby.name=Hot Ferropericlase Ruby
+tile.hot_ferropericlase_sapphire.name=Hot Ferropericlase Sapphire
+tile.hot_ferropericlase_majorite.name=Hot Ferropericlase Majorite
+tile.hot_ferropericlase_amazonite.name=Hot Ferropericlase Amazonite
+tile.hot_ferropericlase_onyx.name=Hot Ferropericlase Onyx
+
 tile.onyx_gravel.name=Onyx gravel
 tile.amazonite_gravel.name=Amazonite gravel
 tile.diamond_gravel.name=Diamond gravel
@@ -1049,47 +933,37 @@ tile.diamond_ladders.name=Diamond ladders
 
 tile.crust_cobblestone.name=Crust cobblestone
 
-//SEDIMENTARY ROCKS
 tile.limestone.name=Limestone
 
-//TOOLS
-item.azurite_rod.name=Azurite rod
-item.onyx_rod.name=Onyx rod
-item.amethyst_rod.name=Amethyst rod
-item.amazonite_rod.name=Amazonite rod
-item.jade_rod.name=Jade rod
-item.diamond_rod.name=Diamond rod
-item.topaz_rod.name=Topaz rod
-item.ruby_rod.name=Ruby rod
-item.sapphire_rod.name=Sapphire rod
-item.aluminium_rod.name=Aluminium rod
-item.lead_rod.name=Lead rod
-item.silicon_rod.name=Silicon rod
-item.tin_rod.name=Tin rod
-item.copper_rod.name=Copper rod
-item.zinc_rod.name=Zinc rod
-item.bronze_rod.name=Bronze rod
-item.iron_rod.name=Iron rod
-item.steel_rod.name=Steel rod
-item.silver_rod.name=Silver rod
-item.gold_rod.name=Gold rod
-item.platinum_rod.name=Platinum rod
-item.titanium_rod.name=titanium rod
-item.uranium_rod.name=uranium rod
-item.tungsten_rod.name=Tungsten rod
-item.titanium_uranium_rod.name=titanium and uranium alloy rod
-item.tungsten_uranium_rod.name=Tungsten and uranium alloy rod
-item.tungsten_titanium_rod.name=Tungsten and titanium alloy rod
-item.olivine_rod.name=Olivine rod
-item.wadsleyite_rod.name=Wadsleyite rod
-item.ringwoodite_rod.name=Ringwoodite rod
-item.brigmanite_rod.name=Brigmanite rod
-item.majorite_rod.name=Majorite rod
+item.iron_drill.name=Iron Drill
+
+item.complete_iron_shovel.name=Complete Iron shovel
+item.complete_silver_shovel.name=Complete Silver shovel
+item.complete_gold_shovel.name=Complete Gold shovel
+item.complete_diamond_shovel.name=Complete Diamond shovel
+item.complete_titanium_shovel.name=Complete Titanium shovel
+item.complete_uranium_shovel.name=Complete Uranium shovel
+item.complete_tungsten_shovel.name=Complete Tungsten shovel
+
+item.complete_iron_axe.name=Complete Iron axe
+item.complete_silver_axe.name=Complete Silver axe
+item.complete_gold_axe.name=Complete Gold axe
+item.complete_diamond_axe.name=Complete Diamond axe
+item.complete_titanium_axe.name=Complete Titanium axe
+item.complete_uranium_axe.name=Complete Uranium axe
+item.complete_tungsten_axe.name=Complete Tungsten axe
+
+item.complete_iron_sword.name=Complete Iron sword
+item.complete_silver_sword.name=Complete Silver sword
+item.complete_gold_sword.name=Complete Gold sword
+item.complete_diamond_sword.name=Complete Diamond sword
+item.complete_titanium_sword.name=Complete Titanium sword
+item.complete_uranium_sword.name=Complete Uranium sword
+item.complete_tungsten_sword.name=Complete Tungsten sword
 
 item.azurite_pickaxe.name=Azurite pickaxe
 item.amethyst_pickaxe.name=Amethyst pickaxe
 item.amazonite_pickaxe.name=Amazonite pickaxe
-item.jade_pickaxe.name=Jade pickaxe
 item.diamond_pickaxe.name=Diamond pickaxe
 item.topaz_pickaxe.name=Topaz pickaxe
 item.ruby_pickaxe.name=Ruby pickaxe
@@ -1107,12 +981,9 @@ item.steel_pickaxe.name=Steel pickaxe
 item.silver_pickaxe.name=Silver pickaxe
 item.gold_pickaxe.name=Gold pickaxe
 item.platinum_pickaxe.name=Platinum pickaxe
-item.titanium_pickaxe.name=titanium pickaxe
-item.uranium_pickaxe.name=uranium pickaxe
+item.titanium_pickaxe.name=Titanium pickaxe
+item.uranium_pickaxe.name=Uranium pickaxe
 item.tungsten_pickaxe.name=Tungsten pickaxe
-item.titanium_uranium_pickaxe.name=titanium and uranium alloy pickaxe
-item.tungsten_uranium_pickaxe.name=Tungsten and uranium alloy pickaxe
-item.tungsten_titanium_pickaxe.name=Tungsten and titanium alloy pickaxe
 item.olivine_pickaxe.name=Olivine pickaxe
 item.wadsleyite_pickaxe.name=Wadsleyite pickaxe
 item.ringwoodite_pickaxe.name=Ringwoodite pickaxe
@@ -1123,7 +994,6 @@ item.complete_azurite_pickaxe.name=Complete Azurite pickaxe
 item.complete_onyx_pickaxe.name=Complete Onyx pickaxe
 item.complete_amethyst_pickaxe.name=Complete Amethyst pickaxe
 item.complete_amazonite_pickaxe.name=Complete Amazonite pickaxe
-item.complete_jade_pickaxe.name=Complete Jade pickaxe
 item.complete_diamond_pickaxe.name=Complete Diamond pickaxe
 item.complete_topaz_pickaxe.name=Complete Topaz pickaxe
 item.complete_ruby_pickaxe.name=Complete Ruby pickaxe
@@ -1142,11 +1012,8 @@ item.complete_silver_pickaxe.name=Complete Silver pickaxe
 item.complete_gold_pickaxe.name=Complete Gold pickaxe
 item.complete_platinum_pickaxe.name=Complete Platinum pickaxe
 item.complete_titanium_pickaxe.name=Complete titanium pickaxe
-item.complete_uranium_pickaxe.name=Complete uranium pickaxe
+item.complete_uranium_pickaxe.name=Complete Uranium pickaxe
 item.complete_tungsten_pickaxe.name=Complete Tungsten pickaxe
-item.complete_titanium_uranium_pickaxe.name=Complete titanium and uranium alloy pickaxe
-item.complete_tungsten_uranium_pickaxe.name=Complete Tungsten and uranium alloy pickaxe
-item.complete_tungsten_titanium_pickaxe.name=Complete Tungsten and titanium alloy pickaxe
 item.complete_olivine_pickaxe.name=Complete Olivine pickaxe
 item.complete_wadsleyite_pickaxe.name=Complete Wadsleyite pickaxe
 item.complete_ringwoodite_pickaxe.name=Complete Ringwoodite pickaxe
@@ -1157,7 +1024,6 @@ item.azurite_hoe.name=Azurite hoe
 item.onyx_hoe.name=Onyx hoe
 item.amethyst_hoe.name=Amethyst hoe
 item.amazonite_hoe.name=Amazonite hoe
-item.jade_hoe.name=Jade hoe
 item.diamond_hoe.name=Diamond hoe
 item.topaz_hoe.name=Topaz hoe
 item.ruby_hoe.name=Ruby hoe
@@ -1191,7 +1057,6 @@ item.azurite_shovel.name=Azurite shovel
 item.onyx_shovel.name=Onyx shovel
 item.amethyst_shovel.name=Amethyst shovel
 item.amazonite_shovel.name=Amazonite shovel
-item.jade_shovel.name=Jade shovel
 item.diamond_shovel.name=Diamond shovel
 item.topaz_shovel.name=Topaz shovel
 item.ruby_shovel.name=Ruby shovel
@@ -1225,7 +1090,6 @@ item.azurite_sword.name=Azurite sword
 item.onyx_sword.name=Onyx sword
 item.amethyst_sword.name=Amethyst sword
 item.amazonite_sword.name=Amazonite sword
-item.jade_sword.name=Jade sword
 item.diamond_sword.name=Diamond sword
 item.topaz_sword.name=Topaz sword
 item.ruby_sword.name=Ruby sword
@@ -1259,7 +1123,6 @@ item.azurite_axe.name=Azurite axe
 item.onyx_axe.name=Onyx axe
 item.amethyst_axe.name=Amethyst axe
 item.amazonite_axe.name=Amazonite axe
-item.jade_axe.name=Jade axe
 item.diamond_axe.name=Diamond axe
 item.topaz_axe.name=Topaz axe
 item.ruby_axe.name=Ruby axe
@@ -1309,12 +1172,10 @@ entity.core_demon.name=Core demon
 entity.onyx_demon.name=Onyx demon
 entity.ghoul.name=Ghoul
 entity.hellhound.name=Hellhound
-entity.hot_blaze.name=Hot Blaze
+entity.hot_blaze.name=Hot blaze
+entity.magma_zombie.name=Magma zombie
 
-item.platinum_apple.name=Platinum apple
-item.enchanted_platinum_apple.name=Enchanted platinum apple
-
-item.hot_blaze_powder.name=Hot Blaze Powder
+item.diamond_apple.name=Diamond apple
 
 fluid.aluminium_lava=Aluminium lava
 fluid.iron_lava=Iron lava
@@ -1341,7 +1202,6 @@ fluid.sulfuric_acid=Sulfuric acid
 fluid.onyx_lava=Onyx lava
 fluid.painite_lava=Painite lava
 
-//ARTIFACT ITEMS
 item.enhancing_gem.name=Enhancing gem
 item.hot_blaze_powder.name=Hot Blaze Powder
 
@@ -1394,7 +1254,6 @@ item.amazonite_shard.name=Amazonite shard
 item.onyx_shard.name=Onyx shard
 item.painite_shard.name=Painite shard
 
-//Bladed gem
 item.bladed_topaz.name=Bladed Topaz
 item.bladed_jade.name=Bladed Jade
 item.bladed_ruby.name=Bladed Ruby
@@ -1408,8 +1267,6 @@ item.bladed_majorite.name=Bladed Majorite
 item.bladed_amazonite.name=Bladed Amazonite
 item.bladed_onyx.name=Bladed Onyx
 
-
-//Ingot
 
 item.aluminium_ingot.name=Aluminium ingot
 item.lead_ingot.name=Lead ingot
@@ -1432,13 +1289,10 @@ item.uranium_ingot.name=Uranium ingot
 item.tungsten_ingot.name=Tungsten ingot
 item.tungsten_titanium_ingot.name=Tungsten and Titanium alloy ingot
 
-//Rod
-
 item.azurite_rod.name=Azurite rod
 item.onyx_rod.name=Onyx rod
 item.amethyst_rod.name=Amethyst rod
 item.amazonite_rod.name=Amazonite rod
-item.jade_rod.name=Jade rod
 item.diamond_rod.name=Diamond rod
 item.topaz_rod.name=Topaz rod
 item.ruby_rod.name=Ruby rod
@@ -1467,8 +1321,6 @@ item.wadsleyite_rod.name=Wadsleyite rod
 item.ringwoodite_rod.name=Ringwoodite rod
 item.brigmanite_rod.name=Brigmanite rod
 item.majorite_rod.name=Majorite rod
-
-//Shield
 
 item.aluminium_shield.tooltip.0=When holding the shield:
 item.aluminium_shield.tooltip.1=§a+3%% Knockback Resistance
@@ -1506,6 +1358,7 @@ item.titanium_shield.tooltip.0=When holding the shield:
 item.titanium_shield.tooltip.1=§a+1 Health
 item.titanium_shield.tooltip.2=§a+11%% Knockback Resistance
 
+item.uranium_shield.name=Uranium Shield
 item.uranium_shield.tooltip.0=When holding the shield:
 item.uranium_shield.tooltip.1=§a+1 Health
 item.uranium_shield.tooltip.2=§a+12%% Knockback Resistance
