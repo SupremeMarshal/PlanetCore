@@ -1,10 +1,8 @@
 package com.PlanetCore.util.handlers;
 
 
-import com.PlanetCore.blocks.customFire;
 import com.PlanetCore.init.*;
 import com.PlanetCore.init.blocks.item.ItemBlockVariants;
-import com.PlanetCore.items.armor.ItemSetPieces;
 import com.PlanetCore.util.IMetaName;
 import com.PlanetCore.util.ModConfiguration;
 import net.minecraft.block.Block;
@@ -14,11 +12,9 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -29,12 +25,10 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 
 import java.lang.reflect.Field;
-import java.util.Collections;
 
 import static com.PlanetCore.util.Reference.MOD_ID;
 
@@ -121,7 +115,7 @@ public class RegistryHandler {
     public static void initRegistries(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new GravityHandler());
         MinecraftForge.EVENT_BUS.register(new scoreEvent());
-        MusicHandler1 customMusicTicker = new MusicHandler1(Minecraft.getMinecraft());
+        MusicHandler customMusicTicker = new MusicHandler(Minecraft.getMinecraft());
         try {
             // Use reflection to get the Minecraft class type
             Class mcClass = Minecraft.getMinecraft().getClass();
@@ -153,96 +147,5 @@ public class RegistryHandler {
 
     public static void posInitRegistries(FMLPostInitializationEvent event) {
 
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.MAJORITE_HELMET, ModItems.AMAZONITE_HELMET, ModItems.ONYX_HELMET, ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.MAJORITE_CHESTPLATE, ModItems.AMAZONITE_CHESTPLATE, ModItems.ONYX_CHESTPLATE, ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.MAJORITE_LEGGINGS, ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.MAJORITE_BOOTS, ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
-                        ),
-                        new PotionEffect(MobEffects.REGENERATION, 0, 0)
-                )
-        );
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.MAJORITE_HELMET, ModItems.AMAZONITE_HELMET, ModItems.ONYX_HELMET, ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.MAJORITE_CHESTPLATE, ModItems.AMAZONITE_CHESTPLATE, ModItems.ONYX_CHESTPLATE, ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.MAJORITE_LEGGINGS, ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.MAJORITE_BOOTS, ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
-                        ),
-                        new PotionEffect(MobEffects.REGENERATION, 0, 0)
-                )
-        );
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.AMAZONITE_HELMET, ModItems.ONYX_HELMET, ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.AMAZONITE_CHESTPLATE, ModItems.ONYX_CHESTPLATE, ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.AMAZONITE_LEGGINGS, ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.AMAZONITE_BOOTS, ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
-                        ),
-                        new PotionEffect(MobEffects.REGENERATION, 0, 1)
-                )
-        );
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.ONYX_HELMET, ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.ONYX_CHESTPLATE, ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.ONYX_LEGGINGS, ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.ONYX_BOOTS, ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
-                        ),
-                        new PotionEffect(MobEffects.STRENGTH, 0, 0),
-                        new PotionEffect(MobEffects.SPEED, 0, 0),
-                        new PotionEffect(MobEffects.REGENERATION, 0, 1)
-                )
-        );
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        Collections.unmodifiableList(ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.ONYX_II_HELMET, ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.ONYX_II_CHESTPLATE, ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.ONYX_II_LEGGINGS, ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.ONYX_II_BOOTS, ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
-                        )),
-                        new PotionEffect(MobEffects.STRENGTH, 0, 1),
-                        new PotionEffect(MobEffects.SPEED, 0, 1),
-                        new PotionEffect(MobEffects.REGENERATION, 0, 1)
-                )
-        );
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.ONYX_III_HELMET, ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.ONYX_III_CHESTPLATE, ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.ONYX_III_LEGGINGS, ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.ONYX_III_BOOTS, ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
-                        ),
-                        new PotionEffect(MobEffects.STRENGTH, 0, 2),
-                        new PotionEffect(MobEffects.SPEED, 0, 1),
-                        new PotionEffect(MobEffects.REGENERATION, 0, 2)
-                )
-        );
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.ONYX_IV_HELMET, ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.ONYX_IV_CHESTPLATE, ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.ONYX_IV_LEGGINGS, ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.ONYX_IV_BOOTS, ModItems.ONYX_V_BOOTS}
-                        ),
-                        new PotionEffect(MobEffects.STRENGTH, 0, 3),
-                        new PotionEffect(MobEffects.SPEED, 0, 1),
-                        new PotionEffect(MobEffects.REGENERATION, 0, 3)
-                )
-        );
-        ItemSetPieces.registerSetBonus(new ItemSetPieces.SetBonus(
-                        ItemSetPieces.newArrayList(
-                                new Item[] {ModItems.ONYX_V_HELMET},
-                                new Item[] {ModItems.ONYX_V_CHESTPLATE},
-                                new Item[] {ModItems.ONYX_V_LEGGINGS},
-                                new Item[] {ModItems.ONYX_V_BOOTS}
-                        ),
-                        new PotionEffect(MobEffects.STRENGTH, 0, 4),
-                        new PotionEffect(MobEffects.SPEED, 0, 1),
-                        new PotionEffect(MobEffects.REGENERATION, 0, 4)
-
-                )
-        );
     }
 }
