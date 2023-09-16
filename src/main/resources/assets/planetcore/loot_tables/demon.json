@@ -6,7 +6,8 @@
             "conditions": [
                 {
                     "condition": "random_chance_with_looting",
-                    "chance": 1.0
+                    "chance": 1.0,
+                    "looting_multiplier": 0.0
                 }
             ],
             "entries": [
@@ -14,138 +15,6 @@
                     "type": "item",
                     "weight": 1,
                     "name": "planetcore:demon_star",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"ruby",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.25
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:ruby",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"ruby1",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.125
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:ruby",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"ruby2",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.0625
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:ruby",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"sapphire",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.125
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:sapphire",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"sapphire1",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.0625
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:sapphire",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"olivine",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.0625
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:olivine",
                     "conditions": [
                         {
                             "condition": "killed_by_player"
