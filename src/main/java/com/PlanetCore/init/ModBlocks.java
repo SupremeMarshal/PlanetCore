@@ -174,6 +174,14 @@ public class ModBlocks {
     public static final QuartzOre QUARTZ = _null();
     public static final BlackstoneOre BLACKSTONE = _null();
     public static final PeridotiteOre PERIDOTITE = _null();
+    public static final PeridotiteOre HOT_PERIDOTITE = _null();
+    public static final GarnetOre GARNET = _null();
+    public static final GarnetOre HOT_GARNET = _null();
+    public static final BridgmaniteOre BRIDGMANITE = _null();
+    public static final BridgmaniteOre HOT_BRIDGMANITE = _null();
+    public static final FerropericlaseOre FERROPERICLASE = _null();
+    public static final FerropericlaseOre HOT_FERROPERICLASE = _null();
+    public static final CorestoneOre CORESTONE = _null();
 
     // GENERATED BEGIN
 
@@ -184,6 +192,8 @@ public class ModBlocks {
     public static final customFire HOT_FIRE = _null();
     public static final customFire ONYX_FIRE = _null();
     public static final customFire CORE_FIRE = _null();
+
+    public static final Mushroom FIERY_MUSHROOM = _null();
 
     // GENERATED END
 
@@ -208,7 +218,6 @@ public class ModBlocks {
                 new MagmaBase("outercore_magma", Material.ROCK).setHardness(1.0f),
                 new MagmaBase("innercore_magma", Material.ROCK).setHardness(1.0f),
                 new BoulderBase("boulder", Material.ROCK).setHardness(1000000.0F),
-                new BoulderBase("red_boulder", Material.ROCK).setHardness(1000000.0F),
                 new BoulderBase("mantle_boulder", Material.ROCK).setHardness(1000000.0F),
                 new BoulderBase("lowermantle_boulder", Material.ROCK).setHardness(1000000.0F),
                 new BoulderBase("outercore_boulder", Material.ROCK).setHardness(1000000.0F),
@@ -298,6 +307,16 @@ public class ModBlocks {
                 new QuartzOre("quartz", Material.ROCK),
                 new BlackstoneOre("blackstone", Material.ROCK),
                 new PeridotiteOre("peridotite", Material.ROCK),
+                new PeridotiteOre("hot_peridotite", Material.ROCK),
+                new GarnetOre("garnet", Material.ROCK),
+                new GarnetOre("hot_garnet", Material.ROCK),
+                new BridgmaniteOre("bridgmanite", Material.ROCK),
+                new BridgmaniteOre("hot_bridgmanite", Material.ROCK),
+                new FerropericlaseOre("ferropericlase", Material.ROCK),
+                new FerropericlaseOre("hot_ferropericlase", Material.ROCK),
+                new CorestoneOre("corestone", Material.ROCK),
+
+                new Mushroom("fiery_mushroom"),
 
                 new customFire("peridotite_fire"),
                 new customFire("garnet_fire"),
@@ -306,6 +325,9 @@ public class ModBlocks {
                 new customFire("hot_fire"),
                 new customFire("onyx_fire"),
                 new customFire("core_fire")
+
+
+
         );
     }
 
@@ -363,7 +385,7 @@ public class ModBlocks {
         }
 
         for (int meta = 0; meta < 9; meta++) {
-            String name = PeridotiteOre.EnumType.values()[meta].getName();
+            String name = BlackstoneOre.EnumType.values()[meta].getName();
             String fullName = "blackstone_" + name;
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.BLACKSTONE), meta,
                     new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
@@ -376,8 +398,58 @@ public class ModBlocks {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.PERIDOTITE), meta,
                     new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
             );
+
+            fullName = "hot_peridotite_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.HOT_PERIDOTITE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
         }
 
+        for (int meta = 0; meta < 12; meta++) {
+            String name = GarnetOre.EnumType.values()[meta].getName();
+            String fullName = "garnet_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.GARNET), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+            fullName = "hot_garnet_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.HOT_GARNET), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+        }
+
+        for (int meta = 0; meta < 13; meta++) {
+            String name = BridgmaniteOre.EnumType.values()[meta].getName();
+            String fullName = "bridgmanite_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.BRIDGMANITE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+
+            fullName = "hot_bridgmanite_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.HOT_BRIDGMANITE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+        }
+
+        for (int meta = 0; meta < 15; meta++) {
+            String name = FerropericlaseOre.EnumType.values()[meta].getName();
+            String fullName = "ferropericlase_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.FERROPERICLASE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+
+            fullName = "hot_ferropericlase_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.HOT_FERROPERICLASE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+        }
+
+        for (int meta = 0; meta < 16; meta++) {
+            String name = CorestoneOre.EnumType.values()[meta].getName();
+            String fullName = "corestone_" + name;
+            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.CORESTONE), meta,
+                    new ModelResourceLocation(Reference.MOD_ID + ":" + fullName, "inventory")
+            );
+        }
 
         for (int meta = 0; meta < 5; meta++) {
             String enumName = MagmaRock.EnumType.values()[meta].getName();

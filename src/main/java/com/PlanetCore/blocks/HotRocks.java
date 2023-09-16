@@ -42,7 +42,6 @@ public class HotRocks extends BlockBase implements IMetaName {
 		this.planetHardness = planetHardness;
 	}
 
-
 	@Override
 	public int damageDropped(IBlockState state) {
 		return getMetaFromState(state);
@@ -144,11 +143,6 @@ public class HotRocks extends BlockBase implements IMetaName {
 		return this.getDefaultState().withProperty(VARIANT_HOTROCKS, HotRocks.EnumType.byMetadata(meta));
 	}
 
-	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		return 15;
-	}
-	
 	@Override
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
 	{

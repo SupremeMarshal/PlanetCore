@@ -3,6 +3,7 @@ package com.PlanetCore.blocks;
 
 import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.init.ModItems;
 import com.PlanetCore.util.IMetaName;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -16,6 +17,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -35,62 +37,7 @@ public class GraniteOre extends BlockBase implements IMetaName
 
 	public GraniteOre(String name, Material material) {
 		super(name, material,false);
-	}
-
-	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		double hardness = 0;
-		double Y = pos.getY();
-		if (Y < 0 && Y >= -1200)
-		{
-			hardness = Y * -0.02916666f + 3;
-		}
-		else if (Y < -1200 && Y >= -2000)
-		{
-			hardness = (Y + 1200) * 0.09 + 39;
-		}
-		else if (Y < -2000 && Y >= -2500)
-		{
-			hardness = (Y + 2000) * 0.072 + 111;
-		}
-		else if (Y < -2500 && Y >= -3000)
-		{
-			hardness = (Y + 2500) * 0.144 + 147;
-		}
-		else if (Y < -3000 && Y >= -4000)
-		{
-			hardness = (Y + 3000) * 0.144 + 219;
-		}
-		else if (Y < -4000 && Y >= -5000)
-		{
-			hardness = (Y + 4000) * 0.18 + 363;
-		}
-		else if (Y < -5000 && Y >= -5500)
-		{
-			hardness = (Y + 5000) * 0.54 + 543;
-		}
-		else if (Y < -5500 && Y >= -6000)
-		{
-			hardness = (Y + 5500) * 0.81 + 813;
-		}
-		else if (Y < -6000)
-		{
-			hardness = (Y + 6000) * 1.636118598 + 1218;
-		}
-		else return 3;
-		return (float) hardness;
-	}
-
-	@Override
-	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
-	{
-		int meta = getMetaFromState(worldIn.getBlockState(pos));
-		if (meta > 1 && !entityIn.isImmuneToFire() && entityIn instanceof EntityLivingBase && !EnchantmentHelper.hasFrostWalkerEnchantment((EntityLivingBase)entityIn))
-		{
-			entityIn.attackEntityFrom(DamageSource.HOT_FLOOR, meta - 1);
-		}
-
-		super.onEntityWalk(worldIn, pos, entityIn);
+		setResistance(100);
 	}
 
 	@Override
@@ -134,6 +81,16 @@ public class GraniteOre extends BlockBase implements IMetaName
 
 	@Override
 	public Item getItemDropped(IBlockState state, Random random, int l) {
+		int meta = getMetaFromState(state);
+		if (meta == 0) return Items.COAL;
+		else if (meta == 1) return ModItems.IRON_ORE;
+		else if (meta == 2) return ModItems.SULFUR;
+		else if (meta == 3) return Items.REDSTONE;
+		else if (meta == 4) return Items.DYE;
+		else if (meta == 5) return ModItems.SILVER_ORE;
+		else if (meta == 6) return ModItems.GOLD_ORE;
+		else if (meta == 7) return Items.DIAMOND;
+		else if (meta == 8) return Items.EMERALD;
 		return super.getItemDropped(state, random, l);
 	}
 

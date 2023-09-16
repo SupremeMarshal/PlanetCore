@@ -1,0 +1,15 @@
+{"variants":{
+    "variant=coal":{"model":"planetcore:bridgmanite_coal"},
+    "variant=iron":{"model":"planetcore:bridgmanite_iron"},
+    "variant=sulfur":{"model":"planetcore:bridgmanite_sulfur"},
+    "variant=redstone":{"model":"planetcore:bridgmanite_redstone"},
+    "variant=lapis":{"model":"planetcore:bridgmanite_lapis"},
+    "variant=silver":{"model":"planetcore:bridgmanite_silver"},
+    "variant=gold":{"model":"planetcore:bridgmanite_gold"},
+    "variant=diamond":{"model":"planetcore:bridgmanite_diamond"},
+    "variant=emerald":{"model":"planetcore:bridgmanite_emerald"},
+    "variant=titanium":{"model":"planetcore:bridgmanite_titanium"},
+    "variant=uranium":{"model":"planetcore:bridgmanite_uranium"},
+    "variant=ruby":{"model":"planetcore:bridgmanite_ruby"},
+    "variant=sapphire":{"model":"planetcore:bridgmanite_sapphire"},
+    "variant=majorite":{"model":"planetcore:bridgmanite_majorite"}}}

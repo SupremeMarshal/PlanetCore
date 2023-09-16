@@ -1,0 +1,17 @@
+{"variants":{
+    "variant=coal":{"model":"planetcore:hot_ferropericlase_coal"},
+    "variant=iron":{"model":"planetcore:hot_ferropericlase_iron"},
+    "variant=sulfur":{"model":"planetcore:hot_ferropericlase_sulfur"},
+    "variant=redstone":{"model":"planetcore:hot_ferropericlase_redstone"},
+    "variant=lapis":{"model":"planetcore:hot_ferropericlase_lapis"},
+    "variant=silver":{"model":"planetcore:hot_ferropericlase_silver"},
+    "variant=gold":{"model":"planetcore:hot_ferropericlase_gold"},
+    "variant=diamond":{"model":"planetcore:hot_ferropericlase_diamond"},
+    "variant=emerald":{"model":"planetcore:hot_ferropericlase_emerald"},
+    "variant=titanium":{"model":"planetcore:hot_ferropericlase_titanium"},
+    "variant=uranium":{"model":"planetcore:hot_ferropericlase_uranium"},
+    "variant=ruby":{"model":"planetcore:hot_ferropericlase_ruby"},
+    "variant=sapphire":{"model":"planetcore:hot_ferropericlase_sapphire"},
+    "variant=majorite":{"model":"planetcore:hot_ferropericlase_majorite"},
+    "variant=amazonite":{"model":"planetcore:hot_ferropericlase_amazonite"},
+    "variant=onyx":{"model":"planetcore:hot_ferropericlase_onyx"}}}

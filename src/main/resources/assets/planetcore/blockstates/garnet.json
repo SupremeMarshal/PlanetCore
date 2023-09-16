@@ -1,0 +1,14 @@
+{"variants":{
+    "variant=coal":{"model":"planetcore:garnet_coal"},
+    "variant=iron":{"model":"planetcore:garnet_iron"},
+    "variant=sulfur":{"model":"planetcore:garnet_sulfur"},
+    "variant=redstone":{"model":"planetcore:garnet_redstone"},
+    "variant=lapis":{"model":"planetcore:garnet_lapis"},
+    "variant=silver":{"model":"planetcore:garnet_silver"},
+    "variant=gold":{"model":"planetcore:garnet_gold"},
+    "variant=diamond":{"model":"planetcore:garnet_diamond"},
+    "variant=emerald":{"model":"planetcore:garnet_emerald"},
+    "variant=titanium":{"model":"planetcore:garnet_titanium"},
+    "variant=uranium":{"model":"planetcore:garnet_uranium"},
+    "variant=ruby":{"model":"planetcore:garnet_ruby"},
+    "variant=sapphire":{"model":"planetcore:garnet_sapphire"}}}
