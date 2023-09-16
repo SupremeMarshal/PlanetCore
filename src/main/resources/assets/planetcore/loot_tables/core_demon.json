@@ -7,6 +7,7 @@
                 {
                     "condition": "random_chance_with_looting",
                     "chance": 1.0,
+                    "looting_multiplier": 0.0
                 }
             ],
             "entries": [
@@ -28,7 +29,8 @@
             "conditions": [
                 {
                     "condition": "random_chance_with_looting",
-                    "chance": 1.0,
+                    "chance": 0.1,
+                    "looting_multiplier": 0.0
                 }
             ],
             "entries": [
@@ -36,138 +38,6 @@
                     "type": "item",
                     "weight": 1,
                     "name": "planetcore:core_star",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"ringwoodite",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.25
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:ringwoodite",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"ringwoodite1",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.125
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:ringwoodite",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"ringwoodite2",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.0625
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:brigmanite",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"brigmanite",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.25
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:brigmanite",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"brigmanite1",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.125
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:brigmanite",
-                    "conditions": [
-                        {
-                            "condition": "killed_by_player"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name":"brigmanite2",
-            "rolls": 1,
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.0625
-                }
-            ],
-            "entries": [
-                {
-                    "type": "item",
-                    "weight": 1,
-                    "name": "planetcore:brigmanite",
                     "conditions": [
                         {
                             "condition": "killed_by_player"
