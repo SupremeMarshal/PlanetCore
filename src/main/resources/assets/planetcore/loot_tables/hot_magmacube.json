@@ -1,7 +1,7 @@
 {
     "pools": [
         {
-            "name":"demonstars",
+            "name":"hot_magma_cream",
             "rolls": 1,
             "conditions": [
                 {
@@ -15,6 +15,29 @@
                     "type": "item",
                     "weight": 1,
                     "name": "planetcore:hot_magma_cream",
+                    "conditions": [
+                        {
+                            "condition": "killed_by_player"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"magma_cream",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance_with_looting",
+                    "chance": 1.0,
+                    "looting_multiplier": 1.2
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 1,
+                    "name": "minecraft:magma_cream",
                     "conditions": [
                         {
                             "condition": "killed_by_player"
