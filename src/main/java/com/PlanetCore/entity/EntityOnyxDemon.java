@@ -44,7 +44,7 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 
 	public EntityOnyxDemon(World worldIn)   {
 		super(worldIn);
-		setSize(3.5f, 8f);
+		setSize(1.5f, 3.5f);
 		this.isImmuneToFire = true;
 		this.moveHelper = new EntityOnyxDemon.GhastMoveHelper(this);
 	}
@@ -168,7 +168,7 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 	
 	@Override
 	public float getEyeHeight()
-	{ return 3.0F; }
+	{ return 1.0F; }
 	
 	protected Item getDropItem() {
 		return null;
@@ -189,7 +189,7 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY < -10000 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
+		if (posY < -6000 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;
@@ -222,10 +222,10 @@ public class EntityOnyxDemon extends EntityMob implements IAnimatable {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(16D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.5D);
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1000D);
-		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(6.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(100D);
+		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(20.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(0.3D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(36D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(100D);
 		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
 		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999999, 2));
 		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 999999999, 5));
