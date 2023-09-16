@@ -44,7 +44,7 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 
 	public EntityCoreDemon(World worldIn)   {
 		super(worldIn);
-		setSize(2.3f, 6f);
+		setSize(1.5f, 3.5f);
 		this.isImmuneToFire = true;
 		this.moveHelper = new EntityCoreDemon.GhastMoveHelper(this);
 	}
@@ -189,7 +189,7 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 
 	@Override
 	public boolean getCanSpawnHere() {
-		if (posY < -6000 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
+		if (posY < -4000 && getEntityWorld().getWorldType().getName() == "PlanetCore") {
 			return true;
 		} else {
 			return false;
@@ -222,10 +222,10 @@ public class EntityCoreDemon extends EntityMob implements IAnimatable {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(16D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(400D);
-		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(5.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(100D);
+		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(30.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(0.3D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(28D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(50D);
 		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
 		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999999, 1));
 		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 999999999, 3));
