@@ -83,6 +83,7 @@ public class RenderHandler
 			});
 			RenderingRegistry.registerEntityRenderingHandler(EntityVeryHotMagmaCube.class, manager -> new RenderVeryHotMagmaCube(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityHotMagmaCube.class, manager -> new RenderHotMagmaCube(manager));
+			RenderingRegistry.registerEntityRenderingHandler(EntityMagmaZombie.class, manager -> new RenderMagmaZombie(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityHotBlaze.class, manager -> new RenderHotBlaze(manager));
 			RenderingRegistry.registerEntityRenderingHandler(EntityCoreBlaze.class, manager -> new RenderCoreBlaze(manager));
