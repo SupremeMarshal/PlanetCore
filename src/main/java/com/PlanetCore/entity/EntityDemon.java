@@ -156,7 +156,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	public boolean getCanSpawnHere() {
 		int dimensionID = this.getEntityWorld().provider.getDimension();
 		String worldType = getEntityWorld().getWorldType().getName();
-		if (dimensionID == 0 && posY < -300 && posY >= -1050 && worldType == "PlanetCore") {
+		if (dimensionID == 0 && posY < -300 && posY >= -4000 && worldType == "PlanetCore") {
 			return true;
 		} else if (dimensionID == -1) {
 			return true;
@@ -190,9 +190,9 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(16D);
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(90D);
-		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(5.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(14D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30D);
+		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(15.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(20D);
 		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
 		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999999, 1));
 		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 999999999, 3));
