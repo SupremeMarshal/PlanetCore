@@ -1,34 +1,20 @@
 package com.PlanetCore.items.armor;
 
 
-import com.PlanetCore.blocks.PlanetHardness;
 import com.PlanetCore.init.ArmorMaterials;
-import com.PlanetCore.init.ModItems;
-import com.PlanetCore.items.Drills.IronDrill;
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import net.minecraftforge.client.event.InputUpdateEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import software.bernie.geckolib3.core.controller.AnimationController;
-import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import javax.annotation.Nullable;
 import java.util.HashMap;
@@ -104,21 +90,6 @@ public class ArmorBase extends ItemArmor {
 
     }
 
-
-
-    @Override
-    public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-        Item head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem();
-        Item chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem();
-        Item legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem();
-        Item boots = player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem();
-
-        List<PotionEffect> effects = ItemSetPieces.getSetBonus(head, chest, legs, boots);
-        for (PotionEffect effect : effects) {
-            player.addPotionEffect(effect);
-        }
-    }
-
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
@@ -137,51 +108,11 @@ public class ArmorBase extends ItemArmor {
 
         }
 
-        /**
-         * tooltip 0 = When equipped:
-         * tooltip 1 = +0 Armor
-         * tooltip 2 = +0 Toughness
-         * tooltip 3 = +0 Max health
-         * tooltip 4 = +0 Knockback resistance
-         * tooltip 5 = When full armor of this tier or above is equipped:
-         * tooltip 6 = +Resistance
-         */
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SILVER) {
-            tooltip.add("§8"+damageReduceAmount);
-            tooltip.add("When equipped:");
-            tooltip.add("§9"+ damageReduceAmount+ " Armor");
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TITANIUM || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_URANIUM
-                || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_RUBY || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE) {
-            tooltip.add("When equipped:");
-            tooltip.add("§9"+ damageReduceAmount+ " Armor");
-            tooltip.add("§9"+ toughness + " Toughness");
-            tooltip.add("§9"+ health + " Health bonus");
-            tooltip.add("§9"+ extraArmor + " Extra Armor bonus");
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_MAJORITE || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_AMAZONITE) {
-            tooltip.add("When equipped:");
-            tooltip.add("§9"+ damageReduceAmount+ " Armor");
-            tooltip.add("§9"+ toughness + " Toughness");
-            tooltip.add("§9"+ health + " Health bonus");
-            tooltip.add("§9"+ extraArmor + " Extra Armor bonus");
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        }
-        if (getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_II || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_III || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_IV || getArmorMaterial() == ArmorMaterials.ARMOR_MATERIAL_ONYX_V) {
-            tooltip.add("When equipped:");
-            tooltip.add("§9"+ damageReduceAmount + " Armor");
-            tooltip.add("§9"+ toughness + " Toughness");
-            tooltip.add("§9"+ health + " Health bonus");
-            tooltip.add("§9"+ extraArmor + " Extra Armor bonus");
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.4"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.5"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.6"));
-            tooltip.add(net.minecraft.client.resources.I18n.format(getTranslationKey() + ".tooltip.7"));
-            tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
-        }
+        tooltip.add("When equipped:");
+        tooltip.add("§9"+ damageReduceAmount + " Armor");
+        tooltip.add("§9"+ toughness + " Toughness");
+        tooltip.add("§9"+ health + " Health bonus");
+        tooltip.add("§9"+ extraArmor + " Extra Armor bonus");
+        tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
     }
 }
