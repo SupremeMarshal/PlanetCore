@@ -44,50 +44,6 @@ public class Rock extends BlockBase implements IMetaName
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		double hardness = 0;
-		double Y = pos.getY();
-		if (Y < 0 && Y >= -1200)
-		{
-			hardness = Y * -0.02916666f + 3;
-		}
-		else if (Y < -1200 && Y >= -2000)
-		{
-			hardness = (Y + 1200) * 0.09 + 39;
-		}
-		else if (Y < -2000 && Y >= -2500)
-		{
-			hardness = (Y + 2000) * 0.072 + 111;
-		}
-		else if (Y < -2500 && Y >= -3000)
-		{
-			hardness = (Y + 2500) * 0.144 + 147;
-		}
-		else if (Y < -3000 && Y >= -4000)
-		{
-			hardness = (Y + 3000) * 0.144 + 219;
-		}
-		else if (Y < -4000 && Y >= -5000)
-		{
-			hardness = (Y + 4000) * 0.18 + 363;
-		}
-		else if (Y < -5000 && Y >= -5500)
-		{
-			hardness = (Y + 5000) * 0.54 + 543;
-		}
-		else if (Y < -5500 && Y >= -6000)
-		{
-			hardness = (Y + 5500) * 0.81 + 813;
-		}
-		else if (Y < -6000)
-		{
-			hardness = (Y + 6000) * 1.636118598 + 1218;
-		}
-		else return 3;
-		return (float) hardness;
-	}
-
-	@Override
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
 	{
 		int meta = getMetaFromState(worldIn.getBlockState(pos));

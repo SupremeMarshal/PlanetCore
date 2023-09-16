@@ -27,15 +27,7 @@ public class SlateOre extends Slate
 		this.planetHardness = planetHardness;
 		this.planetHarvestLevel = planetHarvestLevel;
 		this.planetExp = planetExp;
-	}
-
-	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		if (planetHardness.hardness < this.blockHardness)
-		{
-			return this.blockHardness;
-		}
-		else return planetHardness.hardness;
+		setResistance(100);
 	}
 
 	@Override
