@@ -6,9 +6,13 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
@@ -46,6 +50,70 @@ public class BlockBase extends Block {
 		else if (this == ModBlocks.HOT_BOULDER)
 			return 4;
 		else return super.getLightValue(state, world, pos);
+	}
+
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		double hardness = 0;
+		double Y = pos.getY();
+		if (Y < 0 && Y >= -1200)
+		{
+			hardness = Y * -0.02916666f + 3;
+		}
+		else if (Y < -1200 && Y >= -2000)
+		{
+			hardness = (Y + 1200) * -0.09 + 39;
+		}
+		else if (Y < -2000 && Y >= -2500)
+		{
+			hardness = (Y + 2000) * -0.072 + 111;
+		}
+		else if (Y < -2500 && Y >= -3000)
+		{
+			hardness = (Y + 2500) * -0.144 + 147;
+		}
+		else if (Y < -3000 && Y >= -4000)
+		{
+			hardness = (Y + 3000) * -0.144 + 219;
+		}
+		else if (Y < -4000 && Y >= -5000)
+		{
+			hardness = (Y + 4000) * -0.18 + 363;
+		}
+		else if (Y < -5000 && Y >= -5500)
+		{
+			hardness = (Y + 5000) * -0.54 + 543;
+		}
+		else if (Y < -5500 && Y >= -6000)
+		{
+			hardness = (Y + 5500) * -0.81 + 813;
+		}
+		else if (Y < -6000)
+		{
+			hardness = (Y + 6000) * -1.636118598 + 1218;
+		}
+		else return 3;
+		return (float) hardness;
+	}
+
+	@Override
+	public void onBlockExploded(World world, BlockPos pos, Explosion explosion) {
+		if (!world.isRemote) {
+			Item droppedItem = Item.getItemFromBlock(this);
+			ItemStack itemStackToDrop = new ItemStack(droppedItem, 1);
+
+			double x = pos.getX();
+			double y = pos.getY();
+			double z = pos.getZ();
+
+			EntityItem entityItem = new EntityItem(world, x, y, z, itemStackToDrop);
+			entityItem.setPickupDelay(10); // 10 tick pickup delay
+
+			world.spawnEntity(entityItem);
+		}
+
+		// Remove the block
+		world.setBlockToAir(pos);
 	}
 
 	/**
