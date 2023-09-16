@@ -10,5 +10,6 @@
     "variant=emerald":{"model":"planetcore:hot_garnet_emerald"},
     "variant=titanium":{"model":"planetcore:hot_garnet_titanium"},
     "variant=uranium":{"model":"planetcore:hot_garnet_uranium"},
+    "variant=tungsten":{"model":"planetcore:hot_garnet_tungsten"},
     "variant=ruby":{"model":"planetcore:hot_garnet_ruby"},
     "variant=sapphire":{"model":"planetcore:hot_garnet_sapphire"}}}

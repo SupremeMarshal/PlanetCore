@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BBB",
+        "BAB",
+        "BBB"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:onyx_v_sword"
+        },
+        "B":
+        {
+            "item": "planetcore:core_star"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:onyx_core_sword",
+        "count": 1
+    }
+}

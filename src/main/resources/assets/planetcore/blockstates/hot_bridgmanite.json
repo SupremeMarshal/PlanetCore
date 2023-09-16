@@ -10,6 +10,7 @@
     "variant=emerald":{"model":"planetcore:hot_bridgmanite_emerald"},
     "variant=titanium":{"model":"planetcore:hot_bridgmanite_titanium"},
     "variant=uranium":{"model":"planetcore:hot_bridgmanite_uranium"},
+    "variant=tungsten":{"model":"planetcore:hot_bridgmanite_tungsten"},
     "variant=ruby":{"model":"planetcore:hot_bridgmanite_ruby"},
     "variant=sapphire":{"model":"planetcore:hot_bridgmanite_sapphire"},
     "variant=majorite":{"model":"planetcore:hot_bridgmanite_majorite"}}}

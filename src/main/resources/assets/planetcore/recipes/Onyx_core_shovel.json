@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "BBB",
+        "BAB",
+        "BBB"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "planetcore:onyx_v_shovel"
+        },
+        "B":
+        {
+            "item": "planetcore:core_star"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:onyx_core_shovel",
+        "count": 1
+    }
+}

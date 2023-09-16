@@ -10,6 +10,7 @@
     "variant=emerald":{"model":"planetcore:hot_ferropericlase_emerald"},
     "variant=titanium":{"model":"planetcore:hot_ferropericlase_titanium"},
     "variant=uranium":{"model":"planetcore:hot_ferropericlase_uranium"},
+    "variant=tungsten":{"model":"planetcore:hot_ferropericlase_tungsten"},
     "variant=ruby":{"model":"planetcore:hot_ferropericlase_ruby"},
     "variant=sapphire":{"model":"planetcore:hot_ferropericlase_sapphire"},
     "variant=majorite":{"model":"planetcore:hot_ferropericlase_majorite"},
