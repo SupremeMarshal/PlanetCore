@@ -36,4 +36,6 @@ public class ArmorMaterials {
             new int[]{9, 12, 14, 8}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F).setRepairItem(new ItemStack(ModItems.PAINITE));
     public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ONYX_V = EnumHelper.addArmorMaterial("armor_material_onyx_v", Reference.MOD_ID + ":onyx_v", 100,
             new int[]{10, 13, 15, 9}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F).setRepairItem(new ItemStack(ModItems.PAINITE));
+    public static final ItemArmor.ArmorMaterial ARMOR_MATERIAL_ONYX_CORE = EnumHelper.addArmorMaterial("armor_material_onyx_core", Reference.MOD_ID + ":onyx_core", 200,
+            new int[]{10, 13, 15, 9}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5.0F).setRepairItem(new ItemStack(ModItems.CORE_STAR));
 }
