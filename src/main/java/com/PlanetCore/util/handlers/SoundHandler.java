@@ -34,7 +34,6 @@ public class SoundHandler
     public static SoundEvent MANTLE1_MUSIC;
     public static SoundEvent MANTLE1_1_MUSIC;
     public static SoundEvent MANTLE2_MUSIC;
-    public static SoundEvent MANTLE2_1_MUSIC;
     public static SoundEvent LAVA_AMBIENCE;
     public static void registerSounds(IForgeRegistry<SoundEvent> registry)
     {
@@ -65,7 +64,6 @@ public class SoundHandler
         MANTLE1_MUSIC = registerSound("mantle1_music", registry);
         MANTLE1_1_MUSIC = registerSound("mantle1-1_music", registry);
         MANTLE2_MUSIC = registerSound("mantle2_music", registry);
-        MANTLE2_1_MUSIC = registerSound("mantle2-1_music", registry);
         LAVA_AMBIENCE = registerSound("lava_ambience", registry);
     }
     private static SoundEvent registerSound(String name, IForgeRegistry<SoundEvent> registry)
