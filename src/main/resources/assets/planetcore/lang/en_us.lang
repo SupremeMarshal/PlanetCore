@@ -677,6 +677,7 @@ tile.rock_bridgmanite.name=Bridgmanite
 tile.rock_hot_bridgmanite.name=Hot Bridgmanite
 tile.rock_ferropericlase.name=Ferropericlase
 tile.rock_hot_ferropericlase.name=Hot Ferropericlase
+tile.rock_corestone.name=Corestone
 
 tile.supercompressed_coal.name=Supercompressed Coal
 tile.supercompressed_iron_supercompressed.name=Supercompressed Iron
@@ -914,6 +915,25 @@ tile.hot_ferropericlase_sapphire.name=Hot Ferropericlase Sapphire
 tile.hot_ferropericlase_majorite.name=Hot Ferropericlase Majorite
 tile.hot_ferropericlase_amazonite.name=Hot Ferropericlase Amazonite
 tile.hot_ferropericlase_onyx.name=Hot Ferropericlase Onyx
+
+tile.corestone_coal.name=Corestone Coal
+tile.corestone_iron.name=Corestone Iron
+tile.corestone_sulfur.name=Corestone Sulfur
+tile.corestone_lapis.name=Corestone Lapis
+tile.corestone_redstone.name=Corestone Redstone
+tile.corestone_silver.name=Corestone Silver
+tile.corestone_gold.name=Corestone Gold
+tile.corestone_diamond.name=Corestone Diamond
+tile.corestone_emerald.name=Corestone Emerald
+tile.corestone_titanium.name=Corestone Titanium
+tile.corestone_uranium.name=Corestone Uranium
+tile.corestone_tungsten.name=Corestone Tungsten
+tile.corestone_ruby.name=Corestone Ruby
+tile.corestone_sapphire.name=Corestone Sapphire
+tile.corestone_majorite.name=Corestone Majorite
+tile.corestone_amazonite.name=Corestone Amazonite
+tile.corestone_onyx.name=Corestone Onyx
+tile.corestone_painite.name=Corestone Painite
 
 tile.onyx_gravel.name=Onyx gravel
 tile.amazonite_gravel.name=Amazonite gravel
