@@ -41,6 +41,7 @@ public class ModConfiguration
 	public static int ENTITY_VERY_HOT_MAGMACUBE_ID = 229;
 	public static int ENTITY_ONYX_DEMON_ID = 230;
 	public static int ENTITY_ONYX_FIREBALL_ID = 231;
+	public static int ENTITY_MAGMA_ZOMBIE_ID = 232;
 
 	public static int GUI_CRUSTROCK_FURNACE_ID = 5;
 	public static int GUI_STEEL_FURNACE_ID = 6;
@@ -70,6 +71,7 @@ public class ModConfiguration
 		ENTITY_GHOUL_ID = config.getInt("ENTITY_GHOUL_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_HELLHOUND_ID = config.getInt("ENTITY_HELLHOUND_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_DEATH_ENDERMAN_ID = config.getInt("ENTITY_DEATH_ENDERMAN_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
+		ENTITY_MAGMA_ZOMBIE_ID = config.getInt("ENTITY_MAGMA_ZOMBIE_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_DIAMOND_ARROW_ID = config.getInt("ENTITY_DIAMOND_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_TOPAZ_ARROW_ID = config.getInt("ENTITY_TOPAZ_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
 		ENTITY_JADE_ARROW_ID = config.getInt("ENTITY_JADE_ARROW_ID", category, 201, 201, 999, "Entity IDs below 201 are used by Minecraft");
@@ -89,11 +91,6 @@ public class ModConfiguration
 
 		category = "GUI IDs";
 		config.addCustomCategoryComment(category, "Set the ID's for the GUI's to ensure that they don't clash with other mod's ids");
-		GUI_CRUSTROCK_FURNACE_ID = config.getInt("GUI_CRUSTROCK_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Crustrock Furnace (Non-Electric)");
-		GUI_STEEL_FURNACE_ID = config.getInt("GUI_STEEL_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Steel Furnace (Non-Electric)");
-		GUI_TITANIUM_FURNACE_ID = config.getInt("GUI_TITANIUM_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Titanium Furnace (Non-Electric)");
-		GUI_TUNGSTEN_FURNACE_ID = config.getInt("GUI_TUNGSTEN_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Tungsten Furnace (Non-Electric)");
-		GUI_TUNGSTEN_TITANIUM_FURNACE_ID = config.getInt("GUI_TUNGSTEN_TITANIUM_FURNACE_ID", category, 1, 1, 999, "Set the ID for the Tungsten Titanium Furnace (Non-Electric)");
 		GUI_TUTORIAL_BOOK_ID = config.getInt("GUI_TUTORIAL_BOOK_ID", category, 1, 1, 999, "Set the ID for the Tutorial Book (Non-Electric)");
 	}
 	
