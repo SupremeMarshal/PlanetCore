@@ -1,17 +1,17 @@
 package com.PlanetCore.init;
 
+import com.PlanetCore.items.Drills.IronDrill;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.ItemSpadeX;
-import com.PlanetCore.items.Drills.IronDrill;
-import com.PlanetCore.items.food.SixEffectFoodItem;
-import com.PlanetCore.items.food.ThreeEffectFoodItem;
-import com.PlanetCore.items.tutorialBook.TutorialBook;
 import com.PlanetCore.items.armor.ArmorBase;
 import com.PlanetCore.items.arrows.*;
 import com.PlanetCore.items.bows.*;
+import com.PlanetCore.items.food.FieryMushroomFood;
+import com.PlanetCore.items.food.ThreeEffectFoodItem;
 import com.PlanetCore.items.shields.Shield;
 import com.PlanetCore.items.shields.ShieldMaterial;
+import com.PlanetCore.items.tutorialBook.TutorialBook;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -238,6 +238,15 @@ public class ModItems {
 	public static final Item ONYX_V_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 2, EntityEquipmentSlot.LEGS,5, 88);
 	public static final Item ONYX_V_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 1, EntityEquipmentSlot.FEET,5, 62);
 
+	public static final ItemSword ONYX_CORE_SWORD = new ItemSword(ToolMaterials.ONYX_CORE);
+	public static final ItemSpade ONYX_CORE_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_CORE);
+	public static final ItemPickaxe ONYX_CORE_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_CORE);
+	public static final ItemAxe ONYX_CORE_AXE = new ItemAxeX(ToolMaterials.ONYX_CORE);
+	public static final ItemHoe ONYX_CORE_HOE = new ItemHoe(ToolMaterials.ONYX_CORE);
+	public static final Item ONYX_CORE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_CORE, 1, EntityEquipmentSlot.HEAD,6, 87);
+	public static final Item ONYX_CORE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_CORE, 1, EntityEquipmentSlot.CHEST,6, 145);
+	public static final Item ONYX_CORE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_CORE, 2, EntityEquipmentSlot.LEGS,6, 116);
+	public static final Item ONYX_CORE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_CORE, 1, EntityEquipmentSlot.FEET,6, 82);
 	//GEMS//
 	public static final Item ONYX_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 	public static final Item PAINITE_SHARD = new Item().setCreativeTab(CreativeTabs.MATERIALS);
@@ -327,7 +336,7 @@ public class ModItems {
 			new PotionEffect(MobEffects.REGENERATION, 600, 2, false, false),
 			new PotionEffect(MobEffects.FIRE_RESISTANCE, 36000, 0, false, false));
 
-
+	public static final Item FIERY_MUSHROOM_FOOD = new FieryMushroomFood(1, 1.0f, false).setCreativeTab(CreativeTabs.FOOD);
 
 	//SHIELDS
 	public static final Item IRON_SHIELD = new Shield(ShieldMaterial.IRON, 3, 0.05f);
@@ -346,6 +355,7 @@ public class ModItems {
 	public static final Item ONYX_III_SHIELD = new Shield(ShieldMaterial.ONYXIII, 112, 0.40f);
 	public static final Item ONYX_IV_SHIELD = new Shield(ShieldMaterial.ONYXIV, 150, 0.45f);
 	public static final Item ONYX_V_SHIELD = new Shield(ShieldMaterial.ONYXV, 200, 0.50f);
+	public static final Item ONYX_CORE_SHIELD = new Shield(ShieldMaterial.ONYXV, 300, 0.60f);
 
 	public static List<Item> getItems() {
 		if (ITEMS.isEmpty()) {

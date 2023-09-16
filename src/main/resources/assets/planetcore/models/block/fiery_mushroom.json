@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "planetcore:blocks/fiery_mushroom"
+  }
+}
