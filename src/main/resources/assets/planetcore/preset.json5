@@ -401,6 +401,28 @@
 			"standardOres": [
 				{
 					"blockstate": {
+						"Name": "planetcore:fiery_mushroom"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						 "allOf": [
+				    {"x": 0,"y": 0,"z": 0, "blocks": [{"Name": "minecraft:stone"}, {"Name": "planetcore:slate"}]},
+				    {"x": 0,"y": 1,"z": 0, "blocks": [{"Name": "minecraft:air"}]}]
+					},
+					"generateWhen": {
+							 "allOf": [
+				    {"x": 0,"y": 0,"z": 0, "blocks": [{"Name": "minecraft:stone"}, {"Name": "planetcore:slate"}]},
+				    {"x": 0,"y": 1,"z": 0, "blocks": [{"Name": "minecraft:air"}]}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 6,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
 						"Name": "planetcore:quartz",
 									"Properties": {
 									"variant": "coal"
@@ -3040,6 +3062,28 @@
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+				{
+					"blockstate": {
+						"Name": "planetcore:fiery_mushroom"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						 "allOf": [
+				    {"x": 0,"y": 0,"z": 0, "blocks": [{"Name": "planetcore:slate","Properties": {"variant": "mantle"}}, {"Name": "planetcore:slate"}]},
+				    {"x": 0,"y": 1,"z": 0, "blocks": [{"Name": "minecraft:air"}]}]
+					},
+					"generateWhen": {
+							 "allOf": [
+				    {"x": 0,"y": 0,"z": 0, "blocks": [{"Name": "planetcore:slate","Properties": {"variant": "mantle"}}, {"Name": "planetcore:slate"}]},
+				    {"x": 0,"y": 1,"z": 0, "blocks": [{"Name": "minecraft:air"}]}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 6,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
 				{
 					"blockstate": {
 						"Name": "planetcore:quartz",
@@ -6348,6 +6392,28 @@
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+				{
+					"blockstate": {
+						"Name": "planetcore:fiery_mushroom"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						 "allOf": [
+				    {"x": 0,"y": 0,"z": 0, "blocks": [{"Name": "planetcore:slate","Properties": {"variant": "mantle"}}, {"Name": "planetcore:slate","Properties": {"variant": "hotmantle"}}]},
+				    {"x": 0,"y": 1,"z": 0, "blocks": [{"Name": "minecraft:air"}]}]
+					},
+					"generateWhen": {
+							 "allOf": [
+				    {"x": 0,"y": 0,"z": 0, "blocks": [{"Name": "planetcore:slate","Properties": {"variant": "mantle"}}, {"Name": "planetcore:slate","Properties": {"variant": "hotmantle"}}]},
+				    {"x": 0,"y": 1,"z": 0, "blocks": [{"Name": "minecraft:air"}]}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 6,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
 				{
 					"blockstate": {
 						"Name": "planetcore:blackstone",
@@ -10461,6 +10527,28 @@
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+				{
+					"blockstate": {
+						"Name": "planetcore:fiery_mushroom"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						 "allOf": [
+				    {"x": 0,"y": 0,"z": 0, "blocks": [{"Name": "planetcore:slate","Properties": {"variant": "hotmantle"}}, {"Name": "planetcore:slate","Properties": {"variant": "lowermantle"}}]},
+				    {"x": 0,"y": 1,"z": 0, "blocks": [{"Name": "minecraft:air"}]}]
+					},
+					"generateWhen": {
+							 "allOf": [
+				    {"x": 0,"y": 0,"z": 0, "blocks": [{"Name": "planetcore:slate","Properties": {"variant": "hotmantle"}}, {"Name": "planetcore:slate","Properties": {"variant": "lowermantle"}}]},
+				    {"x": 0,"y": 1,"z": 0, "blocks": [{"Name": "minecraft:air"}]}
+						]
+					},
+					"spawnSize": 12,
+					"spawnTries": 6,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
 				{
 					"blockstate": {
 						"Name": "planetcore:peridotite",
