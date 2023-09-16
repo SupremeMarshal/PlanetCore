@@ -83,17 +83,17 @@ public class EntityHellHound extends EntityMob
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.35D);
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(50D);
-		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(1.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(5D);
+		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.45D);
+		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30D);
+		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(10.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(12D);
 	}
 
 	@Override
 	public boolean getCanSpawnHere() {
 		int dimensionID = this.getEntityWorld().provider.getDimension();
 		String worldType = getEntityWorld().getWorldType().getName();
-		if (dimensionID == 0 && posY < -300 && posY >= -1050 && worldType == "PlanetCore") {
+		if (dimensionID == 0 && posY < -100 && posY >= -1000 && worldType == "PlanetCore") {
 			return true;
 		} else if (dimensionID == -1) {
 			return true;
