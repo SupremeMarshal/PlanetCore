@@ -34,6 +34,7 @@ public class EntityInit
 		registerEntity("core_blaze", EntityCoreBlaze.class, ModConfiguration.ENTITY_CORE_BLASE_ID, 50, 999999, 999999);
 		registerEntity("hot_magmacube", EntityHotMagmaCube.class, ModConfiguration.ENTITY_HOT_MAGMACUBE_ID, 50, 11437146, 000000);
 		registerEntity("very_hot_magmacube", EntityVeryHotMagmaCube.class, ModConfiguration.ENTITY_VERY_HOT_MAGMACUBE_ID, 50, 11437146, 000000);
+		registerEntity("magma_zombie", EntityMagmaZombie.class, ModConfiguration.ENTITY_MAGMA_ZOMBIE_ID, 50, 11437146, 000000);
 		registerArrow("diamond_arrow", EntityDiamondArrow.class, ModConfiguration.ENTITY_DIAMOND_ARROW_ID);
 		registerArrow("ruby_arrow", EntityRubyArrow.class, ModConfiguration.ENTITY_RUBY_ARROW_ID);
 		registerArrow("sapphire_arrow", EntitySapphireArrow.class, ModConfiguration.ENTITY_SAPPHIRE_ARROW_ID);
@@ -62,6 +63,7 @@ public class EntityInit
 		EntityRegistry.addSpawn(EntityCoreBlaze.class, 4, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityHotMagmaCube.class, 10, 2, 4, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityVeryHotMagmaCube.class, 10, 2, 4, EnumCreatureType.MONSTER, spawnBiomes);
+		EntityRegistry.addSpawn(EntityMagmaZombie.class, 20, 2, 8, EnumCreatureType.MONSTER, spawnBiomes);
 	}
 
 	private static void registerArrow(String name, Class<? extends Entity> entity, int id)
