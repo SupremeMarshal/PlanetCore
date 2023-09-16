@@ -422,6 +422,65 @@
 					"maxHeight": Infinity
 				},
 				{
+					"blockstate": "planetcore:diamond_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "deep"
+								},
+								"Name": "planetcore:slate"
+							},
+							{
+								"Properties": {
+									"variant": "quartz"
+								},
+								"Name": "planetcore:rock"
+							},
+							{
+								"Properties": {
+									"variant": "granite"
+								},
+								"Name": "planetcore:rock"
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Properties": {
+									"variant": "deep"
+								},
+								"Name": "planetcore:slate"
+							},
+							{
+								"Properties": {
+									"variant": "quartz"
+								},
+								"Name": "planetcore:rock"
+							},
+							{
+								"Properties": {
+									"variant": "granite"
+								},
+								"Name": "planetcore:rock"
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
 					"blockstate": {
 						"Name": "planetcore:quartz",
 									"Properties": {
@@ -3062,6 +3121,7 @@
 			"biomeSize": 4,
 			"riverSize": 4,
 			"standardOres": [
+
 				{
 					"blockstate": {
 						"Name": "planetcore:fiery_mushroom"
@@ -3081,6 +3141,151 @@
 					"spawnSize": 12,
 					"spawnTries": 6,
 					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:diamond_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "quartz"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "granite"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "deep"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "mantle"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "quartz"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "granite"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "deep"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "mantle"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:iron_lava"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "quartz"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "granite"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "deep"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "mantle"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "quartz"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "granite"
+								}
+							}
+							,
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "deep"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "mantle"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.3,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -6411,6 +6616,153 @@
 					"spawnSize": 12,
 					"spawnTries": 6,
 					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:diamond_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "blackstone"
+								}
+							}
+							,
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "blackstone"
+								}
+							}
+							,
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:iron_lava"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "blackstone"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "blackstone"
+								}
+							}
+							,
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.4,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
@@ -10550,6 +10902,221 @@
 					"maxHeight": Infinity
 				},
 				{
+					"blockstate": "planetcore:diamond_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "garnet"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "garnet"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:ruby_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "garnet"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "garnet"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:iron_lava"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "garnet"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "garnet"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "hot_mantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
 					"blockstate": {
 						"Name": "planetcore:peridotite",
 									"Properties": {
@@ -10567,12 +11134,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -10586,7 +11147,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 2,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "coal"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -10619,12 +11214,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -10638,7 +11227,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 3,
+					"spawnTries": 6,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "emerald"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -10671,12 +11294,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -10690,7 +11307,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 8,
+					"spawnTries": 4,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "redstone"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -10772,12 +11423,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -10791,7 +11436,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.125,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "lapis"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -10873,12 +11552,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -10892,7 +11565,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "sulfur"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -10974,12 +11681,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -10993,7 +11694,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 18,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "iron"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11075,12 +11810,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -11094,7 +11823,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "silver"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11176,12 +11939,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -11195,7 +11952,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 8,
+					"spawnTries": 2,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "gold"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11277,12 +12068,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -11296,7 +12081,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "diamond"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11329,12 +12148,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -11348,7 +12161,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "titanium"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11381,12 +12228,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -11400,7 +12241,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "uranium"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11433,12 +12308,6 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_peridotite"
-								}
 							}
 						]
 					},
@@ -11452,7 +12321,41 @@
 									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "tungsten"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11521,9 +12424,9 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:peridotite",
+						"Name": "planetcore:hot_peridotite",
 									"Properties": {
-									"variant": "sapphire"
+									"variant": "ruby"
 								}
 					},
 					"biomes": null,
@@ -11532,12 +12435,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "peridotite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11554,9 +12451,83 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:peridotite",
+									"Properties": {
+									"variant": "sapphire"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
 									"variant": "peridotite"
 								}
-							},
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "peridotite"
+								}
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": -6
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_peridotite",
+									"Properties": {
+									"variant": "sapphire"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_peridotite"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11589,12 +12560,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -11608,7 +12573,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 2,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "coal"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11641,12 +12640,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -11660,7 +12653,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 3,
+					"spawnTries": 6,
+					"spawnProbability": 0.75,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "emerald"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11693,12 +12720,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -11712,7 +12733,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 8,
+					"spawnTries": 4,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "redstone"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11794,12 +12849,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -11813,7 +12862,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 7,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "lapis"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11895,12 +12978,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -11914,7 +12991,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "sulfur"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -11996,12 +13107,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12015,7 +13120,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "iron"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -12097,12 +13236,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12116,7 +13249,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "silver"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -12198,12 +13365,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12217,7 +13378,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 8,
+					"spawnTries": 1,
+					"spawnProbability": 0.5,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "gold"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -12299,12 +13494,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12318,7 +13507,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "diamond"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -12400,12 +13623,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12419,7 +13636,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "titanium"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -12501,12 +13752,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12520,7 +13765,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "uranium"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -12602,12 +13881,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12621,7 +13894,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "tungsten"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -12703,12 +14010,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12722,7 +14023,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "ruby"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -12755,12 +14090,6 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_garnet"
-								}
 							}
 						]
 					},
@@ -12774,7 +14103,41 @@
 									"Properties": {
 									"variant": "garnet"
 								}
-							},
+							}
+						]
+					},
+					"spawnSize": 9,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": -6
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_garnet",
+									"Properties": {
+									"variant": "sapphire"
+								}
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "hot_garnet"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -15876,12 +17239,7 @@
 			"riverSize": 4,
 			"standardOres": [
 				{
-					"blockstate": {
-						"Name": "planetcore:magma",
-									"Properties": {
-									"variant": "onyx"
-								}
-					},
+					"blockstate": "planetcore:diamond_gravel",
 					"biomes": null,
 					"placeBlockWhen": {
 						"x": 0.0,
@@ -15891,13 +17249,25 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "onyxslate"
+									"variant": "bridgmanite"
 								}
 							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "hot_onyxslate"
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
 								}
 							}
 						]
@@ -15910,26 +17280,539 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "onyxslate"
+									"variant": "bridgmanite"
 								}
 							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "hot_onyxslate"
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
 								}
 							}
 						]
 					},
-					"spawnSize": 33,
-					"spawnTries": 4,
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:ruby_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:sapphire_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:majorite_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": 4
+				},
+				{
+					"blockstate": "planetcore:amazonite_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": 0
+				},
+				{
+					"blockstate": "planetcore:onyx_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": -4
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:iron_lava"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 22,
+					"spawnTries": 1,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:superheated_lava"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "bridgmanite"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "coal"
 								}
@@ -15943,12 +17826,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -15959,12 +17836,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -15981,7 +17852,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "emerald"
 								}
@@ -15995,12 +17866,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16011,12 +17876,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16033,7 +17892,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "redstone"
 								}
@@ -16047,12 +17906,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16063,12 +17916,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16096,12 +17943,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16112,12 +17953,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16134,7 +17969,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "lapis"
 								}
@@ -16148,12 +17983,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16164,12 +17993,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16197,12 +18020,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16213,12 +18030,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16235,7 +18046,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "sulfur"
 								}
@@ -16249,12 +18060,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16265,12 +18070,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16298,12 +18097,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16314,12 +18107,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16336,7 +18123,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "iron"
 								}
@@ -16350,12 +18137,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16366,12 +18147,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16399,12 +18174,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16415,12 +18184,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16437,7 +18200,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "silver"
 								}
@@ -16451,12 +18214,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16467,12 +18224,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16500,12 +18251,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16516,12 +18261,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16538,7 +18277,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "gold"
 								}
@@ -16552,12 +18291,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16568,12 +18301,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16601,12 +18328,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16617,12 +18338,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16639,7 +18354,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "diamond"
 								}
@@ -16653,12 +18368,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16669,12 +18378,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16691,7 +18394,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "titanium"
 								}
@@ -16705,12 +18408,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16721,12 +18418,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16743,7 +18434,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "uranium"
 								}
@@ -16757,12 +18448,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16773,12 +18458,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16795,7 +18474,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "tungsten"
 								}
@@ -16809,12 +18488,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16825,12 +18498,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16847,7 +18514,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "ruby"
 								}
@@ -16861,12 +18528,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16877,12 +18538,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16899,7 +18554,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "sapphire"
 								}
@@ -16913,12 +18568,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16929,12 +18578,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -16951,7 +18594,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:bridgmanite",
+						"Name": "planetcore:hot_bridgmanite",
 									"Properties": {
 									"variant": "majorite"
 								}
@@ -16965,12 +18608,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_bridgmanite"
 								}
 							}
@@ -16981,12 +18618,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "bridgmanite"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17003,7 +18634,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "coal"
 								}
@@ -17017,18 +18648,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17039,18 +18658,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17067,7 +18674,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "emerald"
 								}
@@ -17081,18 +18688,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17103,18 +18698,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17131,7 +18714,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "redstone"
 								}
@@ -17145,18 +18728,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17167,18 +18738,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17206,18 +18765,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17228,18 +18775,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17256,7 +18791,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "lapis"
 								}
@@ -17270,18 +18805,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17292,18 +18815,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17331,18 +18842,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17353,18 +18852,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17381,7 +18868,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "sulfur"
 								}
@@ -17395,18 +18882,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17417,18 +18892,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17456,18 +18919,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17478,18 +18929,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17506,7 +18945,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "iron"
 								}
@@ -17520,18 +18959,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17542,18 +18969,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17581,18 +18996,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17603,18 +19006,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17631,7 +19022,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "silver"
 								}
@@ -17645,18 +19036,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17667,18 +19046,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17706,18 +19073,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17728,18 +19083,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17756,7 +19099,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "gold"
 								}
@@ -17770,18 +19113,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17792,18 +19123,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17831,18 +19150,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17853,18 +19160,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17881,7 +19176,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "diamond"
 								}
@@ -17895,18 +19190,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17917,18 +19200,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -17945,7 +19216,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "titanium"
 								}
@@ -17959,18 +19230,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -17981,18 +19240,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -18009,7 +19256,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "uranium"
 								}
@@ -18023,18 +19270,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -18045,18 +19280,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -18073,7 +19296,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "tungsten"
 								}
@@ -18087,18 +19310,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -18109,18 +19320,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -18137,7 +19336,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "ruby"
 								}
@@ -18151,18 +19350,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -18173,18 +19360,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -18201,7 +19376,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "sapphire"
 								}
@@ -18215,18 +19390,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -18237,18 +19400,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -18265,7 +19416,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "majorite"
 								}
@@ -18279,18 +19430,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -18301,18 +19440,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -18329,7 +19456,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "amazonite"
 								}
@@ -18343,18 +19470,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -18365,18 +19480,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -18393,7 +19496,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "onyx"
 								}
@@ -18407,12 +19510,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -18423,18 +19520,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -21589,8 +22674,580 @@
 			"riverSize": 4,
 			"standardOres": [
 				{
+					"blockstate": "planetcore:diamond_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.1,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:ruby_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:sapphire_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:majorite_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:amazonite_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": "planetcore:onyx_gravel",
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.05,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:iron_lava"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "innercore"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 22,
+					"spawnTries": 1,
+					"spawnProbability": 1.0,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:superheated_lava"
+					},
+					"biomes": null,
+					"placeBlockWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"generateWhen": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0,
+						"blocks": [
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "corestone"
+								}
+							},
+							{
+								"Name": "planetcore:rock",
+									"Properties": {
+									"variant": "ferropericlase"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "lowermantle"
+								}
+							},
+							{
+								"Name": "planetcore:slate",
+									"Properties": {
+									"variant": "outercore"
+								}
+							}
+						]
+					},
+					"spawnSize": 17,
+					"spawnTries": 1,
+					"spawnProbability": 0.25,
+					"minHeight": -Infinity,
+					"maxHeight": Infinity
+				},
+				{
+					"blockstate": {
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "coal"
 								}
@@ -21604,18 +23261,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -21626,18 +23271,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -21654,7 +23287,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "emerald"
 								}
@@ -21668,18 +23301,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -21690,18 +23311,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -21718,7 +23327,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "redstone"
 								}
@@ -21732,18 +23341,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -21754,18 +23351,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -21793,18 +23378,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -21815,18 +23388,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -21843,7 +23404,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "lapis"
 								}
@@ -21857,18 +23418,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -21879,18 +23428,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -21918,18 +23455,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -21940,18 +23465,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -21968,7 +23481,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "sulfur"
 								}
@@ -21982,18 +23495,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22004,18 +23505,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22043,18 +23532,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22065,18 +23542,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22093,7 +23558,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "iron"
 								}
@@ -22107,18 +23572,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22129,18 +23582,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22168,18 +23609,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22190,18 +23619,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22218,7 +23635,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "silver"
 								}
@@ -22232,18 +23649,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22254,18 +23659,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22293,18 +23686,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22315,18 +23696,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22343,7 +23712,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "gold"
 								}
@@ -22357,18 +23726,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22379,18 +23736,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22418,18 +23763,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22440,18 +23773,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22468,7 +23789,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "diamond"
 								}
@@ -22482,18 +23803,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22504,18 +23813,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22532,7 +23829,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "titanium"
 								}
@@ -22546,18 +23843,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22568,18 +23853,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22596,7 +23869,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "uranium"
 								}
@@ -22610,18 +23883,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22632,18 +23893,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22660,7 +23909,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "tungsten"
 								}
@@ -22674,18 +23923,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22696,18 +23933,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22724,7 +23949,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "ruby"
 								}
@@ -22738,18 +23963,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22760,18 +23973,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22788,7 +23989,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "sapphire"
 								}
@@ -22802,18 +24003,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22824,18 +24013,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22852,7 +24029,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "majorite"
 								}
@@ -22866,18 +24043,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22888,18 +24053,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22916,7 +24069,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "amazonite"
 								}
@@ -22930,18 +24083,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -22952,18 +24093,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -22980,7 +24109,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ferropericlase",
+						"Name": "planetcore:hot_ferropericlase",
 									"Properties": {
 									"variant": "onyx"
 								}
@@ -22994,18 +24123,6 @@
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
 									"variant": "hot_ferropericlase"
 								}
 							}
@@ -23016,18 +24133,6 @@
 						"y": 0.0,
 						"z": 0.0,
 						"blocks": [
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "ferropericlase"
-								}
-							},
-							{
-								"Name": "planetcore:rock",
-									"Properties": {
-									"variant": "hot_ferropericlase"
-								}
-							},
 							{
 								"Name": "planetcore:rock",
 									"Properties": {
@@ -23619,7 +24724,7 @@
 						]
 					},
 					"spawnSize": 9,
-					"spawnTries": 1,
+					"spawnTries": 2,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -26635,7 +27740,7 @@
 					"spawnTries": 1,
 					"spawnProbability": 0.0625,
 					"minHeight": -Infinity,
-					"maxHeight": 18
+					"maxHeight": -18
 				}
 			],
 			"periodicGaussianOres": [
