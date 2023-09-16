@@ -1,10 +1,8 @@
 package com.PlanetCore.init;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.PotionTypes;
-import net.minecraft.item.Item;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
@@ -47,6 +45,8 @@ public class ModPotions {
         ForgeRegistries.POTION_TYPES.register(LONG_HASTE_POTION);
         ForgeRegistries.POTION_TYPES.register(HASTE_II_POTION);
         ForgeRegistries.POTION_TYPES.register(LONG_HASTE_II_POTION);
+
+        PotionHelper.addMix(PotionTypes.WATER, ModItems.FIERY_MUSHROOM_FOOD , PotionTypes.AWKWARD);
 
         PotionHelper.addMix(PotionTypes.LONG_FIRE_RESISTANCE, ModItems.DEMON_STAR, VERY_LONG_FIRE_RESISTANCE_POTION);
         // short n -> short n+1
