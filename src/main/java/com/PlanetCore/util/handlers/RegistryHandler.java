@@ -69,20 +69,7 @@ public class RegistryHandler {
         ModBlocks.register(event.getRegistry());
     }
 
-    @SubscribeEvent
-    public static void onModelRegister(ModelRegistryEvent event) {
 
-        ForgeRegistries.ITEMS.getValues().stream()
-                .filter(item -> MOD_ID.equals(item.getRegistryName().getNamespace())).forEach(item -> {
-                    if (!item.getHasSubtypes()) {
-                        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-                    }
-                });
-
-        RenderHandler.registerEntityRenders();
-        RenderHandler.registerCustomMeshesAndStates();
-        ModBlocks.registerRenders();
-    }
 
     public static void preInitRegistries(FMLPreInitializationEvent event) {
 
@@ -115,34 +102,6 @@ public class RegistryHandler {
     public static void initRegistries(FMLInitializationEvent event) {
         MinecraftForge.EVENT_BUS.register(new GravityHandler());
         MinecraftForge.EVENT_BUS.register(new scoreEvent());
-        MusicHandler customMusicTicker = new MusicHandler(Minecraft.getMinecraft());
-        try {
-            // Use reflection to get the Minecraft class type
-            Class mcClass = Minecraft.getMinecraft().getClass();
-
-            // Locate the field for the MusicTicker
-            Field musicTickerField = null;
-            for (Field field : mcClass.getDeclaredFields()) {
-                if (field.getType().equals(MusicTicker.class)) {
-                    musicTickerField = field;
-                    break;
-                }
-            }
-
-            // Make it accessible (it's likely a private field)
-            if (musicTickerField != null) {
-                musicTickerField.setAccessible(true);
-
-                // Replace the MusicTicker instance
-                musicTickerField.set(Minecraft.getMinecraft(), customMusicTicker);
-            } else {
-                // Log an error if the field is not found (this should not happen)
-                // Replace this with your mod's logging system
-                System.out.println("Error: Could not find the MusicTicker field.");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 
     public static void posInitRegistries(FMLPostInitializationEvent event) {

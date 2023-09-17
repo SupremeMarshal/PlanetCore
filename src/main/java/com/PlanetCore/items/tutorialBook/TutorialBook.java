@@ -1,6 +1,6 @@
 package com.PlanetCore.items.tutorialBook;
 
-import net.minecraft.client.Minecraft;
+import com.PlanetCore.util.handlers.ClientHandler;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -30,7 +30,7 @@ public class TutorialBook extends Item {
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         if (worldIn.isRemote) {
             // Open the tutorial book GUI on the client side
-            Minecraft.getMinecraft().displayGuiScreen(new GuiTutorialBook());
+            ClientHandler.openBook();
         }
         return new ActionResult<>(EnumActionResult.SUCCESS, playerIn.getHeldItem(handIn));
     }
