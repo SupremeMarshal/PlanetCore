@@ -1,7 +1,7 @@
 package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.items.tutorialBook.ContainerTutorialBook;
-import com.PlanetCore.items.tutorialBook.GuiTutorialBook;
+import com.PlanetCore.client.GuiTutorialBook;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;

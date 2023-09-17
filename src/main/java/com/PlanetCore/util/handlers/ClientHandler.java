@@ -1,5 +1,8 @@
 package com.PlanetCore.util.handlers;
 
+import com.PlanetCore.blocks.Powered_ladders.IronLadderBlock;
+import com.PlanetCore.client.GuiTutorialBook;
+import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.items.Drills.IronDrill;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.armor.ArmorBase;
@@ -8,7 +11,10 @@ import com.PlanetCore.util.Reference;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
+import net.minecraft.client.audio.MusicTicker;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.Gui;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -17,16 +23,25 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.client.event.InputUpdateEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.RenderBlockOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.sound.PlaySoundEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.util.GeckoLibUtil;
+
+import java.lang.reflect.Field;
+
+import static com.PlanetCore.util.Reference.MOD_ID;
 
 @Mod.EventBusSubscriber(Side.CLIENT)
 public class ClientHandler {
@@ -45,8 +60,7 @@ public class ClientHandler {
                 String toolClass = blockState.getBlock().getHarvestTool(blockState);
                 int tierLevel = toolItem.getHarvestLevel(stack, toolClass, player, blockState);
 
-                if (stack.getItem() instanceof ItemPickaxeX)
-                {
+                if (stack.getItem() instanceof ItemPickaxeX) {
                     event.getToolTip().add("Tier level: §9" + tierLevel);
                 }
                 event.getToolTip().add("Efficiency: §9" + efficiency);
@@ -85,10 +99,10 @@ public class ClientHandler {
                     shieldArmor = ((Shield) shield.getItem()).extraArmor;
 
                 // Calculate the total extra armor value
-                float totalExtraArmor = ( helmetArmor + chestArmor + legsArmor + bootsArmor + shieldArmor );
+                float totalExtraArmor = (helmetArmor + chestArmor + legsArmor + bootsArmor + shieldArmor);
 
                 float modifiedDamage = (float) (((armor + toughness + totalExtraArmor) * 0.03) / (float) (1 + 0.03 * (armor + toughness + totalExtraArmor)));
-                event.getToolTip().add("§9"+ String.format("%.2f", modifiedDamage * 100) + "%");
+                event.getToolTip().add("§9" + String.format("%.2f", modifiedDamage * 100) + "%");
             }
         }
     }
@@ -208,5 +222,99 @@ public class ClientHandler {
                 }
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onModelRegister(ModelRegistryEvent event) {
+
+        ForgeRegistries.ITEMS.getValues().stream()
+                .filter(item -> MOD_ID.equals(item.getRegistryName().getNamespace())).forEach(item -> {
+                    if (!item.getHasSubtypes()) {
+                        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+                    }
+                });
+
+        RenderHandler.registerEntityRenders();
+        RenderHandler.registerCustomMeshesAndStates();
+        ModBlocks.registerRenders();
+
+
+        MusicHandler customMusicTicker = new MusicHandler(Minecraft.getMinecraft());
+        try {
+            // Use reflection to get the Minecraft class type
+
+            // Locate the field for the MusicTicker
+            Field musicTickerField = null;
+            for (Field field : Minecraft.class.getDeclaredFields()) {
+                if (field.getType().equals(MusicTicker.class)) {
+                    musicTickerField = field;
+                    break;
+                }
+            }
+
+            // Make it accessible (it's likely a private field)
+            if (musicTickerField != null) {
+                musicTickerField.setAccessible(true);
+
+                // Replace the MusicTicker instance
+                musicTickerField.set(Minecraft.getMinecraft(), customMusicTicker);
+            } else {
+                // Log an error if the field is not found (this should not happen)
+                // Replace this with your mod's logging system
+                System.out.println("Error: Could not find the MusicTicker field.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
+    private static boolean wasOnElevator = false;
+    private static long lastElevatorTime = 0L;
+
+    @SubscribeEvent
+    public static void onPlayerTick(TickEvent.ClientTickEvent event) {
+        if (event.phase == TickEvent.Phase.END) {
+            EntityPlayerSP player = Minecraft.getMinecraft().player;
+            if (player == null) return;
+            boolean isPowered = false;
+            boolean isOnElevator = player.world.getBlockState(new BlockPos(player.posX, player.posY, player.posZ)).getBlock() instanceof IronLadderBlock;
+            IBlockState state = player.world.getBlockState(new BlockPos(player.posX, player.posY, player.posZ));
+            if (state.getBlock() instanceof IronLadderBlock) {
+                isPowered = state.getValue(IronLadderBlock.POWERED);
+            }
+            double elevatorSpeed = 0.2;
+            if (isPowered) {
+                elevatorSpeed = 1;
+            }
+            if (isOnElevator) {
+                wasOnElevator = true;
+                lastElevatorTime = System.currentTimeMillis();
+                // If the player is looking downwards and pressing the "down" key
+                if (player.movementInput.sneak) {
+                    player.motionY = 0;
+                } else if (player.rotationPitch > 45.0F || player.movementInput.backKeyDown) {
+                    player.motionY = -elevatorSpeed;
+                }
+                // If the player is looking upwards and pressing the "up" key
+                else if (player.rotationPitch < -45.0F && (player.movementInput.forwardKeyDown || player.movementInput.jump)) {
+                    player.motionY = elevatorSpeed;
+                }
+                // If the player is on the ladder but not trying to go up or down
+                else {
+                    player.motionY = -elevatorSpeed;
+                }
+            } else {
+                if (wasOnElevator && System.currentTimeMillis() - lastElevatorTime < 1000) { // 1000 ms = 1 second
+                    player.motionY = 0;
+                    wasOnElevator = false;
+                }
+            }
+        }
+    }
+
+    public static void openBook() {
+        Minecraft.getMinecraft().displayGuiScreen(new GuiTutorialBook());
     }
 }

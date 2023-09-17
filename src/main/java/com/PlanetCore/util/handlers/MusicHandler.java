@@ -1,4 +1,5 @@
 package com.PlanetCore.util.handlers;
+
 import com.PlanetCore.util.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
@@ -8,15 +9,13 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Arrays;
 import java.util.Random;
 
 import static com.PlanetCore.util.handlers.SoundHandler.*;
 
-@SideOnly(Side.CLIENT)
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
+@Mod.EventBusSubscriber(modid = Reference.MOD_ID,value = Side.CLIENT)
 public class MusicHandler extends MusicTicker {
 
     private static int randomIndex;
