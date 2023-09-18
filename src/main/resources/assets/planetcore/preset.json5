@@ -202,7 +202,7 @@
 			"placeBlockWhen": null,
 			"generateWhen": null,
 			"spawnSize": 9,
-			"spawnTries": 2,
+			"spawnTries": 4,
 			"spawnProbability": 1.0,
 			"minHeight": -Infinity,
 			"maxHeight": 0
@@ -826,7 +826,7 @@
 						]
 					},
 					"spawnSize": 18,
-					"spawnTries": 1,
+					"spawnTries": 2,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -1408,7 +1408,7 @@
 						]
 					},
 					"spawnSize": 18,
-					"spawnTries": 1,
+					"spawnTries": 2,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -1938,7 +1938,7 @@
 					"placeBlockWhen": null,
 					"generateWhen": null,
 					"spawnSize": 9,
-					"spawnTries": 3,
+					"spawnTries": 4,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
