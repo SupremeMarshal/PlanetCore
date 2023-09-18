@@ -237,8 +237,9 @@ public class ClientHandler {
         RenderHandler.registerEntityRenders();
         RenderHandler.registerCustomMeshesAndStates();
         ModBlocks.registerRenders();
+    }
 
-
+    public static void hijackMusicTicker() {
         MusicHandler customMusicTicker = new MusicHandler(Minecraft.getMinecraft());
         try {
             // Use reflection to get the Minecraft class type
@@ -266,9 +267,7 @@ public class ClientHandler {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
 
     private static boolean wasOnElevator = false;
     private static long lastElevatorTime = 0L;
