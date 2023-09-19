@@ -1,21 +1,17 @@
 package com.PlanetCore.util.handlers;
 
-import com.PlanetCore.util.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
 import net.minecraft.client.audio.MusicTicker;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.relauncher.Side;
 
 import java.util.Arrays;
 import java.util.Random;
 
 import static com.PlanetCore.util.handlers.SoundHandler.*;
 
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID,value = Side.CLIENT)
 public class MusicHandler extends MusicTicker {
 
     private static int randomIndex;
