@@ -101,7 +101,16 @@ public class ClientHandler {
                 // Calculate the total extra armor value
                 float totalExtraArmor = (helmetArmor + chestArmor + legsArmor + bootsArmor + shieldArmor);
 
-                float modifiedDamage = (float) (((armor + toughness + totalExtraArmor) * 0.03) / (float) (1 + 0.03 * (armor + toughness + totalExtraArmor)));
+                float totalArmor = armor + toughness + totalExtraArmor;
+                // Check for Resistance effect
+                PotionEffect resistanceEffect = player.getActivePotionEffect(MobEffects.RESISTANCE);
+                if (resistanceEffect != null) {
+                    int amplifier = resistanceEffect.getAmplifier();
+                    totalArmor += totalArmor * ((amplifier + 1) * 0.2); // 10% more armor for each level of Resistance
+                }
+                // Modify damage reduction calculation here
+                //damage_done * 1 - (((armor)*0.06)/(1+0.06*(armor))
+                float modifiedDamage = (float) (((totalArmor) * 0.03) / (float) (1 + 0.03 * (totalArmor)));
                 event.getToolTip().add("§9" + String.format("%.2f", modifiedDamage * 100) + "%");
             }
         }

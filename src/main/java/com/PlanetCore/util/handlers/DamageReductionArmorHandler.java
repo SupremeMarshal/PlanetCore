@@ -4,8 +4,10 @@ import com.PlanetCore.items.armor.ArmorBase;
 import com.PlanetCore.items.shields.Shield;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -46,10 +48,17 @@ public class DamageReductionArmorHandler {
         // Calculate the total extra armor value
         float totalExtraArmor = (helmetArmor + chestArmor + legsArmor + bootsArmor + shieldArmor);
 
+        float totalArmor = armor + toughness + totalExtraArmor;
+        // Check for Resistance effect
+        PotionEffect resistanceEffect = entity.getActivePotionEffect(MobEffects.RESISTANCE);
+        if (resistanceEffect != null) {
+            int amplifier = resistanceEffect.getAmplifier();
+            totalArmor += totalArmor * ((amplifier + 1) * 0.2); // 10% more armor for each level of Resistance
+        }
         // Modify damage reduction calculation here
         //damage_done * 1 - (((armor)*0.06)/(1+0.06*(armor))
         float damage = event.getAmount();
-        float modifiedDamage = event.getAmount() * (float) (1 - (((armor + toughness + totalExtraArmor) * 0.03) / (float) (1 + 0.03 * (armor + toughness + totalExtraArmor)))); // Example modification
+        float modifiedDamage = event.getAmount() * (float) (1 - (((totalArmor) * 0.03) / (float) (1 + 0.03 * (totalArmor))));
         if (modifiedDamage < 1) {
             event.getEntityLiving().hurtTime = -1; // Disable hurt animation
         }
