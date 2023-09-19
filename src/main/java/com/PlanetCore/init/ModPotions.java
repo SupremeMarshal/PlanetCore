@@ -46,7 +46,7 @@ public class ModPotions {
         ForgeRegistries.POTION_TYPES.register(HASTE_II_POTION);
         ForgeRegistries.POTION_TYPES.register(LONG_HASTE_II_POTION);
 
-        PotionHelper.addMix(PotionTypes.WATER, ModItems.FIERY_MUSHROOM_FOOD , PotionTypes.AWKWARD);
+        PotionHelper.addMix(PotionTypes.WATER, ModItems.FIERY_MUSHROOM_FOOD , PotionTypes.FIRE_RESISTANCE);
 
         PotionHelper.addMix(PotionTypes.LONG_FIRE_RESISTANCE, ModItems.DEMON_STAR, VERY_LONG_FIRE_RESISTANCE_POTION);
         // short n -> short n+1
