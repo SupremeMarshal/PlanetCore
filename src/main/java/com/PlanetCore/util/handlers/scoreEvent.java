@@ -1,5 +1,7 @@
 package com.PlanetCore.util.handlers;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -18,12 +20,28 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
-import java.util.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class scoreEvent {
 
-    private HashMap<String, Integer> offlinePlayerScores = new HashMap<>();
+    private HashMap<String, Integer> offlinePlayerScores;
+    File saveFileDirectory = new File(FMLCommonHandler.instance().getSavesDirectory(), "planetcore");
+    File saveFile = new File(saveFileDirectory, "scoreboard.json");
+    private final Gson gson = new Gson();
+
+    public scoreEvent() {
+        // Initialize or load saved scores
+        loadScores();
+    }
+
     @SubscribeEvent
     public void onBlockBreak(BlockEvent.BreakEvent event) {
         if (event.getState().getBlock() instanceof Block) {
@@ -31,8 +49,8 @@ public class scoreEvent {
             EntityPlayer player = event.getPlayer();
             ItemStack heldItem = player.getHeldItemMainhand();
             IBlockState blockState = event.getState();
-            if (EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, heldItem) > 0) {
-                // Player has Silk Touch, don't award points
+            if (EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, heldItem) > 0 || player.isCreative()) {
+                // Player has Silk Touch or is in creative don't award points
                 return;
             }
             Scoreboard scoreboard = player.getWorldScoreboard();
@@ -123,16 +141,12 @@ public class scoreEvent {
             Score score = scoreboard.getOrCreateScore(playerName, objective);
             offlinePlayerScores.put(playerName, score.getScorePoints());
         }
+
+        // Save to disk
+        saveScores();
+
         removePlayerFromScores(scoreboard, playerName);
     }
-
-    @SubscribeEvent
-    public void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
-        EntityPlayer player = event.player;
-        Scoreboard scoreboard = player.getWorldScoreboard();
-        addPlayerToScore(scoreboard, player.getName(), "planetcore_score");
-    }
-
 
     public void removePlayerFromScores(Scoreboard scoreboard, String playerName) {
         // Get all objectives
@@ -159,5 +173,42 @@ public class scoreEvent {
         // Add the player's score back to the scoreboard
         Score score = scoreboard.getOrCreateScore(playerName, objective);
         score.setScorePoints(storedScore);
+    }
+
+    @SubscribeEvent
+    public void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
+        EntityPlayer player = event.player;
+        Scoreboard scoreboard = player.getWorldScoreboard();
+        addPlayerToScore(scoreboard, player.getName(), "planetcore_score");
+    }
+
+    // Existing methods...
+    // ...
+
+    public void saveScores() {
+        if (!saveFileDirectory.exists()) {
+            saveFileDirectory.mkdirs();
+        }
+        try (FileWriter writer = new FileWriter(saveFile)) {
+            gson.toJson(offlinePlayerScores, writer);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void loadScores() {
+        if (!saveFileDirectory.exists()) {
+            saveFileDirectory.mkdirs();
+        }
+        try (FileReader reader = new FileReader(saveFile)) {
+            Type type = new TypeToken<HashMap<String, Integer>>() {}.getType();
+            offlinePlayerScores = gson.fromJson(reader, type);
+            if (offlinePlayerScores == null) {
+                offlinePlayerScores = new HashMap<>();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            offlinePlayerScores = new HashMap<>();
+        }
     }
 }
