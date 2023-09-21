@@ -7,6 +7,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Enchantments;
 import net.minecraft.item.ItemStack;
 import net.minecraft.scoreboard.Score;
@@ -62,7 +63,7 @@ public class scoreEvent {
 
             float hardness = blockState.getBlockHardness(event.getWorld(), event.getPos());
             float harvestLevel = blockState.getBlock().getHarvestLevel(blockState);
-            int points = (int) (hardness * (harvestLevel + 1));
+            int points = event.getState().getBlock() == Blocks.OBSIDIAN ? 10 : (int) (hardness * (harvestLevel + 1));
 
 
 
