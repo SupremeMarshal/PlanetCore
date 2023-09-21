@@ -61,7 +61,7 @@ public class BlockBase extends Block {
 
 				return this.quantityDropped(random) * (i + 1);
 			} else {
-				return this.quantityDropped(random);
+				return this.quantityDropped(random) + 8;
 			}
 		}
 		else return 1;
