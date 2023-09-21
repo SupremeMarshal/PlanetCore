@@ -1,6 +1,5 @@
 package com.PlanetCore.asm.mixin;
 
-import com.PlanetCore.blocks.BlocksBase;
 import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;

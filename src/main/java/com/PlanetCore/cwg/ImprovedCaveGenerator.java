@@ -1,8 +1,5 @@
 package com.PlanetCore.cwg;
 
-import com.PlanetCore.blocks.BlocksBase;
-import com.PlanetCore.blocks.HotRocks;
-import com.PlanetCore.init.ModBlocks;
 import io.github.opencubicchunks.cubicchunks.api.util.Coords;
 import io.github.opencubicchunks.cubicchunks.api.util.CubePos;
 import io.github.opencubicchunks.cubicchunks.api.world.ICube;

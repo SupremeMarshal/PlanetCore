@@ -1,16 +1,14 @@
 package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.blocks.BlockBase;
-import com.PlanetCore.blocks.GemsGravel;
+import com.PlanetCore.blocks.SuperCompressedOreBlock;
 import com.PlanetCore.init.ToolMaterials;
 import com.PlanetCore.util.Reference;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.util.SoundCategory;
@@ -53,7 +51,7 @@ public class PickaxeRelentlessHandler {
     private static boolean handleRelentless(EntityPlayer player, IBlockState state, BlockPos pos,int relentlessEnchant,boolean aboutToBreak) {
         if (player.capabilities.isCreativeMode) return false;
         ItemStack stack = player.getHeldItemMainhand();
-        if (state.getBlock() instanceof BlockBase) {
+        if (state.getBlock() instanceof BlockBase && !(state.getBlock() instanceof SuperCompressedOreBlock)) {
             float blockHardness = state.getBlockHardness(player.world,pos);
             float Relentless = holdingPickaxe(player) ? getRelentless(stack) : 1;
             float breaktime = blockHardness * 1.5F / stack.getDestroySpeed(state);//is there a better way?
