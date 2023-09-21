@@ -1,13 +1,48 @@
 {
     "pools": [
         {
-            "name":"powder",
+            "name":"hotblaze",
             "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance_with_looting",
+                    "chance": 1.0,
+                    "looting_multiplier": 0.0
+                }
+            ],
             "entries": [
                 {
                     "type": "item",
                     "weight": 1,
-                    "name": "planetcore:hot_blaze_powder"
+                    "name": "planetcore:hot_blaze_powder",
+                    "conditions": [
+                        {
+                            "condition": "killed_by_player"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"blazerod",
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "random_chance_with_looting",
+                    "chance": 1.0,
+                    "looting_multiplier": 0.0
+                }
+            ],
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 1,
+                    "name": "minecraft:blaze_rod",
+                    "conditions": [
+                        {
+                            "condition": "killed_by_player"
+                        }
+                    ]
                 }
             ]
         }
