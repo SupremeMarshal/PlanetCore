@@ -1,5 +1,6 @@
 package com.PlanetCore.items.Drills;
 
+import com.PlanetCore.blocks.SuperCompressedOreBlock;
 import com.PlanetCore.items.EnergyUser;
 import com.PlanetCore.util.ItemStackEnergyCapabilityProvider;
 import com.PlanetCore.util.handlers.pickaxe3x3Handler;
@@ -39,7 +40,7 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
 
     public IronDrill() {
         this.maxStackSize = 1;
-        setHarvestLevel("pickaxe",3);
+        setHarvestLevel("pickaxe",2);
     }
 
     @Override
@@ -145,6 +146,8 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
         } else {
             return false;
         }
+
+        if (state.getBlock() instanceof SuperCompressedOreBlock) return true;
 
         if (radius == 2 && side.getAxis() != EnumFacing.Axis.Y) {
             aPos = aPos.up();

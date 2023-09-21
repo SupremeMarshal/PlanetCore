@@ -149,23 +149,23 @@ public class ModBlocks {
     public static final BlockBase SILVER_BLOCK = _null();
     public static final BlockBase SULFUR_BLOCK = _null();
 
-    public static final BlocksBase SUPERCOMPRESSED_PAINITE = _null();
-    public static final BlocksBase SUPERCOMPRESSED_ONYX = _null();
-    public static final BlocksBase SUPERCOMPRESSED_AMAZONITE = _null();
-    public static final BlocksBase SUPERCOMPRESSED_MAJORITE = _null();
-    public static final BlocksBase SUPERCOMPRESSED_DIAMOND = _null();
-    public static final BlocksBase SUPERCOMPRESSED_SAPPHIRE = _null();
-    public static final BlocksBase SUPERCOMPRESSED_RUBY = _null();
-    public static final BlocksBase SUPERCOMPRESSED_URANIUM = _null();
-    public static final BlocksBase SUPERCOMPRESSED_TUNGSTEN = _null();
-    public static final BlocksBase SUPERCOMPRESSED_TITANIUM = _null();
-    public static final BlocksBase SUPERCOMPRESSED_EMERALD = _null();
-    public static final BlocksBase SUPERCOMPRESSED_GOLD = _null();
-    public static final BlocksBase SUPERCOMPRESSED_SILVER = _null();
-    public static final BlocksBase SUPERCOMPRESSED_LAPIS = _null();
-    public static final BlocksBase SUPERCOMPRESSED_REDSTONE = _null();
-    public static final BlocksBase SUPERCOMPRESSED_SULFUR = _null();
-    public static final BlocksBase SUPERCOMPRESSED_IRON = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_PAINITE = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_ONYX = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_AMAZONITE = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_MAJORITE = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_DIAMOND = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_SAPPHIRE = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_RUBY = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_URANIUM = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_TUNGSTEN = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_TITANIUM = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_EMERALD = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_GOLD = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_SILVER = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_LAPIS = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_REDSTONE = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_SULFUR = _null();
+    public static final SuperCompressedOreBlock SUPERCOMPRESSED_IRON = _null();
     public static final BlockBase SUPERCOMPRESSED_COAL = _null();
 
     public static final BlockBase CRUST_COBBLESTONE = _null();
@@ -259,24 +259,24 @@ public class ModBlocks {
                 new BlockBase("amazonite_block", Material.IRON,true).setHardness(50000F).setResistance(25),
                 new BlockBase("onyx_block", Material.IRON,true).setHardness(200000F).setResistance(30),
                 new BlockBase("painite_block", Material.IRON,true).setHardness(1000000F).setResistance(30),
-                new BlocksBase("supercompressed_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_SUPERCOMPACT, PlanetExp.SULFUR_SUPERCOMPACT).setResistance(1),
-                new BlocksBase("supercompressed_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_SUPERCOMPACT, PlanetExp.REDSTONE_SUPERCOMPACT).setResistance(1),
-                new BlocksBase("supercompressed_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_SUPERCOMPACT, PlanetExp.LAPIS_SUPERCOMPACT).setResistance(1),
+                new SuperCompressedOreBlock("supercompressed_sulfur", Material.ROCK, PlanetMaterial.SULFUR, PlanetHardness.SULFUR_SUPERCOMPACT, PlanetExp.SULFUR_SUPERCOMPACT).setResistance(1),
+                new SuperCompressedOreBlock("supercompressed_redstone", Material.ROCK, PlanetMaterial.REDSTONE, PlanetHardness.REDSTONE_SUPERCOMPACT, PlanetExp.REDSTONE_SUPERCOMPACT).setResistance(1),
+                new SuperCompressedOreBlock("supercompressed_lapis", Material.ROCK, PlanetMaterial.LAPIS, PlanetHardness.LAPIS_SUPERCOMPACT, PlanetExp.LAPIS_SUPERCOMPACT).setResistance(1),
                 new BlockBase("supercompressed_coal", Material.ROCK,false).setResistance(1),
-                new BlocksBase("supercompressed_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_SUPERCOMPACT, PlanetExp.IRON_SUPERCOMPACT).setResistance(4),
-                new BlocksBase("supercompressed_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_SUPERCOMPACT, PlanetExp.SILVER_SUPERCOMPACT).setResistance(6),
-                new BlocksBase("supercompressed_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_SUPERCOMPACT, PlanetExp.GOLD_SUPERCOMPACT).setResistance(8),
-                new BlocksBase("supercompressed_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_SUPERCOMPACT, PlanetExp.DIAMOND_SUPERCOMPACT).setResistance(25),
-                new BlocksBase("supercompressed_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_SUPERCOMPACT, PlanetExp.EMERALD_SUPERCOMPACT).setResistance(25),
-                new BlocksBase("supercompressed_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("supercompressed_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_SUPERCOMPACT, PlanetExp.URANIUM_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("supercompressed_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_SUPERCOMPACT, PlanetExp.TUNGSTEN_SUPERCOMPACT).setResistance(50),
-                new BlocksBase("supercompressed_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY_SUPERCOMPACT, PlanetExp.RUBY_SUPERCOMPACT).setResistance(100),
-                new BlocksBase("supercompressed_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE_SUPERCOMPACT, PlanetExp.SAPPHIRE_SUPERCOMPACT).setResistance(100),
-                new BlocksBase("supercompressed_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE_SUPERCOMPACT, PlanetExp.MAJORITE_SUPERCOMPACT).setResistance(200),
-                new BlocksBase("supercompressed_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE_SUPERCOMPACT, PlanetExp.AMAZONITE_SUPERCOMPACT).setResistance(250),
-                new BlocksBase("supercompressed_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX_SUPERCOMPACT, PlanetExp.ONYX_SUPERCOMPACT).setResistance(300),
-                new BlocksBase("supercompressed_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE_SUPERCOMPACT, PlanetExp.PAINITE_SUPERCOMPACT).setResistance(300),
+                new SuperCompressedOreBlock("supercompressed_iron", Material.ROCK, PlanetMaterial.IRON, PlanetHardness.IRON_SUPERCOMPACT, PlanetExp.IRON_SUPERCOMPACT).setResistance(4),
+                new SuperCompressedOreBlock("supercompressed_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER_SUPERCOMPACT, PlanetExp.SILVER_SUPERCOMPACT).setResistance(6),
+                new SuperCompressedOreBlock("supercompressed_gold", Material.ROCK, PlanetMaterial.GOLD, PlanetHardness.GOLD_SUPERCOMPACT, PlanetExp.GOLD_SUPERCOMPACT).setResistance(8),
+                new SuperCompressedOreBlock("supercompressed_diamond", Material.ROCK, PlanetMaterial.DIAMOND, PlanetHardness.DIAMOND_SUPERCOMPACT, PlanetExp.DIAMOND_SUPERCOMPACT).setResistance(25),
+                new SuperCompressedOreBlock("supercompressed_emerald", Material.ROCK, PlanetMaterial.EMERALD, PlanetHardness.EMERALD_SUPERCOMPACT, PlanetExp.EMERALD_SUPERCOMPACT).setResistance(25),
+                new SuperCompressedOreBlock("supercompressed_titanium", Material.ROCK, PlanetMaterial.TITANIUM, PlanetHardness.TITANIUM_SUPERCOMPACT, PlanetExp.TITANIUM_SUPERCOMPACT).setResistance(50),
+                new SuperCompressedOreBlock("supercompressed_uranium", Material.ROCK, PlanetMaterial.URANIUM, PlanetHardness.URANIUM_SUPERCOMPACT, PlanetExp.URANIUM_SUPERCOMPACT).setResistance(50),
+                new SuperCompressedOreBlock("supercompressed_tungsten", Material.ROCK, PlanetMaterial.TUNGSTEN, PlanetHardness.TUNGSTEN_SUPERCOMPACT, PlanetExp.TUNGSTEN_SUPERCOMPACT).setResistance(50),
+                new SuperCompressedOreBlock("supercompressed_ruby", Material.ROCK, PlanetMaterial.RUBY, PlanetHardness.RUBY_SUPERCOMPACT, PlanetExp.RUBY_SUPERCOMPACT).setResistance(100),
+                new SuperCompressedOreBlock("supercompressed_sapphire", Material.ROCK, PlanetMaterial.SAPPHIRE, PlanetHardness.SAPPHIRE_SUPERCOMPACT, PlanetExp.SAPPHIRE_SUPERCOMPACT).setResistance(100),
+                new SuperCompressedOreBlock("supercompressed_majorite", Material.ROCK, PlanetMaterial.MAJORITE, PlanetHardness.MAJORITE_SUPERCOMPACT, PlanetExp.MAJORITE_SUPERCOMPACT).setResistance(200),
+                new SuperCompressedOreBlock("supercompressed_amazonite", Material.ROCK, PlanetMaterial.AMAZONITE, PlanetHardness.AMAZONITE_SUPERCOMPACT, PlanetExp.AMAZONITE_SUPERCOMPACT).setResistance(250),
+                new SuperCompressedOreBlock("supercompressed_onyx", Material.ROCK, PlanetMaterial.ONYX, PlanetHardness.ONYX_SUPERCOMPACT, PlanetExp.ONYX_SUPERCOMPACT).setResistance(300),
+                new SuperCompressedOreBlock("supercompressed_painite", Material.ROCK, PlanetMaterial.PAINITE, PlanetHardness.PAINITE_SUPERCOMPACT, PlanetExp.PAINITE_SUPERCOMPACT).setResistance(300),
                 new Slate("slate", Material.ROCK),
 
                 new OreBase("ore_silver", Material.ROCK, PlanetMaterial.SILVER, PlanetHardness.SILVER, PlanetHarvestLevel.SILVER,PlanetExp.SILVER).setResistance(1),

@@ -2,9 +2,11 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
+import com.PlanetCore.items.Drills.IronDrill;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -13,11 +15,11 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlocksBase extends BlockBase {
+public class SuperCompressedOreBlock extends BlockBase {
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
 	public final PlanetExp planetExp;
-	public BlocksBase(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
+	public SuperCompressedOreBlock(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
 		super(name, material,false);
 		setSoundType(SoundType.METAL);
 		setHarvestLevel("pickaxe", 0);
@@ -34,7 +36,12 @@ public class BlocksBase extends BlockBase {
 
 	@Override
 	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		return -1;
+		return 20;
+	}
+
+	@Override
+	public float getPlayerRelativeBlockHardness(IBlockState state, EntityPlayer player, World worldIn, BlockPos pos) {
+		return player.getHeldItemMainhand().getItem() instanceof IronDrill ? super.getPlayerRelativeBlockHardness(state, player, worldIn, pos) : -1;
 	}
 
 	@Override
