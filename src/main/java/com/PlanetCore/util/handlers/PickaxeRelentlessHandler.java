@@ -2,7 +2,6 @@ package com.PlanetCore.util.handlers;
 
 import com.PlanetCore.asm.mixin.ItemToolAccess;
 import com.PlanetCore.blocks.BlockBase;
-import com.PlanetCore.blocks.SuperCompressedOreBlock;
 import com.PlanetCore.init.EnchantmentInit;
 import com.PlanetCore.init.ModItems;
 import com.PlanetCore.init.ModToolMaterials;
@@ -19,6 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.HashMap;
@@ -30,12 +30,12 @@ public class PickaxeRelentlessHandler {
     private static final Map<Item, Float> relentlessMap = new HashMap<>();
     public static final SoundEvent[] sound = {SoundHandler.INDESTRUCTIBLE, SoundHandler.INDESTRUCTIBLE1, SoundHandler.INDESTRUCTIBLE2, SoundHandler.INDESTRUCTIBLE3, SoundHandler.INDESTRUCTIBLE4, SoundHandler.INDESTRUCTIBLE5, SoundHandler.INDESTRUCTIBLE6, SoundHandler.INDESTRUCTIBLE7, SoundHandler.INDESTRUCTIBLE8, SoundHandler.INDESTRUCTIBLE9, SoundHandler.INDESTRUCTIBLE10, SoundHandler.INDESTRUCTIBLE11, SoundHandler.INDESTRUCTIBLE12, SoundHandler.INDESTRUCTIBLE13, SoundHandler.INDESTRUCTIBLE14, SoundHandler.INDESTRUCTIBLE15, SoundHandler.INDESTRUCTIBLE16, SoundHandler.INDESTRUCTIBLE17, SoundHandler.INDESTRUCTIBLE18, SoundHandler.INDESTRUCTIBLE19 };
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.LOWEST)
     public static void onBreakEvent(PlayerEvent.BreakSpeed event) {
         EntityPlayer player = event.getEntityPlayer();
         BlockPos pos = event.getPos();
         IBlockState state = event.getState();
-        event.setCanceled(handleRelentless(player,state,pos));
+        event.setCanceled(handleRelentless(player,state,pos,event.getNewSpeed()));
     }
 
     public static void buildRelentlessMap() {
@@ -62,19 +62,37 @@ public class PickaxeRelentlessHandler {
         EntityPlayer player = e.getPlayer();
         BlockPos pos = e.getPos();
         IBlockState state = e.getState();
-        e.setCanceled(handleRelentless(player,state,pos));
+        e.setCanceled(handleRelentlessOnBlockBreak(player,state,pos));
     }
 
     /**
      * return true if the block should be prevented from breaking
      */
-    private static boolean handleRelentless(EntityPlayer player, IBlockState state, BlockPos pos) {
+    private static boolean handleRelentless(EntityPlayer player, IBlockState state, BlockPos pos,float eventSpeed) {
         if (player.capabilities.isCreativeMode) return false;
         ItemStack stack = player.getHeldItemMainhand();
-        if (state.getBlock() instanceof BlockBase && !(state.getBlock() instanceof SuperCompressedOreBlock)) {
-            float blockHardness = state.getBlockHardness(player.world,pos);
-            float relentless = getRelentless(stack);
-            float breaktime = blockHardness * 1.5F / stack.getDestroySpeed(state);//is there a better way?
+        if (state.getBlock() instanceof BlockBase) {
+            float blockHardness = state.getBlockHardness(player.world,pos);//the base time to break a block in second is hardness * 1.5
+            float relentless = getRelentless(stack);//this is how long the block can take to break before it becomes indestructible
+            float speed;// lookup speed multiplier for tool
+            float breaktime = blockHardness * 1.5F / eventSpeed;//the approximate time it will take to destroy
+            //Determine if the block is indestructible.
+            return breaktime > relentless;
+        }
+        return false;
+    }
+
+    /**
+     * return true if the block should be prevented from breaking
+     */
+    private static boolean handleRelentlessOnBlockBreak(EntityPlayer player, IBlockState state, BlockPos pos) {
+        if (player.capabilities.isCreativeMode) return false;
+        ItemStack stack = player.getHeldItemMainhand();
+        if (state.getBlock() instanceof BlockBase) {
+            float blockHardness = state.getBlockHardness(player.world,pos);//the base time to break a block in second is hardness * 1.5
+            float relentless = getRelentless(stack);//this is how long the block can take to break before it becomes indestructible
+            float speed = player.getDigSpeed(state,pos);// lookup speed multiplier for tool
+            float breaktime = blockHardness * 1.5F / speed;//the approximate time it will take to destroy
             //Determine if the block is indestructible.
             return breaktime > relentless;
         }
