@@ -18,12 +18,14 @@ import java.util.Random;
 public class SuperCompressedOreBlock extends BlockBase {
 	public final PlanetMaterial planetMaterial;
 	public final PlanetExp planetExp;
+	public final PlanetHardness planetHardness;
 	public SuperCompressedOreBlock(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
 		super(name, material,false);
 		setSoundType(SoundType.METAL);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 		this.planetMaterial = planetMaterial;
+		this.planetHardness = planetHardness;
 		setHardness(planetHardness.hardness);
 		this.planetExp = planetExp;
 	}
@@ -31,6 +33,11 @@ public class SuperCompressedOreBlock extends BlockBase {
 	@Override
 	public int damageDropped(IBlockState state) {
 		return getMetaFromState(state);
+	}
+
+	@Override
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		return planetHardness.hardness;
 	}
 
 	@Override

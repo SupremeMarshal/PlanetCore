@@ -50,7 +50,7 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
         if (getStoredEnergy(stack) < getEnergyUsed() /*+ getHardnessPenalty(state,null,null)*/) {
             return .2f;
         }
-        return 2;
+        return 7;
     }
 
     @Override
@@ -86,6 +86,7 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
+        tooltip.add(net.minecraft.client.resources.I18n.format("Durability: " + (getMaxDamage() - getDamage(stack)) + " / " + getMaxDamage()));
         addEnergyTooltip(stack,tooltip);
     }
 

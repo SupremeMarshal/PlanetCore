@@ -192,7 +192,7 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.4D);
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30D);
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(15.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(20D);
+		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(16D);
 		this.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 999999999, 5));
 		this.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 999999999, 1));
 		this.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 999999999, 3));
