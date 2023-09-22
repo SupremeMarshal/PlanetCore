@@ -46,8 +46,8 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
 
     @Override
     public float getDestroySpeed(ItemStack stack, IBlockState state) {
-        //is this safe?
-        if (getStoredEnergy(stack) < getEnergyUsed() + getHardnessPenalty(state,null,null)) {
+        //is this safe? no it is not, the game crashes because of BaseBlock or possibly other modded blocks
+        if (getStoredEnergy(stack) < getEnergyUsed() /*+ getHardnessPenalty(state,null,null)*/) {
             return .2f;
         }
         return 2;
