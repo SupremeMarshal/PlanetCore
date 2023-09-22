@@ -34,18 +34,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class IronDrill extends Item implements IAnimatable, EnergyUser {
+public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
 
-    private int energy_per_block_broken = 50;
+    private final int energy_per_block_broken = 50;
 
-    public IronDrill() {
+    public IronDrillItem() {
         this.maxStackSize = 1;
         setHarvestLevel("pickaxe",2);
+        setMaxDamage(10000);
     }
 
     @Override
     public float getDestroySpeed(ItemStack stack, IBlockState state) {
-        if (getStoredEnergy(stack) < energy_per_block_broken) {
+        //is this safe? no it is not, the game crashes because of BaseBlock or possibly other modded blocks
+        if (getStoredEnergy(stack) < getEnergyUsed() /*+ getHardnessPenalty(state,null,null)*/) {
             return .2f;
         }
         return 2;
@@ -53,7 +55,7 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
 
     @Override
     public Set<String> getToolClasses(ItemStack stack) {
-        if (getStoredEnergy(stack) < energy_per_block_broken) {
+        if (getStoredEnergy(stack) < getEnergyUsed()) {
             return Collections.emptySet();
         }
         return super.getToolClasses(stack);
@@ -61,13 +63,13 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
 
     @Override
     public int getHarvestLevel(ItemStack stack, String toolClass, @Nullable EntityPlayer player, @Nullable IBlockState blockState) {
-        if (getStoredEnergy(stack) < energy_per_block_broken) return -1;
+        if (getStoredEnergy(stack) < getEnergyUsed()) return -1;
         return super.getHarvestLevel(stack, toolClass, player, blockState);
     }
 
     @Override
     public boolean canHarvestBlock(IBlockState state, ItemStack stack) {
-        return getStoredEnergy(stack) >= energy_per_block_broken;
+        return getStoredEnergy(stack) >= getEnergyUsed();
     }
 
     @Override
@@ -138,7 +140,7 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
         float mainHardness = state.getBlockHardness(world, aPos);
 
         //Break Middle Block first
-        int use = energy_per_block_broken;
+        int use = getEnergyUsed() + getHardnessPenalty(player.world.getBlockState(aPos),player.world,aPos);
         if (this.getStoredEnergy(stack) >= use) {
             if (!this.tryHarvestBlock(world, aPos, false, stack, player, use)) {
                 return false;
@@ -153,6 +155,7 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
             aPos = aPos.up();
             IBlockState theState = world.getBlockState(aPos);
             if (theState.getBlockHardness(world, aPos) <= mainHardness + 5.0F) {
+                use = getEnergyUsed() + getHardnessPenalty(player.world.getBlockState(aPos),player.world,aPos);
                 this.tryHarvestBlock(world, aPos, true, stack, player, use);
             }
         }
@@ -168,6 +171,7 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
                                 BlockPos thePos = new BlockPos(xPos, yPos, zPos);
                                 IBlockState theState = world.getBlockState(thePos);
                                 if (theState.getBlockHardness(world, thePos) <= mainHardness + 5.0F) {
+                                    use = getEnergyUsed() + getHardnessPenalty(player.world.getBlockState(aPos),player.world,aPos);
                                     this.tryHarvestBlock(world, thePos, true, stack, player, use);
                                 }
                             } else {
@@ -181,10 +185,18 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
         return true;
     }
 
+    public int getEnergyUsed() {
+        return energy_per_block_broken;
+    }
+
+    public int getHardnessPenalty(IBlockState state,World world,BlockPos pos) {
+        return (int) state.getBlockHardness(world,pos);
+    }
+
     @Override
     public boolean onBlockStartBreak(ItemStack stack, BlockPos pos, EntityPlayer player) {
         boolean toReturn = false;
-        int use = energy_per_block_broken;
+        int use = getEnergyUsed() + getHardnessPenalty(player.world.getBlockState(pos),player.world,pos);
         if (this.getStoredEnergy(stack) >= use) {
 
             //Block hit
@@ -231,7 +243,7 @@ public class IronDrill extends Item implements IAnimatable, EnergyUser {
     //swing if the drill doesn't have enough energy
     @Override
     public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack stack) {
-        return getStoredEnergy(stack) >= energy_per_block_broken;
+        return getStoredEnergy(stack) >= getEnergyUsed();
     }
 
     @Override

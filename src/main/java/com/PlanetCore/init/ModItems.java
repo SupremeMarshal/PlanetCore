@@ -1,6 +1,6 @@
 package com.PlanetCore.init;
 
-import com.PlanetCore.items.Drills.IronDrill;
+import com.PlanetCore.items.Drills.IronDrillItem;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.ItemSpadeX;
@@ -30,7 +30,7 @@ public class ModItems {
 	private static final List<Item> ITEMS = new ArrayList<>();
 
 
-	public static final IronDrill IRON_DRILL = (IronDrill) new IronDrill().setCreativeTab(CreativeTabs.TOOLS);
+	public static final IronDrillItem IRON_DRILL = (IronDrillItem) new IronDrillItem().setCreativeTab(CreativeTabs.TOOLS);
 
 	public static final TutorialBook TUTORIAL_BOOK = (TutorialBook) new TutorialBook().setCreativeTab(CreativeTabs.MATERIALS);
 
@@ -42,23 +42,23 @@ public class ModItems {
 	public static final Item ONYX_FIREBALL = new Item().setCreativeTab(CreativeTabs.MATERIALS);
 
 	//IRON//
-	public static final ItemSword COMPLETE_IRON_SWORD = new ItemSword(ToolMaterials.COMPLETE_IRON);
-	public static final ItemSpade COMPLETE_IRON_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_IRON);
-	public static final ItemPickaxe COMPLETE_IRON_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_IRON);
-	public static final ItemAxe COMPLETE_IRON_AXE = new ItemAxeX(ToolMaterials.COMPLETE_IRON);
-	public static final ItemHoe COMPLETE_IRON_HOE = new ItemHoe(ToolMaterials.COMPLETE_IRON);
+	public static final ItemSword COMPLETE_IRON_SWORD = new ItemSword(ModToolMaterials.COMPLETE_IRON);
+	public static final ItemSpade COMPLETE_IRON_SHOVEL = new ItemSpade(ModToolMaterials.COMPLETE_IRON);
+	public static final ItemPickaxe COMPLETE_IRON_PICKAXE = new ItemPickaxeX(ModToolMaterials.COMPLETE_IRON);
+	public static final ItemAxe COMPLETE_IRON_AXE = new ItemAxeX(ModToolMaterials.COMPLETE_IRON);
+	public static final ItemHoe COMPLETE_IRON_HOE = new ItemHoe(ModToolMaterials.COMPLETE_IRON);
 
 	//SILVER//
-	public static final ItemSword SILVER_SWORD = new ItemSword(ToolMaterials.SILVER);
-	public static final ItemSpade SILVER_SHOVEL = new ItemSpade(ToolMaterials.SILVER);
-	public static final ItemPickaxe SILVER_PICKAXE = new ItemPickaxeX(ToolMaterials.SILVER);
-	public static final ItemAxe SILVER_AXE = new ItemAxeX(ToolMaterials.SILVER);
-	public static final ItemHoe SILVER_HOE = new ItemHoe(ToolMaterials.SILVER);
-	public static final ItemSword COMPLETE_SILVER_SWORD = new ItemSword(ToolMaterials.COMPLETE_SILVER);
-	public static final ItemSpade COMPLETE_SILVER_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_SILVER);
-	public static final ItemPickaxe COMPLETE_SILVER_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_SILVER);
-	public static final ItemAxe COMPLETE_SILVER_AXE = new ItemAxeX(ToolMaterials.COMPLETE_SILVER);
-	public static final ItemHoe COMPLETE_SILVER_HOE = new ItemHoe(ToolMaterials.COMPLETE_SILVER);
+	public static final ItemSword SILVER_SWORD = new ItemSword(ModToolMaterials.SILVER);
+	public static final ItemSpade SILVER_SHOVEL = new ItemSpade(ModToolMaterials.SILVER);
+	public static final ItemPickaxe SILVER_PICKAXE = new ItemPickaxeX(ModToolMaterials.SILVER);
+	public static final ItemAxe SILVER_AXE = new ItemAxeX(ModToolMaterials.SILVER);
+	public static final ItemHoe SILVER_HOE = new ItemHoe(ModToolMaterials.SILVER);
+	public static final ItemSword COMPLETE_SILVER_SWORD = new ItemSword(ModToolMaterials.COMPLETE_SILVER);
+	public static final ItemSpade COMPLETE_SILVER_SHOVEL = new ItemSpade(ModToolMaterials.COMPLETE_SILVER);
+	public static final ItemPickaxe COMPLETE_SILVER_PICKAXE = new ItemPickaxeX(ModToolMaterials.COMPLETE_SILVER);
+	public static final ItemAxe COMPLETE_SILVER_AXE = new ItemAxeX(ModToolMaterials.COMPLETE_SILVER);
+	public static final ItemHoe COMPLETE_SILVER_HOE = new ItemHoe(ModToolMaterials.COMPLETE_SILVER);
 
 	public static final Item SILVER_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.HEAD,0, 0);
 	public static final Item SILVER_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.CHEST,0, 0);
@@ -66,30 +66,30 @@ public class ModItems {
 	public static final Item SILVER_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SILVER, 1, EntityEquipmentSlot.FEET,0, 0);
 
 	//GOLD//
-	public static final ItemSword COMPLETE_GOLD_SWORD = new ItemSword(ToolMaterials.COMPLETE_GOLD);
-	public static final ItemSpade COMPLETE_GOLD_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_GOLD);
-	public static final ItemPickaxe COMPLETE_GOLD_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_GOLD);
-	public static final ItemAxe COMPLETE_GOLD_AXE = new ItemAxeX(ToolMaterials.COMPLETE_GOLD);
-	public static final ItemHoe COMPLETE_GOLD_HOE = new ItemHoe(ToolMaterials.COMPLETE_GOLD);
+	public static final ItemSword COMPLETE_GOLD_SWORD = new ItemSword(ModToolMaterials.COMPLETE_GOLD);
+	public static final ItemSpade COMPLETE_GOLD_SHOVEL = new ItemSpade(ModToolMaterials.COMPLETE_GOLD);
+	public static final ItemPickaxe COMPLETE_GOLD_PICKAXE = new ItemPickaxeX(ModToolMaterials.COMPLETE_GOLD);
+	public static final ItemAxe COMPLETE_GOLD_AXE = new ItemAxeX(ModToolMaterials.COMPLETE_GOLD);
+	public static final ItemHoe COMPLETE_GOLD_HOE = new ItemHoe(ModToolMaterials.COMPLETE_GOLD);
 
 	//DIAMOND//
-	public static final ItemSword COMPLETE_DIAMOND_SWORD = new ItemSword(ToolMaterials.COMPLETE_DIAMOND);
-	public static final ItemSpade COMPLETE_DIAMOND_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_DIAMOND);
-	public static final ItemPickaxe COMPLETE_DIAMOND_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_DIAMOND);
-	public static final ItemAxe COMPLETE_DIAMOND_AXE = new ItemAxeX(ToolMaterials.COMPLETE_DIAMOND);
-	public static final ItemHoe COMPLETE_DIAMOND_HOE = new ItemHoe(ToolMaterials.COMPLETE_DIAMOND);
+	public static final ItemSword COMPLETE_DIAMOND_SWORD = new ItemSword(ModToolMaterials.COMPLETE_DIAMOND);
+	public static final ItemSpade COMPLETE_DIAMOND_SHOVEL = new ItemSpade(ModToolMaterials.COMPLETE_DIAMOND);
+	public static final ItemPickaxe COMPLETE_DIAMOND_PICKAXE = new ItemPickaxeX(ModToolMaterials.COMPLETE_DIAMOND);
+	public static final ItemAxe COMPLETE_DIAMOND_AXE = new ItemAxeX(ModToolMaterials.COMPLETE_DIAMOND);
+	public static final ItemHoe COMPLETE_DIAMOND_HOE = new ItemHoe(ModToolMaterials.COMPLETE_DIAMOND);
 
 	//TITANIUM//
-	public static final ItemSword TITANIUM_SWORD = new ItemSword(ToolMaterials.TITANIUM);
-	public static final ItemSpade TITANIUM_SHOVEL = new ItemSpadeX(ToolMaterials.TITANIUM);
-	public static final ItemPickaxe TITANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.TITANIUM);
-	public static final ItemAxe TITANIUM_AXE = new ItemAxeX(ToolMaterials.TITANIUM);
-	public static final ItemHoe TITANIUM_HOE = new ItemHoe(ToolMaterials.TITANIUM);
-	public static final ItemSword COMPLETE_TITANIUM_SWORD = new ItemSword(ToolMaterials.COMPLETE_TITANIUM);
-	public static final ItemSpade COMPLETE_TITANIUM_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_TITANIUM);
-	public static final ItemPickaxe COMPLETE_TITANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_TITANIUM);
-	public static final ItemAxe COMPLETE_TITANIUM_AXE = new ItemAxeX(ToolMaterials.COMPLETE_TITANIUM);
-	public static final ItemHoe COMPLETE_TITANIUM_HOE = new ItemHoe(ToolMaterials.COMPLETE_TITANIUM);
+	public static final ItemSword TITANIUM_SWORD = new ItemSword(ModToolMaterials.TITANIUM);
+	public static final ItemSpade TITANIUM_SHOVEL = new ItemSpadeX(ModToolMaterials.TITANIUM);
+	public static final ItemPickaxe TITANIUM_PICKAXE = new ItemPickaxeX(ModToolMaterials.TITANIUM);
+	public static final ItemAxe TITANIUM_AXE = new ItemAxeX(ModToolMaterials.TITANIUM);
+	public static final ItemHoe TITANIUM_HOE = new ItemHoe(ModToolMaterials.TITANIUM);
+	public static final ItemSword COMPLETE_TITANIUM_SWORD = new ItemSword(ModToolMaterials.COMPLETE_TITANIUM);
+	public static final ItemSpade COMPLETE_TITANIUM_SHOVEL = new ItemSpade(ModToolMaterials.COMPLETE_TITANIUM);
+	public static final ItemPickaxe COMPLETE_TITANIUM_PICKAXE = new ItemPickaxeX(ModToolMaterials.COMPLETE_TITANIUM);
+	public static final ItemAxe COMPLETE_TITANIUM_AXE = new ItemAxeX(ModToolMaterials.COMPLETE_TITANIUM);
+	public static final ItemHoe COMPLETE_TITANIUM_HOE = new ItemHoe(ModToolMaterials.COMPLETE_TITANIUM);
 
 	public static final Item TITANIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.HEAD,0, 1);
 	public static final Item TITANIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.CHEST,0, 4);
@@ -97,16 +97,16 @@ public class ModItems {
 	public static final Item TITANIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.FEET,0, 1);
 
 	//URANIUM//
-	public static final ItemSword URANIUM_SWORD = new ItemSword(ToolMaterials.URANIUM);
-	public static final ItemSpade URANIUM_SHOVEL = new ItemSpadeX(ToolMaterials.URANIUM);
-	public static final ItemPickaxe URANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.URANIUM);
-	public static final ItemAxe URANIUM_AXE = new ItemAxeX(ToolMaterials.URANIUM);
-	public static final ItemHoe URANIUM_HOE = new ItemHoe(ToolMaterials.URANIUM);
-	public static final ItemSword COMPLETE_URANIUM_SWORD = new ItemSword(ToolMaterials.COMPLETE_URANIUM);
-	public static final ItemSpade COMPLETE_URANIUM_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_URANIUM);
-	public static final ItemPickaxe COMPLETE_URANIUM_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_URANIUM);
-	public static final ItemAxe COMPLETE_URANIUM_AXE = new ItemAxeX(ToolMaterials.COMPLETE_URANIUM);
-	public static final ItemHoe COMPLETE_URANIUM_HOE = new ItemHoe(ToolMaterials.COMPLETE_URANIUM);
+	public static final ItemSword URANIUM_SWORD = new ItemSword(ModToolMaterials.URANIUM);
+	public static final ItemSpade URANIUM_SHOVEL = new ItemSpadeX(ModToolMaterials.URANIUM);
+	public static final ItemPickaxe URANIUM_PICKAXE = new ItemPickaxeX(ModToolMaterials.URANIUM);
+	public static final ItemAxe URANIUM_AXE = new ItemAxeX(ModToolMaterials.URANIUM);
+	public static final ItemHoe URANIUM_HOE = new ItemHoe(ModToolMaterials.URANIUM);
+	public static final ItemSword COMPLETE_URANIUM_SWORD = new ItemSword(ModToolMaterials.COMPLETE_URANIUM);
+	public static final ItemSpade COMPLETE_URANIUM_SHOVEL = new ItemSpade(ModToolMaterials.COMPLETE_URANIUM);
+	public static final ItemPickaxe COMPLETE_URANIUM_PICKAXE = new ItemPickaxeX(ModToolMaterials.COMPLETE_URANIUM);
+	public static final ItemAxe COMPLETE_URANIUM_AXE = new ItemAxeX(ModToolMaterials.COMPLETE_URANIUM);
+	public static final ItemHoe COMPLETE_URANIUM_HOE = new ItemHoe(ModToolMaterials.COMPLETE_URANIUM);
 
 	public static final Item URANIUM_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.HEAD,0, 2);
 	public static final Item URANIUM_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.CHEST,0, 5);
@@ -114,16 +114,16 @@ public class ModItems {
 	public static final Item URANIUM_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_URANIUM, 1, EntityEquipmentSlot.FEET,0, 2);
 
 	//TUNGSTEN//
-	public static final ItemSword TUNGSTEN_SWORD = new ItemSword(ToolMaterials.TUNGSTEN);
-	public static final ItemSpade TUNGSTEN_SHOVEL = new ItemSpadeX(ToolMaterials.TUNGSTEN);
-	public static final ItemPickaxe TUNGSTEN_PICKAXE = new ItemPickaxeX(ToolMaterials.TUNGSTEN);
-	public static final ItemAxe TUNGSTEN_AXE = new ItemAxeX(ToolMaterials.TUNGSTEN);
-	public static final ItemHoe TUNGSTEN_HOE = new ItemHoe(ToolMaterials.TUNGSTEN);
-	public static final ItemSword COMPLETE_TUNGSTEN_SWORD = new ItemSword(ToolMaterials.COMPLETE_TUNGSTEN);
-	public static final ItemSpade COMPLETE_TUNGSTEN_SHOVEL = new ItemSpade(ToolMaterials.COMPLETE_TUNGSTEN);
-	public static final ItemPickaxe COMPLETE_TUNGSTEN_PICKAXE = new ItemPickaxeX(ToolMaterials.COMPLETE_TUNGSTEN);
-	public static final ItemAxe COMPLETE_TUNGSTEN_AXE = new ItemAxeX(ToolMaterials.COMPLETE_TUNGSTEN);
-	public static final ItemHoe COMPLETE_TUNGSTEN_HOE = new ItemHoe(ToolMaterials.COMPLETE_TUNGSTEN);
+	public static final ItemSword TUNGSTEN_SWORD = new ItemSword(ModToolMaterials.TUNGSTEN);
+	public static final ItemSpade TUNGSTEN_SHOVEL = new ItemSpadeX(ModToolMaterials.TUNGSTEN);
+	public static final ItemPickaxe TUNGSTEN_PICKAXE = new ItemPickaxeX(ModToolMaterials.TUNGSTEN);
+	public static final ItemAxe TUNGSTEN_AXE = new ItemAxeX(ModToolMaterials.TUNGSTEN);
+	public static final ItemHoe TUNGSTEN_HOE = new ItemHoe(ModToolMaterials.TUNGSTEN);
+	public static final ItemSword COMPLETE_TUNGSTEN_SWORD = new ItemSword(ModToolMaterials.COMPLETE_TUNGSTEN);
+	public static final ItemSpade COMPLETE_TUNGSTEN_SHOVEL = new ItemSpade(ModToolMaterials.COMPLETE_TUNGSTEN);
+	public static final ItemPickaxe COMPLETE_TUNGSTEN_PICKAXE = new ItemPickaxeX(ModToolMaterials.COMPLETE_TUNGSTEN);
+	public static final ItemAxe COMPLETE_TUNGSTEN_AXE = new ItemAxeX(ModToolMaterials.COMPLETE_TUNGSTEN);
+	public static final ItemHoe COMPLETE_TUNGSTEN_HOE = new ItemHoe(ModToolMaterials.COMPLETE_TUNGSTEN);
 
 	public static final Item TUNGSTEN_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.HEAD,0, 5);
 	public static final Item TUNGSTEN_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.CHEST,0 ,8);
@@ -131,11 +131,11 @@ public class ModItems {
 	public static final Item TUNGSTEN_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.FEET,0 , 4);
 
 	//RUBY//
-	public static final ItemSword RUBY_SWORD = new ItemSword(ToolMaterials.RUBY);
-	public static final ItemSpade RUBY_SHOVEL = new ItemSpadeX(ToolMaterials.RUBY);
-	public static final ItemPickaxe RUBY_PICKAXE = new ItemPickaxeX(ToolMaterials.RUBY);
-	public static final ItemAxe RUBY_AXE = new ItemAxeX(ToolMaterials.RUBY);
-	public static final ItemHoe RUBY_HOE = new ItemHoe(ToolMaterials.RUBY);
+	public static final ItemSword RUBY_SWORD = new ItemSword(ModToolMaterials.RUBY);
+	public static final ItemSpade RUBY_SHOVEL = new ItemSpadeX(ModToolMaterials.RUBY);
+	public static final ItemPickaxe RUBY_PICKAXE = new ItemPickaxeX(ModToolMaterials.RUBY);
+	public static final ItemAxe RUBY_AXE = new ItemAxeX(ModToolMaterials.RUBY);
+	public static final ItemHoe RUBY_HOE = new ItemHoe(ModToolMaterials.RUBY);
 
 	public static final Item RUBY_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.HEAD,.5f ,7);
 	public static final Item RUBY_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.CHEST,.5f, 10);
@@ -143,11 +143,11 @@ public class ModItems {
 	public static final Item RUBY_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.FEET,.5f, 5);
 
 	//SAPPHIRE//
-	public static final ItemSword SAPPHIRE_SWORD = new ItemSword(ToolMaterials.SAPPHIRE);
-	public static final ItemSpade SAPPHIRE_SHOVEL = new ItemSpadeX(ToolMaterials.SAPPHIRE);
-	public static final ItemPickaxe SAPPHIRE_PICKAXE = new ItemPickaxeX(ToolMaterials.SAPPHIRE);
-	public static final ItemAxe SAPPHIRE_AXE = new ItemAxeX(ToolMaterials.SAPPHIRE);
-	public static final ItemHoe SAPPHIRE_HOE = new ItemHoe(ToolMaterials.SAPPHIRE);
+	public static final ItemSword SAPPHIRE_SWORD = new ItemSword(ModToolMaterials.SAPPHIRE);
+	public static final ItemSpade SAPPHIRE_SHOVEL = new ItemSpadeX(ModToolMaterials.SAPPHIRE);
+	public static final ItemPickaxe SAPPHIRE_PICKAXE = new ItemPickaxeX(ModToolMaterials.SAPPHIRE);
+	public static final ItemAxe SAPPHIRE_AXE = new ItemAxeX(ModToolMaterials.SAPPHIRE);
+	public static final ItemHoe SAPPHIRE_HOE = new ItemHoe(ModToolMaterials.SAPPHIRE);
 
 	public static final Item SAPPHIRE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.HEAD,1, 9);
 	public static final Item SAPPHIRE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.CHEST,1, 14);
@@ -155,11 +155,11 @@ public class ModItems {
 	public static final Item SAPPHIRE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_SAPPHIRE, 1, EntityEquipmentSlot.FEET,1, 7);
 
 	//MAJORITE//
-	public static final ItemSword MAJORITE_SWORD = new ItemSword(ToolMaterials.MAJORITE);
-	public static final ItemSpade MAJORITE_SHOVEL = new ItemSpadeX(ToolMaterials.MAJORITE);
-	public static final ItemPickaxe MAJORITE_PICKAXE = new ItemPickaxeX(ToolMaterials.MAJORITE);
-	public static final ItemAxe MAJORITE_AXE = new ItemAxeX(ToolMaterials.MAJORITE);
-	public static final ItemHoe MAJORITE_HOE = new ItemHoe(ToolMaterials.MAJORITE);
+	public static final ItemSword MAJORITE_SWORD = new ItemSword(ModToolMaterials.MAJORITE);
+	public static final ItemSpade MAJORITE_SHOVEL = new ItemSpadeX(ModToolMaterials.MAJORITE);
+	public static final ItemPickaxe MAJORITE_PICKAXE = new ItemPickaxeX(ModToolMaterials.MAJORITE);
+	public static final ItemAxe MAJORITE_AXE = new ItemAxeX(ModToolMaterials.MAJORITE);
+	public static final ItemHoe MAJORITE_HOE = new ItemHoe(ModToolMaterials.MAJORITE);
 
 	public static final Item MAJORITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.HEAD,1.5f, 12);
 	public static final Item MAJORITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.CHEST,1.5f, 19);
@@ -167,11 +167,11 @@ public class ModItems {
 	public static final Item MAJORITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_MAJORITE, 1, EntityEquipmentSlot.FEET,1.5f, 10);
 
 	//AMAZONITE//
-	public static final ItemSword AMAZONITE_SWORD = new ItemSword(ToolMaterials.AMAZONITE);
-	public static final ItemSpade AMAZONITE_SHOVEL = new ItemSpadeX(ToolMaterials.AMAZONITE);
-	public static final ItemPickaxe AMAZONITE_PICKAXE = new ItemPickaxeX(ToolMaterials.AMAZONITE);
-	public static final ItemAxe AMAZONITE_AXE = new ItemAxeX(ToolMaterials.AMAZONITE);
-	public static final ItemHoe AMAZONITE_HOE = new ItemHoe(ToolMaterials.AMAZONITE);
+	public static final ItemSword AMAZONITE_SWORD = new ItemSword(ModToolMaterials.AMAZONITE);
+	public static final ItemSpade AMAZONITE_SHOVEL = new ItemSpadeX(ModToolMaterials.AMAZONITE);
+	public static final ItemPickaxe AMAZONITE_PICKAXE = new ItemPickaxeX(ModToolMaterials.AMAZONITE);
+	public static final ItemAxe AMAZONITE_AXE = new ItemAxeX(ModToolMaterials.AMAZONITE);
+	public static final ItemHoe AMAZONITE_HOE = new ItemHoe(ModToolMaterials.AMAZONITE);
 
 	public static final Item AMAZONITE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.HEAD,2, 16);
 	public static final Item AMAZONITE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.CHEST,2, 26);
@@ -179,11 +179,11 @@ public class ModItems {
 	public static final Item AMAZONITE_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_AMAZONITE, 1, EntityEquipmentSlot.FEET,2, 14);
 
 	//ONYX//
-	public static final ItemSword ONYX_SWORD = new ItemSword(ToolMaterials.ONYX);
-	public static final ItemSpade ONYX_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX);
-	public static final ItemPickaxe ONYX_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX);
-	public static final ItemAxe ONYX_AXE = new ItemAxeX(ToolMaterials.ONYX);
-	public static final ItemHoe ONYX_HOE = new ItemHoe(ToolMaterials.ONYX);
+	public static final ItemSword ONYX_SWORD = new ItemSword(ModToolMaterials.ONYX);
+	public static final ItemSpade ONYX_SHOVEL = new ItemSpadeX(ModToolMaterials.ONYX);
+	public static final ItemPickaxe ONYX_PICKAXE = new ItemPickaxeX(ModToolMaterials.ONYX);
+	public static final ItemAxe ONYX_AXE = new ItemAxeX(ModToolMaterials.ONYX);
+	public static final ItemHoe ONYX_HOE = new ItemHoe(ModToolMaterials.ONYX);
 
 	public static final Item ONYX_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.HEAD,2.5f, 21);
 	public static final Item ONYX_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.CHEST,2.5f, 35);
@@ -191,11 +191,11 @@ public class ModItems {
 	public static final Item ONYX_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX, 1, EntityEquipmentSlot.FEET,2.5f, 19);
 
 	//ONYX II//
-	public static final ItemSword ONYX_II_SWORD = new ItemSword(ToolMaterials.ONYX_II);
-	public static final ItemSpade ONYX_II_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_II);
-	public static final ItemPickaxe ONYX_II_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_II);
-	public static final ItemAxe ONYX_II_AXE = new ItemAxeX(ToolMaterials.ONYX_II);
-	public static final ItemHoe ONYX_II_HOE = new ItemHoe(ToolMaterials.ONYX_II);
+	public static final ItemSword ONYX_II_SWORD = new ItemSword(ModToolMaterials.ONYX_II);
+	public static final ItemSpade ONYX_II_SHOVEL = new ItemSpadeX(ModToolMaterials.ONYX_II);
+	public static final ItemPickaxe ONYX_II_PICKAXE = new ItemPickaxeX(ModToolMaterials.ONYX_II);
+	public static final ItemAxe ONYX_II_AXE = new ItemAxeX(ModToolMaterials.ONYX_II);
+	public static final ItemHoe ONYX_II_HOE = new ItemHoe(ModToolMaterials.ONYX_II);
 
 	public static final Item ONYX_II_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_II, 1, EntityEquipmentSlot.HEAD,3, 28);
 	public static final Item ONYX_II_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_II, 1, EntityEquipmentSlot.CHEST,3, 47);
@@ -203,11 +203,11 @@ public class ModItems {
 	public static final Item ONYX_II_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_II, 1, EntityEquipmentSlot.FEET,3, 26);
 
 	//ONYX III//
-	public static final ItemSword ONYX_III_SWORD = new ItemSword(ToolMaterials.ONYX_III);
-	public static final ItemSpade ONYX_III_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_III);
-	public static final ItemPickaxe ONYX_III_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_III);
-	public static final ItemAxe ONYX_III_AXE = new ItemAxeX(ToolMaterials.ONYX_III);
-	public static final ItemHoe ONYX_III_HOE = new ItemHoe(ToolMaterials.ONYX_III);
+	public static final ItemSword ONYX_III_SWORD = new ItemSword(ModToolMaterials.ONYX_III);
+	public static final ItemSpade ONYX_III_SHOVEL = new ItemSpadeX(ModToolMaterials.ONYX_III);
+	public static final ItemPickaxe ONYX_III_PICKAXE = new ItemPickaxeX(ModToolMaterials.ONYX_III);
+	public static final ItemAxe ONYX_III_AXE = new ItemAxeX(ModToolMaterials.ONYX_III);
+	public static final ItemHoe ONYX_III_HOE = new ItemHoe(ModToolMaterials.ONYX_III);
 
 	public static final Item ONYX_III_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_III, 1, EntityEquipmentSlot.HEAD,3.5f, 37);
 	public static final Item ONYX_III_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_III, 1, EntityEquipmentSlot.CHEST,3.5f, 62);
@@ -215,11 +215,11 @@ public class ModItems {
 	public static final Item ONYX_III_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_III, 1, EntityEquipmentSlot.FEET,3.5f, 34);
 
 	//ONYX IV//
-	public static final ItemSword ONYX_IV_SWORD = new ItemSword(ToolMaterials.ONYX_IV);
-	public static final ItemSpade ONYX_IV_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_IV);
-	public static final ItemPickaxe ONYX_IV_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_IV);
-	public static final ItemAxe ONYX_IV_AXE = new ItemAxeX(ToolMaterials.ONYX_IV);
-	public static final ItemHoe ONYX_IV_HOE = new ItemHoe(ToolMaterials.ONYX_IV);
+	public static final ItemSword ONYX_IV_SWORD = new ItemSword(ModToolMaterials.ONYX_IV);
+	public static final ItemSpade ONYX_IV_SHOVEL = new ItemSpadeX(ModToolMaterials.ONYX_IV);
+	public static final ItemPickaxe ONYX_IV_PICKAXE = new ItemPickaxeX(ModToolMaterials.ONYX_IV);
+	public static final ItemAxe ONYX_IV_AXE = new ItemAxeX(ModToolMaterials.ONYX_IV);
+	public static final ItemHoe ONYX_IV_HOE = new ItemHoe(ModToolMaterials.ONYX_IV);
 
 	public static final Item ONYX_IV_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_IV, 1, EntityEquipmentSlot.HEAD,4, 49);
 	public static final Item ONYX_IV_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_IV, 1, EntityEquipmentSlot.CHEST,4, 83);
@@ -227,22 +227,22 @@ public class ModItems {
 	public static final Item ONYX_IV_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_IV, 1, EntityEquipmentSlot.FEET,4, 45);
 
 	//ONYX V//
-	public static final ItemSword ONYX_V_SWORD = new ItemSword(ToolMaterials.ONYX_V);
-	public static final ItemSpade ONYX_V_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_V);
-	public static final ItemPickaxe ONYX_V_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_V);
-	public static final ItemAxe ONYX_V_AXE = new ItemAxeX(ToolMaterials.ONYX_V);
-	public static final ItemHoe ONYX_V_HOE = new ItemHoe(ToolMaterials.ONYX_V);
+	public static final ItemSword ONYX_V_SWORD = new ItemSword(ModToolMaterials.ONYX_V);
+	public static final ItemSpade ONYX_V_SHOVEL = new ItemSpadeX(ModToolMaterials.ONYX_V);
+	public static final ItemPickaxe ONYX_V_PICKAXE = new ItemPickaxeX(ModToolMaterials.ONYX_V);
+	public static final ItemAxe ONYX_V_AXE = new ItemAxeX(ModToolMaterials.ONYX_V);
+	public static final ItemHoe ONYX_V_HOE = new ItemHoe(ModToolMaterials.ONYX_V);
 
 	public static final Item ONYX_V_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 1, EntityEquipmentSlot.HEAD,5, 66);
 	public static final Item ONYX_V_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 1, EntityEquipmentSlot.CHEST,5, 110);
 	public static final Item ONYX_V_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 2, EntityEquipmentSlot.LEGS,5, 88);
 	public static final Item ONYX_V_BOOTS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_V, 1, EntityEquipmentSlot.FEET,5, 62);
 
-	public static final ItemSword ONYX_CORE_SWORD = new ItemSword(ToolMaterials.ONYX_CORE);
-	public static final ItemSpade ONYX_CORE_SHOVEL = new ItemSpadeX(ToolMaterials.ONYX_CORE);
-	public static final ItemPickaxe ONYX_CORE_PICKAXE = new ItemPickaxeX(ToolMaterials.ONYX_CORE);
-	public static final ItemAxe ONYX_CORE_AXE = new ItemAxeX(ToolMaterials.ONYX_CORE);
-	public static final ItemHoe ONYX_CORE_HOE = new ItemHoe(ToolMaterials.ONYX_CORE);
+	public static final ItemSword ONYX_CORE_SWORD = new ItemSword(ModToolMaterials.ONYX_CORE);
+	public static final ItemSpade ONYX_CORE_SHOVEL = new ItemSpadeX(ModToolMaterials.ONYX_CORE);
+	public static final ItemPickaxe ONYX_CORE_PICKAXE = new ItemPickaxeX(ModToolMaterials.ONYX_CORE);
+	public static final ItemAxe ONYX_CORE_AXE = new ItemAxeX(ModToolMaterials.ONYX_CORE);
+	public static final ItemHoe ONYX_CORE_HOE = new ItemHoe(ModToolMaterials.ONYX_CORE);
 	public static final Item ONYX_CORE_HELMET = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_CORE, 1, EntityEquipmentSlot.HEAD,6, 87);
 	public static final Item ONYX_CORE_CHESTPLATE = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_CORE, 1, EntityEquipmentSlot.CHEST,6, 145);
 	public static final Item ONYX_CORE_LEGGINGS = new ArmorBase(ArmorMaterials.ARMOR_MATERIAL_ONYX_CORE, 2, EntityEquipmentSlot.LEGS,6, 116);

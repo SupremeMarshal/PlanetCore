@@ -3,7 +3,7 @@ package com.PlanetCore.util.handlers;
 import com.PlanetCore.blocks.Powered_ladders.IronLadderBlock;
 import com.PlanetCore.client.GuiTutorialBook;
 import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.items.Drills.IronDrill;
+import com.PlanetCore.items.Drills.IronDrillItem;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.armor.ArmorBase;
 import com.PlanetCore.items.shields.Shield;
@@ -129,14 +129,14 @@ public class ClientHandler {
     public static void trackLeftClick(InputUpdateEvent e) {
         boolean attacking = Minecraft.getMinecraft().gameSettings.keyBindAttack.isKeyDown();
         ItemStack stack = Minecraft.getMinecraft().player.getHeldItemMainhand();
-        if (stack.getItem() instanceof IronDrill) {
-            IronDrill ironDrill = (IronDrill) stack.getItem();
+        if (stack.getItem() instanceof IronDrillItem) {
+            IronDrillItem ironDrillItem = (IronDrillItem) stack.getItem();
             AnimationController<?> controller =
-                    GeckoLibUtil.getControllerForStack(ironDrill.getFactory(), stack, IronDrill.CTRL_NAME);
+                    GeckoLibUtil.getControllerForStack(ironDrillItem.getFactory(), stack, IronDrillItem.CTRL_NAME);
             if (attacking) {
-                controller.setAnimation(IronDrill.ACTIVE_DRILL);
+                controller.setAnimation(IronDrillItem.ACTIVE_DRILL);
             } else {
-                controller.setAnimation(IronDrill.INACTIVE_DRILL);
+                controller.setAnimation(IronDrillItem.INACTIVE_DRILL);
             }
         }
     }
@@ -203,7 +203,7 @@ public class ClientHandler {
 
         if (player != null) {
             ItemStack stack = player.getHeldItemMainhand();
-            if (stack.getItem() instanceof IronDrill) {
+            if (stack.getItem() instanceof IronDrillItem) {
                 ISound sound = e.getSound();
                 ResourceLocation rl = sound.getSoundLocation();
                 if (rl.getPath().endsWith("hit")) {
