@@ -35,7 +35,7 @@ public class PickaxeRelentlessHandler {
         EntityPlayer player = event.getEntityPlayer();
         BlockPos pos = event.getPos();
         IBlockState state = event.getState();
-        event.setCanceled(handleRelentless(player,state,pos, false));
+        event.setCanceled(handleRelentless(player,state,pos));
     }
 
     public static void buildRelentlessMap() {
@@ -62,21 +62,21 @@ public class PickaxeRelentlessHandler {
         EntityPlayer player = e.getPlayer();
         BlockPos pos = e.getPos();
         IBlockState state = e.getState();
-        e.setCanceled(handleRelentless(player,state,pos, true));
+        e.setCanceled(handleRelentless(player,state,pos));
     }
 
-    private static boolean handleRelentless(EntityPlayer player, IBlockState state, BlockPos pos, boolean aboutToBreak) {
+    /**
+     * return true if the block should be prevented from breaking
+     */
+    private static boolean handleRelentless(EntityPlayer player, IBlockState state, BlockPos pos) {
         if (player.capabilities.isCreativeMode) return false;
         ItemStack stack = player.getHeldItemMainhand();
         if (state.getBlock() instanceof BlockBase && !(state.getBlock() instanceof SuperCompressedOreBlock)) {
             float blockHardness = state.getBlockHardness(player.world,pos);
             float relentless = getRelentless(stack);
             float breaktime = blockHardness * 1.5F / stack.getDestroySpeed(state);//is there a better way?
-
             //Determine if the block is indestructible.
-            if (breaktime > relentless) {
-                return true;
-            }
+            return breaktime > relentless;
         }
         return false;
     }
