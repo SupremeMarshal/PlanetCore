@@ -2,7 +2,7 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.items.Drills.IronDrill;
+import com.PlanetCore.items.Drills.IronDrillItem;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -17,7 +17,6 @@ import java.util.Random;
 
 public class SuperCompressedOreBlock extends BlockBase {
 	public final PlanetMaterial planetMaterial;
-	public final PlanetHardness planetHardness;
 	public final PlanetExp planetExp;
 	public SuperCompressedOreBlock(String name, Material material, PlanetMaterial planetMaterial, PlanetHardness planetHardness, PlanetExp planetExp) {
 		super(name, material,false);
@@ -25,7 +24,7 @@ public class SuperCompressedOreBlock extends BlockBase {
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
 		this.planetMaterial = planetMaterial;
-		this.planetHardness = planetHardness;
+		setHardness(planetHardness.hardness);
 		this.planetExp = planetExp;
 	}
 
@@ -35,13 +34,8 @@ public class SuperCompressedOreBlock extends BlockBase {
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		return 20;
-	}
-
-	@Override
 	public float getPlayerRelativeBlockHardness(IBlockState state, EntityPlayer player, World worldIn, BlockPos pos) {
-		return player.getHeldItemMainhand().getItem() instanceof IronDrill ? super.getPlayerRelativeBlockHardness(state, player, worldIn, pos) : -1;
+		return player.getHeldItemMainhand().getItem() instanceof IronDrillItem ? super.getPlayerRelativeBlockHardness(state, player, worldIn, pos) : 0;
 	}
 
 	@Override

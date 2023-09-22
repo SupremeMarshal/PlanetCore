@@ -7,6 +7,7 @@ import com.PlanetCore.init.ModSmelting;
 import com.PlanetCore.net.PacketHandler;
 import com.PlanetCore.util.Reference;
 import com.PlanetCore.util.handlers.ClientHandler;
+import com.PlanetCore.util.handlers.PickaxeRelentlessHandler;
 import com.PlanetCore.util.handlers.RegistryHandler;
 import com.PlanetCore.util.handlers.WorldgenHandler;
 import net.minecraft.scoreboard.ScoreCriteria;
@@ -65,6 +66,7 @@ public class Main {
 
         RegistryHandler.initRegistries(event);
         PacketHandler.registerMessages();
+        PickaxeRelentlessHandler.buildRelentlessMap();
         Scoreboard scoreboard = new Scoreboard();
         ScoreObjective objective = scoreboard.addScoreObjective("planetcore_score", ScoreCriteria.DUMMY);
     }

@@ -6,10 +6,9 @@ import net.minecraftforge.common.util.EnumHelper;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ToolMaterials {
+public class ModToolMaterials {
 
-    public static final Map<Item.ToolMaterial, Float> relentlessMap = new HashMap<>();
-
+    public static final Map<Item.ToolMaterial,Float> toolMaterials = new HashMap<>();
     public static final Item.ToolMaterial COMPLETE_IRON = createToolMaterial("complete_iron", 2, 500, 7.0F, 2.5F, 22, 1.5F);
     public static final Item.ToolMaterial SILVER = createToolMaterial("silver", 2, 33, 10.0F, 3.0F, 22, 1.5F);
     public static final Item.ToolMaterial COMPLETE_SILVER = createToolMaterial("complete_silver", 2, 75, 11.0F, 0F, 22, 1.5F);
@@ -33,7 +32,7 @@ public class ToolMaterials {
     public static final Item.ToolMaterial ONYX_CORE = createToolMaterial("onyx_core", 15, 20000, 1000.0F, 75.0F, 22, 5);
     public static Item.ToolMaterial createToolMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damageVsEntity, int enchantability, float relentless) {
         Item.ToolMaterial toolMaterial = EnumHelper.addToolMaterial(name, harvestLevel, maxUses, efficiency, damageVsEntity, enchantability);
-        relentlessMap.put(toolMaterial, relentless);
+        toolMaterials.put(toolMaterial, relentless);
         return toolMaterial;
     }
 }
