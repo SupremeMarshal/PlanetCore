@@ -1,5 +1,6 @@
 package com.PlanetCore.asm.mixin;
 
+import com.PlanetCore.asm.PlanetCoreFMLLoadingPlugin;
 import com.PlanetCore.client.ClientMixinHooks;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.util.EnumFacing;
@@ -17,7 +18,8 @@ public class PlayerControllerMPMixin {
 
     @Shadow private float curBlockDamageMP;
 
-    @Inject(method = "onPlayerDamageBlock",at = @At(value = "INVOKE",target = "Lnet/minecraft/client/multiplayer/WorldClient;sendBlockBreakProgress(ILnet/minecraft/util/math/BlockPos;I)V"))
+
+    @Inject(method = "onPlayerDamageBlock",at = @At(value = "INVOKE",target = "Lnet/minecraft/client/multiplayer/WorldClient;sendBlockBreakProgress(ILnet/minecraft/util/math/BlockPos;I)V"),remap = PlanetCoreFMLLoadingPlugin.REMAP)
     private void hookUnbreakableSounds(BlockPos posBlock, EnumFacing directionFacing, CallbackInfoReturnable<Boolean> cir) {
         ClientMixinHooks.playUnbreakableSounds(this.stepSoundTickCounter,this.curBlockDamageMP);
     }
