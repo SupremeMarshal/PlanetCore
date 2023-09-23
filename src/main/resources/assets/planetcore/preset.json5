@@ -1932,7 +1932,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ore_iron"
+						"Name": "minecraft:iron_ore"
 					},
 					"biomes": null,
 					"placeBlockWhen": null,
@@ -3635,7 +3635,7 @@
 						]
 					},
 					"spawnSize": 18,
-					"spawnTries": 1,
+					"spawnTries": 2,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
@@ -4217,7 +4217,7 @@
 						]
 					},
 					"spawnSize": 18,
-					"spawnTries": 1,
+					"spawnTries": 2,
 					"spawnProbability": 1.0,
 					"minHeight": -Infinity,
 					"maxHeight": Infinity
