@@ -30,7 +30,7 @@ public abstract class MixinWorld {
     @Shadow public abstract WorldType getWorldType();
 
     @Inject(at = @At("HEAD"), method = "setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z", cancellable =
-            true, remap = false)
+            true)
     public void setBlockState(BlockPos pos, IBlockState state, int flags, CallbackInfoReturnable<Boolean> callback) {
         if (!((ICubicWorld) this).isCubicWorld() ||
                 !(getWorldType() instanceof PlanetCoreWorldType) ||

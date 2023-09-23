@@ -15,7 +15,7 @@ public abstract class EntityLivingBaseMixin extends Entity {
         super(worldIn);
     }
 
-    @Inject(method = "travel",at = @At(value = "INVOKE",target = "Lnet/minecraft/entity/EntityLivingBase;hasNoGravity()Z",ordinal = 0),remap = false)
+    @Inject(method = "travel",at = @At(value = "INVOKE",target = "Lnet/minecraft/entity/EntityLivingBase;hasNoGravity()Z",ordinal = 0))
     private void modifyGravity(float strafe, float vertical, float forward, CallbackInfo ci) {
         if (!hasNoGravity()) {
             double gravityMultiplier = GravityHandler.calculateGravityModifier(posY);
