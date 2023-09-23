@@ -15,9 +15,11 @@ import net.minecraft.client.audio.MusicTicker;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Enchantments;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
@@ -85,31 +87,59 @@ public class ClientHandler {
                 float chestArmor = 0;
                 float legsArmor = 0;
                 float bootsArmor = 0;
-                float shieldArmor = 0;
+
+                float helmetExtraArmor = 0;
+                float chestExtraArmor = 0;
+                float legsExtraArmor = 0;
+                float bootsExtraArmor = 0;
+                float shieldExtraArmor = 0;
 
                 if (helmet.getItem() instanceof ArmorBase)
-                    helmetArmor = ((ArmorBase) helmet.getItem()).extraArmor;
+                    helmetExtraArmor = ((ArmorBase) helmet.getItem()).extraArmor;
                 if (chestplate.getItem() instanceof ArmorBase)
-                    chestArmor = ((ArmorBase) chestplate.getItem()).extraArmor;
+                    chestExtraArmor = ((ArmorBase) chestplate.getItem()).extraArmor;
                 if (leggings.getItem() instanceof ArmorBase)
-                    legsArmor = ((ArmorBase) leggings.getItem()).extraArmor;
+                    legsExtraArmor = ((ArmorBase) leggings.getItem()).extraArmor;
                 if (boots.getItem() instanceof ArmorBase)
-                    bootsArmor = ((ArmorBase) boots.getItem()).extraArmor;
+                    bootsExtraArmor = ((ArmorBase) boots.getItem()).extraArmor;
                 if (shield.getItem() instanceof Shield)
-                    shieldArmor = ((Shield) shield.getItem()).extraArmor;
+                    shieldExtraArmor = ((Shield) shield.getItem()).extraArmor;
+
+                if (helmet.getItem() instanceof ItemArmor)
+                    helmetArmor = ((ItemArmor) helmet.getItem()).damageReduceAmount;
+                if (chestplate.getItem() instanceof ItemArmor)
+                    chestArmor = ((ItemArmor) chestplate.getItem()).damageReduceAmount;
+                if (leggings.getItem() instanceof ItemArmor)
+                    legsArmor = ((ItemArmor) leggings.getItem()).damageReduceAmount;
+                if (boots.getItem() instanceof ItemArmor)
+                    bootsArmor = ((ItemArmor) boots.getItem()).damageReduceAmount;
+
+                int helmetProtection = EnchantmentHelper.getEnchantmentLevel(Enchantments.PROTECTION, helmet);
+                int chestProtection = EnchantmentHelper.getEnchantmentLevel(Enchantments.PROTECTION, chestplate);
+                int legsProtection = EnchantmentHelper.getEnchantmentLevel(Enchantments.PROTECTION, leggings);
+                int bootsProtection = EnchantmentHelper.getEnchantmentLevel(Enchantments.PROTECTION, boots);
+
+                helmetArmor += (helmetArmor + helmetExtraArmor) * ((helmetProtection) * 0.25);
+                chestArmor += (chestArmor + chestExtraArmor) * ((chestProtection) * 0.25);
+                legsArmor += (legsArmor + legsExtraArmor) * ((legsProtection) * 0.25);
+                bootsArmor += (bootsArmor + bootsExtraArmor) * ((bootsProtection) * 0.25);
 
                 // Calculate the total extra armor value
-                float totalExtraArmor = (helmetArmor + chestArmor + legsArmor + bootsArmor + shieldArmor);
+                float totalExtraArmor = (helmetArmor + chestArmor + legsArmor + bootsArmor + shieldExtraArmor);
 
-                float totalArmor = armor + toughness + totalExtraArmor;
+                float totalArmor = toughness + totalExtraArmor;
                 // Check for Resistance effect
                 PotionEffect resistanceEffect = player.getActivePotionEffect(MobEffects.RESISTANCE);
+                int amplifier = 0;
+                // Get enchantment levels from each armor piece
+
                 if (resistanceEffect != null) {
-                    int amplifier = resistanceEffect.getAmplifier();
-                    totalArmor += totalArmor * ((amplifier + 1) * 0.2); // 10% more armor for each level of Resistance
+                    amplifier = resistanceEffect.getAmplifier();
+                    totalArmor += totalArmor * ((amplifier + 1) * 0.25); // 20% more armor for each level of Resistance
                 }
                 // Modify damage reduction calculation here
                 //damage_done * 1 - (((armor)*0.06)/(1+0.06*(armor))
+
                 float modifiedDamage = (float) (((totalArmor) * 0.03) / (float) (1 + 0.03 * (totalArmor)));
                 event.getToolTip().add("§9" + String.format("%.2f", modifiedDamage * 100) + "%");
             }
