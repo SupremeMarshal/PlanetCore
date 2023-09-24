@@ -1,5 +1,6 @@
 package com.PlanetCore.asm.mixin;
 
+import com.PlanetCore.asm.PlanetCoreFMLLoadingPlugin;
 import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -17,7 +18,8 @@ public class WorldGenLakesMixin {
 
     @Shadow @Final private Block block;
 
-    @ModifyArg(method = "generate",
+
+    @ModifyArg(method = "generate", remap = PlanetCoreFMLLoadingPlugin.REMAP,
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/world/World;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z"
