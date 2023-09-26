@@ -52,7 +52,7 @@ public class EntityInit
 		EntityRegistry.registerModEntity(new ResourceLocation(Reference.MOD_ID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
 		Biome[] spawnBiomes = allbiomes(Biome.REGISTRY);
 		EntityRegistry.addSpawn(EntityDemon.class, 6, 1, 3, EnumCreatureType.MONSTER, spawnBiomes);
-		EntityRegistry.addSpawn(EntityDemon.class, 5, 1, 1, EnumCreatureType.MONSTER, getNetherBiome());
+		EntityRegistry.addSpawn(EntityDemon.class, 1, 1, 1, EnumCreatureType.MONSTER, getNetherBiome());
 		EntityRegistry.addSpawn(EntityCoreDemon.class, 1, 1, 1, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityOnyxDemon.class, 1, 1, 1, EnumCreatureType.MONSTER, spawnBiomes);
 		EntityRegistry.addSpawn(EntityGhoul.class, 5, 1, 2, EnumCreatureType.MONSTER, spawnBiomes);
