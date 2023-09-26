@@ -38,6 +38,19 @@ public class CorestoneOre extends BlockBase implements IMetaName
 	}
 
 	@Override
+	public int quantityDropped(Random random)
+	{
+		if (this == ModBlocks.CORESTONE.getStateFromMeta(4)) return 4 + random.nextInt(5);
+		else if (this == ModBlocks.CORESTONE.getStateFromMeta(3)) return 4 + random.nextInt(2);
+		else return 1;
+	}
+	@Override
+	public int quantityDroppedWithBonus(int fortune, Random random)
+	{
+		return this.quantityDropped(random) + random.nextInt(fortune + 1);
+	}
+
+	@Override
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
 	{
 		int meta = getMetaFromState(worldIn.getBlockState(pos));

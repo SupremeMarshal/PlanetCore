@@ -41,6 +41,19 @@ public class QuartzOre extends BlockBase implements IMetaName
 	}
 
 	@Override
+	public int quantityDropped(Random random)
+	{
+		if (this == ModBlocks.QUARTZ.getStateFromMeta(4)) return 4 + random.nextInt(5);
+		else if (this == ModBlocks.QUARTZ.getStateFromMeta(3)) return 4 + random.nextInt(2);
+		else return 1;
+	}
+	@Override
+	public int quantityDroppedWithBonus(int fortune, Random random)
+	{
+		return this.quantityDropped(random) + random.nextInt(fortune + 1);
+	}
+
+	@Override
 	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
 		return 2;
 	}

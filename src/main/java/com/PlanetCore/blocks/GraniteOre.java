@@ -41,6 +41,19 @@ public class GraniteOre extends BlockBase implements IMetaName
 	}
 
 	@Override
+	public int quantityDropped(Random random)
+	{
+		if (this == ModBlocks.GRANITE.getStateFromMeta(4)) return 4 + random.nextInt(5);
+		else if (this == ModBlocks.GRANITE.getStateFromMeta(3)) return 4 + random.nextInt(2);
+		else return 1;
+	}
+	@Override
+	public int quantityDroppedWithBonus(int fortune, Random random)
+	{
+		return this.quantityDropped(random) + random.nextInt(fortune + 1);
+	}
+
+	@Override
 	public int damageDropped(IBlockState state) {
 		int meta = getMetaFromState(state);
 		if (meta == 4) return EnumDyeColor.BLUE.getDyeDamage();

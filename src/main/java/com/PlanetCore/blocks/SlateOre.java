@@ -3,18 +3,28 @@ package com.PlanetCore.blocks;
 import com.PlanetCore.init.ModBlocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Random;
 
 public class SlateOre extends Slate
 {
 
+	private boolean isOn;
 	public final PlanetMaterial planetMaterial;
 	public final PlanetHardness planetHardness;
 	public final PlanetHarvestLevel planetHarvestLevel;
@@ -67,25 +77,8 @@ public class SlateOre extends Slate
 	}
 
 	@Override
-	public int quantityDroppedWithBonus(int fortune, Random random) {
-		if (this == ModBlocks.SLATE_REDSTONE)
-		{
-			return this.quantityDropped(random) + random.nextInt(fortune + 1);
-		}
-		else if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
-		{
-			int i = random.nextInt(fortune + 2) - 1;
-
-			if (i < 0)
-			{
-				i = 0;
-			}
-
-			return this.quantityDropped(random) * (i + 1);
-		}
-		else
-		{
-			return this.quantityDropped(random);
-		}
+	public int quantityDroppedWithBonus(int fortune, Random random)
+	{
+		return this.quantityDropped(random) + random.nextInt(fortune + 1);
 	}
 }
