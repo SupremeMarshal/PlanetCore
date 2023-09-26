@@ -170,6 +170,11 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	}
 
 	@Override
+	protected int getExperiencePoints(EntityPlayer player) {
+		return 50;
+	}
+
+	@Override
 	protected boolean isValidLightLevel() {
 		return true;
 	}
