@@ -7,6 +7,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
@@ -43,45 +44,40 @@ public class GemLavaFluid extends BlockFluidClassic {
 
 	}
 
-	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
-	{
+	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+		if (entityIn instanceof EntityPlayerMP) {
+			EntityPlayerMP player = (EntityPlayerMP) entityIn;
+			PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 
-		if (entityIn instanceof EntityLivingBase)
-		{
-			PotionEffect effect = ((EntityLivingBase) entityIn).getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
-			float damage = 0;
-			if (state.getBlock() == ModBlocks.DIAMOND_LAVA_FLUID) damage = 2;
-			else if (state.getBlock() == ModBlocks.RUBY_LAVA_FLUID) damage = 8;
-			else if (state.getBlock() == ModBlocks.SAPPHIRE_LAVA_FLUID) damage = 12;
-			else if (state.getBlock() == ModBlocks.MAJORITE_LAVA_FLUID) damage = 32;
-			else if (state.getBlock() == ModBlocks.AMAZONITE_LAVA_FLUID) damage = 40;
-			else if (state.getBlock() == ModBlocks.ONYX_LAVA_FLUID) damage = 48;
-			else if (state.getBlock() == ModBlocks.PAINITE_LAVA_FLUID) damage = 64;
+			float damage = this == ModBlocks.ONYX_LAVA_FLUID ? 128 : this == ModBlocks.PAINITE_LAVA_FLUID ? 256 : 16;
 			if (effect == null) {
-				entityIn.attackEntityFrom(DamageSource.LAVA, damage * 4);
 				entityIn.setFire(10);
-			}
-			else if (effect != null && effect.getAmplifier() == 0) {
+				entityIn.attackEntityFrom(DamageSource.LAVA, damage);
 				entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
-			}
-			else if (effect != null && effect.getAmplifier() == 1) {
-				damage = damage / 2;
-				if (damage >= 1) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
-			}
-			else if (effect != null && effect.getAmplifier() == 2) {
-				damage = damage / 4;
-				if (damage >= 2) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
-			}
-			else if (effect != null && effect.getAmplifier() == 3) {
-				damage = damage / 8;
-				if (damage >= 3) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
-			}
-			else if (effect != null && effect.getAmplifier() == 4) {
-				damage = damage / 16;
-				if (damage >= 4) entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			} else {
+				int amplifier = effect.getAmplifier();
+
+				if (amplifier == 0) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 2);
+				} else if (amplifier == 1) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 4);
+				} else if (amplifier == 2) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 8);
+				} else if (amplifier == 3 && this == ModBlocks.ONYX_LAVA_FLUID || this == ModBlocks.PAINITE_LAVA_FLUID) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 16);
+				} else if (amplifier == 4 && this == ModBlocks.ONYX_LAVA_FLUID || this == ModBlocks.PAINITE_LAVA_FLUID) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 32);
+				} else if (amplifier == 5 && this == ModBlocks.ONYX_LAVA_FLUID || this == ModBlocks.PAINITE_LAVA_FLUID) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 64);
+				}
 			}
 		}
-		super.onEntityCollision(worldIn, pos, state, entityIn);
 	}
 
 	public boolean checkForMixing(World worldIn, BlockPos pos, IBlockState state)

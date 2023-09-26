@@ -8,7 +8,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
@@ -39,14 +42,40 @@ public class IronLavaFluid extends BlockFluidClassic {
 
 	}
 
-	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
-	{
 
-		if (entityIn instanceof EntityPlayerMP)
-		{
-			entityIn.setFire(10);
-			entityIn.attackEntityFrom(DamageSource.LAVA, 8.0F);
-			entityIn.attackEntityFrom(DamageSource.GENERIC, 2.0F);
+	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+		if (entityIn instanceof EntityPlayerMP) {
+			EntityPlayerMP player = (EntityPlayerMP) entityIn;
+			PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
+
+			float damage = this == ModBlocks.SUPERHEATED_LAVA_FLUID ? 128 : 8;
+			if (effect == null) {
+				entityIn.setFire(10);
+				entityIn.attackEntityFrom(DamageSource.LAVA, damage);
+				entityIn.attackEntityFrom(DamageSource.GENERIC, damage);
+			} else {
+				int amplifier = effect.getAmplifier();
+
+				if (amplifier == 0) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 2);
+				} else if (amplifier == 1) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 4);
+				} else if (amplifier == 2) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 8);
+				} else if (amplifier == 3) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 16);
+				} else if (amplifier == 4) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 32);
+				} else if (amplifier == 5) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, damage / 64);
+				}
+			}
 		}
 	}
 
@@ -69,7 +98,7 @@ public class IronLavaFluid extends BlockFluidClassic {
 			{
 				Integer integer = (Integer)state.getValue(LEVEL);
 
-				if (integer.intValue() == 0 && this.canCreateSources)
+				if (integer.intValue() == 0)
 				{
 					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, ModBlocks.SUPERCOMPRESSED_IRON.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
@@ -78,7 +107,7 @@ public class IronLavaFluid extends BlockFluidClassic {
 
 				if (integer.intValue() <= 4)
 				{
-					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, Blocks.OBSIDIAN.getDefaultState()));
+					worldIn.setBlockState(pos, net.minecraftforge.event.ForgeEventFactory.fireFluidPlaceBlockEvent(worldIn, pos, pos, Blocks.COBBLESTONE.getDefaultState()));
 					this.triggerMixEffects(worldIn, pos);
 					return true;
 				}

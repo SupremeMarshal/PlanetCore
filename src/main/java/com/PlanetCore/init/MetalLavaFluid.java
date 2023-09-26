@@ -8,7 +8,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumParticleTypes;
@@ -39,14 +41,26 @@ public class MetalLavaFluid extends BlockFluidClassic {
 
 	}
 
-	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
-	{
+	public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
+		if (entityIn instanceof EntityPlayerMP) {
+			EntityPlayerMP player = (EntityPlayerMP) entityIn;
+			PotionEffect effect = player.getActivePotionEffect(MobEffects.FIRE_RESISTANCE);
 
-		if (entityIn instanceof EntityPlayerMP)
-		{
-			entityIn.setFire(10);
-			entityIn.attackEntityFrom(DamageSource.LAVA, 8.0F);
-			entityIn.attackEntityFrom(DamageSource.GENERIC, 2.0F);
+			if (effect == null) {
+				entityIn.setFire(10);
+				entityIn.attackEntityFrom(DamageSource.LAVA, 8.0F);
+				entityIn.attackEntityFrom(DamageSource.GENERIC, 8.0F);
+			} else {
+				int amplifier = effect.getAmplifier();
+
+				if (amplifier == 0) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, 4.0F);
+				} else if (amplifier == 1) {
+					entityIn.setFire(10);
+					entityIn.attackEntityFrom(DamageSource.GENERIC, 2.0F);
+				}
+			}
 		}
 	}
 
