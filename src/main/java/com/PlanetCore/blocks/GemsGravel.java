@@ -29,16 +29,30 @@ public class GemsGravel extends BlockGravel {
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        if (fortune > 3)
-        {
-            fortune = 3;
-        }
-
-        return rand.nextInt(10 - fortune * 3) == 0 ? planetMaterial.droppedItem : Item.getItemFromBlock(Blocks.GRAVEL);
+        return planetMaterial.droppedItem;
     }
 
     @Override
     public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
         return planetHardness.hardness;
+    }
+
+    @Override
+    public int quantityDroppedWithBonus(int fortune, Random random) {
+        if (fortune > 0 && Item.getItemFromBlock(this) != this.getItemDropped((IBlockState)this.getBlockState().getValidStates().iterator().next(), random, fortune))
+        {
+            int i = random.nextInt(fortune + 2) - 1;
+
+            if (i < 0)
+            {
+                i = 0;
+            }
+
+            return this.quantityDropped(random) * (i + 1);
+        }
+        else
+        {
+            return this.quantityDropped(random);
+        }
     }
 }
