@@ -336,6 +336,8 @@ public class ModItems {
 			new PotionEffect(MobEffects.REGENERATION, 600, 2, false, false),
 			new PotionEffect(MobEffects.FIRE_RESISTANCE, 36000, 0, false, false));
 
+	public static final Item LAVA_GENERATOR = new ItemBlock(ModBlocks.LAVA_GENERATOR).setCreativeTab(CreativeTabs.FOOD);
+
 	public static final Item FIERY_MUSHROOM_FOOD = new FieryMushroomFood(1, 1.0f, false).setCreativeTab(CreativeTabs.FOOD);
 
 	//SHIELDS

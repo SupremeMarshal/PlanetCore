@@ -194,6 +194,7 @@ public class ModBlocks {
     public static final customFire CORE_FIRE = _null();
 
     public static final Mushroom FIERY_MUSHROOM = _null();
+    public static final Block LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL).setHardness(3).setRegistryName("lava_generator").setTranslationKey("lava_generator");
 
     // GENERATED END
 
@@ -325,10 +326,8 @@ public class ModBlocks {
                 new customFire("hot_fire"),
                 new customFire("onyx_fire"),
                 new customFire("core_fire")
-
-
-
         );
+        registry.register(LAVA_GENERATOR);
     }
 
     public static void registerRenders() {

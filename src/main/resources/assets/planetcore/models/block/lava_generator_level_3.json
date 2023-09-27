@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "plenetcore:blocks/lava_generator_end",
+    "side": "planetcore:blocks/lava_generator_side_level_3"
+  }
+}
