@@ -18,7 +18,7 @@ public class WorldGenLakesMixin {
     @Shadow @Final private Block block;
 
 
-    @ModifyArg(method = "generate", remap = true,
+    @ModifyArg(method = "generate",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/world/World;setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z"
