@@ -1,6 +1,5 @@
 package com.PlanetCore.asm.mixin;
 
-import com.PlanetCore.asm.PlanetCoreFMLLoadingPlugin;
 import com.PlanetCore.cwg.PlanetCoreWorldType;
 import io.github.opencubicchunks.cubicchunks.api.world.ICubicWorld;
 import net.minecraft.block.state.IBlockState;
@@ -25,7 +24,7 @@ public abstract class MixinWorld {
 
     @Shadow public abstract WorldType getWorldType();
 
-    @Inject(at = @At("HEAD"), method = "setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z", cancellable = true, remap = PlanetCoreFMLLoadingPlugin.REMAP)
+    @Inject(at = @At("HEAD"), method = "setBlockState(Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z", cancellable = true)
     public void setBlockState(BlockPos pos, IBlockState state, int flags, CallbackInfoReturnable<Boolean> callback) {
         if (!((ICubicWorld) this).isCubicWorld() ||
                 !(getWorldType() instanceof PlanetCoreWorldType) ||

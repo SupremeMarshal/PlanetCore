@@ -1,6 +1,5 @@
 package com.PlanetCore.asm.mixin;
 
-import com.PlanetCore.asm.PlanetCoreFMLLoadingPlugin;
 import com.PlanetCore.util.handlers.GravityHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -17,7 +16,7 @@ public abstract class EntityLivingBaseMixin extends Entity {
     }
 
 
-    @Inject(method = "travel",at = @At(value = "INVOKE",target = "Lnet/minecraft/entity/EntityLivingBase;hasNoGravity()Z",ordinal = 0),remap = PlanetCoreFMLLoadingPlugin.REMAP)
+    @Inject(method = "travel",at = @At(value = "INVOKE",target = "Lnet/minecraft/entity/EntityLivingBase;hasNoGravity()Z",ordinal = 0))
     private void modifyGravity(float strafe, float vertical, float forward, CallbackInfo ci) {
         if (!hasNoGravity()) {
             double gravityMultiplier = GravityHandler.calculateGravityModifier(posY);

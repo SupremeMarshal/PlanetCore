@@ -14,7 +14,7 @@ plugins {
 
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'org.spongepowered.mixin'
-apply from: 'mixinLoadingHacks.gradle'
+//apply from: 'mixinLoadingHacks.gradle'
 
 version = project.property('mod_version')
 group = project.property('mod_id')
@@ -87,7 +87,7 @@ dependencies {
     compileOnly('org.spongepowered:noise:2.0.0-SNAPSHOT')
     implementation 'org.jetbrains:annotations:20.1.0'
 
-    implementation fg.deobf("curse.maven:hackForMixinFMLAgent_deobfedDeps_-223896:2680892")
+    //implementation fg.deobf("curse.maven:hackForMixinFMLAgent_deobfedDeps_-223896:2680892")
     implementation fg.deobf ("com.github.OpenCubicChunks:CubicChunks:c4696fdd5e") {
         transitive = false
     }
@@ -103,6 +103,7 @@ mixin {
     //disableAnnotationProcessorCheck()
     add sourceSets.main, "planetcore.refmap.json"
     config "mixins.planetcore.json"
+    defaultObfuscationEnv "searge"
     debug.verbose = true
 }
 
@@ -135,8 +136,7 @@ jar {
                 "Implementation-Version": "${version}",
                 "Implementation-Vendor" :"planetcore",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                "FMLCorePlugin": "com.PlanetCore.asm.PlanetCoreFMLLoadingPlugin",
-                "FMLCorePluginContainsFMLMod": "false",
+                "FMLCorePluginContainsFMLMod": "true",
                 "ForceLoadAsMod": "true",
                 "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
                 "TweakOrder": "0",
