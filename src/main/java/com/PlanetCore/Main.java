@@ -6,10 +6,7 @@ import com.PlanetCore.cwg.PlanetCoreWorldType;
 import com.PlanetCore.init.ModSmelting;
 import com.PlanetCore.net.PacketHandler;
 import com.PlanetCore.util.Reference;
-import com.PlanetCore.util.handlers.ClientHandler;
-import com.PlanetCore.util.handlers.PickaxeRelentlessHandler;
-import com.PlanetCore.util.handlers.RegistryHandler;
-import com.PlanetCore.util.handlers.WorldgenHandler;
+import com.PlanetCore.util.handlers.*;
 import net.minecraft.scoreboard.ScoreCriteria;
 import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.scoreboard.Scoreboard;
@@ -22,6 +19,7 @@ import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import org.apache.logging.log4j.Logger;
 import software.bernie.example.GeckoLibMod;
 import software.bernie.geckolib3.GeckoLib;
@@ -59,6 +57,7 @@ public class Main {
         MinecraftForge.TERRAIN_GEN_BUS.register(new CustomCaveInjector());
         MinecraftForge.ORE_GEN_BUS.register(new WorldgenHandler());
         new PlanetCoreWorldType();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance,new GuiHandler());
     }
 
     @EventHandler
