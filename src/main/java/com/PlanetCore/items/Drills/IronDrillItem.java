@@ -199,11 +199,9 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
         boolean toReturn = false;
         int use = getEnergyUsed() + getHardnessPenalty(player.world.getBlockState(pos),player.world,pos);
         if (this.getStoredEnergy(stack) >= use) {
-
             //Block hit
-            RayTraceResult ray = player.rayTrace(6,0);//WorldUtil.getNearestBlockWithDefaultReachDistance(player.world, player);
+            RayTraceResult ray = rayTrace(player.world,player,false);
             if (ray != null) {
-
                 //Breaks the Blocks
                 if (!player.isSneaking())
                     toReturn = this.breakBlocks(stack, 1, player.world, pos, ray.sideHit, player);

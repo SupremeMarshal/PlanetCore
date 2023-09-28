@@ -17,6 +17,12 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable {
 
     @Override
     public void update() {
+        if (!world.isRemote) {
+            serverTick();
+        }
+    }
+
+    public void serverTick() {
 
     }
 
