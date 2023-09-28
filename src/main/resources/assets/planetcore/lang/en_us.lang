@@ -1463,3 +1463,5 @@ item.onyx_v_shield.tooltip.1=§a+16 Health
 item.onyx_v_shield.tooltip.2=§a+46%% Knockback Resistance
 
 item.onyx_core_shield.name=Onyx Core Shield
+
+planetcore.container.lava_generator=Lava Generator

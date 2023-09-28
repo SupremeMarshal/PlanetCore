@@ -18,15 +18,16 @@ public class GuiHandler implements IGuiHandler {
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
         TileEntity tileEntity = world.getTileEntity(new BlockPos(x,y,z));
         switch (ID) {
-            case LAVA_GENERATOR:return new LavaGeneratorMenu(player,((LavaGeneratorBlockEntity)tileEntity).getItemStackHandler());
+            case LAVA_GENERATOR:return new LavaGeneratorMenu(player,((LavaGeneratorBlockEntity)tileEntity).getItemStackHandler(),(LavaGeneratorBlockEntity) tileEntity);
         }
         return null;
     }
 
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+        TileEntity tileEntity = world.getTileEntity(new BlockPos(x,y,z));
         switch (ID) {
-            case LAVA_GENERATOR:return new LavaGeneratorScreen(new LavaGeneratorMenu(player,new ItemStackHandler()));
+            case LAVA_GENERATOR:return new LavaGeneratorScreen(new LavaGeneratorMenu(player,new ItemStackHandler(),(LavaGeneratorBlockEntity) tileEntity));
         }
         return null;
     }

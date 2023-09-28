@@ -236,6 +236,13 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
         return false;
     }
 
+    public boolean onBlockDestroyed(ItemStack stack, World worldIn, IBlockState state, BlockPos pos, EntityLivingBase entityLiving) {
+        if (!worldIn.isRemote && (double)state.getBlockHardness(worldIn, pos) != 0.0D) {
+            stack.damageItem(1, entityLiving);
+        }
+        return true;
+    }
+
     public static final AnimationBuilder ACTIVE_DRILL = new AnimationBuilder().addAnimation("drill_active", true);
     public static final AnimationBuilder INACTIVE_DRILL = new AnimationBuilder().addAnimation("drill_inactive", false);
 

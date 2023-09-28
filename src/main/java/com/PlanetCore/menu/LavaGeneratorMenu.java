@@ -1,5 +1,6 @@
 package com.PlanetCore.menu;
 
+import com.PlanetCore.blockentity.LavaGeneratorBlockEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -11,10 +12,12 @@ import net.minecraftforge.items.SlotItemHandler;
 public class LavaGeneratorMenu extends Container {
 
     private final EntityPlayer player;
+    private final LavaGeneratorBlockEntity lavaGeneratorBlockEntity;
 
-    public LavaGeneratorMenu(EntityPlayer player, ItemStackHandler inventory) {
+    public LavaGeneratorMenu(EntityPlayer player, ItemStackHandler inventory, LavaGeneratorBlockEntity lavaGeneratorBlockEntity) {
         this.player = player;
-        addSlotToContainer(new SlotItemHandler(inventory,0,100,50));
+        this.lavaGeneratorBlockEntity = lavaGeneratorBlockEntity;
+        addSlotToContainer(new SlotItemHandler(inventory, 0, 134, 35));
         addPlayerSlots(player.inventory);
     }
 
@@ -44,39 +47,35 @@ public class LavaGeneratorMenu extends Container {
 
     @Override
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
-        
+
         int sc = 1;
-        
+
         ItemStack itemstack = ItemStack.EMPTY;
         Slot slot = this.inventorySlots.get(index);
 
-        if (slot != null && slot.getHasStack())
-        {
+        if (slot != null && slot.getHasStack()) {
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            if (index < sc)
-            {
-                if (!this.mergeItemStack(itemstack1, sc, this.inventorySlots.size(), true))
-                {
+            if (index < sc) {
+                if (!this.mergeItemStack(itemstack1, sc, this.inventorySlots.size(), true)) {
                     return ItemStack.EMPTY;
                 }
-            }
-            else if (!this.mergeItemStack(itemstack1, 0, sc, false))
-            {
+            } else if (!this.mergeItemStack(itemstack1, 0, sc, false)) {
                 return ItemStack.EMPTY;
             }
 
-            if (itemstack1.isEmpty())
-            {
+            if (itemstack1.isEmpty()) {
                 slot.putStack(ItemStack.EMPTY);
-            }
-            else
-            {
+            } else {
                 slot.onSlotChanged();
             }
         }
 
         return itemstack;
+    }
+
+    public LavaGeneratorBlockEntity getLavaGeneratorBlockEntity() {
+        return lavaGeneratorBlockEntity;
     }
 }
