@@ -21,6 +21,6 @@ public class PlayerControllerMPMixin {
 
     @Inject(method = "onPlayerDamageBlock",at = @At(value = "INVOKE",target = "Lnet/minecraft/client/multiplayer/WorldClient;sendBlockBreakProgress(ILnet/minecraft/util/math/BlockPos;I)V"),remap = PlanetCoreFMLLoadingPlugin.REMAP)
     private void hookUnbreakableSounds(BlockPos posBlock, EnumFacing directionFacing, CallbackInfoReturnable<Boolean> cir) {
-        ClientMixinHooks.playUnbreakableSounds(this.stepSoundTickCounter,this.curBlockDamageMP);
+        ClientMixinHooks.playUnbreakableSounds(posBlock,this.stepSoundTickCounter,this.curBlockDamageMP);
     }
 }

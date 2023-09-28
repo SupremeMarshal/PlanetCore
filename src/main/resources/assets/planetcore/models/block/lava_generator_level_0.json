@@ -1,7 +1,8 @@
 {
-  "parent": "block/cube_column",
+  "parent": "block/cube_bottom_top",
   "textures": {
-    "end": "planetcore:blocks/lava_generator_end",
-    "side": "planetcore:blocks/lava_generator_side_level_0"
+    "bottom": "planetcore:blocks/lava_generator_bottom",
+    "top": "planetcore:blocks/lava_generator_top_off",
+    "side": "planetcore:blocks/lava_generator_side_0"
   }
 }

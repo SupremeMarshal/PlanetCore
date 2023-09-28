@@ -76,6 +76,13 @@ repositories {
         name = "JitPack"
         url = "https://jitpack.io/"
     }
+
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+
 }
 
 dependencies {
@@ -97,6 +104,11 @@ dependencies {
     implementation fg.deobf("curse.maven:GeckoLib-388172:4020277") {
         transitive = false
     }
+
+    // compile against the JEI API but do not include it at runtime
+    //compileOnly fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}:api")
+    // at runtime, use the full JEI jar
+    implementation fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}")
 }
 
 mixin {
