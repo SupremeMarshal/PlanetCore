@@ -1,6 +1,7 @@
 package com.PlanetCore.init;
 
 
+import com.PlanetCore.blockentity.LavaGeneratorBlockEntity;
 import com.PlanetCore.blocks.*;
 import com.PlanetCore.blocks.Powered_ladders.DiamondLadderBlock;
 import com.PlanetCore.blocks.Powered_ladders.IronLadderBlock;
@@ -11,11 +12,13 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.registries.IForgeRegistry;
 
 import javax.annotation.Nonnull;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @ObjectHolder(Reference.MOD_ID)
@@ -194,6 +197,7 @@ public class ModBlocks {
     public static final customFire CORE_FIRE = _null();
 
     public static final Mushroom FIERY_MUSHROOM = _null();
+    public static final Block LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL).setHardness(3).setRegistryName("lava_generator").setTranslationKey("lava_generator");
 
     // GENERATED END
 
@@ -325,10 +329,9 @@ public class ModBlocks {
                 new customFire("hot_fire"),
                 new customFire("onyx_fire"),
                 new customFire("core_fire")
-
-
-
         );
+        registry.register(LAVA_GENERATOR);
+        GameRegistry.registerTileEntity(LavaGeneratorBlockEntity.class, LAVA_GENERATOR.getRegistryName());
     }
 
     public static void registerRenders() {

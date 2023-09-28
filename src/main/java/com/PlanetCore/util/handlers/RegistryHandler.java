@@ -1,14 +1,12 @@
 package com.PlanetCore.util.handlers;
 
 
+import com.PlanetCore.blocks.customFire;
 import com.PlanetCore.init.*;
 import com.PlanetCore.init.blocks.item.ItemBlockVariants;
 import com.PlanetCore.util.IMetaName;
 import com.PlanetCore.util.ModConfiguration;
 import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.audio.MusicTicker;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -16,8 +14,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundEvent;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -25,12 +21,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
-
-import java.lang.reflect.Field;
-
-import static com.PlanetCore.util.Reference.MOD_ID;
 
 
 @EventBusSubscriber
@@ -41,7 +32,7 @@ public class RegistryHandler {
         event.getRegistry().registerAll(ModItems.getItems().toArray(new Item[0]));
         for (Block block : ModBlocks.getBlocks()) {
             ItemBlock itemBlock;
-            if (block == ModBlocks.PERIDOTITE_FIRE || block == ModBlocks.GARNET_FIRE || block == ModBlocks.BRIDGMANITE_FIRE || block == ModBlocks.FERROPERICLASE_FIRE || block == ModBlocks.HOT_FIRE || block == ModBlocks.ONYX_FIRE || block == ModBlocks.CORE_FIRE) continue;
+            if (block instanceof customFire) continue;
             if (block instanceof IMetaName) {
                 itemBlock = new ItemBlockVariants(block);
             } else {
@@ -49,6 +40,7 @@ public class RegistryHandler {
             }
             event.getRegistry().register(itemBlock.setRegistryName(block.getRegistryName()));
         }
+
         OreDictionary.registerOre("itemCoal", new ItemStack(Items.COAL, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("itemPlank", new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         OreDictionary.registerOre("ingotSilver", new ItemStack(ModItems.SILVER_INGOT, 1, OreDictionary.WILDCARD_VALUE));

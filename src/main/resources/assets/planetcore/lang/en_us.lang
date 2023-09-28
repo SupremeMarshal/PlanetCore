@@ -950,6 +950,7 @@ tile.olivine_gravel.name=Olivine gravel
 
 tile.iron_ladders.name=Iron ladders
 tile.diamond_ladders.name=Diamond ladders
+tile.lava_generator.name=Lava Generator
 
 tile.crust_cobblestone.name=Crust cobblestone
 
