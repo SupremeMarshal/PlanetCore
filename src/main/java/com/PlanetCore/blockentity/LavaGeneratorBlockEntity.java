@@ -139,7 +139,12 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
         if (stack.hasCapability(CapabilityEnergy.ENERGY,null)) {
             IEnergyStorage iEnergyStorage = stack.getCapability(CapabilityEnergy.ENERGY,null);
             if (iEnergyStorage != null) {
-                iEnergyStorage.receiveEnergy(energyStorage.extractEnergy(10000,false),false);
+                //grab 10000 energy and try to shove it in the receiver
+                int extractFromHandler = energyStorage.extractEnergy(10000,true);
+                int receive = iEnergyStorage.receiveEnergy(extractFromHandler,true);
+                //only transfer what is actually received
+                iEnergyStorage.receiveEnergy(receive,false);
+                energyStorage.extractEnergy(receive,false);
             }
         }
     }
