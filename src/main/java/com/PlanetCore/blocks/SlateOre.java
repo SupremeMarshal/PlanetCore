@@ -37,7 +37,7 @@ public class SlateOre extends Slate
 		this.planetHardness = planetHardness;
 		this.planetHarvestLevel = planetHarvestLevel;
 		this.planetExp = planetExp;
-		setResistance(100);
+		setResistance(10);
 	}
 
 	@Override

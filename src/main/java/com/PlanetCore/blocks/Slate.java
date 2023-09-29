@@ -40,7 +40,7 @@ public class Slate extends BlockBase implements IMetaName
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
-
+		setResistance(10);
 	}
 
 	@Override
