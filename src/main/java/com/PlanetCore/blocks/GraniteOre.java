@@ -27,6 +27,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import java.util.Random;
@@ -37,20 +38,60 @@ public class GraniteOre extends BlockBase implements IMetaName
 
 	public GraniteOre(String name, Material material) {
 		super(name, material,false);
-		setResistance(100);
+		setResistance(10);
 	}
 
 	@Override
-	public int quantityDropped(Random random)
-	{
-		if (this == ModBlocks.GRANITE.getStateFromMeta(4).getBlock()) return 4 + random.nextInt(5);
-		else if (this == ModBlocks.GRANITE.getStateFromMeta(3).getBlock()) return 4 + random.nextInt(2);
-		else return 1;
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		return 10;
+	}
+	@Override
+	public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+		Random random = new Random();
+		GraniteOre.EnumType variant = state.getValue(VARIANT);
+		drops.clear();
+		if (variant == GraniteOre.EnumType.COAL) {
+			drops.add(new ItemStack(Items.COAL));
+		}
+		else if (variant == GraniteOre.EnumType.IRON) {
+			drops.add(new ItemStack(ModItems.IRON_ORE));
+		}
+		else if (variant == GraniteOre.EnumType.SULFUR) {
+			drops.add(new ItemStack(ModItems.SULFUR));
+		}
+		else if (variant == GraniteOre.EnumType.DIAMOND) {
+			drops.add(new ItemStack(Items.DIAMOND));
+		}
+		else if (variant == GraniteOre.EnumType.EMERALD) {
+			drops.add(new ItemStack(Items.EMERALD));
+		}
+		else if (variant == GraniteOre.EnumType.LAPIS) {
+			int quantity = 4 + random.nextInt(5);
+			drops.add(new ItemStack(Items.DYE, quantity, 4));
+		}
+		else if (variant == GraniteOre.EnumType.REDSTONE)
+		{
+			int quantity = 4 + random.nextInt(2);
+			drops.add(new ItemStack(Items.REDSTONE,quantity));
+		}
+		else
+		{
+			super.getDrops(drops, world, pos, state, fortune);
+		}
 	}
 	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random)
 	{
 		return this.quantityDropped(random) + random.nextInt(fortune + 1);
+	}
+
+	@Override
+	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
+		if (this.getItemDropped(state, RANDOM, fortune) != Item.getItemFromBlock(this))
+		{
+			return 5 + RANDOM.nextInt(5);
+		}
+		return 0;
 	}
 
 	@Override

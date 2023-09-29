@@ -37,15 +37,47 @@ public class QuartzOre extends BlockBase implements IMetaName
 
 	public QuartzOre(String name, Material material) {
 		super(name, material,false);
-		setResistance(100);
+		setResistance(10);
 	}
 
 	@Override
-	public int quantityDropped(Random random)
-	{
-		if (this == ModBlocks.QUARTZ.getStateFromMeta(4).getBlock()) return 4 + random.nextInt(5);
-		else if (this == ModBlocks.QUARTZ.getStateFromMeta(3).getBlock()) return 4 + random.nextInt(2);
-		else return 1;
+	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+		return 10;
+	}
+
+	@Override
+	public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+		Random random = new Random();
+		EnumType variant = state.getValue(VARIANT);
+		drops.clear();
+		if (variant == EnumType.COAL) {
+			drops.add(new ItemStack(Items.COAL));
+		}
+		else if (variant == EnumType.IRON) {
+			drops.add(new ItemStack(ModItems.IRON_ORE));
+		}
+		else if (variant == EnumType.SULFUR) {
+			drops.add(new ItemStack(ModItems.SULFUR));
+		}
+		else if (variant == EnumType.DIAMOND) {
+			drops.add(new ItemStack(Items.DIAMOND));
+		}
+		else if (variant == EnumType.EMERALD) {
+			drops.add(new ItemStack(Items.EMERALD));
+		}
+		else if (variant == EnumType.LAPIS) {
+			int quantity = 4 + random.nextInt(5);
+			drops.add(new ItemStack(Items.DYE, quantity, 4));
+		}
+		else if (variant == EnumType.REDSTONE)
+		{
+			int quantity = 4 + random.nextInt(2);
+			drops.add(new ItemStack(Items.REDSTONE,quantity));
+		}
+		else
+		{
+			super.getDrops(drops, world, pos, state, fortune);
+		}
 	}
 	@Override
 	public int quantityDroppedWithBonus(int fortune, Random random)
@@ -55,7 +87,11 @@ public class QuartzOre extends BlockBase implements IMetaName
 
 	@Override
 	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
-		return 2;
+		if (this.getItemDropped(state, RANDOM, fortune) != Item.getItemFromBlock(this))
+		{
+			return 5 + RANDOM.nextInt(5);
+		}
+		return 0;
 	}
 
 	@Override
@@ -71,25 +107,10 @@ public class QuartzOre extends BlockBase implements IMetaName
 	}
 
 	@Override
-	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-		int meta = this.getMetaFromState(state);
-		if (meta == 0) return Items.COAL;
-		else if (meta == 1) return ModItems.IRON_ORE;
-		else if (meta == 2) return ModItems.SULFUR;
-		else if (meta == 3) return Items.REDSTONE;
-		else if (meta == 4) return Items.DYE;
-		else if (meta == 5) return ModItems.SILVER_ORE;
-		else if (meta == 6) return ModItems.GOLD_ORE;
-		else if (meta == 7) return Items.DIAMOND;
-		else if (meta == 8) return Items.EMERALD;
-		else return null;
-	}
-
-	@Override
 	public int damageDropped(IBlockState state) {
 		int meta = getMetaFromState(state);
 		if (meta == 4) return EnumDyeColor.BLUE.getDyeDamage();
-		else return 0;
+		return meta;
 	}
 
 	@Override
