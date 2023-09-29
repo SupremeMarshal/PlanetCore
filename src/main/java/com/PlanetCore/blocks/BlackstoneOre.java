@@ -92,6 +92,15 @@ public class BlackstoneOre extends BlockBase implements IMetaName
 	}
 
 	@Override
+	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
+		if (this.getItemDropped(state, RANDOM, fortune) != Item.getItemFromBlock(this))
+		{
+			return 10 + RANDOM.nextInt(5);
+		}
+		return 0;
+	}
+
+	@Override
 	public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn)
 	{
 		int meta = getMetaFromState(worldIn.getBlockState(pos));

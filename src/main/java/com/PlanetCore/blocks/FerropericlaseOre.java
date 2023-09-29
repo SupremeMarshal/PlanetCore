@@ -115,7 +115,7 @@ public class FerropericlaseOre extends BlockBase implements IMetaName
 	public int getExpDrop(IBlockState state, IBlockAccess world, BlockPos pos, int fortune) {
 		if (this.getItemDropped(state, RANDOM, fortune) != Item.getItemFromBlock(this))
 		{
-			return 5 + RANDOM.nextInt(5);
+			return 40 + RANDOM.nextInt(5);
 		}
 		return 0;
 	}
