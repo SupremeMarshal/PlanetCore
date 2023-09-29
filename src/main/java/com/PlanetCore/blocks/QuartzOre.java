@@ -78,8 +78,10 @@ public class QuartzOre extends BlockBase implements IMetaName
 		else if (meta == 2) return ModItems.SULFUR;
 		else if (meta == 3) return Items.REDSTONE;
 		else if (meta == 4) return Items.DYE;
-		else if (meta == 5) return Items.DIAMOND;
-		else if (meta == 6) return Items.EMERALD;
+		else if (meta == 5) return ModItems.SILVER_ORE;
+		else if (meta == 6) return ModItems.GOLD_ORE;
+		else if (meta == 7) return Items.DIAMOND;
+		else if (meta == 8) return Items.EMERALD;
 		else return null;
 	}
 

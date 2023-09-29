@@ -17,10 +17,10 @@ public class GeneratorStats {
         this.time = time;
     }
 
-    public static final GeneratorStats LAVA = new GeneratorStats(250,20 * 5 * 60);
-    public static final GeneratorStats IRON_LAVA = new GeneratorStats(500,20 * 5 * 60);
-    public static final GeneratorStats SILVER_LAVA = new GeneratorStats(500,20 * 5 * 60);
-    public static final GeneratorStats GOLD_LAVA = new GeneratorStats(500,20 * 5 * 60);
+    public static final GeneratorStats LAVA = new GeneratorStats(25,20 * 1 * 60);
+    public static final GeneratorStats IRON_LAVA = new GeneratorStats(50,20 * 1 * 60);
+    public static final GeneratorStats SILVER_LAVA = new GeneratorStats(50,20 * 1 * 60);
+    public static final GeneratorStats GOLD_LAVA = new GeneratorStats(50,20 * 1 * 60);
 
 
     public static void bootstrap(Map<Fluid, GeneratorStats> generatorStatsMap) {

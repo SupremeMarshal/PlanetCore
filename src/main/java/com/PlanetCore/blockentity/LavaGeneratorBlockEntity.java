@@ -80,7 +80,7 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
         }
     };
 
-    private final BEEnergyStorage energyStorage = new BEEnergyStorage(10000000) {
+    private final BEEnergyStorage energyStorage = new BEEnergyStorage(100000) {
         @Override
         public void onChange() {
             super.onChange();
