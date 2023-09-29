@@ -76,7 +76,6 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
         @Override
         protected void onContentsChanged() {
             super.onContentsChanged();
-            updateBlockstate();
             markDirty();
         }
     };
@@ -86,6 +85,7 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
         public void onChange() {
             super.onChange();
             checkEnergyGen();
+            updateBlockstate();
             markDirty();
         }
     };
@@ -189,10 +189,11 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
     }
 
     public void updateBlockstate() {
-        FluidStack fluidStack = fluidTank.getFluid();
-        double ratio = fluidStack == null ? 0 : (double) fluidTank.getFluidAmount() / fluidTank.getCapacity();
+        //FluidStack fluidStack = fluidTank.getFluid();
+        //double ratio = fluidStack == null ? 0 : (double) fluidTank.getFluidAmount() / fluidTank.getCapacity();
 
-        int level = (int) Math.floor(ratio * 10);
+        double ratio = (double) energyStorage.getEnergyStored() / energyStorage.getMaxEnergyStored();
+        int level = (int) Math.ceil(ratio * 10);
         world.setBlockState(pos,getBlockType().getDefaultState().withProperty(LavaGeneratorBlock.LEVEL,level));
     }
 
