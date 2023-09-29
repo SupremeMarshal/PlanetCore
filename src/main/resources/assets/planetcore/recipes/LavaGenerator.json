@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RAR",
+        "RBR",
+        "RRR"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "minecraft:redstone_block"
+        },
+        "B":
+        {
+            "item": "minecraft:furnace"
+        },
+        "R":
+        {
+            "item": "minecraft:iron_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:lava_generator",
+        "count": 1
+    }
+}
