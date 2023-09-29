@@ -43,8 +43,8 @@ public class GraniteOre extends BlockBase implements IMetaName
 	@Override
 	public int quantityDropped(Random random)
 	{
-		if (this == ModBlocks.GRANITE.getStateFromMeta(4)) return 4 + random.nextInt(5);
-		else if (this == ModBlocks.GRANITE.getStateFromMeta(3)) return 4 + random.nextInt(2);
+		if (this == ModBlocks.GRANITE.getStateFromMeta(4).getBlock()) return 4 + random.nextInt(5);
+		else if (this == ModBlocks.GRANITE.getStateFromMeta(3).getBlock()) return 4 + random.nextInt(2);
 		else return 1;
 	}
 	@Override

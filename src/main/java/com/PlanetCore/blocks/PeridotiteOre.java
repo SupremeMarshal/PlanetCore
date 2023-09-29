@@ -39,8 +39,8 @@ public class PeridotiteOre extends BlockBase implements IMetaName
 	@Override
 	public int quantityDropped(Random random)
 	{
-		if (this == ModBlocks.PERIDOTITE.getStateFromMeta(4)) return 4 + random.nextInt(5);
-		else if (this == ModBlocks.PERIDOTITE.getStateFromMeta(3)) return 4 + random.nextInt(2);
+		if (this == ModBlocks.PERIDOTITE.getStateFromMeta(4).getBlock()) return 4 + random.nextInt(5);
+		else if (this == ModBlocks.PERIDOTITE.getStateFromMeta(3).getBlock()) return 4 + random.nextInt(2);
 		else return 1;
 	}
 	@Override
