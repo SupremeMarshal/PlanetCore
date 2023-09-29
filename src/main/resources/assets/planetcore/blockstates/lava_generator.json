@@ -29,6 +29,9 @@
     },
     "level=9": {
       "model": "planetcore:lava_generator_level_9"
+    },
+    "level=10": {
+      "model": "planetcore:lava_generator_level_10"
     }
   }
 }
