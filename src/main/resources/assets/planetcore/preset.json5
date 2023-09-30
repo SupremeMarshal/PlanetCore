@@ -1971,7 +1971,7 @@
 				},
 				{
 					"blockstate": {
-						"Name": "planetcore:ore_gold"
+						"Name": "minecraft:gold_ore"
 					},
 					"biomes": null,
 					"placeBlockWhen": null,
