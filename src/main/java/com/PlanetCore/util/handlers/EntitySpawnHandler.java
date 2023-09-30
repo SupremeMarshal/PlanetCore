@@ -23,9 +23,12 @@ public class EntitySpawnHandler {
         EntityLivingBase entity = cs.getEntityLiving();
         Class<? extends EntityLivingBase> clazz = entity.getClass();
 
+        /*
         if (clazz.equals(EntityGhast.class)) {
             cs.setResult((y > -1000 && y < 0) ? Event.Result.DEFAULT : Event.Result.DENY);
-        } else if (clazz.equals(EntityMagmaCube.class) && y < -64) {
+        } else
+         */
+        if (clazz.equals(EntityMagmaCube.class) && y < -64) {
             cs.setResult(Event.Result.ALLOW);
         } else if (clazz == EntitySlime.class) {
             cs.setResult(y > -256 ? Event.Result.DEFAULT : Event.Result.DENY);
@@ -37,14 +40,14 @@ public class EntitySpawnHandler {
     }
 
 
-    private static final Biome.SpawnListEntry GHAST = new Biome.SpawnListEntry(EntityGhast.class, 50, 4, 4);
+    //private static final Biome.SpawnListEntry GHAST = new Biome.SpawnListEntry(EntityGhast.class, 50, 4, 4);
 
     //ghasts are not a default overworld spawn
-    @SubscribeEvent
-    public static void addSpawns(WorldEvent.PotentialSpawns e) {
-        World world = e.getWorld();
-        if (world.provider.getDimension() == 0 && e.getPos().getY() < 0) { //overworld only
-            e.getList().add(GHAST);
-        }
-    }
+//    @SubscribeEvent
+//    public static void addSpawns(WorldEvent.PotentialSpawns e) {
+//        World world = e.getWorld();
+//        if (world.provider.getDimension() == 0 && e.getPos().getY() < 0) { //overworld only
+//            e.getList().add(GHAST);
+//        }
+//    }
 }
