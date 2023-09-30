@@ -9,8 +9,10 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -51,6 +53,11 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
             return .2f;
         }
         return 7;
+    }
+
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return Ingredient.fromItem(Item.getItemFromBlock(Blocks.IRON_BLOCK)).test(repair);
     }
 
     @Override
