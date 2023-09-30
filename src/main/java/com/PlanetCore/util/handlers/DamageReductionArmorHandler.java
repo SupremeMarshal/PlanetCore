@@ -90,7 +90,7 @@ public class DamageReductionArmorHandler {
         // Modify damage reduction calculation here
         //damage_done * 1 - (((armor)*0.06)/(1+0.06*(armor))
         float damage = event.getAmount();
-        float modifiedDamage = event.getAmount() * (float) (1 - (((totalArmor) * 0.03) / (float) (1 + 0.03 * (totalArmor))));
+        float modifiedDamage = event.getAmount() * (float) (1 - (((totalArmor) * 0.09) / (float) (1 + 0.09 * (totalArmor))));
         if (modifiedDamage < 1) {
             event.getEntityLiving().hurtTime = -1; // Disable hurt animation
         }

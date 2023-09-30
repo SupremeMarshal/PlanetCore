@@ -140,7 +140,7 @@ public class ClientHandler {
                 // Modify damage reduction calculation here
                 //damage_done * 1 - (((armor)*0.06)/(1+0.06*(armor))
 
-                float modifiedDamage = (float) (((totalArmor) * 0.03) / (float) (1 + 0.03 * (totalArmor)));
+                float modifiedDamage = (float) (((totalArmor) * 0.09) / (float) (1 + 0.09 * (totalArmor)));
                 event.getToolTip().add("§9" + String.format("%.2f", modifiedDamage * 100) + "%");
             }
         }
