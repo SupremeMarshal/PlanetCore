@@ -32,12 +32,12 @@ public class EntityHotLargeFireball extends net.minecraft.entity.projectile.Enti
         {
             if (result.entityHit != null)
             {
-                result.entityHit.attackEntityFrom(GENERIC, 6.0F);
+                result.entityHit.attackEntityFrom(GENERIC, 5.0F);
                 this.applyEnchantments(this.shootingEntity, result.entityHit);
             }
 
             boolean flag = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.world, this.shootingEntity);
-            this.world.newExplosion((Entity)null, this.posX, this.posY, this.posZ, (float)4, flag, flag);
+            this.world.newExplosion((Entity)null, this.posX, this.posY, this.posZ, (float)3, flag, flag);
             this.setDead();
         }
     }

@@ -16,7 +16,7 @@ public class PlanetCoreFMLLoadingPlugin implements IFMLLoadingPlugin {
         Mixins.addConfiguration("mixins.mixins.planetcore.json");
     }
 
-    public static final boolean REMAP = true;
+    public static final boolean REMAP = false;
 
     @Override
     public String[] getASMTransformerClass() {
