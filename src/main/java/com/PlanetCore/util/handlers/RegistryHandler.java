@@ -71,7 +71,7 @@ public class RegistryHandler {
         RemovingVanillaRecipes recipesEvent = new RemovingVanillaRecipes();
         MinecraftForge.EVENT_BUS.register(recipesEvent);
         MinecraftForge.EVENT_BUS.register(new FogHandler());
-        MinecraftForge.EVENT_BUS.register(new EntitySpawnEvent());
+        MinecraftForge.EVENT_BUS.register(new EntitySpawnHandler());
         MinecraftForge.EVENT_BUS.register((new DamageReductionArmorHandler()));
       //  MinecraftForge.EVENT_BUS.register((new LavaWalker()));
         ModPotions.registerPotions();

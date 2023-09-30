@@ -156,12 +156,9 @@ public class EntityDemon extends EntityMob implements IAnimatable {
 	public boolean getCanSpawnHere() {
 		int dimensionID = this.getEntityWorld().provider.getDimension();
 		String worldType = getEntityWorld().getWorldType().getName();
-		if (dimensionID == 0 && posY < -300 && posY >= -4000 && worldType == "PlanetCore") {
+		if (dimensionID == 0 && posY < -300 && posY >= -4000 && worldType.equals("PlanetCore")) {
 			return true;
-		} else if (dimensionID == -1) {
-			return true;
-		}
-		else return false;
+		} else return dimensionID == -1;
 	}
 
 	@Override
