@@ -17,8 +17,8 @@ import org.spongepowered.noise.NoiseQuality;
 import java.util.function.Supplier;
 public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
     private final long seedModifier;
-    private final double cellSizeXZ = 256;
-    private final double cellSizeY = 256;
+    private final double cellSizeXZ = 128;
+    private final double cellSizeY = 128;
     private final double cellFreqXZ = 1 / cellSizeXZ;
     private final double cellFreqY = 1 / cellSizeY;
     private final double cellTurbulenceFreqXZ = 1.0 / 512;
@@ -31,11 +31,11 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
     //       it's best to have a pre-made table/hashmap and choose from that instead
     //       if you have to create them dynamically - try caching, or contact me
     private CellCaveType caveTypeForCell(int cellX, int cellY, int cellZ, int cell, FastRandom rand) {
-        if (rand.nextBoolean() && cellY < -40)
+        if (rand.nextFloat() < 0.6 && cellY < -40)
         {
             return CellCaveTypes.SMALL_CAVES;
         }
-        else if (rand.nextFloat() < 0.25 && cellY < -40)
+        else if (rand.nextFloat() < 0.6 && cellY < -40)
         {
             return CellCaveTypes.VERY_SMALL_CAVES;
         }
@@ -50,10 +50,10 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
         //}
     }
     private int lavaLevel(int cellX, int cellY, int cellZ, CellCaveType type, int cell, FastRandom rand) {
-        if (cellY > 0) {
+        if (cellY > -64) {
             return Integer.MIN_VALUE;
         }
-        int avgY = (cellY);
+        int avgY = (int) (cellY - cellSizeY);
         return randomLevel(rand, avgY, (int) (cellSizeY / 5), true);
     }
 
