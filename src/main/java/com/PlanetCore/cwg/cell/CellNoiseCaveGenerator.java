@@ -31,11 +31,11 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
     //       it's best to have a pre-made table/hashmap and choose from that instead
     //       if you have to create them dynamically - try caching, or contact me
     private CellCaveType caveTypeForCell(int cellX, int cellY, int cellZ, int cell, FastRandom rand) {
-        if (rand.nextFloat() < 0.6 && cellY < -40)
+        if (rand.nextFloat() < 0.5 && cellY < -40)
         {
             return CellCaveTypes.SMALL_CAVES;
         }
-        else if (rand.nextFloat() < 0.6 && cellY < -40)
+        else if (rand.nextFloat() < 0.4 && cellY < -40)
         {
             return CellCaveTypes.VERY_SMALL_CAVES;
         }
@@ -53,7 +53,7 @@ public class CellNoiseCaveGenerator implements ICubicStructureGenerator {
         if (cellY > -64) {
             return Integer.MIN_VALUE;
         }
-        int avgY = (int) (cellY - cellSizeY);
+        int avgY = (int) (cellY - (cellSizeY / 2));
         return randomLevel(rand, avgY, (int) (cellSizeY / 5), true);
     }
 
