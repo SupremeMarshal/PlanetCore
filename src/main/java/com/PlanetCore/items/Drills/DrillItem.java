@@ -37,14 +37,15 @@ import java.util.Set;
 
 public class DrillItem extends Item implements IAnimatable, EnergyUser {
 
-    private final int energy_per_block_broken = 50;
     private final DrillMaterial drillMaterial;
+
 
     public DrillItem(DrillMaterial drillMaterial) {
         this.drillMaterial = drillMaterial;
         this.maxStackSize = 1;
         setHarvestLevel("pickaxe",drillMaterial.getHarvestLevel());
         setMaxDamage(drillMaterial.getDurability());
+
     }
 
     public DrillMaterial getDrillMaterial() {
@@ -199,7 +200,7 @@ public class DrillItem extends Item implements IAnimatable, EnergyUser {
     }
 
     public int getEnergyUsed() {
-        return energy_per_block_broken;
+        return drillMaterial.getConsumption();
     }
 
     public int getHardnessPenalty(IBlockState state,World world,BlockPos pos) {
@@ -271,7 +272,7 @@ public class DrillItem extends Item implements IAnimatable, EnergyUser {
 
     @Override
     public int getCapacity() {
-        return 100000;
+        return drillMaterial.getCapacity();
     }
 
     @Override
@@ -289,6 +290,8 @@ public class DrillItem extends Item implements IAnimatable, EnergyUser {
         float getMiningSpeed();
         int getDurability();
         int getHarvestLevel();
+        int getCapacity();
+        int getConsumption();
         Ingredient getRepairMaterial();
     }
 }
