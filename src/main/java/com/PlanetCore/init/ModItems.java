@@ -1,6 +1,6 @@
 package com.PlanetCore.init;
 
-import com.PlanetCore.items.Drills.IronDrillItem;
+import com.PlanetCore.items.Drills.DrillItem;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.ItemSpadeX;
@@ -12,6 +12,7 @@ import com.PlanetCore.items.food.ThreeEffectFoodItem;
 import com.PlanetCore.items.shields.Shield;
 import com.PlanetCore.items.shields.ShieldMaterial;
 import com.PlanetCore.items.tutorialBook.TutorialBook;
+import com.PlanetCore.util.DrillMaterials;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -30,7 +31,17 @@ public class ModItems {
 	private static final List<Item> ITEMS = new ArrayList<>();
 
 
-	public static final IronDrillItem IRON_DRILL = (IronDrillItem) new IronDrillItem().setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem IRON_DRILL = (DrillItem) new DrillItem(DrillMaterials.IRON).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem DIAMOND_DRILL = (DrillItem) new DrillItem(DrillMaterials.diamond).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem TITANIUM_DRILL = (DrillItem) new DrillItem(DrillMaterials.titanium).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem URANIUM_DRILL = (DrillItem) new DrillItem(DrillMaterials.uranium).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem TUNGSTEN_DRILL = (DrillItem) new DrillItem(DrillMaterials.tungsten).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem RUBY_DRILL = (DrillItem) new DrillItem(DrillMaterials.ruby).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem SAPPHIRE_DRILL = (DrillItem) new DrillItem(DrillMaterials.sapphire).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem MAJORITE_DRILL = (DrillItem) new DrillItem(DrillMaterials.majorite).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem AMAZONITE_DRILL = (DrillItem) new DrillItem(DrillMaterials.amazonite).setCreativeTab(CreativeTabs.TOOLS);
+	public static final DrillItem ONYX_DRILL = (DrillItem) new DrillItem(DrillMaterials.onyx).setCreativeTab(CreativeTabs.TOOLS);
+
 
 	public static final TutorialBook TUTORIAL_BOOK = (TutorialBook) new TutorialBook().setCreativeTab(CreativeTabs.MATERIALS);
 

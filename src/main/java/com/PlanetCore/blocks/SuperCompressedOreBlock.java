@@ -2,7 +2,7 @@ package com.PlanetCore.blocks;
 
 
 import com.PlanetCore.init.ModBlocks;
-import com.PlanetCore.items.Drills.IronDrillItem;
+import com.PlanetCore.items.Drills.DrillItem;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -44,7 +44,7 @@ public class SuperCompressedOreBlock extends BlockBase {
 
 	@Override
 	public float getPlayerRelativeBlockHardness(IBlockState state, EntityPlayer player, World worldIn, BlockPos pos) {
-		return player.getHeldItemMainhand().getItem() instanceof IronDrillItem ? super.getPlayerRelativeBlockHardness(state, player, worldIn, pos) : 0;
+		return player.getHeldItemMainhand().getItem() instanceof DrillItem ? super.getPlayerRelativeBlockHardness(state, player, worldIn, pos) : 0;
 	}
 
 	@Override
