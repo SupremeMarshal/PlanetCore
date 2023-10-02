@@ -9,7 +9,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
@@ -36,14 +35,20 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
+public class DrillItem extends Item implements IAnimatable, EnergyUser {
 
     private final int energy_per_block_broken = 50;
+    private final DrillMaterial drillMaterial;
 
-    public IronDrillItem() {
+    public DrillItem(DrillMaterial drillMaterial) {
+        this.drillMaterial = drillMaterial;
         this.maxStackSize = 1;
-        setHarvestLevel("pickaxe",2);
-        setMaxDamage(10000);
+        setHarvestLevel("pickaxe",drillMaterial.getHarvestLevel());
+        setMaxDamage(drillMaterial.getDurability());
+    }
+
+    public DrillMaterial getDrillMaterial() {
+        return drillMaterial;
     }
 
     @Override
@@ -52,12 +57,7 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
         if (getStoredEnergy(stack) < getEnergyUsed() /*+ getHardnessPenalty(state,null,null)*/) {
             return .2f;
         }
-        return 7;
-    }
-
-    @Override
-    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-        return Ingredient.fromItem(Item.getItemFromBlock(Blocks.IRON_BLOCK)).test(repair);
+        return drillMaterial.getMiningSpeed();
     }
 
     @Override
@@ -90,6 +90,11 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
     }
 
     @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return drillMaterial.getRepairMaterial().test(repair) || super.getIsRepairable(toRepair, repair);
+    }
+
+    @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
@@ -98,7 +103,7 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
     }
 
     public AnimationFactory factory = new AnimationFactory(this);
-    public static final String CTRL_NAME = "iron_drill";
+    public static final String CTRL_NAME = "drill";
 
     @Override
     public void registerControllers(AnimationData animationData) {
@@ -278,5 +283,12 @@ public class IronDrillItem extends Item implements IAnimatable, EnergyUser {
     @Override
     public ICapabilityProvider initCapabilities(ItemStack stack, @Nullable NBTTagCompound nbt) {
         return new ItemStackEnergyCapabilityProvider<>(stack, this);
+    }
+
+    public interface DrillMaterial {
+        float getMiningSpeed();
+        int getDurability();
+        int getHarvestLevel();
+        Ingredient getRepairMaterial();
     }
 }
