@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRA"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "minecraft:diamond_block"
+        },
+        "A":
+        {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:diamond_drill",
+        "count": 1
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRA"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:amazonite_block"
+        },
+        "A":
+        {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:amazonite_drill",
+        "count": 1
+    }
+}
