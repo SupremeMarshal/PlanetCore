@@ -39,15 +39,15 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
    // Pouring iron_lava, silver lava or gold lava will increase energy by 500 every seconds for 5 minutes or until completely full.
     //todo Pouring any other lava will melt the iron energy generator into lava as they are too hot.
 
-    public static final Map<Fluid,GeneratorStats> generatorStatsMap = new HashMap<>();
+    public static final Map<Fluid, LavaFuelStats> generatorStatsMap = new HashMap<>();
     private boolean active;
 
-    private GeneratorStats fuelCache;
+    private LavaFuelStats fuelCache;
     private Fluid currentFuel;
     private int progress;
 
     static {
-        GeneratorStats.bootstrap(generatorStatsMap);
+        LavaFuelStats.bootstrap(generatorStatsMap);
     }
 
     public LavaGeneratorBlockEntity() {
