@@ -37,9 +37,10 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
 
     //Pouring vanilla lava will increase energy by 250 every seconds for 5 minutes.
    // Pouring iron_lava, silver lava or gold lava will increase energy by 500 every seconds for 5 minutes or until completely full.
-    //todo Pouring any other lava will melt the iron energy generator into lava as they are too hot.
+    //Pouring any other lava will melt the iron energy generator into lava as they are too hot.
 
     public static final Map<Fluid, LavaFuelStats> generatorStatsMap = new HashMap<>();
+    private final LavaGeneratorBlock.GeneratorStats stats;
     private boolean active;
 
     private LavaFuelStats fuelCache;
@@ -50,8 +51,35 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
         LavaFuelStats.bootstrap(generatorStatsMap);
     }
 
-    public LavaGeneratorBlockEntity() {
+    public LavaGeneratorBlockEntity(LavaGeneratorBlock.GeneratorStats stats) {
+        this.stats = stats;
+        fluidTank = new FluidTank(getStats().fluidCapacity()) {
+
+            //check for melting and energy generation when fluid is added
+            @Override
+            public int fillInternal(FluidStack resource, boolean doFill) {
+                int i = super.fillInternal(resource, doFill);
+                checkMelt();
+                checkEnergyGen();
+                return i;
+            }
+
+            @Override
+            protected void onContentsChanged() {
+                super.onContentsChanged();
+                markDirty();
+            }
+        };
         fluidTank.setTileEntity(this);
+        energyStorage = new BEEnergyStorage(getStats().energyCapacity(),getStats().energyExtractRate()) {
+            @Override
+            public void onChange() {
+                super.onChange();
+                checkEnergyGen();
+                updateBlockstate();
+                markDirty();
+            }
+        };
     }
 
     private final ItemStackHandler itemStackHandler = new ItemStackHandler() {
@@ -62,33 +90,9 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
         }
     };
 
-    private final FluidTank fluidTank = new FluidTank(10000) {
+    private final FluidTank fluidTank;
 
-        //check for melting and energy generation when fluid is added
-        @Override
-        public int fillInternal(FluidStack resource, boolean doFill) {
-            int i = super.fillInternal(resource, doFill);
-            checkMelt();
-            checkEnergyGen();
-            return i;
-        }
-
-        @Override
-        protected void onContentsChanged() {
-            super.onContentsChanged();
-            markDirty();
-        }
-    };
-
-    private final BEEnergyStorage energyStorage = new BEEnergyStorage(100000) {
-        @Override
-        public void onChange() {
-            super.onChange();
-            checkEnergyGen();
-            updateBlockstate();
-            markDirty();
-        }
-    };
+    private final BEEnergyStorage energyStorage;
 
     public void checkEnergyGen() {
         if (!active) {
@@ -173,12 +177,11 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
         currentFuel = null;
     }
 
-    public static int TEMPERATURE_LIMIT = 3000;
     public void checkMelt() {
         FluidStack fluidStack = fluidTank.getFluid();
         if (fluidStack != null) {//warning, fluidstacks can be null
             Fluid fluid = fluidStack.getFluid();
-            if (fluid.getTemperature(fluidStack) > TEMPERATURE_LIMIT) {
+            if (fluid.getTemperature(fluidStack) > getStats().maxTemperature()) {
                 melt();
             }
         }
@@ -292,6 +295,10 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
 
     public Fluid getCurrentFuel() {
         return currentFuel;
+    }
+
+    public LavaGeneratorBlock.GeneratorStats getStats() {
+        return stats;
     }
 
     @Override
