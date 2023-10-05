@@ -2,6 +2,7 @@ package com.PlanetCore.init;
 
 
 import com.PlanetCore.blockentity.LavaGeneratorBlockEntity;
+import com.PlanetCore.blockentity.LavagenStubs;
 import com.PlanetCore.blocks.*;
 import com.PlanetCore.blocks.Powered_ladders.DiamondLadderBlock;
 import com.PlanetCore.blocks.Powered_ladders.IronLadderBlock;
@@ -197,7 +198,16 @@ public class ModBlocks {
     public static final customFire CORE_FIRE = _null();
 
     public static final Mushroom FIERY_MUSHROOM = _null();
-    public static final Block LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL).setHardness(3).setRegistryName("lava_generator").setTranslationKey("lava_generator");
+    public static final Block LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.IRON).setHardness(3).setRegistryName("lava_generator").setTranslationKey("lava_generator");
+    public static final Block DIAMOND_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.diamond).setHardness(3).setRegistryName("diamond_lava_generator").setTranslationKey("diamond_lava_generator");
+    public static final Block TITANIUM_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.titanium).setHardness(3).setRegistryName("titanium_lava_generator").setTranslationKey("titanium_lava_generator");
+    public static final Block URANIUM_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.uranium).setHardness(3).setRegistryName("uranium_lava_generator").setTranslationKey("uranium_lava_generator");
+    public static final Block TUNGSTEN_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.tungsten).setHardness(3).setRegistryName("tungsten_lava_generator").setTranslationKey("tungsten_lava_generator");
+    public static final Block RUBY_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.ruby).setHardness(3).setRegistryName("ruby_lava_generator").setTranslationKey("ruby_lava_generator");
+    public static final Block SAPPHIRE_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.sapphire).setHardness(3).setRegistryName("sapphire_lava_generator").setTranslationKey("sapphire_lava_generator");
+    public static final Block MAJORITE_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.majorite).setHardness(3).setRegistryName("majorite_lava_generator").setTranslationKey("majorite_lava_generator");
+    public static final Block AMAZONITE_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.amazonite).setHardness(3).setRegistryName("amazonite_lava_generator").setTranslationKey("amazonite_lava_generator");
+    public static final Block ONYX_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.onyx).setHardness(3).setRegistryName("onyx_lava_generator").setTranslationKey("onyx_lava_generator");
 
     // GENERATED END
 
@@ -331,7 +341,27 @@ public class ModBlocks {
                 new customFire("core_fire")
         );
         registry.register(LAVA_GENERATOR);
+        registry.register(DIAMOND_LAVA_GENERATOR);
+        registry.register(TITANIUM_LAVA_GENERATOR);
+        registry.register(URANIUM_LAVA_GENERATOR);
+        registry.register(TUNGSTEN_LAVA_GENERATOR);
+        registry.register(RUBY_LAVA_GENERATOR);
+        registry.register(SAPPHIRE_LAVA_GENERATOR);
+        registry.register(MAJORITE_LAVA_GENERATOR);
+        registry.register(AMAZONITE_LAVA_GENERATOR);
+        registry.register(ONYX_LAVA_GENERATOR);
+
         GameRegistry.registerTileEntity(LavaGeneratorBlockEntity.class, LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Diamond.class, DIAMOND_LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Titanium.class, TITANIUM_LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Uranium.class, URANIUM_LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Tungsten.class, TUNGSTEN_LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Ruby.class, RUBY_LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Sapphire.class, SAPPHIRE_LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Majorite.class, MAJORITE_LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Amazonite.class, AMAZONITE_LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Onyx.class, ONYX_LAVA_GENERATOR.getRegistryName());
+
     }
 
     public static void registerRenders() {

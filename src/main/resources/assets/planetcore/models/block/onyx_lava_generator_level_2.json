@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "bottom": "planetcore:blocks/lava_generator_onyx_bottom",
+        "top": "planetcore:blocks/lava_generator_onyx_top_on",
+        "side": "planetcore:blocks/lava_generator_onyx_side_2"
+    }
+}

@@ -347,7 +347,17 @@ public class ModItems {
 			new PotionEffect(MobEffects.REGENERATION, 600, 2, false, false),
 			new PotionEffect(MobEffects.FIRE_RESISTANCE, 36000, 0, false, false));
 
-	public static final Item LAVA_GENERATOR = new ItemBlock(ModBlocks.LAVA_GENERATOR).setCreativeTab(CreativeTabs.FOOD);
+	public static final Item LAVA_GENERATOR = new ItemBlock(ModBlocks.LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item DIAMOND_LAVA_GENERATOR = new ItemBlock(ModBlocks.DIAMOND_LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item TITANIUM_LAVA_GENERATOR = new ItemBlock(ModBlocks.TITANIUM_LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item URANIUM_LAVA_GENERATOR = new ItemBlock(ModBlocks.LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item TUNGSTEN_LAVA_GENERATOR = new ItemBlock(ModBlocks.TUNGSTEN_LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item RUBY_LAVA_GENERATOR = new ItemBlock(ModBlocks.RUBY_LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item SAPPHIRE_LAVA_GENERATOR = new ItemBlock(ModBlocks.SAPPHIRE_LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item MAJORITE_LAVA_GENERATOR = new ItemBlock(ModBlocks.MAJORITE_LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item AMAZONITE_LAVA_GENERATOR = new ItemBlock(ModBlocks.AMAZONITE_LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+	public static final Item ONYX_LAVA_GENERATOR = new ItemBlock(ModBlocks.ONYX_LAVA_GENERATOR).setCreativeTab(CreativeTabs.REDSTONE);
+
 
 	public static final Item FIERY_MUSHROOM_FOOD = new FieryMushroomFood(1, 1.0f, false).setCreativeTab(CreativeTabs.FOOD);
 

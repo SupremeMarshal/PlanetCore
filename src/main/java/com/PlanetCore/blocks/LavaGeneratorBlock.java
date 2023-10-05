@@ -23,9 +23,11 @@ import org.jetbrains.annotations.Nullable;
 public class LavaGeneratorBlock extends Block {
 
     public static final PropertyInteger LEVEL = PropertyInteger.create("level", 0, 10);
+    private final GeneratorStats generatorStats;
 
-    public LavaGeneratorBlock(Material materialIn) {
+    public LavaGeneratorBlock(Material materialIn,GeneratorStats generatorStats) {
         super(materialIn);
+        this.generatorStats = generatorStats;
         setDefaultState(getDefaultState().withProperty(LEVEL, 0));
     }
 
@@ -79,6 +81,10 @@ public class LavaGeneratorBlock extends Block {
     @Override
     public TileEntity createTileEntity(World world, IBlockState state) {
         return new LavaGeneratorBlockEntity();
+    }
+
+    public interface GeneratorStats {
+
     }
 
     @Override
