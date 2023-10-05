@@ -8,6 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -29,6 +30,7 @@ public class LavaGeneratorBlock extends Block {
         super(materialIn);
         this.generatorStats = generatorStats;
         setDefaultState(getDefaultState().withProperty(LEVEL, 0));
+        this.setCreativeTab(CreativeTabs.DECORATIONS);
     }
 
     @Override
