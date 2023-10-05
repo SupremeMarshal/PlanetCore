@@ -77,14 +77,24 @@ public class LavaGeneratorBlock extends Block {
         return true;
     }
 
+    public GeneratorStats getGeneratorStats() {
+        return generatorStats;
+    }
+
     @Nullable
     @Override
     public TileEntity createTileEntity(World world, IBlockState state) {
-        return new LavaGeneratorBlockEntity();
+        return generatorStats.create();
     }
 
-    public interface GeneratorStats {
 
+    //I should be able to edit capacity, max extract capacity, temperature capacity, hardness, and fluid tank capacity.
+    public interface GeneratorStats {
+        int energyCapacity();
+        int energyExtractRate();
+        int maxTemperature();
+        int fluidCapacity();
+        TileEntity create();
     }
 
     @Override

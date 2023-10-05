@@ -1,7 +1,6 @@
 package com.PlanetCore.init;
 
 
-import com.PlanetCore.blockentity.LavaGeneratorBlockEntity;
 import com.PlanetCore.blockentity.LavagenStubs;
 import com.PlanetCore.blocks.*;
 import com.PlanetCore.blocks.Powered_ladders.DiamondLadderBlock;
@@ -199,7 +198,7 @@ public class ModBlocks {
 
     public static final Mushroom FIERY_MUSHROOM = _null();
     public static final Block LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.IRON).setHardness(3).setRegistryName("lava_generator").setTranslationKey("lava_generator");
-    public static final Block DIAMOND_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.diamond).setHardness(3).setRegistryName("diamond_lava_generator").setTranslationKey("diamond_lava_generator");
+    public static final Block DIAMOND_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.DIAMOND).setHardness(3).setRegistryName("diamond_lava_generator").setTranslationKey("diamond_lava_generator");
     public static final Block TITANIUM_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.titanium).setHardness(3).setRegistryName("titanium_lava_generator").setTranslationKey("titanium_lava_generator");
     public static final Block URANIUM_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.uranium).setHardness(3).setRegistryName("uranium_lava_generator").setTranslationKey("uranium_lava_generator");
     public static final Block TUNGSTEN_LAVA_GENERATOR = new LavaGeneratorBlock(Material.ANVIL, DefaultGeneratorStats.tungsten).setHardness(3).setRegistryName("tungsten_lava_generator").setTranslationKey("tungsten_lava_generator");
@@ -351,7 +350,7 @@ public class ModBlocks {
         registry.register(AMAZONITE_LAVA_GENERATOR);
         registry.register(ONYX_LAVA_GENERATOR);
 
-        GameRegistry.registerTileEntity(LavaGeneratorBlockEntity.class, LAVA_GENERATOR.getRegistryName());
+        GameRegistry.registerTileEntity(LavagenStubs.Iron.class, LAVA_GENERATOR.getRegistryName());
         GameRegistry.registerTileEntity(LavagenStubs.Diamond.class, DIAMOND_LAVA_GENERATOR.getRegistryName());
         GameRegistry.registerTileEntity(LavagenStubs.Titanium.class, TITANIUM_LAVA_GENERATOR.getRegistryName());
         GameRegistry.registerTileEntity(LavagenStubs.Uranium.class, URANIUM_LAVA_GENERATOR.getRegistryName());
