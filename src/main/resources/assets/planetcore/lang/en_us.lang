@@ -951,6 +951,16 @@ tile.olivine_gravel.name=Olivine gravel
 tile.iron_ladders.name=Iron ladders
 tile.diamond_ladders.name=Diamond ladders
 tile.lava_generator.name=Lava Generator
+tile.diamond_lava_generator.name=Diamond Lava Generator
+tile.titanium_lava_generator.name=Titanium Lava Generator
+tile.uranium_lava_generator.name=Uranium Lava Generator
+tile.tungsten_lava_generator.name=Tungsten Lava Generator
+tile.ruby_lava_generator.name=Ruby Lava Generator
+tile.sapphire_lava_generator.name=Sapphire Lava Generator
+tile.majorite_lava_generator.name=Majorite Lava Generator
+tile.amazonite_lava_generator.name=Amazonite Lava Generator
+tile.onyx_lava_generator.name=Onyx Lava Generator
+
 
 tile.crust_cobblestone.name=Crust cobblestone
 
