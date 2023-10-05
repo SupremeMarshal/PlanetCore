@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRA"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:uranium_block"
+        },
+        "A":
+        {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:uranium_drill",
+        "count": 1
+    }
+}

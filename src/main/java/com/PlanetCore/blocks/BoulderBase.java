@@ -1,6 +1,5 @@
 package com.PlanetCore.blocks;
 
-
 import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.items.Drills.DrillItem;
 import net.minecraft.block.*;
@@ -13,11 +12,14 @@ import net.minecraft.world.World;
 
 public class BoulderBase extends BlockBase {
 
-	public BoulderBase(String name, Material material) {
+	public final PlanetHardness planetHardness;
+
+	public BoulderBase(String name, Material material, PlanetHardness planetHardness) {
 		super(name, material, false);
 		setSoundType(SoundType.STONE);
 		setHarvestLevel("pickaxe", 0);
 		setTickRandomly(true);
+		this.planetHardness = planetHardness;
 	}
 	@Override
 	public int getLightValue(IBlockState state) {

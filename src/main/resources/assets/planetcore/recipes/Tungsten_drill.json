@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "RRA"
+    ],
+    
+    "key":
+    {
+        "R":
+        {
+            "item": "planetcore:tungsten_block"
+        },
+        "A":
+        {
+            "item": "minecraft:redstone_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "planetcore:tungsten_drill",
+        "count": 1
+    }
+}
