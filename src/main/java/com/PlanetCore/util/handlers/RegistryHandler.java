@@ -21,6 +21,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.oredict.OreDictionary;
 
 
@@ -59,6 +60,11 @@ public class RegistryHandler {
     public static void onBlockRegister(RegistryEvent.Register<Block> event)
     {
         ModBlocks.register(event.getRegistry());
+    }
+
+    @SubscribeEvent
+    public static void onEntityRegister(RegistryEvent.Register<EntityEntry> event) {
+        EntityInit.register(event);
     }
 
 

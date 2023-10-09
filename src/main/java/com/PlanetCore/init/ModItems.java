@@ -4,6 +4,7 @@ import com.PlanetCore.items.Drills.DrillItem;
 import com.PlanetCore.items.ItemAxeX;
 import com.PlanetCore.items.ItemPickaxeX;
 import com.PlanetCore.items.ItemSpadeX;
+import com.PlanetCore.items.NitrogenCoolerItem;
 import com.PlanetCore.items.armor.ArmorBase;
 import com.PlanetCore.items.arrows.*;
 import com.PlanetCore.items.bows.*;
@@ -379,6 +380,7 @@ public class ModItems {
 	public static final Item ONYX_IV_SHIELD = new Shield(ShieldMaterial.ONYXIV, 150, 0.45f);
 	public static final Item ONYX_V_SHIELD = new Shield(ShieldMaterial.ONYXV, 200, 0.50f);
 	public static final Item ONYX_CORE_SHIELD = new Shield(ShieldMaterial.ONYXV, 300, 0.60f);
+	public static final Item NITROGEN_COOLER = new NitrogenCoolerItem();
 
 	public static List<Item> getItems() {
 		if (ITEMS.isEmpty()) {

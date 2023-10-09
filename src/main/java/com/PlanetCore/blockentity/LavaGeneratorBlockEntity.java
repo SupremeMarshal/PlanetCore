@@ -107,9 +107,9 @@ public class LavaGeneratorBlockEntity extends TileEntity implements ITickable, I
         return this.customName != null && !this.customName.isEmpty();
     }
 
-    public void setCustomName(String p_190575_1_)
+    public void setCustomName(String customName)
     {
-        this.customName = p_190575_1_;
+        this.customName = customName;
     }
 
     @Override

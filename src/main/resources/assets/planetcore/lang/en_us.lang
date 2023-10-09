@@ -327,6 +327,7 @@ item.majorite.name=Majorite
 item.amazonite.name=Amazonite
 item.onyx.name=Onyx
 item.painite.name=Painite
+item.nitrogen_cooler.name=Nitrogen Cooler
 
 tile.painite_block.name=Block of painite
 tile.majorite_block.name=Block of majorite
