@@ -1,5 +1,6 @@
 package com.PlanetCore.entity;
 
+import com.PlanetCore.init.ModBlocks;
 import com.PlanetCore.world.ColdExplosion;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -38,6 +39,16 @@ public class NitrogenCoolerEntity extends EntityThrowable {
         addBlock(Blocks.LAVA,Blocks.COBBLESTONE.getDefaultState());
         addState(Blocks.LAVA.getStateFromMeta(0),Blocks.OBSIDIAN.getDefaultState());
         addBlock(Blocks.WATER,Blocks.ICE.getDefaultState());
+        addBlock(ModBlocks.IRON_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.DIAMOND_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.TITANIUM_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.URANIUM_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.TUNGSTEN_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.RUBY_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.SAPPHIRE_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.MAJORITE_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.AMAZONITE_LAVA_FLUID,Blocks.COBBLESTONE);
+        addBlock(ModBlocks.ONYX_LAVA_FLUID,Blocks.COBBLESTONE);
     }
     public static void addBlock(Block from,Block to) {
         addBlock(from,to.getDefaultState());
